@@ -16,7 +16,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 
 /**
  * Unity 游戏入口和本地账号、模拟充值桥
@@ -186,9 +185,82 @@ public final class LocalGameActivity extends UnityPlayerActivity {
         });
     }
 
+    /** 与原 QuickSDK 代理一致的 Unity→Android 消息号。 */
+    private static final int MSG_INIT = 120;
+    private static final int MSG_LOGIN = 101;
+    private static final int MSG_LOGOUT = 102;
+    private static final int MSG_PAY = 103;
+    private static final int MSG_EXIT = 104;
+    private static final int MSG_ROLEINFO = 105;
+
+    /** 与原版代理一致：不声明 callFunc 能力，Unity 走既有本地桥路径（旧版本实测可正常进主城）。 */
+    public boolean isFuncSupport(int type) {
+        return false;
+    }
+
+    /**
+     * 原 QuickSDK 代理的 {@code callFunc(msgType, data)} 入口。
+     * 旧版本此实现为桩（返回 0、不触发任何逻辑），Unity 在 {@code isFuncSupport=false} 时走既有本地桥路径，
+     * 实测可正常登录进主城；此处保持原语义，避免改变 Unity 侧的能力探测分支。
+     */
+    public int callFunc(int type, String argument) {
+        Log.i(TAG, "Unity callFunc type=" + type);
+        return 0;
+    }
+
+    /** 原代理的无参能力查询；与原版一致，非扩展能力统一返回 "0"。 */
+    public String callFunc(int type) {
+        return "0";
+    }
+
+    /** 原代理的结果查询入口，本地版按不支持扩展返回。 */
+    public String callFuncWithResult(int type) {
+        return callFunc(type);
+    }
+
+    /**
+     * 生命周期只交给父类 {@link UnityPlayerActivity} 处理，再显式转发 UnityPlayer 的 pause/resume。
+     * 原 APK 中 pause()/resume() 为实例方法（作用于 UnityPlayerActivity 的 mUnityPlayer），
+     * 若按静态方式调用会抛 IncompatibleClassChangeError；因此这里用反射按“实例方法”调用，
+     * 找不到方法时安全跳过（支付弹窗期间心跳由本地服务 250ms pump 兜底）。
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        dispatchUnityPlayer("pause");
+    }
+
+    /** 见 {@link #onPause()} 的说明。 */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        dispatchUnityPlayer("resume");
+    }
+
+    /** 反射调用 UnityPlayer 的实例方法 pause()/resume()；方法或实例缺失时静默跳过，不改变原有生命周期行为。 */
+    private void dispatchUnityPlayer(String method) {
+        try {
+            Object player = getFieldSafely("mUnityPlayer");
+            if (player == null) {
+                return;
+            }
+            java.lang.reflect.Method target = player.getClass().getMethod(method);
+            target.invoke(player);
+        } catch (Throwable ignored) {
+            Log.w(TAG, "UnityPlayer." + method + " 转发失败，已跳过", ignored);
+        }
+    }
+
+    /** 读取父类 UnityPlayerActivity 的 mUnityPlayer 字段，字段缺失时返回 null。 */
+    private Object getFieldSafely(String name) throws ReflectiveOperationException {
+        java.lang.reflect.Field field = UnityPlayerActivity.class.getDeclaredField(name);
+        field.setAccessible(true);
+        return field.get(this);
+    }
+
     /**
      * 保留原 Unity 支付入口的十九个字符串参数，读取已由本地服务创建的游戏角色订单。
-     * 结算只使用服务端保存的价格及发放数量。
+     * 结算只使用App保存的价格及发放数量。
      */
     public void requestPay(String productId, String productName, String description, String unit,
                            String cpOrderId, String callbackUrl, String extraParam, String price,
@@ -212,8 +284,8 @@ public final class LocalGameActivity extends UnityPlayerActivity {
         final int paysid;
         final int realmId;
         try {
-            paysid = Integer.parseInt(productId);
-            realmId = Integer.parseInt(serverId);
+            paysid = Integer.parseInt(productId.trim());
+            realmId = Integer.parseInt(serverId.trim());
         } catch (NumberFormatException invalid) {
             payFailure(cpOrderId, extraParam, "充值档位或区服编号无效");
             return;
@@ -223,6 +295,11 @@ public final class LocalGameActivity extends UnityPlayerActivity {
             if (failure != null) {
                 paymentInProgress = false;
                 payFailure(cpOrderId, extraParam, LocalApi.errorText(failure));
+                return;
+            }
+            if (order == null) {
+                paymentInProgress = false;
+                payFailure(cpOrderId, extraParam, "App返回的模拟订单无效");
                 return;
             }
             if ("CONFIRMED".equals(order.optString("status"))) {
@@ -237,38 +314,15 @@ public final class LocalGameActivity extends UnityPlayerActivity {
             boolean activatesFund = order.optBoolean("activatesFund");
             boolean claimInTimedShop = order.optBoolean("claimInTimedShop");
             boolean claimInFestival = order.optBoolean("claimInFestival");
+            boolean hasVoucher = order.optLong("voucherReward", 0) > 0;
             boolean blindBox = order.optInt("blindBoxIndex", 0) > 0;
             if (!"PENDING".equals(order.optString("status")) || reward < 0
-                    || (reward == 0 && !hasItems && !activatesFund && !claimInTimedShop && !claimInFestival && !blindBox) || amount <= 0) {
+                    || (reward == 0 && !hasItems && !activatesFund && !claimInTimedShop && !claimInFestival && !blindBox && !hasVoucher) || amount <= 0) {
                 paymentInProgress = false;
-                payFailure(cpOrderId, extraParam, "服务端返回的模拟订单无效");
+                payFailure(cpOrderId, extraParam, "App返回的模拟订单无效");
                 return;
             }
-            String rewardText = reward > 0 ? reward + " 角色钻石" : "";
-            if (hasItems) {
-                rewardText += (reward > 0 ? "及" : "") + "礼包道具";
-            }
-            String resultText = "确认后到账 " + rewardText;
-            if (blindBox) {
-                resultText = "确认后盲盒存入盲盒商城，可开箱并在精灵银行领取";
-            } else if (claimInFestival) {
-                resultText = "确认后可在宝可梦节日页面领取";
-            } else if (claimInTimedShop) {
-                resultText = "确认后可在限时商城领取";
-            } else if (activatesFund) {
-                resultText = "确认后激活成长基金，可按等级领取奖励";
-            }
-            AlertDialog confirmation = new AlertDialog.Builder(this)
-                    .setTitle("确认模拟充值")
-                    .setMessage(order.optString("productName", "游戏充值") + "，模拟金额 ¥"
-                            + BigDecimal.valueOf(amount, 2).toPlainString()
-                            + "，" + resultText + "。本次不会扣款。")
-                    .setPositiveButton("确认模拟", (dialog, which) ->
-                            confirmPayment(session, cpOrderId, extraParam, paysid, realmId, roleId))
-                    .setNegativeButton("取消", (dialog, which) -> payCancel(cpOrderId))
-                    .setOnCancelListener(dialog -> payCancel(cpOrderId))
-                    .create();
-            confirmation.show();
+            confirmPayment(session, cpOrderId, extraParam, paysid, realmId, roleId);
         });
     }
 
@@ -280,8 +334,8 @@ public final class LocalGameActivity extends UnityPlayerActivity {
                     paymentInProgress = false;
                     if (failure != null) {
                         payFailure(cpOrderId, extraParam, LocalApi.errorText(failure));
-                    } else if (!"CONFIRMED".equals(order.optString("status"))) {
-                        payFailure(cpOrderId, extraParam, "服务端尚未确认游戏订单");
+                    } else if (order == null || !"CONFIRMED".equals(order.optString("status"))) {
+                        payFailure(cpOrderId, extraParam, "App尚未确认游戏订单");
                     } else {
                         paySuccess(cpOrderId, extraParam, order);
                     }
@@ -365,11 +419,16 @@ public final class LocalGameActivity extends UnityPlayerActivity {
     public String getDeviceID() { return ""; }
     public String getOaid() { return ""; }
     public int callTest(Object value) { return 1; }
-    public boolean isFuncSupport(int type) { return false; }
-    public String callFunc(int type) { return "0"; }
-    public String callFuncWithResult(int type) { return "0"; }
-    public int callFunc(int type, String argument) { return 0; }
-    public int callFunctionWithParams(int type, String[] arguments) { return 0; }
+    /**
+     * 转发带参数的扩展调用，未提供参数时按无参数处理。
+     *
+     * @param type 扩展调用类型
+     * @param arguments 扩展参数，可为空数组
+     * @return 扩展调用结果
+     */
+    public int callFunctionWithParams(int type, String[] arguments) {
+        return callFunc(type, arguments == null || arguments.length == 0 ? null : arguments[0]);
+    }
     public void requestExtendFunc(int type) { }
     public void requestExtendCallPlugin(int type, String[] arguments) { }
     public void requestCallCustomPlugin(String a, String b, String c, String d) { }

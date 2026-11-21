@@ -16,10 +16,14 @@ BASE_DIGEST = "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45"
 MANIFEST = "AndroidManifest.xml"
 LOCAL_DEX = "classes9.dex"
 UNITY_METADATA = "assets/bin/Data/Managed/Metadata/global-metadata.dat"
-UNITY_LOCAL_METADATA_DIGEST = "0c65e42b86ef8711799f79f186e061aaf624fb7ce2f5e1d7cbb968ffea9c2f1a"
+UNITY_LOCAL_METADATA_DIGEST = "73207ddb980fc5873e826b23480538bfaf949918cd4a5b63de3c4b0421510bca"
 UNITY_LOCAL_NATIVE_DIGESTS = {
     "lib/arm64-v8a/libil2cpp.so": "c36d441fbd37a722d531519734582da551113fed85c51c25fa1cb6c11a24aaca",
     "lib/armeabi-v7a/libil2cpp.so": "628f1abd36ecb9084c71391bc419761ccd49c67a5357106431eb8a2bbb0d1724",
+}
+OFFLINE_BRIDGE_DIGESTS = {
+    "lib/arm64-v8a/libpokemonoffline.so": "7532eba9f40e3ca1bf9e25d1cfd6d98ab9aaf4a63737d934f20bb16e42a85bb3",
+    "lib/armeabi-v7a/libpokemonoffline.so": "f8691542403406916084b9df2cb17a774f0ec0d09a1038a52cd0171d9f360180",
 }
 SIGNATURE_ENTRY = re.compile(r"META-INF/(?:MANIFEST\.MF|[^/]+\.(?:SF|RSA|DSA|EC)|SIG-[^/]+)", re.I)
 NO_INDEX = 0xFFFFFFFF
@@ -137,7 +141,7 @@ def update_component(chunk, attributes, pool, resource_ids, old_name, offline):
     )
 
 
-def item_mail_activity(pool, resource_ids):
+def item_mail_activity(pool, resource_ids, host="item-mail", activity="com.qk.local.ProfileItemMailActivity"):
     """生成个人信息页的同应用 URI 弹窗节点，以及 scheme、host 的框架属性索引。"""
     for attribute, framework_id in (("scheme", 0x01010027), ("host", 0x01010028)):
         index = pool.index(attribute)
@@ -164,9 +168,9 @@ def item_mail_activity(pool, resource_ids):
         node("action", [("name", 3, "android.intent.action.VIEW")])
         + node("category", [("name", 3, "android.intent.category.DEFAULT")])
         + node("category", [("name", 3, "android.intent.category.BROWSABLE")])
-        + node("data", [("scheme", 3, "pokemon-local"), ("host", 3, "item-mail")])
+        + node("data", [("scheme", 3, "pokemon-local"), ("host", 3, host)])
     ))
-    return node("activity", [("name", 3, "com.qk.local.ProfileItemMailActivity"),
+    return node("activity", [("name", 3, activity),
                              ("theme", 1, 0x01030010), ("exported", 0x12, 0)], intent_filter)
 
 
@@ -176,7 +180,8 @@ def local_manifest(document, offline=False, item_mail=False):
     mapping = next(chunk for kind, chunk in chunks if kind == 0x0180)
     resource_ids = struct.unpack(f"<{(len(mapping) - 8) // 4}I", mapping[8:])
     resource_ids = list(resource_ids)
-    mail_component = item_mail_activity(pool, resource_ids) if item_mail else b""
+    mail_component = (item_mail_activity(pool, resource_ids)
+                      + item_mail_activity(pool, resource_ids, "pet-customize", "com.qk.local.PetCustomizeActivity")) if item_mail else b""
     result = []
     elements = []
     changed = set()
@@ -204,8 +209,6 @@ def local_manifest(document, offline=False, item_mail=False):
                     dropped = True
                 elif element == "uses-permission":
                     dropped = name not in {
-                        "android.permission.INTERNET",
-                        "android.permission.ACCESS_NETWORK_STATE",
                         "android.permission.READ_EXTERNAL_STORAGE",
                         "android.permission.WRITE_EXTERNAL_STORAGE",
                     }
@@ -234,7 +237,7 @@ def local_manifest(document, offline=False, item_mail=False):
 
 
 def patch_entries(directory):
-    entries = {p.relative_to(directory).as_posix(): p for p in directory.rglob("*") if p.is_file()}
+    entries = {p.relative_to(directory).as_posix(): p for p in directory.rglob("*") if p.is_file() and not p.relative_to(directory).as_posix().startswith(("_backup_dex/", "assets/assets/"))}
     if LOCAL_DEX not in entries:
         raise ValueError(f"缺少客户端补丁：{directory / LOCAL_DEX}")
     offline = {name for name in entries if name.startswith("assets/pokemon-local/")
@@ -247,7 +250,7 @@ def patch_entries(directory):
         "assets/pokemon-local/catalog/item-random.json",
         "assets/pokemon-local/activity/daily-missions.json",
     })
-    unknown = entries.keys() - {LOCAL_DEX, UNITY_METADATA} - UNITY_LOCAL_NATIVE_DIGESTS.keys() - offline
+    unknown = entries.keys() - {LOCAL_DEX, UNITY_METADATA} - UNITY_LOCAL_NATIVE_DIGESTS.keys() - OFFLINE_BRIDGE_DIGESTS.keys() - offline
     if unknown:
         raise ValueError(f"发现未经验证的 APK 替换项：{', '.join(sorted(unknown))}")
     with entries[LOCAL_DEX].open("rb") as dex:
@@ -261,6 +264,11 @@ def patch_entries(directory):
     for name in native:
         if hash_file(entries[name]) != UNITY_LOCAL_NATIVE_DIGESTS[name]:
             raise ValueError(f"Unity 原生补丁哈希不符：{name}")
+    if entries.keys() & OFFLINE_BRIDGE_DIGESTS.keys() != OFFLINE_BRIDGE_DIGESTS.keys():
+        raise ValueError("纯离线包必须含双 ABI 直接调用桥")
+    for name, expected in OFFLINE_BRIDGE_DIGESTS.items():
+        if hash_file(entries[name]) != expected:
+            raise ValueError(f"进程内桥哈希不符：{name}")
     return entries
 
 
@@ -311,6 +319,8 @@ def verify_entries(signed, expected_hashes, patched):
 def build(args):
     root = Path(__file__).resolve().parent
     base = root / "origin" / "origin.apk"
+    if not base.is_file():
+        raise ValueError(f"找不到底包：{base}")
     if hash_file(base) != BASE_DIGEST:
         raise ValueError(f"底包 SHA-256 不匹配：{base}")
     entries = patch_entries(args.entries.resolve())
@@ -319,8 +329,13 @@ def build(args):
     if args.output.exists():
         raise FileExistsError(f"禁止覆盖已有 APK：{args.output}")
     zipalign = args.build_tools.resolve() / "zipalign.exe"
+    if not zipalign.is_file():
+        raise ValueError(f"找不到 zipalign：{zipalign}")
+    apksigner_jar = args.build_tools.resolve() / "lib" / "apksigner.jar"
+    if not apksigner_jar.is_file():
+        raise ValueError(f"找不到 apksigner.jar：{apksigner_jar}")
     apksigner = [
-        str(args.java.resolve()), "-jar", str(args.build_tools.resolve() / "lib" / "apksigner.jar")
+        str(args.java.resolve()), "-jar", str(apksigner_jar)
     ]
     with tempfile.TemporaryDirectory(prefix="pokemon-apk-") as temp:
         work = Path(temp)
@@ -330,6 +345,21 @@ def build(args):
         patcher = root.parent / "app端代码" / "local-patch" / "patch-unity-arena.py"
         overlay = work / "unity"
         command = [sys.executable, str(patcher), "--origin", str(base), "--output", str(overlay)]
+        if args.python_libs is not None:
+            command.extend(["--python-libs", str(args.python_libs.resolve())])
+        subprocess.run(command, check=True)
+        migration = patcher.with_name("patch_miao_species.py")
+        command = [sys.executable, str(migration), "--origin", str(base), "--output", str(overlay)]
+        if args.python_libs is not None:
+            command.extend(["--python-libs", str(args.python_libs.resolve())])
+        subprocess.run(command, check=True)
+        direct = patcher.with_name("patch-unity-offline.py")
+        stickers = patcher.with_name("patch_trainer_stickers.py")
+        command = [sys.executable, str(stickers), "--origin", str(base), "--output", str(overlay)]
+        if args.python_libs is not None:
+            command.extend(["--python-libs", str(args.python_libs.resolve())])
+        subprocess.run(command, check=True)
+        command = [sys.executable, str(direct), "--origin", str(base), "--output", str(overlay)]
         if args.python_libs is not None:
             command.extend(["--python-libs", str(args.python_libs.resolve())])
         subprocess.run(command, check=True)

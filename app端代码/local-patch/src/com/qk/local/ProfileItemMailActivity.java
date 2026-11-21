@@ -67,7 +67,8 @@ public final class ProfileItemMailActivity extends Activity {
             category = row.getString("category");
             quality = row.optInt("quality");
             String details = ELF_GEAR.equals(category) ? row.optString("gearKind") + "  ·  " + quality + "阶"
-                    + (row.optInt("gearLevel") > 0 ? "  ·  " + row.optInt("gearLevel") + "级" : "") : category;
+                    + (row.optInt("gearLevel") > 0 ? "  ·  " + row.optInt("gearLevel") + "级" : "")
+                    : "贴纸".equals(category) ? "贴纸  ·  刻印等级 " + row.optInt("stickerLevel") : category;
             label = name + "  ·  " + id + "  ·  " + details;
         }
 
@@ -110,8 +111,8 @@ public final class ProfileItemMailActivity extends Activity {
             while ((n = input.read(buffer)) != -1) data.write(buffer, 0, n);
             JSONArray source = new JSONObject(data.toString("UTF-8")).getJSONArray("items");
             for (int i = 0; i < source.length(); i++) {
-                JSONObject row = source.getJSONObject(i);
-                if (row.optBoolean("grantable")) rows.add(new Item(row));
+                JSONObject row = source.optJSONObject(i);
+                if (row != null && row.optBoolean("grantable")) rows.add(new Item(row));
             }
         }
         return rows;
@@ -256,6 +257,9 @@ public final class ProfileItemMailActivity extends Activity {
         updateSelection();
         String id = receipt;
         LocalApi.run(this, () -> LocalApi.sendItemMail(session, roleId, id, item.type, item.id, amount), (mail, failure) -> {
+            if (isFinishing() || isDestroyed()) {
+                return;
+            }
             if (failure == null) {
                 Toast.makeText(this, "已寄到当前角色邮箱：" + item.name + " × " + amount, Toast.LENGTH_LONG).show();
                 dialog.dismiss();

@@ -1,0 +1,12 @@
+{
+  "apkSha256": "4852091614480f05e27984e1ddc4906638c9ab34bfaeef513a35425299749002",
+  "qaDifferenceEntries": [
+    "AndroidManifest.xml",
+    "assets/bin/Data/Managed/Metadata/global-metadata.dat",
+    "resources.arsc"
+  ],
+  "guildCatalogCount": 106,
+  "badgeCount": 64,
+  "androidSQLite": "106 mails/64 upgrades/replays/cold restart passed",
+  "dexSha256": "28d68096c458c6966491747efaef521b14f08f08f48e58f1271116eebca63afc"
+}

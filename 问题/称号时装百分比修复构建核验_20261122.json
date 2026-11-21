@@ -1,0 +1,12 @@
+{
+  "apk": "pokemon-offline-20261122-miao-cosmetics-unlimited.apk",
+  "size": 597647997,
+  "sha256": "4946d88161509486ee305dbfc3f5bc208a0cb180ec30ded27050c7d6f5d07e2b",
+  "previousSha256": "50f10544a2699414198054aac2b50746924df2c231d603779e1acdb88abf3207",
+  "changedBusinessEntries": [
+    "classes9.dex"
+  ],
+  "classes9Sha256": "08f39a0336bbdcc1db875c3a55d4bde0e68461c8d1015691d8011b4503f8021f",
+  "sourceSha256": "e0577551f15b7157e06fb47dd3cd93f78365c78198a520c8d790fd1962aa4082",
+  "compilation": "同一交付快照Java归档增量编译RoleCosmeticService及嵌套类，再对整份归档与Jackson执行D8；其他业务条目逐字节保持"
+}

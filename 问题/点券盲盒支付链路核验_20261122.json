@@ -1,0 +1,61 @@
+{
+  "scope": "LuaJIT 64-bit isolated offline order source; not full Unity device flow",
+  "blindBoxCashCallbacks": 6,
+  "voucherShopCashCallbacks": 10,
+  "popupCount": 6,
+  "apiOrders": 16,
+  "result": "pass",
+  "androidSQLite": {
+    "serial": "127.0.0.1:16416",
+    "package": "com.qk.offline.pokemon.qa",
+    "appDexSHA256": "6fbfa521d31e3e0ad0e84d5b6e285cf922b364fcd09da6f1d89962f3688a2c8a",
+    "method": "既有临时Instrumentation，调用真实App业务和Android SQLite；未操作正式包",
+    "voucherSkuCount": 10,
+    "purchasesPerVoucherSku": 2,
+    "blindBoxSkuCount": 6,
+    "blindBoxPaymentMethods": [
+      "cash simulation",
+      "voucher"
+    ],
+    "confirmedOrders": 32,
+    "finalPermanentVouchers": 1241120,
+    "unopenedBoxesPerRow": 2,
+    "boxRows": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confirmedOrderReplay": "pass",
+    "voucherReceiptReplay": "pass",
+    "coldReopen": "pass",
+    "directFeatureTick": [
+      "S464",
+      "S3 wallet",
+      "32 S11"
+    ],
+    "directTickWithinFiveSeconds": true,
+    "activityAmountCentsAfterApplyingUpdatedSQLView": 688000,
+    "updatedSQLViewValidation": "在QA数据库应用源码的CREATE VIEW语句；该SQL比验证DEX快照更新，最终安装需重新打包",
+    "notVerified": [
+      "完整Unity实际点击两种付款方式",
+      "异步计时器五秒内在Unity画面刷新",
+      "ARM64设备"
+    ]
+  },
+  "patchedSdkBytecodeExecution": {
+    "result": "pass",
+    "abi": 64,
+    "patchedSdkBytecodeSHA256": "51cacdf547c82811d9b3d3a97b7a6f770e2da03770735801d8842c9532eade7c",
+    "originalPopupBytecodeSHA256": "58afc33740b94ad38f31ecb2e8cc37e3b372c0cde8dbcc83669f114317fe82eb",
+    "realCashCallbackCount": 6,
+    "defaultPopupCount": 6,
+    "voucherShopWithoutPopupCount": 10,
+    "apiOrders": 16,
+    "sdkPurchaseCalls": 16,
+    "dependencies": "SDKAdapter,resource/UI,JSON encoder and process-internal API substituted; executed real patched sdk.order/purchase and original popup.on_rmb bytecode",
+    "notVerified": "Unity actual buttons, JNI or Android UI dispatch"
+  }
+}

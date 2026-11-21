@@ -1,0 +1,450 @@
+[
+  {
+    "id": 5001,
+    "type": 20,
+    "name": "徽章 · 灰色徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5002,
+    "type": 20,
+    "name": "徽章 · 蓝色徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5003,
+    "type": 20,
+    "name": "徽章 · 橙色徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5004,
+    "type": 20,
+    "name": "徽章 · 彩虹徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5005,
+    "type": 20,
+    "name": "徽章 · 粉红徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5006,
+    "type": 20,
+    "name": "徽章 · 金色徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5007,
+    "type": 20,
+    "name": "徽章 · 深红徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 5008,
+    "type": 20,
+    "name": "徽章 · 绿色徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6001,
+    "type": 20,
+    "name": "徽章 · 飞翼徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6002,
+    "type": 20,
+    "name": "徽章 · 昆虫徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6003,
+    "type": 20,
+    "name": "徽章 · 标准徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6004,
+    "type": 20,
+    "name": "徽章 · 魅影徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6005,
+    "type": 20,
+    "name": "徽章 · 打击徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6006,
+    "type": 20,
+    "name": "徽章 · 钢铁徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6007,
+    "type": 20,
+    "name": "徽章 · 冰冻徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 6008,
+    "type": 20,
+    "name": "徽章 · 升龙徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7001,
+    "type": 20,
+    "name": "徽章 · 月见徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7002,
+    "type": 20,
+    "name": "徽章 · 大地徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7003,
+    "type": 20,
+    "name": "徽章 · 光芒徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7004,
+    "type": 20,
+    "name": "徽章 · 精准徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7005,
+    "type": 20,
+    "name": "徽章 · 科技徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7006,
+    "type": 20,
+    "name": "徽章 · 力量徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7007,
+    "type": 20,
+    "name": "徽章 · 胜利徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 7008,
+    "type": 20,
+    "name": "徽章 · 宇宙徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8001,
+    "type": 20,
+    "name": "徽章 · 虫子徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8002,
+    "type": 20,
+    "name": "徽章 · 岩壁徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8003,
+    "type": 20,
+    "name": "徽章 · 战斗徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8004,
+    "type": 20,
+    "name": "徽章 · 植物徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8005,
+    "type": 20,
+    "name": "徽章 · 电压徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8006,
+    "type": 20,
+    "name": "徽章 · 妖精徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8007,
+    "type": 20,
+    "name": "徽章 · 灵力徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8008,
+    "type": 20,
+    "name": "徽章 · 冰山徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8009,
+    "type": 20,
+    "name": "徽章 · 深海徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 8010,
+    "type": 20,
+    "name": "徽章 · 天使徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9001,
+    "type": 20,
+    "name": "徽章 · 岩石徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9002,
+    "type": 20,
+    "name": "徽章 · 拳击徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9003,
+    "type": 20,
+    "name": "徽章 · 电力徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9004,
+    "type": 20,
+    "name": "徽章 · 烈焰徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9005,
+    "type": 20,
+    "name": "徽章 · 天秤徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9006,
+    "type": 20,
+    "name": "徽章 · 白羽徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9007,
+    "type": 20,
+    "name": "徽章 · 心灵徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9008,
+    "type": 20,
+    "name": "徽章 · 雨滴徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9009,
+    "type": 20,
+    "name": "徽章 · 魔镜徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 9010,
+    "type": 20,
+    "name": "徽章 · 冠军徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10001,
+    "type": 20,
+    "name": "徽章 · 石炭徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10002,
+    "type": 20,
+    "name": "徽章 · 森林徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10003,
+    "type": 20,
+    "name": "徽章 · 圆石徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10004,
+    "type": 20,
+    "name": "徽章 · 沼泽徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10005,
+    "type": 20,
+    "name": "徽章 · 遗迹徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10006,
+    "type": 20,
+    "name": "徽章 · 矿山徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10007,
+    "type": 20,
+    "name": "徽章 · 冰河徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10008,
+    "type": 20,
+    "name": "徽章 · 灯塔徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10009,
+    "type": 20,
+    "name": "徽章 · 平衡徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 10010,
+    "type": 20,
+    "name": "徽章 · 守护徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 11001,
+    "type": 20,
+    "name": "徽章 · 樱花徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 11002,
+    "type": 20,
+    "name": "徽章 · 白浪徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 11003,
+    "type": 20,
+    "name": "徽章 · 轮宝徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 11004,
+    "type": 20,
+    "name": "徽章 · 琉璃徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 12001,
+    "type": 20,
+    "name": "徽章 · 稳重徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 12002,
+    "type": 20,
+    "name": "徽章 · 自由徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 12003,
+    "type": 20,
+    "name": "徽章 · 忍耐徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 12004,
+    "type": 20,
+    "name": "徽章 · 团结徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 12005,
+    "type": 20,
+    "name": "徽章 · 尊严徽章",
+    "category": "公会",
+    "grantable": true
+  },
+  {
+    "id": 12006,
+    "type": 20,
+    "name": "徽章 · 勇气徽章",
+    "category": "公会",
+    "grantable": true
+  }
+]

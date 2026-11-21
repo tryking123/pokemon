@@ -1,0 +1,16 @@
+[
+  {
+    "species": 64189,
+    "rage": 70014,
+    "before": "?:0: skill_proto:70014\nstack traceback:\n\t[C]: in function ''\n\t?: in function <?:0>",
+    "after": "passed",
+    "icon": "IconSkill:10161"
+  },
+  {
+    "species": 64190,
+    "rage": 70010,
+    "before": "?:0: skill_proto:70010\nstack traceback:\n\t[C]: in function ''\n\t?: in function <?:0>",
+    "after": "passed",
+    "icon": "IconSkill:10133"
+  }
+]

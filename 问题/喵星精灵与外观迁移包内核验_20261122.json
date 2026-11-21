@@ -1,0 +1,108 @@
+{
+  "apk": "pokemon-offline-20261122-miao-cosmetics-unlimited.apk",
+  "size": 597836413,
+  "sha256": "b15de298ba3892604c364b0e3e9f94f31f23d6af2853e99eafc04ac137a9dff5",
+  "tables": {
+    "jingling": {
+      "old": 586,
+      "new": 591,
+      "added": 5,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "jinhua": {
+      "old": 919,
+      "new": 923,
+      "added": 4,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "character": {
+      "old": 8160,
+      "new": 8161,
+      "added": 1,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "character2": {
+      "old": 455,
+      "new": 564,
+      "added": 109,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "ditto": {
+      "old": 6,
+      "new": 9,
+      "added": 3,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "word1": {
+      "old": 24870,
+      "new": 24933,
+      "added": 63,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "title": {
+      "old": 130,
+      "new": 142,
+      "added": 12,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "dress": {
+      "old": 133,
+      "new": 142,
+      "added": 9,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    },
+    "dresschip": {
+      "old": 132,
+      "new": 141,
+      "added": 9,
+      "lua64Executed": true,
+      "lua32StructureAndExactPayloadVerified": true
+    }
+  },
+  "resources": {
+    "喵星联盟_001.apk.1/sprites_icontitle.ab": {
+      "verifiedImageObjects": 8,
+      "sourceDecodedPixelsPreserved": true
+    },
+    "喵星联盟_001.apk.1/spritesheet_character.ab": {
+      "verifiedImageObjects": 208,
+      "sourceDecodedPixelsPreserved": true
+    },
+    "天天驯兽师_004.apk.1/sprites_icontitle.ab": {
+      "verifiedImageObjects": 8,
+      "sourceDecodedPixelsPreserved": true
+    },
+    "喵星联盟_001.apk.1/sprites_iconpkm.ab": {
+      "verifiedImageObjects": 2,
+      "sourceDecodedPixelsPreserved": true
+    }
+  },
+  "source": {
+    "origin": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+    "miao": "fa0e3709c212817ab60ed10a3f944f6c449dd587cdea4d03c4e6d806f4d49b8c"
+  },
+  "allVersionEntriesVerified": true,
+  "grantable": [
+    64190,
+    64189
+  ],
+  "battleOnly": [
+    641891,
+    641892,
+    641893
+  ],
+  "cosmetics": {
+    "titles": 142,
+    "dresses": 142,
+    "addedTitles": 12,
+    "addedDresses": 9
+  }
+}

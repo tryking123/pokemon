@@ -6,6 +6,7 @@
 !/app包/new/README.md
 /app端代码/project/
 /源码/project_decoded/
+/app端代码/local-patch/apk-entries/assets/assets/
 /app端代码/local-patch/apk-entries/assets/bin/
 /app端代码/local-patch/apk-entries/lib/
 /1794974400
@@ -79,6 +80,9 @@ application-local.yaml
 *.hprof
 logs/
 *.log
+
+# 一键启动脚本自动下载的本地 JDK / Maven 与运行缓存。
+/.tools/
 
 # 临时文件与操作系统缓存。
 tmp/

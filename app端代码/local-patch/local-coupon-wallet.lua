@@ -49,17 +49,18 @@ button("Sell","出售",183,-537,155,function() settle(true) end)
 button("Info","正在读取本地券包",0,-598,620)
 buttons.Info.label.fontSize = 21
 local function update(response)
-    if response.kind ~= ids[index] then return end
+    if not response or response.kind ~= ids[index] then return end
     state = response
     buttons.Title.label.text = response.name .. "  " .. index .. "/" .. #ids
     buttons.Issue.obj:SetActive(response.status == 0)
     buttons.Use.obj:SetActive(response.status == 1)
     buttons.Sell.obj:SetActive(response.status == 1 and response.kind ~= 1004)
-    local suffix = ({[0]="今日可领", [1]="已持有", [2]="已兑换", [3]="已出售"})[response.status]
-    local sale = response.kind == 1004 and "" or ((response.coins or 0) > 0 and " · 可售" .. response.coins .. "金币" or " · 可售" .. response.diamonds .. "钻")
-    buttons.Info.label.text = suffix .. " · 零点到期 · 可兑" .. response.redeem .. "钻" .. sale
+    local suffix = ({[0]="今日可领", [1]="已持有", [2]="已兑换", [3]="已出售"})[response.status] or "未知状态"
+    local sale = response.kind == 1004 and "" or ((response.coins or 0) > 0 and " · 可售" .. response.coins .. "金币" or " · 可售" .. (response.diamonds or 0) .. "钻")
+    buttons.Info.label.text = suffix .. " · 零点到期 · 可兑" .. (response.redeem or 0) .. "钻" .. sale
 end
 local function settled(response)
+    if not response then return end
     if response.errno ~= 0 then label_popup.show("本地券已到期、已结算或尚未领取") end
     query()
 end

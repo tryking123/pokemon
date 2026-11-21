@@ -19609,6 +19609,317 @@
       "evolution": [
         0
       ]
+    },
+    "64190": {
+      "rage": 70010,
+      "maxawaken": 5,
+      "stat_physical_attack": 300,
+      "charactername": 6000001,
+      "egg": 1,
+      "stat_speed": 300,
+      "multiple": 2,
+      "stat_hp": 300,
+      "male": 125,
+      "sprintmoney": 0,
+      "stat_special_defense": 300,
+      "stat_physical_defense": 300,
+      "redstone": 60,
+      "attribute1": 1,
+      "name": 6000000,
+      "ziyuan2": 69282,
+      "maxstar": 15,
+      "assess": 8,
+      "stat_special_attack": 300,
+      "attribute2": 0,
+      "all_up": 1800,
+      "ziyuan1": 79282,
+      "area": 4,
+      "bz": "真·百变怪",
+      "bluestone": 100,
+      "quality": 7,
+      "silverstone": 0,
+      "bigsmall": 1.4,
+      "levelget": 0,
+      "starsprint": 64190,
+      "risingstar": 64190,
+      "featureslv": 10,
+      "skills": [
+        1,
+        40003
+      ],
+      "loveitem": [
+        22001,
+        22019
+      ],
+      "evolution": [
+        0
+      ],
+      "character": [
+        104100
+      ],
+      "passive": [
+        1,
+        34400,
+        3,
+        104200,
+        5,
+        6001000
+      ]
+    },
+    "64189": {
+      "rage": 70014,
+      "maxawaken": 5,
+      "charactername": 424185,
+      "egg": 6,
+      "stat_speed": 235,
+      "multiple": 2,
+      "stat_physical_attack": 250,
+      "male": 875,
+      "redstone": 60,
+      "stat_special_defense": 245,
+      "sprintmoney": 0,
+      "stat_physical_defense": 271,
+      "attribute1": 15,
+      "starsprint": 64189,
+      "name": 414588,
+      "ziyuan2": 69414,
+      "maxstar": 15,
+      "assess": 8,
+      "follow": 1,
+      "stat_special_attack": 233,
+      "attribute2": 9,
+      "all_up": 1600,
+      "ziyuan1": 79414,
+      "area": 4,
+      "bz": "小软",
+      "bluestone": 100,
+      "quality": 7,
+      "silverstone": 0,
+      "bigsmall": 0.8,
+      "levelget": 0,
+      "stat_hp": 366,
+      "risingstar": 64189,
+      "featureslv": 10,
+      "skills": [
+        1,
+        10082,
+        11,
+        10260,
+        23,
+        10256,
+        35,
+        10261
+      ],
+      "loveitem": [
+        22009,
+        22015,
+        22019
+      ],
+      "evolution": [
+        0
+      ],
+      "character": [
+        105100,
+        105200,
+        105300,
+        105400,
+        105500,
+        105600,
+        105700,
+        105800,
+        105900
+      ],
+      "passive": [
+        1,
+        36000,
+        3,
+        104300,
+        5,
+        104400
+      ]
+    },
+    "641891": {
+      "rage": 70014,
+      "maxawaken": 5,
+      "all_up": 1600,
+      "stat_special_attack": 233,
+      "charactername": 424185,
+      "egg": 6,
+      "ziyuan2": 69174,
+      "multiple": 2,
+      "sprintmoney": 0,
+      "male": 875,
+      "stat_special_defense": 245,
+      "stat_physical_defense": 271,
+      "starsprint": 641891,
+      "attribute1": 15,
+      "stat_physical_attack": 250,
+      "maxstar": 15,
+      "assess": 8,
+      "stat_speed": 235,
+      "attribute2": 9,
+      "redstone": 0,
+      "ziyuan1": 79174,
+      "area": 4,
+      "bz": "10%小软",
+      "bluestone": 0,
+      "quality": 7,
+      "silverstone": 0,
+      "bigsmall": 1.2,
+      "levelget": 0,
+      "stat_hp": 366,
+      "risingstar": 641891,
+      "featureslv": 10,
+      "name": 6000002,
+      "skills": [
+        1,
+        10082,
+        11,
+        10260,
+        23,
+        10256,
+        35,
+        10261
+      ],
+      "loveitem": [
+        22009,
+        22015,
+        22019
+      ],
+      "evolution": [
+        0
+      ],
+      "character": [],
+      "passive": [
+        1,
+        36000,
+        3,
+        104300,
+        5,
+        104400
+      ]
+    },
+    "641892": {
+      "rage": 70014,
+      "maxawaken": 5,
+      "all_up": 1600,
+      "stat_special_attack": 233,
+      "charactername": 424185,
+      "egg": 6,
+      "ziyuan2": 69175,
+      "multiple": 2,
+      "sprintmoney": 0,
+      "male": 875,
+      "stat_special_defense": 245,
+      "stat_physical_defense": 271,
+      "starsprint": 641892,
+      "attribute1": 15,
+      "stat_physical_attack": 250,
+      "maxstar": 15,
+      "assess": 8,
+      "stat_speed": 235,
+      "attribute2": 9,
+      "redstone": 0,
+      "ziyuan1": 79175,
+      "area": 4,
+      "bz": "50%小软",
+      "bluestone": 0,
+      "quality": 7,
+      "silverstone": 0,
+      "bigsmall": 1.2,
+      "levelget": 0,
+      "stat_hp": 366,
+      "risingstar": 641892,
+      "featureslv": 10,
+      "name": 6000003,
+      "skills": [
+        1,
+        10082,
+        11,
+        10260,
+        23,
+        10256,
+        35,
+        10261
+      ],
+      "loveitem": [
+        22009,
+        22015,
+        22019
+      ],
+      "evolution": [
+        0
+      ],
+      "character": [],
+      "passive": [
+        1,
+        36000,
+        3,
+        104300,
+        5,
+        104400
+      ]
+    },
+    "641893": {
+      "rage": 70014,
+      "maxawaken": 5,
+      "all_up": 1600,
+      "stat_special_attack": 233,
+      "charactername": 424185,
+      "egg": 6,
+      "ziyuan2": 69176,
+      "multiple": 2,
+      "sprintmoney": 0,
+      "male": 875,
+      "stat_special_defense": 245,
+      "stat_physical_defense": 271,
+      "starsprint": 641893,
+      "attribute1": 15,
+      "stat_physical_attack": 250,
+      "maxstar": 15,
+      "assess": 8,
+      "stat_speed": 235,
+      "attribute2": 9,
+      "redstone": 0,
+      "ziyuan1": 79176,
+      "area": 4,
+      "bz": "100%小软",
+      "bluestone": 0,
+      "quality": 7,
+      "silverstone": 0,
+      "bigsmall": 1.4,
+      "levelget": 0,
+      "stat_hp": 366,
+      "risingstar": 641893,
+      "featureslv": 10,
+      "name": 6000004,
+      "skills": [
+        1,
+        10082,
+        11,
+        10260,
+        23,
+        10256,
+        35,
+        10261
+      ],
+      "loveitem": [
+        22009,
+        22015,
+        22019
+      ],
+      "evolution": [
+        0
+      ],
+      "character": [],
+      "passive": [
+        1,
+        36000,
+        3,
+        104300,
+        5,
+        104400
+      ]
     }
   },
   "growth": {
@@ -99613,6 +99924,394 @@
             450,
             20018,
             540,
+            21089,
+            270
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        }
+      ]
+    },
+    "64190": {
+      "needlv": 61,
+      "needlove": 40,
+      "upgrade_limit": 0,
+      "evolution": [
+        0
+      ],
+      "cost": [
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        }
+      ]
+    },
+    "641900": {
+      "needlv": 61,
+      "needlove": 40,
+      "upgrade_limit": 9,
+      "evolution": [
+        0
+      ],
+      "cost": [
+        {
+          "items": [
+            20003,
+            60,
+            20004,
+            90,
+            21089,
+            45
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            90,
+            20004,
+            120,
+            21089,
+            60
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            120,
+            20004,
+            150,
+            21089,
+            75
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            180,
+            20004,
+            210,
+            21089,
+            105
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            225,
+            20004,
+            270,
+            21089,
+            135
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            270,
+            20004,
+            300,
+            21089,
+            150
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            300,
+            20004,
+            360,
+            21089,
+            180
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            360,
+            20004,
+            450,
+            21089,
+            225
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            450,
+            20004,
+            540,
+            21089,
+            270
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        }
+      ]
+    },
+    "64189": {
+      "needlv": 61,
+      "needlove": 40,
+      "upgrade_limit": 0,
+      "evolution": [
+        0
+      ],
+      "cost": [
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        }
+      ]
+    },
+    "641890": {
+      "needlv": 61,
+      "needlove": 40,
+      "upgrade_limit": 9,
+      "evolution": [
+        0
+      ],
+      "cost": [
+        {
+          "items": [
+            20003,
+            60,
+            20012,
+            45,
+            20018,
+            45,
+            21089,
+            45
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            90,
+            20012,
+            60,
+            20018,
+            60,
+            21089,
+            60
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            120,
+            20012,
+            75,
+            20018,
+            75,
+            21089,
+            75
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            180,
+            20012,
+            105,
+            20018,
+            105,
+            21089,
+            105
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            225,
+            20012,
+            135,
+            20018,
+            135,
+            21089,
+            135
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            270,
+            20012,
+            150,
+            20018,
+            150,
+            21089,
+            150
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            300,
+            20012,
+            180,
+            20018,
+            180,
+            21089,
+            180
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            360,
+            20012,
+            225,
+            20018,
+            225,
+            21089,
+            225
+          ],
+          "coins": 3000000
+        },
+        {
+          "items": [
+            20003,
+            450,
+            20012,
+            270,
+            20018,
+            270,
             21089,
             270
           ],

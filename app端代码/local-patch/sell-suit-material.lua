@@ -35,7 +35,7 @@ utils.add_click_event(popup.path, function()
 end)
 if not local_suit_sale_listener then
     Network.AddListener("sellsuit_eq", function(reply)
-        if eparser.try(reply.errno) then
+        if reply and eparser.try(reply.errno) then
             Event.Brocast("CLOSR_SUIT_SHOW")
             label_popup.show("贴纸已售出，金币已到账")
         end

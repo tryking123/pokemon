@@ -17,7 +17,7 @@ text.fontSize = 24
 exchange:SetActive(true)
 if not local_stamina_exchange_listener then
     Network.AddListener("local_stamina_exchange", function(response)
-        if eparser.try(response.errno) then label_popup.show("今日普通副本次数 +1") end
+        if response and eparser.try(response.errno) then label_popup.show("今日普通副本次数 +1") end
     end)
     local_stamina_exchange_listener = true
 end
