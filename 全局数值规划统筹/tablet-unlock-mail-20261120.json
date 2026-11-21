@@ -1,0 +1,86 @@
+{
+  "version": "tablet-unlock-mail-20261120-v1",
+  "sourceApkSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "sourceManifest": "lua64_database_slatebase_proto.lua.bytes",
+  "sourceLuaSha256": "d5b8adfedd86b2aa7c55707a8c3f1df1fad43b0d52a73ed4e20efb86de6db2ea",
+  "rewards": [
+    {
+      "type": 888,
+      "id": 1,
+      "name": "青草石板",
+      "quantity": 1,
+      "wordId": 8191,
+      "icon": 1,
+      "seal": 0
+    },
+    {
+      "type": 888,
+      "id": 2,
+      "name": "深海石板",
+      "quantity": 1,
+      "wordId": 8192,
+      "icon": 2,
+      "seal": 0
+    },
+    {
+      "type": 888,
+      "id": 3,
+      "name": "炎热石板",
+      "quantity": 1,
+      "wordId": 8193,
+      "icon": 3,
+      "seal": 0
+    },
+    {
+      "type": 888,
+      "id": 4,
+      "name": "格斗石板",
+      "quantity": 1,
+      "wordId": 8194,
+      "icon": 4,
+      "seal": 0
+    },
+    {
+      "type": 888,
+      "id": 5,
+      "name": "妖精石板",
+      "quantity": 1,
+      "wordId": 8195,
+      "icon": 5,
+      "seal": 0
+    },
+    {
+      "type": 888,
+      "id": 6,
+      "name": "永冻石板",
+      "quantity": 1,
+      "wordId": 8196,
+      "icon": 6,
+      "seal": 0
+    },
+    {
+      "type": 888,
+      "id": 7,
+      "name": "邪恶石板",
+      "quantity": 1,
+      "wordId": 8197,
+      "icon": 7,
+      "seal": 1
+    },
+    {
+      "type": 888,
+      "id": 8,
+      "name": "飞龙石板",
+      "quantity": 1,
+      "wordId": 8198,
+      "icon": 8,
+      "seal": 1
+    }
+  ],
+  "totals": {
+    "distinctAssets": 8,
+    "totalUnits": 8
+  },
+  "semantics": "原TABLET=888专属资产，每索引一份使未获得项pieces从缺失变0，可按原C404激活为1；已有0/1状态保留，不发返利。一次性供给邮件不直接激活、不改变等级/公会/原封印等其他条件。",
+  "receipt": "每角色固定供给回执一次，重复按钮不新增邮件；原邮件领取回执防重复加持有状态。"
+}

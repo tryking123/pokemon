@@ -1,0 +1,178 @@
+{
+  "version": "guild-open-shop-20261120-v1",
+  "sourceApkSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "verification": "从原清单实际读取并解密三张Lua表，由LuaJIT执行后逐项读取；非设备运行验收",
+  "sourceTables": {
+    "kaiqiboss": {
+      "manifestEntry": "lua64_database_kaiqiboss_proto.lua.bytes",
+      "sourceLuaSha256": "2e041646d95daf760832705a24b2c6ab3ceed63c375b274427a42b62ca8f1b51",
+      "rows": [
+        {
+          "index": 1,
+          "requiredLevel": 1,
+          "openingVitality": 100,
+          "phases": [
+            1001,
+            1002,
+            1003,
+            1004,
+            1005,
+            1006,
+            1007,
+            1008,
+            1009,
+            1010
+          ]
+        },
+        {
+          "index": 2,
+          "requiredLevel": 3,
+          "openingVitality": 100,
+          "phases": [
+            1011,
+            1012,
+            1013,
+            1014,
+            1015,
+            1016,
+            1017,
+            1018,
+            1019,
+            1020
+          ]
+        },
+        {
+          "index": 3,
+          "requiredLevel": 5,
+          "openingVitality": 100,
+          "phases": [
+            1021,
+            1022,
+            1023,
+            1024,
+            1025,
+            1026,
+            1027,
+            1028,
+            1029,
+            1030
+          ]
+        },
+        {
+          "index": 4,
+          "requiredLevel": 7,
+          "openingVitality": 100,
+          "phases": [
+            1031,
+            1032,
+            1033,
+            1034,
+            1035,
+            1036,
+            1037,
+            1038,
+            1039,
+            1040
+          ]
+        },
+        {
+          "index": 5,
+          "requiredLevel": 9,
+          "openingVitality": 100,
+          "phases": [
+            1041,
+            1042,
+            1043,
+            1044,
+            1045,
+            1046,
+            1047,
+            1048,
+            1049,
+            1050
+          ]
+        },
+        {
+          "index": 6,
+          "requiredLevel": 11,
+          "openingVitality": 100,
+          "phases": [
+            1051,
+            1052,
+            1053,
+            1054,
+            1055,
+            1056,
+            1057,
+            1058,
+            1059,
+            1060
+          ]
+        }
+      ]
+    },
+    "variable": {
+      "manifestEntry": "lua64_database_variable_proto.lua.bytes",
+      "sourceLuaSha256": "a9e93208aea7d3f77864d22c2afc1e35b7b44227484da5bdcd1e721764d9ddbf",
+      "rows": {
+        "data1": 4,
+        "data2": 12,
+        "data3": 0
+      }
+    },
+    "contributeshop": {
+      "manifestEntry": "lua64_database_contributeshop_proto.lua.bytes",
+      "sourceLuaSha256": "71acf9656a557083287436df3c6bc1bd740a7a682a290fa10db37d8328064601",
+      "rows": [
+        {
+          "goods": 201,
+          "goodstype": 20,
+          "num": 1,
+          "costnum": 10000000,
+          "type": 103,
+          "costtype": 2,
+          "limit": 20
+        },
+        {
+          "goods": 202,
+          "goodstype": 20,
+          "num": 1,
+          "costnum": 2000,
+          "type": 109,
+          "costtype": 4,
+          "limit": 20
+        },
+        {
+          "goods": 203,
+          "goodstype": 20,
+          "num": 1,
+          "costnum": 20000,
+          "type": 104,
+          "costtype": 1,
+          "limit": 20
+        }
+      ]
+    }
+  },
+  "opening": {
+    "timezone": "Asia/Shanghai",
+    "startHourInclusive": 4,
+    "endHourExclusive": 12,
+    "closeHour": 0,
+    "reset": "daily",
+    "openingsPerDungeonPerDay": 1,
+    "vitalityPerOpening": 100,
+    "vitalityBalance": "max(0,guild.xp-totalActualOpeningSpend)",
+    "vitalityMapping": "沿已有本地S50 vitality=guild.xp，不从xp实扣；原服独立活跃来源未取到，不虚构新的发放"
+  },
+  "shop": {
+    "reset": "原有本地周一00:00周期不变，原表仅有limit而未给周期",
+    "bulkExample": {
+      "index": 16,
+      "quantity": 8,
+      "costDiamonds": 160000,
+      "current96358": "余额不足应返回100006且不扣款，不应返回2性别非法"
+    },
+    "limitsUnchanged": true
+  }
+}

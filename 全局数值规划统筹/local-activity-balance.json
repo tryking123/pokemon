@@ -1,0 +1,1217 @@
+{
+  "version": 1,
+  "timezone": "Asia/Shanghai",
+  "activityStatus": "candidate",
+  "rankTieBreak": [
+    "scoreDescending",
+    "firstReachedScoreAtAscending",
+    "roleIdAscending"
+  ],
+  "activities": {
+    "10025": {
+      "days": 7,
+      "module": "feskylin",
+      "protocol": [
+        172,
+        173
+      ],
+      "needs": [
+        "核对普通与高级扭蛋独立入口和 VIP 显示字段",
+        "确认整只精灵入库及 S14 展示"
+      ],
+      "metrics": {
+        "score": "本轮普通或高级扭蛋内实扣钻石合计向下整除 600。券抽与免费抽只计对应展示次数。"
+      },
+      "featuredElfIds": [
+        61001,
+        61002,
+        61003
+      ],
+      "offers": [
+        {
+          "id": 1,
+          "cost": {
+            "kind": "score",
+            "id": 10025,
+            "quantity": 2
+          },
+          "limit": 3,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "cost": {
+            "kind": "score",
+            "id": 10025,
+            "quantity": 5
+          },
+          "limit": 2,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "fragment",
+              "id": 34546,
+              "quantity": 5
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "cost": {
+            "kind": "score",
+            "id": 10025,
+            "quantity": 10
+          },
+          "limit": 2,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 34137,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "cost": {
+            "kind": "score",
+            "id": 10025,
+            "quantity": 50
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "elf",
+              "id": 61001,
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "rotateOfferElf": {
+        "offerId": 4,
+        "featuredElfIds": [
+          61001,
+          61002,
+          61003
+        ]
+      }
+    },
+    "10026": {
+      "days": 7,
+      "module": "fessuperrebate",
+      "protocol": [
+        174,
+        175,
+        176
+      ],
+      "needs": [
+        "领取确认订单及签到记分",
+        "回归刷新积分及签到状态"
+      ],
+      "metrics": {
+        "paidYuan": "本轮已确认游戏订单人民币分累加后向下整除 100",
+        "dailySign": "北京时间每自然日最多一次"
+      },
+      "signScore": 5,
+      "pointsPerPaidYuan": 1,
+      "offers": [
+        {
+          "id": 1,
+          "cost": {
+            "kind": "score",
+            "id": 10026,
+            "quantity": 10
+          },
+          "limit": 2,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "cost": {
+            "kind": "score",
+            "id": 10026,
+            "quantity": 20
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "cost": {
+            "kind": "score",
+            "id": 10026,
+            "quantity": 45
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "cost": {
+            "kind": "score",
+            "id": 10026,
+            "quantity": 100
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21059,
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "10027": {
+      "days": 7,
+      "module": "fesrevel",
+      "protocol": [
+        177,
+        178
+      ],
+      "source": "kaifukh",
+      "runtime": "activity/carnival.json",
+      "openedRows": [
+        7,
+        13,
+        8,
+        13,
+        7,
+        7,
+        8
+      ],
+      "hiddenTypes": [
+        101,
+        103,
+        105
+      ],
+      "receipt": "day*100+originalRow",
+      "rewardKinds": [
+        1,
+        3,
+        104
+      ]
+    },
+    "10029": {
+      "days": 7,
+      "activeDays": 6,
+      "displayDays": 1,
+      "module": "feslimitkylin",
+      "protocol": [
+        187,
+        188,
+        189,
+        190
+      ],
+      "runtimeResource": "activity/limited-beast.json",
+      "source": "xianshisj_proto 第1行，operate[10029].showTime=86400；每周最后一天展示与结算。",
+      "featuredElf": 64086,
+      "cost1": 2000,
+      "cost2": 18000,
+      "scorePerDraw": 10,
+      "milestones": [
+        500,
+        1000,
+        2000,
+        4000,
+        6000,
+        8000
+      ],
+      "minimumRankScore": 1000,
+      "poolRows": 24,
+      "poolTotalWeight": 10000,
+      "firstRankMail": [
+        1,
+        34137,
+        1,
+        1,
+        22019,
+        500,
+        1,
+        31022,
+        100
+      ]
+    },
+    "10035": {
+      "days": 4,
+      "module": "festask",
+      "protocol": [
+        211,
+        212
+      ],
+      "source": "xianshirenwu_proto 与 word1_proto。按北京时间自然日校验实际事件，限时任务领取与奖励在同一角色事务内结算。",
+      "tasks": [
+        {
+          "task1": 109,
+          "times": 1,
+          "wenben": 1095,
+          "reset": 1,
+          "award": [
+            1,
+            22019,
+            10
+          ],
+          "active": true
+        },
+        {
+          "task1": 110,
+          "times": 500,
+          "wenben": 1096,
+          "reset": 1,
+          "award": [
+            1,
+            21023,
+            10
+          ],
+          "active": true
+        },
+        {
+          "task1": 101,
+          "times": 3,
+          "wenben": 1087,
+          "reset": 1,
+          "award": [
+            1,
+            31022,
+            1
+          ],
+          "active": false
+        },
+        {
+          "task1": 102,
+          "times": 3,
+          "wenben": 1088,
+          "reset": 1,
+          "award": [
+            1,
+            34003,
+            1
+          ],
+          "active": false
+        },
+        {
+          "task1": 103,
+          "times": 3,
+          "wenben": 1089,
+          "reset": 1,
+          "award": [
+            1,
+            34031,
+            1
+          ],
+          "active": false
+        },
+        {
+          "task1": 105,
+          "times": 1,
+          "wenben": 1091,
+          "reset": 1,
+          "award": [
+            103,
+            0,
+            1000000
+          ],
+          "active": false
+        },
+        {
+          "task1": 106,
+          "times": 1,
+          "wenben": 1092,
+          "reset": 1,
+          "award": [
+            1,
+            20003,
+            10
+          ],
+          "active": true
+        },
+        {
+          "task1": 107,
+          "times": 5,
+          "wenben": 1093,
+          "reset": 1,
+          "award": [
+            1,
+            20002,
+            10
+          ],
+          "active": false
+        }
+      ]
+    },
+    "10036": {
+      "days": 7,
+      "module": "fespika",
+      "protocol": [
+        215,
+        216,
+        217,
+        218
+      ],
+      "runtimeResource": "activity/pika-park.json",
+      "ticketId": 34038,
+      "ticketDiamondPrice": 2000,
+      "singleTicketCosts": [
+        1,
+        2,
+        4,
+        8,
+        20
+      ],
+      "tenTicketCosts": [
+        10,
+        20,
+        40,
+        80,
+        null
+      ],
+      "source": "pikaqiuleyuan 五层、price[34038]、word1[1097] 及原 fespika_view 的闯关、十连和自动购买。",
+      "milestones": [
+        10,
+        30,
+        50,
+        70,
+        90
+      ],
+      "finalLayerElfWeights": {
+        "53009": 3000,
+        "53008": 7000
+      },
+      "locallyInterpretedPity": "每次进入前四层在原 time1 与 time2 闭区间抽取本层保底次数。十连在确认价格的同一层连抽十份，批次结束最多前进一层。"
+    },
+    "10038": {
+      "days": 7,
+      "module": "feschargegift",
+      "protocol": [
+        222,
+        223
+      ],
+      "reset": "北京时间每天00:00",
+      "source": "chaozhilibao 原两档商品奖励；word1[1105/1106] 每日单笔对应充值；当前渠道 chongzhi[5/6] 基础钻石面额。",
+      "show": 54001,
+      "offers": [
+        {
+          "id": 1,
+          "paysid": 5,
+          "priceCents": 600,
+          "oldDisplayDiamonds": 60,
+          "actualBaseDiamonds": 6000,
+          "limitPerDay": 1,
+          "rewards": [
+            1,
+            21015,
+            1,
+            1,
+            21038,
+            1,
+            1,
+            34031,
+            1,
+            104,
+            0,
+            60
+          ]
+        },
+        {
+          "id": 2,
+          "paysid": 6,
+          "priceCents": 3000,
+          "oldDisplayDiamonds": 300,
+          "actualBaseDiamonds": 30000,
+          "limitPerDay": 1,
+          "rewards": [
+            1,
+            21015,
+            1,
+            1,
+            21038,
+            2,
+            1,
+            34031,
+            5,
+            1,
+            34010,
+            1
+          ]
+        }
+      ]
+    },
+    "10039": {
+      "days": 7,
+      "module": "fesgashapon",
+      "protocol": [
+        10037,
+        1901
+      ],
+      "push": [
+        2039
+      ],
+      "runtime": "gacha/special.json",
+      "source": [
+        "specialspelllotto[1]",
+        "variable[2338]",
+        "word1[1110,1111]",
+        "item[34204,34314,34489,34496,34552,34555,34570].showitem",
+        "jingling.quality"
+      ],
+      "targetCount": 29,
+      "luckPerAdvancedDraw": 1,
+      "refreshCost": [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000,
+        6000,
+        7000,
+        8000,
+        9000,
+        10000
+      ],
+      "refreshCostCap": 10000,
+      "redAwards": [
+        64112,
+        64113,
+        64019,
+        64042,
+        64021,
+        64143,
+        64088
+      ]
+    },
+    "10042": {
+      "days": 7,
+      "module": "悬赏首领",
+      "protocol": [
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020
+      ],
+      "needs": [
+        "需确认原入口是否从界面直接映射",
+        "接入战斗尝试、伤害确认、阵容与实际结算"
+      ],
+      "featuredElfIds": [
+        61002,
+        61003,
+        61001
+      ],
+      "dailyFreeAttempts": 3,
+      "maxDailyBoughtAttempts": 2,
+      "diamondsPerBoughtAttempt": 300,
+      "metrics": {
+        "earnedPoints": "可信结算的单次伤害占该局首领最大生命比例，按 floor(20 × 比例) 得分且上限 20。退出、零伤害及异常局记零。"
+      },
+      "offers": [
+        {
+          "id": 1,
+          "cost": {
+            "kind": "score",
+            "id": 10042,
+            "quantity": 25
+          },
+          "limit": 2,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "cost": {
+            "kind": "score",
+            "id": 10042,
+            "quantity": 60
+          },
+          "limit": 2,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 34137,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "cost": {
+            "kind": "score",
+            "id": 10042,
+            "quantity": 100
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "need": 40,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "need": 100,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "need": 250,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21059,
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "rank": {
+        "metric": "earnedPoints",
+        "minimum": 100,
+        "tiers": [
+          {
+            "from": 1,
+            "to": 1,
+            "rewards": [
+              {
+                "kind": "item",
+                "id": 34137,
+                "quantity": 2
+              },
+              {
+                "kind": "item",
+                "id": 21069,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "rewards": [
+              {
+                "kind": "item",
+                "id": 34137,
+                "quantity": 1
+              },
+              {
+                "kind": "item",
+                "id": 21068,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "from": 4,
+            "to": 10,
+            "rewards": [
+              {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "10046": {
+      "days": 7,
+      "module": "fesmythshop",
+      "protocol": [
+        246,
+        247,
+        248
+      ],
+      "needs": [
+        "区分普通神秘商店和运营神兽商店，防止同协议串活动",
+        "神兽商品确认整只精灵发放和已获得行为"
+      ],
+      "featuredElfIds": [
+        61003,
+        61002,
+        61001
+      ],
+      "offers": [
+        {
+          "id": 1,
+          "cost": {
+            "kind": "item",
+            "id": 34137,
+            "quantity": 1
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "cost": {
+            "kind": "item",
+            "id": 34137,
+            "quantity": 1
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "cost": {
+            "kind": "item",
+            "id": 34137,
+            "quantity": 5
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "elf",
+              "id": 61003,
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "rotateOfferElf": {
+        "offerId": 3,
+        "featuredElfIds": [
+          61003,
+          61002,
+          61001
+        ]
+      },
+      "historicalCurrencyPolicy": "兑换券保留在库存。轮换只重置商品限购及展示精灵。"
+    },
+    "10047": {
+      "days": 7,
+      "module": "fesvipweal",
+      "protocol": [
+        259,
+        260
+      ],
+      "needs": [
+        "确认与现有 VIP 等级福利共享的 C259/260 可区分运营请求和领取状态"
+      ],
+      "offers": [
+        {
+          "id": 1,
+          "cost": {
+            "kind": "diamond",
+            "id": 1002,
+            "quantity": 1000
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 3
+            },
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            }
+          ],
+          "minimumVip": 1
+        },
+        {
+          "id": 2,
+          "cost": {
+            "kind": "diamond",
+            "id": 1002,
+            "quantity": 1000
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 21059,
+              "quantity": 1
+            }
+          ],
+          "minimumVip": 4
+        },
+        {
+          "id": 3,
+          "cost": {
+            "kind": "diamond",
+            "id": 1002,
+            "quantity": 1000
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21069,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 3
+            }
+          ],
+          "minimumVip": 8
+        }
+      ]
+    },
+    "10051": {
+      "days": 7,
+      "module": "迷宫",
+      "protocol": [
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031,
+        10032
+      ],
+      "needs": [],
+      "diceSides": 6,
+      "freeRollsPerDay": 3,
+      "maxExtraRollsPerDay": 3,
+      "diamondsPerExtraRoll": 200,
+      "metrics": {
+        "earnedPoints": "每实际前进一格1分，到第23格过门另加5；超过终点的点数作废，下一层从1开始。"
+      },
+      "box": {
+        "bonusEveryCells": 8,
+        "rewards": [
+          {
+            "kind": "item",
+            "id": 21082,
+            "quantity": 1
+          }
+        ],
+        "points": 1,
+        "positions": [
+          8,
+          16
+        ]
+      },
+      "offers": [
+        {
+          "id": 1,
+          "cost": {
+            "kind": "diamonds",
+            "quantity": 200
+          },
+          "limit": 2,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          ],
+          "minimumEarnedPoints": 12
+        },
+        {
+          "id": 2,
+          "cost": {
+            "kind": "diamonds",
+            "quantity": 400
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 4
+            }
+          ],
+          "minimumEarnedPoints": 24
+        },
+        {
+          "id": 3,
+          "cost": {
+            "kind": "diamonds",
+            "quantity": 1000
+          },
+          "limit": 1,
+          "limitWindow": "round",
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21053,
+              "quantity": 1
+            }
+          ],
+          "minimumEarnedPoints": 40
+        }
+      ],
+      "rank": {
+        "metric": "earnedPoints",
+        "minimum": 25,
+        "tiers": [
+          {
+            "from": 1,
+            "to": 1,
+            "rewards": [
+              {
+                "kind": "item",
+                "id": 21053,
+                "quantity": 1
+              },
+              {
+                "kind": "item",
+                "id": 21059,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "rewards": [
+              {
+                "kind": "item",
+                "id": 21058,
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "from": 4,
+            "to": 10,
+            "rewards": [
+              {
+                "kind": "item",
+                "id": 21082,
+                "quantity": 3
+              }
+            ]
+          }
+        ]
+      },
+      "cells": 23,
+      "resource": "activity/maze.json",
+      "runtime": "七操作原协议及双ABI原视图已验证",
+      "fixedDiceDiamonds": 500,
+      "dayReset": "Asia/Shanghai 00:00",
+      "week": "周一00:00至下周一00:00，周日23:00后只展示结算。"
+    },
+    "10055": {
+      "days": 3,
+      "module": "fesfirstcharge3",
+      "protocol": [
+        287,
+        288
+      ],
+      "needs": [
+        "核对原 `index`、`flag` 的当前档位顺序和称号展示",
+        "确定标题与正常首充入口隔离"
+      ],
+      "metrics": {
+        "paidCents": "本轮已确认游戏订单实付人民币分"
+      },
+      "milestones": [
+        {
+          "need": 600,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            },
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "need": 3000,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "need": 12800,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21059,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 21069,
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "10058": {
+      "days": 7,
+      "module": "fesegg",
+      "protocol": [
+        10201,
+        10202,
+        10203,
+        10204,
+        10205
+      ],
+      "status": "verifiedLocalProtocol",
+      "source": "activity/smash-egg.json",
+      "hammerId": 34347,
+      "diamondsPerHammer": 2000,
+      "hammersPerMode": [
+        1,
+        10
+      ],
+      "weightDenominator": 10000,
+      "poolRows": 25,
+      "topTenMinHammers": 50,
+      "topThreeMinHammers": 150,
+      "resultDisplayMinutes": 60,
+      "mailOnEnd": true
+    },
+    "10079": {
+      "days": 7,
+      "module": "fescontinuecharge",
+      "protocol": [
+        421
+      ],
+      "needs": [
+        "需客户端验证独立连续充值进度的刷新与自动结算或领奖入口"
+      ],
+      "metrics": {
+        "continuousDays": "本轮最长连续达标天数，每个北京自然日订单总金额达到 600 分即达标。"
+      },
+      "dailyPaidCents": 600,
+      "milestones": [
+        {
+          "need": 2,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "need": 4,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 3
+            },
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "need": 7,
+          "rewards": [
+            {
+              "kind": "item",
+              "id": 21059,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 21069,
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "10067": {
+      "days": 7,
+      "showMinutes": 60,
+      "module": "charge_view",
+      "protocol": [
+        327,
+        328
+      ],
+      "paymentProtocol": 2801,
+      "sku": [
+        303,
+        304
+      ],
+      "runtime": "payment/timed-shop.json",
+      "priceSource": "chongzhi.chargeValue (CNY)",
+      "rewardsAndLimit": "Limitedshop.rew/limit",
+      "claim": "领取一份本角色已付、未领订单；跨期保留已付权益"
+    },
+    "10082": {
+      "days": 7,
+      "showMinutes": 60,
+      "module": "charge_view",
+      "protocol": [
+        423,
+        424
+      ],
+      "paymentProtocol": 2801,
+      "sku": [
+        305,
+        306
+      ],
+      "runtime": "payment/timed-shop.json",
+      "priceSource": "chongzhi.chargeValue (CNY)",
+      "rewardsAndLimit": "Limitedshop.rew/limit",
+      "claim": "领取一份本角色已付、未领订单；跨期保留已付权益"
+    },
+    "10054": {
+      "days": 7,
+      "module": "fesluxury",
+      "protocol": [
+        289
+      ],
+      "snapshot": 451,
+      "paymentProtocol": 2801,
+      "sku": [
+        501,
+        503,
+        504
+      ],
+      "perSkuLimit": 6,
+      "claim": "按角色已确认未领订单发原 chongzhi.rew，过期可补领；升级前订单保留直接到账",
+      "source": "gfes_model:64 / fesluxury_ctrl / chongzhi.time,rew / zh_fesluxury"
+    },
+    "10074": {
+      "days": 7,
+      "module": "fesluckybag",
+      "level": 30,
+      "protocol": [
+        389,
+        1201
+      ],
+      "sync": [
+        100,
+        101,
+        460
+      ],
+      "tasks": {
+        "61000": 10,
+        "61001": 30,
+        "61002": 30,
+        "61003": 30
+      },
+      "bagCost": 100,
+      "diamondPool": [
+        [
+          888,
+          7000
+        ],
+        [
+          1888,
+          2400
+        ],
+        [
+          3888,
+          500
+        ],
+        [
+          8888,
+          100
+        ]
+      ],
+      "source": "zuanshifudai[1], mission[61000..61003], leading[1186], word1[1182]；钻石概率为本地演算"
+    }
+  }
+}

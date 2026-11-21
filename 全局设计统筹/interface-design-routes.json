@@ -1,0 +1,1534 @@
+{
+  "source": "../待实现/未接入本地行为的接口.md",
+  "design": "App本地玩法设计与对接.md",
+  "configuration": "../全局数值规划统筹/interface-balance-review.json",
+  "npcRosters": "../npc阵容/local-npc-rosters.json",
+  "reviewGroups": 110,
+  "protocolIdCount": 519,
+  "routes": [
+    {
+      "interfaces": "C11",
+      "protocolIds": [
+        11
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C11 在角色资料页复用当前已绑定的账号、区服及角色，重载本地存档。"
+    },
+    {
+      "interfaces": "C2001–C2002",
+      "protocolIds": [
+        2001,
+        2002
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "全部称号、头像与时装",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "称号默认全部解锁并增加对应属性,变更佩戴更新对应展示即可"
+    },
+    {
+      "interfaces": "C2101、C3000",
+      "protocolIds": [
+        2101,
+        3000
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "不保留调试入口"
+    },
+    {
+      "interfaces": "C50–C69、C1401–C1403、C5070–C5072",
+      "protocolIds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        1401,
+        1402,
+        1403,
+        5070,
+        5071,
+        5072
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "本机个人公会与首领",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "开放本机个人公会",
+      "rosterModeIds": [
+        "guild_boss"
+      ]
+    },
+    {
+      "interfaces": "C100–C113",
+      "protocolIds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "三种 NPC 训练与单机赛季",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "开放明确标注 NPC 的训练模式，以及三个玩法各自的对手、匹配、次数和奖档。",
+      "rosterModeIds": [
+        "solo_training",
+        "arena_training",
+        "elf_king_training"
+      ]
+    },
+    {
+      "interfaces": "C234–C245、C249–C250",
+      "protocolIds": [
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        249,
+        250
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "三种 NPC 训练与单机赛季",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "独立设计单机赛季，从本地赛程、有效对局和奖励记录读数据。",
+      "rosterModeIds": [
+        "offline_season"
+      ]
+    },
+    {
+      "interfaces": "C1003、C1301、C2216、C2501–C2504、C2506–C2512、C2526–C2527",
+      "protocolIds": [
+        1003,
+        1301,
+        2216,
+        2501,
+        2502,
+        2503,
+        2504,
+        2506,
+        2507,
+        2508,
+        2509,
+        2510,
+        2511,
+        2512,
+        2526,
+        2527
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "否"
+    },
+    {
+      "interfaces": "C2211",
+      "protocolIds": [
+        2211
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "关卡、探索及养成",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "定位 tid 语义和原本地阵容入口"
+    },
+    {
+      "interfaces": "C3026–C3028、C3032、C3034、C10100–C10106、C10108–C10109",
+      "protocolIds": [
+        3026,
+        3027,
+        3028,
+        3032,
+        3034,
+        10100,
+        10101,
+        10102,
+        10103,
+        10104,
+        10105,
+        10106,
+        10108,
+        10109
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed"
+    },
+    {
+      "interfaces": "C3670–C3681、C3683–C3684、C3686、C5092",
+      "protocolIds": [
+        3670,
+        3671,
+        3672,
+        3673,
+        3674,
+        3675,
+        3676,
+        3677,
+        3678,
+        3679,
+        3680,
+        3681,
+        3683,
+        3684,
+        3686,
+        5092
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed"
+    },
+    {
+      "interfaces": "C5090",
+      "protocolIds": [
+        5090
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "定位原触发点前保持隐藏"
+    },
+    {
+      "interfaces": "C20001–C20015",
+      "protocolIds": [
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015
+      ],
+      "sourceSection": "账号、场景与多人入口",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "保持隐藏"
+    },
+    {
+      "interfaces": "C10",
+      "protocolIds": [
+        10
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "不启用"
+    },
+    {
+      "interfaces": "C12–C13、C10406–C10407、C10412",
+      "protocolIds": [
+        12,
+        13,
+        10406,
+        10407,
+        10412
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "不关联"
+    },
+    {
+      "interfaces": "C10250–C10251、C10043",
+      "protocolIds": [
+        10250,
+        10251,
+        10043
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "保持隐藏"
+    },
+    {
+      "interfaces": "C10410、C10423–C10426",
+      "protocolIds": [
+        10410,
+        10423,
+        10424,
+        10425,
+        10426
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "补签、友情点与券钱包",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C10410 每日券包的 1004 专用券兑换原 5 档基础 6000 钻；C10423–C10426 使用各自的每日限时券与普通代金券钱包。"
+    },
+    {
+      "interfaces": "C246–C248",
+      "protocolIds": [
+        246,
+        247,
+        248
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对活动 10046、shoptype 及实际券来源"
+    },
+    {
+      "interfaces": "C284",
+      "protocolIds": [
+        284
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对 buytime 对应的次数类型"
+    },
+    {
+      "interfaces": "C328、C424、C10415–C10416",
+      "protocolIds": [
+        328,
+        424,
+        10415,
+        10416
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C2304–C2306",
+      "protocolIds": [
+        2304,
+        2305,
+        2306
+      ],
+      "sourceSection": "渠道、商城与礼包",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C120–C121、C134",
+      "protocolIds": [
+        120,
+        121,
+        134
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "tower"
+      ]
+    },
+    {
+      "interfaces": "C122–C126、C129",
+      "protocolIds": [
+        122,
+        123,
+        124,
+        125,
+        126,
+        129
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "矿洞、道馆与每日副本",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "开放",
+      "rosterModeIds": [
+        "mine_raid"
+      ]
+    },
+    {
+      "interfaces": "C127–C128，关联 C66、C68–C69",
+      "protocolIds": [
+        127,
+        128,
+        66,
+        68,
+        69
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "本机个人公会与首领",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "批准",
+      "rosterModeIds": [
+        "bandit_challenge",
+        "bandit_boss"
+      ]
+    },
+    {
+      "interfaces": "C168–C169",
+      "protocolIds": [
+        168,
+        169
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "矿洞、道馆与每日副本",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "不共用次数",
+      "rosterModeIds": [
+        "daily_dungeon"
+      ]
+    },
+    {
+      "interfaces": "C268–C269，关联 C180–C182",
+      "protocolIds": [
+        268,
+        269,
+        180,
+        181,
+        182
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "矿洞、道馆与每日副本",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "开放",
+      "rosterModeIds": [
+        "dojo_raid"
+      ]
+    },
+    {
+      "interfaces": "C272–C276",
+      "protocolIds": [
+        272,
+        273,
+        274,
+        275,
+        276
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "zodiac"
+      ]
+    },
+    {
+      "interfaces": "C282–C283、C285–C286，关联 C284",
+      "protocolIds": [
+        282,
+        283,
+        285,
+        286,
+        284
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "邮箱溢出及部分领取",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "背包满时发送至邮箱内,玩家手动处理背包内容后去领取即可,每次领取至背包满,然后剩余的再次回到邮箱,其它类似的一样使用此规则",
+      "rosterModeIds": [
+        "eden"
+      ],
+      "overflowMailShared": true
+    },
+    {
+      "interfaces": "C337–C340，关联 C343",
+      "protocolIds": [
+        337,
+        338,
+        339,
+        340,
+        343
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C341–C342、C372",
+      "protocolIds": [
+        341,
+        342,
+        372
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C1208",
+      "protocolIds": [
+        1208
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C1208 在体力补给界面购入额外体力，可将额外 100 体力兑换当日普通副本机会。"
+    },
+    {
+      "interfaces": "C2202、C2204",
+      "protocolIds": [
+        2202,
+        2204
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C2204 在首副本通关后经副本挂机面板领角色唯一首通宝箱；C2202 保留普通扫荡。"
+    },
+    {
+      "interfaces": "C2206、C2208–C2209，关联 C3038–C3039",
+      "protocolIds": [
+        2206,
+        2208,
+        2209,
+        3038,
+        3039
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C2206 快速扫荡共用普通扫荡次数。C2208 选择已通关的首副本或恢复冒险，C2209 和 C3038 共用时间账。"
+    },
+    {
+      "interfaces": "C2601",
+      "protocolIds": [
+        2601
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "补签、友情点与券钱包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C5051–C5062、C5077、C5080–C5083、C5094",
+      "protocolIds": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5056,
+        5057,
+        5058,
+        5059,
+        5060,
+        5061,
+        5062,
+        5077,
+        5080,
+        5081,
+        5082,
+        5083,
+        5094
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "secret_area"
+      ]
+    },
+    {
+      "interfaces": "C5063–C5066、C5069、C5078、C5095",
+      "protocolIds": [
+        5063,
+        5064,
+        5065,
+        5066,
+        5069,
+        5078,
+        5095
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C5067",
+      "protocolIds": [
+        5067
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对祈愿过程是否产生秘境实例"
+    },
+    {
+      "interfaces": "C5091、C5093",
+      "protocolIds": [
+        5091,
+        5093
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C5096、C5098–C5099",
+      "protocolIds": [
+        5096,
+        5098,
+        5099
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C5101–C5104",
+      "protocolIds": [
+        5101,
+        5102,
+        5103,
+        5104
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "可替代",
+      "rosterModeIds": [
+        "space"
+      ]
+    },
+    {
+      "interfaces": "C131，关联 C130/C132",
+      "protocolIds": [
+        131,
+        130,
+        132
+      ],
+      "sourceSection": "副本、探索收益与补签",
+      "designSection": "补签、友情点与券钱包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "可无限补签",
+      "localFlow": "C131 为 VIP1 已领普通签到奖励的日期格领取同量追加奖励，每轮每格一次。"
+    },
+    {
+      "interfaces": "C133",
+      "protocolIds": [
+        133
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "日界线为00:00:00"
+    },
+    {
+      "interfaces": "C172–C173、C174–C176",
+      "protocolIds": [
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "重置周期 : 天"
+    },
+    {
+      "interfaces": "C177–C178、C179",
+      "protocolIds": [
+        177,
+        178,
+        179
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "C179 翻牌活动归属待查"
+    },
+    {
+      "interfaces": "C185–C186",
+      "protocolIds": [
+        185,
+        186
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C187–C190",
+      "protocolIds": [
+        187,
+        188,
+        189,
+        190
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C191、C196–C199、C290、C10009–C10010",
+      "protocolIds": [
+        191,
+        196,
+        197,
+        198,
+        199,
+        290,
+        10009,
+        10010
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对活动上下文和有效本地对象"
+    },
+    {
+      "interfaces": "C211–C212",
+      "protocolIds": [
+        211,
+        212
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C215–C218",
+      "protocolIds": [
+        215,
+        216,
+        217,
+        218
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C222–C223、C287–C288",
+      "protocolIds": [
+        222,
+        223,
+        287,
+        288
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C224–C226",
+      "protocolIds": [
+        224,
+        225,
+        226
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C227–C230",
+      "protocolIds": [
+        227,
+        228,
+        229,
+        230
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C261–C263、C265–C267",
+      "protocolIds": [
+        261,
+        262,
+        263,
+        265,
+        266,
+        267
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "开放"
+    },
+    {
+      "interfaces": "C279–C280",
+      "protocolIds": [
+        279,
+        280
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对活动配方和已入账资产"
+    },
+    {
+      "interfaces": "C281、C289、C291–C292",
+      "protocolIds": [
+        281,
+        289,
+        291,
+        292
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对 C281 原档期、日期来源与页面"
+    },
+    {
+      "interfaces": "C293–C302",
+      "protocolIds": [
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "underground"
+      ]
+    },
+    {
+      "interfaces": "C303–C307、C309",
+      "protocolIds": [
+        303,
+        304,
+        305,
+        306,
+        307,
+        309
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对原场次是否依赖实际队伍"
+    },
+    {
+      "interfaces": "C320–C322、C324–C325",
+      "protocolIds": [
+        320,
+        321,
+        322,
+        324,
+        325
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "不依赖"
+    },
+    {
+      "interfaces": "C330–C336",
+      "protocolIds": [
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "rocket_trial"
+      ],
+      "localStatus": "implemented_pc_protocol_verified",
+      "runtimeConfiguration": "../服务端代码/src/main/resources/arena/rocket.json",
+      "verification": "55级总览、三队车轮战、余血续战、跨进程恢复、周榜与赛季奖励、重领拒绝及双架构入口和预览"
+    },
+    {
+      "interfaces": "C344–C348、C368、C411；C349–C353、C412",
+      "protocolIds": [
+        344,
+        345,
+        346,
+        347,
+        348,
+        368,
+        411,
+        349,
+        350,
+        351,
+        352,
+        353,
+        412
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C352 与 C368 分别购买本日神塔翻牌、数字华容道机会，各自按 50、100、150 钻定价。"
+    },
+    {
+      "interfaces": "C354–C360",
+      "protocolIds": [
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C361–C365、C369",
+      "protocolIds": [
+        361,
+        362,
+        363,
+        364,
+        365,
+        369
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C373–C376",
+      "protocolIds": [
+        373,
+        374,
+        375,
+        376
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C389、C390–C391",
+      "protocolIds": [
+        389,
+        390,
+        391
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C393–C398",
+      "protocolIds": [
+        393,
+        394,
+        395,
+        396,
+        397,
+        398
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C400–C401",
+      "protocolIds": [
+        400,
+        401
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对 S464 的券箱语义"
+    },
+    {
+      "interfaces": "C413–C414",
+      "protocolIds": [
+        413,
+        414
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "继续隐藏及待取证",
+      "disposition": "closed",
+      "reviewMark": "保持隐藏"
+    },
+    {
+      "interfaces": "C421–C422",
+      "protocolIds": [
+        421,
+        422
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3651–C3653、C10033–C10036",
+      "protocolIds": [
+        3651,
+        3652,
+        3653,
+        10033,
+        10034,
+        10035,
+        10036
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "两个单机世界首领及悬赏首领",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "单机首领",
+      "localVerification": "WorldBossService / WorldBossGameFeature；真实普通窗口、隔离大师窗口、周结与原双 ABI；设备结果见 APK 记录",
+      "rosterModeIds": [
+        "world_boss",
+        "master_world_boss"
+      ]
+    },
+    {
+      "interfaces": "C10012–C10020",
+      "protocolIds": [
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "两个单机世界首领及悬赏首领",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "bounty_boss"
+      ]
+    },
+    {
+      "interfaces": "C10021–C10025",
+      "protocolIds": [
+        10021,
+        10022,
+        10023,
+        10024,
+        10025
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "单机转盘、抢购和充值榜",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "启用单机替代"
+    },
+    {
+      "interfaces": "C10026–C10032",
+      "protocolIds": [
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031,
+        10032
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C10037，关联 C1901",
+      "protocolIds": [
+        10037,
+        1901
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对独立池、刷新与 C1901 相应分支"
+    },
+    {
+      "interfaces": "C10038–C10042",
+      "protocolIds": [
+        10038,
+        10039,
+        10040,
+        10041,
+        10042
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates",
+      "rosterModeIds": [
+        "nest"
+      ]
+    },
+    {
+      "interfaces": "C10050–C10054",
+      "protocolIds": [
+        10050,
+        10051,
+        10052,
+        10053,
+        10054
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "单机转盘、抢购和充值榜",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "启用单机替代"
+    },
+    {
+      "interfaces": "C10201–C10205",
+      "protocolIds": [
+        10201,
+        10202,
+        10203,
+        10204,
+        10205
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C10271",
+      "protocolIds": [
+        10271
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "单机转盘、抢购和充值榜",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "使用单服和本地账号即可 即admin永远第一"
+    },
+    {
+      "interfaces": "C10413–C10422",
+      "protocolIds": [
+        10413,
+        10414,
+        10415,
+        10416,
+        10417,
+        10418,
+        10419,
+        10420,
+        10421,
+        10422
+      ],
+      "sourceSection": "活动与活动榜单",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "分别核对档期、券种、奖品和商品"
+    },
+    {
+      "interfaces": "C252–C253、C255–C258，关联 C251/C254",
+      "protocolIds": [
+        252,
+        253,
+        255,
+        256,
+        257,
+        258,
+        251,
+        254
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C310、C1701",
+      "protocolIds": [
+        310,
+        1701
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C311–C316",
+      "protocolIds": [
+        311,
+        312,
+        313,
+        314,
+        315,
+        316
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C417–C420",
+      "protocolIds": [
+        417,
+        418,
+        419,
+        420
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C1502、C3023、C3018",
+      "protocolIds": [
+        1502,
+        3023,
+        3018
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3012、C3017、C3043",
+      "protocolIds": [
+        3012,
+        3017,
+        3043
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C3043 通过精灵技能页核对当前技能档、材料与精灵状态，原子完成升级。"
+    },
+    {
+      "interfaces": "C3015–C3016",
+      "protocolIds": [
+        3015,
+        3016
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3003、C3020、C3036、C5100",
+      "protocolIds": [
+        3003,
+        3020,
+        3036,
+        5100
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3044–C3045",
+      "protocolIds": [
+        3044,
+        3045
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3042",
+      "protocolIds": [
+        3042
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C382、C5011–C5017",
+      "protocolIds": [
+        382,
+        5011,
+        5012,
+        5013,
+        5014,
+        5015,
+        5016,
+        5017
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C5079、C20020–C20021，关联 C3019",
+      "protocolIds": [
+        5079,
+        20020,
+        20021,
+        3019
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C10301–C10302、C10304–C10309",
+      "protocolIds": [
+        10301,
+        10302,
+        10304,
+        10305,
+        10306,
+        10307,
+        10308,
+        10309
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3007–C3009",
+      "protocolIds": [
+        3007,
+        3008,
+        3009
+      ],
+      "sourceSection": "精灵、宠物与携带培养",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C377–C378",
+      "protocolIds": [
+        377,
+        378
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "补签、友情点与券钱包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "独立记账",
+      "localFlow": "C377/C378 以每日发行的 14 种原外币活动券实例 UID 分别兑换或出售，互斥结算。"
+    },
+    {
+      "interfaces": "C399",
+      "protocolIds": [
+        399
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C2521–C2525、C2534–C2535",
+      "protocolIds": [
+        2521,
+        2522,
+        2523,
+        2524,
+        2525,
+        2534,
+        2535
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C2528–C2533",
+      "protocolIds": [
+        2528,
+        2529,
+        2530,
+        2531,
+        2532,
+        2533
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates",
+      "localFlow": "C2529 从可售未锁定背包套装贴纸中扣除指定模板和数量，售价与发放同事务。"
+    },
+    {
+      "interfaces": "C3450–C3452",
+      "protocolIds": [
+        3450,
+        3451,
+        3452
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "全部称号、头像与时装",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "时装与称号一样,默认获得全部时装",
+      "localFlow": "每个已拥有的时装 ID 按配置计入属性一次。C3451 穿脱仅更新展示外观，角色战力与战斗按同一份收藏计算。"
+    },
+    {
+      "interfaces": "C231–C232",
+      "protocolIds": [
+        231,
+        232
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "全部称号、头像与时装",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "头像与称号一样,默认获得全部头像"
+    },
+    {
+      "interfaces": "C2401",
+      "protocolIds": [
+        2401
+      ],
+      "sourceSection": "道具、训练家装备与外观",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C402–C403",
+      "protocolIds": [
+        402,
+        403
+      ],
+      "sourceSection": "地图、捕捉及探索",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C404–C406、C409–C410",
+      "protocolIds": [
+        404,
+        405,
+        406,
+        409,
+        410
+      ],
+      "sourceSection": "地图、捕捉及探索",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3101–C3105",
+      "protocolIds": [
+        3101,
+        3102,
+        3103,
+        3104,
+        3105
+      ],
+      "sourceSection": "地图、捕捉及探索",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3551",
+      "protocolIds": [
+        3551
+      ],
+      "sourceSection": "地图、捕捉及探索",
+      "designSection": "关卡、探索及养成",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "核对图鉴接口是已读标记还是领奖"
+    },
+    {
+      "interfaces": "C150–C151",
+      "protocolIds": [
+        150,
+        151
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C326、C2515–C2517",
+      "protocolIds": [
+        326,
+        2515,
+        2516,
+        2517
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C386",
+      "protocolIds": [
+        386
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "活动、商城与礼包",
+      "disposition": "evidence_pending",
+      "evidenceNeeded": "确认能在页面预告具体精灵实例再开放"
+    },
+    {
+      "interfaces": "C423、C2801",
+      "protocolIds": [
+        423,
+        2801
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C1901、C2505",
+      "protocolIds": [
+        1901,
+        2505
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "补签、友情点与券钱包",
+      "disposition": "approved_with_explicit_decision",
+      "reviewMark": "不开放本地伙伴或任务,直接默认发放10亿友情点"
+    },
+    {
+      "interfaces": "C2037",
+      "protocolIds": [
+        2037
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "活动、商城与礼包",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C2203、C2207、C3001–C3002",
+      "protocolIds": [
+        2203,
+        2207,
+        3001,
+        3002
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    },
+    {
+      "interfaces": "C3037–C3041",
+      "protocolIds": [
+        3037,
+        3038,
+        3039,
+        3040,
+        3041
+      ],
+      "sourceSection": "已有入口的扩展范围",
+      "designSection": "关卡、探索及养成",
+      "disposition": "approved_with_configuration_gates"
+    }
+  ]
+}

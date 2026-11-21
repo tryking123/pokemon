@@ -1,0 +1,221 @@
+{
+  "gachaDiamondsPerPoint": 600,
+  "rotatingElfs": [
+    61001,
+    61002,
+    61003
+  ],
+  "rebatePointsPerYuan": 1,
+  "rebateSignPoints": 5,
+  "kylin": [
+    {
+      "cost": 2,
+      "limit": 3,
+      "reward": [
+        1,
+        21063,
+        2
+      ]
+    },
+    {
+      "cost": 5,
+      "limit": 2,
+      "reward": [
+        1,
+        34546,
+        5
+      ]
+    },
+    {
+      "cost": 10,
+      "limit": 2,
+      "reward": [
+        1,
+        34137,
+        1
+      ]
+    },
+    {
+      "cost": 50,
+      "limit": 1,
+      "reward": [
+        2,
+        61001,
+        1
+      ]
+    }
+  ],
+  "rebate": [
+    {
+      "cost": 10,
+      "limit": 2,
+      "reward": [
+        1,
+        21063,
+        2
+      ]
+    },
+    {
+      "cost": 20,
+      "limit": 1,
+      "reward": [
+        1,
+        20027,
+        3
+      ]
+    },
+    {
+      "cost": 45,
+      "limit": 1,
+      "reward": [
+        1,
+        21058,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 1,
+      "reward": [
+        1,
+        21059,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        62001,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64055,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64120,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64121,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64122,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64141,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64155,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64160,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64161,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64165,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64170,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64174,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64186,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64187,
+        1
+      ]
+    },
+    {
+      "cost": 100,
+      "limit": 0,
+      "reward": [
+        2,
+        64188,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# 按当前远程仓库所有者设置；审核身份使用 GitHub 用户名，不使用邮箱。
+# 必须在目标分支启用 Require review from Code Owners 才能强制审核。
+# 所有者自己的 PR 也需要另一位有写权限的 Code Owner 审核，详见协作规范。
+* @tryking123

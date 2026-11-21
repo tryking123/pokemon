@@ -1,0 +1,1723 @@
+# 由原包 lua64_network.ab 的 typedef.lua 和 proto.lua 规整生成。
+TYPE BuyoffList day:0:integer,info:1:*BuyoffTask,buytype:2:integer
+TYPE BuyoffTask index:0:integer,award:1:*integer,price:2:integer,offprice:3:integer,times:4:integer
+TYPE CarnivalList day:0:integer,list:1:*CarnivalTask
+TYPE CarnivalTask itype:0:integer,need:1:integer,now:2:integer,award:3:*integer,flag:4:integer
+TYPE ExchangeList day:0:integer,info:1:*ExchangeTask
+TYPE ExchangeTask index:0:integer,expend:1:*integer,change:2:*integer,time:3:integer,most:4:integer
+TYPE HolidayList day:0:integer,list:1:*HolidayTask
+TYPE HolidayTask itype:0:integer,need:1:string,now:2:string,award:3:*integer,flag:4:integer,cfgid:5:integer
+TYPE S.adventure_catch_event.response
+TYPE S.elf.request.level id:0:string,val:1:integer
+TYPE T_buff itype:0:integer,continuous:1:integer,times:2:integer,attrid:3:integer,attrnum:4:integer
+TYPE activity_status activity_id:0:integer,status:1:integer,num:2:integer,openTime:3:string,endTime:4:string,showTime:5:string
+TYPE actor id:0:string,name:1:string,sex:2:integer,level:3:integer,vip:4:integer,titleid:5:integer,state:6:integer,dressid:8:integer,hp:9:integer,guildname:10:string,retinue:11:*integer,icon:12:integer
+TYPE advert itype:0:integer,cold_time:1:integer,num:2:integer,reward_info:3:attachment
+TYPE advertising_vaule elf_uid:0:string,travel_index:1:integer
+TYPE aidinfo id:0:string,sid:1:integer,index:2:integer
+TYPE arenainfo fighting:0:integer,ranking:1:integer,winnum:2:integer,continuouswin:3:integer,arena_point:4:integer,sumCount:5:integer,buyTimes:6:integer,weektimes:7:integer,weekrecord:8:*integer
+TYPE attachment exp:0:integer,exp1:1:integer,coins:2:integer,diamonds:3:integer,contribute:4:integer,pkpoint:5:integer,title:6:integer,huizhang:7:integer,items:8:*item,elf:9:*elfinfo,elschips:10:*item,carrys:11:*item,fashes:13:*integer,fasheschips:14:*item,universal:15:integer,friendpoint:18:integer,dupitems:19:*item,tiredpower:20:integer,challenge:21:integer,action:22:integer,zstone:23:*item,dojo_point:24:integer,suit_bag:26:*item,vitality:27:integer,passexp:28:integer,pstone:29:*item,maze:30:integer,zodiacoin:31:integer,runechips:32:integer,fashescoins:33:integer,dnfpoint:34:integer,pet:35:*petinfo,egg:36:*petinfo,mood:37:integer,homecoin:38:integer,felicity:39:integer,jetton:40:integer,bbox:41:*item,simelf:42:*item,antiquity:43:*item,limit_voucher:44:integer,real_voucher:45:integer
+TYPE attribute hp_max:0:integer,physical_attack:1:integer,special_attack:2:integer,physical_defense:3:integer,special_defense:4:integer,speed:5:integer,hp_max_limit:6:integer,physical_attack_limit:7:integer,special_attack_limit:8:integer,physical_defense_limit:9:integer,special_defense_limit:10:integer,speed_limit:11:integer
+TYPE award_log uid:0:string,name:1:string,award:2:common_award
+TYPE battle_elf_num data:0:*elf_battle_info,battle_num:1:integer,battle_max:2:integer,battle_number:3:integer
+TYPE battle_queue queue:0:integer,elfs:1:*string
+TYPE battle_syn_record sid:0:integer,objs:1:*string,turns:2:integer,flag:3:integer,type:4:string
+TYPE bombshellAct itype:0:integer,isopen:1:boolean,flag:2:boolean,count:3:integer
+TYPE bountyboss_leiji times:0:integer,reward:1:*integer
+TYPE bountyboss_rank name:0:string,sec:1:integer,icon:2:integer,uid:3:string,integral:4:integer,reward:5:*integer
+TYPE bountyboss_shop itemid:0:*integer,price:1:*integer,price1:2:integer,times:3:integer,use_num:4:integer
+TYPE buff id:0:integer,amass:1:integer,round:2:integer,endtime:3:integer
+TYPE cargo id:0:integer,times:1:integer
+TYPE carryinfo id:0:string,sid:1:integer,number:2:integer,protect:3:integer,star:4:integer
+TYPE carrylist carrylist:0:*carryinfo(id),elfid:1:string,carrynum:2:integer,protectnum:3:integer
+TYPE carryshop_limit_buy index:0:integer,buy_num:1:integer
+TYPE casinocell index:0:integer,flag:1:integer,itype:2:integer,award:3:*integer
+TYPE changesvrd svrid:0:integer,address:1:string
+TYPE chargeshopinfo type:0:integer,id:1:integer,num:2:integer,costnum:3:integer
+TYPE chat channel:0:integer,fuid:1:string,fname:2:string,fsex:3:integer,fvip:4:integer,ftxt:5:string,flevel:6:integer,toid:7:string,invide:8:invide,tipsext:9:tipsext,icon:10:integer
+TYPE clockin_conf could:0:integer,get:1:integer,chongzhi:2:*integer,xiaohao:3:*integer,login:4:*integer,award:5:*integer
+TYPE common_award itype:0:integer,id:1:integer,num:2:integer
+TYPE comsumeinfo num:0:integer,rew:1:*integer,flag:2:integer
+TYPE config version:0:integer,name:1:string
+TYPE consume_elf_list start_standard:0:integer,consume_elf_num:1:*integer
+TYPE contributeshop_limit_buy index:0:integer,buy_num:1:integer
+TYPE convertcell times:0:integer,need:1:integer,itype:2:integer,itemID:3:integer,itemNum:4:integer,count:5:integer,needvip:6:integer
+TYPE convertinfo redeem:0:*integer,exchange:1:*integer,num:2:integer,mytimes:3:integer,refresh:4:integer
+TYPE costitem itype:0:integer,uid:1:string
+TYPE dailychargeinfo num:0:integer,rew:1:*integer,flag:2:integer
+TYPE dailyduptimes itype:0:integer,times:1:integer
+TYPE daygiftinfo index:0:integer,buy:1:integer,get:2:integer
+TYPE debris id:0:integer,num:1:integer
+TYPE diamonds_rob_shop need_intgeral:0:integer,exchange_num:1:integer,item_info:2:*integer,use_num:3:integer
+TYPE diamondsrob_hotgoods item_type:0:integer,item_id:1:integer,item_num:2:integer,item_part:3:integer
+TYPE dnfrankinfo uid:0:string,name:1:string,svrid:2:integer,layer:3:integer,title:4:integer,vip:5:integer,dress:6:integer,power:7:integer,time:8:integer
+TYPE dnftaskinfo index:0:integer,need:1:*integer,award:2:*integer,att:3:*integer,feature:4:integer,deadline:5:integer,elfs:6:*string
+TYPE dojoinfos idx:1:integer,status:2:integer,uid:3:string,sex:4:integer,icon:5:integer,vip:6:integer,battlepower:7:integer,name:8:string,level:9:integer,time:10:integer
+TYPE dupinfo sid:0:integer,dnum:1:integer,extern:2:facter
+TYPE edenElf uid:0:string,index:1:integer,land:2:integer,isboss:3:boolean,state:4:integer,autotime:5:integer,escapetime:6:integer,deadline:7:integer,ownerid:8:string,ownername:9:string
+TYPE effects teamsid:0:integer
+TYPE elf id:0:string,config_id:1:integer,level:2:integer,exp:3:integer,quality:4:integer,star:5:integer,nature:6:integer,unit_life:7:integer,unit_speed:8:integer,unit_patk:9:integer,unit_pdef:10:integer,unit_satk:11:integer,unit_sdef:12:integer,effort_life:13:integer,effort_speed:14:integer,effort_patk:15:integer,effort_pdef:16:integer,effort_satk:17:integer,effort_sdef:18:integer,life:19:integer,speed:20:integer,patk:21:integer,pdef:22:integer,satk:23:integer,sdef:24:integer
+TYPE elf_awaken_info lv:0:integer,id:1:string,start:2:*consume_elf_list
+TYPE elf_battle_info id:0:string,sid:1:integer,position:2:integer,prepareid:3:integer
+TYPE elf_map id:0:integer,new:1:integer
+TYPE elf_state id:0:string,state:1:*integer
+TYPE elf_travel_num uid:0:string,num:1:integer,limit_times:2:integer
+TYPE elf_treatment uid:0:string,finish:1:integer,itype:2:integer,interval:3:integer
+TYPE elfbag use:0:integer,capacity:1:integer,items:2:*item
+TYPE elfcome_master name:0:string,sex:1:integer,level:2:integer,dress:3:integer,reward:4:*integer,uid:5:string,serverid:6:integer,icon:7:integer
+TYPE elfcountinfo bagmax:0:integer,bagnum:1:integer
+TYPE elfinfo id:0:string,sid:1:integer,level:2:integer,nature:3:integer,love:4:integer,loveexp:5:integer,position:6:integer,prepareid:7:integer,star:8:integer,occupy:9:integer,gender:10:integer,baptize:11:integer,individual:12:attribute,effort:13:attribute,skill_bar:14:*integer,old_elfsid:15:*integer,individualmax:16:integer,character:17:*integer,advanced:18:integer,Z_Stone:19:item,effort_item:20:*item,awakenlv:21:integer,travel:22:travel_buff,skill_lv:23:*skillinfo(pos),skill_cost:24:*common_award,effort_monopoly_max:25:attribute,pstone:26:*item(pos),veinlevel:27:integer,dynalevel:28:integer,dynapath:29:integer,dynabook:30:integer,dynatype:31:integer,ancient:32:integer,pcl:33:*pclpit(index),pcltype:34:integer,n:35:integer
+TYPE elfking_battle id:0:string,position:1:integer,battleid:2:integer,sid:3:integer,hp:4:integer,hpmax:5:integer
+TYPE elflist team:0:integer,list:1:*elfinfo
+TYPE elfrecord id:0:string,hp:1:integer,hp_max:2:integer,sp:3:integer
+TYPE eliteRoom red:0:league_player,blue:1:league_player,buff:2:integer,index:3:string,rank:4:integer,bet:5:string
+TYPE emblem index:0:integer,level:1:integer
+TYPE eqitem uid:0:integer,id:1:integer,pos:2:integer,props:3:wprops,extend:4:string
+TYPE erection index:0:integer,sid:1:integer,lasttime:2:integer
+TYPE events_tab id:0:integer,num:1:integer
+TYPE extra_attr attrid:0:integer,attrnum:1:integer
+TYPE facter idkillmonstern:0:integer,mtotal:1:integer
+TYPE formation_t identifer:0:string,power:1:integer,pokemon:2:*pokemon_t,sid:3:integer,preference:4:integer,pvp:5:boolean,isnpc:6:boolean,pet:7:petbtl
+TYPE friend_chat tm:0:integer,context:1:string,nickname:2:string,icon:3:integer,uid:4:string,i_type:5:integer
+TYPE friend_info uid:0:string,nickname:1:string,vip:2:integer,power:3:integer,sex:4:integer,lv:5:integer,dress:6:integer,help_jl:7:string,tm:8:integer,ship:9:integer,chat_info:10:*friend_chat,logout_time:11:integer,apply_tm:12:integer,apply:13:integer,icon:14:integer
+TYPE fundinfo grade:0:integer,rew:1:*integer,flag:2:integer
+TYPE gbattle_log period:0:integer,list:1:*rankinfo
+TYPE grouponinfo index:0:integer,need:1:integer,money:2:string,pay:3:integer,get:4:integer,awd:5:*integer,times:6:integer,reset:7:integer
+TYPE grun_map x:1:integer,y:2:integer,num:3:integer,type:4:integer
+TYPE grunrank isself:0:integer,name:1:string,score:2:integer,rank:3:integer,power:4:integer
+TYPE guard_battle uid:0:string,type:1:integer,elfbattle:2:*elfking_battle,isnpc:3:integer,title:4:integer,stage:5:integer,dress:6:integer,name:7:string,sex:8:integer,power:9:integer,pos:10:integer
+TYPE guild_basic_info sid:0:string,now_num:1:integer,sum_num:2:integer,chairman:3:string,g_lv:4:integer,g_name:5:string,overbuild:6:integer,notice:7:string,vitality:8:integer,integral:9:integer,unnamed:10:string,apply:11:boolean
+TYPE guild_cross_against_info g_a:0:guild_cross_guild_info,g_b:1:guild_cross_guild_info
+TYPE guild_cross_against_list index:0:integer,data:1:guild_cross_against_info
+TYPE guild_cross_buff score:0:integer
+TYPE guild_cross_defend_info star:0:integer,def:1:integer,suc:2:integer,ruins:3:integer,ruins_num:4:integer,ruins_succ:5:integer
+TYPE guild_cross_defend_record attack_show:0:guild_cross_npc_info,star:1:integer,result:2:integer,ssid:3:integer,time:4:integer,reason:5:string
+TYPE guild_cross_elf_show sid:0:integer,level:1:integer,position:2:integer,star:3:integer
+TYPE guild_cross_guild_info server:0:integer,guild_id:1:string,name:2:string,fight:3:integer,rank:4:integer,star:5:integer,score:6:integer,lv:7:integer,tstar:8:integer
+TYPE guild_cross_npc_info id:0:string,name:1:string,sex:2:integer,level:3:integer,vip:4:integer,titleid:5:integer,dressid:6:integer,icon:7:integer,elf_list:8:*guild_cross_elf_show,formation:9:integer,server:10:integer,power:11:integer,svrid:12:integer
+TYPE guild_cross_npc_info_ex name:0:string,server:1:integer,gname:2:string
+TYPE guild_cross_rank_info guild_id:0:string,name:1:string,fight:2:integer,score:3:integer,star:4:integer,server:5:integer,lv:6:integer
+TYPE guild_cross_rank_list list:0:*guild_cross_rank_info,index:1:integer,state:2:integer,num:3:integer
+TYPE guild_cross_site_info player_show:0:guild_cross_npc_info,defend_info:1:guild_cross_defend_info
+TYPE guild_cross_war_report defend:0:string,attack:1:string,site_id:2:integer,defend_show:3:guild_cross_npc_info,attack_show:4:guild_cross_npc_info,star:5:string,result:6:integer,time:7:integer,ssid:8:integer,attack_score_get:9:integer,attack_star_get:10:integer,attack_score:11:integer,attack_star:12:integer,reason:13:string
+TYPE guild_cross_war_report_list index:0:integer,data:1:guild_cross_war_report
+TYPE guild_menber_info uid:0:string,name:1:string,power:2:integer,duty:3:integer,level:4:integer,vip:5:integer,sex:6:integer,dress:7:integer,contribute:8:integer,off_line:9:integer,state:10:integer,advintegral:11:integer,history_contribute:12:integer,icon:13:integer,score:14:integer
+TYPE guildboos_info status:0:integer,phase:1:integer,bossid:2:integer,hp:3:integer,hp_max:4:integer,rank:5:*guildboss_rank,my_rank:6:integer
+TYPE guildboss_rank damage:0:integer,name:1:string,level:2:integer,power:3:integer,sex:4:integer,uid:5:string
+TYPE guildlog time:0:integer,context:1:string
+TYPE history sid:0:integer,dnum:1:integer,broom:2:integer
+TYPE history_data fraction:0:integer,starttime:1:integer,endtime:2:integer,paragrapp:3:integer,number:4:integer
+TYPE hpinfo objsid:0:integer,curthp:1:integer,maxhp:2:integer,state:3:boolean
+TYPE hplayrank uid:0:string,name:1:string,icon:2:integer,allstep:3:integer,alltime:4:integer,alldistance:5:integer
+TYPE hpprop uid:0:string,crthp:1:integer,maxhp:2:integer
+TYPE immediate_ranking_list uid:0:string,name:1:string,time:2:integer,serverid:3:integer,drees:4:integer,equal_order:5:integer,title:6:integer,sex:7:integer,integral:8:integer
+TYPE integral_match_data integral_match_lv:0:integer,title:1:integer,dress:2:integer,level:3:integer,sid:4:integer,icon:5:integer
+TYPE investgood rew:0:*integer,get:1:integer,idx:2:integer
+TYPE invide teamuid:0:string,teamsid:1:integer,wpower:2:integer,svrid:3:integer
+TYPE ipair sid:0:integer,num:1:integer
+TYPE item id:0:integer,n:1:integer,state:2:boolean,sid:3:string,pos:4:integer,level:5:integer,extra:6:*prop_t,elfequ_starexp:7:integer,elfequ_addattr:8:*extra_attr,get_time:9:integer,type:10:integer,lock:11:boolean,lucky:13:integer,elfequ_star:14:integer,upgrade:15:integer,deadline:17:integer
+TYPE king_battle battle:0:*elfking_battle,positionid:1:integer,type:2:integer
+TYPE league_player svrid:0:integer,uid:1:string,name:2:string,sex:3:integer,icon:4:integer,power:5:integer,rank:6:integer,dress:7:integer,level:8:integer,title:9:integer,vip:10:integer,kill:11:integer,stage:12:integer,index:13:integer,likes:14:integer
+TYPE levelrank name:0:string,sex:1:integer,level:2:integer,dress:3:integer,reward:4:*integer,uid:5:string,icon:6:integer
+TYPE lifeamassconf rew:0:*integer,show:1:*integer,mun:2:integer
+TYPE limitelfinfo jifen:0:integer,paimin:1:*rourank,cost1:2:integer,cost2:3:integer,integralmin:4:integer,integralrew:5:*integer,box:6:*integer,show:7:integer
+TYPE limitgiftinfo itype:0:integer,deadline:1:integer,giftid:2:integer,sdkId:3:integer,elfId:4:integer,flag:5:boolean
+TYPE limitshop goods:0:integer,goodstype:1:integer,num:2:integer,costnum:3:integer,killmoney:4:integer,refresh:5:integer,personal:6:integer,mytimes:7:integer,number:8:integer,svrtimes:9:integer
+TYPE loginaward rew:0:*integer
+TYPE lucky_player name:0:string,serverid:1:integer,intgeral:2:integer,item_type:3:integer,item_id:4:integer,item_num:5:integer
+TYPE mail uid:0:string,id:1:string,is_new:2:boolean,date:3:integer,expire:4:integer,attach:5:attachment,channelid:6:integer,subject:7:string,body:8:string
+TYPE mastsr_worldboss_player elf_info:0:*mastsr_worldboss_rank_elf,name:1:string,svrid:2:integer,vip:3:integer,level:4:integer,uid:5:string,icon:6:integer,sex:7:integer
+TYPE mastsr_worldboss_rank damage:0:integer,svrid:1:integer,name:2:string
+TYPE mastsr_worldboss_rank_elf sid:0:integer,star:1:integer,advanced:2:integer,position:3:integer,level:4:integer,npc:5:integer
+TYPE matchinginfo id:0:string,name:1:string,fighting:2:integer,ranking:3:integer,sex:4:integer,vip:5:integer,dress:6:integer,title:7:integer,zpower:8:integer,isnpc:9:integer,elfid:10:string,elfsid:11:integer
+TYPE maze_map grid:0:integer,class:1:integer,subclass_num:2:integer,subclass_itype:3:integer,subclass_id:4:integer
+TYPE maze_rank name:0:string,sex:1:integer,level:2:integer,dress:3:integer,reward:4:*integer,uid:5:string,serverid:6:integer,icon:7:integer
+TYPE maze_shop integral:0:integer,discount:1:integer,cost_num:2:integer,limit:3:integer,reward:4:*integer,buy_num:5:integer
+TYPE member_throw uid:0:string,number:1:integer
+TYPE memberaward memberuid:0:string,attach:1:attachment,icon:2:integer,dress:3:integer,sex:4:integer
+TYPE members icon:0:integer,uid:1:string,uname:2:string,ulv:3:integer,power:4:integer,ready:5:boolean,svrid:6:integer,dress:7:integer,sex:8:integer
+TYPE mineData type:0:integer,uid:1:string,sex:2:integer,name:3:string,vip:4:integer,dress:5:integer,timestamp:6:integer,guildname:7:string,power:8:integer
+TYPE mineTotal idx:0:integer,occupy:1:integer,total:2:integer,israre:3:boolean
+TYPE mirror reward:0:common_award,multiple:1:integer,index:2:integer,use_multiple:3:integer
+TYPE mission id:0:integer,level:1:integer,power:2:integer,tactics:3:integer,monlist:4:*moninfo(sid)
+TYPE moninfo sid:0:integer,hp:1:integer,hp_max:2:integer,pos:3:integer
+TYPE monopoly num:0:integer,elf_uid:1:string,begin_recover_time:2:integer,line:3:*monopoly_line,buy_num:4:integer,special:5:integer
+TYPE monopoly_event event_id:0:integer,efforts:1:attribute,efforts_max:2:attribute,elfuid:3:string,finish:4:integer,reward_tab:5:attachment,dice:6:integer,itype:7:integer
+TYPE monopoly_line next_toward:0:integer,last_toward:1:integer,grid_weight:2:integer,event:3:integer,client_toward:4:integer
+TYPE monthcardinfo idx:0:integer,dayNum:1:integer,flag:2:integer,specialreward:3:integer,rew1:4:*integer,rew2:5:*integer,rew3:6:*integer
+TYPE movement speed:0:integer,goal:1:position
+TYPE mysterious_shop prop:0:integer,number:1:integer,killmoney:2:integer,species:3:integer,buy_flag:4:integer,num:5:integer,type:6:integer
+TYPE mythgood index:0:integer,convert:1:*integer,cost:2:*integer,flag:3:boolean
+TYPE mythshop shoptype:0:integer,times:1:integer,price:2:*integer,list:3:*mythgood(index)
+TYPE nest_mission_info sid:0:integer,difficulty:1:integer,state:2:integer,power:3:integer
+TYPE nest_monster_info me:0:integer,id:1:integer,power:2:integer,reply:3:integer,special:4:integer,dead:5:integer,strength:6:integer
+TYPE newfirstconf index:0:integer,rew1:1:integer,rew2:2:*integer,flag:3:integer
+TYPE norbag use:0:integer,capacity:1:integer,items:2:*item
+TYPE normalshop_limit_buy index:0:integer,buy_num:1:integer
+TYPE objects sid:0:integer,uid:1:string,owner:2:string,pos:3:position,face:4:integer,state:5:integer,hp:6:integer,hpmax:7:integer,level:8:integer,iscommon:9:boolean,extra:10:string
+TYPE operankconf min:0:integer,top3:1:integer,jifen:2:*integer
+TYPE order orderid:0:string,fee:1:integer,cbkurl:2:string
+TYPE owner id:0:string,name:1:string,sex:2:integer,level:3:integer,exp:4:integer,vip:5:integer,icon:6:integer
+TYPE package type:0:integer,session:1:integer
+TYPE paymeconf sid:0:integer,rew:1:*integer,limit:2:integer,chongzhi:3:integer,endtime:4:integer,count:5:integer,flag:6:boolean,status:7:integer,finaltime:8:integer,price:9:string
+TYPE pclpit index:0:integer,path:1:integer,level:2:integer,num:3:integer
+TYPE pet_battle_info id:0:string,teamid:1:integer
+TYPE petbtl sid:0:integer,uid:1:string,hp:2:integer,percent:3:integer
+TYPE petinfo uid:0:string,id:1:integer,level:2:integer,itype:3:integer,aureole_id:4:*integer,talent:5:integer,aptitudes:6:integer,star:7:integer,status:8:*integer,love:9:integer,loveexp:10:integer,health:11:integer,lastcheck:12:integer,lastshit:13:integer,wash_times:14:integer,use_times:15:integer,talent_pos:16:*integer,cooldown:17:*integer,talent_2:18:integer,talent_2_pos:19:*integer
+TYPE pice_tab pice1:0:integer,pice2:1:integer
+TYPE pikaconf award:0:*integer,award2:1:*integer,xiaohao1:2:integer,xiaohao2:3:integer
+TYPE pkpointshop_limit_buy index:0:integer,buy_num:1:integer
+TYPE plutusinfo show:0:integer,cost:1:*integer,VIP:2:integer,zuanshi:3:integer
+TYPE plutuslog uid:0:string,name:1:string,num:2:integer,time:3:integer
+TYPE pokemon_t id:0:string,sid:1:integer,level:2:integer,position:3:integer,type1:4:integer,quality:5:integer,power:6:integer,parent:7:string,hp_max:8:integer,physical_attack:9:integer,special_attack:10:integer,physical_defense:11:integer,special_defense:12:integer,hit_chance:13:integer,dodge_chance:14:integer,crit_chance:15:integer,toughness:16:integer,speed:17:integer,burning_bonus:18:integer,poison_bonus:19:integer,poisondot_reduce:20:integer,firedot_reduce:21:integer,reflect:22:integer,reduced:23:integer,leech_bonus:24:integer,crit_damage_bonus:25:integer,damage_bonus:26:integer,water_damage:27:integer,fire_damage:28:integer,grass_damage:29:integer,dark_damage:30:integer,fairy_damage:31:integer,dragon_damage:32:integer,ice_damage:33:integer,ghost_damage:34:integer,skill_damage_reduced:35:integer,skill_bar:36:*integer,water_reduce:37:integer,fire_reduce:38:integer,grass_reduce:39:integer,dark_reduce:40:integer,fairy_reduce:41:integer,dragon_reduce:42:integer,ice_reduce:43:integer,ghost_reduce:44:integer,water_power:45:integer,fire_power:46:integer,grass_power:47:integer,dark_power:48:integer,fairy_power:49:integer,dragon_power:50:integer,ice_power:51:integer,ghost_power:52:integer,physical_damage_bonus:53:integer,special_damage_bonus:54:integer,physical_damage_reduced:55:integer,special_damage_reduced:56:integer,trigger:57:*integer,hp:58:integer,type2:59:integer,normal_damage:60:integer,bug_damage:61:integer,poison_damage:62:integer,electric_damage:63:integer,flying_damage:64:integer,ground_damage:65:integer,fight_damage:66:integer,psychic_damage:67:integer,rock_damage:68:integer,steel_damage:69:integer,normal_reduce:70:integer,bug_reduce:71:integer,poison_reduce:72:integer,electric_reduce:73:integer,flying_reduce:74:integer,ground_reduce:75:integer,fight_reduce:76:integer,psychic_reduce:77:integer,rock_reduce:78:integer,steel_reduce:79:integer,normal_power:80:integer,bug_power:81:integer,poison_power:82:integer,electric_power:83:integer,flying_power:84:integer,ground_power:85:integer,fight_power:86:integer,psychic_power:87:integer,rock_power:88:integer,steel_power:89:integer,add_skill_point_limit:90:integer,real_damage_reduction:91:integer,dot_damage_redduction:92:integer,rebound_damage_reduction:93:integer,real_crit_damage_reduction:94:integer,basic_crit_damage_reduction:95:integer,sp:96:integer,client_use_elfid:97:integer,damage_lv:98:integer,vein:99:integer,hp_shield:100:integer,dynapath:101:integer,dynatype:102:integer,sprite:103:integer,gender:104:integer,sex_bonus:105:integer,sex_reduce:106:integer,trick:107:integer,ultra_reduce:108:integer,rage_provide:109:integer,element_provide:110:integer,prowess_damage_bonus:111:integer
+TYPE porbag use:0:integer,capacity:1:integer,items:2:*item
+TYPE position x:0:integer,y:1:integer
+TYPE position_info lv:0:integer,type:1:integer,exp:2:integer
+TYPE privilegeinfo dayNum:1:integer,flag:2:integer,specialreward:3:integer,raw:4:*integer
+TYPE prop_t id:0:integer,type:1:integer,value:2:integer
+TYPE pumpkin award:0:*integer,status:1:integer,index:2:integer
+TYPE raceboard idx:0:integer,sid:1:integer,length:2:integer,pace:3:integer,frame:4:integer,award:5:*integer,bet:6:boolean,cheer:7:boolean,cooldown:8:integer,rank:9:integer,gas:10:boolean
+TYPE rankaward rank:0:integer,attach:1:attachment
+TYPE rankinfo uid:0:string,name:1:string,sex:2:integer,score:3:integer
+TYPE rankinginfo uid:0:string,name:1:string,ranking:2:integer,data:3:integer,sid:4:integer,sex:5:integer,dress:6:integer,title:7:integer,guildname:8:string,ctime:9:integer,icon:10:integer
+TYPE recommend_player uid:0:string,nickname:1:string,vip:2:integer,elfdata:3:elf,power:4:integer,sex:5:integer,lv:6:integer,dress:7:integer,title:8:integer
+TYPE repobject obj:0:objects,actor:1:actor
+TYPE rewardback reward:0:attachment,id:1:integer,num:2:integer
+TYPE riddleinfo index:1:integer,itype:2:integer,sid:3:integer,option:4:*integer,answer:5:integer,overtime:6:integer
+TYPE rocketeam index:0:integer,list:1:*elfking_battle(id),tactics:2:integer
+TYPE rocketlog pos:0:string,result:1:integer,score:2:integer,delta:3:integer,rate:4:integer,time:5:integer,tuid:6:string,svrid:7:integer,name:8:string,icon:9:integer
+TYPE rocketrank uid:0:string,name:1:string,svrid:2:integer,power:3:integer,score:4:integer,rate:5:integer,icon:6:integer
+TYPE role_props id:0:string,name:1:string,sex:2:integer,level:3:integer,exp:4:integer,coins:5:integer,diamonds:6:integer,vip:7:integer,createtime:8:integer,elsexp:9:integer,sceneNum:10:integer,fubenNum:11:integer,degree:12:integer,friendpoint:13:integer,fightpoint:14:integer,hightpkpoint:15:integer,createPlayerTime:16:integer,exp_promote:17:integer,money_promote:18:integer,session:254:integer,servertime:255:integer
+TYPE rouletterank uid:0:string,name:1:string,sex:2:integer,score:3:integer,rank:4:integer,icon:5:integer,award:6:*integer,svrid:7:integer
+TYPE rourank info:0:*integer
+TYPE rushjobTask task1:0:integer,times:1:integer,progress:2:integer,state:3:integer,award:4:*integer,reset:5:integer,wenben:6:integer
+TYPE secret id:0:integer,bossid:1:integer,juqingid:2:integer,reward:3:integer,state:4:integer,gailv:5:integer,last_pray:6:integer,advertising:7:integer
+TYPE secret_buff buffid:0:integer,bufftype:1:integer,buffnum:2:integer,teamtype:3:integer,stagenum:4:integer,eventid:5:integer
+TYPE secret_shop prop:0:integer,number:1:integer,killmoney:2:integer,species:3:integer,buy_flag:4:integer,num:5:integer,type:6:integer
+TYPE secret_useitem_info id:0:integer,use_num:1:integer,buy_num:2:integer,buy_limit:3:integer
+TYPE seriesinfo num:0:integer,zuanshi:1:integer,rew:2:*integer,flag:3:integer
+TYPE singleinfo num:0:integer,chongfu:1:integer,chongzhi:2:integer,rew:3:*integer,flag:4:integer
+TYPE skillinfo pos:0:integer,level:1:integer
+TYPE space_rank uid:0:string,icon:1:integer,name:2:string,svrid:3:integer,dress:4:integer,sex:5:integer,mission_id:6:integer,rank:7:integer
+TYPE space_stage_reward mission_id:0:integer,status:1:integer
+TYPE sprintcatalog itype:0:integer,num:1:integer,flag:2:integer
+TYPE statistical_secret id:0:integer,num:1:integer,finish:2:integer
+TYPE tadvert aim:0:integer,awardlist:1:*integer
+TYPE task id:0:integer,state:1:integer,progress:2:integer
+TYPE team_log itype:0:integer,name:1:string,win:2:integer,mgroupsid:3:integer,cur_time:4:integer,throws:5:integer,reward:6:attachment
+TYPE teamdata teamuid:0:string,masteruid:1:string,state:2:integer,ctime:3:integer,teamsid:4:integer,tpower:5:integer,members:6:*members
+TYPE teamhp teamid:0:integer,detail:1:*hpprop
+TYPE tips langid:0:integer,item:1:*item,elf:2:*elf
+TYPE tipsext systemsid:0:integer,name:1:string,attach:2:attachment
+TYPE title id:0:integer,state:1:integer,extend:2:integer,life:3:integer,display:4:boolean
+TYPE travel_buff add:0:*T_buff,del:1:*T_buff
+TYPE travel_info uid:0:string,opemtime:1:integer,index:2:integer,region:3:integer,itype:4:integer,efforts:5:attribute,fruit:6:*item,debris:7:*item,time:8:integer,speed_time:9:integer,itemid:10:integer,limit_time:11:integer,amulet:12:integer,advertising:13:integer
+TYPE tshortdata teamuid:0:string,mastername:1:string,masterlevel:2:integer,teampower:3:integer,tcount:4:integer,tstate:5:integer,ttime:6:integer,tdeliversid:7:integer,teamsid:8:integer,members:9:*members
+TYPE turntable_master_buff finish_time:0:integer,proportion:1:integer
+TYPE turntable_master_log name:0:string,svrid:1:integer,log:2:turntable_master_turn
+TYPE turntable_master_rank name:0:string,sex:1:integer,level:2:integer,dress:3:integer,reward:4:*integer,uid:5:string,serverid:6:integer,icon:7:integer
+TYPE turntable_master_shop integral:0:integer,itype:1:integer,id:2:integer,num:3:integer,limit:4:integer,buy:5:integer
+TYPE turntable_master_turn class:0:integer,subclass_itype:1:integer,subclass_id:2:integer,subclass_num:3:integer,index:4:integer,add_num:5:integer
+TYPE twistedreward mtype:0:integer,id:1:integer,num:2:integer
+TYPE union id:0:string,name:1:string,intro:2:string,score:3:integer,cur_size:4:integer,max_size:5:integer,owner_name:6:string
+TYPE vipgiftdata sid:0:integer,goods:1:*integer,orig:2:integer,cost:3:integer,level:4:integer,personal:5:integer
+TYPE vitalityTask index:0:integer,times:1:integer,progress:2:integer
+TYPE vitality_rank guild_id:0:string,name:1:string,vitality:2:integer,power:3:integer,master:4:string
+TYPE vnamass list:0:*vncell,show:1:*integer
+TYPE vncell index:0:integer,paysid:1:integer,rew:2:*integer
+TYPE vnspf_exchange_conf cost:0:*integer,award:1:*integer,num:2:integer
+TYPE vnspf_loginconf cost:0:*integer,award:1:*integer
+TYPE vnspf_rechargeconf award:0:*integer,con:1:integer
+TYPE vnspf_turntabconf cost1:0:integer,cost10:1:integer,pools:2:*integer
+TYPE voucher_dayfreeconf award:0:*integer
+TYPE voucher_daygift_conf paysid:0:integer,award:1:*integer
+TYPE wardata seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,index:5:integer
+TYPE wartrun nidx:0:integer,enemysid:1:integer,playeruid:2:string,icon:3:integer,name:4:string,level:5:integer,power:6:integer,win:7:integer,warready:8:boolean,attacksid:9:integer,dress:10:integer,sex:11:integer
+TYPE watch_player_pet teamid:0:integer,pet_uid:1:string,pet_info:2:petinfo
+TYPE wear_equipemt elf_info:0:elfinfo,takeoff:1:item
+TYPE wish dress:0:integer,name:1:string,uid:2:string,item_id:3:integer,num:4:integer
+TYPE wishwelldata sid:0:integer,num:1:integer,time:2:integer,award:3:*integer
+TYPE worldboss_info sid:0:integer,cur_hp:1:integer,max_hp:2:integer,my_rank:3:integer,jifen:4:integer,rank:5:*rankinginfo,reward_index:6:integer,uid:7:string,level:8:integer,remaining_time:9:integer,jifen_reward:10:attachment,reward_tab:11:*worldboss_rank_reward,lucky_player:12:*rankinginfo,local_bought:13:boolean
+TYPE worldboss_rank_reward rank_reward:0:attachment,rank_left:1:integer,rank_right:2:integer
+TYPE wprops atk:0:integer,def:1:integer,addexp:2:integer,addatk:3:integer,adddef:4:integer,firedef:5:integer,waterdef:6:integer
+TYPE xmasbox need:0:integer,award:1:*integer,flag:2:integer
+TYPE xmasbutton consume:0:*integer,get:1:*integer,base:2:integer
+TYPE xmashop redeem:0:*integer,exchange:1:*integer,refresh:2:integer,num:3:integer,record:4:integer
+C 1 login.request sid:0:integer,account:1:string,appid:2:string,channel:3:string,platform:4:string,version:5:string,device:6:string,sdk:7:string,token:8:string,uid:9:string,phoneid:10:string,gaid:11:string,phonetype:12:string,timestamp:13:string,facility:14:string
+C 1 login.response error:0:string
+C 2 ping.request ti:0:integer
+C 2 ping.response ti:0:integer
+C 3 register.request name:0:string,sex:1:integer
+C 3 register.response errno:0:integer
+C 4 ready.request
+C 5 move.request speed:0:integer,start:1:position,goal:2:position,ti:3:integer,remote:4:integer,id:5:integer
+C 6 stop.request face:0:integer,pos:1:position,ti:2:integer,id:3:integer
+C 7 lookup.request id:0:integer
+C 8 mapJump.request id:0:integer
+C 8 mapJump.response errno:0:integer,x:1:integer,y:2:integer
+C 9 ask_rename.request new_name:0:string,ntype:1:integer
+C 9 ask_rename.response errno:0:integer
+C 10 ask_gift.request sid:0:string
+C 10 ask_gift.response errno:0:integer
+C 11 relogin.request sid:0:integer,uid:1:string
+C 12 player_binding.request state:0:integer,token:1:string,appid:2:string,account:3:string
+C 12 player_binding.response errno:0:integer
+C 13 player_untying.request state:0:integer
+C 13 player_untying.response errno:0:integer
+C 50 guild_basic_create.request name:0:string,content:1:string
+C 50 guild_basic_create.response errno:0:integer,flag:1:boolean
+C 51 guild_basic_apply_join.request guild_id:0:string
+C 51 guild_basic_apply_join.response errno:0:integer
+C 52 guild_basic_cancel_apply.request guild_id:0:string
+C 52 guild_basic_cancel_apply.response errno:0:integer
+C 53 guild_basic_get_apply_list.request
+C 53 guild_basic_get_apply_list.response errno:0:integer,list:1:*guild_menber_info,auto:2:boolean
+C 54 guild_basic_apply_result.request uid:0:string,result:1:integer
+C 54 guild_basic_apply_result.response errno:0:integer
+C 55 guild_basic_clear_apply.request
+C 55 guild_basic_clear_apply.response errno:0:integer
+C 56 guild_basic_change_duty.request uid:0:string,duty:1:integer
+C 56 guild_basic_change_duty.response errno:0:integer
+C 57 guild_basic_guild_exit.request
+C 57 guild_basic_guild_exit.response errno:0:integer
+C 58 guild_basic_del_menber.request uid:0:string
+C 58 guild_basic_del_menber.response errno:0:integer
+C 59 guild_basic_open_guild_hmi.request guild_id:0:string
+C 59 guild_basic_open_guild_hmi.response errno:0:integer,info:1:guild_basic_info
+C 60 guild_basic_get_menber_list.request cursor:0:integer
+C 60 guild_basic_get_menber_list.response errno:0:integer,cursor:1:integer,list:2:*guild_menber_info
+C 61 guild_basic_get_guild_list.request now_page:0:integer
+C 61 guild_basic_get_guild_list.response errno:0:integer,now_page:1:integer,list:2:*guild_basic_info,page:3:integer
+C 62 guild_basic_set_notice.request content:0:string
+C 62 guild_basic_set_notice.response errno:0:integer
+C 63 guild_ask_log.request
+C 63 guild_ask_log.response errno:0:integer,logs:1:*guildlog
+C 64 guild_search.request name:0:string
+C 64 guild_search.response errno:0:integer,info:1:guild_basic_info
+C 65 guild_donate_donate.request d_type:0:string
+C 65 guild_donate_donate.response errno:0:integer
+C 66 banditnum_ask.request
+C 66 banditnum_ask.response errno:0:integer,count:1:integer
+C 67 autoGuildAudit.request auto:0:boolean
+C 67 autoGuildAudit.response errno:0:integer,auto:1:boolean
+C 68 banditboss_info.request
+C 68 banditboss_info.response errno:0:integer,monInfo:1:objects,bosstimes:2:integer,list:3:*rankinfo
+C 69 banditboss_preview.request
+C 69 banditboss_preview.response errno:0:integer,awardlist:1:*rankaward,partaward:2:attachment
+C 100 alone_info.request
+C 100 alone_info.response errno:0:integer,matchingPlayers:1:*matchinginfo,info:2:arenainfo,matchingtime:3:integer,elf_battle_info:4:elfking_battle,positionid:5:integer,award:6:attachment
+C 101 set_alone_battle.request id:0:string,battleid:1:integer,position:2:integer,positionid:3:integer
+C 101 set_alone_battle.response errno:0:integer
+C 102 alone_challenge.request pkrank:0:integer
+C 102 alone_challenge.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,isnpc:5:integer
+C 103 alone_newmatching.request
+C 103 alone_newmatching.response errno:0:integer,matchingPlayers:1:*matchinginfo,matchingtime:2:integer
+C 104 arena_matching.request
+C 104 arena_matching.response errno:0:integer,matchingPlayers:1:*matchinginfo,info:2:arenainfo,matchingtime:3:integer,award:4:attachment
+C 105 arena_challenge.request ranking:0:integer,teamid:1:integer
+C 105 arena_challenge.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,isnpc:5:integer
+C 106 arena_refresh.request
+C 106 arena_refresh.response errno:0:integer,matchingPlayers:1:*matchinginfo,matchingtime:2:integer
+C 107 elf_king_info.request type:0:integer
+C 107 elf_king_info.response errno:0:integer,type:1:integer,lineup:2:*king_battle,sumCount:3:integer,battle_king:4:*guard_battle,awardlist:5:*attachment,myrank:6:*integer,buyTimes:7:integer
+C 108 elf_king_set.request type:0:integer,elflist:1:*elfking_battle,positionid:2:integer
+C 108 elf_king_set.response errno:0:integer
+C 109 elf_king_challenge.request type:0:integer,pos:1:integer
+C 109 elf_king_challenge.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,isnpc:5:integer
+C 110 arena_buy.request
+C 110 arena_buy.response errno:0:integer
+C 111 elf_king_buy.request
+C 111 elf_king_buy.response errno:0:integer
+C 112 alone_buy.request
+C 112 alone_buy.response errno:0:integer
+C 113 arena_week.request idx:0:integer
+C 113 arena_week.response errno:0:integer,idx:1:integer
+C 120 tower_preview.request mission:0:integer
+C 120 tower_preview.response errno:0:integer,total:1:integer,power:2:integer,mission:3:integer,award:4:attachment,monbuff:5:*integer,redpoint:6:boolean,info:7:role_props
+C 121 challenge_tower.request uid:0:string,teamid:1:integer
+C 121 challenge_tower.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 122 mine_start.request idx:0:integer,pos:1:integer,teamid:2:integer
+C 122 mine_start.response errno:0:integer,lasttime:1:integer
+C 123 mine_loot.request idx:0:integer,pos:1:integer,teamid:2:integer,miner:3:string
+C 123 mine_loot.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 124 mine_stop.request idx:0:integer,pos:1:integer
+C 124 mine_stop.response errno:0:integer,mining_sec:1:integer
+C 125 mine_collect.request
+C 125 mine_collect.response errno:0:integer,mining_sec:1:integer
+C 126 mine_info.request idx:0:integer
+C 126 mine_info.response errno:0:integer,idx:1:integer,minelist:2:*mineData
+C 127 bandit_challenge.request uid:0:string,teamid:1:integer
+C 127 bandit_challenge.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 128 banditboss_challenge.request uid:0:string,teamid:1:integer
+C 128 banditboss_challenge.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,flag:5:boolean
+C 129 mine_allinfo.request
+C 129 mine_allinfo.response errno:0:integer,allinfo:1:*mineTotal
+C 130 sign_up.request ispatch:0:boolean
+C 130 sign_up.response errno:0:integer,ispatch:1:boolean
+C 131 sign_extra.request idx:0:integer
+C 131 sign_extra.response errno:0:integer,idx:1:integer
+C 132 sign_total.request idx:0:integer
+C 132 sign_total.response errno:0:integer,idx:1:integer
+C 133 vitality_reward.request idx:0:integer
+C 133 vitality_reward.response errno:0:integer,idx:1:integer
+C 134 tower_buff.request
+C 134 tower_buff.response errno:0:integer,renovation:1:integer,monbuff:2:*integer
+C 136 login_reward_info.request
+C 136 login_reward_info.response errno:0:integer,info:1:*loginaward
+C 137 ask_login_reward.request idx:0:integer
+C 137 ask_login_reward.response errno:0:integer,idx:1:integer
+C 138 limitshop_ask.request
+C 138 limitshop_ask.response errno:0:integer,info:1:*limitshop
+C 139 limitshop_buy.request idx:0:integer
+C 139 limitshop_buy.response errno:0:integer,idx:1:integer
+C 140 convert_ask.request
+C 140 convert_ask.response errno:0:integer,info:1:*convertinfo
+C 141 convert_buy.request idx:0:integer
+C 141 convert_buy.response errno:0:integer,idx:1:integer
+C 142 comsumption_ask.request
+C 142 comsumption_ask.response errno:0:integer,info:1:*comsumeinfo,total:2:integer
+C 143 comsumption_buy.request idx:0:integer
+C 143 comsumption_buy.response errno:0:integer,idx:1:integer
+C 148 ask_firstcharge.request
+C 148 ask_firstcharge.response errno:0:integer,rew:1:*integer,flag:2:integer,show:3:integer
+C 149 do_firstcharge.request
+C 149 do_firstcharge.response errno:0:integer
+C 150 ask_amasscharge.request
+C 150 ask_amasscharge.response errno:0:integer,info:1:*comsumeinfo,total:2:integer,refresh:3:boolean
+C 151 do_amasscharge.request idx:0:integer
+C 151 do_amasscharge.response errno:0:integer,idx:1:integer
+C 152 ask_seriescharge.request
+C 152 ask_seriescharge.response errno:0:integer,info:1:*seriesinfo,total:2:integer
+C 153 do_seriescharge.request idx:0:integer
+C 153 do_seriescharge.response errno:0:integer,idx:1:integer
+C 154 ask_singlecharge.request
+C 154 ask_singlecharge.response errno:0:integer,info:1:*singleinfo
+C 155 do_singlecharge.request idx:0:integer
+C 155 do_singlecharge.response errno:0:integer,idx:1:integer
+C 157 ask_fund.request
+C 157 ask_fund.response errno:0:integer,status:1:integer,info:2:*fundinfo
+C 158 do_fund.request idx:0:integer
+C 158 do_fund.response errno:0:integer,idx:1:integer
+C 159 ask_monthcard.request
+C 159 ask_monthcard.response errno:0:integer,info:1:*monthcardinfo
+C 160 do_monthcard.request idx:0:integer
+C 160 do_monthcard.response errno:0:integer,idx:1:integer
+C 161 buy_vip_gift.request level:0:integer
+C 161 buy_vip_gift.response errno:0:integer,level:1:integer
+C 162 ask_dailycharge.request
+C 162 ask_dailycharge.response errno:0:integer,info:1:*dailychargeinfo,total:2:integer
+C 163 do_dailycharge.request idx:0:integer
+C 163 do_dailycharge.response errno:0:integer,idx:1:integer
+C 164 chargeshop_ask.request
+C 164 chargeshop_ask.response errno:0:integer,info:1:*chargeshopinfo
+C 165 chargeshop_buy.request idx:0:integer
+C 165 chargeshop_buy.response errno:0:integer,idx:1:integer
+C 168 ask_dailydup.request dupId:0:integer
+C 168 ask_dailydup.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 169 clean_dailydup.request dupId:0:integer
+C 169 clean_dailydup.response errno:0:integer
+C 170 ask_levelgift.request
+C 170 ask_levelgift.response errno:0:integer,info:1:*fundinfo
+C 171 do_levelgift.request idx:0:integer
+C 171 do_levelgift.response errno:0:integer,idx:1:integer
+C 172 ask_kylin.request
+C 172 ask_kylin.response errno:0:integer,list:1:*convertcell,score:2:integer,normal:3:integer,expert:4:integer,exhibition:5:integer
+C 173 do_kylin.request idx:0:integer
+C 173 do_kylin.response errno:0:integer,idx:1:integer
+C 174 ask_rebate.request
+C 174 ask_rebate.response errno:0:integer,list:1:*convertcell,score:2:integer,payScore:3:integer,signScore:4:integer,status:5:boolean
+C 175 sign_rebate.request
+C 175 sign_rebate.response errno:0:integer,score:1:integer
+C 176 do_rebate.request idx:0:integer
+C 176 do_rebate.response errno:0:integer,idx:1:integer
+C 177 ask_carnival.request
+C 177 ask_carnival.response errno:0:integer,list:1:*CarnivalList,openday:2:integer
+C 178 do_carnival.request idx1:0:integer,idx2:1:integer
+C 178 do_carnival.response errno:0:integer,idx1:1:integer,idx2:2:integer
+C 179 ask_flop.request idx:0:integer,allGet:1:boolean
+C 179 ask_flop.response errno:0:integer,idx:1:integer,allGet:2:boolean
+C 180 dojo_set.request elflist:0:*elfking_battle,tactics:1:integer
+C 180 dojo_set.response errno:0:integer
+C 181 dojo_attack.request dojoId:0:integer,monId:1:string,istry:2:boolean
+C 181 dojo_attack.response errno:0:integer,dojoId:1:integer,monId:2:string,istry:3:boolean,seed:4:integer,weather:5:integer,player:6:formation_t,monster:7:formation_t
+C 182 dojo_clean.request dojoId:0:integer
+C 182 dojo_clean.response errno:0:integer,dojoId:1:integer
+C 183 set_aid.request index:0:integer,elf:1:string
+C 183 set_aid.response errno:0:integer,index:1:integer,elf:2:string
+C 184 swop_aid.request idx1:0:integer,idx2:1:integer
+C 184 swop_aid.response errno:0:integer,idx1:1:integer,idx2:2:integer
+C 185 plutus_ask.request
+C 185 plutus_ask.response errno:0:integer,times:1:integer,info:2:*plutusinfo,loglist:3:*plutuslog,count:4:integer
+C 186 plutus_do.request
+C 186 plutus_do.response errno:0:integer,num:1:integer
+C 187 ask_limitelf.request
+C 187 ask_limitelf.response errno:0:integer,info:1:limitelfinfo,myscore:2:integer,record:3:*integer
+C 188 do_limitelf.request isten:0:boolean
+C 188 do_limitelf.response errno:0:integer,list:1:*integer,myscore:2:integer
+C 189 limitelf_score.request idx:0:integer
+C 189 limitelf_score.response errno:0:integer,idx:1:integer
+C 190 rank_limitelf.request
+C 190 rank_limitelf.response errno:0:integer,ranklist:1:*rouletterank,myrank:2:integer
+C 191 hitrun_apply.request iscancel:0:boolean
+C 191 hitrun_apply.response errno:0:integer,total:1:integer,iscancel:2:boolean
+C 192 ask_dailyamass.request
+C 192 ask_dailyamass.response errno:0:integer,info:1:*comsumeinfo,total:2:integer
+C 193 do_dailyamass.request idx:0:integer
+C 193 do_dailyamass.response errno:0:integer,idx:1:integer
+C 194 dailyconsume_ask.request
+C 194 dailyconsume_ask.response errno:0:integer,info:1:*comsumeinfo,total:2:integer
+C 195 dailyconsume_buy.request idx:0:integer
+C 195 dailyconsume_buy.response errno:0:integer,idx:1:integer
+C 196 hitrun_speed.request
+C 196 hitrun_speed.response errno:0:integer
+C 197 hitrun_attack.request uid:0:string
+C 197 hitrun_attack.response errno:0:integer
+C 198 hitrun_quit.request
+C 198 hitrun_quit.response errno:0:integer
+C 199 hitrun_rank.request
+C 199 hitrun_rank.response errno:0:integer,ranklist:1:*rankinfo
+C 211 rushjob_ask.request
+C 211 rushjob_ask.response errno:0:integer,info:1:*rushjobTask
+C 212 rushjob_do.request idx:0:integer
+C 212 rushjob_do.response errno:0:integer,idx:1:integer
+C 215 pika_ask.request
+C 215 pika_ask.response errno:0:integer,info:1:*pikaconf,total:2:integer,layer:3:integer,record:4:*integer
+C 216 pika_do.request option:0:integer,auto:1:boolean
+C 216 pika_do.response errno:0:integer,option:1:integer,auto:2:boolean,layer:3:integer,total:4:integer,list:5:*integer
+C 217 pika_total.request idx:0:integer
+C 217 pika_total.response errno:0:integer,idx:1:integer
+C 218 pika_buy.request num:0:integer
+C 218 pika_buy.response errno:0:integer,num:1:integer
+C 219 clockin_ask.request
+C 219 clockin_ask.response errno:0:integer,info:1:*clockin_conf,day:2:integer,show:3:integer,total:4:integer,record:5:*integer
+C 220 clockin_do.request bit:0:integer
+C 220 clockin_do.response errno:0:integer,get:1:integer
+C 221 clockin_total.request idx:0:integer
+C 221 clockin_total.response errno:0:integer,idx:1:integer
+C 222 ask_chargegift.request
+C 222 ask_chargegift.response errno:0:integer,info:1:*singleinfo,show:2:integer
+C 223 do_chargegift.request idx:0:integer
+C 223 do_chargegift.response errno:0:integer,idx:1:integer
+C 224 sprint_catalog.request
+C 224 sprint_catalog.response errno:0:integer,catalog:1:*sprintcatalog(itype)
+C 225 sprint_detail.request itype:0:integer
+C 225 sprint_detail.response errno:0:integer,itype:1:integer,list:2:*rankinginfo
+C 226 sprint_award.request itype:0:integer
+C 226 sprint_award.response errno:0:integer,itype:1:integer
+C 227 passport_unlock.request
+C 227 passport_unlock.response errno:0:integer
+C 228 passport_reward.request level:0:integer,auto:1:boolean
+C 228 passport_reward.response errno:0:integer,level:1:integer,auto:2:boolean
+C 229 passport_convert.request idx:0:integer
+C 229 passport_convert.response errno:0:integer,idx:1:integer
+C 230 passport_buy.request num:0:integer
+C 230 passport_buy.response errno:0:integer,num:1:integer,level:2:integer,exp:3:integer
+C 231 icon_unlock.request idx:0:integer
+C 231 icon_unlock.response errno:0:integer,idx:1:integer
+C 232 icon_change.request idx:0:integer
+C 232 icon_change.response errno:0:integer,idx:1:integer
+C 233 sell_item.request sid:0:integer,num:1:integer
+C 233 sell_item.response errno:0:integer,sid:1:integer,num:2:integer
+C 234 league_apply.request
+C 234 league_apply.response errno:0:integer,stage:1:integer
+C 235 league_reward.request
+C 235 league_reward.response errno:0:integer
+C 236 league_map.request stage:0:integer
+C 236 league_map.response errno:0:integer,stage:1:integer,winner:2:league_player,map:3:*league_player(index),mygroup:4:integer
+C 237 league_group.request stage:0:integer,group:1:integer
+C 237 league_group.response errno:0:integer,stage:1:integer,group:2:integer,list:3:*league_player
+C 238 league_winner.request
+C 238 league_winner.response errno:0:integer,winnerlist:1:*league_player(stage)
+C 239 elite_winner.request stage:0:integer
+C 239 elite_winner.response errno:0:integer,stage:1:integer,winner:2:league_player,isliked:3:boolean
+C 240 elite_like.request stage:0:integer
+C 240 elite_like.response errno:0:integer,stage:1:integer,likes:2:integer
+C 241 elite_map.request stage:0:integer
+C 241 elite_map.response errno:0:integer,stage:1:integer,map:2:*league_player(index),reward:3:integer
+C 242 elite_reward.request stage:0:integer,rank:1:integer
+C 242 elite_reward.response errno:0:integer,stage:1:integer,rank:2:integer
+C 243 elite_room.request stage:0:integer
+C 243 elite_room.response errno:0:integer,stage:1:integer,roomlist:2:*eliteRoom(index)
+C 244 elite_bet.request stage:0:integer,idx:1:string,bet:2:string
+C 244 elite_bet.response errno:0:integer,stage:1:integer,idx:2:string,bet:3:string
+C 245 elite_update.request stage:0:integer
+C 245 elite_update.response errno:0:integer,stage:1:integer
+C 246 mythshop_info.request
+C 246 mythshop_info.response errno:0:integer,info:1:*mythshop(shoptype)
+C 247 mythshop_refresh.request shoptype:0:integer
+C 247 mythshop_refresh.response errno:0:integer,shoptype:1:integer,list:2:*mythgood(index),times:3:integer
+C 248 mythshop_buy.request shoptype:0:integer,index:1:integer
+C 248 mythshop_buy.response errno:0:integer,shoptype:1:integer,index:2:integer
+C 249 league_replay.request stage:0:integer,uid1:1:string,uid2:2:string,idx:3:integer,page:4:integer
+C 249 league_replay.response errno:0:integer,idx:1:integer,total:2:integer,seed:3:integer,weather:4:integer,left:5:formation_t,right:6:formation_t,report:7:string,nextidx:8:integer,nextpage:9:integer
+C 250 elite_replay.request stage:0:integer,uid1:1:string,uid2:2:string,idx:3:integer,page:4:integer
+C 250 elite_replay.response errno:0:integer,idx:1:integer,total:2:integer,seed:3:integer,weather:4:integer,left:5:formation_t,right:6:formation_t,report:7:string,nextidx:8:integer,nextpage:9:integer
+C 251 pstone_equip.request elfid:0:string,pos:1:integer,stoneid:2:string
+C 251 pstone_equip.response errno:0:integer,elfid:1:string,pos:2:integer,stoneid:3:string
+C 252 pstone_refine.request elfid:0:string,pos:1:integer,sid:2:string,mode:3:integer,locklist:4:*integer
+C 252 pstone_refine.response errno:0:integer,mode:1:integer,extra:2:*prop_t
+C 253 pstone_save.request
+C 253 pstone_save.response errno:0:integer
+C 254 pstone_lock.request elfid:0:string,pos:1:integer,sid:2:string,lock:3:boolean
+C 254 pstone_lock.response errno:0:integer,elfid:1:string,pos:2:integer,sid:3:string,lock:4:boolean
+C 255 pstone_compound.request list:0:*string
+C 255 pstone_compound.response errno:0:integer,list:1:*string
+C 256 pstone_split.request list:0:*string
+C 256 pstone_split.response errno:0:integer,list:1:*string,debris:2:integer
+C 257 pstone_refresh.request
+C 257 pstone_refresh.response errno:0:integer,shop:1:*cargo,manaual:2:integer
+C 258 pstone_buy.request idx:0:integer
+C 258 pstone_buy.response errno:0:integer,idx:1:integer,debris:2:integer
+C 259 ask_vipgift.request
+C 259 ask_vipgift.response errno:0:integer,info:1:*vipgiftdata
+C 260 do_vipgitf.request idx:0:integer
+C 260 do_vipgitf.response errno:0:integer,idx:1:integer
+C 261 invest_ask.request
+C 261 invest_ask.response errno:0:integer,info:1:*investgood(idx),progress:2:integer,flag:3:integer,condition:4:*integer,cost:5:integer,length:6:integer
+C 262 invest_do.request
+C 262 invest_do.response errno:0:integer
+C 263 invest_get.request idx:0:integer
+C 263 invest_get.response errno:0:integer,idx:1:integer
+C 265 ask_wishwell.request
+C 265 ask_wishwell.response errno:0:integer,info:1:*wishwelldata,locknum:2:integer,lockthing:3:*integer,double:4:integer,getflag:5:integer
+C 266 lock_want.request idx:0:*integer
+C 266 lock_want.response errno:0:integer
+C 267 get_want.request
+C 267 get_want.response errno:0:integer,double:1:integer
+C 268 dojo_loot.request idx:0:integer
+C 268 dojo_loot.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,times:5:integer,isnpc:6:integer
+C 269 dojo_buy.request
+C 269 dojo_buy.response errno:0:integer,times:1:integer,buy:2:integer
+C 270 vein_insert.request target:0:string,fodder:1:string
+C 270 vein_insert.response errno:0:integer,target:1:string,fodder:2:string,final:3:integer
+C 271 vein_phase.request uid:0:string,list:1:*string,card:2:integer,num:3:integer
+C 271 vein_phase.response errno:0:integer,uid:1:string,final:2:integer
+C 272 zodiac_set.request elflist:0:*elfking_battle,tactics:1:integer
+C 272 zodiac_set.response errno:0:integer
+C 273 zodiac_attack.request
+C 273 zodiac_attack.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,limitround:5:integer,limitwinner:6:string
+C 274 zodiac_getbox.request idx:0:integer
+C 274 zodiac_getbox.response errno:0:integer,idx:1:integer,list:2:*integer
+C 275 zodiac_refresh.request
+C 275 zodiac_refresh.response errno:0:integer,manaual:1:integer,shop:2:*cargo
+C 276 zodiac_buy.request idx:0:integer
+C 276 zodiac_buy.response errno:0:integer,idx:1:integer
+C 277 newfirst_info.request
+C 277 newfirst_info.response errno:0:integer,info:1:*newfirstconf,show:2:integer
+C 278 newfirst_get.request
+C 278 newfirst_get.response errno:0:integer
+C 279 handcraft_ask.request
+C 279 handcraft_ask.response errno:0:integer,info:1:*convertinfo,times:2:integer,limit:3:integer
+C 280 handcraft_do.request idx:0:integer
+C 280 handcraft_do.response errno:0:integer,idx:1:integer,times:2:integer
+C 281 ask_welfare.request
+C 281 ask_welfare.response errno:0:integer
+C 282 eden_funland.request
+C 282 eden_funland.response errno:0:integer,list:1:*edenElf(uid)
+C 283 eden_detail.request uid:0:string
+C 283 eden_detail.response errno:0:integer,uid:1:string,info:2:edenElf
+C 284 eden_buy.request
+C 284 eden_buy.response errno:0:integer,buytime:1:integer
+C 285 eden_attack.request uid:0:string
+C 285 eden_attack.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 286 eden_catch.request uid:0:string,ball:1:integer
+C 286 eden_catch.response errno:0:integer,uid:1:string,ball:2:integer,result:3:boolean
+C 287 lifeamass_ask.request
+C 287 lifeamass_ask.response errno:0:integer,info:1:*lifeamassconf,amass:2:integer,index:3:integer,flag:4:integer
+C 288 lifeamass_do.request
+C 288 lifeamass_do.response errno:0:integer,flag:1:integer
+C 289 daygift_get.request idx:0:integer
+C 289 daygift_get.response errno:0:integer,idx:1:integer
+C 290 bombshell_attack.request uid:0:string
+C 290 bombshell_attack.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 291 ask_privlege.request
+C 291 ask_privlege.response errno:0:integer,info:1:privilegeinfo
+C 292 get_privlege.request
+C 292 get_privlege.response errno:0:integer
+C 293 dnf_info.request
+C 293 dnf_info.response errno:0:integer,status:1:integer,beyond:2:integer,rank:3:integer
+C 294 dnf_atk.request
+C 294 dnf_atk.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 295 dnf_accept.request
+C 295 dnf_accept.response errno:0:integer
+C 296 dnf_rank.request
+C 296 dnf_rank.response errno:0:integer,ranklist:1:*dnfrankinfo
+C 297 dnf_lotto.request
+C 297 dnf_lotto.response errno:0:integer,pool:1:*common_award
+C 298 dnf_raffle.request
+C 298 dnf_raffle.response errno:0:integer,pool:1:*common_award,goal:2:integer
+C 299 dnf_refresh.request useitem:0:boolean
+C 299 dnf_refresh.response errno:0:integer,useitem:1:boolean,refreshtimes:2:integer,tasklist:3:*dnftaskinfo
+C 300 dnf_depart.request idx:0:integer,list:1:*string
+C 300 dnf_depart.response errno:0:integer,idx:1:integer,deadline:2:integer
+C 301 dnf_accomplish.request idx:0:integer
+C 301 dnf_accomplish.response errno:0:integer,idx:1:integer,task:2:dnftaskinfo
+C 302 dnf_watchbuff.request
+C 302 dnf_watchbuff.response errno:0:integer,buff:1:*integer,feature:2:*integer
+C 303 intorun.request
+C 303 intorun.response errno:0:integer,map1:1:*grun_map,map2:2:*grun_map,map3:3:*grun_map
+C 304 reflash_map.request operation:0:*integer,mapid:1:integer,isall:2:integer,newlife:3:integer,score:4:integer,quit:5:integer
+C 304 reflash_map.response errno:0:integer,map:1:*grun_map,add:2:*guild_menber_info,score:3:integer
+C 305 look_at_box.request
+C 305 look_at_box.response errno:0:integer,boxnum:1:*integer
+C 306 open_box.request idx:0:integer,times:1:integer
+C 306 open_box.response errno:0:integer
+C 307 check_and_look.request idx:0:integer
+C 307 check_and_look.response errno:0:integer,list:1:*grunrank
+C 309 get_start_info.request
+C 309 get_start_info.response errno:0:integer,times:1:integer,rank:2:integer,name:3:string,best:4:integer,topscore:5:integer
+C 310 buy_elf_bags.request
+C 310 buy_elf_bags.response errno:0:integer
+C 311 dynamax_combine.request sid:0:integer
+C 311 dynamax_combine.response errno:0:integer,sid:1:integer
+C 312 dynamax_upgrade.request uid:0:string,path:1:integer
+C 312 dynamax_upgrade.response errno:0:integer,dynalevel:1:integer
+C 313 dynamax_insert.request uid:0:string,book:1:integer
+C 313 dynamax_insert.response errno:0:integer,dynatype:1:integer
+C 314 dynamax_unload.request uid:0:string
+C 314 dynamax_unload.response errno:0:integer
+C 315 dynamax_escalate.request uid:0:string,book:1:integer
+C 315 dynamax_escalate.response errno:0:integer,dynabook:1:integer
+C 316 dynamax_reset.request uid:0:string
+C 316 dynamax_reset.response errno:0:integer
+C 320 ask_mission.request
+C 320 ask_mission.response errno:0:integer,total:1:integer,idx:2:*integer,info:3:*tadvert
+C 321 get_award.request idx:0:integer
+C 321 get_award.response errno:0:integer
+C 322 get_eo_data.request
+C 322 get_eo_data.response errno:0:integer,day:1:integer,award:2:integer,endtime:3:integer,info:4:*attachment,total:5:integer
+C 324 ask_fesinfo.request
+C 324 ask_fesinfo.response errno:0:integer,dailygift:1:*HolidayList,mission:2:*HolidayList,exchange:3:*ExchangeList,offbuy:4:*BuyoffList
+C 325 gat_fes_award.request types:0:integer,idx1:1:integer,idx2:2:integer
+C 325 gat_fes_award.response errno:0:integer,idx1:1:integer,idx2:2:integer
+C 326 operank_ask.request itype:0:integer
+C 326 operank_ask.response errno:0:integer,itype:1:integer,ranklist:2:*rouletterank,myrank:3:integer,configure:4:operankconf
+C 327 payme_ask.request
+C 327 payme_ask.response errno:0:integer,list:1:*paymeconf(sid)
+C 328 payme_do.request itype:0:integer
+C 328 payme_do.response errno:0:integer,itype:1:integer
+C 330 rocket_rank.request page:0:integer,size:1:integer
+C 330 rocket_rank.response errno:0:integer,page:1:integer,size:2:integer,myscore:3:integer,myrank:4:integer,myrate:5:integer,list:6:*rocketrank
+C 331 rocket_set.request idx:0:integer,elflist:1:*elfking_battle(battleid),tactics:2:integer
+C 331 rocket_set.response errno:0:integer,idx:1:integer
+C 332 rocket_match.request
+C 332 rocket_match.response errno:0:integer,rate:1:integer,tuid:2:string,svrid:3:integer,icon:4:integer,name:5:string,power:6:integer,teams:7:*formation_t
+C 333 rocket_duel.request
+C 333 rocket_duel.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 334 rocket_log.request
+C 334 rocket_log.response errno:0:integer,loglist:1:*rocketlog
+C 335 rocket_buy.request
+C 335 rocket_buy.response errno:0:integer
+C 336 rocket_reward.request
+C 336 rocket_reward.response errno:0:integer
+C 337 matrix_build.request idx:0:integer,sid:1:integer
+C 337 matrix_build.response errno:0:integer,idx:1:integer,sid:2:integer
+C 338 matrix_dismantle.request idx:0:integer
+C 338 matrix_dismantle.response errno:0:integer,idx:1:integer
+C 339 matrix_expend.request idx:0:integer
+C 339 matrix_expend.response errno:0:integer,idx:1:integer,aftersid:2:integer
+C 340 matrix_mine.request idx:0:integer
+C 340 matrix_mine.response errno:0:integer,idx:1:integer,now:2:integer
+C 341 orange_enter.request idx:0:integer
+C 341 orange_enter.response errno:0:integer,idx:1:integer
+C 342 orange_battle.request uid:0:string,team:1:integer
+C 342 orange_battle.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 343 homeshop_buy.request idx:0:integer,count:1:integer
+C 343 homeshop_buy.response errno:0:integer,idx:1:integer,count:2:integer
+C 344 askpuzzle.request
+C 344 askpuzzle.response errno:0:integer,board:1:*integer,first:2:hplayrank
+C 345 puzzle_start.request
+C 345 puzzle_start.response errno:0:integer,startime:1:integer
+C 346 puzzle_click.request idx:0:integer
+C 346 puzzle_click.response errno:0:integer,idx:1:integer,alltime:2:integer,rank:3:integer,delta:4:integer
+C 347 puzzle_quit.request
+C 347 puzzle_quit.response errno:0:integer
+C 348 puzzle_rank.request
+C 348 puzzle_rank.response errno:0:integer,list:1:*hplayrank
+C 349 new_linkgame.request
+C 349 new_linkgame.response errno:0:integer
+C 350 linkgame_click.request idx:0:integer
+C 350 linkgame_click.response errno:0:integer,idx:1:integer,num:2:integer,allstep:3:integer
+C 351 linkgame_quit.request
+C 351 linkgame_quit.response errno:0:integer
+C 352 linkgame_buy.request
+C 352 linkgame_buy.response errno:0:integer
+C 353 linkgame_rank.request
+C 353 linkgame_rank.response errno:0:integer,list:1:*hplayrank
+C 354 race_newtrack.request
+C 354 race_newtrack.response errno:0:integer,board:1:*raceboard(idx)
+C 355 race_buy.request
+C 355 race_buy.response errno:0:integer
+C 356 race_bet.request idx:0:integer
+C 356 race_bet.response errno:0:integer,idx:1:integer
+C 357 race_start.request
+C 357 race_start.response errno:0:integer,board:1:*raceboard(idx),startime:2:integer
+C 358 race_cheer.request idx:0:integer
+C 358 race_cheer.response errno:0:integer,idx:1:integer
+C 359 race_quit.request
+C 359 race_quit.response errno:0:integer
+C 360 race_rank.request
+C 360 race_rank.response errno:0:integer,list:1:*hplayrank
+C 361 feedlot_levelup.request
+C 361 feedlot_levelup.response errno:0:integer,nextlevel:1:integer
+C 362 feedlot_foster.request list:0:*string
+C 362 feedlot_foster.response errno:0:integer,list:1:*string,origin:2:integer,now:3:integer
+C 363 feedlot_cancel.request
+C 363 feedlot_cancel.response errno:0:integer
+C 364 feedlot_collect.request
+C 364 feedlot_collect.response errno:0:integer
+C 365 feedlot_interact.request uid:0:string,isegg:1:boolean,option:2:integer
+C 365 feedlot_interact.response errno:0:integer,uid:1:string,isegg:2:boolean,option:3:integer,target:4:petinfo,ishatch:5:boolean
+C 368 puzzle_buy.request
+C 368 puzzle_buy.response errno:0:integer
+C 369 feedlot_accelerate.request
+C 369 feedlot_accelerate.response errno:0:integer,degree:1:integer
+C 370 ask_alwaysamass.request
+C 370 ask_alwaysamass.response errno:0:integer,info:1:*comsumeinfo,total:2:integer
+C 371 do_alwaysamass.request idx:0:integer
+C 371 do_alwaysamass.response errno:0:integer,idx:1:integer
+C 372 orange_clean.request idx:0:integer
+C 372 orange_clean.response errno:0:integer,idx:1:integer
+C 373 riddle_get.request
+C 373 riddle_get.response errno:0:integer,riddle:1:riddleinfo
+C 374 riddle_buy.request
+C 374 riddle_buy.response errno:0:integer
+C 375 riddle_elect.request option:0:integer
+C 375 riddle_elect.response errno:0:integer,option:1:integer,win:2:boolean,normal:3:integer,extra:4:integer
+C 376 riddle_fraud.request option:0:integer
+C 376 riddle_fraud.response errno:0:integer,option:1:integer,result:2:boolean
+C 377 voucher_use.request sid:0:string
+C 377 voucher_use.response errno:0:integer,sid:1:string
+C 378 voucher_sell.request sid:0:string
+C 378 voucher_sell.response errno:0:integer,sid:1:string
+C 379 pumpkin_ask.request enter:0:boolean
+C 379 pumpkin_ask.response errno:0:integer,enter:1:boolean,layer:2:integer,pool:3:*pumpkin,jackpot:4:integer,pass:5:boolean,cost:6:*integer,board:7:*pumpkin(index)
+C 380 pumpkin_select.request idx:0:integer
+C 380 pumpkin_select.response errno:0:integer,idx:1:integer,board:2:*pumpkin(index)
+C 381 pumpkin_click.request idx:0:integer
+C 381 pumpkin_click.response errno:0:integer,idx:1:integer,award:2:*integer,pass:3:boolean
+C 382 elf_equiment_lock.request onlyid:0:string,lock:1:boolean
+C 382 elf_equiment_lock.response errno:0:integer,onlyid:1:string,lock:2:boolean
+C 384 xmastree_ask.request
+C 384 xmastree_ask.response errno:0:integer,buttons:1:*xmasbutton,box:2:*xmasbox,shop:3:*xmashop,myscore:4:integer,totalscore:5:integer
+C 385 xmastree_button.request idx:0:integer
+C 385 xmastree_button.response errno:0:integer,idx:1:integer,addScore:2:integer,ratio:3:integer,totalScore:4:integer
+C 386 xmastree_shop.request idx:0:integer,quote:1:string
+C 386 xmastree_shop.response errno:0:integer,idx:1:integer,nowcount:2:integer,preview:3:string,quote:4:string
+C 387 xmastree_box.request idx:0:integer
+C 387 xmastree_box.response errno:0:integer,idx:1:integer
+C 388 xmastree_rank.request
+C 388 xmastree_rank.response errno:0:integer,ranklist:2:*rouletterank,myrank:3:integer,configure:4:operankconf
+C 389 luckybag_open.request
+C 389 luckybag_open.response errno:0:integer
+C 390 fesfund_unlock.request
+C 390 fesfund_unlock.response errno:0:integer
+C 391 fesfund_award.request idx:0:integer,auto:1:boolean
+C 391 fesfund_award.response errno:0:integer,idx:1:integer,auto:2:boolean
+C 393 casino_enter.request idx:0:integer
+C 393 casino_enter.response errno:0:integer,idx:1:integer,player:2:*integer,banker:3:*integer
+C 394 casino_getcard.request
+C 394 casino_getcard.response errno:0:integer,card:1:integer,boom:2:boolean,lucky:3:boolean
+C 395 casino_stopcard.request
+C 395 casino_stopcard.response errno:0:integer,banker:1:*integer,boom:2:boolean
+C 396 casino_settle.request quit:0:boolean
+C 396 casino_settle.response errno:0:integer,result:1:integer,quit:2:boolean
+C 397 casino_getbox.request idx:0:integer
+C 397 casino_getbox.response errno:0:integer,idx:1:integer
+C 398 casino_buy.request idx:0:integer,count:1:integer
+C 398 casino_buy.response errno:0:integer,idx:1:integer,count:2:integer
+C 399 bbox_open.request idx:0:integer,num:1:integer,color:2:integer
+C 399 bbox_open.response errno:0:integer,idx:1:integer,lastnum:2:integer
+C 400 hollar_tear.request list:0:*integer
+C 400 hollar_tear.response errno:0:integer,list:1:*integer
+C 401 hollar_accept.request list:0:*integer
+C 401 hollar_accept.response errno:0:integer,list:1:*integer
+C 402 antiquity_map.request itemid:0:integer
+C 402 antiquity_map.response errno:0:integer,itemid:1:integer,mapid:2:integer
+C 403 antiquity_shovel.request itemid:0:integer
+C 403 antiquity_shovel.response errno:0:integer,itemid:1:integer,length:2:integer
+C 404 tablet_click.request idx:0:integer
+C 404 tablet_click.response errno:0:integer,idx:1:integer
+C 405 tablet_lvlup.request
+C 405 tablet_lvlup.response errno:0:integer
+C 406 emblem_lvlup.request idx:0:integer
+C 406 emblem_lvlup.response errno:0:integer,idx:1:integer
+C 407 ancient_unlock.request uid:0:string,list:1:*string
+C 407 ancient_unlock.response errno:0:integer,uid:1:string,list:2:*string
+C 408 ancient_lvlup.request uid:0:string,list:1:*string,items:2:*ipair
+C 408 ancient_lvlup.response errno:0:integer,uid:1:string
+C 409 fossilstone_lvlup.request idx:0:integer
+C 409 fossilstone_lvlup.response errno:0:integer,idx:1:integer
+C 410 fossilsuit_lvlup.request idx:0:integer
+C 410 fossilsuit_lvlup.response errno:0:integer,idx:1:integer
+C 411 puzzle_clean.request
+C 411 puzzle_clean.response errno:0:integer
+C 412 linkgame_clean.request
+C 412 linkgame_clean.response errno:0:integer
+C 413 groupon_ask.request
+C 413 groupon_ask.response errno:0:integer,info:1:*grouponinfo(index),total:2:integer
+C 414 groupon_get.request idx:0:integer
+C 414 groupon_get.response errno:0:integer,idx:1:integer
+C 417 pcl_active.request target:0:string,path:1:*integer
+C 417 pcl_active.response errno:0:integer,target:1:string,path:2:*integer,pcltype:3:integer
+C 418 pcl_inject.request target:0:string,index:1:integer,num:2:integer
+C 418 pcl_inject.response errno:0:integer,target:1:string,index:2:integer,num:3:integer,final:4:integer
+C 419 pcl_upgrade.request target:0:string,index:1:integer
+C 419 pcl_upgrade.response errno:0:integer,target:1:string,index:2:integer,final:3:integer,pcltype:4:integer
+C 420 pcl_reset.request target:0:string,itype:1:integer
+C 420 pcl_reset.response errno:0:integer,target:1:string,itype:2:integer
+C 421 vnamass_ask.request
+C 421 vnamass_ask.response errno:0:integer,info:1:vnamass,days:2:integer,flag:3:boolean
+C 422 vngift_ask.request
+C 422 vngift_ask.response errno:0:integer,rew:1:*integer,paysid:2:integer,flag:3:integer
+C 423 paymev2_ask.request
+C 423 paymev2_ask.response errno:0:integer,list:1:*paymeconf(sid)
+C 424 paymev2_do.request itype:0:integer
+C 424 paymev2_do.response errno:0:integer,itype:1:integer
+C 1000 get_mails.request ids:0:*string
+C 1000 get_mails.response errno:0:integer,list:1:*mail
+C 1001 get_attach.request ids:0:*string
+C 1001 get_attach.response errno:0:integer,ids:1:*string
+C 1003 ask_send_mail.request title:0:string,content:1:string,attach:2:attachment,roles:3:*string
+C 1003 ask_send_mail.response errno:0:integer
+C 1004 ask_open_mail.request mailid:0:string
+C 1004 ask_open_mail.response errno:0:integer
+C 1201 task_submit.request taskid:0:integer
+C 1201 task_submit.response errno:0:integer,taskid:1:integer
+C 1202 chapter_submit.request idx:0:integer
+C 1202 chapter_submit.response errno:0:integer,idx:1:integer
+C 1208 buy_tiredpower.request
+C 1208 buy_tiredpower.response errno:0:integer
+C 1301 ask_chats_send.request chat:0:chat
+C 1301 ask_chats_send.response errno:0:integer
+C 1401 union_create.request name:0:string,intro:1:string
+C 1401 union_create.response errno:0:integer
+C 1402 union_list.request offset:0:integer,limit:1:integer
+C 1402 union_list.response errno:0:integer,unions:1:*union
+C 1403 union_change_intro.request intro:0:string
+C 1403 union_change_intro.response errno:0:integer
+C 1501 elfs_battle.request id:0:string,queue:1:integer,index:2:integer
+C 1501 elfs_battle.response errno:0:integer
+C 1502 elfs_dismiss.request id:0:string
+C 1502 elfs_dismiss.response errno:0:integer
+C 1503 elfs_level_up.request id:0:string
+C 1503 elfs_level_up.response errno:0:integer
+C 1504 elfs_level_up10.request id:0:string
+C 1504 elfs_level_up10.response errno:0:integer
+C 1701 buy_bag_page.request ntype:0:integer
+C 1701 buy_bag_page.response errno:0:integer,ntype:1:integer,capacity:2:integer
+C 1901 do_twisted_egg.request mtype:0:integer
+C 1901 do_twisted_egg.response errno:0:integer,cd:1:integer,normalnum:2:integer,diamondnum:3:integer,diamondfreenum:4:integer,tenreward:5:*twistedreward,reward:6:*twistedreward
+C 2001 ask_eq_title.request id:0:integer
+C 2001 ask_eq_title.response errno:0:integer,titles:1:*title,wprops:2:wprops
+C 2002 ask_display.request id:0:integer
+C 2002 ask_display.response errno:0:integer,titles:1:*title
+C 2037 carry_shop_buy.request index:0:integer,num:1:integer
+C 2037 carry_shop_buy.response errno:0:integer,itemid:1:integer,itemtype:2:integer,itemnum:3:integer
+C 2101 marquee_test.request mtype:0:integer
+C 2202 ask_clean.request sid:0:integer,ntype:1:integer
+C 2202 ask_clean.response errno:0:integer,dnum:1:integer
+C 2203 ask_war.request muid:0:string,elsteamid:1:integer,ntype:2:integer
+C 2203 ask_war.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 2204 ask_box.request uid:0:string
+C 2204 ask_box.response errno:0:integer,box:1:objects
+C 2206 ask_fastbattle.request sid:0:integer
+C 2206 ask_fastbattle.response errno:0:integer
+C 2207 ask_dungeon_info.request sid:0:integer
+C 2207 ask_dungeon_info.response errno:0:integer,dupinfo:1:dupinfo
+C 2208 ask_onhook.request sid:0:integer
+C 2208 ask_onhook.response errno:0:integer,sid:1:integer
+C 2209 ask_onhook_award.request ntype:0:integer
+C 2209 ask_onhook_award.response errno:0:integer,dayitemn:1:integer,dayelfn:2:integer
+C 2210 ask_scene_trigger.request uid:0:string,iscommon:1:boolean
+C 2210 ask_scene_trigger.response errno:0:integer,tips:1:tips
+C 2211 ask_change_team.request tid:0:integer
+C 2211 ask_change_team.response errno:0:integer
+C 2216 ask_reject_invide.request teamuid:0:string
+C 2216 ask_reject_invide.response errno:0:integer
+C 2301 normal_shop_buy.request index:0:integer,num:1:integer
+C 2301 normal_shop_buy.response errno:0:integer,itemid:1:integer,itemtype:2:integer,itemnum:3:integer
+C 2302 mysterious_shop_buy.request index:0:integer
+C 2302 mysterious_shop_buy.response errno:0:integer
+C 2303 mysterious_shop_refresh.request
+C 2303 mysterious_shop_refresh.response errno:0:integer,refresh_time:1:integer,item_num:2:integer,diamond_num:3:integer,shop_info:4:*mysterious_shop
+C 2304 pkpoint_shop_buy.request index:0:integer,num:1:integer
+C 2304 pkpoint_shop_buy.response errno:0:integer,itemid:1:integer,itemtype:2:integer,itemnum:3:integer
+C 2305 contribute_shop_buy.request index:0:integer,num:1:integer
+C 2305 contribute_shop_buy.response errno:0:integer,itemid:1:integer,itemtype:2:integer,itemnum:3:integer
+C 2306 djpoint_shop_buy.request index:0:integer,num:1:integer
+C 2306 djpoint_shop_buy.response errno:0:integer,itemid:1:integer,itemtype:2:integer,itemnum:3:integer
+C 2401 player_use_item.request id:0:integer,num:1:integer,giftid:2:integer
+C 2401 player_use_item.response errno:0:integer
+C 2501 friend_find.request name:0:string
+C 2501 friend_find.response errno:0:integer,data:1:friend_info
+C 2502 friend_apply.request name:0:string
+C 2502 friend_apply.response errno:0:integer,name:1:string
+C 2503 friend_dispose_apply_res.request name:0:string,result:1:integer
+C 2503 friend_dispose_apply_res.response errno:0:integer,name:1:string
+C 2504 friend_del.request uid:0:string
+C 2504 friend_del.response errno:0:integer
+C 2505 get_friend_info.request
+C 2505 get_friend_info.response errno:0:integer,friend:1:*friend_info,apply:2:*friend_info,give:3:*string,get:4:integer,un_get:5:*string,recommend:6:*friend_info
+C 2506 friendship_give.request uid:0:*string
+C 2506 friendship_give.response errno:0:integer,uid:1:*string
+C 2507 friendship_get.request uid:0:*string
+C 2507 friendship_get.response errno:0:integer,uid:1:*string
+C 2508 release_wish.request item_id:0:integer
+C 2508 release_wish.response errno:0:integer,data:1:wish
+C 2509 recall_wish.request
+C 2509 recall_wish.response errno:0:integer
+C 2510 check_wish.request
+C 2510 check_wish.response data:0:*wish
+C 2511 check_debris_bags.request
+C 2511 check_debris_bags.response data:0:*debris
+C 2512 give_debris.request uid:0:string
+C 2512 give_debris.response errno:0:integer,data:1:wish
+C 2515 ask_ranklist.request index:0:integer,page:1:integer,size:2:integer
+C 2515 ask_ranklist.response errno:0:integer,index:1:integer,page:2:integer,size:3:integer,list:4:*rankinginfo,myinfo:5:rankinginfo,uptm:6:integer
+C 2516 watch_player.request uid:0:string,svrid:1:integer
+C 2516 watch_player.response errno:0:integer,uid:1:string,name:2:string,level:3:integer,title:4:integer,power:5:integer,vip:6:integer,sex:7:integer,dress:8:integer,elfs:9:*elflist,equiplist:10:*item(pos),elfcarry:11:*carrylist(elfid),suitdata:12:*eqitem,allelf:13:*pokemon_t,goldcarry:14:*carrylist(elfid),battle_pet:15:*watch_player_pet
+C 2517 ask_robot.request num:0:integer
+C 2517 ask_robot.response errno:0:integer,num:1:integer,list:2:*actor
+C 2519 equip_on.request sid:0:string
+C 2519 equip_on.response errno:0:integer
+C 2520 equip_enhance.request pos:0:integer,auto:1:boolean
+C 2520 equip_enhance.response errno:0:integer,pos:1:integer,auto:2:boolean
+C 2521 equip_melt.request list:0:*string
+C 2521 equip_melt.response errno:0:integer,point:1:integer
+C 2522 equip_refine_ask.request sid:0:string,pos:1:integer,mode:2:integer,reserve:3:*integer
+C 2522 equip_refine_ask.response errno:0:integer,extra:1:*prop_t
+C 2523 equip_refine_save.request
+C 2523 equip_refine_save.response errno:0:integer
+C 2524 equip_refresh.request
+C 2524 equip_refresh.response errno:0:integer,forge:1:item,num:2:integer
+C 2525 equip_forge.request
+C 2525 equip_forge.response errno:0:integer,point:1:integer,forge:2:item
+C 2526 invite_rinia.request uid:0:string
+C 2526 invite_rinia.response errno:0:integer
+C 2527 response_rinia.request uid:0:string,state:1:integer
+C 2527 response_rinia.response errno:0:integer,type:1:integer,seed:2:integer,weather:3:integer,player:4:formation_t,monster:5:formation_t,identifer:6:string,myname:7:string,my_sex:8:integer,opposite_name:9:string,opposite_sex:10:integer
+C 2528 engraving.request pos:0:integer,probability:1:integer,material:2:integer
+C 2528 engraving.response errno:0:integer,suit_data:1:*eqitem
+C 2529 sellsuit_eq.request material:0:integer,num:1:integer
+C 2529 sellsuit_eq.response errno:0:integer
+C 2530 runecargo_refresh.request
+C 2530 runecargo_refresh.response errno:0:integer,list:1:*cargo,manaual:2:integer
+C 2531 runecargo_buy.request idx:0:integer
+C 2531 runecargo_buy.response errno:0:integer,idx:1:integer,chips:2:integer
+C 2532 runecargo_lock.request sid:0:integer,lock:1:boolean
+C 2532 runecargo_lock.response errno:0:integer,sid:1:integer,lock:2:boolean
+C 2533 runecargo_split.request list:0:*ipair
+C 2533 runecargo_split.response errno:0:integer,finalchips:1:integer
+C 2534 equip_up_grade.request pos:0:integer
+C 2534 equip_up_grade.response errno:0:integer,extra:1:*prop_t
+C 2535 get_develop_level.request
+C 2535 get_develop_level.response errno:0:integer,score:1:*prop_t
+C 2601 ask_getsign7day.request day:0:integer
+C 2601 ask_getsign7day.response errno:0:integer
+C 2801 ask_charge.request sid:0:integer
+C 2801 ask_charge.response errno:0:integer,order:1:order
+C 3000 test_battle.request
+C 3000 test_battle.response seed:0:integer,weather:1:integer,player:2:formation_t,monster:3:formation_t
+C 3001 dungeon_sync.request sid:0:integer,objs:1:*string,flag:2:integer
+C 3002 dungeon_flee.request
+C 3003 release.request onlyidlist:0:*string
+C 3003 release.response errno:0:integer,Z_Stone_s:1:*item
+C 3004 upgrade.request onlyid:0:string,numlv:1:integer
+C 3004 upgrade.response errno:0:integer,level:1:integer,exp:2:integer,onlyid:3:string
+C 3005 upintimacy.request onlyid:0:string,type:1:integer,itemnum:2:*ipair,auto:3:boolean
+C 3005 upintimacy.response errno:0:integer,love:1:integer,loveexp:2:integer,onlyid:3:string,item:4:*ipair,auto:5:boolean
+C 3006 evolution.request onlyid:0:string,sid:1:integer,auto:2:boolean
+C 3006 evolution.response errno:0:integer,skill:1:*integer,onlyid:2:string,auto:3:boolean
+C 3007 advance.request id:0:string,auto:1:boolean
+C 3007 advance.response errno:0:integer,onlyid:1:string,auto:2:boolean
+C 3008 strive.request onlyid:0:string,category:1:integer,itemnum:2:ipair
+C 3008 strive.response errno:0:integer,onlyid:1:string
+C 3009 unit.request onlyid:0:string,paytype:1:integer,locklist:2:attribute
+C 3009 unit.response errno:0:integer,individual:1:attribute,onlyid:2:string
+C 3010 personality.request onlyid:0:string
+C 3010 personality.response errno:0:integer,nature:1:integer,onlyid:2:string
+C 3011 star.request onlyid:0:string,consume_id:1:*string,auto:2:boolean
+C 3011 star.response errno:0:integer,onlyid:1:string,auto:2:boolean
+C 3012 skill.request onlyid:0:string,skillid:1:integer,rmskillid:2:integer
+C 3012 skill.response errno:0:integer,skillid:1:*integer,onlyid:2:string
+C 3013 battle.request onlyid:0:string,oldid:1:string,number:2:integer
+C 3013 battle.response errno:0:integer,position:1:integer
+C 3014 quitbattle.request onlyid:0:string,number:1:integer
+C 3014 quitbattle.response errno:0:integer
+C 3015 setposition.request type:0:integer,number:1:integer
+C 3015 setposition.response errno:0:integer
+C 3016 upgrade_position.request type:0:integer,list:1:*ipair
+C 3016 upgrade_position.response errno:0:integer,newlevel:1:integer,newexp:2:integer
+C 3017 put_down_skill.request onlyid:0:string,skillid:1:integer
+C 3017 put_down_skill.response errno:0:integer,skillid:1:*integer,onlyid:2:string
+C 3018 elf_state_get_info.request
+C 3018 elf_state_get_info.response errno:0:integer,state:1:*elf_state
+C 3019 apparel.request id:0:string,carryid:1:string
+C 3019 apparel.response errno:0:integer,carrylist:1:carrylist(elfid)
+C 3020 inherit.request elfid_a:0:string,elfid_b:1:string
+C 3020 inherit.response errno:0:integer
+C 3021 random_buy.request sid:0:integer
+C 3021 random_buy.response errno:0:integer,carryid:1:*carryinfo
+C 3022 elf_lock.request onlyid:0:string,lock:1:integer
+C 3022 elf_lock.response errno:0:integer,onlyid:1:string,lock:2:integer
+C 3023 arrangement.request onlyid:0:string,newlocation:1:integer,number:2:integer
+C 3023 arrangement.response errno:0:integer
+C 3024 carry_protect.request id:0:string,carryid:1:string,type:2:integer
+C 3024 carry_protect.response errno:0:integer
+C 3025 set_battle_team.request teamid:0:integer
+C 3025 set_battle_team.response errno:0:integer
+C 3026 accept_PK.request opposite_uid:0:string,mynumber:1:integer,opposite_number:2:integer
+C 3026 accept_PK.response errno:0:integer
+C 3027 request_battle.request id:0:string,name:1:string,number:2:integer
+C 3027 request_battle.response identifer:0:string,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,type:5:integer,errno:6:integer,myname:7:string,opposite_name:8:string,my_sex:9:integer,opposite_sex:10:integer
+C 3028 update_battle.request sid:0:integer,objs:1:*string,number:2:integer
+C 3028 update_battle.response errno:0:integer,number:1:integer
+C 3032 play_end.request number:0:integer
+C 3032 play_end.response errno:0:integer,time:1:integer,time_stamp:2:integer
+C 3034 player_batttle_flee.request
+C 3034 player_batttle_flee.response errno:0:integer
+C 3035 req_elf_awaken.request id:0:string,consume_id:1:*string,ditem:2:item
+C 3035 req_elf_awaken.response errno:0:integer,star_lv:1:integer
+C 3036 elf_be_reborn.request onlyid:0:string,be_reborn:1:integer
+C 3036 elf_be_reborn.response errno:0:integer
+C 3037 adventure_mission_open.request
+C 3037 adventure_mission_open.response seed:0:integer,weather:1:integer,player:2:formation_t,monster:3:formation_t,num_lineup:4:integer,applytype:5:string,errno:6:integer
+C 3038 adventure_receive_normal.request exp:0:integer,exp1:1:integer,coins:2:integer
+C 3038 adventure_receive_normal.response errno:0:integer
+C 3039 adventure_quicken.request
+C 3039 adventure_quicken.response errno:0:integer
+C 3040 adventure_change_scene.request sid:0:integer
+C 3040 adventure_change_scene.response errno:0:integer
+C 3041 map_complete.request sid:0:integer
+C 3041 map_complete.response errno:0:integer,sid:1:integer
+C 3042 fast_hangup.request
+C 3042 fast_hangup.response errno:0:integer,start:1:integer,final:2:integer,adds:3:attachment
+C 3043 elfskill_upgrade.request uid:0:string,skill:1:integer,cost:2:*string
+C 3043 elfskill_upgrade.response errno:0:integer,uid:1:string,skill:2:integer,skill_cost:3:*common_award
+C 3044 set_retinue.request index:0:integer,uid:1:string
+C 3044 set_retinue.response errno:0:integer,index:1:integer,uid:2:string
+C 3045 swop_retinue.request idx1:0:integer,idx2:1:integer
+C 3045 swop_retinue.response errno:0:integer,idx1:1:integer,idx2:2:integer
+C 3101 get_hunting_elf.request
+C 3101 get_hunting_elf.response errno:0:integer,low:1:*integer,mid:2:*integer,high:3:*integer
+C 3102 enter_hunting.request itype:0:integer,guide:1:integer
+C 3102 enter_hunting.response errno:0:integer
+C 3103 leave_hunting.request
+C 3103 leave_hunting.response errno:0:integer
+C 3104 hunt.request itemid:0:integer
+C 3104 hunt.response errno:0:integer,elfid:1:integer,gridid:2:integer,chip_id:3:integer,chip_num:4:integer,lucky:5:integer
+C 3105 refresh_cur_elf.request
+C 3105 refresh_cur_elf.response errno:0:integer
+C 3201 three_choose_one.request elfid:0:integer
+C 3201 three_choose_one.response errno:0:integer,elfid:1:integer
+C 3450 ask_buy_dress.request posid:0:integer
+C 3450 ask_buy_dress.response errno:0:integer
+C 3451 ask_carry_dress.request ntype:0:integer,dress_id:1:integer
+C 3451 ask_carry_dress.response errno:0:integer
+C 3452 ask_compound_dress.request ntype:0:integer,chipid:1:integer,num:2:integer
+C 3452 ask_compound_dress.response errno:0:integer
+C 3501 fast_buy.request id:0:integer,num:1:integer
+C 3501 fast_buy.response errno:0:integer
+C 3551 hit_new_elfmap.request elfid:0:integer
+C 3551 hit_new_elfmap.response errno:0:integer
+C 3651 challenge_worldboss.request uid:0:string
+C 3651 challenge_worldboss.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,flag:5:boolean
+C 3652 get_worldboss_reward.request uid:0:string
+C 3652 get_worldboss_reward.response errno:0:integer,next_reward:1:attachment
+C 3653 get_worldboss_info.request
+C 3653 get_worldboss_info.response errno:0:integer,data:1:*worldboss_info,challenge_num:2:integer
+C 3670 ask_team_list.request teamsid:0:integer
+C 3670 ask_team_list.response errno:0:integer,teamlist:1:*tshortdata
+C 3671 ask_create_team.request wpower:0:integer,teamsid:1:integer,unionflag:2:integer
+C 3671 ask_create_team.response errno:0:integer,teamdata:1:teamdata,deliverid:2:integer
+C 3672 query_team.request teamuid:0:string
+C 3672 query_team.response errno:0:integer
+C 3673 ask_join_team.request ntype:0:integer,teamuid:1:string,svrid:2:integer
+C 3673 ask_join_team.response errno:0:integer,teamdata:1:teamdata,deliverid:2:integer
+C 3674 ask_fast_join_team.request teamsid:0:integer,needpower:1:integer
+C 3674 ask_fast_join_team.response errno:0:integer,teamdata:1:teamdata,deliverid:2:integer
+C 3675 ask_quit_team.request
+C 3675 ask_quit_team.response errno:0:integer
+C 3676 ask_dissmis_team.request
+C 3676 ask_dissmis_team.response errno:0:integer
+C 3677 ask_invite_personal.request uids:0:*string
+C 3677 ask_invite_personal.response errno:0:integer
+C 3678 ask_invite_union.request wpower:0:integer
+C 3678 ask_invite_union.response errno:0:integer
+C 3679 ask_invite_server.request wpower:0:integer
+C 3679 ask_invite_server.response errno:0:integer
+C 3680 ask_del_member.request uids:0:*string
+C 3680 ask_del_member.response errno:0:integer
+C 3681 ask_turn_job.request uid:0:string
+C 3681 ask_turn_job.response errno:0:integer
+C 3683 ask_team_war.request muid:0:string
+C 3683 ask_team_war.response errno:0:integer
+C 3684 ask_team_ready.request ntype:0:integer
+C 3684 ask_team_ready.response errno:0:integer
+C 3686 ask_team_times.request
+C 3686 ask_team_times.response errno:0:integer,lastCount:1:integer
+C 5002 get_activity_info.request
+C 5002 get_activity_info.response errno:0:integer
+C 5011 elf_equiment_devour.request devour_A:0:string
+C 5011 elf_equiment_devour.response errno:0:integer,info:1:item
+C 5012 elf_equiment_synthetic.request synthetic_A:0:string,synthetic_B:1:string,is_useitem:2:integer
+C 5012 elf_equiment_synthetic.response errno:0:integer,info:1:item,flags:2:integer
+C 5013 wear_elf_equiment.request equ_uid:0:string,elf_uid:1:string,do_type:2:integer
+C 5013 wear_elf_equiment.response errno:0:integer,elf_info:1:elfinfo,takeoff:2:item
+C 5014 washs_elf_equiment.request lock:0:*integer,uid:1:string,use_itype:2:integer
+C 5014 washs_elf_equiment.response errno:0:integer,attr:1:*extra_attr
+C 5015 debris_synthetic.request id:0:integer
+C 5015 debris_synthetic.response errno:0:integer
+C 5016 save_washs_attr.request itype:0:integer,uid:1:string
+C 5016 save_washs_attr.response errno:0:integer,attr:1:*extra_attr
+C 5017 elf_equiment_decomposition.request uid:0:*string
+C 5017 elf_equiment_decomposition.response errno:0:integer
+C 5051 refresh_new_secretarea.request itype:0:integer
+C 5051 refresh_new_secretarea.response errno:0:integer,id:1:*secret
+C 5052 enter_secret.request id:0:integer
+C 5052 enter_secret.response errno:0:integer
+C 5053 hit_cover.request pos:0:position
+C 5053 hit_cover.response errno:0:integer,action:1:integer
+C 5054 finish_secret_reward.request
+C 5054 finish_secret_reward.response drop:0:*attachment,other:1:*attachment,action:2:integer,total:3:integer,finish:4:integer
+C 5055 buy_secret_item.request npcid:0:integer,x:1:integer,y:2:integer
+C 5055 buy_secret_item.response errno:0:integer
+C 5056 get_secert_item.request npcid:0:integer,x:1:integer,y:2:integer
+C 5056 get_secert_item.response errno:0:integer,item:1:secret_shop
+C 5057 get_statistical_secret.request
+C 5057 get_statistical_secret.response errno:0:integer,boss:1:*statistical_secret,monsters:2:*statistical_secret,npcs:3:*statistical_secret,boxs:4:*statistical_secret,mirror:5:*statistical_secret
+C 5058 buy_secret_dupitem.request itype:0:integer,n:1:integer
+C 5058 buy_secret_dupitem.response errno:0:integer
+C 5059 use_resurrection.request team:0:integer,uid:1:string
+C 5059 use_resurrection.response errno:0:integer
+C 5060 use_fly_card.request
+C 5060 use_fly_card.response errno:0:integer
+C 5061 use_baozi_card.request team:0:integer
+C 5061 use_baozi_card.response errno:0:integer
+C 5062 buy_num.request
+C 5062 buy_num.response errno:0:integer,num:1:integer,buy_num:2:integer
+C 5063 choose_elf_travel.request uid:0:string,itype:1:integer,index:2:integer,itemid:3:integer,amulet:4:integer
+C 5063 choose_elf_travel.response errno:0:integer
+C 5064 make_new_travel_group.request itype:0:integer
+C 5064 make_new_travel_group.response errno:0:integer
+C 5065 add_travel_speed.request itype:0:integer,index:1:integer
+C 5065 add_travel_speed.response errno:0:integer
+C 5066 elf_travel_reward.request index:0:integer
+C 5066 elf_travel_reward.response errno:0:integer,efforts:1:attribute,fruit:2:*item,debris:3:*item,region:4:integer,itype:5:integer,uid:6:string
+C 5067 pray.request itype:0:integer
+C 5067 pray.response errno:0:integer,id:1:*secret
+C 5069 elf_travel_battle.request choose:0:integer
+C 5069 elf_travel_battle.response errno:0:integer
+C 5070 guildboss_challenge.request itype:0:integer,id:1:integer
+C 5070 guildboss_challenge.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 5071 open_guild_boss.request index:0:integer
+C 5071 open_guild_boss.response errno:0:integer
+C 5072 get_guildboos_group.request index:0:integer
+C 5072 get_guildboos_group.response errno:0:integer,info:1:*guildboos_info
+C 5077 buy_action_num.request
+C 5077 buy_action_num.response errno:0:integer,num:1:integer
+C 5078 refresh_bento.request index:0:integer
+C 5078 refresh_bento.response errno:0:integer
+C 5079 carry_synthetic.request uid:0:*string
+C 5079 carry_synthetic.response errno:0:integer,uid:1:string
+C 5080 open_mirror_box.request index:0:integer,npcid:1:integer,x:2:integer,y:3:integer
+C 5080 open_mirror_box.response errno:0:integer
+C 5081 open_mirror_box_onekey.request npcid:0:integer,x:1:integer,y:2:integer
+C 5081 open_mirror_box_onekey.response errno:0:integer
+C 5082 get_mirror_info.request npcid:0:integer,x:1:integer,y:2:integer
+C 5082 get_mirror_info.response errno:0:integer
+C 5083 kill_monster.request x:0:integer,y:1:integer,itype:2:integer,monsterid:3:integer,uid:4:string
+C 5083 kill_monster.response errno:0:integer,reward:1:*attachment
+C 5090 player_order.request
+C 5090 player_order.response errno:0:integer
+C 5091 get_exp_back.request choose_type:0:integer
+C 5091 get_exp_back.response errno:0:integer,next_exp:1:integer
+C 5092 get_team_log.request choose_type:0:integer
+C 5092 get_team_log.response errno:0:integer,log:1:*team_log
+C 5093 get_reward_back.request id:0:integer,choose_type:1:integer
+C 5093 get_reward_back.response errno:0:integer
+C 5094 open_all_cover.request
+C 5094 open_all_cover.response errno:0:integer
+C 5095 buy_elf_travel_num.request
+C 5095 buy_elf_travel_num.response errno:0:integer
+C 5096 monopoly.request itype:0:integer,uid:1:string,special:2:integer
+C 5096 monopoly.response errno:0:integer,info:1:monopoly_event
+C 5098 get_monopoly.request
+C 5098 get_monopoly.response errno:0:integer
+C 5099 treatment.request uid_tab:0:*string
+C 5099 treatment.response errno:0:integer,treatment:1:*elf_treatment
+C 5100 elf_fit.request uid_tab:0:*string,elfid:1:integer
+C 5100 elf_fit.response errno:0:integer
+C 5101 challenge_space.request
+C 5101 challenge_space.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 5102 get_space_rank.request
+C 5102 get_space_rank.response errno:0:integer,rank:1:*space_rank
+C 5103 open_space_stage_reward.request
+C 5103 open_space_stage_reward.response errno:0:integer,stage_reward:1:*space_stage_reward,mission_id:2:integer
+C 5104 get_space_stage_reward.request mission_id:0:integer
+C 5104 get_space_stage_reward.response errno:0:integer,stage_reward:1:*space_stage_reward,mission_id:2:integer
+C 10000 get_online_reward.request
+C 10000 get_online_reward.response errno:0:integer
+C 10001 get_online_reward_info.request
+C 10001 get_online_reward_info.response errno:0:integer,reward:1:*integer,condition_time:2:integer
+C 10005 get_level_rank.request
+C 10005 get_level_rank.response errno:0:integer,info:1:*levelrank,special:2:integer,day:3:integer
+C 10006 get_battlepower_rank.request
+C 10006 get_battlepower_rank.response errno:0:integer,info:1:*levelrank,special:2:integer
+C 10007 get_recharge_rank.request
+C 10007 get_recharge_rank.response errno:0:integer,info:1:*levelrank
+C 10008 hit_redpoint.request activity_id:0:integer
+C 10008 hit_redpoint.response info:0:*integer
+C 10009 get_elf_come_rank.request
+C 10009 get_elf_come_rank.response errno:0:integer,info:1:*levelrank,my_consumption:2:integer,inrank:3:integer,three_num:4:integer,ten_num:5:integer
+C 10010 get_master_elf_come_rank.request
+C 10010 get_master_elf_come_rank.response errno:0:integer,info:1:*elfcome_master,my_consumption:2:integer,inrank:3:integer,three_num:4:integer,ten_num:5:integer
+C 10012 get_challenge_bountyboss_info.request
+C 10012 get_challenge_bountyboss_info.response errno:0:integer,monsterid:1:integer,star:2:integer,all_hp:3:integer,all_hp_max:4:integer,next_time:5:integer,num:6:integer,integral:7:integer,reward:8:*integer,buy_num:9:integer
+C 10013 get_exchange_bountyboss_info.request
+C 10013 get_exchange_bountyboss_info.response errno:0:integer,info:1:*bountyboss_shop,wallet:2:integer
+C 10014 get_bountyboss_rank.request
+C 10014 get_bountyboss_rank.response errno:0:integer,my_rank:1:integer,rank:2:*bountyboss_rank,my_integral:3:integer
+C 10015 get_leiji_bountyboss_info.request
+C 10015 get_leiji_bountyboss_info.response errno:0:integer,total:1:integer,info:2:*bountyboss_leiji,history:3:*integer
+C 10016 challenge_bountyboss.request
+C 10016 challenge_bountyboss.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 10017 refresh_bountyboss.request itype:0:integer
+C 10017 refresh_bountyboss.response errno:0:integer,monsterid:1:integer,star:2:integer,all_hp:3:integer,all_hp_max:4:integer,next_time:5:integer,integral:6:integer,reward:7:*integer
+C 10018 exchange_bountyboss.request index:0:integer
+C 10018 exchange_bountyboss.response errno:0:integer,integral:1:integer,index:2:integer,num:3:integer
+C 10019 get_leiji_bountyboss.request index:0:integer
+C 10019 get_leiji_bountyboss.response errno:0:integer,index:1:integer
+C 10020 buy_challenge_bountyboss.request
+C 10020 buy_challenge_bountyboss.response errno:0:integer,num:1:integer,buy_num:2:integer
+C 10021 get_master_turn_table_rank.request
+C 10021 get_master_turn_table_rank.response errno:0:integer,info:1:*turntable_master_rank,my_consumption:2:integer,inrank:3:integer
+C 10022 get_master_turn_rable_turn.request
+C 10022 get_master_turn_rable_turn.response errno:0:integer,info:1:*turntable_master_turn,my_info:2:*turntable_master_buff,pool:3:integer,cost:4:*integer,log:5:*turntable_master_log
+C 10023 get_master_turn_rable_shop.request
+C 10023 get_master_turn_rable_shop.response errno:0:integer,shop:1:*turntable_master_shop,my_integral:2:integer
+C 10024 master_turn_table_turn.request itype:0:integer
+C 10024 master_turn_table_turn.response errno:0:integer,reward:1:*turntable_master_turn,pool_num:2:integer,log:3:*turntable_master_log,my_info:4:*turntable_master_buff
+C 10025 master_turn_rable_shop.request buy_index:0:integer
+C 10025 master_turn_rable_shop.response errno:0:integer,integral:1:integer
+C 10026 get_maze_rank.request
+C 10026 get_maze_rank.response errno:0:integer,info:1:*maze_rank,my_consumption:2:integer,inrank:3:integer,three_num:4:integer,ten_num:5:integer
+C 10027 get_maze_shop.request
+C 10027 get_maze_shop.response errno:0:integer,shop:1:*maze_shop,my_consumption:2:integer
+C 10028 get_maze_map.request
+C 10028 get_maze_map.response errno:0:integer,map:1:*maze_map,cur_grid:2:integer,cost_num:3:integer,cur_customs:4:integer,my_consumption:5:integer,cur_throw_num:6:integer,max_throw_num:7:integer,normal_cost_num:8:integer,add_integral:9:integer
+C 10029 maze_throw.request throw_num:0:integer
+C 10029 maze_throw.response errno:0:integer,throw_num:1:integer,new_map:2:*maze_map,my_consumption:3:integer,cur_customs:4:integer
+C 10030 open_maze_box.request
+C 10030 open_maze_box.response errno:0:integer
+C 10031 buy_maze_throw.request
+C 10031 buy_maze_throw.response errno:0:integer
+C 10032 buy_maze_shop.request index:0:integer
+C 10032 buy_maze_shop.response errno:0:integer
+C 10033 get_master_worldboss_info.request
+C 10033 get_master_worldboss_info.response errno:0:integer,hp:1:integer,hp_max:2:integer,rank:3:*mastsr_worldboss_rank,first:4:mastsr_worldboss_player,my_damage:5:integer,my_rank:6:integer,challenge_num:7:integer,buy_num:8:integer,reward_tab:9:*worldboss_rank_reward
+C 10034 challenge_master_worldboss.request
+C 10034 challenge_master_worldboss.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,limitround:5:integer,limitwinner:6:string,cancel_add_damage:7:boolean
+C 10035 get_master_worldboss_reward.request index:0:integer
+C 10035 get_master_worldboss_reward.response errno:0:integer,total:1:integer,reward:2:*integer
+C 10036 buy_challenge_master_worldboss.request
+C 10036 buy_challenge_master_worldboss.response errno:0:integer,challenge_num:1:integer
+C 10037 refresh_twistedegg.request
+C 10037 refresh_twistedegg.response errno:0:integer
+C 10038 get_nest_mission.request
+C 10038 get_nest_mission.response errno:0:integer,nest_mission:1:*nest_mission_info,num:2:integer
+C 10039 enter_mission.request sid:0:integer
+C 10039 enter_mission.response errno:0:integer,nest_monster:1:*nest_monster_info
+C 10040 nest_move.request direction:0:integer
+C 10040 nest_move.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 10041 quit_nest.request
+C 10041 quit_nest.response errno:0:integer,nest_mission:1:*nest_mission_info,num:2:integer
+C 10042 nest_refresh.request sid:0:integer
+C 10042 nest_refresh.response errno:0:integer,nest_mission:1:nest_mission_info
+C 10043 vn5starGet.request
+C 10043 vn5starGet.response errno:0:integer
+C 10050 get_diamondsrob_hotgoods_show.request
+C 10050 get_diamondsrob_hotgoods_show.response errno:0:integer,goods:1:*diamondsrob_hotgoods
+C 10051 get_diamondsrob_hotgoods_now.request
+C 10051 get_diamondsrob_hotgoods_now.response errno:0:integer,my_intgeral:1:integer,open_integal:2:integer,person_integal:3:integer,item_type:4:integer,item_id:5:integer,item_num:6:integer,item_part:7:integer,limit_time:8:integer,all_intgeral:9:integer,status:10:integer,my_all_intgeral:11:integer,lucky_data:12:*lucky_player,my_hit:13:integer
+C 10052 get_diamondsrob_hotgoods_shop.request
+C 10052 get_diamondsrob_hotgoods_shop.response errno:0:integer,shop:1:*diamonds_rob_shop
+C 10053 buy_diamondsrob_hotgoods_shop.request index:0:integer
+C 10053 buy_diamondsrob_hotgoods_shop.response errno:0:integer
+C 10054 diamondsrob_hotgoods.request intgeral:0:integer
+C 10054 diamondsrob_hotgoods.response errno:0:integer,my_intgeral:1:integer,all_intgeral:2:integer,my_all_intgeral:3:integer
+C 10100 update_battle_m.request sid:0:integer,objs:1:*string,number:2:integer,isnpc:3:integer
+C 10100 update_battle_m.response errno:0:integer,number:1:integer
+C 10101 play_end_m.request number:0:integer
+C 10101 play_end_m.response errno:0:integer,time:1:integer,time_stamp:2:integer
+C 10102 player_batttle_flee_m.request
+C 10102 player_batttle_flee_m.response errno:0:integer
+C 10103 add_matching_p.request number:0:integer
+C 10103 add_matching_p.response errno:0:integer
+C 10104 del_matching_p.request
+C 10104 del_matching_p.response errno:0:integer
+C 10105 get_now_datainfo.request
+C 10105 get_now_datainfo.response errno:0:integer,data:1:*immediate_ranking_list,myrank:2:integer
+C 10106 get_old_datainfo.request
+C 10106 get_old_datainfo.response errno:0:integer,data:1:*immediate_ranking_list
+C 10108 receive_duan_award.request stage:0:integer
+C 10108 receive_duan_award.response errno:0:integer
+C 10109 receive_everyday_award.request stage:0:integer
+C 10109 receive_everyday_award.response errno:0:integer
+C 10201 get_smashegg_info.request
+C 10201 get_smashegg_info.response errno:0:integer,lucky_data:1:*lucky_player,info:2:*integer
+C 10202 get_smashegg_rank.request
+C 10202 get_smashegg_rank.response errno:0:integer,info:1:*levelrank,my_consumption:2:integer,inrank:3:integer,three_num:4:integer,ten_num:5:integer
+C 10203 get_smashegg_reward.request
+C 10203 get_smashegg_reward.response errno:0:integer,info:1:*integer
+C 10204 buy_smashegg_item.request num:0:integer
+C 10204 buy_smashegg_item.response errno:0:integer
+C 10205 smashegg.request itype:0:integer,auto_buy:1:integer
+C 10205 smashegg.response errno:0:integer,reward:1:*integer
+C 10250 watch_advertising.request itype:0:integer
+C 10250 watch_advertising.response errno:0:integer,key:1:string
+C 10251 complete_watch_advertising.request itype:0:integer,key:1:string,extra:2:advertising_vaule
+C 10251 complete_watch_advertising.response errno:0:integer
+C 10271 get_master_recharge_rank.request
+C 10271 get_master_recharge_rank.response errno:0:integer,info:1:*elfcome_master,my_consumption:2:integer,inrank:3:integer,three_num:4:integer,ten_num:5:integer,top_num:6:integer
+C 10301 pet_levelup.request id:0:string
+C 10301 pet_levelup.response errno:0:integer,newlevel:1:integer,id:2:string
+C 10302 pet_starup.request id:0:string,id_tab:1:*string
+C 10302 pet_starup.response errno:0:integer,newstar:1:integer,id:2:string
+C 10304 pet_washs.request id:0:string,id_tab:1:*string
+C 10304 pet_washs.response errno:0:integer,id:1:string,data:2:petinfo
+C 10305 pet_battle.request id:0:string,teamid:1:integer,itype:2:integer
+C 10305 pet_battle.response errno:0:integer,id:1:string,teamid:2:integer,pet_uid:3:string
+C 10306 pet_out_battle.request id:0:string,itype:1:integer
+C 10306 pet_out_battle.response errno:0:integer,status:1:*integer
+C 10307 add_pet_washtime.request id:0:string
+C 10307 add_pet_washtime.response errno:0:integer
+C 10308 pet_free.request id_tab:0:*string
+C 10308 pet_free.response errno:0:integer
+C 10309 save_pet_wash_data.request pet_uid:0:string
+C 10309 save_pet_wash_data.response errno:0:integer
+C 10406 binding.request cloud_id:1:string,cloud_pass:2:string
+C 10406 binding.response errno:1:integer
+C 10407 binding_info.request
+C 10407 binding_info.response errno:0:integer,reward:1:*integer
+C 10410 voucher_recharge.request paysid:0:integer,n:1:integer
+C 10410 voucher_recharge.response errno:0:integer
+C 10411 get_twistedegg_rank.request
+C 10411 get_twistedegg_rank.response errno:0:integer,info:1:*levelrank,special:2:integer
+C 10412 binding_gift.request
+C 10412 binding_gift.response errno:0:integer
+C 10413 c2s_ask_vnspf_exchange_conf.request
+C 10413 c2s_ask_vnspf_exchange_conf.response errno:0:integer,info:1:*vnspf_exchange_conf
+C 10414 c2s_vnspf_exchange.request index:0:integer
+C 10414 c2s_vnspf_exchange.response errno:0:integer,nums:1:*integer
+C 10415 vnspf_giftbox_ask.request
+C 10415 vnspf_giftbox_ask.response errno:0:integer,list:1:*paymeconf(sid)
+C 10416 vnspf_giftbox_do.request itype:0:integer
+C 10416 vnspf_giftbox_do.response errno:0:integer,itype:1:integer
+C 10417 vnspf_login_reward_info.request
+C 10417 vnspf_login_reward_info.response errno:0:integer,info:1:*vnspf_loginconf
+C 10418 ask_vnspf_login_reward.request idx:0:integer,recost:1:integer
+C 10418 ask_vnspf_login_reward.response errno:0:integer
+C 10419 vnspf_recharge_reward_info.request
+C 10419 vnspf_recharge_reward_info.response errno:0:integer,info:1:*vnspf_rechargeconf
+C 10420 ask_vnspf_recharge_reward.request idx:0:integer
+C 10420 ask_vnspf_recharge_reward.response errno:0:integer
+C 10421 vnspf_turntab_reward_info.request
+C 10421 vnspf_turntab_reward_info.response errno:0:integer,info:1:vnspf_turntabconf
+C 10422 vnspf_turntab_start.request times:0:integer
+C 10422 vnspf_turntab_start.response errno:0:integer,idx:1:*integer
+C 10423 voucher_dayfree_reward_info.request
+C 10423 voucher_dayfree_reward_info.response errno:0:integer,info:1:*voucher_dayfreeconf,got:2:boolean
+C 10424 ask_voucher_dayfree_reward.request
+C 10424 ask_voucher_dayfree_reward.response errno:0:integer
+C 10425 voucher_daygift_ask.request
+C 10425 voucher_daygift_ask.response errno:0:integer,info:1:*voucher_daygift_conf,record:2:*integer
+C 10426 recharge_with_voucher.request cfid:0:integer
+C 10426 recharge_with_voucher.response errno:0:integer,limit_voucher:1:integer,real_voucher:2:integer
+C 20001 guild_cross_battle_info_all.request
+C 20001 guild_cross_battle_info_all.response errno:0:integer,my_info:1:guild_cross_guild_info,enemy_info:2:guild_cross_guild_info,my_defend:3:*guild_cross_site_info,enemy_defend:4:*guild_cross_site_info,guild_buff:5:guild_cross_buff
+C 20002 guild_cross_require_defend_info.request
+C 20002 guild_cross_require_defend_info.response errno:0:integer,my_defend:1:*guild_cross_defend_info,guild_buff:2:guild_cross_buff
+C 20003 guild_cross_require_attack_info.request
+C 20003 guild_cross_require_attack_info.response errno:0:integer,enemy_defend:1:*guild_cross_defend_info,guild_buff:2:guild_cross_buff
+C 20004 guild_cross_require_defend_site_info.request site_id:0:integer,type:1:integer
+C 20004 guild_cross_require_defend_site_info.response errno:0:integer,record:1:*guild_cross_defend_record,type:2:integer,site_id:3:integer
+C 20005 guild_cross_require_defend_video.request site_id:0:integer,type:1:integer,ssid:2:integer
+C 20005 guild_cross_require_defend_video.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,syn_record:5:*battle_syn_record
+C 20006 guild_cross_now_rank.request
+C 20006 guild_cross_now_rank.response errno:0:integer,rank:1:*guild_cross_rank_info,first:2:guild_cross_npc_info
+C 20007 guild_cross_require_old_rank_list.request page:0:integer
+C 20007 guild_cross_require_old_rank_list.response errno:0:integer,rank:1:*guild_cross_rank_list(index),all_page:2:integer,page:3:integer
+C 20008 guild_cross_require_old_rank_info.request state:0:integer
+C 20008 guild_cross_require_old_rank_info.response errno:0:integer,rank:1:*guild_cross_rank_info
+C 20009 guild_cross_attack.request site_id:0:integer,star:1:integer
+C 20009 guild_cross_attack.response errno:0:integer,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t
+C 20010 guild_cross_require_all_against_lsit.request
+C 20010 guild_cross_require_all_against_lsit.response errno:0:integer,list:1:*guild_cross_against_list(index),all_page:2:integer,page:3:integer
+C 20011 guild_cross_require_all_war_report.request
+C 20011 guild_cross_require_all_war_report.response errno:0:integer
+C 20012 guild_cross_require_attak_site_info.request site_id:0:integer,type:1:integer
+C 20012 guild_cross_require_attak_site_info.response errno:0:integer,enemy_defend:1:guild_cross_site_info,guild_buff:2:guild_cross_buff,type:3:integer,site_id:4:integer
+C 20013 guild_cross_win_card_show.request
+C 20013 guild_cross_win_card_show.response errno:0:integer,award:1:*common_award,idx:2:integer,source:3:integer
+C 20014 guild_cross_win_card.request idx:0:integer,allGet:1:boolean
+C 20014 guild_cross_win_card.response errno:0:integer,idx:1:integer,allGet:2:boolean
+C 20015 guild_cross_get_times_award.request num:0:integer
+C 20015 guild_cross_get_times_award.response errno:0:integer,num:1:integer
+C 20020 gold_carry_upstar.request carryid:0:string,id:1:string,self_list:2:*string,other_list:3:*string
+C 20020 gold_carry_upstar.response errno:0:integer,id:1:string,carryid:2:string,star:3:integer
+C 20021 gold_carry_up_down.request carryid:0:string,id:1:string,opt:2:integer,pos:3:integer,use:4:string
+C 20021 gold_carry_up_down.response errno:0:integer,id:1:string,carryid:2:string,opt:3:integer,pos:4:integer,use:5:string
+S 1 progress.request place:0:integer,timecost:1:integer
+S 2 exception.request type:0:string,message:1:string
+S 3 character.request id:0:string,name:1:string,sex:2:integer,level:3:integer,exp:4:integer,coins:5:integer,diamonds:6:integer,vip:7:integer,createtime:8:integer,titleid:9:integer,tiredpower:10:integer,exp1:11:integer,friendpoint:12:integer,rename:13:integer,pkpoint:14:integer,union_degree:15:integer,universal:16:integer,team:17:integer,svrid:18:integer,stage:19:integer,challenge:20:integer,action:21:integer,battlepower:22:integer,userid:23:integer,dojo_point:24:integer,speed:25:integer,opentime:28:integer,lastlogin:29:integer,lastlogout:30:integer,icon:31:integer,fashescoins:32:integer,mood:33:integer,homecoin:34:integer,jetton:35:integer,bindingID:36:string,country:37:string,limit_voucher:38:integer,real_voucher:39:integer,timezone:253:integer,session:254:integer,servertime:255:integer
+S 4 scene.request id:0:integer,pos:1:position,monsters:2:*objects,npcs:3:*objects,others:4:*objects,worldboss:6:*objects,guildbandit:7:*objects(uid),repnpc:8:*repobject
+S 5 aoi_addnew.request id:0:*integer
+S 6 aoi_remove.request id:0:*integer
+S 7 aoi_update.request id:0:integer,pos:1:position,props:2:actor,movement:3:movement
+S 8 sc_updateday.request svrtime:0:integer
+S 9 sc_weather.request sid:0:integer,keepalive:1:integer
+S 10 new_mail.request num:0:integer
+S 11 sc_pay.request orderid:0:string,paysid:1:integer
+S 12 del_scence_obj.request uids:0:*string,sid:1:integer
+S 13 elfs.request list:0:*elf,size:1:integer,battle_list:2:*battle_queue,exp:3:integer
+S 14 reward.request flags:0:string,adds:1:attachment,loses:2:attachment,extra:3:string
+S 15 reward_flag.request amount:0:integer
+S 16 consume.request items:0:*item
+S 17 bags.request norbag:0:norbag,elsbag:1:elfbag,porbag:2:porbag
+S 18 stamina.request times:0:integer,nexttime:1:integer
+S 19 sc_new_teaching.request teaching_id:0:*integer
+S 20 actor_now_position.request id:0:integer,pos:1:position
+S 50 guild_basic.request guild:0:string,apply:1:*string,duty:2:integer,info:3:guild_basic_info,tm:4:integer,contribute:5:integer
+S 51 guild_apply_add.request
+S 52 guild_apply_result.request guild_id:0:string,result:1:integer,info:2:guild_basic_info,flag:3:boolean
+S 53 guild_by_del.request
+S 54 guild_change_duty.request duty:0:integer
+S 55 guild_donate.request coins:0:integer,diamonds:1:integer,reset_tm:2:integer
+S 100 sc_tasklist.request list:0:*task(id),chapter:1:integer
+S 101 sc_newtask.request id:0:integer,state:1:integer,progress:2:integer
+S 111 sc_bufflist.request list:0:*buff(id),isNull:1:boolean
+S 112 sc_hitrun_people.request total:0:integer
+S 113 sc_hitrun_start.request errno:0:integer,begin:1:integer
+S 114 sc_hitrun_battle.request result:0:integer,myteamhp:1:*hpprop(uid)
+S 115 sc_hitrun_hp.request myteamhp:0:*hpprop(uid)
+S 116 sc_hitrun_end.request delay:0:integer,win:1:integer,lose:2:integer
+S 119 sc_hitrun_pk.request uid:0:string,result:1:integer
+S 120 sc_gbattle_pk.request uid:0:string,result:1:integer
+S 200 sc_send_twistedegg.request NormalMaxNum:0:integer,NormalTime:1:integer,DiamondFreeNum:2:integer,DiamondSumNum:3:integer,DiamondTenNum:4:integer,IsFirstNomal:5:integer,IsFirstDiamond:6:integer,ResetTime:7:integer
+S 201 sc_reset_twistedegg.request NormalMaxNum:0:integer,DiamondFreeNum:1:integer,ResetTime:2:integer
+S 251 sc_chats_send.request chat:0:chat
+S 252 old_guildchats_send.request guild_chat:0:*chat
+S 300 sc_del_item.request flags:0:string,del:1:attachment
+S 350 sc_titles.request titles:0:*title,wprops:1:wprops
+S 351 sc_new_title.request title:0:title,wprops:1:wprops
+S 352 sc_update_title.request title:0:title,wprops:1:wprops
+S 371 sc_duplicate.request dupinfo:0:dupinfo,history:1:*dupinfo,dbags:2:norbag,teamhp:3:teamhp,num:4:integer,buy_num:5:integer
+S 372 sc_onhook.request sid:0:integer,sdids:1:*integer,elsid:2:integer,reward:3:attachment,last:4:integer,dayitemn:5:integer,dayelfn:6:integer
+S 373 sc_fastbattle.request dnum:0:integer
+S 375 sc_onhook_special.request sid:0:integer,special:1:attachment
+S 376 sc_onhook_monster.request sid:0:integer,monsterid:1:string,reward:2:attachment
+S 377 sc_new_trigger.request other:0:objects
+S 378 sc_event_battle.request seed:0:integer,weather:1:integer,player:2:formation_t,monster:3:formation_t
+S 379 sc_dup_hpinfo.request teamhp:0:teamhp,flag:1:integer
+S 380 sc_onhook_award.request sid:0:integer,add:1:attachment,lose:2:attachment
+S 401 friend_reset.request give:0:*string,get:1:integer,un_get:2:*string
+S 402 friend_apply_req.request data:0:friend_info
+S 403 friend_apply_fail.request cause:0:integer,name:1:string
+S 404 friend_apply_succeed.request data:0:friend_info
+S 405 friend_by_del.request uid:0:string
+S 406 receive_friendship_give.request uid:0:string
+S 407 chat_of_friend.request chat_info:0:friend_chat,send_id:1:string,accept_id:2:string
+S 408 broad_wish.request data:0:wish
+S 409 del_wish_to_other.request data:0:wish
+S 411 send_debris_bags.request data:0:*debris
+S 413 sc_vitality.request vitality:0:integer,record:1:*integer
+S 415 dailydup.request timelist:0:*dailyduptimes,passlist:1:*integer
+S 420 alone_battle.request matchingPlayers:0:*matchinginfo,info:1:arenainfo,elf_battle_info:3:elfking_battle
+S 421 arena_win.request pkpoint:0:integer,diamonds:1:integer,oldranking:2:integer,nowranking:3:integer,uprank:4:boolean
+S 422 arenamessage.request matchingPlayers:0:*matchinginfo,info:1:arenainfo,award:2:attachment
+S 423 elf_king.request lineup:0:*king_battle
+S 424 sc_dojo.request dojoId:0:integer,history:1:integer,times:2:integer,manoeuvre:3:integer,monNum:4:integer,tactics:5:integer,list:6:*elfking_battle(id),pet_uid:7:string
+S 425 elf_aid.request list:0:*aidinfo(index)
+S 426 dojo_info.request info:0:*dojoinfos
+S 427 dojo_buyinfo.request cptimes:0:integer,cpbuy:1:integer,place:2:boolean
+S 428 grun_box.request boxnum:0:*integer
+S 430 tower_info.request times:0:integer,mission:1:integer,resettime:2:integer,current:3:integer,box:4:boolean,bufftime:5:integer,renovation:6:integer
+S 431 my_mine.request times:0:integer,mining_sec:1:integer,idx:2:integer,pos:3:integer,type:4:integer,starttime:5:integer,timestamp:6:integer
+S 432 mine_quit.request times:0:integer,mining_sec:1:integer
+S 433 equipment.request part:0:*item(pos),nexttime:1:integer,num:2:integer,forge:3:item,point:4:integer
+S 434 guild_bandit.request times:0:integer,nexttime:1:integer,boss:2:integer
+S 435 mine_update.request idx:0:integer,pos:1:integer,info:2:mineData
+S 436 mine_refresh.request idx:0:integer,minelist:1:*mineData
+S 437 attendance.request index:0:integer,total:1:integer,patch:2:integer,today:3:boolean,record:4:*integer,vip:5:*integer
+S 438 loginAward.request days:0:integer,record:1:*integer
+S 439 firstcharge.request flag:0:integer,show:1:integer
+S 440 vipinfo.request exp:0:integer,record:1:*integer
+S 441 vip_add.request level:0:integer,exp:1:integer
+S 442 rinia_result.request result:0:integer
+S 443 fund.request all:0:boolean,flag:1:integer
+S 444 levelgift.request all:0:boolean
+S 445 suit_equip.request suit_data:0:*eqitem,suit_bag:1:*item
+S 447 retinue.request list:0:*string
+S 448 retinue_intimacy.request list:0:*string,addNum:1:integer
+S 449 sprint.request redpoint:0:boolean,judgeTag:1:boolean
+S 450 lifeamass.request amass:0:integer,index:1:integer,flag:2:integer
+S 451 daygift.request record:0:*daygiftinfo(index)
+S 452 bombshell.request list:0:*bombshellAct(itype)
+S 453 dnf.request season:0:integer,mission:1:integer,times:2:integer,lotto:3:integer,flag:4:integer,score:5:integer,tasklist:6:*dnftaskinfo,refreshtimes:7:integer,newbie:8:integer
+S 454 dnf_result.request errno:0:integer,result:1:boolean,times:2:integer,lotto:3:integer
+S 457 sc_rocket.request times:0:integer,buytimes:1:integer,season:2:integer,lastrank:3:integer,flag:4:integer,team:5:*rocketeam(index),status:6:integer,startutc:7:integer,endutc:8:integer
+S 458 sc_rocketnext.request seed:0:integer,weather:1:integer,player:2:formation_t,monster:3:formation_t
+S 459 sc_rocket_result.request result:0:integer,score:1:integer,rate:2:integer,rank:3:integer
+S 460 luckybag.request season:0:integer,felicity:1:integer
+S 461 fesfund.request season:0:integer,flag:1:integer,total:2:integer,record:3:*ipair
+S 462 casino.request lucky:0:*casinocell(index),box:1:*casinocell(index),pet:2:string,record:3:*normalshop_limit_buy,active:4:integer
+S 463 casino_box.request index:0:integer,flag:1:integer,itype:2:integer,award:3:*integer
+S 464 hollar.request bbox:0:*ipair,bank:1:*ipair
+S 465 antiquity.request map:0:integer,bag:1:*ipair
+S 466 tablets.request flag:0:integer,level:1:integer,list:2:*casinocell(index),tag:3:integer
+S 467 tablet_drop.request index:0:integer
+S 468 emblem.request list:0:*emblem(index)
+S 469 fossil.request list:0:*emblem(index),suit:1:*emblem(index)
+S 700 sc_config_list.request list:0:*config
+S 701 sc_send_mysterious.request refresh_time:0:integer,item_num:1:integer,diamond_num:2:integer,shop_info:3:*mysterious_shop
+S 702 sc_send_normaalshop.request refresh_time:0:integer,buy_info:1:*normalshop_limit_buy
+S 703 sc_send_pkpointshop.request refresh_time:0:integer,buy_info:1:*pkpointshop_limit_buy
+S 704 sc_send_contributeshop.request refresh_time:0:integer,buy_info:1:*contributeshop_limit_buy
+S 705 sc_send_djpointshop.request refresh_time:0:integer,buy_info:1:*pkpointshop_limit_buy
+S 706 sc_send_carryshop.request refresh_time:0:integer,buy_info:1:*carryshop_limit_buy
+S 751 sc_send_huntingelf.request cur_elf:0:integer,grid:1:integer,lucky:2:integer
+S 801 sc_refresh_evnet.request others:0:*objects,monsters:1:*objects,scence:2:integer,npcs:3:*objects,worldboss:5:*objects,guildbandit:6:*objects,effect:7:effects
+S 802 sc_send_elfmap.request map_info:0:*elf_map
+S 803 runecargo.request chips:0:integer,list:1:*cargo,autotime:2:integer,manaual:3:integer
+S 804 passport.request season:0:integer,flag:1:integer,level:2:integer,exp:3:integer,progress:4:integer,record:5:*ipair,convert:6:*ipair,opentime:7:string,endtime:8:string
+S 805 icon_new.request index:0:integer
+S 806 icon_list.request list:0:*integer
+S 807 league.request flag:0:integer,reward:1:*integer,toprank:2:integer,topkill:3:integer,lastrank:4:integer,lastkill:5:integer,lastupload:6:integer
+S 808 powerstone.request debris:0:integer,autotime:1:integer,manaual:2:integer,shop:3:*cargo,bag:4:*item(sid),bagspace:5:integer,baglimit:6:integer
+S 810 zodiac.request score:0:integer,autotime:1:integer,manaual:2:integer,shop:3:*cargo,missionId:4:integer,missiondata:5:*mission(id),record:6:*elfrecord(id),teaminfo:7:*elfking_battle(id),tactics:8:integer,box:9:*cargo(id),pet_uid:12:string
+S 811 newfirst.request flag:0:integer
+S 812 welfare.request index:0:integer,flag:1:integer
+S 813 eden.request times:0:integer,buytime:1:integer,lasttime:2:integer
+S 815 limitgift.request list:0:*limitgiftinfo
+S 817 matrix.request mapid:0:integer,building:1:*erection(index),flag:2:boolean
+S 818 feedlot.request level:0:integer,deposit:1:*string,degree:2:integer,entrustime:3:integer,list:4:*petinfo(uid),count:5:integer,flag:6:boolean
+S 819 homeshop.request nexttime:0:integer,record:1:*normalshop_limit_buy
+S 820 puzzle.request times:0:integer,buytimes:1:integer,history:2:integer
+S 821 linkgame.request times:0:integer,buytimes:1:integer
+S 822 sc_race.request times:0:integer,buytimes:1:integer
+S 823 raceprocess.request board:0:*raceboard(idx),isend:1:boolean
+S 824 orange_result.request iswin:0:boolean,teamhp:1:*hpprop(uid),finished:2:boolean,idx:3:integer
+S 825 orange_push.request teamhp:0:*hpprop(uid)
+S 826 orange_progress.request current:0:integer,total:1:integer
+S 827 orange_online.request current:0:integer,total:1:integer,teamhp:2:*hpprop(uid),finished:3:boolean,history:4:*integer
+S 828 alwaysamass.request flag:0:integer
+S 829 riddle.request today:0:integer,normal:1:integer,extra:2:integer,fraud:3:boolean,cheat:4:boolean
+S 830 itemcell.request cell:0:item
+S 850 sc_dress_data.request owned:0:*integer,carry:1:integer,universal:2:integer,chipbag:3:norbag
+S 911 sc_dup_end.request ntype:0:integer,sid:1:integer
+S 1001 elf.request elfcount:0:elfcountinfo,elflist:1:*elfinfo,experience:2:integer,advanced:3:*S.elf.request.level(id)
+S 1002 elf_battle.request elf_info:0:*battle_elf_num,battle_max:1:integer,battle_list:2:integer
+S 1003 elf_position.request positionlist:0:*position_info,setposition:1:*ipair
+S 1004 elf_state.request state:0:*elf_state
+S 1005 elf_carry.request carry_bagmax:0:integer,carry_bagnum:1:integer,carry_bag:2:*carryinfo(id),elf_carry_id:3:*carrylist(elfid),times:4:*ipair,gold_carry_id:5:*carrylist(elfid)
+S 1006 elf_awaken.request elf_awaken_data:0:*elf_awaken_info
+S 1007 hangup.request exp:0:integer,exp1:1:integer,coins:2:integer,pokemon_pool:3:*integer,item_pool:4:*item,scene:5:integer,mission:6:integer,lasttime:7:integer,pokemon_count:8:integer,item_count:9:integer,quicken_count:10:integer,added:11:attachment,lost:12:attachment,bonus:13:integer,howlong:14:integer,passed:15:integer,direct:16:attachment,forward:17:attachment,map_flag:18:*integer,fasttimes:19:integer
+S 1008 adventure_catch_event.request type:0:integer,exp:1:integer,exp1:2:integer,coins:3:integer,elf:4:*elfinfo,items:5:*item
+S 1051 sc_battle_stop.request
+S 1101 sc_send_activity_status.request info:0:*activity_status
+S 1160 sc_update_teaminfo.request teamdata:1:teamdata,deliverid:2:integer,dismembers:3:*members
+S 1161 sc_invite_team.request ntype:0:integer,teamuid:1:string,teamsid:2:integer,askuid:3:string,askname:4:string
+S 1162 sc_turn_info.request wartrunlist:0:*wartrun,hpinfo:1:*hpinfo,monsteruid:2:string,masteruid:3:string,mastersid:4:integer
+S 1163 sc_battle_data.request wardata:0:wardata
+S 1164 sc_object_pos.request uid:0:string,pos:1:position
+S 1165 sc_member_award.request uiaward:0:*memberaward
+S 1166 sc_notify_kf.request fsid:0:integer,teamuid:1:string,newsvrd:2:changesvrd
+S 1167 sc_team_tips.request ntyp:0:integer,more:1:*chat,win:2:integer
+S 1171 sc_group_monster_award_view.request attach:0:attachment,member:1:*members
+S 1210 sc_update_tirepower.request tirepower:0:integer,nexttime:1:integer
+S 1300 sc_sdk_pay_rsp.request attach:0:attachment
+S 1401 sc_fastbuy_data.request data:0:*item
+S 1402 sc_vip_item_buy.request data:0:*item
+S 1451 sc_secret_area_duplicate.request dupinfo:0:dupinfo,dbags:1:norbag,teamhp:2:teamhp
+S 2000 end_immediate.request identifer:0:string,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,type:5:integer,myname:6:string,opposite_name:7:string,my_sex:8:integer,opposite_sex:9:integer
+S 2001 accept_battle.request id:0:string,name:1:string,number:2:integer
+S 2002 opposite_operation.request sid:0:integer,objs:1:*string,number:2:integer
+S 2005 other_play_end.request time:0:integer,time_stamp:1:integer
+S 2008 sc_send_secretarea.request id:0:*secret
+S 2009 sc_secret_challenge.request free_refresh_num:0:integer,one_refresh_num:1:integer,cost_refresh_num:2:integer
+S 2010 sc_finish_secret.request reward:0:*attachment
+S 2011 update_secret_buff.request buffinfo:0:*secret_buff
+S 2012 sc_statistical_secret.request total:0:integer,finish:1:integer,condition:2:integer,task_finish:3:integer,task_total:4:integer,index:5:integer,action_num:6:integer
+S 2013 sc_friend.request friend:0:*friend_info
+S 2014 sc_send_secret_buff.request buffid:0:integer,bufftype:1:integer,buffnum:2:integer,teamtype:3:integer,stagenum:4:integer,itype:5:integer
+S 2015 sc_send_secret_boss.request bossid:0:integer
+S 2016 sc_send_bags_full.request text:0:integer
+S 2017 sc_send_secret_useitem_info.request info:0:*secret_useitem_info
+S 2018 sc_bigtallup.request idx:0:integer,list:1:*common_award,source:2:integer
+S 2019 send_travel_info.request travel:0:*travel_info,num_tab:1:*elf_travel_num,free_refresh_num:2:integer,refresh_bento_num:3:integer,travel_times:4:integer,events:5:*events_tab,pice:6:*pice_tab,buy_num:7:integer,star:8:integer
+S 2020 sc_send_three_chose_one.request status:0:integer
+S 2022 sc_travelevent_id.request id:0:integer,pice:1:pice_tab
+S 2023 sc_travel_battle.request
+S 2024 sc_guildboss_status.request status:0:integer,index:1:integer
+S 2025 sc_tollgate_guildboss.request status:0:integer,index:1:integer,id:2:integer
+S 2026 sc_unlock_guildboss.request index:0:*integer
+S 2027 sc_guildboss_challengenum.request normal:0:integer,simulation:1:integer
+S 2030 sc_guildbiss_damage.request damage:0:integer
+S 2031 sc_randevent_data.request itype:0:integer,num:1:integer
+S 2032 send_mirror.request info:0:*mirror,sid:1:integer,num:2:integer
+S 2033 exp_back.request exp:0:integer,status:1:integer,name:2:string,level:3:integer,dress:4:integer,title:5:integer,sex:6:integer
+S 2034 sc_rewardback_info.request info:0:*rewardback
+S 2035 sc_wear_elf_equiment.request info:0:*wear_equipemt
+S 2036 sc_secret_boss_dead.request
+S 2037 secret_area_boss_dead.request bossid:0:integer
+S 2038 sc_secret_bare_pos.request pos:0:*position,triggeruid:1:string
+S 2039 sc_specail_twistedegg.request itype:0:integer,id:1:integer,num:2:integer,guarante:3:integer,next_time:4:integer,cur_guarante:5:integer,min_guarante:6:integer,refresh:7:integer
+S 2040 sc_send_monopoly.request primary:0:monopoly,senior:1:monopoly,treatment:2:*elf_treatment
+S 2041 sc_send_dice.request dice:0:integer,itype:1:integer
+S 2042 sc_send_teamboss_challenge_num.request num:0:integer
+S 2043 sc_nest_strength.request strength:0:integer
+S 2044 refresh_nest.request
+S 2045 in_nest.request nest_mission:0:nest_mission_info,nest_monster:1:*nest_monster_info,strength:2:integer,reward:3:*attachment
+S 2046 clean_nest_event.request sid:0:integer,grid:1:integer,itype:2:integer
+S 2047 pet.request pet_info:0:*petinfo
+S 2048 sc_pet_battle.request battle_info:0:*pet_battle_info
+S 2049 sc_pet_rocket_battle.request battle_info:0:*pet_battle_info
+S 2051 sc_space.request mission_id:0:integer,times:1:integer,refresh_time:2:integer,stage_reward:3:*space_stage_reward
+S 2053 sc_vn5star.request flag:0:integer
+S 2054 sc_vngift.request flag:0:integer
+S 2056 sc_binding_gift.request got:0:integer
+S 10000 sc_send_remaining_time.request remaining_time:0:integer
+S 10002 sc_send_operate_activity.request info:0:*activity_status
+S 10003 sc_send_operate_activity_redpoint.request info:0:*integer
+S 10004 sc_send_master_operate_activity.request info:0:*activity_status
+S 10005 sc_maze_box.request open_integral:0:integer,open_cost:1:integer,all_open_num:2:integer,open_num:3:integer
+S 10006 send_master_worldboss.request total:0:integer,reward:1:*integer
+S 10007 send_master_diamondsrob_openreward.request
+S 10008 advertising.request info:0:*advert
+S 10009 send_master_diamondsrob_shelvesgoods.request
+S 10010 send_master_diamondsrob_allintgeral.request all_intgeral:0:integer
+S 10011 sc_vnspf_exchange.request nums:0:*integer
+S 10012 s2c_vnspf_login_data.request days:0:*integer,now_day:1:integer,record:2:*integer
+S 10013 s2c_vnspf_recharge_data.request rechargenum:0:integer,awardgot:1:*integer
+S 10014 s2c_voucher_dayfree_data.request got:0:boolean
+S 10015 sc_voucher_daygift.request record:0:*integer
+S 11000 integral_match_m.request integral:0:integer,match_time:1:integer,old_integral:2:integer,equal_order:3:integer,max_equal_order:4:integer,time:5:integer,duan_award:6:*integer,day_challenge_num:7:integer,day_win_num:8:integer,everyday_awa:9:*integer,update_day:10:integer,win_num:11:integer,match_number:12:integer
+S 11001 match_pvp_my.request seed:0:integer,weather:1:integer,player:2:formation_t,monster:3:formation_t,myname:4:string,opposite_name:5:string,my_sex:6:integer,opposite_sex:7:integer,myexhibition:8:matchinginfo,opposite_exhibition:9:matchinginfo,proto_name:10:string,proto_id:11:integer
+S 11003 integral_match_end.request identifer:0:string
+S 11004 opposite_operation_m.request sid:0:integer,objs:1:*string,number:2:integer
+S 11005 other_play_end_m.request time:0:integer,time_stamp:1:integer
+S 11006 end_immediate_m.request identifer:0:string,seed:1:integer,weather:2:integer,player:3:formation_t,monster:4:formation_t,type:5:integer,myname:6:string,opposite_name:7:string,my_sex:8:integer,opposite_sex:9:integer,myexhibition:10:integral_match_data,opposite_exhibition:11:integral_match_data
+S 20001 guild_cross.request attack_num:0:integer,num_award:1:*integer,win_pai:2:integer,status:3:integer,win:4:integer,state:5:integer,attack_today:6:integer,join:7:integer
+S 20002 guild_cross_war_report_all.request all_page:0:integer,page:1:integer,list:2:*guild_cross_war_report_list(index)
+S 20003 guild_cross_war_report_add.request report:0:guild_cross_war_report,site_info:1:guild_cross_defend_info,buff:2:guild_cross_buff
+
+C 10990 local_fusion_supply.request action:0:integer
+C 10990 local_fusion_supply.response errno:0:integer,message:1:string
+C 10991 local_coupon_wallet.request kind:0:integer,issue:1:integer,day:2:integer
+C 10991 local_coupon_wallet.response errno:0:integer,kind:1:integer,day:2:integer,uid:3:string,status:4:integer,name:5:string,redeem:6:integer,coins:7:integer,diamonds:8:integer
+C 10992 local_stamina_exchange.request
+C 10992 local_stamina_exchange.response errno:0:integer
+C 10993 local_tablet_unlock_supply.request action:0:integer
+C 10993 local_tablet_unlock_supply.response errno:0:integer,message:1:string

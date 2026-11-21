@@ -1,0 +1,18 @@
+{
+  "1": {"goods": 21017, "goodstype": 1, "num": 5, "costnum": 150},
+  "2": {"goods": 21018, "goodstype": 1, "num": 5, "costnum": 150},
+  "3": {"goods": 21019, "goodstype": 1, "num": 5, "costnum": 150},
+  "4": {"goods": 21020, "goodstype": 1, "num": 5, "costnum": 150},
+  "5": {"goods": 21021, "goodstype": 1, "num": 5, "costnum": 150},
+  "6": {"goods": 21022, "goodstype": 1, "num": 5, "costnum": 150},
+  "7": {"goods": 21057, "goodstype": 1, "num": 1, "costnum": 10000},
+  "8": {"goods": 21058, "goodstype": 1, "num": 1, "costnum": 120000},
+  "9": {"goods": 21059, "goodstype": 1, "num": 1, "costnum": 150000},
+  "10": {"goods": 54013, "goodstype": 3, "num": 10, "costnum": 1000},
+  "11": {"goods": 54021, "goodstype": 3, "num": 10, "costnum": 2000},
+  "12": {"goods": 54022, "goodstype": 3, "num": 10, "costnum": 2000},
+  "13": {"goods": 64078, "goodstype": 3, "num": 10, "costnum": 3000},
+  "14": {"goods": 64079, "goodstype": 3, "num": 10, "costnum": 3000},
+  "15": {"goods": 64080, "goodstype": 3, "num": 10, "costnum": 3000},
+  "16": {"goods": 64092, "goodstype": 3, "num": 10, "costnum": 5000}
+}

@@ -1,0 +1,94 @@
+# 仓库级规则：保留源码、脚本、业务配置、SQL、规划文档及问题台账。
+# 原始 APK、解包产物和第三方资源仅在本地保留，不随源码发布。
+/app包/origin/*
+!/app包/origin/README.md
+/app包/new/*
+!/app包/new/README.md
+/app端代码/project/
+/源码/project_decoded/
+/app端代码/local-patch/apk-entries/assets/bin/
+/app端代码/local-patch/apk-entries/lib/
+/1794974400
+
+# Java / Android / 构建产物；apk-entries 中手工维护的 JSON、SQL、CSV 仍提交。
+target/
+build/
+out/
+.gradle/
+.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.apk
+*.aab
+*.apks
+*.idsig
+*.dex
+*.so
+local.properties
+.cxx/
+.externalNativeBuild/
+
+# Python / Node 缓存和依赖。
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+
+# IDE 与个人工具配置。
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.claude/settings.local.json
+.agents/
+.codex/
+
+# 密钥、令牌和本机配置；示例文件可提交，示例内只能使用占位值。
+.env
+.env.*
+!.env.example
+!.env.sample
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+credentials.json
+secrets.json
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# 本地角色存档、数据库及日志；迁移 SQL 不忽略。
+/服务端代码/data/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.mv.db
+*.trace.db
+*.hprof
+logs/
+*.log
+
+# 临时文件与操作系统缓存。
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini

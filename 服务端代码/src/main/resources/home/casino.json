@@ -1,0 +1,323 @@
+{
+  "game": {
+    "30001": {
+      "multiple2": [
+        127,
+        1
+      ],
+      "multiple1": [
+        118,
+        0.5
+      ],
+      "name": "2172",
+      "base": 200000,
+      "condition": 500000,
+      "rebate": 20,
+      "multiple5": [
+        127,
+        3
+      ],
+      "multiple6": [
+        127,
+        5
+      ],
+      "multiple4": [
+        127,
+        2
+      ],
+      "multiple3": [
+        118,
+        1
+      ]
+    },
+    "20001": {
+      "multiple2": [
+        127,
+        1
+      ],
+      "multiple1": [
+        118,
+        0.5
+      ],
+      "name": "2171",
+      "base": 20000,
+      "condition": 80000,
+      "rebate": 20,
+      "multiple5": [
+        127,
+        3
+      ],
+      "multiple6": [
+        127,
+        5
+      ],
+      "multiple4": [
+        127,
+        2
+      ],
+      "multiple3": [
+        118,
+        1
+      ]
+    },
+    "10001": {
+      "multiple2": [
+        127,
+        1
+      ],
+      "multiple1": [
+        118,
+        0.5
+      ],
+      "name": "2170",
+      "base": 500,
+      "condition": 2000,
+      "rebate": 20,
+      "multiple5": [
+        127,
+        3
+      ],
+      "multiple6": [
+        127,
+        5
+      ],
+      "multiple4": [
+        127,
+        2
+      ],
+      "multiple3": [
+        118,
+        1
+      ]
+    }
+  },
+  "gamestore": {
+    "14": {
+      "num": 30,
+      "name": 822034,
+      "discount": 7,
+      "limit": 1,
+      "goods": 10002,
+      "goodstype": 15,
+      "costnum": 630000,
+      "costtype": 127
+    },
+    "2": {
+      "num": 1,
+      "name": 822022,
+      "discount": 0,
+      "limit": 0,
+      "goods": 10002,
+      "goodstype": 15,
+      "costnum": 30000,
+      "costtype": 127
+    },
+    "12": {
+      "num": 10,
+      "name": 822032,
+      "discount": 9,
+      "limit": 3,
+      "goods": 10006,
+      "goodstype": 15,
+      "costnum": 900000,
+      "costtype": 127
+    },
+    "11": {
+      "num": 10,
+      "name": 822031,
+      "discount": 9,
+      "limit": 3,
+      "goods": 10005,
+      "goodstype": 15,
+      "costnum": 270000,
+      "costtype": 127
+    },
+    "10": {
+      "num": 10,
+      "name": 822030,
+      "discount": 9,
+      "limit": 3,
+      "goods": 10004,
+      "goodstype": 15,
+      "costnum": 270000,
+      "costtype": 127
+    },
+    "9": {
+      "num": 10,
+      "name": 822029,
+      "discount": 9,
+      "limit": 3,
+      "goods": 10003,
+      "goodstype": 15,
+      "costnum": 270000,
+      "costtype": 127
+    },
+    "8": {
+      "num": 10,
+      "name": 822028,
+      "discount": 9,
+      "limit": 3,
+      "goods": 10002,
+      "goodstype": 15,
+      "costnum": 270000,
+      "costtype": 127
+    },
+    "7": {
+      "num": 10,
+      "name": 822027,
+      "discount": 9,
+      "limit": 3,
+      "goods": 10001,
+      "goodstype": 15,
+      "costnum": 900000,
+      "costtype": 127
+    },
+    "1": {
+      "num": 1,
+      "name": 822021,
+      "discount": 0,
+      "limit": 0,
+      "goods": 10001,
+      "goodstype": 15,
+      "costnum": 100000,
+      "costtype": 127
+    },
+    "6": {
+      "num": 1,
+      "name": 822026,
+      "discount": 0,
+      "limit": 0,
+      "goods": 10006,
+      "goodstype": 15,
+      "costnum": 100000,
+      "costtype": 127
+    },
+    "5": {
+      "num": 1,
+      "name": 822025,
+      "discount": 0,
+      "limit": 0,
+      "goods": 10005,
+      "goodstype": 15,
+      "costnum": 30000,
+      "costtype": 127
+    },
+    "4": {
+      "num": 1,
+      "name": 822024,
+      "discount": 0,
+      "limit": 0,
+      "goods": 10004,
+      "goodstype": 15,
+      "costnum": 30000,
+      "costtype": 127
+    },
+    "18": {
+      "num": 30,
+      "name": 822038,
+      "discount": 7,
+      "limit": 1,
+      "goods": 10006,
+      "goodstype": 15,
+      "costnum": 2100000,
+      "costtype": 127
+    },
+    "3": {
+      "num": 1,
+      "name": 822023,
+      "discount": 0,
+      "limit": 0,
+      "goods": 10003,
+      "goodstype": 15,
+      "costnum": 30000,
+      "costtype": 127
+    },
+    "17": {
+      "num": 30,
+      "name": 822037,
+      "discount": 7,
+      "limit": 1,
+      "goods": 10005,
+      "goodstype": 15,
+      "costnum": 630000,
+      "costtype": 127
+    },
+    "16": {
+      "num": 30,
+      "name": 822036,
+      "discount": 7,
+      "limit": 1,
+      "goods": 10004,
+      "goodstype": 15,
+      "costnum": 630000,
+      "costtype": 127
+    },
+    "15": {
+      "num": 30,
+      "name": 822035,
+      "discount": 7,
+      "limit": 1,
+      "goods": 10003,
+      "goodstype": 15,
+      "costnum": 630000,
+      "costtype": 127
+    },
+    "13": {
+      "num": 30,
+      "name": 822033,
+      "discount": 7,
+      "limit": 1,
+      "goods": 10001,
+      "goodstype": 15,
+      "costnum": 2100000,
+      "costtype": 127
+    }
+  },
+  "targets": [
+    {
+      "id": 70001,
+      "target": 10,
+      "coins": 1
+    },
+    {
+      "id": 70002,
+      "target": 20,
+      "coins": 1
+    },
+    {
+      "id": 70003,
+      "target": 30,
+      "coins": 1
+    },
+    {
+      "id": 71001,
+      "target": 5,
+      "coins": 3
+    },
+    {
+      "id": 71002,
+      "target": 15,
+      "coins": 3
+    },
+    {
+      "id": 71003,
+      "target": 20,
+      "coins": 3
+    },
+    {
+      "id": 72001,
+      "target": 3,
+      "coins": 15
+    },
+    {
+      "id": 72002,
+      "target": 6,
+      "coins": 15
+    },
+    {
+      "id": 72003,
+      "target": 10,
+      "coins": 15
+    }
+  ]
+}

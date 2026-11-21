@@ -1,0 +1,4910 @@
+{
+  "version": "2026-11-19.balance-handoff.2",
+  "sourceApk": {
+    "path": "app包\\origin\\origin.apk",
+    "sha256": "F010A675DCB9CCACF899A2954E7E497BE7F04C3EA94214140FA3434C817A7C45",
+    "exportedTables": {
+      "item": {
+        "rows": 1203,
+        "exportSha256": "0bc64dfc35393d1c6ff03f7f1d4389679c66355f31977c4370acc996acef400d"
+      },
+      "jingling": {
+        "rows": 586,
+        "exportSha256": "f58f50a412822feb357bcd550cbd25646064ee378f81c4228a3a80e908b2cfba"
+      },
+      "title": {
+        "rows": 130,
+        "exportSha256": "f93d8fd512897c060a118d0367c925857819d9fd06c00c3380a8f76ac19460bd"
+      },
+      "avatar": {
+        "rows": 113,
+        "exportSha256": "12fa275a10fd2212531d53914c492449f5bbd22d9fe84e4a51868b80733cc89a"
+      },
+      "dress": {
+        "rows": 133,
+        "exportSha256": "cb4c49b6ca9c4072df3769eccddb1e64c567a25fbbd9f56312e558c067de91dc"
+      },
+      "activetask": {
+        "rows": 12,
+        "exportSha256": "500781c943f5cb952bad1b79a96fba1d2452299ca92b8d4a0b41eac1e93fe1ec"
+      },
+      "activetask_award": {
+        "rows": 5,
+        "exportSha256": "658297a7b237a4edbf99fce0a2230f786f8d9bdba8bdf15b96b37a5442791539"
+      },
+      "sign": {
+        "rows": 30,
+        "exportSha256": "1b430d67e37314de2d8a1ee9dc34e55e2664c66d00bcbbc5af95e74dbb9b3268"
+      },
+      "tower": {
+        "rows": 120,
+        "exportSha256": "f65142cf31aab598a6aaba49c5fe20916ad139f88f81807f4a4e6497a32b21ca"
+      },
+      "buff": {
+        "rows": 202,
+        "exportSha256": "ade83c02e91fdc92be60b2ab2452dda833d9ae432d78d407148436b28c0c0f4d"
+      },
+      "award": {
+        "rows": 25113,
+        "exportSha256": "e874ab26c88302034a96b80542021051032779a02179299b5b27551cc36f34a8"
+      },
+      "twelve": {
+        "rows": 12,
+        "exportSha256": "bfae114ce7230fd9d02bba9d8816b58422890041985a842ff316a1a333e27cd0"
+      },
+      "twelveratio": {
+        "rows": 23,
+        "exportSha256": "38979c20f6b72963bc72260343ef0c426c6db7f894b1923d5c528c204ee1b80c"
+      },
+      "twelverbox": {
+        "rows": 4,
+        "exportSha256": "8555bee8f47f693d6e89d567b1128e8425bb7fe954f80f392a60ea1cea3da9d7"
+      },
+      "tweshop": {
+        "rows": 15,
+        "exportSha256": "95de0d113b3352580c214d3020e0a5c838c370d6d8ab4c2fdb0c12508092a297"
+      },
+      "architecture": {
+        "rows": 120,
+        "exportSha256": "fac99f26827370fb266ee34046be886b10deff16c45cf26a77d04934f79d046e"
+      },
+      "homeland": {
+        "rows": 19,
+        "exportSha256": "04362a4454050ffeb1f1d0b1061fc4afa078010afb9f6b59f7c93c41012bb0a7"
+      },
+      "homeshop": {
+        "rows": 16,
+        "exportSha256": "64ec42f9e8683eabebd01987897be59593ac378b1b04b899486ab7540ba61398"
+      },
+      "tangerine": {
+        "rows": 8,
+        "exportSha256": "596546ce53b0efe660925a48c624bbca51f94075ed40d9d2ab59e4a80b022f05"
+      },
+      "copy": {
+        "rows": 17189,
+        "exportSha256": "19c5e5c72f128ab55d1d73105620529c9eb52d0bdfc7bcd2aa40d447a37db62d"
+      },
+      "guaiwuteam": {
+        "rows": 21340,
+        "exportSha256": "eaec46175d593561b8d1be2c147b97ddde14eac5a0f92589e9b9587a594dfb29"
+      },
+      "dungeons": {
+        "rows": 26,
+        "exportSha256": "b8d87b24436e05df417da625131e44f8b68f5c9d319bd123f0811b083d1777ea"
+      },
+      "dailyreward": {
+        "rows": 6,
+        "exportSha256": "56d48773de0aa09bf00fd44a0dde3bed8a4c409f1e3637a80b201afa3798e589"
+      },
+      "checkin": {
+        "rows": 5,
+        "exportSha256": "6893698c70cf849e6260701de507871488a9bb0bb47bea1307b6ade7c946819f"
+      },
+      "mijing": {
+        "rows": 160,
+        "exportSha256": "bacdddf44008b1c8a3f61b92afb8548f57566a7de94899ef2d7f63b66f260ea2"
+      },
+      "mijing_shop": {
+        "rows": 540,
+        "exportSha256": "b0403edf35d19ebc91935697ec4afff4b31d3f19ce29d69c31c2106360045ad5"
+      },
+      "mijingjuqing": {
+        "rows": 10,
+        "exportSha256": "b0663caa6097914e27b4c3d570b1f7f80d07418925017431c0b85728e309562b"
+      },
+      "fly": {
+        "rows": 634,
+        "exportSha256": "90b50b56ff3fd692f8d39f533ec918d7089e598500536d94c15aa4733acb9e29"
+      },
+      "randevent": {
+        "rows": 6,
+        "exportSha256": "efaa6f1628365bbfb5c69ffbbbbfa00b0f138c7321ac08d8d6a0001c091c1afa"
+      },
+      "rewardback": {
+        "rows": 7,
+        "exportSha256": "7a130ead90b95d81d60660d642aa0347f9f94ae35b17134ee1ab7fe848938411"
+      },
+      "daily": {
+        "rows": 45,
+        "exportSha256": "aebaafdf2615a93c8490929122f755ba7e0940c824d0a4f757f8ce69a13ea789"
+      },
+      "gamestore": {
+        "rows": 18,
+        "exportSha256": "64395ae29e65b281b5affa3b797aed8806016703c05b631ee628f792f0721842"
+      },
+      "guess": {
+        "rows": 4,
+        "exportSha256": "554896d6f0e56c35bebc396d6a47a1a26cae37364434570c671c136e613f09de"
+      },
+      "space": {
+        "rows": 4000,
+        "exportSha256": "c7bb9504e546aa25d9d34c86d20cf1b898bd3067dbf4a037bfa02ce5d06964da"
+      },
+      "rankreward": {
+        "rows": 11,
+        "exportSha256": "ee897de391fa0431728bd7653435d606dca5046ae05268c4131eb414d0502f06"
+      },
+      "gem": {
+        "rows": 108,
+        "exportSha256": "893bfdeceb80ab618a43d3d8d999ccf634fe500b7514e6c22b9ffcee63589d70"
+      },
+      "gemstore": {
+        "rows": 20,
+        "exportSha256": "207615b6066e522e97c3bfcf13485813416db1de6551c8c57f89590fda3b9e3b"
+      },
+      "dynamax": {
+        "rows": 108,
+        "exportSha256": "53c90fbb94023e58d3ee4e5b9fd155c83fc3163a2653df5a7aee1e2eac8c9cae"
+      },
+      "dynamaxlevel": {
+        "rows": 11,
+        "exportSha256": "f2963443d050f9789d839cb7e3bf61f207bdd1e26297049091bced0c8cc3903b"
+      },
+      "dynamaxskills": {
+        "rows": 6,
+        "exportSha256": "3b69f79b915a11131bcc9a78a84a212736735f672c683c4aec319a1e632bfa0b"
+      },
+      "dynlevelmax": {
+        "rows": 1,
+        "exportSha256": "002bdc9253fdd3962399e4a38739a1efd6955c59fb32a1221b9458b0f2936c1d"
+      },
+      "pcllevel": {
+        "rows": 125,
+        "exportSha256": "87ec8720a95a7f2c57c00bebc956adfc27b3f1d228ec96c62ca2a9d539a31b21"
+      },
+      "resonate": {
+        "rows": 100,
+        "exportSha256": "e143bf2a43a201fc2fd831754d4e631245abdbb3c604033b62a6a7a39e73f791"
+      },
+      "resonation": {
+        "rows": 10,
+        "exportSha256": "64b5b789648207b3d06522938d3da7a76af7635dbe6f16b7552364c01b6029d0"
+      },
+      "skill": {
+        "rows": 2892,
+        "exportSha256": "5d86311b3e553c6326228f57aeb39c52915545f6b4303cbb844a6d1c5bceed49"
+      },
+      "racialskills": {
+        "rows": 4,
+        "exportSha256": "21c47b30c44bece5192ab51cd9c74eaff284f022783c6135b4280b18f8294e34"
+      },
+      "skillsynthesis": {
+        "rows": 36,
+        "exportSha256": "c4632073a60ec76ecbc184c1ff4ecf11bab4bd344308c79a30de7b4aebc69c90"
+      },
+      "skillpass": {
+        "rows": 14,
+        "exportSha256": "493955a77b6a6ac3a0a2cf171d00a988d8ea9647659a5dc5c00a8edd135922b1"
+      },
+      "array": {
+        "rows": 105,
+        "exportSha256": "f602142817ac79e4fbb0200455cb709aaa6c10b7991aedab6d5eeaf83cc252b4"
+      },
+      "team": {
+        "rows": 27,
+        "exportSha256": "a776eaeeff26cfad83feb278791a483ef44d1cf9e5c2805bd3846a940af8527f"
+      },
+      "compose": {
+        "rows": 3,
+        "exportSha256": "ea029df29b7a2cbae635a4904faf9443409cf18cb2a7e22114a7f50e30230701"
+      },
+      "jinhua": {
+        "rows": 919,
+        "exportSha256": "09a87f4ac7d7c099adb7d3fa3693f815dcd89dc0d7ce02c69068dabc67da9547"
+      },
+      "cheer": {
+        "rows": 24,
+        "exportSha256": "4fabc6fa76c22d5205d303de12b40c1f1c8503e37e8fa0843fbe6b272d4f22d5"
+      },
+      "portable": {
+        "rows": 73,
+        "exportSha256": "ec8a779ba39f048755238287283cfcba6764ecfaa128c8afbe5ab768a46a43c0"
+      },
+      "zstone": {
+        "rows": 950,
+        "exportSha256": "8d556ba4491285a803489be01934eee9e5462567419ae16cee239c77b8ad2966"
+      },
+      "synth": {
+        "rows": 7,
+        "exportSha256": "f17d8571fc0ac70524877f011680f2787d3b6ebb0e753ca8fe8be3436b4423b7"
+      },
+      "portableshop": {
+        "rows": 1,
+        "exportSha256": "38360f626d5a0b4ebfd460a629122688022fe83596ae867fd329e44f3351b1ff"
+      },
+      "carryitemshop": {
+        "rows": 38,
+        "exportSha256": "1ee806bf7c0665e22deef459e4211e4a10861e4a8b17f4c6c8f73c265f23514f"
+      },
+      "pet": {
+        "rows": 6,
+        "exportSha256": "771c12ac6af33b716aa3d8942394e8622c3665fb589911c15d8a150991e1db13"
+      },
+      "pet_up": {
+        "rows": 120,
+        "exportSha256": "ae9e7ce472b65ef40d135d5335f68809d00cec3d8ed468c0db381f10e98e4cea"
+      },
+      "pet_washing": {
+        "rows": 10,
+        "exportSha256": "bedc8b872c14dbedba4c2d4a3c7074ea001e88a2ca9538cb28245deaf2196f13"
+      },
+      "pet_aureole_level": {
+        "rows": 3,
+        "exportSha256": "fda3c81383a4cd15978568fd7bb8fea1f389fe20d2c8b5b7d2d934058b6a1ee4"
+      },
+      "pet_aureole_up": {
+        "rows": 81,
+        "exportSha256": "c0a9e41e9a6714fb12a67887584952a16e455d033565523040139da30184447f"
+      },
+      "equip": {
+        "rows": 930,
+        "exportSha256": "b00b8a71c7c9bd03330b361ec0f4561c694b60402dd99553a6f9f2c42b0f7f7b"
+      },
+      "equipupgrade": {
+        "rows": 114,
+        "exportSha256": "a751acb78083b60bfd21561801c05d247afc934c439dd3c4c48ff0c531237ad9"
+      },
+      "qh": {
+        "rows": 16,
+        "exportSha256": "e465bfb1c9b81cb63ecd097773c550aa1dcb24586409d51f44f7bc9cc60c4b03"
+      },
+      "qhnum": {
+        "rows": 150,
+        "exportSha256": "a6bbd20015fe8a1e10fa42aa5bbe18cc67aba514a8c26dba64b22237923d9500"
+      },
+      "marking": {
+        "rows": 191,
+        "exportSha256": "d877ebb7b1ea0c4d4c6a7ba61948bc5bff149deb95b433c18818dd08e1238fce"
+      },
+      "suit": {
+        "rows": 106,
+        "exportSha256": "63c80cff8a5d1b8156188c0cc5353280a72afd1937452f66269416b7a277722d"
+      },
+      "relic": {
+        "rows": 6,
+        "exportSha256": "3214aa3310fd9c56ba2ddc7606e1e3c41e7e783394eec8487056baacd9171070"
+      },
+      "mining": {
+        "rows": 103,
+        "exportSha256": "fc1e2114f55b9417662de746c43e1c65918a29555077a9e30bb7b58c5dedb017"
+      },
+      "mine": {
+        "rows": 1140,
+        "exportSha256": "05757f0e6544c3d584ec4756926179d170eaf16adecf92956587cf01e163dc39"
+      },
+      "slate": {
+        "rows": 600,
+        "exportSha256": "2405e53c7a01b585e7cd27bd145e9684a2645467e16b3b6da235314860232fe2"
+      },
+      "slatebase": {
+        "rows": 8,
+        "exportSha256": "861908139f24be61a401c51086c961a3c910d3b4cab4dff5e750c14784961ce3"
+      },
+      "badge": {
+        "rows": 768,
+        "exportSha256": "f5b26f55a35e6da7e233c734b63640dabe81da636e1cf48c46a62c368aede692"
+      },
+      "badgesuit": {
+        "rows": 8,
+        "exportSha256": "ad5f5880297c9443e3a19e78aa0fc5a1afb784df2017d0c96459f55421360707"
+      },
+      "fossil": {
+        "rows": 510,
+        "exportSha256": "14e01484e14470d67557bb16b5808a358c94199b271c66435c584c647a645f52"
+      },
+      "fossilsuit": {
+        "rows": 60,
+        "exportSha256": "d8dbf8b11f41621027f9eaeb3ab1501174bc2dffaca1ddfac00a81949a201c4a"
+      },
+      "hunting": {
+        "rows": 18,
+        "exportSha256": "026ef844bfb4a4f1ea3e6b0193e5e2766f8fb976376d2ad61603100b14c1bd7e"
+      },
+      "dress_shop": {
+        "rows": 44,
+        "exportSha256": "fdfb2da847ebf7a80f36cac9bed5287ef67abb8ca7ed38547bbd9844ff5ea56d"
+      },
+      "dresschip": {
+        "rows": 132,
+        "exportSha256": "32f967a9ad9310cd449338e37d2843eabd83480b0d75e32865b383395ed4488d"
+      },
+      "boxrew": {
+        "rows": 162,
+        "exportSha256": "d1afb3af93c3f01b908510ca974bd68d1855a096f4a0ebfa115576b881be099d"
+      },
+      "shengdanduihuan": {
+        "rows": 10,
+        "exportSha256": "9ad1a2c30c9f219946796948b235e24427114dfb0a468f1024293d4c436ad5e3"
+      },
+      "chongzhilist": {
+        "rows": 2,
+        "exportSha256": "4fea05569ba594d9df860a322c613b76780e18297e50a2c9ecf8dac4b4db0e2c"
+      },
+      "chongzhi": {
+        "rows": 80,
+        "exportSha256": "d79acd4e53ffac86a054f28bd9c89987764b70c9698c5e88c05cff54bed4be68"
+      },
+      "leichong": {
+        "rows": 13,
+        "exportSha256": "21114d3511e939eee55ba27090bb7fbe53eecaa9d78035bdba7a8b9585f445e4"
+      },
+      "danbi": {
+        "rows": 11,
+        "exportSha256": "748f1c918ff0da092a7f2099a9bbea0b48b11bd3b86ebe233d6e4aef571531f4"
+      },
+      "fanpai": {
+        "rows": 118,
+        "exportSha256": "125c84c070ef4180819e285df6ea38ea946e501e84eaccab7317f702f6698340"
+      },
+      "graderanking": {
+        "rows": 10,
+        "exportSha256": "cf8d63c493f96ad2e8419c70c6257be9c4bb36cc440c3868c96825990111a869"
+      },
+      "passcard": {
+        "rows": 22,
+        "exportSha256": "9066567d1b6b711b0ad18b42bb45795865a7bc7143194742f8ed14d6f0ac96ee"
+      },
+      "privilege": {
+        "rows": 13,
+        "exportSha256": "fc1e73b9edd9ab24bca81b563992a1041d05b9361f01658f60df38d4fb11b18a"
+      },
+      "denglutanchuang": {
+        "rows": 7,
+        "exportSha256": "0231f85ab2ddbc64a74f2b4279e3184f8cd9df6f9bccddfe924c48a6df2a50ec"
+      },
+      "festivalfl": {
+        "rows": 7,
+        "exportSha256": "20bd5d017ee8f929e77c61e101df9136eef6fff2544de168e740c4e460968fab"
+      },
+      "zuanshifudai": {
+        "rows": 1,
+        "exportSha256": "73ca9ab5158737fb7161bba1d0c894ef1a3195e6eddf3159a63ff0ccb00d9d48"
+      },
+      "xinchunjijin": {
+        "rows": 1,
+        "exportSha256": "017004bf3b4772c37933a640be7020d7550d85f7230964bc0f16764dfe0c3109"
+      },
+      "changefl_": {
+        "rows": 7,
+        "exportSha256": "d4c689366d6ae469189ab1218fb9344f1c0595e7f2aa416d1ef9d96a33fb15fe"
+      },
+      "wealtask_": {
+        "rows": 7,
+        "exportSha256": "1358ab790c2152310768ccc702f803c3deca253fa8f025570ab3b83b8b9ea103"
+      },
+      "card": {
+        "rows": 4,
+        "exportSha256": "c41fd9a9637b8e922d47514a563b7de41d21e8b5c5a04cb4485ada6ab5bf1f39"
+      },
+      "zajindan": {
+        "rows": 1,
+        "exportSha256": "d11ef1e55d4b698d997f6d2c40dfaac2c94dd9f20f30b89189ba15b51beb62c2"
+      },
+      "dnfbase": {
+        "rows": 9,
+        "exportSha256": "1aec41c384a058b50ab5000af67de9d0019897f7eaf2d87b8048b93981559cf9"
+      },
+      "dnfpoint": {
+        "rows": 1000,
+        "exportSha256": "f7396e604af271e9de29fc471b4250e3f3691c45151ab2e5d072a48c0eb46c4e"
+      },
+      "dnfrew": {
+        "rows": 100,
+        "exportSha256": "780f2c4f7157ab78f622703d143f0f94c9c1527fec093940a33a3c21943a33b8"
+      },
+      "rockets": {
+        "rows": 13,
+        "exportSha256": "17b20b3d811ae9dd63b21f4c8f2211a5becb44c525122f28a54f7bee8e2347ff"
+      },
+      "den": {
+        "rows": 18,
+        "exportSha256": "e49f0a48c3e9d0d3f715481fac684f055dd310bac4a15c2fdf6431b3d44a7d61"
+      },
+      "denevent": {
+        "rows": 7,
+        "exportSha256": "3271812067515f8df11eccce41b01b96691395448daf3d1ba52f116c2e29050d"
+      },
+      "jyrun": {
+        "rows": 5,
+        "exportSha256": "1b8f59bbe1dee7fe81c0652405e672c0c247ad9eab57a456ca85e53bdc3cfc63"
+      },
+      "pkrule": {
+        "rows": 1,
+        "exportSha256": "7401bbd9602e4903b949fe512afb277a70ba43344770666d296e0b37e81faa2e"
+      },
+      "guildrun": {
+        "rows": 11,
+        "exportSha256": "920096ff22ec06536c2e596cfc0132da10a4df371757acab007ea751c1dac741"
+      },
+      "jinglinglx": {
+        "rows": 1,
+        "exportSha256": "8c10271db8b097962b2689ac1c4a980fd72427697ccfc36dbda8591b224d7972"
+      },
+      "game": {
+        "rows": 3,
+        "exportSha256": "6168be11ef2896b8a387814ee2bebcf1cc30d64af05e63161d09367ddc95e49d"
+      },
+      "race": {
+        "rows": 92,
+        "exportSha256": "165be6ea885840f9627bcf9fe0416bccd7e668bcfad8891adc9cb9aa002a89df"
+      },
+      "questions_reward": {
+        "rows": 15,
+        "exportSha256": "ef5ddda5f1bfff1a8b2e480d69afee6325a9fb5005ee8d58b34932dc44821312"
+      },
+      "breeroom": {
+        "rows": 20,
+        "exportSha256": "aa58870563adc19da94e7b07ec68b1d57ce70f601e8545507e9d12a68ce686e6"
+      },
+      "interaction": {
+        "rows": 6,
+        "exportSha256": "4bd494514cbc5deb88b4957eb852111fd720ea1e6d0db69c91e0b3e7b6db11a9"
+      },
+      "price": {
+        "rows": 33,
+        "exportSha256": "baa1dee1db50e6955772526aa3f068016ed2f892d892596a1ca45c48ddc0066c"
+      },
+      "competition": {
+        "rows": 5,
+        "exportSha256": "9ee6a41c08e83e966c10bbce1396b355825a09846099e6cc7a056d5d510b6002"
+      },
+      "limitedshop": {
+        "rows": 6,
+        "exportSha256": "48176005612368181d4c049826cafec570dd2c7d9604755dcd43c38b62ee8ca6"
+      },
+      "map": {
+        "rows": 51,
+        "exportSha256": "03f6ce91f5a32087375bb9322c00301d92f088b173be36584dd1955d121f92e9"
+      },
+      "mission": {
+        "rows": 2199,
+        "exportSha256": "4c5954631ce2eed5bd05dceaf6579816f143fc1d19a3537315fc18e8fb1ddeb5"
+      },
+      "operate": {
+        "rows": 81,
+        "exportSha256": "25bcac5f68341494d591f64e30695e97ad86f70a319220dca54c8169beab1df8"
+      },
+      "shenshoujl": {
+        "rows": 1,
+        "exportSha256": "31838361f0aba1c07dc759f5cba48af2c28eefd55785c8ae644c9f2a35f6144f"
+      },
+      "chaojifanli": {
+        "rows": 1,
+        "exportSha256": "490d00fd79b12e994f5797cd23530fe360abe04bba62d9c502df9c175a8f58c8"
+      },
+      "xianshitouzi": {
+        "rows": 8,
+        "exportSha256": "9d951f6b1f7f0815f56100dd6ce72505a1095184a4c56083e89afc36a318c152"
+      },
+      "xuyuanchi": {
+        "rows": 10,
+        "exportSha256": "06afa793fe6900f9dc00dce9d7ee6533c405cfb054e3451daee3f530657b427b"
+      },
+      "turntable": {
+        "rows": 20,
+        "exportSha256": "ca9e4c5045a1160ae0a43c03c76b7b73ef7b1a76cdd94bced8999bb140624d50"
+      },
+      "zuanshiqianggou": {
+        "rows": 9,
+        "exportSha256": "177a9106721fc103402a1fc99ede6116572cf25c23667d1f6bba566948ef9be5"
+      },
+      "kuafuchongzhi": {
+        "rows": 1,
+        "exportSha256": "3c2829592faeefafba0be3dc7a3325ad73e3f2d9bfbf77e7afba0ad98e389df3"
+      },
+      "zhaocaimao": {
+        "rows": 12,
+        "exportSha256": "da459dd287447c2c68cf82cc2f45193f6a2b076cff37aa0a8be2673178017240"
+      },
+      "addition": {
+        "rows": 66,
+        "exportSha256": "c4c810d04f0e06720aeb6fbdcae2fbe6eb8d87002aa37750acc1ccdcf0ebc7fc"
+      },
+      "nlz": {
+        "rows": 43,
+        "exportSha256": "fdae88288fc807efc12a508a566870c074f3b89d87b32375003823d6539d9ba8"
+      },
+      "nlzmax": {
+        "rows": 7,
+        "exportSha256": "3f1e6324f40d79f78ac6749130f8acaa07d806c0ba844873e32b5f451f52edf0"
+      },
+      "break": {
+        "rows": 132,
+        "exportSha256": "4f5d5506bd8925cab589305b1f65ad0fe485525a5a5af2802099cc77a3ce275f"
+      }
+    }
+  },
+  "activeBalanceFiles": [
+    "operating-exchange-recharge.json",
+    "local-gameplay-balance.json"
+  ],
+  "candidateBalanceFile": "local-activity-balance.json",
+  "modeMeaning": {
+    "fixedDecision": "明确标记及其落地数值",
+    "localBaseline": "本地演算方案，已验证原表时以原表覆盖",
+    "source": "有原表的真实数值，入口映射按备注核对",
+    "priorPlanning": "引用已有专用规划",
+    "dependency": "等证据或设计联调，说明候选口径",
+    "disabled": "保持隐藏，不设置活跃数值",
+    "design": "无新数值，转设计或查证"
+  },
+  "groups": {
+    "cosmetics": {
+      "protocols": [
+        2001,
+        2002,
+        3450,
+        3451,
+        3452,
+        231,
+        232
+      ],
+      "mode": "fixedDecision",
+      "numbers": {
+        "titleCount": 130,
+        "titleOwnAttributeRawTotals": {
+          "5": 4350,
+          "6": 4900,
+          "7": 4600,
+          "8": 5650,
+          "9": 3550,
+          "10": 10,
+          "11": 100,
+          "12": 120,
+          "13": 15,
+          "14": 750,
+          "20": 90,
+          "23": 310,
+          "24": 385,
+          "25": 210,
+          "26": 645,
+          "27": 510,
+          "28": 645,
+          "29": 510,
+          "42": 30
+        },
+        "dressCount": 133,
+        "avatarCount": 113,
+        "unlockCostDiamonds": 0,
+        "titleEquipChangesStats": false,
+        "dressEquipChangesStats": false,
+        "typeGenderFilterOnWear": true
+      },
+      "description": "称号拥有属性按 base 配置有效 ID 一次合计。佩戴称号只影响展示，equip 数据保留作取证。头像、时装默认拥有。每件已拥有时装的原表 property 累加一次，性别条件用于穿戴外观。购买、合成与穿脱均不重复累计属性。"
+    },
+    "friendship": {
+      "protocols": [
+        1901,
+        2505
+      ],
+      "mode": "fixedDecision",
+      "numbers": {
+        "openingGrant": 1000000000,
+        "costPerDraw": 50,
+        "initialBalanceDraws": 20000000,
+        "rewardCycle": [
+          {
+            "kind": "item",
+            "id": 20001,
+            "quantity": 1
+          },
+          {
+            "kind": "item",
+            "id": 20002,
+            "quantity": 1
+          },
+          {
+            "kind": "item",
+            "id": 20003,
+            "quantity": 1
+          }
+        ],
+        "initialKey": "friendship-opening-v1",
+        "repeatsOnNewCycle": false
+      },
+      "description": "在创建或迁移角色的事务中加发一次，不覆写既有余额。沿用现有友情扭蛋每次50、原本地轮换与领取回执；无伙伴或任务，好友信息按现有空数据端点。"
+    },
+    "calendar-backfill": {
+      "protocols": [
+        130,
+        131,
+        132,
+        133
+      ],
+      "mode": "fixedDecision",
+      "numbers": {
+        "timezone": "Asia/Shanghai",
+        "dayBoundary": "00:00:00",
+        "catchupCurrencyCost": 0,
+        "catchupMaxPerEligibleDate": 1,
+        "catchupGlobalCountLimit": null,
+        "eligibleDate": "activeAttendanceCycleMissedPreviousDate",
+        "activeTaskThresholds": [
+          20,
+          40,
+          60,
+          80,
+          100
+        ],
+        "rewardTable": "activetask_award"
+      },
+      "description": "补本周期已过去的漏签日，每个日期只能补一次，首次补签计入累签。活跃按自然日，任务次数和奖励取 activetask/activetask_award。"
+    },
+    "reward-overflow": {
+      "protocols": [
+        282,
+        283,
+        284,
+        285,
+        286
+      ],
+      "mode": "fixedDecision",
+      "numbers": {
+        "overflowKeyParts": [
+          "roleId",
+          "rewardSettlementId"
+        ],
+        "maxItemQuantityPerClaim": "currentAvailableCapacity",
+        "autoExpiryDays": null,
+        "eligibleLoot": [
+          "earnedReward",
+          "capturedElf"
+        ],
+        "retakeSameReceipt": true
+      },
+      "description": "其他同类发放共用。能入账的先入账，余量写到同一业务收据的系统信，领取后原信数量减少直到清空。背包不足的购买交易依货架资格处理。"
+    },
+    "daily-dungeon": {
+      "protocols": [
+        168,
+        169
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "refresh": "00:00:00",
+        "baseManual": 3,
+        "baseSweep": 3,
+        "sharedCounter": false,
+        "sourceOverridesVerified": true
+      },
+      "description": "原关卡额度如可证明适用，则分别沿用；不共享两类次数。扫荡以已通关为前置。"
+    },
+    "debug": {
+      "protocols": [
+        2101,
+        3000
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "发布包关闭调试入口。"
+    },
+    "online-social": {
+      "protocols": [
+        1003,
+        1301,
+        2216,
+        2501,
+        2502,
+        2503,
+        2504,
+        2506,
+        2507,
+        2508,
+        2509,
+        2510,
+        2511,
+        2512,
+        2526,
+        2527
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "不设本机留言、伙伴或任务奖励。"
+    },
+    "cross-guild": {
+      "protocols": [
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "保持隐藏。"
+    },
+    "redeem-code": {
+      "protocols": [
+        10
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "不启用。"
+    },
+    "external-binding": {
+      "protocols": [
+        12,
+        13,
+        10406,
+        10407,
+        10412
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "不关联，也不设替代。"
+    },
+    "advertising": {
+      "protocols": [
+        10250,
+        10251,
+        10043
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "保持隐藏。"
+    },
+    "groupon": {
+      "protocols": [
+        413,
+        414
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "保持隐藏。"
+    },
+    "live-pk": {
+      "protocols": [
+        3026,
+        3027,
+        3028,
+        3032,
+        3034,
+        10100,
+        10101,
+        10102,
+        10103,
+        10104,
+        10105,
+        10106,
+        10108,
+        10109
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "原流程保持隐藏。"
+    },
+    "team": {
+      "protocols": [
+        3670,
+        3671,
+        3672,
+        3673,
+        3674,
+        3675,
+        3676,
+        3677,
+        3678,
+        3679,
+        3680,
+        3681,
+        3683,
+        3684,
+        3686,
+        5092
+      ],
+      "mode": "disabled",
+      "numbers": {},
+      "description": "原在线组队入口保持隐藏。"
+    },
+    "personal-guild": {
+      "protocols": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        1401,
+        1402,
+        1403,
+        5070,
+        5071,
+        5072
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "createGold": 100000,
+        "ownerSlots": 1,
+        "dailyDonations": 3,
+        "donation": {
+          "costGold": 10000,
+          "guildXp": 100,
+          "spendableContribution": 20
+        },
+        "levelXpTotals": [
+          0,
+          1000,
+          3000,
+          7000,
+          15000
+        ],
+        "bossMinLevel": 2,
+        "bossDailyFree": 1,
+        "bossClearRewards": [
+          {
+            "kind": "item",
+            "id": 21063,
+            "quantity": 1
+          },
+          {
+            "kind": "item",
+            "id": 20027,
+            "quantity": 1
+          }
+        ]
+      },
+      "description": "本机个人公会，C65 捐献最多每周 21 次，产 420 贡献；等级和花费余额分开。NPC 阵容键 guild_boss。"
+    },
+    "arena-training": {
+      "protocols": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "npcBudgets": [
+          0.8,
+          1,
+          1.15
+        ],
+        "refreshedAt": "00:00:00",
+        "weekDays": 7,
+        "modes": {
+          "arena_training": {
+            "free": 5,
+            "buyMax": 2,
+            "buyDiamonds": [
+              150,
+              300
+            ],
+            "winPoints": 12,
+            "lossPoints": 3
+          },
+          "solo_training": {
+            "free": 3,
+            "buyMax": 1,
+            "buyDiamonds": [
+              150
+            ],
+            "winPoints": 10,
+            "lossPoints": 2
+          },
+          "elf_king_training": {
+            "free": 3,
+            "buyMax": 1,
+            "buyDiamonds": [
+              200
+            ],
+            "winPoints": 15,
+            "lossPoints": 3
+          }
+        },
+        "sameModeWeeklyThresholds": [
+          40,
+          100,
+          180
+        ],
+        "weeklyRewards": [
+          [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 1
+            }
+          ],
+          [
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 2
+            }
+          ],
+          [
+            {
+              "kind": "item",
+              "id": 21058,
+              "quantity": 1
+            }
+          ]
+        ],
+        "claimHighestOnly": true
+      },
+      "description": "积分分别记录各模式的计分与钱包。胜负由已提交战斗生成，重复请求不得产分，NPC 练习榜和真人领榜奖资格分离。"
+    },
+    "offline-season": {
+      "protocols": [
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        249,
+        250
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "days": 7,
+        "npcEntrants": 7,
+        "registrationDay": 1,
+        "groupDays": [
+          2,
+          3,
+          4
+        ],
+        "semifinalDay": 5,
+        "finalDay": 6,
+        "settleDay": 7,
+        "maxGoldBetPerDay": 5000,
+        "maxGoldBetPerSeason": 25000,
+        "maxGoldBetPerMatch": 5000,
+        "maxBaseReturnMultiple": 1.5,
+        "replayRetainDays": 14,
+        "qualifyingCompletedMatches": 3,
+        "rankRewards": {
+          "1": [
+            {
+              "kind": "item",
+              "id": 21059,
+              "quantity": 1
+            }
+          ],
+          "2-4": [
+            {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            }
+          ],
+          "5-8": [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          ]
+        }
+      },
+      "description": "单机赛季。竞猜限金币且每场一次，可参与已冻结对阵。只有真人有效参赛发奖，NPC 参赛成绩正常记录。未完成场次退款。"
+    },
+    "mine": {
+      "protocols": [
+        122,
+        123,
+        124,
+        125,
+        126,
+        129
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "intervalSeconds": 1800,
+        "maxAccrualHours": 8,
+        "dailyMineGoldCap": 40000,
+        "totalMinesPerRole": 1,
+        "goldPerInterval": [
+          1000,
+          1500,
+          2500
+        ],
+        "raidDailyFree": 2,
+        "raidNpcGoldBonus": 1500,
+        "raidMaxPerTargetDay": 1
+      },
+      "description": "收益=已完成时间段×档位。最高档每天本地占矿最高 40000 金币加两场掠夺 3000；NPC 奖励基于真实完成的尝试，不修改别人资产。阵容键 mine_raid。"
+    },
+    "dojo-raid": {
+      "protocols": [
+        268,
+        269,
+        180,
+        181,
+        182
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "freeAttemptsPerDay": 2,
+        "boughtAttemptsMaxPerDay": 1,
+        "buyDiamonds": 200,
+        "sameTargetCooldownHours": 24,
+        "winnerEarnsDojoPoints": 12,
+        "pointsWeeklyCap": 252
+      },
+      "description": "驻防、抢夺使用新记录和 dojo_raid。已有 48 馆 C182 奖励与各馆日额度不变，扫荡不产抢夺积分。"
+    },
+    "bandits": {
+      "protocols": [
+        66,
+        68,
+        69,
+        127,
+        128
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "dailyBanditAttempts": 3,
+        "dailyBossAttempts": 1,
+        "banditWin": [
+          {
+            "kind": "item",
+            "id": 21063,
+            "quantity": 1
+          }
+        ],
+        "bossWin": [
+          {
+            "kind": "item",
+            "id": 21063,
+            "quantity": 2
+          },
+          {
+            "kind": "item",
+            "id": 20027,
+            "quantity": 1
+          }
+        ]
+      },
+      "description": "批准独立单人挑战。分 bandit_challenge 和 bandit_boss 的出场、次数和击杀结算。"
+    },
+    "world-boss": {
+      "protocols": [
+        3651,
+        3652,
+        3653,
+        10033,
+        10034,
+        10035,
+        10036
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "freePerModeDay": 1,
+        "buyMaxPerModeDay": 1,
+        "buyDiamonds": 200,
+        "regularDamageRatios": [
+          0.02,
+          0.1,
+          0.3
+        ],
+        "limitedDamageRatios": [
+          0.02,
+          0.15,
+          0.4
+        ],
+        "highestTierRewards": [
+          [
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 1
+            }
+          ],
+          [
+            {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 2
+            }
+          ],
+          [
+            {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          ]
+        ],
+        "weeklyFirstClear": [
+          {
+            "kind": "item",
+            "id": 34137,
+            "quantity": 1
+          }
+        ],
+        "weeklyPlaceRanks": {
+          "regular": [
+            [
+              1,
+              1,
+              [
+                1,
+                21068,
+                2,
+                1,
+                21063,
+                5
+              ]
+            ],
+            [
+              2,
+              2,
+              [
+                1,
+                21068,
+                1,
+                1,
+                21063,
+                4
+              ]
+            ],
+            [
+              3,
+              3,
+              [
+                1,
+                21068,
+                1,
+                1,
+                21063,
+                2
+              ]
+            ],
+            [
+              4,
+              10,
+              [
+                1,
+                21063,
+                3
+              ]
+            ],
+            [
+              11,
+              50,
+              [
+                1,
+                21063,
+                2
+              ]
+            ],
+            [
+              51,
+              100,
+              [
+                1,
+                21063,
+                1
+              ]
+            ]
+          ],
+          "master": [
+            [
+              1,
+              1,
+              [
+                1,
+                21053,
+                2,
+                1,
+                21068,
+                2
+              ]
+            ],
+            [
+              2,
+              2,
+              [
+                1,
+                21053,
+                1,
+                1,
+                21068,
+                2
+              ]
+            ],
+            [
+              3,
+              3,
+              [
+                1,
+                21053,
+                1,
+                1,
+                21068,
+                1
+              ]
+            ],
+            [
+              4,
+              10,
+              [
+                1,
+                21068,
+                2
+              ]
+            ],
+            [
+              11,
+              50,
+              [
+                1,
+                21068,
+                1
+              ]
+            ],
+            [
+              51,
+              200,
+              [
+                1,
+                21063,
+                2
+              ]
+            ]
+          ]
+        },
+        "masterParticipation": {
+          "counts": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "elfChip64147": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "item20003": [
+            5,
+            10,
+            15,
+            20
+          ]
+        }
+      },
+      "description": "单机 world_boss/master_world_boss 独立模式。有效伤害率=当轮有效扣血总量/该首领本实例配置最大生命，封顶1。按场次只发最高伤害档，首杀每模式每周一次。原首领生命来自阵容配置。"
+    },
+    "token-shops": {
+      "protocols": [
+        2304,
+        2305,
+        2306
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "maxPerOfferWeek": 2,
+        "nonSharedWallets": true,
+        "minRoleLevel": 20,
+        "catalog": {
+          "arena": [
+            {
+              "price": 60,
+              "grant": {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 1
+              }
+            },
+            {
+              "price": 120,
+              "grant": {
+                "kind": "item",
+                "id": 20027,
+                "quantity": 2
+              }
+            }
+          ],
+          "guild": [
+            {
+              "price": 80,
+              "grant": {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 1
+              }
+            },
+            {
+              "price": 160,
+              "grant": {
+                "kind": "item",
+                "id": 21068,
+                "quantity": 1
+              }
+            }
+          ],
+          "dojo": [
+            {
+              "price": 48,
+              "grant": {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 1
+              }
+            },
+            {
+              "price": 96,
+              "grant": {
+                "kind": "item",
+                "id": 20027,
+                "quantity": 2
+              }
+            }
+          ]
+        }
+      },
+      "description": "仅在对应模式产币真实可入账时开货架。竞技来源为 C100–113 的有效胜负，三模式同用竞技币而各自计分。三种货币互不可转。"
+    },
+    "investment": {
+      "protocols": [
+        261,
+        262,
+        263
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "days": 7,
+        "latestBuyDay": 5,
+        "costDiamonds": 1000,
+        "maxBuyPerRound": 1,
+        "awards": [
+          {
+            "index": 0,
+            "firstClaimDay": 6,
+            "award": [
+              {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "firstClaimDay": 6,
+            "award": [
+              {
+                "kind": "item",
+                "id": 20027,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "firstClaimDay": 7,
+            "award": [
+              {
+                "kind": "item",
+                "id": 21068,
+                "quantity": 1
+              }
+            ]
+          }
+        ]
+      },
+      "description": "原 xianshitouzi 的实际付款、档期和发货映射不完整。使用本地 1000 钻档、角色每轮一次，最多三份产出。不返回可再次投入的钻石。"
+    },
+    "wish-pool": {
+      "protocols": [
+        265,
+        266,
+        267
+      ],
+      "mode": "source",
+      "source": [
+        "xuyuanchi_proto IDs 1–10",
+        "word1_proto 1125",
+        "feswishing_view",
+        "zh_feswishing"
+      ],
+      "numbers": {
+        "days": 7,
+        "pointsPerChoice": 20,
+        "maxLocksPerDay": 1,
+        "maxPerOffer": 1,
+        "doubleForPositiveConfirmedRechargeOnWishDay": 2,
+        "claimEarliestDaysAfter": 1,
+        "offers": [
+          {
+            "idx": 1,
+            "reward": [
+              1,
+              20003,
+              5
+            ]
+          },
+          {
+            "idx": 2,
+            "reward": [
+              1,
+              20003,
+              6
+            ]
+          },
+          {
+            "idx": 3,
+            "reward": [
+              1,
+              20003,
+              7
+            ]
+          },
+          {
+            "idx": 4,
+            "reward": [
+              1,
+              20003,
+              8
+            ]
+          },
+          {
+            "idx": 5,
+            "reward": [
+              1,
+              20003,
+              9
+            ]
+          },
+          {
+            "idx": 6,
+            "reward": [
+              1,
+              20003,
+              10
+            ]
+          },
+          {
+            "idx": 7,
+            "reward": [
+              104,
+              0,
+              300
+            ]
+          },
+          {
+            "idx": 8,
+            "reward": [
+              104,
+              0,
+              400
+            ]
+          },
+          {
+            "idx": 9,
+            "reward": [
+              104,
+              0,
+              500
+            ]
+          },
+          {
+            "idx": 10,
+            "reward": [
+              104,
+              0,
+              600
+            ]
+          }
+        ]
+      },
+      "description": "每20当日活跃获得一次选择机会。同一自然日只锁定一次，每档最多一次。次日及以后可领取，按许愿日实际确认模拟充值决定翻倍。锁定后不可更改。原界面和原表已核实，生效后取代此前星块或钻石随机许愿候选。"
+    },
+    "local-turntable": {
+      "protocols": [
+        10021,
+        10022,
+        10023,
+        10024,
+        10025
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "days": 7,
+        "dailyFree": 1,
+        "maxPaidPerDay": 2,
+        "diamondsPerPaidSpin": 300,
+        "roundScorePerSpin": 10,
+        "pool": [
+          {
+            "weight": 4000,
+            "award": {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 1
+            }
+          },
+          {
+            "weight": 3000,
+            "award": {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 1
+            }
+          },
+          {
+            "weight": 1800,
+            "award": {
+              "kind": "item",
+              "id": 21082,
+              "quantity": 1
+            }
+          },
+          {
+            "weight": 1000,
+            "award": {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            }
+          },
+          {
+            "weight": 200,
+            "award": {
+              "kind": "item",
+              "id": 21069,
+              "quantity": 1
+            }
+          }
+        ],
+        "offers": [
+          {
+            "points": 50,
+            "limit": 2,
+            "award": {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          },
+          {
+            "points": 100,
+            "limit": 1,
+            "award": {
+              "kind": "item",
+              "id": 21068,
+              "quantity": 1
+            }
+          },
+          {
+            "points": 180,
+            "limit": 1,
+            "award": {
+              "kind": "item",
+              "id": 21069,
+              "quantity": 1
+            }
+          }
+        ]
+      },
+      "rankRewards": [
+        [
+          1,
+          21069,
+          1
+        ],
+        [
+          1,
+          21068,
+          1
+        ],
+        [
+          1,
+          21082,
+          1
+        ]
+      ],
+      "description": "北京时间周一零点换轮，每日首抽免费、再付费最多两次。每周最多21次，最高分210。按本机参与角色的累计积分排名，同分先达者优先。前3名各发一封周榜邮件，兑换只扣可用分。"
+    },
+    "local-diamond-sale": {
+      "protocols": [
+        10050,
+        10051,
+        10052,
+        10053,
+        10054
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "days": 7,
+        "scorePerDiamonds": [
+          1,
+          1
+        ],
+        "perOfferCount": [
+          2,
+          1,
+          1
+        ],
+        "maxRoundSpend": 5000,
+        "offers": [
+          {
+            "award": [
+              {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 2
+              }
+            ],
+            "costHistoricalPoints": 500
+          },
+          {
+            "award": [
+              {
+                "kind": "item",
+                "id": 20027,
+                "quantity": 3
+              },
+              {
+                "kind": "item",
+                "id": 21063,
+                "quantity": 1
+              }
+            ],
+            "costHistoricalPoints": 1000
+          },
+          {
+            "award": [
+              {
+                "kind": "item",
+                "id": 21059,
+                "quantity": 1
+              },
+              {
+                "kind": "item",
+                "id": 21069,
+                "quantity": 1
+              }
+            ],
+            "costHistoricalPoints": 3000
+          }
+        ],
+        "personalLotLimit": 2000,
+        "offlineOpenThreshold": 2000,
+        "originalGroupThreshold": 10000,
+        "lotCount": 9,
+        "lotSeconds": 57600,
+        "exchangeDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "description": "word1[1132]和[1133]原规则确认，每次成功扣钻一比一购入本局积分，单人实际达到2000分获团奖，未成团投入下架结转历史积分。历史分购买三档限购商品。七天后清零，整周最多投入5000钻。"
+    },
+    "local-recharge-rank": {
+      "protocols": [
+        10271
+      ],
+      "mode": "fixedDecision",
+      "numbers": {
+        "activityId": 10068,
+        "days": 7,
+        "displayRole": "admin",
+        "displayRank": 1,
+        "orderUnit": "confirmedLocalSimulatedOrderCents",
+        "minClaimCents": 5000,
+        "scoreDisplayMultiplier": 10,
+        "settlement": "oncePerRound",
+        "reward": [
+          {
+            "kind": "item",
+            "id": 21059,
+            "quantity": 1
+          },
+          {
+            "kind": "item",
+            "id": 21069,
+            "quantity": 1
+          },
+          {
+            "kind": "item",
+            "id": 34137,
+            "quantity": 1
+          }
+        ]
+      },
+      "description": "该本地账号展示第一名。发奖要求本轮 App 内已确认模拟订单的累计模拟面额至少达到 5000 分（50.00 元），仅计 App 内已结算记录。原表 5000 的线上接口单位尚待核证。"
+    },
+    "activity-10025": {
+      "protocols": [
+        172,
+        173
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10025"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10026": {
+      "protocols": [
+        174,
+        175,
+        176
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10026"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10027": {
+      "protocols": [
+        177,
+        178
+      ],
+      "mode": "source",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10027"
+      },
+      "description": "C177/C178原63档与按日奖账均通过原协议。"
+    },
+    "activity-10029": {
+      "protocols": [
+        187,
+        188,
+        189,
+        190
+      ],
+      "mode": "sourceWithLocalCycle",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10029"
+      },
+      "description": "原限时神兽表给出24项万分奖池、六项积分档、单抽与十连、上榜门槛及五名奖品。本地榜末日展示并寄发首名邮件。"
+    },
+    "activity-10035": {
+      "protocols": [
+        211,
+        212
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10035"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10036": {
+      "protocols": [
+        215,
+        216,
+        217,
+        218
+      ],
+      "mode": "sourceWithLocalPity",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10036"
+      },
+      "description": "皮卡丘乐园原表五层、逐层票价与万分奖池、price[34038]快捷购票、累计五档，保底范围和十连结算方式按本地口径解释。"
+    },
+    "activity-10038": {
+      "protocols": [
+        222,
+        223
+      ],
+      "mode": "sourceWithLocalSkuMapping",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10038"
+      },
+      "description": "原表两档礼包对应当前渠道的普通6元、30元钻石档位。按北京时间当日单笔确认的商品归档，每档一天领一次。"
+    },
+    "activity-10039": {
+      "protocols": [
+        10037,
+        1901
+      ],
+      "mode": "source",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10039"
+      },
+      "description": "C10037按原表换目标，C1901原高级抽取累计幸运和保底，S2039同步。"
+    },
+    "activity-10042": {
+      "protocols": [
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10042"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10046": {
+      "protocols": [
+        246,
+        247,
+        248
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10046"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10051": {
+      "protocols": [
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031,
+        10032
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10051"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10055": {
+      "protocols": [
+        287,
+        288
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10055"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10058": {
+      "protocols": [
+        10201,
+        10202,
+        10203,
+        10204,
+        10205
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10058"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-10079": {
+      "protocols": [
+        421
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-activity-balance.json",
+        "jsonPointer": "/activities/10079"
+      },
+      "description": "复用原规划完整周期、奖池、档位和限购。实现前按原入口核对字段与资产入账能力。"
+    },
+    "activity-week-overrides": {
+      "protocols": [
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "mode": "fixedDecision",
+      "numbers": {
+        "cycleDaysByActivity": {
+          "10025": 7,
+          "10026": 7
+        },
+        "timeZone": "Asia/Shanghai"
+      },
+      "description": "现有候选均为7天；源包 operate[10025,10026] day=0 未指定可直接采用周期。待有同版本明确运营排期可单独调整。"
+    },
+    "tower": {
+      "protocols": [
+        120,
+        121,
+        134
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "tower",
+          "buff",
+          "award"
+        ],
+        "lookup": "tower per-layer row, then selected buff source ID and award reference"
+      },
+      "description": "层配置和数值直接复用；Buff 抽选、失败是否计次数须核原调用。"
+    },
+    "zodiac": {
+      "protocols": [
+        272,
+        273,
+        274,
+        275,
+        276
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "twelve",
+          "twelveratio",
+          "twelverbox",
+          "tweshop",
+          "award"
+        ],
+        "lookup": "twelve per stage, twelveratio by resolved id, tweshop [goodstype,goods,num,price,level]"
+      },
+      "description": "奖励和货架沿用原表；核价格单位、抽取与每日轮换标识。"
+    },
+    "home": {
+      "protocols": [
+        337,
+        338,
+        339,
+        340,
+        343
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "architecture",
+          "homeland",
+          "homeshop"
+        ],
+        "lookup": "architecture and homeland by building id/level; current homeshop goods"
+      },
+      "description": "原等级和设施数据明确时直接取数，积分使用已落库家园币。源表无产出关系时参考本地 house-income 补足。"
+    },
+    "house-income": {
+      "protocols": [
+        337,
+        338,
+        339,
+        340,
+        343
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "intervalSeconds": 7200,
+        "maxAccrualHours": 24,
+        "homeCoinPerIntervalPerLevel": 5,
+        "localBalanceKey": 118,
+        "oneFacilityForBaselineIncome": true
+      },
+      "description": "候选基础家园币每日上限为60×建筑有效等级，已有订单和周货架不变；读到原适用产物规则时用原表替换该临时口径。"
+    },
+    "orange-dungeons": {
+      "protocols": [
+        341,
+        342,
+        372
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "tangerine",
+          "copy",
+          "guaiwuteam",
+          "award"
+        ],
+        "lookup": "resolved stage id → enemy team and reward id"
+      },
+      "description": "沿用旧副本配置，仅在阶段归属和跨战承伤规则有本地证据时挂载。"
+    },
+    "stamina": {
+      "protocols": [
+        1208
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "cap": 100,
+        "restoreEverySeconds": 360,
+        "verifiedOriginalPricesFirst": true,
+        "purchaseFallback": {
+          "maxDaily": 2,
+          "diamonds": [
+            100,
+            200
+          ],
+          "amountPerPurchase": 50,
+          "storageMax": 200
+        }
+      },
+      "description": "既有入口固定上报100仅为参考。通过体力可购买余额和自然恢复状态分别保存，原消费规则核实后再开放。"
+    },
+    "normal-dungeon-sweep": {
+      "protocols": [
+        2202,
+        2204
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "dungeons",
+          "copy",
+          "award"
+        ],
+        "lookup": "matched dungeons mode, eligibility, authored award id"
+      },
+      "description": "复用已查实的原消耗和箱子；原奖励或次数字段未映射时暂不开放对应档。"
+    },
+    "legacy-hangup": {
+      "protocols": [
+        2206,
+        2208,
+        2209,
+        3042,
+        3038,
+        3039
+      ],
+      "mode": "priorPlanning",
+      "numbers": {
+        "file": "local-gameplay-balance.json",
+        "jsonPointer": "/hangupDrop",
+        "maxAccrualSeconds": 86400,
+        "rollIntervalSeconds": 7200
+      },
+      "description": "已有模式每2小时一抽、上限24小时。旧模式只有确认同收益方可复用游标和奖池。"
+    },
+    "seven-day": {
+      "protocols": [
+        2601
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "dailyreward",
+          "sign",
+          "checkin",
+          "award"
+        ],
+        "lookup": "match C136/C137 by reward and day before choosing original table"
+      },
+      "description": "七日档与同奖励的已有记录共用幂等键。"
+    },
+    "secret": {
+      "protocols": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5056,
+        5057,
+        5058,
+        5059,
+        5060,
+        5061,
+        5062,
+        5067,
+        5077,
+        5080,
+        5081,
+        5082,
+        5083,
+        5094
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "mijing",
+          "mijing_shop",
+          "mijingjuqing",
+          "award"
+        ],
+        "lookup": "resolve map mode id → node/shop/award row"
+      },
+      "description": "原秘境地图、商店和宝箱表优先，缺价格映射时按模式单独继续核证。"
+    },
+    "travel": {
+      "protocols": [
+        5063,
+        5064,
+        5065,
+        5066,
+        5069,
+        5078,
+        5095
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "fly",
+          "randevent",
+          "award"
+        ],
+        "lookup": "resolved journey/event references"
+      },
+      "description": "旅行时长、食物与有效事件来源取同版本表，购买次数与资源不混用。"
+    },
+    "returning": {
+      "protocols": [
+        5091,
+        5093
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "rewardback",
+          "daily",
+          "award"
+        ],
+        "lookup": "rewardback by verified activity id. Source example 1068/1112 day=3, diamond=4000, once=3"
+      },
+      "description": "缺 rward 且无真实待找回账本的条目不发放。"
+    },
+    "monopoly": {
+      "protocols": [
+        5096,
+        5098,
+        5099
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "gamestore",
+          "guess",
+          "randevent"
+        ]
+      },
+      "description": "同版本棋盘落点、骰子和治疗成本需核对原入口。已具本地计数的部分可先以基础 1 步/骰、每天3次测算，棋盘/资产不足保持不可开放。"
+    },
+    "space": {
+      "protocols": [
+        5101,
+        5102,
+        5103,
+        5104
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "space",
+          "award",
+          "rankreward"
+        ],
+        "lookup": "resolved original stage, award, rank rows. Local display derives finished stage"
+      },
+      "description": "批准本机榜，奖只由本地通关/开箱记录发放。"
+    },
+    "pstone": {
+      "protocols": [
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "gem",
+          "gemstore",
+          "twelverbox"
+        ],
+        "lookup": "gem by gear ID, gemstore number/needpowder/times/probability. cost, cost2, cost3 by mapped lock-count/mode"
+      },
+      "description": "原 gemstore 是20种货架，价格50–12800碎屑、条目现存限购1。旧说明的全8级/1钻先不覆盖原表。"
+    },
+    "dynamax": {
+      "protocols": [
+        311,
+        312,
+        313,
+        314,
+        315,
+        316
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "dynamax",
+          "dynamaxlevel",
+          "dynamaxskills",
+          "dynlevelmax"
+        ],
+        "lookup": "dynamaxlevel lookup by current lv [attack_cost/control_cost/auxiliary_cost]; maxima level=10, quality=11"
+      },
+      "description": "按原路径消耗。0级升1级原配置为8000×100 + 路线物品8001/8002/8003×500 + 钻石500。"
+    },
+    "pcl": {
+      "protocols": [
+        417,
+        418,
+        419,
+        420
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "pcllevel",
+          "resonate",
+          "resonation"
+        ],
+        "lookup": "pcllevel by path id, experience as threshold, item/item2 cost and att through nextlevel"
+      },
+      "description": "升阶未验证返还之前暂停重置花费；原材料数和属性字段保留。"
+    },
+    "elf-skill": {
+      "protocols": [
+        3012,
+        3017,
+        3043
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "skill",
+          "racialskills",
+          "skillsynthesis",
+          "skillpass"
+        ],
+        "lookup": "resolve species/skill and actual equipped slot; costs from matched skill tier"
+      },
+      "description": "已学记录决定材料与结果，无配置升阶时当前等级保持。"
+    },
+    "positions": {
+      "protocols": [
+        3015,
+        3016
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "array",
+          "team"
+        ],
+        "lookup": "resolve array by position type and level"
+      },
+      "description": "阵位经验、成本组合和效果取原表。"
+    },
+    "bag-growth": {
+      "protocols": [
+        310,
+        1701
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "incrementSlotsByKind": {
+          "elf": 10,
+          "item": 10,
+          "fragment": 10,
+          "equipment": 10
+        },
+        "baseCostDiamonds": 100,
+        "costIncreaseDiamonds": 25,
+        "maxPurchasePagesPerKind": 20,
+        "sourceOverridesVerified": true
+      },
+      "description": "延续现有容量，独立购买次数 i 从0开始，价格=100+25×i，最多加200格，首20次总6750钻。仅在原容量与 C1701 的 ntype 映射明确时启用对应类别。"
+    },
+    "elf-transfer": {
+      "protocols": [
+        3003,
+        3020,
+        3036,
+        5100
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "compose",
+          "jinhua"
+        ],
+        "lookup": "resolve exact release/transfer/rebirth/fusion recipe; validate actual two instance identities"
+      },
+      "description": "原规则未查清时继续禁用未证实返还和可能删除实例的动作。"
+    },
+    "retinue": {
+      "protocols": [
+        3044,
+        3045
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "cheer",
+          "team"
+        ]
+      },
+      "description": "助战与道馆助阵字段关系需核，仅复用已证实的槽条件和属性。"
+    },
+    "elf-equipment": {
+      "protocols": [
+        382,
+        5011,
+        5012,
+        5013,
+        5014,
+        5015,
+        5016,
+        5017
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "portable",
+          "zstone",
+          "synth"
+        ],
+        "lookup": "resolve item subtype and exact recipe, instance bind/lock, validated wash tables"
+      },
+      "description": "技能条、直接穿戴及材料的槽/类型依原协议核证。消耗和返还同时提交，缺配方不消费。"
+    },
+    "carry": {
+      "protocols": [
+        5079,
+        20020,
+        20021,
+        3019,
+        2037
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "portable",
+          "portableshop",
+          "carryitemshop",
+          "synth"
+        ],
+        "lookup": "existing 38 offer normal shop plus verified subtype gold-carry recipe rows"
+      },
+      "description": "金携带及普通携带独立槽，查清 opt/pos/use 后加载各原星级费用和属性。"
+    },
+    "pet": {
+      "protocols": [
+        10301,
+        10302,
+        10304,
+        10305,
+        10306,
+        10307,
+        10308,
+        10309
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "pet",
+          "pet_up",
+          "pet_washing",
+          "pet_aureole_level",
+          "pet_aureole_up"
+        ],
+        "lookup": "pet_up by owned pet level/quality, pet_washing by op/qualification probability pairs"
+      },
+      "description": "按原表保留限额、材料与洗练权重。解锁参数、次数来源和部分返还尚需原调用约束。"
+    },
+    "trainer-equipment": {
+      "protocols": [
+        2521,
+        2522,
+        2523,
+        2524,
+        2525,
+        2534,
+        2535
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "equip",
+          "equipupgrade",
+          "qh",
+          "qhnum"
+        ],
+        "lookup": "equipupgrade row by exact equipment template and tier; source 11251 2500000金币+34090×3",
+        "localRatingConfig": "服务端代码/src/main/resources/catalog/equipment-rating.json",
+        "localRatingMetrics": [
+          "已穿戴部位数/6",
+          "已穿戴部位强化等级和/(6×min(角色等级,150))",
+          "已穿戴且进阶的部位数/6"
+        ]
+      },
+      "description": "进阶、熔炼、洗练与锻造沿用对应底表。C2535 原 rating_proto 缺失，采用本地装备评分。两种架构与服务端从同一配置生成面板档位和解锁门槛。"
+    },
+    "marks-and-runes": {
+      "protocols": [
+        2528,
+        2529,
+        2530,
+        2531,
+        2532,
+        2533
+      ],
+      "mode": "implemented-with-closed-protocol",
+      "implemented": [
+        2528,
+        2530,
+        2531,
+        2532,
+        2533
+      ],
+      "closed": {
+        "2529": "原双架构均未调用 sellsuit_eq，没有可验证原出售入口。"
+      },
+      "numbers": {
+        "tables": [
+          "suitname",
+          "suit",
+          "stickerstore",
+          "variable"
+        ],
+        "runtimeConfig": "服务端代码/src/main/resources/catalog/trainer-runes.json",
+        "stickerAsset": 12,
+        "chips": "runechips",
+        "engraveNewChancePercent": [
+          100,
+          30,
+          10,
+          0
+        ],
+        "engraveCoins": [
+          100000,
+          200000,
+          500000,
+          500000
+        ],
+        "shopSlots": 8,
+        "refreshHours": 4,
+        "manualRefreshDiamonds": [
+          5,
+          20,
+          50,
+          100,
+          200
+        ],
+        "voucherChips": {
+          "34290": 10,
+          "34291": 50,
+          "34292": 100
+        }
+      },
+      "description": "使用贴纸福袋34024三选一和对应碎片券。五种原操作经已认证H2及32/64位原LuaJIT验证。"
+    },
+    "relic": {
+      "protocols": [
+        402,
+        403
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "relic",
+          "mining",
+          "mine",
+          "award"
+        ],
+        "lookup": "map props + final relic row by confirmed original mode id; relic[1].time=90 raw unit"
+      },
+      "description": "步进参数和时间单位先查协议；原矿铲奖池适用时直接取原权重。"
+    },
+    "ancient-growth": {
+      "protocols": [
+        404,
+        405,
+        406,
+        409,
+        410
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "slate",
+          "slatebase",
+          "badge",
+          "badgesuit",
+          "fossil",
+          "fossilsuit"
+        ],
+        "lookup": "exact position/id and material fields → local progress and source stats"
+      },
+      "description": "例如徽章101需 type20/5001 ×1 加1000000金币，原属性字段不换算。"
+    },
+    "hunting": {
+      "protocols": [
+        3101,
+        3102,
+        3103,
+        3104,
+        3105
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "hunting",
+          "item",
+          "jingling"
+        ],
+        "lookup": "hunting by original world/mode row, elfpool pair asset id and weight; 10001 weights 3333+3333+3334"
+      },
+      "localRuleVersion": "2026-11-19.hunting.local.1",
+      "localRuleDocument": "普通与高级狩猎场结算演算.md",
+      "description": "原表控制十二格候选及球的幸运档，按审定本地规则补齐概率、保底、日切和入账。首次无券不扣钻，引导须有实际步骤凭据。"
+    },
+    "active-costumes": {
+      "protocols": [
+        3450,
+        3451,
+        3452
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "dress",
+          "dress_shop",
+          "dresschip"
+        ],
+        "lookup": "dress property/sex/type, default ownership supersedes costs"
+      },
+      "description": "以拥有全部为先，访问商店或合成返回既有状态且不扣费。"
+    },
+    "capped-crates": {
+      "protocols": [
+        399,
+        400,
+        401
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "boxrew",
+          "award",
+          "item"
+        ],
+        "lookup": "resolve actual box code/index/color and confirmed mapping to boxrew/award"
+      },
+      "description": "每次最多100个候选并去重，原真实索引及获得型确认前保持隐藏。"
+    },
+    "item-holes": {
+      "protocols": [
+        2401
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "item",
+          "boxrew",
+          "award"
+        ]
+      },
+      "description": "已有确定性道具继续原结算；原随机表空或非普通资产类型未入账时保持该档隐藏。"
+    },
+    "christmas-elf-exchange": {
+      "protocols": [
+        386
+      ],
+      "mode": "source",
+      "numbers": {
+        "table": "shengdanduihuan",
+        "offers": [
+          {
+            "idx": 9,
+            "redeem": [
+              2,
+              41031,
+              1
+            ],
+            "exchange": [
+              1,
+              21057,
+              1
+            ],
+            "num": 3
+          },
+          {
+            "idx": 10,
+            "redeem": [
+              2,
+              41031,
+              4
+            ],
+            "exchange": [
+              1,
+              21058,
+              1
+            ],
+            "num": 1
+          }
+        ]
+      },
+      "description": "每轮分别限三次、一次。优先展示闲置百变怪中等级、星数、实例号升序的具体材料，原弹窗列出全体实例，经确认后复核并扣除，余额不足或背包满保留材料。"
+    },
+    "single-payment": {
+      "protocols": [
+        150,
+        151,
+        328,
+        424,
+        423,
+        2801
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "chongzhilist",
+          "chongzhi",
+          "leichong",
+          "danbi"
+        ],
+        "lookup": "bind existing local simulated order paysid/offer, nominal amount in cents, receipt id"
+      },
+      "description": "沿用本地商品与模拟订单目录映射及单笔发奖回执。模拟面额累计仅计 App 内按模拟支付确认的订单，券结算走独立记录。 C327/C423返还限时商城两组原奖货架，C328/C424按已确认订单单独领取；303–306均不计普通充值。"
+    },
+    "voucher": {
+      "protocols": [
+        377,
+        378,
+        10410,
+        10423,
+        10424,
+        10425,
+        10426
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "walletKeyByTemplate": {
+          "31006": "diamondVoucher",
+          "31007": "cashCoupon",
+          "31008": "rechargeVoucher",
+          "34506": "cashCoupon",
+          "34507": "cashCoupon",
+          "34508": "cashCoupon"
+        },
+        "faceCentsByTemplate": {
+          "31006": 100,
+          "31007": 100,
+          "31008": 100,
+          "34506": 1000,
+          "34507": 3000,
+          "34508": 6800
+        },
+        "diamondsPerDiamondVoucherCents": 10,
+        "marketSellEnabledByTemplate": false,
+        "dailyFree": {
+          "award": [
+            130,
+            0,
+            60
+          ],
+          "wallet": "limit_voucher",
+          "dailyClaims": 1,
+          "timezone": "Asia/Shanghai",
+          "expiry": "nextLocalMidnight",
+          "spendOrder": [
+            "earliestExpiry",
+            "permanent"
+          ]
+        },
+        "dailyOfferFallback": {
+          "costDiamonds": 1000,
+          "limit": 1,
+          "award": [
+            {
+              "kind": "item",
+              "id": 31008,
+              "quantity": 1
+            },
+            {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 2
+            }
+          ]
+        },
+        "couponCapPercent": 100,
+        "countsTowardsConfirmedLocalSimulatedOrderValue": false,
+        "dailyPaidVoucherExpiry": "permanent",
+        "couponInstances": {
+          "protocols": [
+            377,
+            378
+          ],
+          "originalTable": "coupon_proto",
+          "KRW": {
+            "ids": [
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "sellPrice": [
+              103,
+              0,
+              100000
+            ]
+          },
+          "USD": {
+            "ids": [
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207
+            ],
+            "sellPrice": [
+              104,
+              0,
+              10
+            ]
+          },
+          "expiry": "nextLocalMidnight",
+          "scope": "按原地区券模板的单笔匹配面额兑换，累计钻石、VIP经验与充值活动进度。人民币道具31006等不在本券实例目录。"
+        }
+      },
+      "description": "普通道具31006由C2401按1枚兑1000钻；C377/C378服务coupon_proto实例，不共用普通道具表或换算率。每日免费C10423/C10424发60张限时代金券，北京时间次日00:00失效。10090的2001/2002订单发永久代金券，C10426先使用限时券。"
+    },
+    "golden-daily": {
+      "protocols": [
+        179,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        279,
+        280,
+        289,
+        291,
+        292
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "fanpai",
+          "graderanking",
+          "passcard",
+          "synth",
+          "privilege",
+          "dailyreward",
+          "award"
+        ],
+        "lookup": "resolve original activity id from entry, then per-round tier by original config"
+      },
+      "description": "沿用已验证的数值，入口映射或任务归属不清的单项先保留隐藏。"
+    },
+    "holiday-other": {
+      "protocols": [
+        281,
+        324,
+        325,
+        389,
+        390,
+        391,
+        10413,
+        10414,
+        10415,
+        10416,
+        10417,
+        10418,
+        10419,
+        10420,
+        10421,
+        10422
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "denglutanchuang",
+          "festivalfl",
+          "zuanshifudai",
+          "xinchunjijin",
+          "changefl_",
+          "wealtask_",
+          "card",
+          "zajindan"
+        ]
+      },
+      "description": "旧历史日期替换为已核业务周期，候选七天。须先定位独立奖池索引和客户端日期来源；源表不全的档先不发行。"
+    },
+    "npc-pve-dungeons": {
+      "protocols": [
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        10038,
+        10039,
+        10040,
+        10041,
+        10042
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "dnfbase",
+          "dnfpoint",
+          "dnfrew",
+          "rockets",
+          "den",
+          "denevent",
+          "award"
+        ],
+        "lookup": "by named mode and authored stage id → fee/reward table"
+      },
+      "description": "积分、次数和奖池读取原表，队伍、地图和 NPC 来源见设计与阵容，原区服榜缺数据时只显示真实本地战绩。"
+    },
+    "run-games": {
+      "protocols": [
+        191,
+        196,
+        197,
+        198,
+        199,
+        290,
+        10009,
+        10010,
+        303,
+        304,
+        305,
+        306,
+        307,
+        309
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "jyrun",
+          "pkrule",
+          "guildrun",
+          "jinglinglx",
+          "award"
+        ]
+      },
+      "description": "先确认原模式、关卡、队伍、计分，防止把报告分当成实际成绩。无 NPC 或队伍来源的原入口隐藏。"
+    },
+    "task-activities": {
+      "protocols": [
+        320,
+        321,
+        322,
+        324,
+        325
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "days": 7,
+        "eachTaskMaxPerDay": 1,
+        "events": [
+          {
+            "event": "daily_first_adventure_payout",
+            "award": {
+              "kind": "item",
+              "id": 21063,
+              "quantity": 1
+            }
+          },
+          {
+            "event": "daily_first_valid_battle_win",
+            "award": {
+              "kind": "item",
+              "id": 20027,
+              "quantity": 1
+            }
+          }
+        ]
+      },
+      "description": "禁止广告、评分、外部回执计数。原任务 ID 到已验证本地事件映射补足后开放。"
+    },
+    "gambit-activities": {
+      "protocols": [
+        185,
+        186
+      ],
+      "mode": "localBaseline",
+      "numbers": {
+        "days": 7,
+        "uniformApprovedFallback": true,
+        "perTierMaxPerRound": 1,
+        "maxFallbackStagesPerRound": 1
+      },
+      "description": "zhaocaimao 原区间、成本和资格有档案而锁定概率未见原字段，若活动此前未接，可先按建议均匀1档，原首档2000钻投入[2400,3500]，期望2950，净+950，单轮硬上限+1500，其他档保留待核。"
+    },
+    "minigames": {
+      "protocols": [
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        368,
+        411,
+        412
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "game",
+          "race",
+          "questions_reward",
+          "award"
+        ],
+        "lookup": "resolve mode-specific entry and verified attempt cost/reward"
+      },
+      "description": "无配套盘面与计分前只保留本地活动方案，不能为快捷完成重复发奖。赛跑仅游戏内资产。"
+    },
+    "feedlot": {
+      "protocols": [
+        361,
+        362,
+        363,
+        364,
+        365,
+        369
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "breeroom",
+          "pet",
+          "interaction",
+          "price"
+        ],
+        "lookup": "recipe by eligibility and level, respect actual pet instance status"
+      },
+      "description": "时间、加速成本和领养数量以已映射原值为准。"
+    },
+    "riddle": {
+      "protocols": [
+        373,
+        374,
+        375,
+        376
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "guess",
+          "questions_reward",
+          "award"
+        ],
+        "lookup": "question difficulty and verified source reward; no guessing unseen definitions"
+      },
+      "description": "日切后新题期与领取记录分开。原概率/答案未核不开放。"
+    },
+    "card-game": {
+      "protocols": [
+        393,
+        394,
+        395,
+        396,
+        397,
+        398
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "game",
+          "gamestore",
+          "mission",
+          "variable",
+          "word1",
+          "pet"
+        ],
+        "unlockBreedingLevel": 5,
+        "hoursBeijing": [
+          6,
+          24
+        ],
+        "minimumHomeCoins": [
+          2000,
+          80000,
+          500000
+        ],
+        "stake": [
+          500,
+          20000,
+          200000
+        ],
+        "entryHomeCoins": [
+          510,
+          20400,
+          204000
+        ],
+        "dailyLuckyCards": 3,
+        "luckyBoxBaseJettons": 500,
+        "surpriseBoxBaseJettons": 250,
+        "shopGroups": 18,
+        "runtime": "home/casino.json"
+      },
+      "description": "饲育屋五级通过场景 HomeGameble 触发器进入。原 word1[5261] 与 game 倍率共同结算；两钱包独立。原商店以游戏币兑换六种真实成宠。两类箱的数额、惊喜箱触发条件和宠物光环加成按本地规则，详见数值对接。"
+    },
+    "direct-sale": {
+      "protocols": [
+        422
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "limitedshop",
+          "chongzhi",
+          "chongzhilist"
+        ]
+      },
+      "description": "商品目录原路回本地订单。未定位 paysid 与档期时不设置可购买商品。"
+    },
+    "battle-and-map": {
+      "protocols": [
+        2203,
+        2207,
+        3001,
+        3002,
+        3037,
+        3040,
+        3041
+      ],
+      "mode": "source",
+      "numbers": {
+        "tables": [
+          "dungeons",
+          "copy",
+          "map",
+          "mission",
+          "guaiwuteam",
+          "award"
+        ],
+        "lookup": "existing first region, new stage normalization"
+      },
+      "description": "沿用已接的首区域，新增阶段值使用原关卡表、敌方表与等奖。原映射只有角色和敌方都有效时接入。"
+    },
+    "combat-growth-current": {
+      "protocols": [
+        3007,
+        3008,
+        3009
+      ],
+      "mode": "dependency",
+      "numbers": {
+        "tables": [
+          "addition",
+          "nlz",
+          "nlzmax",
+          "break"
+        ]
+      },
+      "description": "沿用现有折算作为基线，原公式及属性类型全部核实后再替换，避免旧档战力因重复读取新旧数值翻倍。"
+    },
+    "identity": {
+      "protocols": [
+        11,
+        2211,
+        5090
+      ],
+      "mode": "design",
+      "numbers": {},
+      "description": "取证/鉴权，无新数值。C5090 保持隐藏直到定位原入口。"
+    },
+    "elf-instance-state": {
+      "protocols": [
+        1502,
+        3018,
+        3023,
+        3551
+      ],
+      "mode": "design",
+      "numbers": {},
+      "description": "实例占用和图鉴行为交由设计，无独立价格或奖励。"
+    },
+    "local-rank-and-profile": {
+      "protocols": [
+        326,
+        2515,
+        2516,
+        2517
+      ],
+      "mode": "design",
+      "numbers": {},
+      "description": "读取本地榜和名片，无独立奖励。榜与NPC展示规则交由设计，活动具体奖档取对应独立配置。"
+    }
+  },
+  "coverage": [
+    {
+      "group": "C11",
+      "ids": [
+        11
+      ],
+      "userMark": null,
+      "balance": [
+        "identity"
+      ]
+    },
+    {
+      "group": "C2001–C2002",
+      "ids": [
+        2001,
+        2002
+      ],
+      "userMark": "称号默认全部解锁并增加对应属性,变更佩戴更新对应展示即可",
+      "balance": [
+        "cosmetics"
+      ]
+    },
+    {
+      "group": "C2101、C3000",
+      "ids": [
+        2101,
+        3000
+      ],
+      "userMark": "不保留调试入口",
+      "balance": [
+        "debug"
+      ]
+    },
+    {
+      "group": "C50–C69、C1401–C1403、C5070–C5072",
+      "ids": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        1401,
+        1402,
+        1403,
+        5070,
+        5071,
+        5072
+      ],
+      "userMark": "开放本机个人公会",
+      "balance": [
+        "personal-guild",
+        "bandits"
+      ]
+    },
+    {
+      "group": "C100–C113",
+      "ids": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "userMark": "开放明确标注 NPC 的训练模式，以及三个玩法各自的对手、匹配、次数和奖档。",
+      "balance": [
+        "arena-training"
+      ]
+    },
+    {
+      "group": "C234–C245、C249–C250",
+      "ids": [
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        249,
+        250
+      ],
+      "userMark": "独立设计单机赛季，从本地赛程、有效对局和奖励记录读数据。",
+      "balance": [
+        "offline-season"
+      ]
+    },
+    {
+      "group": "C1003、C1301、C2216、C2501–C2504、C2506–C2512、C2526–C2527",
+      "ids": [
+        1003,
+        1301,
+        2216,
+        2501,
+        2502,
+        2503,
+        2504,
+        2506,
+        2507,
+        2508,
+        2509,
+        2510,
+        2511,
+        2512,
+        2526,
+        2527
+      ],
+      "userMark": "否",
+      "balance": [
+        "online-social"
+      ]
+    },
+    {
+      "group": "C2211",
+      "ids": [
+        2211
+      ],
+      "userMark": null,
+      "balance": [
+        "identity"
+      ]
+    },
+    {
+      "group": "C3026–C3028、C3032、C3034、C10100–C10106、C10108–C10109",
+      "ids": [
+        3026,
+        3027,
+        3028,
+        3032,
+        3034,
+        10100,
+        10101,
+        10102,
+        10103,
+        10104,
+        10105,
+        10106,
+        10108,
+        10109
+      ],
+      "userMark": null,
+      "balance": [
+        "live-pk"
+      ]
+    },
+    {
+      "group": "C3670–C3681、C3683–C3684、C3686、C5092",
+      "ids": [
+        3670,
+        3671,
+        3672,
+        3673,
+        3674,
+        3675,
+        3676,
+        3677,
+        3678,
+        3679,
+        3680,
+        3681,
+        3683,
+        3684,
+        3686,
+        5092
+      ],
+      "userMark": null,
+      "balance": [
+        "team"
+      ]
+    },
+    {
+      "group": "C5090",
+      "ids": [
+        5090
+      ],
+      "userMark": null,
+      "balance": [
+        "identity"
+      ]
+    },
+    {
+      "group": "C20001–C20015",
+      "ids": [
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015
+      ],
+      "userMark": "保持隐藏",
+      "balance": [
+        "cross-guild"
+      ]
+    },
+    {
+      "group": "C10",
+      "ids": [
+        10
+      ],
+      "userMark": "不启用",
+      "balance": [
+        "redeem-code"
+      ]
+    },
+    {
+      "group": "C12–C13、C10406–C10407、C10412",
+      "ids": [
+        12,
+        13,
+        10406,
+        10407,
+        10412
+      ],
+      "userMark": "不关联",
+      "balance": [
+        "external-binding"
+      ]
+    },
+    {
+      "group": "C10250–C10251、C10043",
+      "ids": [
+        10250,
+        10251,
+        10043
+      ],
+      "userMark": "保持隐藏",
+      "balance": [
+        "advertising"
+      ]
+    },
+    {
+      "group": "C10410、C10423–C10426",
+      "ids": [
+        10410,
+        10423,
+        10424,
+        10425,
+        10426
+      ],
+      "userMark": null,
+      "balance": [
+        "voucher"
+      ]
+    },
+    {
+      "group": "C246–C248",
+      "ids": [
+        246,
+        247,
+        248
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10046"
+      ]
+    },
+    {
+      "group": "C284",
+      "ids": [
+        284
+      ],
+      "userMark": null,
+      "balance": [
+        "reward-overflow"
+      ]
+    },
+    {
+      "group": "C328、C424、C10415–C10416",
+      "ids": [
+        328,
+        424,
+        10415,
+        10416
+      ],
+      "userMark": null,
+      "balance": [
+        "single-payment",
+        "holiday-other"
+      ]
+    },
+    {
+      "group": "C2304–C2306",
+      "ids": [
+        2304,
+        2305,
+        2306
+      ],
+      "userMark": null,
+      "balance": [
+        "token-shops"
+      ]
+    },
+    {
+      "group": "C120–C121、C134",
+      "ids": [
+        120,
+        121,
+        134
+      ],
+      "userMark": null,
+      "balance": [
+        "tower"
+      ]
+    },
+    {
+      "group": "C122–C126、C129",
+      "ids": [
+        122,
+        123,
+        124,
+        125,
+        126,
+        129
+      ],
+      "userMark": "开放",
+      "balance": [
+        "mine"
+      ]
+    },
+    {
+      "group": "C127–C128，关联 C66、C68–C69",
+      "ids": [
+        127,
+        128,
+        66,
+        68,
+        69
+      ],
+      "userMark": "批准",
+      "balance": [
+        "personal-guild",
+        "bandits"
+      ]
+    },
+    {
+      "group": "C168–C169",
+      "ids": [
+        168,
+        169
+      ],
+      "userMark": "不共用次数",
+      "balance": [
+        "daily-dungeon"
+      ]
+    },
+    {
+      "group": "C268–C269，关联 C180–C182",
+      "ids": [
+        268,
+        269,
+        180,
+        181,
+        182
+      ],
+      "userMark": "开放",
+      "balance": [
+        "dojo-raid"
+      ]
+    },
+    {
+      "group": "C272–C276",
+      "ids": [
+        272,
+        273,
+        274,
+        275,
+        276
+      ],
+      "userMark": null,
+      "balance": [
+        "zodiac"
+      ]
+    },
+    {
+      "group": "C282–C283、C285–C286，关联 C284",
+      "ids": [
+        282,
+        283,
+        285,
+        286,
+        284
+      ],
+      "userMark": "背包满时发送至邮箱内,玩家手动处理背包内容后去领取即可,每次领取至背包满,然后剩余的再次回到邮箱,其它类似的一样使用此规则",
+      "balance": [
+        "reward-overflow"
+      ]
+    },
+    {
+      "group": "C337–C340，关联 C343",
+      "ids": [
+        337,
+        338,
+        339,
+        340,
+        343
+      ],
+      "userMark": null,
+      "balance": [
+        "home",
+        "house-income"
+      ]
+    },
+    {
+      "group": "C341–C342、C372",
+      "ids": [
+        341,
+        342,
+        372
+      ],
+      "userMark": null,
+      "balance": [
+        "orange-dungeons"
+      ]
+    },
+    {
+      "group": "C1208",
+      "ids": [
+        1208
+      ],
+      "userMark": null,
+      "balance": [
+        "stamina"
+      ]
+    },
+    {
+      "group": "C2202、C2204",
+      "ids": [
+        2202,
+        2204
+      ],
+      "userMark": null,
+      "balance": [
+        "normal-dungeon-sweep"
+      ]
+    },
+    {
+      "group": "C2206、C2208–C2209，关联 C3038–C3039",
+      "ids": [
+        2206,
+        2208,
+        2209,
+        3038,
+        3039
+      ],
+      "userMark": null,
+      "balance": [
+        "legacy-hangup"
+      ]
+    },
+    {
+      "group": "C2601",
+      "ids": [
+        2601
+      ],
+      "userMark": null,
+      "balance": [
+        "seven-day"
+      ]
+    },
+    {
+      "group": "C5051–C5062、C5077、C5080–C5083、C5094",
+      "ids": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5056,
+        5057,
+        5058,
+        5059,
+        5060,
+        5061,
+        5062,
+        5077,
+        5080,
+        5081,
+        5082,
+        5083,
+        5094
+      ],
+      "userMark": null,
+      "balance": [
+        "secret"
+      ]
+    },
+    {
+      "group": "C5063–C5066、C5069、C5078、C5095",
+      "ids": [
+        5063,
+        5064,
+        5065,
+        5066,
+        5069,
+        5078,
+        5095
+      ],
+      "userMark": null,
+      "balance": [
+        "travel"
+      ]
+    },
+    {
+      "group": "C5067",
+      "ids": [
+        5067
+      ],
+      "userMark": null,
+      "balance": [
+        "secret"
+      ]
+    },
+    {
+      "group": "C5091、C5093",
+      "ids": [
+        5091,
+        5093
+      ],
+      "userMark": null,
+      "balance": [
+        "returning"
+      ]
+    },
+    {
+      "group": "C5096、C5098–C5099",
+      "ids": [
+        5096,
+        5098,
+        5099
+      ],
+      "userMark": null,
+      "balance": [
+        "monopoly"
+      ]
+    },
+    {
+      "group": "C5101–C5104",
+      "ids": [
+        5101,
+        5102,
+        5103,
+        5104
+      ],
+      "userMark": "可替代",
+      "balance": [
+        "space"
+      ]
+    },
+    {
+      "group": "C131，关联 C130/C132",
+      "ids": [
+        131,
+        130,
+        132
+      ],
+      "userMark": "可无限补签",
+      "balance": [
+        "calendar-backfill"
+      ]
+    },
+    {
+      "group": "C133",
+      "ids": [
+        133
+      ],
+      "userMark": "日界线为00:00:00",
+      "balance": [
+        "calendar-backfill"
+      ]
+    },
+    {
+      "group": "C172–C173、C174–C176",
+      "ids": [
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "userMark": "重置周期 : 天",
+      "balance": [
+        "activity-10025",
+        "activity-10026",
+        "activity-week-overrides"
+      ]
+    },
+    {
+      "group": "C177–C178、C179",
+      "ids": [
+        177,
+        178,
+        179
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10027",
+        "golden-daily"
+      ]
+    },
+    {
+      "group": "C185–C186",
+      "ids": [
+        185,
+        186
+      ],
+      "userMark": null,
+      "balance": [
+        "gambit-activities"
+      ]
+    },
+    {
+      "group": "C187–C190",
+      "ids": [
+        187,
+        188,
+        189,
+        190
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10029"
+      ]
+    },
+    {
+      "group": "C191、C196–C199、C290、C10009–C10010",
+      "ids": [
+        191,
+        196,
+        197,
+        198,
+        199,
+        290,
+        10009,
+        10010
+      ],
+      "userMark": null,
+      "balance": [
+        "run-games"
+      ]
+    },
+    {
+      "group": "C211–C212",
+      "ids": [
+        211,
+        212
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10035"
+      ]
+    },
+    {
+      "group": "C215–C218",
+      "ids": [
+        215,
+        216,
+        217,
+        218
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10036"
+      ]
+    },
+    {
+      "group": "C222–C223、C287–C288",
+      "ids": [
+        222,
+        223,
+        287,
+        288
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10038",
+        "activity-10055"
+      ]
+    },
+    {
+      "group": "C224–C226",
+      "ids": [
+        224,
+        225,
+        226
+      ],
+      "userMark": null,
+      "balance": [
+        "golden-daily"
+      ]
+    },
+    {
+      "group": "C227–C230",
+      "ids": [
+        227,
+        228,
+        229,
+        230
+      ],
+      "userMark": null,
+      "balance": [
+        "golden-daily"
+      ]
+    },
+    {
+      "group": "C261–C263、C265–C267",
+      "ids": [
+        261,
+        262,
+        263,
+        265,
+        266,
+        267
+      ],
+      "userMark": "开放",
+      "balance": [
+        "investment",
+        "wish-pool"
+      ]
+    },
+    {
+      "group": "C279–C280",
+      "ids": [
+        279,
+        280
+      ],
+      "userMark": null,
+      "balance": [
+        "golden-daily"
+      ]
+    },
+    {
+      "group": "C281、C289、C291–C292",
+      "ids": [
+        281,
+        289,
+        291,
+        292
+      ],
+      "userMark": null,
+      "balance": [
+        "golden-daily",
+        "holiday-other"
+      ]
+    },
+    {
+      "group": "C293–C302",
+      "ids": [
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302
+      ],
+      "userMark": null,
+      "balance": [
+        "npc-pve-dungeons"
+      ]
+    },
+    {
+      "group": "C303–C307、C309",
+      "ids": [
+        303,
+        304,
+        305,
+        306,
+        307,
+        309
+      ],
+      "userMark": null,
+      "balance": [
+        "run-games"
+      ]
+    },
+    {
+      "group": "C320–C322、C324–C325",
+      "ids": [
+        320,
+        321,
+        322,
+        324,
+        325
+      ],
+      "userMark": "不依赖",
+      "balance": [
+        "holiday-other",
+        "task-activities"
+      ]
+    },
+    {
+      "group": "C330–C336",
+      "ids": [
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336
+      ],
+      "userMark": null,
+      "balance": [
+        "npc-pve-dungeons"
+      ]
+    },
+    {
+      "group": "C344–C348、C368、C411；C349–C353、C412",
+      "ids": [
+        344,
+        345,
+        346,
+        347,
+        348,
+        368,
+        411,
+        349,
+        350,
+        351,
+        352,
+        353,
+        412
+      ],
+      "userMark": null,
+      "balance": [
+        "minigames"
+      ]
+    },
+    {
+      "group": "C354–C360",
+      "ids": [
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360
+      ],
+      "userMark": null,
+      "balance": [
+        "minigames"
+      ]
+    },
+    {
+      "group": "C361–C365、C369",
+      "ids": [
+        361,
+        362,
+        363,
+        364,
+        365,
+        369
+      ],
+      "userMark": null,
+      "balance": [
+        "feedlot"
+      ]
+    },
+    {
+      "group": "C373–C376",
+      "ids": [
+        373,
+        374,
+        375,
+        376
+      ],
+      "userMark": null,
+      "balance": [
+        "riddle"
+      ]
+    },
+    {
+      "group": "C389、C390–C391",
+      "ids": [
+        389,
+        390,
+        391
+      ],
+      "userMark": null,
+      "balance": [
+        "holiday-other"
+      ]
+    },
+    {
+      "group": "C393–C398",
+      "ids": [
+        393,
+        394,
+        395,
+        396,
+        397,
+        398
+      ],
+      "userMark": null,
+      "balance": [
+        "card-game"
+      ]
+    },
+    {
+      "group": "C400–C401",
+      "ids": [
+        400,
+        401
+      ],
+      "userMark": null,
+      "balance": [
+        "capped-crates"
+      ]
+    },
+    {
+      "group": "C413–C414",
+      "ids": [
+        413,
+        414
+      ],
+      "userMark": "保持隐藏",
+      "balance": [
+        "groupon"
+      ]
+    },
+    {
+      "group": "C421–C422",
+      "ids": [
+        421,
+        422
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10079",
+        "direct-sale"
+      ]
+    },
+    {
+      "group": "C3651–C3653、C10033–C10036",
+      "ids": [
+        3651,
+        3652,
+        3653,
+        10033,
+        10034,
+        10035,
+        10036
+      ],
+      "userMark": "单机首领",
+      "balance": [
+        "world-boss"
+      ]
+    },
+    {
+      "group": "C10012–C10020",
+      "ids": [
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10042"
+      ]
+    },
+    {
+      "group": "C10021–C10025",
+      "ids": [
+        10021,
+        10022,
+        10023,
+        10024,
+        10025
+      ],
+      "userMark": "启用单机替代",
+      "balance": [
+        "local-turntable"
+      ]
+    },
+    {
+      "group": "C10026–C10032",
+      "ids": [
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031,
+        10032
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10051"
+      ]
+    },
+    {
+      "group": "C10037，关联 C1901",
+      "ids": [
+        10037,
+        1901
+      ],
+      "userMark": null,
+      "balance": [
+        "friendship",
+        "activity-10039"
+      ]
+    },
+    {
+      "group": "C10038–C10042",
+      "ids": [
+        10038,
+        10039,
+        10040,
+        10041,
+        10042
+      ],
+      "userMark": null,
+      "balance": [
+        "npc-pve-dungeons"
+      ]
+    },
+    {
+      "group": "C10050–C10054",
+      "ids": [
+        10050,
+        10051,
+        10052,
+        10053,
+        10054
+      ],
+      "userMark": "启用单机替代",
+      "balance": [
+        "local-diamond-sale"
+      ]
+    },
+    {
+      "group": "C10201–C10205",
+      "ids": [
+        10201,
+        10202,
+        10203,
+        10204,
+        10205
+      ],
+      "userMark": null,
+      "balance": [
+        "activity-10058"
+      ]
+    },
+    {
+      "group": "C10271",
+      "ids": [
+        10271
+      ],
+      "userMark": "使用单服和本地账号即可 即admin永远第一",
+      "balance": [
+        "local-recharge-rank"
+      ]
+    },
+    {
+      "group": "C10413–C10422",
+      "ids": [
+        10413,
+        10414,
+        10415,
+        10416,
+        10417,
+        10418,
+        10419,
+        10420,
+        10421,
+        10422
+      ],
+      "userMark": null,
+      "balance": [
+        "holiday-other"
+      ]
+    },
+    {
+      "group": "C252–C253、C255–C258，关联 C251/C254",
+      "ids": [
+        252,
+        253,
+        255,
+        256,
+        257,
+        258,
+        251,
+        254
+      ],
+      "userMark": null,
+      "balance": [
+        "pstone"
+      ]
+    },
+    {
+      "group": "C310、C1701",
+      "ids": [
+        310,
+        1701
+      ],
+      "userMark": null,
+      "balance": [
+        "bag-growth"
+      ]
+    },
+    {
+      "group": "C311–C316",
+      "ids": [
+        311,
+        312,
+        313,
+        314,
+        315,
+        316
+      ],
+      "userMark": null,
+      "balance": [
+        "dynamax"
+      ]
+    },
+    {
+      "group": "C417–C420",
+      "ids": [
+        417,
+        418,
+        419,
+        420
+      ],
+      "userMark": null,
+      "balance": [
+        "pcl"
+      ]
+    },
+    {
+      "group": "C1502、C3023、C3018",
+      "ids": [
+        1502,
+        3023,
+        3018
+      ],
+      "userMark": null,
+      "balance": [
+        "elf-instance-state"
+      ]
+    },
+    {
+      "group": "C3012、C3017、C3043",
+      "ids": [
+        3012,
+        3017,
+        3043
+      ],
+      "userMark": null,
+      "balance": [
+        "elf-skill"
+      ]
+    },
+    {
+      "group": "C3015–C3016",
+      "ids": [
+        3015,
+        3016
+      ],
+      "userMark": null,
+      "balance": [
+        "positions"
+      ]
+    },
+    {
+      "group": "C3003、C3020、C3036、C5100",
+      "ids": [
+        3003,
+        3020,
+        3036,
+        5100
+      ],
+      "userMark": null,
+      "balance": [
+        "elf-transfer"
+      ]
+    },
+    {
+      "group": "C3044–C3045",
+      "ids": [
+        3044,
+        3045
+      ],
+      "userMark": null,
+      "balance": [
+        "retinue"
+      ]
+    },
+    {
+      "group": "C3042",
+      "ids": [
+        3042
+      ],
+      "userMark": null,
+      "balance": [
+        "legacy-hangup"
+      ]
+    },
+    {
+      "group": "C382、C5011–C5017",
+      "ids": [
+        382,
+        5011,
+        5012,
+        5013,
+        5014,
+        5015,
+        5016,
+        5017
+      ],
+      "userMark": null,
+      "balance": [
+        "elf-equipment"
+      ]
+    },
+    {
+      "group": "C5079、C20020–C20021，关联 C3019",
+      "ids": [
+        5079,
+        20020,
+        20021,
+        3019
+      ],
+      "userMark": null,
+      "balance": [
+        "carry"
+      ]
+    },
+    {
+      "group": "C10301–C10302、C10304–C10309",
+      "ids": [
+        10301,
+        10302,
+        10304,
+        10305,
+        10306,
+        10307,
+        10308,
+        10309
+      ],
+      "userMark": null,
+      "balance": [
+        "pet"
+      ]
+    },
+    {
+      "group": "C3007–C3009",
+      "ids": [
+        3007,
+        3008,
+        3009
+      ],
+      "userMark": null,
+      "balance": [
+        "combat-growth-current"
+      ]
+    },
+    {
+      "group": "C377–C378",
+      "ids": [
+        377,
+        378
+      ],
+      "userMark": "独立记账",
+      "balance": [
+        "voucher"
+      ]
+    },
+    {
+      "group": "C399",
+      "ids": [
+        399
+      ],
+      "userMark": null,
+      "balance": [
+        "capped-crates"
+      ]
+    },
+    {
+      "group": "C2521–C2525、C2534–C2535",
+      "ids": [
+        2521,
+        2522,
+        2523,
+        2524,
+        2525,
+        2534,
+        2535
+      ],
+      "userMark": null,
+      "balance": [
+        "trainer-equipment"
+      ]
+    },
+    {
+      "group": "C2528–C2533",
+      "ids": [
+        2528,
+        2529,
+        2530,
+        2531,
+        2532,
+        2533
+      ],
+      "userMark": null,
+      "balance": [
+        "marks-and-runes"
+      ]
+    },
+    {
+      "group": "C3450–C3452",
+      "ids": [
+        3450,
+        3451,
+        3452
+      ],
+      "userMark": "时装与称号一样,默认获得全部时装",
+      "balance": [
+        "cosmetics",
+        "active-costumes"
+      ]
+    },
+    {
+      "group": "C231–C232",
+      "ids": [
+        231,
+        232
+      ],
+      "userMark": "头像与称号一样,默认获得全部头像",
+      "balance": [
+        "cosmetics"
+      ]
+    },
+    {
+      "group": "C2401",
+      "ids": [
+        2401
+      ],
+      "userMark": null,
+      "balance": [
+        "item-holes"
+      ]
+    },
+    {
+      "group": "C402–C403",
+      "ids": [
+        402,
+        403
+      ],
+      "userMark": null,
+      "balance": [
+        "relic"
+      ]
+    },
+    {
+      "group": "C404–C406、C409–C410",
+      "ids": [
+        404,
+        405,
+        406,
+        409,
+        410
+      ],
+      "userMark": null,
+      "balance": [
+        "ancient-growth"
+      ]
+    },
+    {
+      "group": "C3101–C3105",
+      "ids": [
+        3101,
+        3102,
+        3103,
+        3104,
+        3105
+      ],
+      "userMark": null,
+      "balance": [
+        "hunting"
+      ]
+    },
+    {
+      "group": "C3551",
+      "ids": [
+        3551
+      ],
+      "userMark": null,
+      "balance": [
+        "elf-instance-state"
+      ]
+    },
+    {
+      "group": "C150–C151",
+      "ids": [
+        150,
+        151
+      ],
+      "userMark": null,
+      "balance": [
+        "single-payment"
+      ]
+    },
+    {
+      "group": "C326、C2515–C2517",
+      "ids": [
+        326,
+        2515,
+        2516,
+        2517
+      ],
+      "userMark": null,
+      "balance": [
+        "local-rank-and-profile"
+      ]
+    },
+    {
+      "group": "C386",
+      "ids": [
+        386
+      ],
+      "userMark": null,
+      "balance": [
+        "christmas-elf-exchange"
+      ]
+    },
+    {
+      "group": "C423、C2801",
+      "ids": [
+        423,
+        2801
+      ],
+      "userMark": null,
+      "balance": [
+        "single-payment"
+      ]
+    },
+    {
+      "group": "C1901、C2505",
+      "ids": [
+        1901,
+        2505
+      ],
+      "userMark": "不开放本地伙伴或任务,直接默认发放10亿友情点",
+      "balance": [
+        "friendship",
+        "activity-10039"
+      ]
+    },
+    {
+      "group": "C2037",
+      "ids": [
+        2037
+      ],
+      "userMark": null,
+      "balance": [
+        "carry"
+      ]
+    },
+    {
+      "group": "C2203、C2207、C3001–C3002",
+      "ids": [
+        2203,
+        2207,
+        3001,
+        3002
+      ],
+      "userMark": null,
+      "balance": [
+        "battle-and-map"
+      ]
+    },
+    {
+      "group": "C3037–C3041",
+      "ids": [
+        3037,
+        3038,
+        3039,
+        3040,
+        3041
+      ],
+      "userMark": null,
+      "balance": [
+        "legacy-hangup",
+        "battle-and-map"
+      ]
+    }
+  ],
+  "checks": {
+    "groups": 110,
+    "explicitMarks": 30,
+    "countsByMode": {
+      "fixedDecision": 6,
+      "localBaseline": 18,
+      "disabled": 9,
+      "priorPlanning": 15,
+      "source": 33,
+      "dependency": 9,
+      "design": 3
+    },
+    "inventoryIDs": [
+      20001,
+      20002,
+      20003,
+      20027,
+      21058,
+      21059,
+      21063,
+      21068,
+      21069,
+      21082,
+      31007,
+      31008,
+      34137
+    ],
+    "wheelWeight": 10000,
+    "wishChoicesPerTwentyVitality": 1,
+    "maxTurntable": 21,
+    "maxTurntablePaidDiamonds": 4200,
+    "maxTurntableScore": 210,
+    "maxDiamondSaleRoundSpend": 5000,
+    "totalBagCost": 6750,
+    "titleTotalsPerProperties": 19
+  },
+  "localReopen20261120": {
+    "sourceSha256": "F010A675DCB9CCACF899A2954E7E497BE7F04C3EA94214140FA3434C817A7C45",
+    "document": "接口数值对接.md#2026-11-20--本地重新开放的十二项接口",
+    "commands": [
+      11,
+      131,
+      352,
+      368,
+      377,
+      378,
+      1208,
+      2204,
+      2206,
+      2529,
+      3043,
+      10410
+    ],
+    "resetTimezone": "Asia/Shanghai",
+    "attendance": {
+      "item": 34013,
+      "minimumVip": 1,
+      "extraMultiplier": 1,
+      "specialAmounts": {
+        "1": 30,
+        "7": 50,
+        "15": 80,
+        "30": 100
+      },
+      "defaultAmount": 20
+    },
+    "stamina": {
+      "initial": 100,
+      "purchaseQuantity": 100,
+      "dailyPrices": [
+        50,
+        100,
+        150
+      ],
+      "exchangeCommand": 10992,
+      "reserveToKeep": 100,
+      "costPerDungeonEntry": 100,
+      "extraEntriesPerExchange": 1
+    },
+    "minigames": {
+      "freeAttemptsEach": 2,
+      "dailyPricesEach": [
+        50,
+        100,
+        150
+      ],
+      "variableIds": {
+        "352": 4360,
+        "368": 4356
+      }
+    },
+    "coupon": {
+      "dailyLimitPerKind": 1,
+      "useDiamonds": {
+        "101-107": [
+          130,
+          650,
+          1300,
+          2600,
+          4000,
+          6500,
+          13000
+        ],
+        "201-207": [
+          99,
+          499,
+          999,
+          1999,
+          2999,
+          4999,
+          9999
+        ],
+        "1004": 6000
+      },
+      "sale": {
+        "101-107": {
+          "coins": 100000
+        },
+        "201-207": {
+          "diamonds": 10
+        }
+      },
+      "skuFor1004": 5
+    },
+    "dungeon": {
+      "group": 100001,
+      "firstClearChest": {
+        "item": 21082,
+        "quality": 5,
+        "quantity": 1,
+        "lifetimeLimit": 1
+      },
+      "quickSweep": {
+        "sharedWith": 2202,
+        "battlePower": 9900,
+        "costAttempts": 1,
+        "rewardCandidates": [
+          10001,
+          10002
+        ],
+        "quantity": 1
+      }
+    },
+    "runeMaterialSale": {
+      "type": 12,
+      "coinsPerDecompositionPoint": 100
+    },
+    "relogin": {
+      "cost": 0,
+      "reward": 0
+    },
+    "skillUpgradeSource": "word1[5040,5041]、skill_proto、本轮技能专项记录"
+  }
+}

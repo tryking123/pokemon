@@ -1,0 +1,117 @@
+{
+  "version": "guild-building-20261120-v1",
+  "userDecision": "移除建设次数限制，保留当前实际显示费用和产出",
+  "sourceApkSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "verifiedCurrentApk": "pokemon-local-20261120-bug3-14-28-r6.apk",
+  "sociatySourceLuaSha256": "6733c526e4dc8706e29776379f18d1d0d3cb7457cebd9c32caa911e70d676f8b",
+  "currentLevelsEqualOriginal": true,
+  "currentDonation": {
+    "coins": {
+      "data1": 10000,
+      "data2": 100,
+      "data3": 10,
+      "data4": 20
+    },
+    "diamonds": {
+      "data1": 5000,
+      "data2": 500,
+      "data3": 100,
+      "data4": 1000
+    }
+  },
+  "levels": [
+    {
+      "level": 1,
+      "cumulativeBase": 0,
+      "nextLevelCost": 35000
+    },
+    {
+      "level": 2,
+      "cumulativeBase": 35000,
+      "nextLevelCost": 77000
+    },
+    {
+      "level": 3,
+      "cumulativeBase": 112000,
+      "nextLevelCost": 312000
+    },
+    {
+      "level": 4,
+      "cumulativeBase": 424000,
+      "nextLevelCost": 495750
+    },
+    {
+      "level": 5,
+      "cumulativeBase": 919750,
+      "nextLevelCost": 1120500
+    },
+    {
+      "level": 6,
+      "cumulativeBase": 2040250,
+      "nextLevelCost": 1461750
+    },
+    {
+      "level": 7,
+      "cumulativeBase": 3502000,
+      "nextLevelCost": 1698000
+    },
+    {
+      "level": 8,
+      "cumulativeBase": 5200000,
+      "nextLevelCost": 1951750
+    },
+    {
+      "level": 9,
+      "cumulativeBase": 7151750,
+      "nextLevelCost": 2223000
+    },
+    {
+      "level": 10,
+      "cumulativeBase": 9374750,
+      "nextLevelCost": 2678000
+    },
+    {
+      "level": 11,
+      "cumulativeBase": 12052750,
+      "nextLevelCost": 3168000
+    },
+    {
+      "level": 12,
+      "cumulativeBase": 15220750,
+      "nextLevelCost": 4060500
+    },
+    {
+      "level": 13,
+      "cumulativeBase": 19281250,
+      "nextLevelCost": 5023000
+    },
+    {
+      "level": 14,
+      "cumulativeBase": 24304250,
+      "nextLevelCost": 6055500
+    },
+    {
+      "level": 15,
+      "cumulativeBase": 30359750,
+      "nextLevelCost": 0
+    }
+  ],
+  "migration": {
+    "legacyLevelBases": [
+      0,
+      1000,
+      3000,
+      7000,
+      15000
+    ],
+    "offsetsForLegacyLevels1to5": [
+      0,
+      34000,
+      109000,
+      417000,
+      904750
+    ],
+    "formula": "一次保存offset=newBase[legacyLevel]-oldBase[legacyLevel]；effectiveXP=原XP+offset，仅用于等级与建设进度，不计活跃/贡献",
+    "vitality": "保留旧xp映射余额一次。首笔新建设前保存legacyEarned=原XP、donationBaseline=旧活跃流水总数；余额=max(0,legacyEarned+(真实建设活跃累计-baseline)-spent)，新公会基线为0。新建设coins+10/diamonds+100"
+  }
+}
