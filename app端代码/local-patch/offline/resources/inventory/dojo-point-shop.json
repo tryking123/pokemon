@@ -1,0 +1,74 @@
+{
+  "1": {
+    "goods": 21024,
+    "goodstype": 1,
+    "num": 500,
+    "costnum": 300
+  },
+  "2": {
+    "goods": 21026,
+    "goodstype": 1,
+    "num": 100,
+    "costnum": 500
+  },
+  "3": {
+    "goods": 21073,
+    "goodstype": 1,
+    "num": 10,
+    "costnum": 1000
+  },
+  "4": {
+    "goods": 21067,
+    "goodstype": 1,
+    "num": 1,
+    "costnum": 1000
+  },
+  "5": {
+    "goods": 21068,
+    "goodstype": 1,
+    "num": 1,
+    "costnum": 12000
+  },
+  "6": {
+    "goods": 21069,
+    "goodstype": 1,
+    "num": 1,
+    "costnum": 15000
+  },
+  "7": {
+    "goods": 54020,
+    "goodstype": 3,
+    "num": 10,
+    "costnum": 100
+  },
+  "8": {
+    "goods": 54024,
+    "goodstype": 3,
+    "num": 10,
+    "costnum": 100
+  },
+  "9": {
+    "goods": 54004,
+    "goodstype": 3,
+    "num": 10,
+    "costnum": 200
+  },
+  "10": {
+    "goods": 54005,
+    "goodstype": 3,
+    "num": 10,
+    "costnum": 200
+  },
+  "11": {
+    "goods": 54006,
+    "goodstype": 3,
+    "num": 10,
+    "costnum": 200
+  },
+  "12": {
+    "goods": 64019,
+    "goodstype": 3,
+    "num": 10,
+    "costnum": 150
+  }
+}

@@ -1,7 +1,7 @@
 local function send(action)
     if not local_fusion_supply_listener then
         Network.AddListener("local_fusion_supply", function(response)
-            label_popup.show(response.message)
+            if response and response.message then label_popup.show(response.message) end
         end)
         local_fusion_supply_listener = true
     end

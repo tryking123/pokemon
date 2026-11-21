@@ -1,0 +1,7 @@
+{
+  "unlockLevel": 7,
+  "slots": 6,
+  "enhanceCap": 150,
+  "gradeMinimums": [0, 20, 40, 60, 80, 100],
+  "titles": ["装备穿戴", "部位强化", "装备进阶"]
+}

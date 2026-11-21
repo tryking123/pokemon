@@ -1,0 +1,2057 @@
+{
+  "version": "20261122-origin-v1",
+  "source": "origin.apk SHA256 f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "level": {
+    "min": 1,
+    "max": 120
+  },
+  "aptitudes": [
+    {
+      "id": 1,
+      "name": "良好",
+      "nameSource": "原variable[4207].name",
+      "hpMultiplierPermille": 1000
+    },
+    {
+      "id": 2,
+      "name": "优秀",
+      "nameSource": "原variable[4207].name",
+      "hpMultiplierPermille": 1200
+    },
+    {
+      "id": 3,
+      "name": "稀有",
+      "nameSource": "原variable[4207].name",
+      "hpMultiplierPermille": 1400
+    },
+    {
+      "id": 4,
+      "name": "完美",
+      "nameSource": "原variable[4207].name",
+      "hpMultiplierPermille": 1600
+    }
+  ],
+  "talents": [
+    {
+      "id": 1001,
+      "name": "沉默真言",
+      "description": "战斗中拥有该天赋的精灵回合结束后永久'封印'随机1名敌方的4个随机技能,每场战斗限1次（不足4个则全部封印,若敌方免疫异常则无法封印）",
+      "positionCount": 1,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8000
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "决斗姿态",
+      "description": "战斗中拥有该天赋的精灵觉醒技能使用次数+1",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8001
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "精神衰弱",
+      "description": "战斗中拥有该天赋的精灵攻击结束后会使目标的所有普通技能次数从无限次变为仅能使用2次（每场战斗仅对1个目标触发1次）",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8002
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "暗杀姿态",
+      "description": "战斗中拥有该天赋的精灵击败目标后会使其无法触发“死亡”和“被击败”事件，且目标带有的复活buff无法生效",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8003
+      ]
+    },
+    {
+      "id": 1005,
+      "name": "天空之镜",
+      "description": "战斗中拥有该天赋的精灵在自身回合开始后获得'镜反',受到'中毒、灼烧、麻痹、冰冻、睡眠、混乱、噩梦、缠绕、过热、诅咒、永冻'效果时会将该效果反射给随机敌方目标,总共触发10次",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8004
+      ]
+    },
+    {
+      "id": 1006,
+      "name": "灵魂传导",
+      "description": "战斗中拥有该天赋的精灵使用攻击技能时对自己和目标附加一回合'灵魂标记',自身存在标记时受到的任何直接伤害均会使敌方有标记的目标受到等额伤害（每次随机标记1-2个目标）",
+      "positionCount": 1,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8005
+      ]
+    },
+    {
+      "id": 1007,
+      "name": "幻化姿态",
+      "description": "战斗中拥有该天赋的精灵每回合结束后有50%概率'变身'为1个随机金色精灵,性别随机,解除封印效果,继承自身当前属性、特性和状态,技能池更换为变化后的精灵并回复50sp",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8006
+      ]
+    },
+    {
+      "id": 1008,
+      "name": "幻化支配",
+      "description": "战斗中拥有该天赋的精灵回合结束后将敌方随机1个目标变为1个随机橙色精灵,性别随机,解除封印效果,继承自身当前属性、特性和状态,技能池更换为变化后的精灵（每场战斗仅触发1次）",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8007
+      ]
+    },
+    {
+      "id": 1009,
+      "name": "魅惑姿态",
+      "description": "战斗中拥有该天赋的精灵攻击结束后对目标额外附加'着迷'2回合（着迷状态攻击异性时降低20%伤害）,且自身攻击异性时额外提高50%伤害；战斗中拥有该天赋的精灵攻击结束后对目标额外附加'着迷'2回合（着迷状态攻击异性时降低20%伤害）,且自身攻击异性时额外提高50%伤害",
+      "positionCount": 2,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8008,
+        8009
+      ]
+    },
+    {
+      "id": 1010,
+      "name": "双子枷锁",
+      "description": "战斗中拥有该天赋的精灵回合结束后'禁锢'自身和1个随机敌方,禁锢状态无法行动直到其中一方阵亡,每场战斗限1次（施加禁锢时若其中一方免疫异常则双方均不生效）",
+      "positionCount": 1,
+      "positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "characters": [
+        8010
+      ]
+    }
+  ],
+  "aureoles": [
+    {
+      "id": 1001,
+      "name": "生命Ⅰ",
+      "description": "全队生命提高5%",
+      "family": 1,
+      "rank": 1,
+      "attributes": [
+        24,
+        50
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "生命Ⅱ",
+      "description": "全队生命提高10%",
+      "family": 1,
+      "rank": 2,
+      "attributes": [
+        24,
+        100
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "生命Ⅲ",
+      "description": "全队生命提高15%",
+      "family": 1,
+      "rank": 3,
+      "attributes": [
+        24,
+        150
+      ]
+    },
+    {
+      "id": 2001,
+      "name": "物攻Ⅰ",
+      "description": "全队物攻提高5%",
+      "family": 2,
+      "rank": 1,
+      "attributes": [
+        26,
+        50
+      ]
+    },
+    {
+      "id": 2002,
+      "name": "物攻Ⅱ",
+      "description": "全队物攻提高10%",
+      "family": 2,
+      "rank": 2,
+      "attributes": [
+        26,
+        100
+      ]
+    },
+    {
+      "id": 2003,
+      "name": "物攻Ⅲ",
+      "description": "全队物攻提高15%",
+      "family": 2,
+      "rank": 3,
+      "attributes": [
+        26,
+        150
+      ]
+    },
+    {
+      "id": 3001,
+      "name": "特攻Ⅰ",
+      "description": "全队特攻提高5%",
+      "family": 3,
+      "rank": 1,
+      "attributes": [
+        28,
+        50
+      ]
+    },
+    {
+      "id": 3002,
+      "name": "特攻Ⅱ",
+      "description": "全队特攻提高10%",
+      "family": 3,
+      "rank": 2,
+      "attributes": [
+        28,
+        100
+      ]
+    },
+    {
+      "id": 3003,
+      "name": "特攻Ⅲ",
+      "description": "全队特攻提高15%",
+      "family": 3,
+      "rank": 3,
+      "attributes": [
+        28,
+        150
+      ]
+    },
+    {
+      "id": 4001,
+      "name": "物防Ⅰ",
+      "description": "全队物防提高5%",
+      "family": 4,
+      "rank": 1,
+      "attributes": [
+        27,
+        50
+      ]
+    },
+    {
+      "id": 4002,
+      "name": "物防Ⅱ",
+      "description": "全队物防提高10%",
+      "family": 4,
+      "rank": 2,
+      "attributes": [
+        27,
+        100
+      ]
+    },
+    {
+      "id": 4003,
+      "name": "物防Ⅲ",
+      "description": "全队物防提高15%",
+      "family": 4,
+      "rank": 3,
+      "attributes": [
+        27,
+        150
+      ]
+    },
+    {
+      "id": 5001,
+      "name": "特防Ⅰ",
+      "description": "全队特防提高5%",
+      "family": 5,
+      "rank": 1,
+      "attributes": [
+        29,
+        50
+      ]
+    },
+    {
+      "id": 5002,
+      "name": "特防Ⅱ",
+      "description": "全队特防提高10%",
+      "family": 5,
+      "rank": 2,
+      "attributes": [
+        29,
+        100
+      ]
+    },
+    {
+      "id": 5003,
+      "name": "特防Ⅲ",
+      "description": "全队特防提高15%",
+      "family": 5,
+      "rank": 3,
+      "attributes": [
+        29,
+        150
+      ]
+    },
+    {
+      "id": 6001,
+      "name": "速度Ⅰ",
+      "description": "全队速度提高5%",
+      "family": 6,
+      "rank": 1,
+      "attributes": [
+        25,
+        50
+      ]
+    },
+    {
+      "id": 6002,
+      "name": "速度Ⅱ",
+      "description": "全队速度提高10%",
+      "family": 6,
+      "rank": 2,
+      "attributes": [
+        25,
+        100
+      ]
+    },
+    {
+      "id": 6003,
+      "name": "速度Ⅲ",
+      "description": "全队速度提高15%",
+      "family": 6,
+      "rank": 3,
+      "attributes": [
+        25,
+        150
+      ]
+    },
+    {
+      "id": 7001,
+      "name": "鹰眼Ⅰ",
+      "description": "全队暴击率提高10%",
+      "family": 7,
+      "rank": 1,
+      "attributes": [
+        12,
+        80
+      ]
+    },
+    {
+      "id": 7002,
+      "name": "鹰眼Ⅱ",
+      "description": "全队暴击率提高15%",
+      "family": 7,
+      "rank": 2,
+      "attributes": [
+        12,
+        120
+      ]
+    },
+    {
+      "id": 7003,
+      "name": "鹰眼Ⅲ",
+      "description": "全队暴击率提高25%",
+      "family": 7,
+      "rank": 3,
+      "attributes": [
+        12,
+        200
+      ]
+    },
+    {
+      "id": 8001,
+      "name": "耐力Ⅰ",
+      "description": "全队韧性提高12%",
+      "family": 8,
+      "rank": 1,
+      "attributes": [
+        13,
+        96
+      ]
+    },
+    {
+      "id": 8002,
+      "name": "耐力Ⅱ",
+      "description": "全队韧性提高18%",
+      "family": 8,
+      "rank": 2,
+      "attributes": [
+        13,
+        144
+      ]
+    },
+    {
+      "id": 8003,
+      "name": "耐力Ⅲ",
+      "description": "全队韧性提高30%",
+      "family": 8,
+      "rank": 3,
+      "attributes": [
+        13,
+        240
+      ]
+    },
+    {
+      "id": 9001,
+      "name": "专注Ⅰ",
+      "description": "全队命中率提高10%",
+      "family": 9,
+      "rank": 1,
+      "attributes": [
+        10,
+        80
+      ]
+    },
+    {
+      "id": 9002,
+      "name": "专注Ⅱ",
+      "description": "全队命中率提高14%",
+      "family": 9,
+      "rank": 2,
+      "attributes": [
+        10,
+        112
+      ]
+    },
+    {
+      "id": 9003,
+      "name": "专注Ⅲ",
+      "description": "全队命中率提高20%",
+      "family": 9,
+      "rank": 3,
+      "attributes": [
+        10,
+        160
+      ]
+    },
+    {
+      "id": 10001,
+      "name": "潜行Ⅰ",
+      "description": "全队闪避率提高8%",
+      "family": 10,
+      "rank": 1,
+      "attributes": [
+        11,
+        64
+      ]
+    },
+    {
+      "id": 10002,
+      "name": "潜行Ⅱ",
+      "description": "全队闪避率提高12%",
+      "family": 10,
+      "rank": 2,
+      "attributes": [
+        11,
+        96
+      ]
+    },
+    {
+      "id": 10003,
+      "name": "潜行Ⅲ",
+      "description": "全队闪避率提高18%",
+      "family": 10,
+      "rank": 3,
+      "attributes": [
+        11,
+        144
+      ]
+    },
+    {
+      "id": 11001,
+      "name": "攻击专精Ⅰ",
+      "description": "全队伤害加成提高5%",
+      "family": 11,
+      "rank": 1,
+      "attributes": [
+        23,
+        50
+      ]
+    },
+    {
+      "id": 11002,
+      "name": "攻击专精Ⅱ",
+      "description": "全队伤害加成提高10%",
+      "family": 11,
+      "rank": 2,
+      "attributes": [
+        23,
+        100
+      ]
+    },
+    {
+      "id": 11003,
+      "name": "攻击专精Ⅲ",
+      "description": "全队伤害加成提高15%",
+      "family": 11,
+      "rank": 3,
+      "attributes": [
+        23,
+        150
+      ]
+    },
+    {
+      "id": 12001,
+      "name": "防御专精Ⅰ",
+      "description": "全队伤害减免提高6%",
+      "family": 12,
+      "rank": 1,
+      "attributes": [
+        20,
+        60
+      ]
+    },
+    {
+      "id": 12002,
+      "name": "防御专精Ⅱ",
+      "description": "全队伤害减免提高12%",
+      "family": 12,
+      "rank": 2,
+      "attributes": [
+        20,
+        120
+      ]
+    },
+    {
+      "id": 12003,
+      "name": "防御专精Ⅲ",
+      "description": "全队伤害减免提高18%",
+      "family": 12,
+      "rank": 3,
+      "attributes": [
+        20,
+        180
+      ]
+    },
+    {
+      "id": 13001,
+      "name": "物攻精通Ⅰ",
+      "description": "全队物攻伤害加成提高5%",
+      "family": 13,
+      "rank": 1,
+      "attributes": [
+        59,
+        50
+      ]
+    },
+    {
+      "id": 13002,
+      "name": "物攻精通Ⅱ",
+      "description": "全队物攻伤害加成提高10%",
+      "family": 13,
+      "rank": 2,
+      "attributes": [
+        59,
+        100
+      ]
+    },
+    {
+      "id": 13003,
+      "name": "物攻精通Ⅲ",
+      "description": "全队物攻伤害加成提高15%",
+      "family": 13,
+      "rank": 3,
+      "attributes": [
+        59,
+        150
+      ]
+    },
+    {
+      "id": 14001,
+      "name": "物攻抵抗Ⅰ",
+      "description": "全队物攻伤害减免提高6%",
+      "family": 14,
+      "rank": 1,
+      "attributes": [
+        61,
+        60
+      ]
+    },
+    {
+      "id": 14002,
+      "name": "物攻抵抗Ⅱ",
+      "description": "全队物攻伤害减免提高12%",
+      "family": 14,
+      "rank": 2,
+      "attributes": [
+        61,
+        120
+      ]
+    },
+    {
+      "id": 14003,
+      "name": "物攻抵抗Ⅲ",
+      "description": "全队物攻伤害减免提高18%",
+      "family": 14,
+      "rank": 3,
+      "attributes": [
+        61,
+        180
+      ]
+    },
+    {
+      "id": 15001,
+      "name": "特攻精通Ⅰ",
+      "description": "全队特攻伤害加成提高5%",
+      "family": 15,
+      "rank": 1,
+      "attributes": [
+        60,
+        50
+      ]
+    },
+    {
+      "id": 15002,
+      "name": "特攻精通Ⅱ",
+      "description": "全队特攻伤害加成提高10%",
+      "family": 15,
+      "rank": 2,
+      "attributes": [
+        60,
+        100
+      ]
+    },
+    {
+      "id": 15003,
+      "name": "特攻精通Ⅲ",
+      "description": "全队特攻伤害加成提高15%",
+      "family": 15,
+      "rank": 3,
+      "attributes": [
+        60,
+        150
+      ]
+    },
+    {
+      "id": 16001,
+      "name": "特攻抵抗Ⅰ",
+      "description": "全队特攻伤害减免提高6%",
+      "family": 16,
+      "rank": 1,
+      "attributes": [
+        62,
+        60
+      ]
+    },
+    {
+      "id": 16002,
+      "name": "特攻抵抗Ⅱ",
+      "description": "全队特攻伤害减免提高12%",
+      "family": 16,
+      "rank": 2,
+      "attributes": [
+        62,
+        120
+      ]
+    },
+    {
+      "id": 16003,
+      "name": "特攻抵抗Ⅲ",
+      "description": "全队特攻伤害减免提高18%",
+      "family": 16,
+      "rank": 3,
+      "attributes": [
+        62,
+        180
+      ]
+    },
+    {
+      "id": 17001,
+      "name": "狙击Ⅰ",
+      "description": "全队暴击伤害加成提高5%",
+      "family": 17,
+      "rank": 1,
+      "attributes": [
+        22,
+        50
+      ]
+    },
+    {
+      "id": 17002,
+      "name": "狙击Ⅱ",
+      "description": "全队暴击伤害加成提高10%",
+      "family": 17,
+      "rank": 2,
+      "attributes": [
+        22,
+        100
+      ]
+    },
+    {
+      "id": 17003,
+      "name": "狙击Ⅲ",
+      "description": "全队暴击伤害加成提高15%",
+      "family": 17,
+      "rank": 3,
+      "attributes": [
+        22,
+        150
+      ]
+    },
+    {
+      "id": 18001,
+      "name": "坚甲Ⅰ",
+      "description": "全队基础暴击伤害减免提高6%",
+      "family": 18,
+      "rank": 1,
+      "attributes": [
+        105,
+        60
+      ]
+    },
+    {
+      "id": 18002,
+      "name": "坚甲Ⅱ",
+      "description": "全队基础暴击伤害减免提高12%",
+      "family": 18,
+      "rank": 2,
+      "attributes": [
+        105,
+        120
+      ]
+    },
+    {
+      "id": 18003,
+      "name": "坚甲Ⅲ",
+      "description": "全队基础暴击伤害减免提高18%",
+      "family": 18,
+      "rank": 3,
+      "attributes": [
+        105,
+        180
+      ]
+    },
+    {
+      "id": 19001,
+      "name": "猛毒精通Ⅰ",
+      "description": "全队毒伤害加成提高5%",
+      "family": 19,
+      "rank": 1,
+      "attributes": [
+        16,
+        50
+      ]
+    },
+    {
+      "id": 19002,
+      "name": "猛毒精通Ⅱ",
+      "description": "全队毒伤害加成提高10%",
+      "family": 19,
+      "rank": 2,
+      "attributes": [
+        16,
+        100
+      ]
+    },
+    {
+      "id": 19003,
+      "name": "猛毒精通Ⅲ",
+      "description": "全队毒伤害加成提高15%",
+      "family": 19,
+      "rank": 3,
+      "attributes": [
+        16,
+        150
+      ]
+    },
+    {
+      "id": 20001,
+      "name": "烈焰精通Ⅰ",
+      "description": "全队灼烧伤害加成提高5%",
+      "family": 20,
+      "rank": 1,
+      "attributes": [
+        15,
+        50
+      ]
+    },
+    {
+      "id": 20002,
+      "name": "烈焰精通Ⅱ",
+      "description": "全队灼烧伤害加成提高10%",
+      "family": 20,
+      "rank": 2,
+      "attributes": [
+        15,
+        100
+      ]
+    },
+    {
+      "id": 20003,
+      "name": "烈焰精通Ⅲ",
+      "description": "全队灼烧伤害加成提高15%",
+      "family": 20,
+      "rank": 3,
+      "attributes": [
+        15,
+        150
+      ]
+    },
+    {
+      "id": 21001,
+      "name": "元素抵抗Ⅰ",
+      "description": "全队DOT伤害减免提高5%",
+      "family": 21,
+      "rank": 1,
+      "attributes": [
+        102,
+        50
+      ]
+    },
+    {
+      "id": 21002,
+      "name": "元素抵抗Ⅱ",
+      "description": "全队DOT伤害减免提高10%",
+      "family": 21,
+      "rank": 2,
+      "attributes": [
+        102,
+        100
+      ]
+    },
+    {
+      "id": 21003,
+      "name": "元素抵抗Ⅲ",
+      "description": "全队DOT伤害减免提高15%",
+      "family": 21,
+      "rank": 3,
+      "attributes": [
+        102,
+        150
+      ]
+    },
+    {
+      "id": 22001,
+      "name": "自然守护Ⅰ",
+      "description": "全队全系技能伤害减免提高10%",
+      "family": 22,
+      "rank": 1,
+      "attributes": [
+        42,
+        100
+      ]
+    },
+    {
+      "id": 22002,
+      "name": "自然守护Ⅱ",
+      "description": "全队全系技能伤害减免提高15%",
+      "family": 22,
+      "rank": 2,
+      "attributes": [
+        42,
+        150
+      ]
+    },
+    {
+      "id": 22003,
+      "name": "自然守护Ⅲ",
+      "description": "全队全系技能伤害减免提高25%",
+      "family": 22,
+      "rank": 3,
+      "attributes": [
+        42,
+        250
+      ]
+    },
+    {
+      "id": 23001,
+      "name": "荆棘抵抗Ⅰ",
+      "description": "全队反弹伤害减免提高10%",
+      "family": 23,
+      "rank": 1,
+      "attributes": [
+        103,
+        100
+      ]
+    },
+    {
+      "id": 23002,
+      "name": "荆棘抵抗Ⅱ",
+      "description": "全队反弹伤害减免提高15%",
+      "family": 23,
+      "rank": 2,
+      "attributes": [
+        103,
+        150
+      ]
+    },
+    {
+      "id": 23003,
+      "name": "荆棘抵抗Ⅲ",
+      "description": "全队反弹伤害减免提高25%",
+      "family": 23,
+      "rank": 3,
+      "attributes": [
+        103,
+        250
+      ]
+    },
+    {
+      "id": 24001,
+      "name": "高级坚甲Ⅰ",
+      "description": "全队真实暴击伤害减免提高4%",
+      "family": 24,
+      "rank": 1,
+      "attributes": [
+        104,
+        40
+      ]
+    },
+    {
+      "id": 24002,
+      "name": "高级坚甲Ⅱ",
+      "description": "全队真实暴击伤害减免提高6%",
+      "family": 24,
+      "rank": 2,
+      "attributes": [
+        104,
+        60
+      ]
+    },
+    {
+      "id": 24003,
+      "name": "高级坚甲Ⅲ",
+      "description": "全队真实暴击伤害减免提高10%",
+      "family": 24,
+      "rank": 3,
+      "attributes": [
+        104,
+        100
+      ]
+    },
+    {
+      "id": 25001,
+      "name": "战争壁垒Ⅰ",
+      "description": "全队真实伤害减免提高4%",
+      "family": 25,
+      "rank": 1,
+      "attributes": [
+        101,
+        40
+      ]
+    },
+    {
+      "id": 25002,
+      "name": "战争壁垒Ⅱ",
+      "description": "全队真实伤害减免提高6%",
+      "family": 25,
+      "rank": 2,
+      "attributes": [
+        101,
+        60
+      ]
+    },
+    {
+      "id": 25003,
+      "name": "战争壁垒Ⅲ",
+      "description": "全队真实伤害减免提高10%",
+      "family": 25,
+      "rank": 3,
+      "attributes": [
+        101,
+        100
+      ]
+    },
+    {
+      "id": 26001,
+      "name": "魅惑精通Ⅰ",
+      "description": "全队异性伤害加成提高5%",
+      "family": 26,
+      "rank": 1,
+      "attributes": [
+        3,
+        50
+      ]
+    },
+    {
+      "id": 26002,
+      "name": "魅惑精通Ⅱ",
+      "description": "全队异性伤害加成提高10%",
+      "family": 26,
+      "rank": 2,
+      "attributes": [
+        3,
+        100
+      ]
+    },
+    {
+      "id": 26003,
+      "name": "魅惑精通Ⅲ",
+      "description": "全队异性伤害加成提高15%",
+      "family": 26,
+      "rank": 3,
+      "attributes": [
+        3,
+        150
+      ]
+    },
+    {
+      "id": 27001,
+      "name": "魅惑抵抗Ⅰ",
+      "description": "全队异性伤害减免提高6%",
+      "family": 27,
+      "rank": 1,
+      "attributes": [
+        4,
+        60
+      ]
+    },
+    {
+      "id": 27002,
+      "name": "魅惑抵抗Ⅱ",
+      "description": "全队异性伤害减免提高12%",
+      "family": 27,
+      "rank": 2,
+      "attributes": [
+        4,
+        120
+      ]
+    },
+    {
+      "id": 27003,
+      "name": "魅惑抵抗Ⅲ",
+      "description": "全队异性伤害减免提高18%",
+      "family": 27,
+      "rank": 3,
+      "attributes": [
+        4,
+        180
+      ]
+    }
+  ],
+  "petHp": {
+    "1": 100000,
+    "2": 110000,
+    "3": 120000,
+    "4": 130000,
+    "5": 140000,
+    "6": 150000,
+    "7": 160000,
+    "8": 170000,
+    "9": 180000,
+    "10": 190000,
+    "11": 200000,
+    "12": 210000,
+    "13": 220000,
+    "14": 230000,
+    "15": 240000,
+    "16": 250000,
+    "17": 260000,
+    "18": 270000,
+    "19": 280000,
+    "20": 500000,
+    "21": 515000,
+    "22": 530000,
+    "23": 545000,
+    "24": 560000,
+    "25": 575000,
+    "26": 590000,
+    "27": 605000,
+    "28": 620000,
+    "29": 635000,
+    "30": 650000,
+    "31": 665000,
+    "32": 680000,
+    "33": 695000,
+    "34": 710000,
+    "35": 725000,
+    "36": 740000,
+    "37": 755000,
+    "38": 770000,
+    "39": 785000,
+    "40": 1025000,
+    "41": 1050000,
+    "42": 1075000,
+    "43": 1100000,
+    "44": 1125000,
+    "45": 1150000,
+    "46": 1175000,
+    "47": 1200000,
+    "48": 1225000,
+    "49": 1250000,
+    "50": 1275000,
+    "51": 1300000,
+    "52": 1325000,
+    "53": 1350000,
+    "54": 1375000,
+    "55": 1400000,
+    "56": 1425000,
+    "57": 1450000,
+    "58": 1475000,
+    "59": 1500000,
+    "60": 2030000,
+    "61": 2060000,
+    "62": 2090000,
+    "63": 2120000,
+    "64": 2150000,
+    "65": 2180000,
+    "66": 2210000,
+    "67": 2240000,
+    "68": 2270000,
+    "69": 2300000,
+    "70": 2330000,
+    "71": 2360000,
+    "72": 2390000,
+    "73": 2420000,
+    "74": 2450000,
+    "75": 2480000,
+    "76": 2510000,
+    "77": 2540000,
+    "78": 2570000,
+    "79": 2600000,
+    "80": 3500000,
+    "81": 3530000,
+    "82": 3560000,
+    "83": 3590000,
+    "84": 3620000,
+    "85": 3650000,
+    "86": 3680000,
+    "87": 3710000,
+    "88": 3740000,
+    "89": 3770000,
+    "90": 3800000,
+    "91": 3830000,
+    "92": 3860000,
+    "93": 3890000,
+    "94": 3920000,
+    "95": 3950000,
+    "96": 3980000,
+    "97": 4010000,
+    "98": 4040000,
+    "99": 4070000,
+    "100": 5000000,
+    "101": 5050000,
+    "102": 5100000,
+    "103": 5150000,
+    "104": 5200000,
+    "105": 5250000,
+    "106": 5300000,
+    "107": 5350000,
+    "108": 5400000,
+    "109": 5450000,
+    "110": 5500000,
+    "111": 5550000,
+    "112": 5600000,
+    "113": 5650000,
+    "114": 5700000,
+    "115": 5750000,
+    "116": 5800000,
+    "117": 5850000,
+    "118": 5900000,
+    "119": 5950000,
+    "120": 6000000
+  },
+  "levelRules": {
+    "1": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "2": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "3": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "4": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "5": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "6": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "7": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "8": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "9": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "10": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "11": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "12": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "13": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "14": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "15": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "16": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "17": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "18": {
+      "star": 0,
+      "aureoleUnlocked": 0,
+      "levelLimit": 20,
+      "love": 1
+    },
+    "19": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 1
+    },
+    "20": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "21": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "22": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "23": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "24": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "25": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "26": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "27": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "28": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "29": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "30": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "31": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "32": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "33": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "34": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "35": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "36": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "37": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "38": {
+      "star": 1,
+      "aureoleUnlocked": 1,
+      "levelLimit": 40,
+      "love": 5
+    },
+    "39": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 5
+    },
+    "40": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "41": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "42": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "43": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "44": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "45": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "46": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "47": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "48": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "49": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "50": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "51": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "52": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "53": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "54": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "55": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "56": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "57": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "58": {
+      "star": 2,
+      "aureoleUnlocked": 2,
+      "levelLimit": 60,
+      "love": 10
+    },
+    "59": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 10
+    },
+    "60": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "61": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "62": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "63": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "64": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "65": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "66": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "67": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "68": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "69": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "70": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "71": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "72": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "73": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "74": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "75": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "76": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "77": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "78": {
+      "star": 3,
+      "aureoleUnlocked": 3,
+      "levelLimit": 80,
+      "love": 20
+    },
+    "79": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 20
+    },
+    "80": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "81": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "82": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "83": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "84": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "85": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "86": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "87": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "88": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "89": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "90": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "91": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "92": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "93": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "94": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "95": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "96": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "97": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "98": {
+      "star": 4,
+      "aureoleUnlocked": 4,
+      "levelLimit": 100,
+      "love": 35
+    },
+    "99": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 35
+    },
+    "100": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "101": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "102": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "103": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "104": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "105": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "106": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "107": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "108": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "109": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "110": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "111": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "112": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "113": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "114": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "115": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "116": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "117": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "118": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "119": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    },
+    "120": {
+      "star": 5,
+      "aureoleUnlocked": 4,
+      "levelLimit": 120,
+      "love": 50
+    }
+  },
+  "aureoleCount": {
+    "min": 1,
+    "max": 4,
+    "uniqueFamily": true,
+    "familyDivisor": 1000
+  },
+  "talent2UsesTalents": true,
+  "preserveStar": true,
+  "notes": [
+    "定制免费，修改当前宠物，不消费材料。",
+    "原始资质值为1至4，不使用物种编号或品质颜色编号替代。",
+    "原界面按pet_up[level].aureole_num解锁前若干条光环；后续未解锁条仍可保存，不得提前给属性。",
+    "定制等级不自动修改星级。原正常升级所需星级和亲密条件仍供原培养接口校验。",
+    "天赋阵位按所选天赋stations与num生成或校验，不能给所有天赋固定六阵位。"
+  ],
+  "perPet": {
+    "10001": {
+      "name": "妖兔儿",
+      "type": 1,
+      "talentIds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ]
+    },
+    "10002": {
+      "name": "波可龙",
+      "type": 2,
+      "talentIds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ]
+    },
+    "10003": {
+      "name": "桂月狸",
+      "type": 3,
+      "talentIds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ]
+    },
+    "10004": {
+      "name": "咔咪Q",
+      "type": 4,
+      "talentIds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ]
+    },
+    "10005": {
+      "name": "尼叶喵",
+      "type": 5,
+      "talentIds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ]
+    },
+    "10006": {
+      "name": "小果狼",
+      "type": 6,
+      "talentIds": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010
+      ]
+    }
+  }
+}

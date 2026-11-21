@@ -1,0 +1,784 @@
+{
+  "version": "guild-badge-mail-v1",
+  "sourceApk": "app包/origin/origin.apk",
+  "sourceApkSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "tables": {
+    "lua32_database_badge_proto.lua.bytes": "c6b5c75d0ea2f9cbaebccb138613345c965b6c8324705edd0ebef37821f8c91d",
+    "lua64_database_badge_proto.lua.bytes": "f7591aee926648d9eaaa327ce33db19a646d07ac97c8cd74cdc03a709a40abda",
+    "lua64_database_word1_proto.lua.bytes": "b040f0565d441071c19c7b2216e4c0817accf6624bdba4fa57549a10a8588135"
+  },
+  "badgeRows": 768,
+  "badgeKinds": 64,
+  "dualAbiDecodedEqual": true,
+  "archaeologyBadgeRowsMatched": 768,
+  "rows": [
+    {
+      "badgeIndex": 1,
+      "materialId": 5001,
+      "type": 20,
+      "name": "灰色徽章",
+      "sourceNameId": 8234,
+      "sourceRows": [
+        101,
+        112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 2,
+      "materialId": 5002,
+      "type": 20,
+      "name": "蓝色徽章",
+      "sourceNameId": 8235,
+      "sourceRows": [
+        201,
+        212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 3,
+      "materialId": 5003,
+      "type": 20,
+      "name": "橙色徽章",
+      "sourceNameId": 8236,
+      "sourceRows": [
+        301,
+        312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 4,
+      "materialId": 5004,
+      "type": 20,
+      "name": "彩虹徽章",
+      "sourceNameId": 8237,
+      "sourceRows": [
+        401,
+        412
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 5,
+      "materialId": 5005,
+      "type": 20,
+      "name": "粉红徽章",
+      "sourceNameId": 8238,
+      "sourceRows": [
+        501,
+        512
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 6,
+      "materialId": 5006,
+      "type": 20,
+      "name": "金色徽章",
+      "sourceNameId": 8239,
+      "sourceRows": [
+        601,
+        612
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 7,
+      "materialId": 5007,
+      "type": 20,
+      "name": "深红徽章",
+      "sourceNameId": 8240,
+      "sourceRows": [
+        701,
+        712
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 8,
+      "materialId": 5008,
+      "type": 20,
+      "name": "绿色徽章",
+      "sourceNameId": 8241,
+      "sourceRows": [
+        801,
+        812
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 9,
+      "materialId": 6001,
+      "type": 20,
+      "name": "飞翼徽章",
+      "sourceNameId": 8242,
+      "sourceRows": [
+        901,
+        912
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 10,
+      "materialId": 6002,
+      "type": 20,
+      "name": "昆虫徽章",
+      "sourceNameId": 8243,
+      "sourceRows": [
+        1001,
+        1012
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 11,
+      "materialId": 6003,
+      "type": 20,
+      "name": "标准徽章",
+      "sourceNameId": 8244,
+      "sourceRows": [
+        1101,
+        1112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 12,
+      "materialId": 6004,
+      "type": 20,
+      "name": "魅影徽章",
+      "sourceNameId": 8245,
+      "sourceRows": [
+        1201,
+        1212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 13,
+      "materialId": 6005,
+      "type": 20,
+      "name": "打击徽章",
+      "sourceNameId": 8246,
+      "sourceRows": [
+        1301,
+        1312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 14,
+      "materialId": 6006,
+      "type": 20,
+      "name": "钢铁徽章",
+      "sourceNameId": 8247,
+      "sourceRows": [
+        1401,
+        1412
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 15,
+      "materialId": 6007,
+      "type": 20,
+      "name": "冰冻徽章",
+      "sourceNameId": 8248,
+      "sourceRows": [
+        1501,
+        1512
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 16,
+      "materialId": 6008,
+      "type": 20,
+      "name": "升龙徽章",
+      "sourceNameId": 8249,
+      "sourceRows": [
+        1601,
+        1612
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 17,
+      "materialId": 7001,
+      "type": 20,
+      "name": "月见徽章",
+      "sourceNameId": 8250,
+      "sourceRows": [
+        1701,
+        1712
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 18,
+      "materialId": 7002,
+      "type": 20,
+      "name": "大地徽章",
+      "sourceNameId": 8251,
+      "sourceRows": [
+        1801,
+        1812
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 19,
+      "materialId": 7003,
+      "type": 20,
+      "name": "光芒徽章",
+      "sourceNameId": 8252,
+      "sourceRows": [
+        1901,
+        1912
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 20,
+      "materialId": 7004,
+      "type": 20,
+      "name": "精准徽章",
+      "sourceNameId": 8253,
+      "sourceRows": [
+        2001,
+        2012
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 21,
+      "materialId": 7005,
+      "type": 20,
+      "name": "科技徽章",
+      "sourceNameId": 8254,
+      "sourceRows": [
+        2101,
+        2112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 22,
+      "materialId": 7006,
+      "type": 20,
+      "name": "力量徽章",
+      "sourceNameId": 8255,
+      "sourceRows": [
+        2201,
+        2212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 23,
+      "materialId": 7007,
+      "type": 20,
+      "name": "胜利徽章",
+      "sourceNameId": 8256,
+      "sourceRows": [
+        2301,
+        2312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 24,
+      "materialId": 7008,
+      "type": 20,
+      "name": "宇宙徽章",
+      "sourceNameId": 8257,
+      "sourceRows": [
+        2401,
+        2412
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 25,
+      "materialId": 8001,
+      "type": 20,
+      "name": "虫子徽章",
+      "sourceNameId": 8258,
+      "sourceRows": [
+        2501,
+        2512
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 26,
+      "materialId": 8002,
+      "type": 20,
+      "name": "岩壁徽章",
+      "sourceNameId": 8259,
+      "sourceRows": [
+        2601,
+        2612
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 27,
+      "materialId": 8003,
+      "type": 20,
+      "name": "战斗徽章",
+      "sourceNameId": 8260,
+      "sourceRows": [
+        2701,
+        2712
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 28,
+      "materialId": 8004,
+      "type": 20,
+      "name": "植物徽章",
+      "sourceNameId": 8261,
+      "sourceRows": [
+        2801,
+        2812
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 29,
+      "materialId": 8005,
+      "type": 20,
+      "name": "电压徽章",
+      "sourceNameId": 8262,
+      "sourceRows": [
+        2901,
+        2912
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 30,
+      "materialId": 8006,
+      "type": 20,
+      "name": "妖精徽章",
+      "sourceNameId": 8263,
+      "sourceRows": [
+        3001,
+        3012
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 31,
+      "materialId": 8007,
+      "type": 20,
+      "name": "灵力徽章",
+      "sourceNameId": 8264,
+      "sourceRows": [
+        3101,
+        3112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 32,
+      "materialId": 8008,
+      "type": 20,
+      "name": "冰山徽章",
+      "sourceNameId": 8265,
+      "sourceRows": [
+        3201,
+        3212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 33,
+      "materialId": 8009,
+      "type": 20,
+      "name": "深海徽章",
+      "sourceNameId": 8266,
+      "sourceRows": [
+        3301,
+        3312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 34,
+      "materialId": 8010,
+      "type": 20,
+      "name": "天使徽章",
+      "sourceNameId": 8267,
+      "sourceRows": [
+        3401,
+        3412
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 35,
+      "materialId": 9001,
+      "type": 20,
+      "name": "岩石徽章",
+      "sourceNameId": 8268,
+      "sourceRows": [
+        3501,
+        3512
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 36,
+      "materialId": 9002,
+      "type": 20,
+      "name": "拳击徽章",
+      "sourceNameId": 8269,
+      "sourceRows": [
+        3601,
+        3612
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 37,
+      "materialId": 9003,
+      "type": 20,
+      "name": "电力徽章",
+      "sourceNameId": 8270,
+      "sourceRows": [
+        3701,
+        3712
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 38,
+      "materialId": 9004,
+      "type": 20,
+      "name": "烈焰徽章",
+      "sourceNameId": 8271,
+      "sourceRows": [
+        3801,
+        3812
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 39,
+      "materialId": 9005,
+      "type": 20,
+      "name": "天秤徽章",
+      "sourceNameId": 8272,
+      "sourceRows": [
+        3901,
+        3912
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 40,
+      "materialId": 9006,
+      "type": 20,
+      "name": "白羽徽章",
+      "sourceNameId": 8273,
+      "sourceRows": [
+        4001,
+        4012
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 41,
+      "materialId": 9007,
+      "type": 20,
+      "name": "心灵徽章",
+      "sourceNameId": 8274,
+      "sourceRows": [
+        4101,
+        4112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 42,
+      "materialId": 9008,
+      "type": 20,
+      "name": "雨滴徽章",
+      "sourceNameId": 8275,
+      "sourceRows": [
+        4201,
+        4212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 43,
+      "materialId": 9009,
+      "type": 20,
+      "name": "魔镜徽章",
+      "sourceNameId": 8276,
+      "sourceRows": [
+        4301,
+        4312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 44,
+      "materialId": 9010,
+      "type": 20,
+      "name": "冠军徽章",
+      "sourceNameId": 8277,
+      "sourceRows": [
+        4401,
+        4412
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 45,
+      "materialId": 10001,
+      "type": 20,
+      "name": "石炭徽章",
+      "sourceNameId": 8278,
+      "sourceRows": [
+        4501,
+        4512
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 46,
+      "materialId": 10002,
+      "type": 20,
+      "name": "森林徽章",
+      "sourceNameId": 8279,
+      "sourceRows": [
+        4601,
+        4612
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 47,
+      "materialId": 10003,
+      "type": 20,
+      "name": "圆石徽章",
+      "sourceNameId": 8280,
+      "sourceRows": [
+        4701,
+        4712
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 48,
+      "materialId": 10004,
+      "type": 20,
+      "name": "沼泽徽章",
+      "sourceNameId": 8281,
+      "sourceRows": [
+        4801,
+        4812
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 49,
+      "materialId": 10005,
+      "type": 20,
+      "name": "遗迹徽章",
+      "sourceNameId": 8282,
+      "sourceRows": [
+        4901,
+        4912
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 50,
+      "materialId": 10006,
+      "type": 20,
+      "name": "矿山徽章",
+      "sourceNameId": 8283,
+      "sourceRows": [
+        5001,
+        5012
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 51,
+      "materialId": 10007,
+      "type": 20,
+      "name": "冰河徽章",
+      "sourceNameId": 8284,
+      "sourceRows": [
+        5101,
+        5112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 52,
+      "materialId": 10008,
+      "type": 20,
+      "name": "灯塔徽章",
+      "sourceNameId": 8285,
+      "sourceRows": [
+        5201,
+        5212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 53,
+      "materialId": 10009,
+      "type": 20,
+      "name": "平衡徽章",
+      "sourceNameId": 8286,
+      "sourceRows": [
+        5301,
+        5312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 54,
+      "materialId": 10010,
+      "type": 20,
+      "name": "守护徽章",
+      "sourceNameId": 8287,
+      "sourceRows": [
+        5401,
+        5412
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 55,
+      "materialId": 11001,
+      "type": 20,
+      "name": "樱花徽章",
+      "sourceNameId": 8288,
+      "sourceRows": [
+        5501,
+        5512
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 56,
+      "materialId": 11002,
+      "type": 20,
+      "name": "白浪徽章",
+      "sourceNameId": 8289,
+      "sourceRows": [
+        5601,
+        5612
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 57,
+      "materialId": 11003,
+      "type": 20,
+      "name": "轮宝徽章",
+      "sourceNameId": 8290,
+      "sourceRows": [
+        5701,
+        5712
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 58,
+      "materialId": 11004,
+      "type": 20,
+      "name": "琉璃徽章",
+      "sourceNameId": 8291,
+      "sourceRows": [
+        5801,
+        5812
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 59,
+      "materialId": 12001,
+      "type": 20,
+      "name": "稳重徽章",
+      "sourceNameId": 8292,
+      "sourceRows": [
+        5901,
+        5912
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 60,
+      "materialId": 12002,
+      "type": 20,
+      "name": "自由徽章",
+      "sourceNameId": 8293,
+      "sourceRows": [
+        6001,
+        6012
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 61,
+      "materialId": 12003,
+      "type": 20,
+      "name": "忍耐徽章",
+      "sourceNameId": 8294,
+      "sourceRows": [
+        6101,
+        6112
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 62,
+      "materialId": 12004,
+      "type": 20,
+      "name": "团结徽章",
+      "sourceNameId": 8295,
+      "sourceRows": [
+        6201,
+        6212
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 63,
+      "materialId": 12005,
+      "type": 20,
+      "name": "尊严徽章",
+      "sourceNameId": 8296,
+      "sourceRows": [
+        6301,
+        6312
+      ],
+      "missingFromCatalogBefore": true
+    },
+    {
+      "badgeIndex": 64,
+      "materialId": 12006,
+      "type": 20,
+      "name": "勇气徽章",
+      "sourceNameId": 8297,
+      "sourceRows": [
+        6401,
+        6412
+      ],
+      "missingFromCatalogBefore": true
+    }
+  ]
+}

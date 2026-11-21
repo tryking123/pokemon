@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS local_item_vip_grant (
     UNIQUE(role_id, receipt)
 );
 CREATE VIEW local_recharge_activity_order AS
-    SELECT o.* FROM local_game_payment_order o WHERE o.paysid NOT BETWEEN 301 AND 306 AND o.paysid NOT IN (2001,2002)
+    SELECT o.* FROM local_game_payment_order o WHERE o.paysid NOT BETWEEN 301 AND 306 AND o.paysid NOT BETWEEN 1001 AND 1010 AND o.paysid NOT IN (2001,2002)
     AND NOT EXISTS (SELECT 1 FROM local_luxury_gift_order g WHERE g.order_id=o.id)
     UNION ALL SELECT id,role_id,31008 AS paysid,recharge_amount AS amount,0 AS reward,
         created_at,created_at AS expires_at,created_at AS confirmed_at,created_at AS notified_at

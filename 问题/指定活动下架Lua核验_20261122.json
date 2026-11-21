@@ -1,0 +1,89 @@
+{
+  "removed": [
+    10025,
+    10037,
+    10049,
+    10050,
+    10051,
+    10052,
+    10054,
+    10055,
+    10057,
+    10067,
+    10072,
+    10073,
+    10080,
+    10082,
+    10089
+  ],
+  "lua64_executed": {
+    "33": {
+      "10025": false,
+      "10037": false,
+      "10049": false,
+      "10050": false,
+      "10051": false,
+      "10052": false,
+      "10054": false,
+      "10055": false,
+      "10057": false,
+      "10067": false,
+      "10072": false,
+      "10073": false,
+      "10080": false,
+      "10082": false,
+      "10089": false
+    },
+    "38": {
+      "10025": false,
+      "10037": false,
+      "10049": false,
+      "10050": false,
+      "10051": false,
+      "10052": false,
+      "10054": false,
+      "10055": false,
+      "10057": false,
+      "10067": false,
+      "10072": false,
+      "10073": false,
+      "10080": false,
+      "10082": false,
+      "10089": false
+    }
+  },
+  "lua32": "结构解析及双点位命中；未执行32位LuaJIT",
+  "device": "待主任务设备回归",
+  "shortcut_guard": {
+    "32": {
+      "hits": {
+        "removed_activity_shortcuts": 1
+      }
+    },
+    "64": {
+      "hits": {
+        "removed_activity_shortcuts": 1
+      },
+      "blocked": [
+        "fespumpkin",
+        "feschristmas",
+        "feskylin",
+        "fesinvest",
+        "fesdirectlygift",
+        "fesfirstcharge3",
+        "everydaypoint",
+        "fesclockin",
+        "feswishing",
+        "fessnapup",
+        "fesfirstcharge2",
+        "fesluxury",
+        "feslimitshop"
+      ],
+      "shop": "通过守卫，进入原get调用后因独立函数无upvalue而中止",
+      "chargevoucher": "通过守卫，进入原get调用后因独立函数无upvalue而中止",
+      "bombshell1": "通过守卫，进入原get调用后因独立函数无upvalue而中止",
+      "bombshell2": "通过守卫，进入原get调用后因独立函数无upvalue而中止",
+      "fesfirstcharge": "通过守卫，进入原get调用后因独立函数无upvalue而中止"
+    }
+  }
+}

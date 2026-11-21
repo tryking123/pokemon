@@ -1,0 +1,1052 @@
+{
+  "originSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "templates": 108,
+  "recipes": 96,
+  "poolLinks": 1035,
+  "results": [
+    {
+      "id": 1001,
+      "visibleId": 1019,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1020,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1002,
+      "visibleId": 1020,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1021,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1003,
+      "visibleId": 1021,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1022,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1004,
+      "visibleId": 1022,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1023,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1005,
+      "visibleId": 1023,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1024,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1006,
+      "visibleId": 1024,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1025,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1007,
+      "visibleId": 1025,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1026,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1008,
+      "visibleId": 1026,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1027,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1009,
+      "visibleId": 1027,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1010,
+      "visibleId": 1019,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1020,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1011,
+      "visibleId": 1020,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1021,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1012,
+      "visibleId": 1021,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1022,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1013,
+      "visibleId": 1022,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1023,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1014,
+      "visibleId": 1023,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1024,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1015,
+      "visibleId": 1024,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1025,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1016,
+      "visibleId": 1025,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1026,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1017,
+      "visibleId": 1026,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1027,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1018,
+      "visibleId": 1027,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1019,
+      "visibleId": 1019,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1020,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1020,
+      "visibleId": 1020,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1021,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1021,
+      "visibleId": 1021,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1022,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1022,
+      "visibleId": 1022,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1023,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1023,
+      "visibleId": 1023,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1024,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1024,
+      "visibleId": 1024,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1025,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1025,
+      "visibleId": 1025,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1026,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1026,
+      "visibleId": 1026,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1027,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1027,
+      "visibleId": 1027,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1028,
+      "visibleId": 1046,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1047,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1029,
+      "visibleId": 1047,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1048,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1030,
+      "visibleId": 1048,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1049,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1031,
+      "visibleId": 1049,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1050,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1032,
+      "visibleId": 1050,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1051,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1033,
+      "visibleId": 1051,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1052,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1034,
+      "visibleId": 1052,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1053,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1035,
+      "visibleId": 1053,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1054,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1036,
+      "visibleId": 1054,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1037,
+      "visibleId": 1046,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1047,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1038,
+      "visibleId": 1047,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1048,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1039,
+      "visibleId": 1048,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1049,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1040,
+      "visibleId": 1049,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1050,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1041,
+      "visibleId": 1050,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1051,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1042,
+      "visibleId": 1051,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1052,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1043,
+      "visibleId": 1052,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1053,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1044,
+      "visibleId": 1053,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1054,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1045,
+      "visibleId": 1054,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1046,
+      "visibleId": 1046,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1047,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1047,
+      "visibleId": 1047,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1048,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1048,
+      "visibleId": 1048,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1049,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1049,
+      "visibleId": 1049,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1050,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1050,
+      "visibleId": 1050,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1051,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1051,
+      "visibleId": 1051,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1052,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1052,
+      "visibleId": 1052,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1053,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1053,
+      "visibleId": 1053,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1054,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1054,
+      "visibleId": 1054,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1055,
+      "visibleId": 1073,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1074,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1056,
+      "visibleId": 1074,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1075,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1057,
+      "visibleId": 1075,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1076,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1058,
+      "visibleId": 1076,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1077,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1059,
+      "visibleId": 1077,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1078,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1060,
+      "visibleId": 1078,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1079,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1061,
+      "visibleId": 1079,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1080,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1062,
+      "visibleId": 1080,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1081,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1063,
+      "visibleId": 1081,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1064,
+      "visibleId": 1073,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1074,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1065,
+      "visibleId": 1074,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1075,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1066,
+      "visibleId": 1075,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1076,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1067,
+      "visibleId": 1076,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1077,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1068,
+      "visibleId": 1077,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1078,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1069,
+      "visibleId": 1078,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1079,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1070,
+      "visibleId": 1079,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1080,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1071,
+      "visibleId": 1080,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1081,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1072,
+      "visibleId": 1081,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1073,
+      "visibleId": 1073,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1074,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1074,
+      "visibleId": 1074,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1075,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1075,
+      "visibleId": 1075,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1076,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1076,
+      "visibleId": 1076,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1077,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1077,
+      "visibleId": 1077,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1078,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1078,
+      "visibleId": 1078,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1079,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1079,
+      "visibleId": 1079,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1080,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1080,
+      "visibleId": 1080,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1081,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1081,
+      "visibleId": 1081,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1082,
+      "visibleId": 1100,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1101,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1083,
+      "visibleId": 1101,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1102,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1084,
+      "visibleId": 1102,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1103,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1085,
+      "visibleId": 1103,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1104,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1086,
+      "visibleId": 1104,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1105,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1087,
+      "visibleId": 1105,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1106,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1088,
+      "visibleId": 1106,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1107,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1089,
+      "visibleId": 1107,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1108,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1090,
+      "visibleId": 1108,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1091,
+      "visibleId": 1100,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1101,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1092,
+      "visibleId": 1101,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1102,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1093,
+      "visibleId": 1102,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1103,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1094,
+      "visibleId": 1103,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1104,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1095,
+      "visibleId": 1104,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1105,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1096,
+      "visibleId": 1105,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1106,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1097,
+      "visibleId": 1106,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1107,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1098,
+      "visibleId": 1107,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1108,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1099,
+      "visibleId": 1108,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    },
+    {
+      "id": 1100,
+      "visibleId": 1100,
+      "level": 1,
+      "splitPowder": 10,
+      "slots": 1,
+      "target": 1101,
+      "ingredients": 4,
+      "coins": 100000
+    },
+    {
+      "id": 1101,
+      "visibleId": 1101,
+      "level": 2,
+      "splitPowder": 40,
+      "slots": 1,
+      "target": 1102,
+      "ingredients": 4,
+      "coins": 200000
+    },
+    {
+      "id": 1102,
+      "visibleId": 1102,
+      "level": 3,
+      "splitPowder": 160,
+      "slots": 1,
+      "target": 1103,
+      "ingredients": 4,
+      "coins": 400000
+    },
+    {
+      "id": 1103,
+      "visibleId": 1103,
+      "level": 4,
+      "splitPowder": 640,
+      "slots": 2,
+      "target": 1104,
+      "ingredients": 4,
+      "coins": 800000
+    },
+    {
+      "id": 1104,
+      "visibleId": 1104,
+      "level": 5,
+      "splitPowder": 2560,
+      "slots": 2,
+      "target": 1105,
+      "ingredients": 4,
+      "coins": 1600000
+    },
+    {
+      "id": 1105,
+      "visibleId": 1105,
+      "level": 6,
+      "splitPowder": 10240,
+      "slots": 2,
+      "target": 1106,
+      "ingredients": 4,
+      "coins": 3200000
+    },
+    {
+      "id": 1106,
+      "visibleId": 1106,
+      "level": 7,
+      "splitPowder": 40960,
+      "slots": 3,
+      "target": 1107,
+      "ingredients": 4,
+      "coins": 6400000
+    },
+    {
+      "id": 1107,
+      "visibleId": 1107,
+      "level": 8,
+      "splitPowder": 163840,
+      "slots": 3,
+      "target": 1108,
+      "ingredients": 4,
+      "coins": 12800000
+    },
+    {
+      "id": 1108,
+      "visibleId": 1108,
+      "level": 9,
+      "splitPowder": 655360,
+      "slots": 3
+    }
+  ]
+}

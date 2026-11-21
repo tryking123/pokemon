@@ -1,0 +1,56 @@
+{
+  "apkSha256": "4c7bf225bb5d23b9bf19526156a3c3b9c308802d5051a6314dc928c4be5b6b88",
+  "qaSpriteAssets": {
+    "lua32_database_skill_proto.lua.bytes": "c11c81faf04426daf4cdf166d80f8b55673453f2718c0d77f18ae082c5afccce",
+    "lua32_database_jingling_proto.lua.bytes": "8e3a251b0e122287a94b742edb971b449adce72200ae4fa80e4b5b0a84ab1d8e",
+    "lua32_module_sprite.ab": "019a2aa377a07bfe58f16b84daad84c5f9e36dea5eb0160454f7b0a97cf1bbc7",
+    "lua64_database_skill_proto.lua.bytes": "a8ff25243799f1ffe9619b486c07863ab597756ad2365264e3c150cc5c0bc53e",
+    "lua64_database_jingling_proto.lua.bytes": "63073119d540933ae977de5d925859f6f175791ed3db3c840cff8e2101b6c943",
+    "lua64_module_sprite.ab": "9a042000f697c720e7f0fe2707074460ebad4aac78550699f98375a209ea0ee2"
+  },
+  "guildCatalogCount": 106,
+  "ancientSkillTexts": {
+    "70010/name": {
+      "wordId": 23410,
+      "sameInQA": true
+    },
+    "70010/description": {
+      "wordId": 23411,
+      "sameInQA": true
+    },
+    "70010/typedes": {
+      "wordId": 22663,
+      "sameInQA": true
+    },
+    "70010/life": {
+      "wordId": 22673,
+      "sameInQA": true
+    },
+    "70010/attack2": {
+      "wordId": 22678,
+      "sameInQA": true
+    },
+    "70014/name": {
+      "wordId": 23420,
+      "sameInQA": true
+    },
+    "70014/description": {
+      "wordId": 23421,
+      "sameInQA": true
+    },
+    "70014/typedes": {
+      "wordId": 22666,
+      "sameInQA": true
+    },
+    "70014/life": {
+      "wordId": 22672,
+      "sameInQA": true
+    },
+    "70014/attack2": {
+      "wordId": 22676,
+      "sameInQA": true
+    }
+  },
+  "diagnosticScriptsExcluded": true,
+  "word1SemanticDifferenceCount": 0
+}

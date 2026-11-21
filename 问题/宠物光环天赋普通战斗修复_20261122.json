@@ -1,0 +1,515 @@
+{
+  "before": {
+    "sid": 63007,
+    "level": 100,
+    "position": 1,
+    "type1": 9,
+    "type2": 15,
+    "quality": 5,
+    "power": 300,
+    "hp_max": 38493,
+    "hp": 38493,
+    "physical_attack": 36607,
+    "special_attack": 35214,
+    "physical_defense": 32887,
+    "special_defense": 29894,
+    "hit_chance": 10120,
+    "dodge_chance": 220,
+    "crit_chance": 185,
+    "toughness": 175,
+    "speed": 13915,
+    "skill_bar": [
+      30101
+    ],
+    "trigger": [
+      38801,
+      38701
+    ],
+    "sp": 100,
+    "sprite": 63007,
+    "gender": 1,
+    "element_provide": 1000,
+    "add_skill_point_limit": 35,
+    "damage_bonus": 510,
+    "vein": 0,
+    "reduced": 110,
+    "crit_damage_bonus": 50,
+    "water_damage": 60,
+    "fire_damage": 80,
+    "dark_damage": 20,
+    "fairy_damage": 20,
+    "ice_damage": 10,
+    "ghost_damage": 30,
+    "skill_damage_reduced": 240,
+    "water_reduce": 40,
+    "fire_reduce": 70,
+    "dark_reduce": 20,
+    "fairy_reduce": 20,
+    "ice_reduce": 20,
+    "ghost_reduce": 60,
+    "normal_damage": 80,
+    "electric_damage": 30,
+    "fight_damage": 50,
+    "psychic_damage": 60,
+    "normal_reduce": 80,
+    "electric_reduce": 50,
+    "fight_reduce": 20,
+    "psychic_reduce": 120,
+    "elf_score": 18589300,
+    "training": {
+      "gender": 1,
+      "skillBar": [
+        30101
+      ]
+    }
+  },
+  "after": {
+    "sid": 63007,
+    "level": 100,
+    "position": 1,
+    "type1": 9,
+    "type2": 15,
+    "quality": 5,
+    "power": 300,
+    "hp_max": 42159,
+    "hp": 42159,
+    "physical_attack": 39520,
+    "special_attack": 38016,
+    "physical_defense": 33909,
+    "special_defense": 29894,
+    "hit_chance": 10120,
+    "dodge_chance": 220,
+    "crit_chance": 185,
+    "toughness": 175,
+    "speed": 13915,
+    "skill_bar": [
+      30101
+    ],
+    "trigger": [
+      38801,
+      38701,
+      8003,
+      8001
+    ],
+    "sp": 100,
+    "sprite": 63007,
+    "gender": 1,
+    "element_provide": 1000,
+    "add_skill_point_limit": 35,
+    "damage_bonus": 510,
+    "vein": 0,
+    "reduced": 110,
+    "crit_damage_bonus": 50,
+    "water_damage": 60,
+    "fire_damage": 80,
+    "dark_damage": 20,
+    "fairy_damage": 20,
+    "ice_damage": 10,
+    "ghost_damage": 30,
+    "skill_damage_reduced": 240,
+    "water_reduce": 40,
+    "fire_reduce": 70,
+    "dark_reduce": 20,
+    "fairy_reduce": 20,
+    "ice_reduce": 20,
+    "ghost_reduce": 60,
+    "normal_damage": 80,
+    "electric_damage": 30,
+    "fight_damage": 50,
+    "psychic_damage": 60,
+    "normal_reduce": 80,
+    "electric_reduce": 50,
+    "fight_reduce": 20,
+    "psychic_reduce": 120,
+    "elf_score": 19623000,
+    "training": {
+      "gender": 1,
+      "skillBar": [
+        30101
+      ]
+    }
+  },
+  "aura_samples": [
+    {
+      "aura": 1001,
+      "field": "hp_max",
+      "before": 288,
+      "after": 300,
+      "expected": 300
+    },
+    {
+      "aura": 2001,
+      "field": "physical_attack",
+      "before": 341,
+      "after": 357,
+      "expected": 357
+    },
+    {
+      "aura": 3001,
+      "field": "special_attack",
+      "before": 211,
+      "after": 222,
+      "expected": 222
+    },
+    {
+      "aura": 4001,
+      "field": "physical_defense",
+      "before": 187,
+      "after": 196,
+      "expected": 196
+    },
+    {
+      "aura": 5001,
+      "field": "special_defense",
+      "before": 188,
+      "after": 197,
+      "expected": 197
+    },
+    {
+      "aura": 6001,
+      "field": "speed",
+      "before": 222,
+      "after": 233,
+      "expected": 233
+    },
+    {
+      "aura": 7001,
+      "field": "crit_chance",
+      "before": 0,
+      "after": 80,
+      "expected": 80
+    },
+    {
+      "aura": 8001,
+      "field": "toughness",
+      "before": 0,
+      "after": 96,
+      "expected": 96
+    },
+    {
+      "aura": 9001,
+      "field": "hit_chance",
+      "before": 10000,
+      "after": 10080,
+      "expected": 10080
+    },
+    {
+      "aura": 10001,
+      "field": "dodge_chance",
+      "before": 0,
+      "after": 64,
+      "expected": 64
+    },
+    {
+      "aura": 11001,
+      "field": "damage_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 12001,
+      "field": "reduced",
+      "before": 0,
+      "after": 60,
+      "expected": 60
+    },
+    {
+      "aura": 13001,
+      "field": "physical_damage_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 14001,
+      "field": "physical_damage_reduced",
+      "before": 0,
+      "after": 60,
+      "expected": 60
+    },
+    {
+      "aura": 15001,
+      "field": "special_damage_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 16001,
+      "field": "special_damage_reduced",
+      "before": 0,
+      "after": 60,
+      "expected": 60
+    },
+    {
+      "aura": 17001,
+      "field": "crit_damage_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 18001,
+      "field": "basic_crit_damage_reduction",
+      "before": 0,
+      "after": 60,
+      "expected": 60
+    },
+    {
+      "aura": 19001,
+      "field": "poison_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 20001,
+      "field": "burning_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 21001,
+      "field": "dot_damage_redduction",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 22001,
+      "field": "skill_damage_reduced",
+      "before": 0,
+      "after": 100,
+      "expected": 100
+    },
+    {
+      "aura": 23001,
+      "field": "rebound_damage_reduction",
+      "before": 0,
+      "after": 100,
+      "expected": 100
+    },
+    {
+      "aura": 24001,
+      "field": "real_crit_damage_reduction",
+      "before": 0,
+      "after": 40,
+      "expected": 40
+    },
+    {
+      "aura": 25001,
+      "field": "real_damage_reduction",
+      "before": 0,
+      "after": 40,
+      "expected": 40
+    },
+    {
+      "aura": 26001,
+      "field": "sex_bonus",
+      "before": 0,
+      "after": 50,
+      "expected": 50
+    },
+    {
+      "aura": 27001,
+      "field": "sex_reduce",
+      "before": 0,
+      "after": 60,
+      "expected": 60
+    }
+  ],
+  "actual_battle": {
+    "errno": 0,
+    "seed": 1386612105,
+    "weather": 0,
+    "player": {
+      "identifer": "player",
+      "power": 600,
+      "pokemon": [
+        {
+          "id": "player-1",
+          "sid": 63007,
+          "level": 100,
+          "position": 1,
+          "type1": 9,
+          "type2": 15,
+          "quality": 5,
+          "power": 300,
+          "parent": "player",
+          "hp_max": 42159,
+          "hp": 42159,
+          "physical_attack": 39520,
+          "special_attack": 38016,
+          "physical_defense": 33909,
+          "special_defense": 29894,
+          "hit_chance": 10120,
+          "dodge_chance": 220,
+          "crit_chance": 185,
+          "toughness": 175,
+          "speed": 13915,
+          "skill_bar": [
+            30101
+          ],
+          "trigger": [
+            38801,
+            38701,
+            8003,
+            8001
+          ],
+          "sp": 100,
+          "sprite": 63007,
+          "gender": 1,
+          "element_provide": 1000,
+          "add_skill_point_limit": 35,
+          "damage_bonus": 510,
+          "vein": 0,
+          "reduced": 110,
+          "crit_damage_bonus": 50,
+          "water_damage": 60,
+          "fire_damage": 80,
+          "dark_damage": 20,
+          "fairy_damage": 20,
+          "ice_damage": 10,
+          "ghost_damage": 30,
+          "skill_damage_reduced": 240,
+          "water_reduce": 40,
+          "fire_reduce": 70,
+          "dark_reduce": 20,
+          "fairy_reduce": 20,
+          "ice_reduce": 20,
+          "ghost_reduce": 60,
+          "normal_damage": 80,
+          "electric_damage": 30,
+          "fight_damage": 50,
+          "psychic_damage": 60,
+          "normal_reduce": 80,
+          "electric_reduce": 50,
+          "fight_reduce": 20,
+          "psychic_reduce": 120
+        },
+        {
+          "id": "player-2",
+          "sid": 63007,
+          "level": 100,
+          "position": 2,
+          "type1": 9,
+          "type2": 15,
+          "quality": 5,
+          "power": 300,
+          "parent": "player",
+          "hp_max": 42159,
+          "hp": 42159,
+          "physical_attack": 39520,
+          "special_attack": 38016,
+          "physical_defense": 33909,
+          "special_defense": 29894,
+          "hit_chance": 10120,
+          "dodge_chance": 220,
+          "crit_chance": 185,
+          "toughness": 175,
+          "speed": 13915,
+          "skill_bar": [
+            30101
+          ],
+          "trigger": [
+            38801,
+            38701,
+            8003,
+            8001
+          ],
+          "sp": 100,
+          "sprite": 63007,
+          "gender": 1,
+          "element_provide": 1000,
+          "add_skill_point_limit": 35,
+          "damage_bonus": 510,
+          "vein": 0,
+          "reduced": 110,
+          "crit_damage_bonus": 50,
+          "water_damage": 60,
+          "fire_damage": 80,
+          "dark_damage": 20,
+          "fairy_damage": 20,
+          "ice_damage": 10,
+          "ghost_damage": 30,
+          "skill_damage_reduced": 240,
+          "water_reduce": 40,
+          "fire_reduce": 70,
+          "dark_reduce": 20,
+          "fairy_reduce": 20,
+          "ice_reduce": 20,
+          "ghost_reduce": 60,
+          "normal_damage": 80,
+          "electric_damage": 30,
+          "fight_damage": 50,
+          "psychic_damage": 60,
+          "normal_reduce": 80,
+          "electric_reduce": 50,
+          "fight_reduce": 20,
+          "psychic_reduce": 120
+        }
+      ],
+      "sid": 101,
+      "preference": 1,
+      "pvp": false,
+      "isnpc": false,
+      "pet": {
+        "sid": 10001,
+        "uid": "qa-pet",
+        "hp": 4160000,
+        "percent": 0
+      }
+    },
+    "monster": {
+      "identifer": "monster",
+      "power": 20,
+      "pokemon": [
+        {
+          "id": "monster-1",
+          "sid": 100014,
+          "level": 1,
+          "position": 1,
+          "type1": 11,
+          "type2": 0,
+          "quality": 2,
+          "power": 20,
+          "parent": "monster",
+          "hp_max": 1,
+          "hp": 1,
+          "physical_attack": 8,
+          "special_attack": 8,
+          "physical_defense": 1,
+          "special_defense": 1,
+          "hit_chance": 0,
+          "dodge_chance": 0,
+          "crit_chance": 0,
+          "toughness": 0,
+          "speed": 10,
+          "skill_bar": [
+            10149
+          ],
+          "trigger": [],
+          "sp": 0,
+          "sprite": 32012,
+          "gender": 1,
+          "element_provide": 1000,
+          "add_skill_point_limit": 0
+        }
+      ],
+      "sid": 101,
+      "preference": 1,
+      "pvp": false,
+      "isnpc": true
+    }
+  },
+  "encoded_frames": 11,
+  "cold_restart_verified": true,
+  "checks": {
+    "installed": 70,
+    "cold": 10
+  },
+  "apk_sha256": "64771597cd1c6c3bfa90a1632fd3af0eeb7c0b365b2227f9762a7e63e3c04bd6",
+  "native_engine_result": "实际Formation.new/Stage.new/prepare: 两只精灵deathchain=true，原30101技能upanishads=2，保留原触发及技能"
+}

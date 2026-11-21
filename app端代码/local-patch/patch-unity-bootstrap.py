@@ -13,7 +13,8 @@ METADATA_ENTRY = "assets/bin/Data/Managed/Metadata/global-metadata.dat"
 ORIGIN_SHA256 = "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45"
 METADATA_SHA256 = "1e91f55802c661e6eea8f8cdef0509814360b0504a89abb7bc3989075adf4062"
 ORIGINAL_URI = b"http://fkbb005cdn.17dreamfly.com/pkm2_bt_ds"
-LOCAL_URI = b"http://127.0.0.1:8081"
+# 安装后由 UnityMetadataCache 按当前设备的私有目录替换此占位符。
+LOCAL_URI = b"file:///sdcard/Android/data/com.ymfy.shxjl2mdb.aiqu/files/offline-bootstrap"
 CONFIG_URI_INDEX = 6438
 STRING_USAGE = 0xA000324D
 
@@ -93,7 +94,6 @@ def patch_metadata(data):
         offset + length > blob_size
         or data[address:address + length] != ORIGINAL_URI
         or data.count(ORIGINAL_URI) != 1
-        or len(LOCAL_URI) > length
     ):
         raise ValueError("底包 ConfigURI 字符串不符")
     for index, (other_length, other_offset) in enumerate(
@@ -104,10 +104,12 @@ def patch_metadata(data):
         if other_offset < offset + length and offset < other_offset + other_length:
             raise ValueError("ConfigURI 字符串与其他字面量重叠")
 
-    patched = bytearray(data)
-    struct.pack_into("<I", patched, entry, len(LOCAL_URI))
-    patched[address:address + length] = LOCAL_URI.ljust(length, b"\x00")
+    # 新 URI 追加在文件末尾，其他 metadata 表保持原偏移。
+    patched = bytearray(data + LOCAL_URI)
+    struct.pack_into("<II", patched, entry, len(LOCAL_URI), len(data) - blob)
+    struct.pack_into("<I", patched, 20, len(patched) - blob)
     return patched
+
 
 
 def main():
@@ -120,6 +122,7 @@ def main():
     args = parser.parse_args()
     if checksum(args.origin) != ORIGIN_SHA256:
         raise ValueError("底包 APK 的 SHA-256 不符")
+    args.output_root.mkdir(parents=True, exist_ok=True)
     with ZipFile(args.origin) as archive:
         entries = {}
         for abi, checks in ABI_CHECKS.items():

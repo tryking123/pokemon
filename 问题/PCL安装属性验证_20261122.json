@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-22",
+  "apk": "pokemon-offline-20261122-pcl-open.apk",
+  "sha256": "0282993e609d8c430dcd81cdeb0c3b07f2b41beff845c9793fec294df0417b54",
+  "installed_apk_hash_matches": true,
+  "target_package": "com.ymfy.shxjl2mdb.aiqu",
+  "method": "Android Instrumentation，在已安装APK进程内执行实际PclResearchService并从SQLite重读，调用实际BattleService.player生成快照；非全部Unity界面及最终伤害结算验收",
+  "trainer_level": 80,
+  "elf_species": 63007,
+  "elf_level": 12,
+  "wifi": false,
+  "mobile_data": false,
+  "adb_reverse": false,
+  "cold_restart_verified": true,
+  "samples": [
+    {
+      "pair": "1-2",
+      "before": {
+        "hp_max": 38493,
+        "physical_attack": 36607,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29894,
+        "speed": 13915,
+        "damage_bonus": 5100,
+        "reduced": 1100,
+        "crit_damage_bonus": 500,
+        "add_skill_point_limit": 35,
+        "toughness": 175,
+        "elf_score": 2230716,
+        "trigger": [
+          424092
+        ],
+        "training": {}
+      },
+      "after": {
+        "hp_max": 38493,
+        "physical_attack": 36641,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29894,
+        "speed": 13915,
+        "damage_bonus": 5600,
+        "reduced": 1600,
+        "crit_damage_bonus": 500,
+        "add_skill_point_limit": 35,
+        "toughness": 175,
+        "elf_score": 2301068,
+        "trigger": [
+          201002,
+          424092
+        ],
+        "training": {
+          "pcl": [
+            {
+              "index": 1,
+              "path": 1,
+              "level": 5,
+              "num": 0
+            },
+            {
+              "index": 2,
+              "path": 2,
+              "level": 5,
+              "num": 0
+            }
+          ],
+          "pclSpent": {
+            "20026": 31,
+            "21026": 4000,
+            "20003": 4000,
+            "20022": 31
+          },
+          "pcltype": 1002
+        }
+      }
+    },
+    {
+      "pair": "3-4",
+      "before": {
+        "hp_max": 38493,
+        "physical_attack": 36607,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29894,
+        "speed": 13915,
+        "damage_bonus": 5100,
+        "reduced": 1100,
+        "crit_damage_bonus": 500,
+        "add_skill_point_limit": 35,
+        "toughness": 175,
+        "elf_score": 2230716,
+        "trigger": [
+          424092
+        ],
+        "training": {}
+      },
+      "after": {
+        "hp_max": 38515,
+        "physical_attack": 36607,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29894,
+        "speed": 13915,
+        "damage_bonus": 5100,
+        "reduced": 1100,
+        "crit_damage_bonus": 1800,
+        "add_skill_point_limit": 40,
+        "toughness": 175,
+        "elf_score": 2300960,
+        "trigger": [
+          207002,
+          208002,
+          424092
+        ],
+        "training": {
+          "pcl": [
+            {
+              "index": 1,
+              "path": 3,
+              "level": 5,
+              "num": 0
+            },
+            {
+              "index": 2,
+              "path": 4,
+              "level": 5,
+              "num": 0
+            }
+          ],
+          "pclSpent": {
+            "20023": 31,
+            "21026": 4000,
+            "20003": 4000,
+            "20025": 31
+          },
+          "pcltype": 8002
+        }
+      },
+      "reset": {
+        "hp_max": 38493,
+        "physical_attack": 36607,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29894,
+        "speed": 13915,
+        "damage_bonus": 5100,
+        "reduced": 1100,
+        "crit_damage_bonus": 500,
+        "add_skill_point_limit": 35,
+        "toughness": 175,
+        "elf_score": 2230716,
+        "trigger": [
+          424092
+        ],
+        "training": {}
+      }
+    },
+    {
+      "pair": "5-2",
+      "before": {
+        "hp_max": 38493,
+        "physical_attack": 36607,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29894,
+        "speed": 13915,
+        "damage_bonus": 5100,
+        "reduced": 1100,
+        "crit_damage_bonus": 500,
+        "add_skill_point_limit": 35,
+        "toughness": 175,
+        "elf_score": 2230716,
+        "trigger": [
+          424092
+        ],
+        "training": {}
+      },
+      "after": {
+        "hp_max": 38493,
+        "physical_attack": 36607,
+        "special_attack": 35214,
+        "physical_defense": 32887,
+        "special_defense": 29912,
+        "speed": 13915,
+        "damage_bonus": 5100,
+        "reduced": 1600,
+        "crit_damage_bonus": 500,
+        "add_skill_point_limit": 35,
+        "toughness": 335,
+        "elf_score": 2300936,
+        "trigger": [
+          206002,
+          424092
+        ],
+        "training": {
+          "pcl": [
+            {
+              "index": 1,
+              "path": 5,
+              "level": 5,
+              "num": 0
+            },
+            {
+              "index": 2,
+              "path": 2,
+              "level": 5,
+              "num": 0
+            }
+          ],
+          "pclSpent": {
+            "20024": 31,
+            "21026": 4000,
+            "20003": 4000,
+            "20022": 31
+          },
+          "pcltype": 7002
+        }
+      }
+    }
+  ]
+}
