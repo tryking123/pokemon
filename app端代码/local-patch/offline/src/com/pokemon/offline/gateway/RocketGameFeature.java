@@ -134,8 +134,11 @@ final class RocketGameFeature implements GameFeature {
     public boolean handle(LocalRole role,SprotoProtocol.Request request,GameReply output) throws IOException {
         int type=request.type;
         if(type==3001 || type==3002) {
-            if(!rocket.active(role.id))return false;
             Object argument=request.body.get("objs");
+            boolean terminal = type == 3001 && number(request.body,"flag",-1) == 3
+                    && argument instanceof List && !((List<?>) argument).isEmpty()
+                    && String.valueOf(((List<?>) argument).get(0)).startsWith("npc:rocket:");
+            if(!terminal && !rocket.active(role.id))return false;
             ObjectNode event=rocket.turn(role.id,(int)number(request.body,"sid",0),
                     argument instanceof List?(List<?>)argument:Collections.emptyList(),(int)number(request.body,"flag",-1),type==3002);
             if(event.has("next"))output.push(458,wire((ObjectNode)event.get("next"),458));

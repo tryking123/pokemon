@@ -47,7 +47,7 @@ public final class PetCombatRules {
     }
 
     /**
-     * 汇总实际解锁的不同家族光环，保留原属性编号及原单位。
+     * 按槽位累加已解锁的光环属性，保留原属性编号及原单位。
      * @param pet 当前出战宠物
      * @return 原属性编号与累计数值
      */
@@ -55,11 +55,10 @@ public final class PetCombatRules {
         Map<Integer,Integer> result=new LinkedHashMap<>();
         if(!valid(pet))return result;
         int count=activeSlots(pet);
-        Set<Integer> families=new HashSet<>();
         JsonNode auras=pet.path("aureole_id");
         for(int i=0;i<Math.min(count,auras.size());i++) {
             JsonNode row=RULES.path("auras").path(auras.get(i).asText());
-            if(!row.isObject() || !families.add(row.path("family").asInt()))continue;
+            if(!row.isObject())continue;
             JsonNode values=row.path("attributes");
             for(int n=0;n+1<values.size();n+=2) {
                 int code=values.get(n).asInt();

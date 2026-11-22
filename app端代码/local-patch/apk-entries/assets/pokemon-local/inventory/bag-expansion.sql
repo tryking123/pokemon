@@ -5,4 +5,3 @@ CREATE TABLE IF NOT EXISTS local_bag_expansion (
     amount INTEGER NOT NULL CHECK (amount > 0),
     PRIMARY KEY (role_id, bag, request_key)
 );
-

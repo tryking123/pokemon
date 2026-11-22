@@ -1,0 +1,6 @@
+# Lua 补丁按原字节嵌入客户端，保留已验收版本的换行。
+local-adven-reentry.lua text eol=lf
+local-awake-character.lua text eol=lf
+local-awake-stages.lua text eol=lf
+local-team-talents.lua text eol=lf
+local-rocket-result.lua -text

@@ -111,7 +111,7 @@ public class DisconnectedBattleService {
         if (feast.active(roleId)) feast.turn(roleId, 0, Collections.emptyList(), -1, true);
         if (worldBoss.active(roleId)) worldBoss.turn(roleId, 0, Collections.emptyList(), -1, true);
         if (arena.active(roleId)) arena.flee(roleId);
-        if (rocket.active(roleId)) rocket.turn(roleId, 0, Collections.emptyList(), -1, true);
+        rocket.reconnect(roleId);
         if (dnf.active(roleId)) dnf.advance(roleId, 0, Collections.emptyList(), -1, true);
         if (zodiac.active(roleId)) zodiac.advance(roleId, 0, Collections.emptyList(), -1, true);
         if (daily.active(roleId)) daily.advance(roleId, 0, Collections.emptyList(), -1, true);

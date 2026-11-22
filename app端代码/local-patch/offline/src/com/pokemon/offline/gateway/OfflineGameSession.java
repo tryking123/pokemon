@@ -83,13 +83,25 @@ public final class OfflineGameSession {
         requireConnected();
         if (payload == null || payload.length == 0 || payload.length > 65535) throw new IOException("离线消息长度无效");
         SprotoProtocol.Request request = protocol.decodeRequest(payload);
-        committed(() -> {
-            if (!games.handle(connection, request, reply)) {
-                unknown.add(request.type);
-                Map<String, Object> failure = protocol.unsupported(request);
-                if (!failure.isEmpty()) reply.send(request, failure);
-            }
-        });
+        if (request.type == 3 || request.type == 3006) {
+            android.util.Log.i("PokemonOffline", "开始本地请求 C" + request.type + " session=" + request.session
+                    + (request.type == 3006 ? " sid=" + request.body.get("sid") : ""));
+        }
+        try {
+            committed(() -> {
+                if (!games.handle(connection, request, reply)) {
+                    unknown.add(request.type);
+                    Map<String, Object> failure = protocol.unsupported(request);
+                    if (!failure.isEmpty()) reply.send(request, failure);
+                }
+            });
+        } catch (IOException | RuntimeException failure) {
+            // committed 已完成回滚并丢弃本次消息；只回原会话失败，不重放资产操作。
+            android.util.Log.e("PokemonOffline", "本地请求失败 C" + request.type, failure);
+            Map<String, Object> body = protocol.localFailure(request);
+            if (body.isEmpty()) throw new IOException("本地请求执行失败 C" + request.type, failure);
+            pending.add(protocol.response(request, body));
+        }
         return drain();
     }
 
@@ -194,7 +206,12 @@ public final class OfflineGameSession {
         private long nextTick;
         @Override public int actorSession() { return connection.id; }
         @Override public void periodic(RequestWork work) { periodic = work; nextTick = System.nanoTime() + 1_000_000_000L; }
-        @Override public void send(SprotoProtocol.Request request, Map<String,Object> body) throws IOException { write(protocol.response(request, body)); }
+        @Override public void send(SprotoProtocol.Request request, Map<String,Object> body) throws IOException {
+            if (request.type == 3 || request.type == 3006) {
+                android.util.Log.i("PokemonOffline", "生成本地响应 C" + request.type + " errno=" + body.get("errno"));
+            }
+            write(protocol.response(request, body));
+        }
         @Override public void push(int type, Map<String,Object> body) throws IOException { write(protocol.push(type, body)); }
         private void write(byte[] frame) throws IOException {
             if (buffer == null) throw new IOException("消息必须在本地事务中生成");

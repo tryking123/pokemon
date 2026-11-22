@@ -16,4 +16,3 @@ CREATE TABLE IF NOT EXISTS local_dojo_point_purchase (
     points BIGINT NOT NULL CHECK (points > 0),
     PRIMARY KEY (role_id, request_key)
 );
-
