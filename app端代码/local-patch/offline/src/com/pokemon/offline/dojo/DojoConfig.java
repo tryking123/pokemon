@@ -58,13 +58,21 @@ public class DojoConfig {
     }
 
     /**
-     * 为指定道馆中的怪物组生成稳定实例编号。
+     * 按道馆内的配置顺序区分同模板的多个实例，保留首次出现时的既有编号。
      *
      * @param dojoId 道馆编号
-     * @param groupId 怪物组编号
+     * @param groupIndex 怪物组在本道馆的配置序号，从零开始
      * @return 用于场景点击、挑战和移除同步的编号
      */
-    public String groupId(int dojoId, int groupId) {
-        return "dojo-" + dojoId + "-" + groupId;
+    public String groupInstanceId(int dojoId, int groupIndex) {
+        JsonNode groups = stage(dojoId).get(3);
+        int template = groups.get(groupIndex).get(0).asInt();
+        String id = "dojo-" + dojoId + "-" + template;
+        for (int i = 0; i < groupIndex; i++) {
+            if (groups.get(i).get(0).asInt() == template) {
+                return id + "-" + groupIndex;
+            }
+        }
+        return id;
     }
 }

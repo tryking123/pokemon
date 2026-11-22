@@ -44,9 +44,14 @@ public final class OfflineBridge {
             if (request == null || request.length() > 262144) throw new IllegalArgumentException("离线操作长度无效");
             JsonNode input = JSON.readTree(request);
             if (input == null || !input.isObject()) throw new IllegalArgumentException("离线操作格式无效");
-            EmbeddedRuntime runtime = EmbeddedRuntime.get(application);
+            String operation = input.path("op").asText();
+            EmbeddedRuntime runtime = "clientError".equals(operation) ? null : EmbeddedRuntime.get(application);
             List<byte[]> frames = new ArrayList<>();
-            switch (input.path("op").asText()) {
+            switch (operation) {
+                case "clientError":
+                    String message = input.path("message").asText("未知客户端异常");
+                    android.util.Log.e("PokemonOffline", "客户端本地回调异常：" + message.substring(0, Math.min(4096, message.length())));
+                    break;
                 case "connect": runtime.game().connect(); break;
                 case "disconnect": runtime.game().disconnect(); break;
                 case "request": frames = runtime.game().request(unhex(input.path("payload").asText())); break;

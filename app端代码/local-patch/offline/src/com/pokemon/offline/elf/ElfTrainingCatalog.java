@@ -31,6 +31,17 @@ public final class ElfTrainingCatalog {
     }
 
     /**
+     * 读取原页面进阶使用的成长表：非终形取首个进化目标，终形取自身编号乘十。
+     * @param speciesId 当前物种模板编号
+     * @return 当前进阶费用与上限对应的原成长行
+     */
+    public static JsonNode advanceRule(int speciesId) {
+        JsonNode source = row("growth", speciesId);
+        int firstTarget = source.path("evolution").path(0).asInt();
+        return row("growth", firstTarget > 0 ? firstTarget : speciesId * 10);
+    }
+
+    /**
      * 返回原携带品中指定品质的模板编号。
      * @param quality 原品质编号
      * @return 当前底包符合条件的模板

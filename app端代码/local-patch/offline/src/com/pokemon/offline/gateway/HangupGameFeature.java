@@ -134,22 +134,22 @@ final class HangupGameFeature implements GameFeature {
         }
         String connection = quickenConnections.computeIfAbsent(output, ignored -> UUID.randomUUID().toString());
         HangupState result = hangup.quicken(role.id, connection + ":" + request.session);
-        output.send(request, data("errno", result == null ? 1 : 0));
-        if (result == null) {
+        output.send(request, data("errno", result == null ? 100006 : result.error));
+        if (result == null || result.error != 0) {
             return;
         }
         if (result.pendingSeconds > 0) {
+            pushReward(role.id, output, "hangup.quicken", result);
             LocalRole saved = roles.findById(role.id).orElse(role);
             output.push(3, data("coins", saved.coins, "diamonds", saved.diamonds, "level", saved.level,
                     "exp", saved.exp, "exp1", result.elfPool));
             battle.pushElfs(role.id, output);
-            pushReward(role.id, output, "hangup.quicken", result);
         }
         push(role.id, output);
     }
 
     /**
-     * 同步本次入账的数值和普通道具，并在有掉落时更新背包。
+     * 同步实际到账的道具、训练家装备与精灵，并按入包结果刷新背包。
      *
      * @param roleId 已结算的角色编号
      * @param output 当前连接
@@ -159,11 +159,18 @@ final class HangupGameFeature implements GameFeature {
      */
     private void pushReward(String roleId, GameReply output, String flag, HangupState result) throws IOException {
         Map<String, Object> adds = data("coins", result.coins, "exp", result.roleExp, "exp1", result.elfExp);
-        if (!result.items.isEmpty()) {
-            adds.put("items", itemRows(result.items));
+        List<Map<String, Object>> items = itemRows(result.items);
+        result.equipment.forEach(gear -> items.add(bags.equipmentItem(gear)));
+        if (!items.isEmpty()) {
+            adds.put("items", items);
+        }
+        if (!result.elves.isEmpty()) {
+            List<Map<String, Object>> elves = new ArrayList<>();
+            result.elves.forEach(elf -> elves.add(BattleGameFeature.elfInfo(elf)));
+            adds.put("elf", elves);
         }
         output.push(14, data("flags", flag, "adds", adds));
-        if (!result.items.isEmpty()) {
+        if (!items.isEmpty()) {
             bags.push(roleId, output);
         }
         bags.pushMailCount(roleId, output);

@@ -68,9 +68,12 @@ public class AdventureProgressService {
      * @param roleId 已锁定的角色编号
      * @param configId 底包装备模板编号
      * @param slot 底包装备部位
+     * @return 实际写入背包的装备实例
      */
-    public void grantEquipment(String roleId, int configId, int slot) {
-        mapper.insertEquipment(roleId, new AdventureEquipment(UUID.randomUUID().toString(), configId, slot));
+    public AdventureEquipment grantEquipment(String roleId, int configId, int slot) {
+        AdventureEquipment gear = new AdventureEquipment(UUID.randomUUID().toString(), configId, slot);
+        mapper.insertEquipment(roleId, gear);
+        return gear;
     }
 
     /**

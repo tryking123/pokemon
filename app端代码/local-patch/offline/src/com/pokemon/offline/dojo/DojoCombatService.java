@@ -108,7 +108,7 @@ public class DojoCombatService {
         }
         JsonNode groups = stage.get(3);
         int index = 0;
-        while (index < groups.size() && !config.groupId((int) dojo, groups.get(index).get(0).asInt()).equals(monster)) {
+        while (index < groups.size() && !config.groupInstanceId((int) dojo, index).equals(monster)) {
             index++;
         }
         if (index == groups.size() || (!practice && (progress.defeated & (1 << index)) != 0)) {
@@ -205,7 +205,7 @@ public class DojoCombatService {
         mapper.saveProgress(roleId, new DojoMapper.Progress(cleared ? Math.max(progress.history, attempt.dojo)
                 : progress.history, cleared ? stage.get(2).asInt() : attempt.dojo, progress.tactics, cleared ? 0 : groups,
                 progress.day, progress.failures, progress.practices));
-        return config.groupId(attempt.dojo, group.get(0).asInt());
+        return config.groupInstanceId(attempt.dojo, attempt.group);
     }
 
     /**
@@ -280,10 +280,10 @@ public class DojoCombatService {
      *
      * @param roleId 角色标识
      * @param sceneId 道馆场景编号
-     * @param monsterId 道馆场景怪物组编号
+     * @param monsterId 道馆场景怪物组实例编号
      * @return 是否应从场景快照中移除
      */
-    public boolean cleared(String roleId, int sceneId, int monsterId) {
+    public boolean cleared(String roleId, int sceneId, String monsterId) {
         int dojo = sceneId - 71100;
         JsonNode stage = config.stage(dojo);
         if (stage == null) {
@@ -294,7 +294,7 @@ public class DojoCombatService {
             return true;
         }
         for (int i = 0; dojo == progress.dojo && i < stage.get(3).size(); i++) {
-            if (stage.get(3).get(i).get(0).asInt() == monsterId) {
+            if (config.groupInstanceId(dojo, i).equals(monsterId)) {
                 return (progress.defeated & (1 << i)) != 0;
             }
         }
@@ -325,7 +325,7 @@ public class DojoCombatService {
                         elf.level, base.type, base.secondType, base.quality, base.skill, true);
                 trained.put("skill_bar", ElfSkillBar.battleSkills(elf, base.skill));
                 ElfCombatGrowth.apply(elf, trained);
-                bonuses.apply(trained);
+                bonuses.withBreakthrough(elf).apply(trained);
                 players.add(trained);
             }
         }
@@ -344,7 +344,7 @@ public class DojoCombatService {
             }
         }
         return fields("errno", 0, "dojoId", attempt.dojo,
-                "monId", config.groupId(attempt.dojo, group.get(0).asInt()), "istry", attempt.practice,
+                "monId", config.groupInstanceId(attempt.dojo, attempt.group), "istry", attempt.practice,
                 "seed", attempt.seed, "weather", 0,
                 "player", fields("identifer", role.id, "sid", formations.formationId(role.id, tactics), "pokemon", players,
                         "power", 300 * players.size(), "pvp", false, "isnpc", false, "preference", 1),

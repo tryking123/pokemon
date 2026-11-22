@@ -24,6 +24,17 @@ import static com.pokemon.offline.gateway.SprotoProtocol.data;
  */
 @Component
 final class BagSnapshot {
+    /**
+     * 生成背包及通关奖励共用的装备附件。
+     * @param equipment 已入库的装备实例
+     * @return 带唯一编号和词条的装备附件
+     */
+    Map<String, Object> equipmentItem(AdventureEquipment equipment) {
+        return data("id", equipment.configId, "n", 1, "state", false, "sid", equipment.id,
+                "pos", equipment.slot, "level", 0, "extra", refinement.properties(refinement.attributes(equipment)),
+                "type", AdventureStage.EQUIPMENT, "upgrade", equipment.advanced ? 1 : 0, "lock", false, "deadline", 0);
+    }
+
     private final Map<GameReply, Long> announcedMailCounts = Collections.synchronizedMap(new java.util.WeakHashMap<>());
     private final InventoryService inventory;
     private final com.pokemon.offline.activitylevel.TrainerRuneService runes;
@@ -118,9 +129,7 @@ final class BagSnapshot {
         }
         for (AdventureEquipment equipment : adventure.equipment(roleId)) {
             // 此查询仅返回未穿戴实例，state=false 与存档一致；本地装备无锁定与时限，lock=false、deadline=0。
-            items.add(data("id", equipment.configId, "n", 1, "state", false, "sid", equipment.id,
-                    "pos", equipment.slot, "level", 0, "extra", refinement.properties(refinement.attributes(equipment)),
-                    "type", AdventureStage.EQUIPMENT, "upgrade",equipment.advanced ? 1 : 0, "lock", false, "deadline", 0));
+            items.add(equipmentItem(equipment));
         }
         for(com.fasterxml.jackson.databind.JsonNode stone:secret.getIfAvailable().stones(roleId)){
             List<Map<String,Object>> attributes = new ArrayList<>();

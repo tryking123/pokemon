@@ -13,9 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -44,18 +42,15 @@ public final class PetCustomizeActivity extends Activity {
     /** 下拉选项的原始配置编号及说明。 */
     private static final class Choice {
         final int id;
-        final int family;
         final String label;
 
         /**
          * 创建合法配置选项。
          * @param id 原配置编号
-         * @param family 光环家族，其他选项为零
          * @param label 中文显示说明
          */
-        Choice(int id, int family, String label) {
+        Choice(int id, String label) {
             this.id = id;
-            this.family = family;
             this.label = label;
         }
 
@@ -118,7 +113,7 @@ public final class PetCustomizeActivity extends Activity {
         aptitude = select(form, "资质", catalog.getJSONArray("aptitudes"), draft.optInt("aptitudes", 1), false);
         talent = select(form, "第一天赋", catalog.getJSONArray("talents"), draft.optInt("talent"), false);
         talent2 = select(form, "第二天赋", catalog.getJSONArray("talents"), draft.optInt("talent2", current.optInt("talent_2")), true);
-        text(form, "光环最多预设4条，同一家族只能选择1条。战斗加成按宠物星级依次解锁；定制会保留当前星级。");
+        text(form, "光环最多预设4条，同一光环可重复选择。战斗时按宠物星级依次解锁，每个已解锁的光环分别生效。");
         JSONArray configured = draft.optJSONArray("aureoles");
         if (configured == null) configured = current.optJSONArray("aureole_id");
         if (configured == null) configured = new JSONArray();
@@ -150,11 +145,11 @@ public final class PetCustomizeActivity extends Activity {
     private Spinner select(LinearLayout form, String title, JSONArray rows, int selected, boolean empty) throws Exception {
         text(form, title);
         List<Choice> choices = new ArrayList<>();
-        if (empty) choices.add(new Choice(0, 0, "不预设"));
+        if (empty) choices.add(new Choice(0, "不预设"));
         for (int index = 0; index < rows.length(); index++) {
             JSONObject row = rows.getJSONObject(index);
             String description = row.optString("description");
-            choices.add(new Choice(row.getInt("id"), row.optInt("family"), row.getString("name")
+            choices.add(new Choice(row.getInt("id"), row.getString("name")
                     + (description.isEmpty() ? "" : " · " + description)));
         }
         if (choices.isEmpty()) throw new IllegalStateException("缺少" + title + "配置");
@@ -182,7 +177,7 @@ public final class PetCustomizeActivity extends Activity {
     /**
      * 收集当前宠物的字段，最终合法性仍由业务层校验。
      * @return 绑定当前个体与幂等回执的定制请求
-     * @throws Exception 输入格式或家族选择不合法
+     * @throws Exception 输入格式或等级不合法
      */
     private JSONObject requestBody() throws Exception {
         int chosenLevel;
@@ -190,11 +185,9 @@ public final class PetCustomizeActivity extends Activity {
         catch (NumberFormatException failure) { throw new IllegalArgumentException("请输入有效等级"); }
         if (chosenLevel < minLevel || chosenLevel > maxLevel) throw new IllegalArgumentException("等级须在" + minLevel + "—" + maxLevel + "之间");
         JSONArray selected = new JSONArray();
-        Set<Integer> families = new HashSet<>();
         for (Spinner spinner : aureoles) {
             Choice choice = (Choice) spinner.getSelectedItem();
             if (choice.id == 0) continue;
-            if (!families.add(choice.family)) throw new IllegalArgumentException("同一家族的光环只能选择一条");
             selected.put(choice.id);
         }
         return new JSONObject().put("roleId", roleId).put("petId", petId).put("requestId", receipt)

@@ -17,10 +17,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 /**
  * 当前宠物定制 Service，校验本人实例与原配置并原子保存，不消耗养成材料。
@@ -94,11 +92,10 @@ public final class PetCustomizationService {
                 || option("aptitudes",aptitude)==null || option("talents",talent)==null
                 || talent2!=0 && option("talents",talent2)==null)throw invalid("等级、资质或天赋不在可选范围");
         if(vo.aureoles==null || !vo.aureoles.isArray() || vo.aureoles.size()>4)throw invalid("光环最多设置四条");
-        Set<Integer> families=new HashSet<>();
         ArrayNode auras=json.createArrayNode();
         for(JsonNode value:vo.aureoles) {
             int id=integer(value);
-            if(option("aureoles",id)==null || !families.add(id/1000))throw invalid("光环无效或存在相同类型");
+            if(option("aureoles",id)==null)throw invalid("光环编号无效");
             auras.add(id);
         }
         pet.put("level",level).put("aptitudes",aptitude).put("talent",talent).put("talent_2",talent2);

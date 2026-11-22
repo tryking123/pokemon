@@ -1,6 +1,9 @@
 package com.pokemon.offline.hangup;
 
 import com.pokemon.offline.activitylevel.AdventureProgressService;
+import com.pokemon.offline.activitylevel.api.entity.AdventureEquipment;
+import com.pokemon.offline.elf.ElfService;
+import com.pokemon.offline.elf.api.entity.LocalElf;
 import com.pokemon.offline.balance.GameplayRewards;
 import com.pokemon.offline.battle.AdventureStage;
 import com.pokemon.offline.battle.FirstBattleData;
@@ -15,6 +18,9 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.UUID;
+import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.Map;
 import com.pokemon.offline.platform.stereotype.Service;
@@ -47,6 +53,7 @@ public class HangupService {
     private final GamePaymentService payments;
     private final GameplayRewards rewards;
     private final SpeedCardService speed;
+    private final ElfService elves;
 
     /**
      * 连接挂机收益、角色与冒险进度存档。
@@ -59,9 +66,12 @@ public class HangupService {
      * @param payments 最新 VIP 额度
      * @param rewards 全局挂机掉落时间间隔和概率池
      * @param speed 挂机额外金币和经验权益
+     * @param elves 快速战斗精灵入包和容量查询
      */
     HangupService(HangupMapper mapper, BattleMapper battles, RoleService roles, AdventureProgressService adventure,
-                  InventoryService inventory, GamePaymentService payments, GameplayRewards rewards, SpeedCardService speed) {
+                  InventoryService inventory, GamePaymentService payments, GameplayRewards rewards, SpeedCardService speed,
+                  ElfService elves) {
+        this.elves = elves;
         this.speed = speed;
         this.mapper = mapper;
         this.battles = battles;
@@ -339,12 +349,38 @@ public class HangupService {
             return new HangupState(state.mapId, state.creditedAt, 0, 0, 0, 0, state.elfPool);
         }
         int used = mapper.quickenCount(roleId, day, null);
-        Map<Integer, Long> items = rewards.hangupItems(roleId, "hangup.quicken:" + day,
-                (long) used * QUICKEN_SECONDS, QUICKEN_SECONDS);
+        GameplayRewards.QuickenDrop drop = rewards.quickenDrop(roleId, day, used, state.mapId, QUICKEN_SECONDS);
+        if (drop.equipment.size() > inventory.ordinaryCapacity(roleId) - inventory.ordinaryUsed(roleId)) {
+            return new HangupState(state.mapId, state.creditedAt, 0, 0, 0, 0, state.elfPool, Collections.emptyMap(),
+                    0, 0, Collections.emptyList(), Collections.emptyList(), 100049);
+        }
         if (!inventory.spendMaterials(roleId, 0, 0, 0, QUICKEN_COST[Math.min(used, QUICKEN_COST.length - 1)])) {
             return null;
         }
-        Map<Integer, Long> delivered = inventory.grantItemsOrMail(roleId, "hangup.quicken:" + day + ":" + used, items);
+        String receipt = "hangup.quicken:" + day + ":" + used;
+        List<AdventureEquipment> equipment = new ArrayList<>();
+        for (int template : drop.equipment) {
+            equipment.add(adventure.grantEquipment(roleId, template, AdventureStage.equipmentPosition(template)));
+        }
+        List<LocalElf> grantedElves = new ArrayList<>();
+        int freeElves = inventory.elfCapacity(roleId) - elves.list(roleId).size();
+        List<Integer> overflow = new ArrayList<>();
+        for (int template : drop.elves) {
+            if (grantedElves.size() < freeElves) {
+                grantedElves.add(elves.grant(roleId, template));
+            } else {
+                Collections.addAll(overflow, 2, template, 1);
+            }
+        }
+        if (!overflow.isEmpty()) {
+            String mail = UUID.nameUUIDFromBytes((roleId + ":" + receipt + ":elf").getBytes(StandardCharsets.UTF_8)).toString();
+            inventory.createRewardMail(roleId, mail, "快速战斗精灵", "精灵背包已满，腾出位置后可领取。",
+                    now.getEpochSecond(), now.plusSeconds(30L * 86400).getEpochSecond(), overflow);
+        }
+        Map<Integer, Long> items = new LinkedHashMap<>(rewards.hangupItems(roleId, "hangup.quicken:" + day,
+                (long) used * QUICKEN_SECONDS, QUICKEN_SECONDS));
+        drop.items.forEach((id, quantity) -> items.merge(id, quantity, Math::addExact));
+        Map<Integer, Long> delivered = inventory.grantItemsOrMail(roleId, receipt, items);
         AdventureStage rate = AdventureStage.hangupRate(mission);
         SpeedCardService.Bonus bonus = speed.bonus(roleId, now.getEpochSecond(), QUICKEN_SECONDS, true);
         long coins = (long) QUICKEN_SECONDS * rate.coins + bonus.coins(rate.coins);
@@ -355,7 +391,8 @@ public class HangupService {
         mapper.save(roleId, new HangupState(state.mapId, state.creditedAt, state.pendingSeconds,
                 state.coins, state.roleExp, state.elfExp, pool, Collections.emptyMap(), state.dungeonGroup, state.dungeonSeconds));
         mapper.recordQuicken(roleId, day, requestId);
-        return new HangupState(state.mapId, state.creditedAt, QUICKEN_SECONDS, coins, roleExp, elfExp, pool, delivered);
+        return new HangupState(state.mapId, state.creditedAt, QUICKEN_SECONDS, coins, roleExp, elfExp, pool, delivered,
+                0, 0, equipment, grantedElves, 0);
     }
 
     /**

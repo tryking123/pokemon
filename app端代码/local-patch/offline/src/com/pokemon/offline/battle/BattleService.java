@@ -1,6 +1,7 @@
 package com.pokemon.offline.battle;
 
 import com.pokemon.offline.activitylevel.AdventureProgressService;
+import com.pokemon.offline.activitylevel.api.entity.AdventureEquipment;
 import com.pokemon.offline.battle.api.entity.BattleAttempt;
 import com.pokemon.offline.elf.ElfCombatGrowth;
 import com.pokemon.offline.elf.ElfService;
@@ -573,9 +574,14 @@ public class BattleService implements SceneEncounterState {
         if (hangup.usedFast(roleId, key)) {
             return new FastAdventure(100011, Collections.emptyList());
         }
-        if (!isAdventureScene(role.sceneId) || party(roleId).isEmpty()
-                || isActive(mapper.findAttempt(roleId), Instant.now().getEpochSecond())) {
-            return new FastAdventure(100012, Collections.emptyList());
+        if (!isAdventureScene(role.sceneId)) {
+            return new FastAdventure(100003, Collections.emptyList());
+        }
+        if (party(roleId).isEmpty()) {
+            return new FastAdventure(100067, Collections.emptyList());
+        }
+        if (isActive(mapper.findAttempt(roleId), Instant.now().getEpochSecond())) {
+            return new FastAdventure(3004, Collections.emptyList());
         }
         int first = adventure.nextMission(roleId);
         List<AdventureStage> stages = new ArrayList<>();
@@ -596,13 +602,16 @@ public class BattleService implements SceneEncounterState {
             mission = stage.next;
         }
         if (stages.isEmpty()) {
-            return new FastAdventure(100012, Collections.emptyList());
+            return new FastAdventure(AdventureStage.find(first) == null ? 4006 : 100079, Collections.emptyList());
         }
         if (slots > 0 && slots > inventory.ordinaryCapacity(roleId) - inventory.ordinaryUsed(roleId)) {
-            return new FastAdventure(100015, Collections.emptyList());
+            return new FastAdventure(100049, Collections.emptyList());
         }
-        if (role.diamonds < 1000 || !hangup.recordFast(roleId, key)) {
-            return new FastAdventure(100012, Collections.emptyList());
+        if (role.diamonds < 1000) {
+            return new FastAdventure(100006, Collections.emptyList());
+        }
+        if (!hangup.recordFast(roleId, key)) {
+            return new FastAdventure(100011, Collections.emptyList());
         }
         if (!inventory.spendMaterials(roleId, Collections.emptyMap(), 0, 1000)) {
             throw new IllegalStateException("角色锁内闯关钻石扣费失败");
@@ -624,16 +633,19 @@ public class BattleService implements SceneEncounterState {
      * 创建原关卡奖励中的独立装备。
      * @param roleId 已加锁的角色
      * @param stage 已验证的原配置
+     * @return 本关已发放的装备实例
      */
-    private void grantStageEquipment(String roleId, AdventureStage stage) {
+    private List<AdventureEquipment> grantStageEquipment(String roleId, AdventureStage stage) {
+        List<AdventureEquipment> equipment = new ArrayList<>();
         for (int i = 0; i < stage.rewards.size(); i += 3) {
             if (stage.rewards.get(i) == AdventureStage.EQUIPMENT) {
                 int id = stage.rewards.get(i + 1);
                 for (int count = 0; count < stage.rewards.get(i + 2); count++) {
-                    adventure.grantEquipment(roleId, id, AdventureStage.equipmentPosition(id));
+                    equipment.add(adventure.grantEquipment(roleId, id, AdventureStage.equipmentPosition(id)));
                 }
             }
         }
+        return equipment;
     }
 
     /**
@@ -726,17 +738,18 @@ public class BattleService implements SceneEncounterState {
     }
 
     /**
-     * 将客户端传入的合法技能目标应用到当前战斗，并在达成胜利时结算一次。
+     * 结算本地冒险引擎已判定的胜利，其他副本按合法技能目标推进。
      *
      * @param roleId 角色标识
-     * @param skill 操作中的技能编号
-     * @param targets 客户端选中的目标实例编号
-     * @param flag 客户端输入模式
-     * @return 仅在服务端确认本场首次结算时返回结果
+     * @param skill 操作中的技能编号；冒险胜利传零
+     * @param targets 普通攻击的目标实例，或冒险胜利的本场敌队编号
+     * @param flag 客户端输入模式，2 表示本地冒险胜利
+     * @return 本场首次结算结果，其他情况为空
      */
     @Transactional
     public Victory synchronize(String roleId, int skill, List<?> targets, int flag) {
-        if (skill <= 0 || targets == null || targets.isEmpty() || flag < -1 || flag > 1) {
+        boolean adventureWin = flag == 2 && skill == 0;
+        if ((!adventureWin && (skill <= 0 || flag < -1 || flag > 1)) || targets == null || targets.isEmpty()) {
             return null;
         }
         LocalRole role = roles.lockRole(roleId);
@@ -746,11 +759,24 @@ public class BattleService implements SceneEncounterState {
             return null;
         }
         AdventureStage stage = AdventureStage.find(attempt.encounter);
-        if (stage != null && (adventure.nextMission(roleId) != attempt.encounter || role.stage < stage.requiredWorld)) {
+        if (stage != null) {
+            // 本地原战斗引擎判胜后才结算；选择攻击目标不等于击败目标。
+            if (!adventureWin || targets.size() != 1 || !("local-" + attempt.id).equals(targets.get(0))
+                    || !isAdventureScene(role.sceneId) || adventure.nextMission(roleId) != attempt.encounter
+                    || role.stage < stage.requiredWorld) {
+                return null;
+            }
+            attempt.status = "WON";
+            mapper.update(roleId, attempt);
+            List<AdventureEquipment> equipment = grantStageEquipment(roleId, stage);
+            Victory victory = clearAdventure(roleId, attempt.encounter, stage);
+            victory.equipment.addAll(equipment);
+            return victory;
+        }
+        if (adventureWin) {
             return null;
         }
-        boolean validScene = stage != null ? isAdventureScene(role.sceneId)
-                : attempt.encounter == FirstBattleData.GUIDE ? isGuideScene(role.sceneId)
+        boolean validScene = attempt.encounter == FirstBattleData.GUIDE ? isGuideScene(role.sceneId)
                 : role.sceneId == FirstBattleData.SCENE;
         if (!validScene) {
             return null;
@@ -766,7 +792,7 @@ public class BattleService implements SceneEncounterState {
         if (targets.size() > targetLimit) {
             return null;
         }
-        FirstBattleData.Encounter plan = stage == null ? FirstBattleData.encounter(attempt.encounter) : stage.encounter;
+        FirstBattleData.Encounter plan = FirstBattleData.encounter(attempt.encounter);
         int mask = 0;
         for (Object target : targets) {
             int slot = battleSlot(attempt, plan, target);
@@ -783,10 +809,6 @@ public class BattleService implements SceneEncounterState {
         }
         attempt.status = "WON";
         mapper.update(roleId, attempt);
-        if (stage != null) {
-            grantStageEquipment(roleId, stage);
-            return clearAdventure(roleId, attempt.encounter, stage);
-        }
         if (mapper.cleared(roleId).contains(attempt.encounter)) {
             return null;
         }
@@ -940,8 +962,14 @@ public class BattleService implements SceneEncounterState {
         List<Map<String, Object>> players = new ArrayList<>();
         RoleCosmeticService.BattleBonuses bonuses = cosmetics.battleBonuses(role.id);
         for (LocalElf elf : party) {
-            Map<String,Object> member=player(role.id,elf,bonuses,attempt.seed);
-            if(role.sceneId==FirstBattleData.SCENE)member.put("hp",mapper.dungeonLife(role.id,elf.id,((Number)member.get("hp_max")).intValue()));
+            Map<String, Object> member = player(role.id, elf, bonuses, attempt.seed);
+            if (role.sceneId == FirstBattleData.SCENE) {
+                int maximum = ((Number) member.get("hp_max")).intValue();
+                member.put("hp", mapper.dungeonLife(role.id, elf.id, maximum));
+            } else if (stage != null) {
+                // 主线开场由原战斗引擎叠加队伍天赋，再按最终生命上限填满。
+                member.remove("hp");
+            }
             players.add(member);
         }
         List<Map<String, Object>> opponents = new ArrayList<>();
@@ -1070,6 +1098,8 @@ public class BattleService implements SceneEncounterState {
         public final List<QuestTask> tasks;
         /** 实际直接放入背包的普通道具。 */
         public final Map<Integer, Long> delivered;
+        /** 普通冒险胜利时实际入包的装备实例。 */
+        public final List<AdventureEquipment> equipment = new ArrayList<>();
         /** 本次是否生成溢出奖励邮件。 */
         public final boolean mailed;
 
