@@ -1,12 +1,12 @@
 # pokemon
 
-守护小精灵 / 天天驯兽师本地 AI 版。交付目标为可独立运行的 Android APK，具体范围与实现约定见 [项目全局规范](AGENTS.md)。
+守护小精灵 / 天天驯兽师本地 AI 版。交付目标为可独立运行的 Android APK，默认全部在 App 内离线实现，不使用服务端代码或 HTTP/TCP 监听。具体范围与实现约定见 [项目全局规范](AGENTS.md)。
 
 ## 开发与协作
 
 - [全局 Git 协作规范](CONTRIBUTING.md)：首次上传、分支权限、开 PR、提 Issue、关联问题与发布流程。
 - [Android 内置运行环境与构建](app端代码/local-patch/README.md)
-- [PC 服务端开发联调](服务端代码/README.md)
+- [历史 PC 服务端参考](服务端代码/README.md)（仅明确要求时使用，不参与 App 构建）
 - [反馈 BUG 或提交需求](https://github.com/tryking123/pokemon/issues/new/choose)
 
 `main` 为稳定分支，仅所有者可更新；`devlop` 为集成分支，需通过 PR 审核。仓库内提供权限规则配置，须在 GitHub 导入启用后生效，见协作规范。

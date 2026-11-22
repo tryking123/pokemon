@@ -1,0 +1,168 @@
+{
+  "architecture_keys": "architecture",
+  "beijing_hour": 4,
+  "pet_battle_changed": false,
+  "pet_current": {
+    "id": 10001,
+    "level": 100,
+    "itype": 1,
+    "health": 100,
+    "love": 1,
+    "loveexp": 0,
+    "lastcheck": 1795291535,
+    "lastshit": 1795291535,
+    "aptitudes": 4,
+    "talent": 1009,
+    "star": 0,
+    "wash_times": 0,
+    "use_times": 0,
+    "status": [
+      10
+    ],
+    "talent_pos": [
+      1,
+      2
+    ],
+    "talent_2": 0,
+    "talent_2_pos": [],
+    "aureole_id": [
+      1003,
+      2003,
+      7003,
+      27003
+    ],
+    "cooldown": []
+  },
+  "encoded_frames": 93,
+  "bank": "{\"bbox\":[],\"bank\":[{\"sid\":63007,\"num\":7}]}",
+  "cold_restart_verified": true,
+  "statues": [
+    {
+      "template": 5001,
+      "field": "damage_bonus",
+      "before": 510,
+      "built": 610,
+      "upgraded": 620,
+      "removed": 510,
+      "local_score_before": 185893,
+      "local_score_built": 185893
+    },
+    {
+      "template": 6001,
+      "field": "crit_chance",
+      "before": 185,
+      "built": 193,
+      "upgraded": 201,
+      "removed": 185,
+      "local_score_before": 185893,
+      "local_score_built": 185893
+    },
+    {
+      "template": 7001,
+      "field": "crit_damage_bonus",
+      "before": 50,
+      "built": 150,
+      "upgraded": 170,
+      "removed": 50,
+      "local_score_before": 185893,
+      "local_score_built": 185893
+    },
+    {
+      "template": 8001,
+      "field": "sex_bonus",
+      "before": 0,
+      "built": 100,
+      "upgraded": 110,
+      "removed": 0,
+      "local_score_before": 185893,
+      "local_score_built": 185893
+    },
+    {
+      "template": 9001,
+      "field": "real_damage_reduction",
+      "before": 0,
+      "built": 10,
+      "upgraded": 20,
+      "removed": 0,
+      "local_score_before": 185893,
+      "local_score_built": 185893
+    },
+    {
+      "template": 10001,
+      "field": "add_skill_point_limit",
+      "before": 35,
+      "built": 40,
+      "upgraded": 42,
+      "removed": 35,
+      "local_score_before": 185893,
+      "local_score_built": 185893
+    }
+  ],
+  "statue_final": {
+    "sid": 63007,
+    "level": 1,
+    "position": 0,
+    "type1": 9,
+    "type2": 15,
+    "quality": 5,
+    "power": 300,
+    "hp_max": 38493,
+    "hp": 38493,
+    "physical_attack": 36607,
+    "special_attack": 35214,
+    "physical_defense": 32887,
+    "special_defense": 29894,
+    "hit_chance": 10120,
+    "dodge_chance": 220,
+    "crit_chance": 185,
+    "toughness": 175,
+    "speed": 13915,
+    "skill_bar": [
+      10175
+    ],
+    "trigger": [
+      38801,
+      38701
+    ],
+    "sp": 100,
+    "sprite": 63007,
+    "gender": 1,
+    "element_provide": 1000,
+    "add_skill_point_limit": 40,
+    "damage_bonus": 510,
+    "vein": 0,
+    "reduced": 110,
+    "crit_damage_bonus": 50,
+    "water_damage": 60,
+    "fire_damage": 80,
+    "dark_damage": 20,
+    "fairy_damage": 20,
+    "ice_damage": 10,
+    "ghost_damage": 30,
+    "skill_damage_reduced": 240,
+    "water_reduce": 40,
+    "fire_reduce": 70,
+    "dark_reduce": 20,
+    "fairy_reduce": 20,
+    "ice_reduce": 20,
+    "ghost_reduce": 60,
+    "normal_damage": 80,
+    "electric_damage": 30,
+    "fight_damage": 50,
+    "psychic_damage": 60,
+    "normal_reduce": 80,
+    "electric_reduce": 50,
+    "fight_reduce": 20,
+    "psychic_reduce": 120,
+    "elf_score": 185893,
+    "training": {}
+  },
+  "statue_cold_verified": true,
+  "apk": "pokemon-local-20261122-home-pet-bank-v3.apk",
+  "apk_sha256": "19b5600ca2f2298fd29bd03be7a0c651e629317f1246610aa4ecd32b298a2458",
+  "checks": {
+    "business": 54,
+    "statues": 37,
+    "cold": 11
+  }
+}

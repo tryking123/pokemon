@@ -1,0 +1,16 @@
+{
+  "apkSha256": "e66b4f69d1f197e0bbd8278b20309ee8d604eaf4de83cc3840d64bd6334e77e7",
+  "resources": {
+    "elf/character.json": "ad991e65fcd316405451ec151c216519cfa7b5e3ab12cc0a2d3e0669cf9c9647",
+    "activity/periods.json": "77e20d1451a0b78ead70f719260832dd19ad086d51550cdb4110fb56776b0300",
+    "schema-payment.sql": "c5a9f3a250e560ad52a5b9ee6f96777e1b926ca8696d052d40b5555ec7f58852"
+  },
+  "activityGuards": {
+    "32/module_mgr": "a14d3dce36ff08b8bf47ae5573972544a7dd77f1b51f87e8ff10c72e465ca86f",
+    "32/sdk_mgr": "e6f56224a12b5e7d821de105cd79fdaabfa6bfa692b002b4f12b298c89957bd9",
+    "32/gfes_model": "52481a185c58c1e155f126892df6f36623fb5ed0e19dfb9faa6d3f8ba2a2619a",
+    "64/module_mgr": "74c24b56486d4a26b9b78539fe632961ee6a175ba856787499668c5d7153f386",
+    "64/sdk_mgr": "51cacdf547c82811d9b3d3a97b7a6f770e2da03770735801d8842c9532eade7c",
+    "64/gfes_model": "be9dda9165d23e544c27ef9ead5fe66764368d72c05f9a552e82f8e2dcdd61ae"
+  }
+}

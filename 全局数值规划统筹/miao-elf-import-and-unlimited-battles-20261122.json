@@ -1,0 +1,36 @@
+{
+  "version": "miao-elf-import-and-unlimited-battles-20261122-v2",
+  "status": "planned-and-statically-verified",
+  "sourceApk": "app包/origin/喵星联盟_001.apk.1",
+  "sourceApkSha256": "fa0e3709c212817ab60ed10a3f944f6c449dd587cdea4d03c4e6d806f4d49b8c",
+  "preservedElfId": 64188,
+  "rebate": {
+    "activityId": 10026,
+    "protocols": [174, 176],
+    "runtimeResource": "app端代码/local-patch/offline/resources/activity/score-exchange.json",
+    "preserveOriginalOfferCount": 19,
+    "appendOnly": true,
+    "periodDays": 7,
+    "signPointsPerDay": 5,
+    "pointsPerConfirmedYuan": 1,
+    "offers": [
+      {"index": 20, "sourceId": 64188, "name": "真·百变怪", "cost": 100, "limit": 0, "reward": [2, 64190, 1]},
+      {"index": 21, "sourceId": 64189, "name": "小软", "cost": 100, "limit": 0, "reward": [2, 64189, 1]}
+    ]
+  },
+  "grantMail": {"elfType": 2, "defaultQuantity": 1, "preserveExistingQuantityValidation": true, "ids": [64190, 64189]},
+  "battleOnlyForms": {"baseElfId": 64189, "ids": [641891, 641892, 641893], "directGrantAllowed": false, "rebateOfferAllowed": false, "standaloneOwnedInstanceAllowed": false},
+  "fastAdventure": {"dailyLimit": null, "vipLimit": null, "diamondsPerAction": 1000, "maximumStagesPerAction": 100, "clearBaseRewardSeconds": 60, "preserveAreaAndCapacityChecks": true, "preserveReceipt": true},
+  "quickBattle": {
+    "dailyLimit": null,
+    "vipLimit": null,
+    "secondsPerAction": 7200,
+    "dailyPriceSequence": [200, 400, 800, 1200, 1600, 2000, 2500, 3000, 3000, 4000, 4000, 5000, 7000, 7000, 10000, 10000],
+    "afterPriceSequence": "repeat-last",
+    "tailPrice": 10000,
+    "priceIndex": "min(completedToday, dailyPriceSequence.length - 1)",
+    "dailyPriceResetTimezone": "Asia/Shanghai",
+    "preserveRewardsAndSpeedBonus": true,
+    "preserveReceipt": true
+  }
+}

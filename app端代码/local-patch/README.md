@@ -1,34 +1,49 @@
-# Android 单机版
+# 纯离线 App 代码与构建
 
-安装 APK 后直接打开，用 `admin/admin` 登录并启动 Unity。首次建角为 1 级、0 经验，已有角色沿用存档等级，存档位于应用私有 SQLite 数据库 `pokemon-offline.db`。运行要求 Android 8.0 及以上，无需启动电脑 Java 服务或配置 ADB 端口。PC 版 H2 存档不会自动导入，卸载应用或清除应用数据会清掉设备上的单机存档。
+默认实现规则见仓库 [AGENTS.md](../../AGENTS.md)。App 业务、SQLite 存档和运行配置均独立归属本目录，构建不读取 `服务端代码/`，不运行 Spring、H2 或 PC 服务，不使用 App 内 HTTP/TCP 监听或 ADB 反向转发。
 
-打包脚本 `app包/build_local_apk.py` 将 DEX、SQLite 表结构及原协议配置加入固定底包。Android 登录、票据和模拟支付直接调用进程内业务。原 Unity 通过应用自身的回环地址获取启动配置和游戏响应，背包、精灵、交易、活动与榜单均复用已经接入的业务实现。模拟订单不扣款。
+## 代码与数据
 
-打包时使用 Python 3.11 或更高版本，并通过本地安装或 `--python-libs` 提供 pycryptodome 和 UnityPy。打包脚本从校验通过的原 APK 重新生成双 ABI 竞技购买和周奖界面、公会数值的资源补丁，将修改追加到临时载体并更新相应的清单区段。
+- `src/com/qk/local/`：Android 页面、一次触发的模拟支付及 `OfflineBridge.exchange` 直接调用入口。
+- `offline/src/com/pokemon/offline/`：App 自有业务、协议分派、SQLite 适配和轻量组件装配。`platform` 是 App 内部实现，不加载同名 Spring 框架。
+- `offline/resources/`：权威业务配置、协议和 SQLite 迁移。构建时复制到 `assets/pokemon-local/`。
+- `offline-network.lua` 和三个 `offline-*.lua`：Unity 原协议、区服、角色历史、下单的直接调用桥。
+- `native/`：ARM64 与 ARMv7 JNI 微桥，没有 socket 或其他动态库依赖。
+- `patch-unity-bootstrap.py`：校验固定底包并生成本地文件入口及已验证的原生统计补丁。
+- `patch-unity-arena.py`、`patch-unity-offline.py`：保留已接入玩法补丁，再替换双架构 Lua 的网络边界，更新资源及依赖清单。
 
-## 构建客户端补丁
+Unity 使用 `file://` 读取本地启动配置和游戏资源。首次进入前，App 从自身 APK 解密并校验资源，导出到私有 `files/offline-bootstrap/`；metadata 的文件入口在打包时绑定 APK 包名，`/sdcard` 指向当前 Android 用户；App 将小配置文件写入自己的外部私有目录，缓存原样同步 APK metadata 并核对包名，完整资源仍保存在内部私有目录。资源版本标记与资源清单绑定，失败不会写完成标记。账号、角色、订单与游戏进度仍使用私有 `pokemon-offline.db`，不重置玩家数据。
 
-使用 JDK 17、Android SDK 平台 30 的 `android.jar` 和 Android Build Tools 的 `lib/d8.jar`。以下命令在此目录执行。
+请求与推送沿用原 sproto 编解码和会话顺序，传输为 LuaJIT FFI → JNI → `OfflineBridge` → App 离线业务 → SQLite。业务提交后结果才进入 Unity 消息队列；失败丢弃本次消息。App 内计时器负责已接入玩法和到账推进，Unity 拉取已提交消息，不开网络端口。APK 移除了 INTERNET 与 ACCESS_NETWORK_STATE 权限。
+
+## 构建
+
+使用 JDK 17、API 30 android.jar、支持 16 KB 对齐的 Android Build Tools、Zig 0.13.0、Python 3.11+ 与 UnityPy/pycryptodome。Java 编译只需要第三方 Jackson 2.13.5 的三个 JAR；`MavenRepository` 仅定位这些缓存依赖，不构建 Maven 服务端项目。
+
+以下路径参数按本机工具位置调整：
 
 ```powershell
-.\build.ps1 -AndroidJar '路径\android.jar' -D8Jar '路径\lib\d8.jar' -JdkHome '路径\jdk-17'
-python .\patch-unity-bootstrap.py
+& ./app端代码/local-patch/native/build-native.ps1 -Zig '<zig.exe>' -JdkHome '<JDK目录>'
+py ./app端代码/local-patch/patch-unity-bootstrap.py
+py ./app端代码/local-patch/prepare_cosmetic_import.py --python-libs '<Python依赖目录>'
+py ./app端代码/local-patch/patch_miao_species.py --prepare-only --python-libs '<Python依赖目录>'
+py ./app端代码/local-patch/prepare_character_catalog.py --python-libs '<Python依赖目录>'
+& ./app端代码/local-patch/build.ps1 -AndroidJar '<android.jar>' -D8Jar '<d8.jar>' -JdkHome '<JDK目录>' -MavenRepository '<第三方JAR缓存目录>'
+py ./app包/build_local_apk.py --entries ./app端代码/local-patch/apk-entries --build-tools '<Build Tools目录>' --java '<java.exe>' --python-libs '<Python依赖目录>' --output ./app包/new/pokemon-offline-direct-YYYYMMDD.apk
 ```
 
-PowerShell 编译工作台、应用适配层和共享 Java 业务，Unity 声明只用于编译。编译从 Maven 本地仓库读取项目已使用的 Jackson 2.13.5 三个 JAR，可通过 `-MavenRepository` 调整路径。Python 脚本从固定底包生成共享 `global-metadata.dat` 和 ARM64、ARMv7 的 `libil2cpp.so` 补丁，把 Unity `ConfigURI` 改为应用监听的 `http://127.0.0.1:8081`，两个 ABI 的渠道统计回调直接返回。TCP `127.0.0.1:9003` 也由应用进程内监听。这两个端口与旧电脑联调版的 ADB 映射相互独立。单机 APK 最低版本为 API 26。
+重包脚本从已核验的 `app包/origin/origin.apk` 建立临时目录，先生成已有玩法资源补丁，再叠加直接调用桥；不使用暂存目录中陈旧的 `.ab` 输出。双 ABI JNI、metadata 与原生补丁按预期摘要核验，签名、16 KB 对齐及包内替换项哈希均须通过。DEX 备份保存在忽略的 `build/dex-backups/`，不混入 APK。
 
-覆盖安装后，Unity 可能保留应用外部文件目录中的 `il2cpp/Metadata/global-metadata.dat`。启动游戏时，客户端将已知原版或旧电脑联调版 SHA-256 的缓存替换成已校验的单机版本。同目录的临时文件写完后才原子替换原文件。初次安装仍由 Unity 自行提取，已更新文件直接使用，未知文件会提示核对版本。
+`miao-import/` 保存精灵、称号和皮肤的已核对新增行及来源映射。外观准备脚本按名称合并各对比包，保留底包原条目；精灵准备脚本为真·百变怪分配 `64190`，保留密勒顿 `64188`，仅将真·百变怪和小软加入发送与返利兑换。三个百分比小软只供战斗变化。重包脚本通过 `patch_miao_species.py` 叠加双架构数据、最小战斗逻辑及外观资源，重算清单；`patch_imported_images.py` 将来源图像转换为底包的 Unity 序列化格式，复用已核对的原生动画预制体。来源 APK 只供开发时提取，运行无需这些文件。
 
-## 联调
+称号通过 `TitleShow/{show}.prefab` 展示，不能只迁入图标。`patch_title_prefabs.py` 在图标导入后迁入缺失的完整UI对象图，重映射Sprite和字体外部引用；已存在路径须经文字、渐变、布局及引用的语义核对才复用。保留旧对象、原字体包及依赖关系，不将称号预制体降级为静态图替代。
 
-1. 安装并打开单机 APK，用 `admin/admin` 登录。
-2. 如需验证充值，在 Unity 的原商城发起模拟订单，检查角色余额、VIP 或礼包物品。工作台的模拟钻石单独记在本地账户。
-3. 若需要查看运行日志，使用 `adb logcat -s PokemonOffline PokemonLocalBridge LocalGameGateway`。
+`prepare_character_catalog.py` 从固定底包与已核验精灵迁移表生成 `offline/resources/elf/character.json` 中的物种特性与有效被动目录。`charactername` 是文字编号，不能作为战斗触发；旧培养表未保存特性数组时，从该目录读取真实编号。玩家存档中的合法特性覆盖继续生效，未知编号不进入战斗。
 
-Unity 通过安装包内部的回环接口读取 `/1.0.1/config.txt`、版本清单和选服脚本，游戏资源来自该安装包。工作台登录走进程内路由。Unity 请求登录时，桥签发短期游戏票据，将 `accountId` 和 `ticket` 分别放入原回调的 `userId`、`userToken`。票据过期后重新登录会再次签发。
+## 模拟支付
 
-工作台保留自己的账户模拟余额。Unity 充值页用原 WWWForm 请求应用内 `POST /getorderid`，也支持游戏协议 `ask_charge 2801`。两路径共用角色的待付订单。Android 确认时根据已保存的商品、价格和奖励结算，把钻石、道具和 VIP 进度写入设备存档。原游戏心跳同步到账及商品状态。
+工作台点击「模拟充值」，或 Unity 原页面触发购买后，App 校验本地订单并直接执行结算，不再弹出 Android 二次确认框。工作台先持久化客户端订单号；游戏侧读取本地保存的商品、价格和奖励。同一订单重复提交仍只结算一次。工作台模拟余额与游戏角色钱包各自使用原有账本，不相互混淆。
 
-当前支持周卡、月卡、终身卡和成长基金档 1–4，钻石档 5–14，礼包 101/103/104/106，经典首充、限时新手返利和 18 档钻石 VIP 福利。每日充值活动按已确认订单统计，活动积分可以在兑换商店购买原版精灵碎片。支付页面只模拟本地结算。
+## 验证范围
 
-单人冒险可挑战底包首区域的第 1 至 1,849 关及 21 张挂机地图。冒险榜读取实际进度，地图领奖和快速战斗均写入存档。训练家装备可以穿戴、替换和强化。前 24 座道馆可单人挑战，助阵槽按通关进度解锁。扭蛋活动榜按每轮高级抽取次数统计，达到 200 次可参与排行，周期截止后以系统邮件结算。
+独立构建时可只复制本目录的 `src`、`embedded`、`offline`、`stubs` 及 `build.ps1` 到临时目录，确认不存在服务端目录后构建。设备上需在无 PC 服务、无 ADB 反向转发且断外网时验证启动、登录建角、支付去重、玩法与冷启动存档。包校验或 Lua mock 不能代替 Unity 实机回归；实际结果以 App 版本记录和本轮验收记录为准。

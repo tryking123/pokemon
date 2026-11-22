@@ -1,0 +1,50 @@
+{
+  "source": "固定底包lua64_helper.ab/ghelper.lua原proto53，无修改字节码逻辑",
+  "script": ".tools/petcombat-original-run.py",
+  "samples": [
+    {
+      "level": 1,
+      "star": 0,
+      "attributes": {}
+    },
+    {
+      "level": 1,
+      "star": 1,
+      "attributes": {
+        "12": 80
+      }
+    },
+    {
+      "level": 1,
+      "star": 4,
+      "attributes": {
+        "12": 80,
+        "10": 80,
+        "11": 64,
+        "13": 96
+      }
+    },
+    {
+      "level": 79,
+      "star": 0,
+      "attributes": {}
+    },
+    {
+      "level": 79,
+      "star": 1,
+      "attributes": {
+        "12": 80
+      }
+    },
+    {
+      "level": 79,
+      "star": 4,
+      "attributes": {
+        "12": 80,
+        "10": 80,
+        "11": 64,
+        "13": 96
+      }
+    }
+  ]
+}

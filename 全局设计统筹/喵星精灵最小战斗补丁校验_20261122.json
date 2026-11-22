@@ -1,0 +1,88 @@
+[
+  {
+    "abi": 32,
+    "script": "formation",
+    "originSha256": "24b739920fc61a96a6d2e709b8991dc53e2b92fd9e873a8106ae0bbedc912319",
+    "sourceSha256": "3274d792e9973008c745b898f5b63ef8142408ebee0f5c282eb726130f5fa87e",
+    "patchedSha256": "4f3b91646325a0348cf8c66b8c32a7ba5ca2d1e88b0e8584788b3a2b49a18ee5",
+    "proof": {
+      "oldPrototypes": 257,
+      "newPrototypes": 266,
+      "originalUnchangedPrototypes": 254,
+      "replacedHelper": 3,
+      "replacedAction71": 232,
+      "addedActions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "addedTriggerNew": 264,
+      "dispatchJudgeHandleIdenticalToDonor": true,
+      "requiresStageForceSkill": true,
+      "rootInsertionAfterInstruction": 599
+    }
+  },
+  {
+    "abi": 32,
+    "script": "stage",
+    "originSha256": "7646fed177193b49747501587dda4d8a8f19ea119394adfbaee5a2edbf63be94",
+    "sourceSha256": "5f8b674a17f9753a2108710a538e899d77d885601baab9de2a6cde5a98d5a471",
+    "patchedSha256": "761d5da8d020397ef4a3bef0845da37f0b51aaf9a069389bd5db52a7db002099",
+    "proof": {
+      "oldPrototypes": 49,
+      "newPrototypes": 50,
+      "originalUnchangedPrototypes": 47,
+      "replacedPerform": 44,
+      "addedForceSkill": 48,
+      "addedEvent": 27
+    }
+  },
+  {
+    "abi": 64,
+    "script": "formation",
+    "originSha256": "ae2da7afea98c8dfa9f7a53bbc104c2be8541a9969caa3c19446167dfdba02eb",
+    "sourceSha256": "959248774b5a19528b7146b259adcf2055b4ad4edaf02aaa071b5ccfecc7ec75",
+    "patchedSha256": "b9b69334f195cc900868431f849efe31cf2a5878f54f35576aa972d20feae7ae",
+    "proof": {
+      "oldPrototypes": 257,
+      "newPrototypes": 266,
+      "originalUnchangedPrototypes": 254,
+      "replacedHelper": 3,
+      "replacedAction71": 232,
+      "addedActions": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "addedTriggerNew": 264,
+      "dispatchJudgeHandleIdenticalToDonor": true,
+      "requiresStageForceSkill": true,
+      "rootInsertionAfterInstruction": 599
+    }
+  },
+  {
+    "abi": 64,
+    "script": "stage",
+    "originSha256": "88737b661bac45baee7e69db0da345b1b35224b16b0bed61a57530f6c08d15ef",
+    "sourceSha256": "ed6871fa007729d2f19899b7dec49a237e3a416d7099ada97a9b99f4f829a1fc",
+    "patchedSha256": "e5ec168daa8f7997aab99ca089417ebd0ecaed96bfc19ff13dec21f454e990a7",
+    "proof": {
+      "oldPrototypes": 49,
+      "newPrototypes": 50,
+      "originalUnchangedPrototypes": 47,
+      "replacedPerform": 44,
+      "addedForceSkill": 48,
+      "addedEvent": 27
+    }
+  }
+]

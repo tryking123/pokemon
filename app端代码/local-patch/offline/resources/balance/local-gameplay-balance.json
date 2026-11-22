@@ -1,0 +1,61 @@
+{
+  "dojoSweep": {
+    "dailyLimitPerDojo": 1,
+    "tiers": [
+      {
+        "minDojo": 1001,
+        "maxDojo": 1008,
+        "items": [
+          {"id": 8501, "count": 1}
+        ]
+      },
+      {
+        "minDojo": 1009,
+        "maxDojo": 1016,
+        "items": [
+          {"id": 8504, "count": 1}
+        ]
+      },
+      {
+        "minDojo": 1017,
+        "maxDojo": 1024,
+        "items": [
+          {"id": 8503, "count": 1}
+        ]
+      },
+      {
+        "minDojo": 1025,
+        "maxDojo": 1032,
+        "items": [
+          {"id": 8502, "count": 2}
+        ]
+      },
+      {
+        "minDojo": 1033,
+        "maxDojo": 1040,
+        "items": [
+          {"id": 8505, "count": 2}
+        ]
+      },
+      {
+        "minDojo": 1041,
+        "maxDojo": 1048,
+        "items": [
+          {"id": 8515, "count": 2},
+          {"id": 21063, "count": 1}
+        ]
+      }
+    ]
+  },
+  "hangupDrop": {
+    "intervalSeconds": 7200,
+    "pool": [
+      {"id": 0, "count": 0, "weight": 4000},
+      {"id": 21063, "count": 1, "weight": 2500},
+      {"id": 20027, "count": 1, "weight": 1800},
+      {"id": 21082, "count": 1, "weight": 1200},
+      {"id": 21068, "count": 1, "weight": 450},
+      {"id": 21069, "count": 1, "weight": 50}
+    ]
+  }
+}

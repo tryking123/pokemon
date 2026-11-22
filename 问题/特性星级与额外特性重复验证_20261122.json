@@ -1,0 +1,162 @@
+[
+  {
+    "species": 10007,
+    "star": 0,
+    "featureslv": 0,
+    "triggers": [
+      1010
+    ]
+  },
+  {
+    "species": 10007,
+    "star": 1,
+    "featureslv": 0,
+    "triggers": [
+      1011
+    ]
+  },
+  {
+    "species": 10007,
+    "star": 10,
+    "featureslv": 0,
+    "triggers": [
+      1010
+    ]
+  },
+  {
+    "species": 10007,
+    "star": 11,
+    "featureslv": 0,
+    "triggers": [
+      1010
+    ]
+  },
+  {
+    "species": 10007,
+    "star": 15,
+    "featureslv": 0,
+    "triggers": [
+      1010
+    ]
+  },
+  {
+    "species": 64189,
+    "star": 0,
+    "featureslv": 10,
+    "triggers": [
+      105100,
+      105200,
+      105300,
+      105400,
+      105500,
+      105600,
+      105700,
+      105800,
+      105900
+    ]
+  },
+  {
+    "species": 64189,
+    "star": 1,
+    "featureslv": 10,
+    "triggers": [
+      105101,
+      105201,
+      105301,
+      105401,
+      105501,
+      105601,
+      105701,
+      105801,
+      105901
+    ]
+  },
+  {
+    "species": 64189,
+    "star": 10,
+    "featureslv": 10,
+    "triggers": [
+      105110,
+      105210,
+      105310,
+      105410,
+      105510,
+      105610,
+      105710,
+      105810,
+      105910
+    ]
+  },
+  {
+    "species": 64189,
+    "star": 11,
+    "featureslv": 10,
+    "triggers": [
+      105110,
+      105210,
+      105310,
+      105410,
+      105510,
+      105610,
+      105710,
+      105810,
+      105910
+    ]
+  },
+  {
+    "species": 64189,
+    "star": 15,
+    "featureslv": 10,
+    "triggers": [
+      105110,
+      105210,
+      105310,
+      105410,
+      105510,
+      105610,
+      105710,
+      105810,
+      105910
+    ]
+  },
+  {
+    "species": 64190,
+    "star": 0,
+    "featureslv": 10,
+    "triggers": [
+      104100
+    ]
+  },
+  {
+    "species": 64190,
+    "star": 1,
+    "featureslv": 10,
+    "triggers": [
+      104101
+    ]
+  },
+  {
+    "species": 64190,
+    "star": 10,
+    "featureslv": 10,
+    "triggers": [
+      104110
+    ]
+  },
+  {
+    "species": 64190,
+    "star": 11,
+    "featureslv": 10,
+    "triggers": [
+      104110
+    ]
+  },
+  {
+    "species": 64190,
+    "star": 15,
+    "featureslv": 10,
+    "triggers": [
+      104110
+    ]
+  }
+]

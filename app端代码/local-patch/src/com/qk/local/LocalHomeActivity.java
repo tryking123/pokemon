@@ -1,7 +1,6 @@
 package com.qk.local;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -110,7 +109,7 @@ public final class LocalHomeActivity extends Activity {
         renderControls();
     }
 
-    /** 返回工作台时刷新服务端余额。 */
+    /** 返回工作台时刷新App余额。 */
     @Override
     protected void onResume() {
         super.onResume();
@@ -171,7 +170,7 @@ public final class LocalHomeActivity extends Activity {
 
     private void showBalance(JSONObject account) {
         LocalApi.Session session = LocalApi.currentSession();
-        if (session != null) {
+        if (session != null && account != null) {
             balance.setText(session.username + "\n本地模拟钻石  " + account.optLong("balance"));
         }
     }
@@ -179,6 +178,10 @@ public final class LocalHomeActivity extends Activity {
     private void showProducts(JSONArray result) {
         catalog.clear();
         List<String> labels = new ArrayList<>();
+        if (result == null) {
+            products.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, labels));
+            return;
+        }
         for (int index = 0; index < result.length(); index++) {
             JSONObject item = result.optJSONObject(index);
             if (item != null) {
@@ -209,25 +212,14 @@ public final class LocalHomeActivity extends Activity {
             return;
         }
         Product product = catalog.get(selection);
-        new AlertDialog.Builder(this)
-                .setTitle("确认模拟充值")
-                .setMessage("发放 " + product.reward + " 本地模拟钻石。本订单不会扣款。")
-                .setNegativeButton("取消", null)
-                .setPositiveButton("确认模拟", (dialog, which) -> {
-                    if (LocalApi.currentSession() != session) {
-                        status.setText("登录会话已变更，请重新发起充值");
-                        return;
-                    }
-                    String clientOrderId = "android-" + UUID.randomUUID();
-                    boolean saved = orders.edit().putString("clientOrderId", clientOrderId)
-                            .putString("productId", product.id).commit();
-                    if (saved) {
-                        purchase(session, product.id, clientOrderId);
-                    } else {
-                        status.setText("无法保存订单编号，请重试");
-                    }
-                })
-                .show();
+        String clientOrderId = "android-" + UUID.randomUUID();
+        boolean saved = orders.edit().putString("clientOrderId", clientOrderId)
+                .putString("productId", product.id).commit();
+        if (saved) {
+            purchase(session, product.id, clientOrderId);
+        } else {
+            status.setText("无法保存订单编号，请重试");
+        }
     }
 
     private void purchase(LocalApi.Session session, String productId, String clientOrderId) {

@@ -16,14 +16,16 @@ import sys
 import zipfile
 from patch_guild_construction import patch_guild_build
 from patch_tablet_supply import patch_tablet_lua, append_tablet_protocol
+from patch_unlimited_adventure import patch_unlimited
+from patch_activity_removal import patch_activity_removal, patch_activity_shortcuts
 
 ORIGIN_SHA256 = "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45"
 ASSETS = "assets/assets/"
 METADATA = "assets/bin/Data/Managed/Metadata/global-metadata.dat"
 # 已校验底包 global-metadata 的 Unity 资源密钥字符串字节位置。
 METADATA_LITERAL_OFFSET = 86192
-SERVER_RESOURCES = Path(__file__).resolve().parents[2] / "服务端代码/src/main/resources"
-RATING_RULES = SERVER_RESOURCES / "catalog/equipment-rating.json"
+APP_RESOURCES = Path(__file__).resolve().parent / "offline/resources"
+RATING_RULES = APP_RESOURCES / "catalog/equipment-rating.json"
 OP = {"ISEQV": 4, "LEN": 21, "ADDVN": 22, "FORI": 77, "FORL": 79, "ISLE": 2, "KNUM": 42, "MOV": 18, "KSHORT": 41, "KPRI": 43, "UGET": 45, "TGETS": 57,
       "ADDVV": 32, "SUBVV": 33, "DIVVV": 35, "CAT": 38, "KSTR": 39, "TSETS": 61,
       "TGETB": 58, "CALL": 66, "RET0": 75, "RET1": 76,
@@ -178,6 +180,8 @@ def adjust_prizes(pool, instructions, counts):
     return list(reversed(pool[:-2])), instructions[:13*4] + instructions[-4:]
 
 def update_lua(source, mode):
+    if mode.startswith('unlimited_'):
+        return patch_unlimited(source, mode, Reader, encode, constants, serial_constant, pack, ins)
     if mode in ("tablet_npc", "tablet_helper"):
         return patch_tablet_lua(source, mode, Reader, encode, constants, serial_constant, pack, ins)
     if mode == "guild_unlimited_build":
@@ -207,6 +211,13 @@ def update_lua(source, mode):
         variables = proto.raw(head[3] * 2)
         pool = constants(proto, nconstants)
         numbers = proto.data[proto.pos:]
+        if mode == "pcl_unlock":
+            # 原 PCL 入口仍标记未开放；只打开 1195 对应行，保留训练家 80 级门槛。
+            for row in pool:
+                if isinstance(row, Template) and row.fields.get(b"name") == 2182:
+                    assert row.fields == {b"study": 0, b"name": 2182, b"gatelevel": 80, b"door": 0}
+                    row.fields[b"door"] = 1
+                    counts[mode] += 1
         if mode == "speed_state" and index == 2:
             assert nop == 85
             slot = head[2]
@@ -489,6 +500,31 @@ end
                            "时装盲盒每份得同款紫色时装碎片3片，紫色100%。"
                            "精灵1/10/50/100份和时装1/10份按每份20元模拟支付，购买本身不赠代金券。").encode()
             counts[mode]+=1
+        if mode == "pet_customize" and index == 13:
+            assert nop == 322 and pack(b"BG/Aptitude") not in pool and pack(b"Aptitude") in pool
+            assert instructions[-4:] == ins("RET0", 0, 1)
+            key = len(pool)
+            chunk = Path(__file__).with_name("pet-customize-button.lua").read_bytes()
+            pool = [pack(chunk), pack(b"loadstring")] + pool
+            slot = head[2]
+            arg = slot + first_argument
+            instructions = (instructions[:-4] + ins("GGET", slot, key) + ins("KSTR", arg, key + 1)
+                            + ins("CALL", slot, 514) + ins("UGET", arg, 1)
+                            + ins("CALL", slot, 258) + instructions[-4:])
+            head = head[:2] + bytes([arg + 1]) + head[3:]
+            counts[mode] += 1
+        if mode == "blind_bank_capacity" and index == 4:
+            assert nop == 67 and head[1] == 2 and head[3] == 0
+            assert pack(b"bagmax") in pool and pack(b"not_battle") in pool
+            key = len(pool)
+            chunk = Path(__file__).with_name("blind-bank-capacity.lua").read_bytes()
+            pool = [pack(chunk), pack(b"loadstring")] + pool
+            arg = 2 + first_argument
+            instructions = (ins("GGET", 2, key) + ins("KSTR", arg, key + 1)
+                            + ins("CALL", 2, 514) + ins("MOV", arg, 1)
+                            + ins("CALL", 2, 514) + ins("RET1", 2, 2))
+            head = head[:2] + bytes([max(head[2], arg + 1)]) + head[3:]
+            counts[mode] += 1
         if mode == "blind_global" and index == 0:
             # 原红点更新后通知商城刷新权威完整余额。
             key=len(pool); pool=[pack(b"LOCAL_BLIND_BOX")]+pool
@@ -721,6 +757,10 @@ local function action(name, title, x, y, width, onClick)
     label.text = title
     utils.add_click_event(button, onClick)
 end
+action("LocalEscapeMap", "脱离卡图", 235, 405, 116, function()
+    view:brocast("click_close")
+    Network.Request("mapJump", {id=990001})
+end)
 action("LocalItemMail", "发物品", 249, 344, 88, function()
     local role = chr_model.get_chr()
     if role and role.id then
@@ -738,6 +778,49 @@ action("LocalRestoreRole", "重进角色", 200, -136, 128, function()
 end)
 action("LocalStamina", "体力补给", -200, -136, 128, function()
     require("module/navi/buythired_popup").show()
+end)
+-- 四个按钮共用原礼包兑换一行，保持从左到右的操作顺序。
+local gift = view:findrect("Btns/Gifts")
+gift.anchorMin = Vector2.New(0.5, 0.5)
+gift.anchorMax = Vector2.New(0.5, 0.5)
+gift.pivot = Vector2.New(0.5, 0.5)
+gift.sizeDelta = Vector2.New(138, 50)
+gift.anchoredPosition = Vector2.New(-225, gift.anchoredPosition.y)
+local cleanupBusy = false
+local cleanupRequest = 0
+local function cleanup(kind, title, warning)
+    if cleanupBusy then return end
+    msg_popup.show(warning .. "，此操作不可恢复，确定继续？", title, 2, function(ok)
+        if not ok or cleanupBusy then return end
+        cleanupBusy = true
+        cleanupRequest = cleanupRequest + 1
+        Network.Request("local_profile_clear", {kind=kind, requestId=tostring(os.time()) .. ":" .. tostring({}) .. ":" .. cleanupRequest})
+    end)
+end
+local function cleaned(response)
+    if not cleanupBusy then return end
+    cleanupBusy = false
+    if not response or response.errno ~= 0 then
+        label_popup.show("清除失败，请重试")
+        return
+    end
+    local role = chr_model.get_chr()
+    view:brocast("click_close")
+    label_popup.show("已清除，正在重新载入角色")
+    if role and role.id then Network.Request("relogin", {sid=role.svrid or 1, uid=role.id}) end
+end
+-- 模块只保留最新页面的监听，避免重复打开时多次重进。
+if _G.LocalProfileCleanupListener then Network.RemoveListener("local_profile_clear", _G.LocalProfileCleanupListener) end
+_G.LocalProfileCleanupListener = cleaned
+Network.AddListener("local_profile_clear", cleaned)
+action("LocalClearElves", "清除所有精灵", -75, gift.anchoredPosition.y, 142, function()
+    cleanup(1, "清除所有精灵", "将删除当前角色全部精灵（含上阵、助阵、锁定精灵及其已穿戴装备）")
+end)
+action("LocalClearItems", "清除背包物品", 75, gift.anchoredPosition.y, 142, function()
+    cleanup(2, "清除背包物品", "将删除当前角色背包物品、碎片、贴纸及未穿戴装备")
+end)
+action("LocalClearMail", "清除邮箱", 225, gift.anchoredPosition.y, 138, function()
+    cleanup(3, "清除邮箱", "将删除当前角色全部邮件，未领取附件也会清除")
 end)
 local assess = view:findrect("Btns/Assess")
 assess.anchoredPosition = Vector2.New(230, 289)
@@ -937,6 +1020,8 @@ local_coupon_wallet 10991 {
  }
 }
 """
+                assert b"local_profile_clear" not in schema
+                schema += b"\nlocal_profile_clear 10994 {\n request {\n kind 0 : integer\n requestId 1 : string\n }\n response {\n errno 0 : integer\n kind 1 : integer\n }\n}\n"
                 schema = append_tablet_protocol(schema)
                 pool[i] = pack(schema)
                 counts[mode] += 1
@@ -1068,7 +1153,7 @@ local_coupon_wallet 10991 {
             assert nop == 114 and pool[-22] == pack(b"gdun_model") and pool[-25] == pack(b"grouptype")
             assert instructions[64*4:65*4] == ins("GGET", 1, 21)
             key = len(pool)
-            rules = SERVER_RESOURCES / "secret/encounters.json"
+            rules = APP_RESOURCES / "secret/encounters.json"
             tasks = json.loads(rules.read_text("utf-8"))["tasks"]
             eligible = {int(task): 0 for task, row in tasks.items() if "monsterDrop" in row}
             assert eligible and all(task > 0 for task in eligible)
@@ -1260,8 +1345,8 @@ local_coupon_wallet 10991 {
     patched.append(0)
     if mode == "variable":
         assert len(counts) == 9 and counts["家园遗迹购次"] == 2 and counts["百关钻石闯关"] == 1 and sum(counts.values()) == 10, counts
-    elif mode == "speed_state":
-        assert counts == {"speed_state":1}, counts
+    elif mode in ("speed_state", "pcl_unlock"):
+        assert counts == {mode:1}, counts
     elif mode in ("skill_upgrade_panel","skill_upgrade_rows","skill_upgrade_submit","skill_upgrade_sync"):
         assert counts == {mode:5 if mode == "skill_upgrade_rows" else 1}, counts
     elif mode in ("dungeon_hook_row","dungeon_hook_model","dungeon_hook_panel"):
@@ -1306,7 +1391,7 @@ local_coupon_wallet 10991 {
         assert counts == {"league_protocol":1, "passport_wire":1, "rocket_wire":1}, counts
     elif mode == "adventure_label":
         assert counts=={mode:1,"blind_entry":1}, counts
-    elif mode in ("blind_sales","blind_payment","blind_help","blind_global","blind_screen"):
+    elif mode in ("blind_sales","blind_payment","blind_help","blind_global","blind_screen","blind_bank_capacity","pet_customize"):
         assert counts=={mode:{"blind_sales":3,"blind_screen":2}.get(mode,1)},counts
     elif mode == "passport_config":
         assert counts == {"passport_tasks":66, "passport_shop":1}, counts
@@ -1565,7 +1650,15 @@ def patch_lua_bundle(source, unity, patches):
     for filename, mode in patches:
         name, = [path for path in before if path.endswith("/"+filename)]
         asset = bundle.container[name].read()
-        patched, changes = update_lua(before[name],mode)
+        if mode == "activity_shortcuts":
+            patched, changes = patch_activity_shortcuts(
+                before[name], Reader, encode, constants, serial_constant, pack, ins)
+        else:
+            patched, changes = update_lua(before[name],mode)
+        if filename == "gfes_model.lua.bytes":
+            patched, removed = patch_activity_removal(
+                patched, Reader, encode, constants, serial_constant, pack, ins)
+            changes.update(removed)
         asset.m_Script = patched.decode("utf-8", "surrogateescape")
         asset.save()
         before[name] = patched
@@ -1623,10 +1716,15 @@ def asset_overlay(origin, dest, aes, pad, unpad, unity):
                 "tablet_helper_bundle": (("ghelper.lua.bytes", "tablet_helper"),),
                 "dungeon_hook": (("mopup_view1.lua.bytes","dungeon_hook_row"), ("mopuphook_view.lua.bytes","dungeon_hook_panel"),
                                  ("mopup_model.lua.bytes","dungeon_hook_model")),
-                "speed_state": (("speed_reward_view.lua.bytes", "speed_state"),),
+                "speed_state": (("speed_reward_view.lua.bytes", "speed_state"),
+                                ("speed_choose_view.lua.bytes", "unlimited_fast_view")),
+                "unlimited_sweep": (("sweep_ctrl.lua.bytes", "unlimited_quicken_control"),
+                                    ("sweep_view.lua.bytes", "unlimited_quicken_view")),
                 "race_grid_bundle": (("race_aidance.lua.bytes","race_grid"),),
                 "dnf_clock": (("dnf_main_view.lua.bytes", "dnf_clock"),),
-                "blind_screen": (("oneshop_ctrl.lua.bytes","blind_screen"),),
+                "pet_customize": (("petanimal_msg.lua.bytes","pet_customize"),),
+                "blind_screen": (("oneshop_ctrl.lua.bytes","blind_screen"),
+                                 ("oneshop_bag.lua.bytes","blind_bank_capacity")),
                 "maze_panel": (("striveview1.lua.bytes","maze_board"), ("fesstrive_model.lua.bytes","maze_model"), ("fesstrive_ctrl.lua.bytes","maze_ctrl")),
                 "casino_resume": (("homegameble_view.lua.bytes","casino_resume"),),
                 "rocket_clock": (("peakedness_model.lua.bytes","rocket_clock"), ("peakedness_view.lua.bytes","rocket_match_counter")),
@@ -1673,13 +1771,18 @@ def asset_overlay(origin, dest, aes, pad, unpad, unity):
             return result
 
         for abi in (32,64):
+            name = f"lua{abi}_manager.ab"
+            changed[name] = replace(name, lambda source: patch_lua_bundle(
+                source, unity, (("module_mgr.lua.bytes", "activity_shortcuts"),))[0])
+            name = f"lua{abi}_module_sweep.ab"
+            changed[name] = replace(name, lambda source: replace_lua(name, "unlimited_sweep", source))
             name = f"lua{abi}_module_mopup.ab"
             changed[name] = replace(name, lambda source: replace_lua(name, "dungeon_hook", source))
-            for asset, mode in (("union","guild_build_unlimited"), ("unionrace","race_grid_bundle"), ("speed","speed_state"), ("dnf","dnf_clock"), ("oneshop","blind_screen"), ("fesstrive","maze_panel"), ("peakedness", "rocket_clock"), ("assess", "equipment_rating_view"), ("playerinfo", "equipment_rating_entry"),
+            for asset, mode in (("petanimal","pet_customize"), ("union","guild_build_unlimited"), ("unionrace","race_grid_bundle"), ("speed","speed_state"), ("dnf","dnf_clock"), ("oneshop","blind_screen"), ("fesstrive","maze_panel"), ("peakedness", "rocket_clock"), ("assess", "equipment_rating_view"), ("playerinfo", "equipment_rating_entry"),
                                 ("feschristmas", "christmas_confirm"), ("homegameble","casino_resume"), ("tehuilibaopoint", "daily_voucher_labels"), ("fesadvertise", "monthly_carnival"), ("everydaypoint", "daily_free")):
                 name = f"lua{abi}_module_{asset}.ab"
                 changed[name] = replace(name, lambda source: replace_lua(name, mode, source))
-            for filename, mode in (("sign","vip_sign"), ("one","blind_sales"), ("chongzhi","blind_payment"), ("league","league_prizes"), ("promatch","elite_prizes"), ("word1","league_rules"), ("copy2","adventure_end"), ("passcard","passport_config"), ("operate", "offline_operate")):
+            for filename, mode in (("sign","vip_sign"), ("one","blind_sales"), ("chongzhi","blind_payment"), ("league","league_prizes"), ("promatch","elite_prizes"), ("word1","league_rules"), ("copy2","adventure_end"), ("passcard","passport_config"), ("operate", "offline_operate"), ("leading", "pcl_unlock")):
                 name = f"lua{abi}_database_{filename}_proto.lua.bytes"
                 changed[name] = replace(name, lambda source: replace_lua(name, mode, source))
             name = f"lua{abi}_module_league.ab"
@@ -1736,6 +1839,9 @@ def main():
     args.add_argument("--output",type=Path,required=True,help="APK 条目增量输出目录")
     args.add_argument("--python-libs",type=Path,help="已有 pycryptodome 与 UnityPy 依赖目录")
     ns = args.parse_args()
+    if not ns.origin.is_file():
+        raise ValueError(f"原始 APK 不存在：{ns.origin}")
+    ns.output.mkdir(parents=True, exist_ok=True)
     if ns.python_libs:
         sys.path.insert(0,str(ns.python_libs.resolve()))
     from Crypto.Cipher import AES

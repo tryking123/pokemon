@@ -1,0 +1,65 @@
+{
+  "64121": {
+    "item": 21086,
+    "materials": [
+      {
+        "id": 64075,
+        "level": 80,
+        "star": 8,
+        "advanced": 9,
+        "awake": 0,
+        "individual": 1400
+      },
+      {
+        "id": 64073,
+        "level": 80,
+        "star": 8,
+        "advanced": 9,
+        "awake": 0,
+        "individual": 1400
+      }
+    ]
+  },
+  "64122": {
+    "item": 21086,
+    "materials": [
+      {
+        "id": 64075,
+        "level": 80,
+        "star": 8,
+        "advanced": 9,
+        "awake": 0,
+        "individual": 1400
+      },
+      {
+        "id": 64074,
+        "level": 80,
+        "star": 8,
+        "advanced": 9,
+        "awake": 0,
+        "individual": 1400
+      }
+    ]
+  },
+  "64141": {
+    "item": 21086,
+    "materials": [
+      {
+        "id": 52012,
+        "level": 80,
+        "star": 7,
+        "advanced": 7,
+        "awake": 2,
+        "individual": 1650
+      },
+      {
+        "id": 64020,
+        "level": 80,
+        "star": 9,
+        "advanced": 9,
+        "awake": 2,
+        "individual": 1650
+      }
+    ]
+  }
+}

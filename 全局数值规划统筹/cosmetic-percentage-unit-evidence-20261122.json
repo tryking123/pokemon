@@ -1,0 +1,369 @@
+{
+  "version": "cosmetic-percentage-units-20261122-v1",
+  "originSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "directOriginArchiveVerifiedAssets": [
+    {
+      "logicalFile": "lua64_database_attribute_proto.lua.bytes",
+      "sha256": "9eb620d3998618381d0ed6f07c04c8f54d02bac8ef5ba436a4a5475823cf6df8"
+    },
+    {
+      "logicalFile": "lua64_module_dress.ab",
+      "asset": "assets/game/assets/lua64/module/dress/dress_view.lua.bytes",
+      "sha256": "34483954c5cbda817c11a55cd66e4298fb53d1691efb6d79f7bb94ac0779736d"
+    },
+    {
+      "logicalFile": "lua64_module_battle.ab",
+      "asset": "assets/game/assets/lua64/module/battle/core/stage.lua.bytes",
+      "sha256": "88737b661bac45baee7e69db0da345b1b35224b16b0bed61a57530f6c08d15ef"
+    },
+    {
+      "logicalFile": "lua64_helper.ab",
+      "asset": "assets/game/assets/lua64/helper/ghelper.lua.bytes",
+      "sha256": "54e5fdeb91cc1b5d6ce894f8611bb263c8fc26bcd2e1bb9668a98d9b2552b5d9"
+    }
+  ],
+  "dressDisplay": {
+    "prototype": 18,
+    "instructions": "111–127",
+    "rule": "attribute.type==2 -> num/10 + percent suffix",
+    "divideConstant": 10
+  },
+  "stageHandleDamage": {
+    "prototype": 35,
+    "numberPoolIndex2": 1000,
+    "damageBonusInstructions": "227–236",
+    "physicalDamageBonusInstructions": "103–112",
+    "specialDamageBonusInstructions": "71–80",
+    "critDamageBonusInstructions": "202–210",
+    "elementDamageAndSkillReduceInstructions": "261–279"
+  },
+  "type2Conversion": "original raw values already per-mille; protocol should receive raw, not raw*10",
+  "type1Conversion": "original fixed points; code63 is SP limit points, not percent",
+  "titleDisplay": {
+    "asset": "lua64_helper.ab / ghelper.lua.bytes",
+    "functionPrototypes": [
+      21,
+      23
+    ],
+    "rule": "type1 -> raw; type2 -> raw/10 and percent suffix",
+    "divideConstant": 10
+  },
+  "type2CodesAudited": [
+    20,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    59,
+    60,
+    61,
+    62,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+  ],
+  "fixedPointCodesAudited": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    63
+  ],
+  "newRawAttributesByCategory": {
+    "title": {
+      "24": 50,
+      "26": 20,
+      "28": 20,
+      "6": 400,
+      "7": 400,
+      "8": 700,
+      "9": 700,
+      "5": 500,
+      "25": 30,
+      "27": 20,
+      "29": 20
+    },
+    "dress": {
+      "63": 35,
+      "23": 140,
+      "42": 210,
+      "6": 300,
+      "7": 300,
+      "26": 100,
+      "28": 100
+    }
+  },
+  "expectedNewDressProtocolDeltas": {
+    "damage_bonus": 140,
+    "skill_damage_reduced": 210,
+    "add_skill_point_limit": 35
+  },
+  "categoryPercentages": {
+    "title": {
+      "hp": 5,
+      "physicalAttack": 2,
+      "specialAttack": 2,
+      "physicalDefense": 2,
+      "specialDefense": 2,
+      "speed": 3
+    },
+    "dress": {
+      "physicalAttack": 10,
+      "specialAttack": 10,
+      "damageBonus": 14,
+      "allSkillDamageReduction": 21
+    }
+  },
+  "sourceSpecificException": "Station damage config uses real percentage units, so its *10 conversion remains correct; do not modify unrelated source conversions.",
+  "mixedSourceContract": {
+    "tablet": {
+      "levels": 600,
+      "attributeCodes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        14
+      ],
+      "unit": "fixed points only"
+    },
+    "gearRefine": {
+      "attributeCodes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        14
+      ],
+      "unit": "fixed points only"
+    },
+    "gearEnhance": {
+      "attributeCodes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        14
+      ],
+      "unit": "fixed points only"
+    },
+    "gearAdvance": {
+      "baseAttributeCodes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        14
+      ],
+      "incrementFormula": "originalAttributeValue * increasePermille / 1000",
+      "resultUnit": "same original attribute unit"
+    },
+    "runes": {
+      "source": "origin.apk / suit_proto,32/64 equal",
+      "runtimeExactSets": 106,
+      "UI": "suit_cover prototype3 instructions21..27: type2 num[2]/10 percent",
+      "example": {
+        "set": 10082,
+        "firstTier": [
+          61,
+          50
+        ],
+        "percent": 5,
+        "expectedProtocolDelta": 50
+      }
+    },
+    "station": "explicit percent config converted once with *10 before aggregation; preserved",
+    "statues": "separate map; preserved"
+  },
+  "installedBusinessVerification": {
+    "qaApkSha256": "2f7d1a05f897684d408ec94b52f0735d7d86e812e795b11a96c309f84075c554",
+    "sourceComparisonSha256": "1ec9b99f90e4454a9f0bd26f0477b4921f753d127f51888c68dfa30f0f138e2b",
+    "scope": "installed QA actual SQLite/RoleBattlePowerService/BattleService.startAdventure; Unity UI pending root",
+    "sameDexAcrossVariants": true,
+    "comparison": [
+      {
+        "variant": "base",
+        "titles": 130,
+        "dresses": 133,
+        "power": {
+          "hp_max": 36202,
+          "physical_attack": 32582,
+          "special_attack": 31470,
+          "physical_defense": 31137,
+          "special_defense": 28191,
+          "speed": 13395
+        },
+        "elfScore": 172977,
+        "battle": {
+          "hp_max": 36509,
+          "physical_attack": 32811,
+          "special_attack": 31699,
+          "physical_defense": 31280,
+          "special_defense": 28334,
+          "speed": 13523
+        },
+        "secondary": {
+          "damage_bonus": 370,
+          "skill_damage_reduced": 30,
+          "add_skill_point_limit": 0
+        }
+      },
+      {
+        "variant": "title",
+        "titles": 142,
+        "dresses": 133,
+        "power": {
+          "hp_max": 38176,
+          "physical_attack": 33665,
+          "special_attack": 32541,
+          "physical_defense": 32656,
+          "special_defense": 29672,
+          "speed": 13709
+        },
+        "elfScore": 180419,
+        "battle": {
+          "hp_max": 38493,
+          "physical_attack": 33897,
+          "special_attack": 32773,
+          "physical_defense": 32801,
+          "special_defense": 29817,
+          "speed": 13840
+        },
+        "secondary": {
+          "damage_bonus": 370,
+          "skill_damage_reduced": 30,
+          "add_skill_point_limit": 0
+        }
+      },
+      {
+        "variant": "dress",
+        "titles": 130,
+        "dresses": 142,
+        "power": {
+          "hp_max": 36202,
+          "physical_attack": 34987,
+          "special_attack": 33812,
+          "physical_defense": 31137,
+          "special_defense": 28191,
+          "speed": 13395
+        },
+        "elfScore": 177724,
+        "battle": {
+          "hp_max": 36509,
+          "physical_attack": 35230,
+          "special_attack": 34055,
+          "physical_defense": 31280,
+          "special_defense": 28334,
+          "speed": 13523
+        },
+        "secondary": {
+          "damage_bonus": 510,
+          "skill_damage_reduced": 240,
+          "add_skill_point_limit": 35
+        }
+      },
+      {
+        "variant": "full",
+        "titles": 142,
+        "dresses": 142,
+        "power": {
+          "hp_max": 38176,
+          "physical_attack": 36117,
+          "special_attack": 34929,
+          "physical_defense": 32656,
+          "special_defense": 29672,
+          "speed": 13709
+        },
+        "elfScore": 185259,
+        "battle": {
+          "hp_max": 38493,
+          "physical_attack": 36362,
+          "special_attack": 35174,
+          "physical_defense": 32801,
+          "special_defense": 29817,
+          "speed": 13840
+        },
+        "secondary": {
+          "damage_bonus": 510,
+          "skill_damage_reduced": 240,
+          "add_skill_point_limit": 35
+        }
+      },
+      {
+        "variant": "full-cold",
+        "titles": 142,
+        "dresses": 142,
+        "power": {
+          "hp_max": 38176,
+          "physical_attack": 36117,
+          "special_attack": 34929,
+          "physical_defense": 32656,
+          "special_defense": 29672,
+          "speed": 13709
+        },
+        "elfScore": 185259,
+        "battle": {
+          "hp_max": 38493,
+          "physical_attack": 36362,
+          "special_attack": 35174,
+          "physical_defense": 32801,
+          "special_defense": 29817,
+          "speed": 13840
+        },
+        "secondary": {
+          "damage_bonus": 510,
+          "skill_damage_reduced": 240,
+          "add_skill_point_limit": 35
+        }
+      }
+    ]
+  }
+}

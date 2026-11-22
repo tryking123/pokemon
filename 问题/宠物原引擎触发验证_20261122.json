@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "inputSha256": "20e482a50c39ad58654af56a0753ef55dbc44ed28a117c2ee2237166398d9370",
+  "apk": "pokemon-local-20261122-pet-combat.apk",
+  "scriptSha256": {
+    "module/battle/core/formation": "b9b69334f195cc900868431f849efe31cf2a5878f54f35576aa972d20feae7ae",
+    "module/battle/core/stage": "e5ec168daa8f7997aab99ca089417ebd0ecaed96bfc19ff13dec21f454e990a7"
+  },
+  "scope": "actual positions 1/2; retained all actual player triggers/skills; minimal copied opponent without triggers",
+  "probeSkill30101AddedTo": [],
+  "rows": [
+    {
+      "id": "qa-elf-1",
+      "skill30101": 2,
+      "position": 1,
+      "deathchain": true,
+      "actualTriggerIds": [
+        38801,
+        38701,
+        8003,
+        8001
+      ],
+      "originalSkillIds": [
+        30101
+      ]
+    },
+    {
+      "id": "qa-elf-2",
+      "skill30101": 2,
+      "position": 2,
+      "deathchain": true,
+      "actualTriggerIds": [
+        38801,
+        38701,
+        8003,
+        8001
+      ],
+      "originalSkillIds": [
+        30101
+      ]
+    }
+  ],
+  "pet": {
+    "sid": 10001,
+    "uid": "74d39968-cfc6-4be7-88a8-eb6773fefb76",
+    "hp": 4160000,
+    "percent": 0
+  },
+  "stageLogCount": 16
+}

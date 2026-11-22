@@ -1,0 +1,244 @@
+{
+  "version": "guild-personal-rules-20261120-v1",
+  "source": {
+    "apkSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+    "guildGrowth": "原sociaty_proto，当前r6随包字节与原表一致；building为本级升下一级费用",
+    "sociatyLuaSha256": "6733c526e4dc8706e29776379f18d1d0d3cb7457cebd9c32caa911e70d676f8b",
+    "construction": "coins沿既有本地1427补丁，diamonds沿原1428；无限次数为用户本次明确决定",
+    "verifiedCurrentApk": "pokemon-local-20261120-bug3-14-28-r6.apk"
+  },
+  "guildGrowth": {
+    "1": {
+      "building": 35000,
+      "adventure": 6,
+      "icon": 1001,
+      "level": 1,
+      "number": 26,
+      "cumulativeBase": 0
+    },
+    "2": {
+      "building": 77000,
+      "adventure": 6,
+      "icon": 1001,
+      "level": 2,
+      "number": 27,
+      "cumulativeBase": 35000
+    },
+    "3": {
+      "building": 312000,
+      "adventure": 6,
+      "icon": 1001,
+      "level": 3,
+      "number": 28,
+      "cumulativeBase": 112000
+    },
+    "4": {
+      "building": 495750,
+      "adventure": 6,
+      "icon": 1002,
+      "level": 4,
+      "number": 29,
+      "cumulativeBase": 424000
+    },
+    "5": {
+      "building": 1120500,
+      "adventure": 6,
+      "icon": 1002,
+      "level": 5,
+      "number": 30,
+      "cumulativeBase": 919750
+    },
+    "6": {
+      "building": 1461750,
+      "adventure": 6,
+      "icon": 1003,
+      "level": 6,
+      "number": 31,
+      "cumulativeBase": 2040250
+    },
+    "7": {
+      "building": 1698000,
+      "adventure": 6,
+      "icon": 1003,
+      "level": 7,
+      "number": 32,
+      "cumulativeBase": 3502000
+    },
+    "8": {
+      "building": 1951750,
+      "adventure": 6,
+      "icon": 1004,
+      "level": 8,
+      "number": 33,
+      "cumulativeBase": 5200000
+    },
+    "9": {
+      "building": 2223000,
+      "adventure": 6,
+      "icon": 1004,
+      "level": 9,
+      "number": 34,
+      "cumulativeBase": 7151750
+    },
+    "10": {
+      "building": 2678000,
+      "adventure": 6,
+      "icon": 1005,
+      "level": 10,
+      "number": 35,
+      "cumulativeBase": 9374750
+    },
+    "11": {
+      "building": 3168000,
+      "adventure": 6,
+      "icon": 1005,
+      "level": 11,
+      "number": 36,
+      "cumulativeBase": 12052750
+    },
+    "12": {
+      "building": 4060500,
+      "adventure": 6,
+      "icon": 1006,
+      "level": 12,
+      "number": 37,
+      "cumulativeBase": 15220750
+    },
+    "13": {
+      "building": 5023000,
+      "adventure": 6,
+      "icon": 1006,
+      "level": 13,
+      "number": 38,
+      "cumulativeBase": 19281250
+    },
+    "14": {
+      "building": 6055500,
+      "adventure": 6,
+      "icon": 1007,
+      "level": 14,
+      "number": 39,
+      "cumulativeBase": 24304250
+    },
+    "15": {
+      "building": 0,
+      "adventure": 6,
+      "icon": 1007,
+      "level": 15,
+      "number": 40,
+      "cumulativeBase": 30359750
+    }
+  },
+  "construction": {
+    "unlimited": true,
+    "coins": {
+      "costCoins": 10000,
+      "costDiamonds": 0,
+      "xp": 100,
+      "vitality": 10,
+      "contribution": 20
+    },
+    "diamonds": {
+      "costCoins": 0,
+      "costDiamonds": 5000,
+      "xp": 500,
+      "vitality": 100,
+      "contribution": 1000
+    }
+  },
+  "legacyGrowth": {
+    "levelBases": [
+      0,
+      1000,
+      3000,
+      7000,
+      15000
+    ],
+    "offsets": [
+      0,
+      34000,
+      109000,
+      417000,
+      904750
+    ]
+  },
+  "legacyVitality": "首次新建设之前冻结既有XP映射活跃及旧建设流水基线；新建设仅按本文件vitality记账，扣既有副本开启支出；成长offset不产生资产",
+  "tabletSupply": {
+    "oncePerRole": true,
+    "rewards": [
+      {
+        "type": 888,
+        "id": 1,
+        "name": "青草石板",
+        "quantity": 1,
+        "wordId": 8191,
+        "icon": 1,
+        "seal": 0
+      },
+      {
+        "type": 888,
+        "id": 2,
+        "name": "深海石板",
+        "quantity": 1,
+        "wordId": 8192,
+        "icon": 2,
+        "seal": 0
+      },
+      {
+        "type": 888,
+        "id": 3,
+        "name": "炎热石板",
+        "quantity": 1,
+        "wordId": 8193,
+        "icon": 3,
+        "seal": 0
+      },
+      {
+        "type": 888,
+        "id": 4,
+        "name": "格斗石板",
+        "quantity": 1,
+        "wordId": 8194,
+        "icon": 4,
+        "seal": 0
+      },
+      {
+        "type": 888,
+        "id": 5,
+        "name": "妖精石板",
+        "quantity": 1,
+        "wordId": 8195,
+        "icon": 5,
+        "seal": 0
+      },
+      {
+        "type": 888,
+        "id": 6,
+        "name": "永冻石板",
+        "quantity": 1,
+        "wordId": 8196,
+        "icon": 6,
+        "seal": 0
+      },
+      {
+        "type": 888,
+        "id": 7,
+        "name": "邪恶石板",
+        "quantity": 1,
+        "wordId": 8197,
+        "icon": 7,
+        "seal": 1
+      },
+      {
+        "type": 888,
+        "id": 8,
+        "name": "飞龙石板",
+        "quantity": 1,
+        "wordId": 8198,
+        "icon": 8,
+        "seal": 1
+      }
+    ],
+    "source": "全局数值规划统筹/tablet-unlock-mail-20261120.json；原TABLET888/slatebase1..8各1"
+  }
+}

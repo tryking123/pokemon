@@ -1,0 +1,67 @@
+{
+  "releaseSha256": "b15de298ba3892604c364b0e3e9f94f31f23d6af2853e99eafc04ac137a9dff5",
+  "qaSha256": "c8f75577713e69269d58efc73af27929e2cafa70b7dc4f169ad1701eaaad3b82",
+  "changedUnsignedEntries": [
+    "AndroidManifest.xml",
+    "assets/bin/Data/Managed/Metadata/global-metadata.dat",
+    "resources.arsc"
+  ],
+  "allOtherEntriesIdentical": true,
+  "dexSha256": {
+    "classes4.dex": "7a3e8ad89939d9322240425aaab88717edbb0a5f2918313562e225326a63c821",
+    "classes3.dex": "9ae94ee69feac4d50678a9592e6787916e38c4d50bd88bf98563e77ad3c0d90b",
+    "classes8.dex": "6b88478ecf41d827b40ac84b7775adc8e1a74ea9235eb83b30a95c6f6e8bdf38",
+    "classes6.dex": "7b8a14c36f7b95c03155ca58b6c1b7accd668d454059493f8bd991b95cfce1f8",
+    "classes7.dex": "1f76fae2d68cc6b242b7efc3eea858b8941b777ac553ba7c639da05ad31617cd",
+    "classes2.dex": "702b3ae1a03c31a75a0feb6b3ac20a8b53290668ffd91f77dad849d91cd7cc19",
+    "classes9.dex": "08f39a0336bbdcc1db875c3a55d4bde0e68461c8d1015691d8011b4503f8021f",
+    "classes.dex": "19d43c357cbf66c9328f021ab9a2aa19f2fbdfe259f78b60f7129837cf599963",
+    "classes5.dex": "c259bfe43436eb548514c6811ba0b84e1e604cd61c9154705c450361932b6052"
+  },
+  "fourVariantDexCheck": {
+    "base": {
+      "classes4.dex": "7a3e8ad89939d9322240425aaab88717edbb0a5f2918313562e225326a63c821",
+      "classes6.dex": "7b8a14c36f7b95c03155ca58b6c1b7accd668d454059493f8bd991b95cfce1f8",
+      "classes7.dex": "1f76fae2d68cc6b242b7efc3eea858b8941b777ac553ba7c639da05ad31617cd",
+      "classes5.dex": "c259bfe43436eb548514c6811ba0b84e1e604cd61c9154705c450361932b6052",
+      "classes.dex": "19d43c357cbf66c9328f021ab9a2aa19f2fbdfe259f78b60f7129837cf599963",
+      "classes2.dex": "702b3ae1a03c31a75a0feb6b3ac20a8b53290668ffd91f77dad849d91cd7cc19",
+      "classes3.dex": "9ae94ee69feac4d50678a9592e6787916e38c4d50bd88bf98563e77ad3c0d90b",
+      "classes8.dex": "6b88478ecf41d827b40ac84b7775adc8e1a74ea9235eb83b30a95c6f6e8bdf38",
+      "classes9.dex": "08f39a0336bbdcc1db875c3a55d4bde0e68461c8d1015691d8011b4503f8021f"
+    },
+    "title": {
+      "classes4.dex": "7a3e8ad89939d9322240425aaab88717edbb0a5f2918313562e225326a63c821",
+      "classes6.dex": "7b8a14c36f7b95c03155ca58b6c1b7accd668d454059493f8bd991b95cfce1f8",
+      "classes7.dex": "1f76fae2d68cc6b242b7efc3eea858b8941b777ac553ba7c639da05ad31617cd",
+      "classes5.dex": "c259bfe43436eb548514c6811ba0b84e1e604cd61c9154705c450361932b6052",
+      "classes.dex": "19d43c357cbf66c9328f021ab9a2aa19f2fbdfe259f78b60f7129837cf599963",
+      "classes2.dex": "702b3ae1a03c31a75a0feb6b3ac20a8b53290668ffd91f77dad849d91cd7cc19",
+      "classes3.dex": "9ae94ee69feac4d50678a9592e6787916e38c4d50bd88bf98563e77ad3c0d90b",
+      "classes8.dex": "6b88478ecf41d827b40ac84b7775adc8e1a74ea9235eb83b30a95c6f6e8bdf38",
+      "classes9.dex": "08f39a0336bbdcc1db875c3a55d4bde0e68461c8d1015691d8011b4503f8021f"
+    },
+    "dress": {
+      "classes4.dex": "7a3e8ad89939d9322240425aaab88717edbb0a5f2918313562e225326a63c821",
+      "classes6.dex": "7b8a14c36f7b95c03155ca58b6c1b7accd668d454059493f8bd991b95cfce1f8",
+      "classes7.dex": "1f76fae2d68cc6b242b7efc3eea858b8941b777ac553ba7c639da05ad31617cd",
+      "classes5.dex": "c259bfe43436eb548514c6811ba0b84e1e604cd61c9154705c450361932b6052",
+      "classes.dex": "19d43c357cbf66c9328f021ab9a2aa19f2fbdfe259f78b60f7129837cf599963",
+      "classes2.dex": "702b3ae1a03c31a75a0feb6b3ac20a8b53290668ffd91f77dad849d91cd7cc19",
+      "classes3.dex": "9ae94ee69feac4d50678a9592e6787916e38c4d50bd88bf98563e77ad3c0d90b",
+      "classes8.dex": "6b88478ecf41d827b40ac84b7775adc8e1a74ea9235eb83b30a95c6f6e8bdf38",
+      "classes9.dex": "08f39a0336bbdcc1db875c3a55d4bde0e68461c8d1015691d8011b4503f8021f"
+    },
+    "full": {
+      "classes4.dex": "7a3e8ad89939d9322240425aaab88717edbb0a5f2918313562e225326a63c821",
+      "classes6.dex": "7b8a14c36f7b95c03155ca58b6c1b7accd668d454059493f8bd991b95cfce1f8",
+      "classes7.dex": "1f76fae2d68cc6b242b7efc3eea858b8941b777ac553ba7c639da05ad31617cd",
+      "classes5.dex": "c259bfe43436eb548514c6811ba0b84e1e604cd61c9154705c450361932b6052",
+      "classes.dex": "19d43c357cbf66c9328f021ab9a2aa19f2fbdfe259f78b60f7129837cf599963",
+      "classes2.dex": "702b3ae1a03c31a75a0feb6b3ac20a8b53290668ffd91f77dad849d91cd7cc19",
+      "classes3.dex": "9ae94ee69feac4d50678a9592e6787916e38c4d50bd88bf98563e77ad3c0d90b",
+      "classes8.dex": "6b88478ecf41d827b40ac84b7775adc8e1a74ea9235eb83b30a95c6f6e8bdf38",
+      "classes9.dex": "08f39a0336bbdcc1db875c3a55d4bde0e68461c8d1015691d8011b4503f8021f"
+    }
+  }
+}

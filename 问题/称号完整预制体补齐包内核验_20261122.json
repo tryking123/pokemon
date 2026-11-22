@@ -1,0 +1,49 @@
+{
+  "apk": "pokemon-offline-20261122-miao-cosmetics-unlimited.apk",
+  "size": 597836413,
+  "sha256": "b15de298ba3892604c364b0e3e9f94f31f23d6af2853e99eafc04ac137a9dff5",
+  "priorSha256": "4946d88161509486ee305dbfc3f5bc208a0cb180ec30ded27050c7d6f5d07e2b",
+  "allOtherBusinessEntriesIdentical": true,
+  "logicalEntryHashes": {
+    "modules_titleshow.ab": "46bb7342ac381dceed6fa8ba90c2daa460cd9b7aa905d66e2ff42e60598d3db3",
+    "version.txt": "45f300f780bd10808a9e59dc25a5bbbdc41ffe9722a1a8081ec6261c4419a760",
+    "xversion.txt": "bfb0dda20c17dd6071aad6da2c042a5f847a61788673e52ff90bb98f529adbb4"
+  },
+  "prefabs": {
+    "喵星联盟_001.apk.1": {
+      "added": [],
+      "reused": [
+        1194,
+        1199,
+        1200,
+        1201,
+        1202,
+        1203,
+        1207,
+        1208
+      ],
+      "sourceSha256": "97692a767717d2a4ec1f460d6982ab944d0f0fa1799562793a3a44450bec7308",
+      "sourceVersion": "2018.4.11f1",
+      "targetVersion": "2020.3.48f1",
+      "oldObjectsPreserved": true,
+      "newObjects": 0,
+      "outputSha256": "bd73177acd07a95151d5e20619d91cfc254cfc97b3cdcdfd2b725662f49ae3b1"
+    },
+    "天天驯兽师_004.apk.1": {
+      "added": [
+        1213,
+        1221,
+        1223
+      ],
+      "reused": [
+        1225
+      ],
+      "sourceSha256": "848f9a4dbac0326b5ca9782d0dc9aeafb2a67d434c7a9afb2b0e93b8f49555fd",
+      "sourceVersion": "2018.2.15f1",
+      "targetVersion": "2020.3.48f1",
+      "oldObjectsPreserved": true,
+      "newObjects": 36,
+      "outputSha256": "46bb7342ac381dceed6fa8ba90c2daa460cd9b7aa905d66e2ff42e60598d3db3"
+    }
+  }
+}

@@ -1721,3 +1721,6 @@ C 10992 local_stamina_exchange.request
 C 10992 local_stamina_exchange.response errno:0:integer
 C 10993 local_tablet_unlock_supply.request action:0:integer
 C 10993 local_tablet_unlock_supply.response errno:0:integer,message:1:string
+
+C 10994 local_profile_clear.request kind:0:integer,requestId:1:string
+C 10994 local_profile_clear.response errno:0:integer,kind:1:integer

@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 本地游戏联调服务客户端
+ * App 离线业务调用入口
  *
  * @author tongruiyuan
  * @since 2026-11-18 17:00
@@ -89,7 +89,7 @@ public final class LocalApi {
             accountId = result.getString("accountId");
             username = result.getString("username");
             if (token.isEmpty() || accountId.isEmpty()) {
-                throw new IOException("服务端返回的登录凭据无效");
+                throw new IOException("App返回的登录凭据无效");
             }
         }
     }
@@ -134,6 +134,9 @@ public final class LocalApi {
 
     /** 在后台执行 HTTP，活动仍有效时在主线程提交结果。 */
     static <T> void run(Activity activity, Work<T> work, Result<T> result) {
+        if (activity == null) {
+            return;
+        }
         WORKER.execute(() -> {
             try {
                 T value = work.run();
@@ -145,6 +148,9 @@ public final class LocalApi {
     }
 
     private static <T> void deliver(Activity activity, Result<T> result, T value, Exception failure) {
+        if (activity.isFinishing() || activity.isDestroyed()) {
+            return;
+        }
         activity.runOnUiThread(() -> {
             if (!activity.isFinishing() && !activity.isDestroyed()) {
                 result.accept(value, failure);
@@ -158,15 +164,15 @@ public final class LocalApi {
     }
 
     /** 校验账号密码并更新本地会话。 */
-    static JSONObject login(String username, String password) throws Exception {
+    static synchronized JSONObject login(String username, String password) throws Exception {
         JSONObject body = new JSONObject().put("username", username).put("password", password);
         JSONObject result = (JSONObject) request("POST", "/api/auth/login", body, null);
         session = new Session(result);
         return result;
     }
 
-    /** 结束服务端会话。 */
-    static void logout() throws Exception {
+    /** 结束App会话。 */
+    static synchronized void logout() throws Exception {
         Session current = session;
         if (current != null) {
             request("POST", "/api/auth/logout", null, current);
@@ -176,51 +182,62 @@ public final class LocalApi {
 
     /** 读取账号与余额。 */
     static JSONObject account() throws Exception {
-        return (JSONObject) request("GET", "/api/account/me", null, requireSession());
+        Object body = request("GET", "/api/account/me", null, requireSession());
+        if (!(body instanceof JSONObject)) {
+            throw new IOException("本地服务账号应答格式无效");
+        }
+        return (JSONObject) body;
     }
 
     /** 使用本地 HTTP 会话签发一张可交给游戏网关的票据。 */
     static GameTicket gameTicket() throws Exception {
         Session current = requireSession();
-        JSONObject result = (JSONObject) request("POST", "/api/game/ticket", null, current);
-        return new GameTicket(result, current);
+        Object body = request("POST", "/api/game/ticket", null, current);
+        if (!(body instanceof JSONObject)) {
+            throw new IOException("本地服务票据应答格式无效");
+        }
+        return new GameTicket((JSONObject) body, current);
     }
 
-    /** 读取服务端模拟充值目录。 */
+    /** 读取App模拟充值目录。 */
     static JSONArray products() throws Exception {
-        return (JSONArray) request("GET", "/api/payments/products", null, null);
+        Object body = request("GET", "/api/payments/products", null, null);
+        if (!(body instanceof JSONArray)) {
+            throw new IOException("本地服务商品目录应答格式无效");
+        }
+        return (JSONArray) body;
     }
 
-    /** 用客户端订单号重试创建，并确认同一服务端订单。 */
+    /** 用客户端订单号重试创建，并确认同一App订单。 */
     static JSONObject simulatePurchase(Session expected, String productId, String clientOrderId) throws Exception {
         Session current = requireSameSession(expected);
         JSONObject body = new JSONObject().put("productId", productId).put("clientOrderId", clientOrderId);
         JSONObject created = (JSONObject) request("POST", "/api/payments/orders", body, current);
         String orderId = created.getString("orderId");
         if (!orderId.matches("[A-Za-z0-9_-]{1,128}")) {
-            throw new IOException("服务端返回的订单编号无效");
+            throw new IOException("App返回的订单编号无效");
         }
         JSONObject confirmed = (JSONObject) request(
                 "POST", "/api/payments/orders/" + orderId + "/confirm", null, current);
         if (!"CONFIRMED".equals(confirmed.getString("status"))) {
-            throw new IOException("服务端尚未确认模拟订单");
+            throw new IOException("App尚未确认模拟订单");
         }
         return confirmed;
     }
 
-    /** 询价及确认均使用服务端返回的同一个 Unity 角色订单号。 */
+    /** 询价及确认均使用App返回的同一个 Unity 角色订单号。 */
     static JSONObject gameOrder(Session expected, String orderId, int paysid, int realmId, String roleId,
                                 boolean confirm) throws Exception {
         Session current = requireSameSession(expected);
         if (orderId == null || !orderId.matches("[A-Za-z0-9_-]{1,64}")) {
-            throw new IOException("服务端返回的游戏订单编号无效");
+            throw new IOException("App返回的游戏订单编号无效");
         }
         JSONObject body = new JSONObject().put("roleId", roleId).put("realmId", realmId).put("paysid", paysid);
         String suffix = confirm ? "/confirm" : "/quote";
         JSONObject order = (JSONObject) request("POST", "/api/game/payments/orders/" + orderId + suffix, body, current);
         if (!orderId.equals(order.optString("orderId")) || !roleId.equals(order.optString("roleId"))
                 || order.optInt("paysid") != paysid) {
-            throw new IOException("服务端返回的角色订单不匹配");
+            throw new IOException("App返回的角色订单不匹配");
         }
         return order;
     }
@@ -243,11 +260,33 @@ public final class LocalApi {
         return result.getString("mailId");
     }
 
-    /** 展示可读错误，网络失败时给出本地连接提示。 */
+    /**
+     * 读取当前角色指定宠物的定制状态和合法配置。
+     * @param expected 打开详情时的会话
+     * @param roleId 角色编号
+     * @param petId 当前宠物实例编号
+     * @return 当前宠物与配置目录
+     * @throws Exception 会话失效或读取失败
+     */
+    static JSONObject petCustomizeRead(Session expected, String roleId, String petId) throws Exception {
+        String path = "/api/game/pet/customize?roleId=" + java.net.URLEncoder.encode(roleId, "UTF-8")
+                + "&petId=" + java.net.URLEncoder.encode(petId, "UTF-8");
+        return (JSONObject) request("GET", path, null, requireSameSession(expected));
+    }
+
+    /**
+     * 保存当前宠物的合法定制选项。
+     * @param expected 打开详情时的会话
+     * @param body 宠物实例、定制字段及请求回执
+     * @return 保存后的宠物状态
+     * @throws Exception 会话失效或业务校验失败
+     */
+    static JSONObject petCustomizeSave(Session expected, JSONObject body) throws Exception {
+        return (JSONObject) request("POST", "/api/game/pet/customize", body, requireSameSession(expected));
+    }
+
+    /** 展示 App 离线操作的失败原因。 */
     static String errorText(Exception failure) {
-        if (failure instanceof java.net.ConnectException || failure instanceof java.net.SocketTimeoutException) {
-            return "游戏的本地服务未就绪，请退出游戏后重试";
-        }
         return failure.getMessage() != null ? failure.getMessage() : "请求失败，请重试";
     }
 
@@ -275,7 +314,7 @@ public final class LocalApi {
         String jsonBody = body == null ? null : body.toString();
         String authorization = auth == null ? null : "Bearer " + auth.token;
         LocalResponse response = direct.request(method, path, jsonBody, authorization);
-        if (response == null || response.json.length() > 65536) {
+        if (response == null || response.json == null || response.json.length() > 65536) {
             throw new IOException("本地服务应答无效");
         }
         if (response.status != 200) {
