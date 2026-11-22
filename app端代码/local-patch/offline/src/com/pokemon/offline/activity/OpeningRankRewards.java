@@ -170,6 +170,10 @@ public class OpeningRankRewards {
         long next = Long.MAX_VALUE;
         for (Event event : Event.values()) {
             ActivityPeriod current = activities.cycleAt(event.id, now);
+            // 下线活动的窗口起止相同，没有可结算的周期，也不应推进旧存档的游标。
+            if (current.end <= current.start) {
+                continue;
+            }
             Optional<Long> saved = cursor.find(roleId, event.id);
             long firstEnd = saved.orElse(current.end);
             long end = firstEnd;
