@@ -30,6 +30,7 @@ import com.pokemon.offline.platform.transaction.annotation.Transactional;
  */
 @Service
 public class TrainerEquipmentService {
+    private static final int RED_QUALITY = 5;
     private static final int ENHANCE_STONE = 21000;
     private static final int DIAMONDS_PER_STONE = 200;
     private static final int COINS_PER_BUNDLE = 100000;
@@ -183,29 +184,39 @@ public class TrainerEquipmentService {
             return new Forge(next, 0, points, day);
         }
         int config = Integer.parseInt(saved[1]);
-        AdventureEquipment offer = new AdventureEquipment(saved[0], config, meltRules.get(config)[0]);
+        int[] rule = meltRules.get(config);
+        boolean upgradeOffer = rule[5] != RED_QUALITY;
+        AdventureEquipment offer = upgradeOffer ? redOffer(rule[4], rule[0])
+                : new AdventureEquipment(saved[0], config, rule[0]);
         int count = Integer.parseInt(saved[3]);
         if (Long.parseLong(saved[2]) != day) {
             count = 0;
+        }
+        if (upgradeOffer || Long.parseLong(saved[2]) != day) {
             mapper.saveForge(role.id, offer, day, count);
         }
         return new Forge(offer, count, points, day);
     }
 
     /**
-     * 按原等级档、部位和本地品质权重生成一件候选。
+     * 按原等级档随机选取一个部位生成红装候选。
      * @param level 角色等级
      * @return 尚未入库的候选装备实例
      */
     private AdventureEquipment generateForge(int level) {
-        ThreadLocalRandom random = ThreadLocalRandom.current();
-        int slot = random.nextInt(1, 7);
-        int roll = random.nextInt(100);
-        int quality = roll < 50 ? 1 : roll < 80 ? 2 : roll < 95 ? 3 : roll < 99 ? 4 : 5;
-        int tier = Math.min(150, level / 5 * 5);
+        return redOffer(Math.min(150, level / 5 * 5), ThreadLocalRandom.current().nextInt(1, 7));
+    }
+
+    /**
+     * 选取指定等级档、部位的原版红装模板。
+     * @param tier 装备需求等级
+     * @param slot 装备部位
+     * @return 新候选实例
+     */
+    private AdventureEquipment redOffer(int tier, int slot) {
         for (Map.Entry<Integer,int[]> entry : meltRules.entrySet()) {
             int[] rule = entry.getValue();
-            if (rule[0] == slot && rule[4] == tier && rule[5] == quality) {
+            if (rule[0] == slot && rule[4] == tier && rule[5] == RED_QUALITY) {
                 return new AdventureEquipment(UUID.randomUUID().toString(), entry.getKey(), slot);
             }
         }

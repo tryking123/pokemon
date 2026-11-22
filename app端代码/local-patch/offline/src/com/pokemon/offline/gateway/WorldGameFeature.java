@@ -218,7 +218,7 @@ final class WorldGameFeature implements GameFeature {
             Set<Integer> clearedIds = scene.id == SceneService.FIRST_DUNGEON && cleared != null
                     ? cleared.clearedEncounters(saved.id) : Collections.emptySet();
             for (SceneActor monster : scene.monsters) {
-                if (!clearedIds.contains(monster.sid) && !dojoCombat.cleared(saved.id, scene.id, monster.sid)) {
+                if (!clearedIds.contains(monster.sid) && !dojoCombat.cleared(saved.id, scene.id, monster.uid)) {
                     monsters.add(actor(monster));
                 }
             }

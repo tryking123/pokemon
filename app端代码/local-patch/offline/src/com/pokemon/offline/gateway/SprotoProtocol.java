@@ -103,6 +103,19 @@ final class SprotoProtocol {
     }
 
     /**
+     * 将已回滚的本地请求转换为原协议支持的失败回包。
+     *
+     * @param request 执行失败的原请求
+     * @return 原会话可识别的错误字段；无失败字段时返回空结构
+     */
+    Map<String, Object> localFailure(Request request) {
+        String field = failureFields.get(request.type);
+        if (request.session <= 0 || field == null) return Collections.emptyMap();
+        // 8 为原客户端已定义的“数据异常”，不借用网络断开或成功错误码。
+        return data(field, "errno".equals(field) ? 8 : "本地操作失败，请重新打开页面后重试");
+    }
+
+    /**
      * 生成服务端主动推送包
      *
      * @param type 服务端消息编号

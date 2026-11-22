@@ -67,9 +67,15 @@ def create_plan(origin,donor):
         if target==id and row==old['character'].get(str(id)):continue
         textfields(row,['name','description']);additions['character'][str(target)]=row
     for key,value in source['character2'].items():
-        if not 104100<=int(key)<=105900:continue
+        if not 104100<=int(key)<=105910:continue
         assert key not in old['character'] and key not in old['character2']
         row=copy.deepcopy(value);textfields(row,['name','description']);additions['character2'][key]=row
+    # 可上阵精灵的每组星级特性均须带齐全部档位，包括最后一组。
+    for sid in [64190,64189]:
+        species=additions['jingling'][str(sid)]
+        for base in sequence(species['character']):
+            for rank in range(species['featureslv']+1):
+                assert str(base+rank) in additions['character2'], (sid,base,rank)
     for key in ['1007','1008','1009']:
         assert key not in old['ditto'];additions['ditto'][key]=source['ditto'][key]
     # 隐藏技能面板也会读取古代技能的图标；缺行会中断整个精灵页刷新。
@@ -123,11 +129,18 @@ def apply(origin,donor,output):
         for table,rows in read_json(cosmetic_file)['tables'].items():
             target=tables.setdefault(table,{})
             for key,row in rows.items():assert key not in target;target[key]=row
+    from patch_team_catalog import corrected_team_rows
     proofs={}
     for abi in [32,64]:
         for table,rows in tables.items():
             if not rows:continue
-            name=f'lua{abi}_database_{table}_proto.lua.bytes';assets.replace(name,patch_table(assets.read(name),rows,helpers))
+            name=f'lua{abi}_database_{table}_proto.lua.bytes'
+            raw=assets.read(name)
+            if table=='character':
+                corrected=corrected_team_rows(raw)
+                assert not rows.keys() & corrected.keys()
+                rows={**rows,**corrected}
+            assets.replace(name,patch_table(raw,rows,helpers))
         name=f'lua{abi}_module_battle.ab';env=UnityPy.load(assets.read(name));donor_env=UnityPy.load(source.read(name));replaced={}
         for script,transform in [('formation.lua.bytes',combat.patch_formation),('stage.lua.bytes',combat.patch_stage)]:
             path,obj=next((p,o) for p,o in env.container.items() if p.endswith('/'+script));a=obj.read();d=next(o for p,o in donor_env.container.items() if p.endswith('/'+script)).read()

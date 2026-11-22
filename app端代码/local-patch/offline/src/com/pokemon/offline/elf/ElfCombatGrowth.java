@@ -42,13 +42,42 @@ public final class ElfCombatGrowth {
                 .path(attr + "_bonus").asDouble() / 1000;
         int individual = state.path("individual").path(attr).asInt();
         int effort = state.path("effort").path(attr).asInt();
+        int breakStage = breakthroughStage(elf);
+        double breakBaseBonus = breakStage > 0
+                ? ElfTrainingCatalog.row("variable", 3809 + breakStage).path("data1").asDouble() : 0;
         double boost = 1 + starBonus + awakeBonus + ancientBonus + natureBonus + advanced * 0.05
-                + ElfCharacterRules.percentBonus(elf, attr) / 1000.0;
+                + ElfCharacterRules.percentBonus(elf, attr) / 1000.0
+                + breakBaseBonus;
         JsonNode travel=state.path("travelEffects").path(attr);
         double eventFactor=travel.path("until").asLong()>java.time.Instant.now().getEpochSecond()
                 ? 1.0+travel.path("percent").asInt()/100.0 : 1.0;
         return Math.max(1, (int) Math.round((base + individual / 10.0 + effort / 4.0) * boost * eventFactor)
                 + StoneWearRules.bonus(elf, attr) + ElfCharacterRules.flatBonus(elf, attr));
+    }
+
+    /**
+     * 将存档的注入进度换算为原战斗协议使用的正式突破阶数。
+     * @param elf 精灵及其突破进度
+     * @return 每十一档完成一阶的突破阶数
+     */
+    public static int breakthroughStage(LocalElf elf) {
+        return Math.max(0, elf.training.path("veinlevel").asInt() / 11);
+    }
+
+    /**
+     * 汇总当前突破档原属性，同一码出现多次时累加，不按突破等级推算数值。
+     *
+     * @param elf 精灵及其持久化突破档
+     * @param code 原属性编号
+     * @return 原表单位的累计属性
+     */
+    public static int breakthroughValue(LocalElf elf, int code) {
+        JsonNode values = ElfTrainingCatalog.row("break", elf.training.path("veinlevel").asInt()).path("attributes");
+        int sum = 0;
+        for (int i = 0; i + 1 < values.size(); i += 2) {
+            if (values.path(i).asInt() == code) sum += values.path(i + 1).asInt();
+        }
+        return sum;
     }
 
     /**
@@ -166,7 +195,14 @@ public final class ElfCombatGrowth {
         GoldCarryRules.apply(elf, fighter);
         StoneWearRules.applySecondary(elf, fighter);
         DynamaxRules.applyStats(elf, fighter);
+        int[] breakCodes = {20, 42, 106};
+        String[] breakFields = {"reduced", "skill_damage_reduced", "damage_lv"};
+        for (int i = 0; i < breakCodes.length; i++) {
+            Object before = fighter.get(breakFields[i]);
+            int value = before instanceof Number ? ((Number) before).intValue() : 0;
+            fighter.put(breakFields[i], value + breakthroughValue(elf, breakCodes[i]));
+        }
         fighter.put("hp", fighter.get("hp_max"));
-        fighter.put("vein", elf.training.path("veinlevel").asInt());
+        fighter.put("vein", breakthroughStage(elf));
     }
 }

@@ -1944,7 +1944,7 @@
   "aureoleCount": {
     "min": 1,
     "max": 4,
-    "uniqueFamily": true,
+    "uniqueFamily": false,
     "familyDivisor": 1000
   },
   "talent2UsesTalents": true,

@@ -779,24 +779,16 @@ class BattleGameFeature implements GameFeature {
         AdventureStage adventure = AdventureStage.find(victory.encounter);
         if (adventure != null) {
             List<Map<String, Object>> direct = new ArrayList<>();
-            for (int i = 0; i < adventure.rewards.size(); i += 3) {
-                int type = adventure.rewards.get(i);
-                int item = adventure.rewards.get(i + 1);
-                int count = adventure.rewards.get(i + 2);
-                if (type == AdventureStage.EQUIPMENT) {
-                    direct.add(fields("id", item, "n", count, "type", type,
-                            "pos", AdventureStage.equipmentPosition(item), "level", 0));
-                } else if (victory.delivered.containsKey(item)) {
-                    direct.add(fields("id", item, "n", victory.delivered.get(item)));
-                }
-            }
-            HangupGameFeature.pushSnapshot(output, adventure.next, hangup, role.id, direct);
+            victory.delivered.forEach((id, count) -> direct.add(fields("id", id, "n", count, "sid", id.toString(),
+                    "state", false, "lock", false, "deadline", 0)));
+            victory.equipment.forEach(gear -> direct.add(bags.equipmentItem(gear)));
+            output.push(14, fields("flags", "hangup.challenge", "adds", fields("coins", victory.coins,
+                    "exp", victory.exp, "exp1", (long) adventure.elfExp * 60, "items", direct)));
             LocalRole saved = roles.findById(role.id).orElse(role);
             output.push(3, fields("coins", saved.coins, "level", saved.level, "exp", saved.exp,
                     "exp1", hangup.elfPool(role.id)));
-            output.push(14, fields("flags", "adventure.first_clear", "adds", fields("coins", victory.coins,
-                    "exp", victory.exp, "exp1", (long) adventure.elfExp * 60)));
             bags.push(role.id, output);
+            HangupGameFeature.pushSnapshot(output, adventure.next, hangup, role.id, direct);
             return;
         }
         if (victory.completed) {

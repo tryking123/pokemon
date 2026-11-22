@@ -341,7 +341,7 @@ public class ElfTrainingService {
                 }
                 if (action == 3007) {
                     if (current >= required || current >= 9) {
-                        return reply("errno", INVALID);
+                        return reply("errno", 101008);
                     }
                     JsonNode paidStep = growth.path("cost").path(current);
                     applyGrowthCost(cost, paidStep);
@@ -349,13 +349,15 @@ public class ElfTrainingService {
                     state.put("advanced", current + 1);
                 } else {
                     newConfig = (int) value(body, "sid");
-                    if (current < required || newConfig <= 0 || newConfig == elf.configId
-                            || !contains(baseGrowth.path("evolution"), newConfig)
-                            || elf.level < baseGrowth.path("needlv").asInt()
-                            || state.path("love").asInt(1) < baseGrowth.path("needlove").asInt()) {
+                    JsonNode targetGrowth = row("growth", newConfig);
+                    if (newConfig <= 0 || newConfig == elf.configId || targetGrowth.isMissingNode()
+                            || !contains(baseGrowth.path("evolution"), newConfig)) {
                         return reply("errno", INVALID);
                     }
-                    applyGrowthCost(cost, baseGrowth.path("cost").path(9));
+                    if (current < targetGrowth.path("upgrade_limit").asInt()) return reply("errno", 253120);
+                    if (elf.level < targetGrowth.path("needlv").asInt()) return reply("errno", 101009);
+                    if (state.path("love").asInt(1) < targetGrowth.path("needlove").asInt()) return reply("errno", 101010);
+                    applyGrowthCost(cost, targetGrowth.path("cost").path(9));
                     state.put("advanced", 0);
                     state.remove("advanceCosts");
                     state.withArray("old_elfsid").add(elf.configId);
@@ -560,7 +562,8 @@ public class ElfTrainingService {
                              Map<String, Object> result, boolean auto) {
         ObjectNode state = elf.training;
         int level = state.path("love").asInt(1);
-        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100);
+        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100)
+                + row("break", state.path("veinlevel").asInt()).path("extra").asInt();
         long previous = state.path("loveexp").asLong();
         long experience = previous;
         long type = value(body, "type");
@@ -623,7 +626,8 @@ public class ElfTrainingService {
         ObjectNode state = elf.training;
         int level = state.path("love").asInt(1);
         JsonNode species = row("species", elf.configId);
-        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100);
+        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100)
+                + row("break", state.path("veinlevel").asInt()).path("extra").asInt();
         if (level >= max) {
             return false;
         }
@@ -731,17 +735,12 @@ public class ElfTrainingService {
         return bonus+Math.max(0,(int)Math.floor(coefficient.path("data2").asDouble()-coefficient.path("data1").asDouble()*delta*delta));
     }
     /**
-     * 按原客户端规则为终形精灵选择编号乘十的追加进阶表。
+     * 按原客户端规则选择当前首个进化目标或终形编号乘十的进阶表。
      * @param speciesId 当前精灵模板编号
      * @return 进阶使用的原配置
      */
     private static JsonNode growthRule(int speciesId) {
-        JsonNode normal = row("growth", speciesId);
-        if (normal.path("evolution").path(0).asInt() == 0) {
-            JsonNode terminal = row("growth", speciesId * 10);
-            if (!terminal.isMissingNode()) return terminal;
-        }
-        return normal;
+        return ElfTrainingCatalog.advanceRule(speciesId);
     }
     /**
      * 读取进阶或进化采用的物品与金币。

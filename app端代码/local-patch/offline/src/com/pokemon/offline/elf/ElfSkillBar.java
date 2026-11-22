@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 精灵主动技能栏。底包 SpriteHandle 提供四个槽，种族技能按等级解锁，觉醒技能按觉醒等级解锁。
+ * 精灵主动技能栏，种族技能与觉醒技能分别使用四个槽，并沿用原协议的合并列表存档。
+ * 种族技能按等级解锁，觉醒技能按觉醒等级解锁，被动能力不占用主动技能槽。
  *
  * @author tongruiyuan
  * @since 2026-11-19 15:09
@@ -18,7 +19,8 @@ import java.util.Set;
 public final class ElfSkillBar {
     private static final JsonNode RULES = ElfTrainingCatalog.load("elf/skill-bar.json");
     static final JsonNode UPGRADE = ElfTrainingCatalog.load("elf/skill-upgrade.json");
-    private static final int CAPACITY = 4;
+    /** 每类主动技能独立拥有的槽位数量。 */
+    private static final int CATEGORY_CAPACITY = 4;
 
     /** 防止实例化。 */
     private ElfSkillBar() {
@@ -108,7 +110,8 @@ public final class ElfSkillBar {
     }
 
     /**
-     * 验证归属精灵可用的技能来源，并更新该实例的技能栏。
+     * 验证归属精灵可用的技能来源，按种族和觉醒分别检查槽位并更新合并存档。
+     * 替换只允许发生在同一类别，安装觉醒技能不会挤占种族技能槽位。
      *
      * @param elf 角色锁下读取的实例
      * @param equip 是否执行上阵
@@ -135,13 +138,14 @@ public final class ElfSkillBar {
             if (bar.contains(skill)) {
                 return 101022;
             }
+            Set<Integer> category = racial.contains(skill) ? racial : awake;
             if (replaced != 0) {
                 int index = bar.indexOf(replaced);
-                if (index < 0) {
+                if (index < 0 || !category.contains(replaced)) {
                     return 101029;
                 }
                 bar.set(index, skill);
-            } else if (bar.size() < CAPACITY) {
+            } else if (bar.stream().filter(category::contains).count() < CATEGORY_CAPACITY) {
                 bar.add(skill);
             } else {
                 return 101021;
