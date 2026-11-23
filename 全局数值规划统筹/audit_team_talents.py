@@ -222,4 +222,3 @@ if __name__=="__main__":
     result=scan(args.apk)
     write(args.output,result)
     print(json.dumps(result["summary"],ensure_ascii=False))
-
