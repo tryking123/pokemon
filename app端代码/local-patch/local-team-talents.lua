@@ -14,10 +14,14 @@ local function auraSlots(ids, loaded, event)
         if row.event == event then
             ordinal = ordinal + 1
             local rule = loaded[event][ordinal]
+            -- 原数据管理器会把文案编号就地替换成中文文本，两种读取阶段均需支持。
+            local description = row.description
+            local hasDescription = (type(description) == "number" and description > 0)
+                or (type(description) == "string" and description ~= "")
             for index, action in ipairs(rule.action or {}) do
-                if row.description and row.description > 0 and
+                if hasDescription and
                     (action[1] == 35 or (action[1] == 27 and action[8] ~= 2)) then
-                    local key = table.concat({row.description, row.mode or 0, row.repeated or 0,
+                    local key = table.concat({description, row.mode or 0, row.repeated or 0,
                         table.concat(row.condition1 or {}, ","), table.concat(row.condition2 or {}, ","),
                         table.concat(row.condition3 or {}, ","), table.concat(row.condition4 or {}, ","),
                         table.concat(action, ",")}, "|")
