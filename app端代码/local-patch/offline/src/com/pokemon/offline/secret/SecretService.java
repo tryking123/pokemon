@@ -255,7 +255,7 @@ public class SecretService {
      */
     @Transactional
     public ObjectNode upgradeStone(String id, String sid, String receipt) {
-        roles.lockRole(id);
+        LocalRole owner = roles.lockRole(id);
         List<String> saved = jdbc.queryForList("SELECT reply FROM local_stone_action WHERE role_id=? AND receipt=?",
                 String.class, id, receipt);
         if (!saved.isEmpty()) {
@@ -265,7 +265,7 @@ public class SecretService {
                 throw new IllegalStateException("奥义石升星回执损坏", e);
             }
         }
-        ObjectNode result = json.createObjectNode().put("errno", 1);
+        ObjectNode result = json.createObjectNode().put("errno", 100021);
         for (JsonNode item : stoneItems(id, false)) {
             if (!item.path("sid").asText().equals(sid)) {
                 continue;
@@ -274,8 +274,17 @@ public class SecretService {
             int lucky = item.path("lucky").asInt();
             JsonNode rule = stoneRules.path("stars").path(star);
             JsonNode cost = stoneRules.path("templates").path(item.path("id").asText()).path("upgrade").path(star);
-            if (!rule.isObject() || cost.size() != 2
-                    || !inventory.spendMaterials(id, 21062, cost.get(0).asLong(), cost.get(1).asLong(), 0)) {
+            if (!rule.isObject() || cost.size() != 2) {
+                return result;
+            }
+            // 原界面每次按当前星级支付完整费用；幸运值是失败后的保底进度。
+            if (owner.coins < cost.get(1).asLong()) {
+                return result.put("errno", 100005);
+            }
+            if (inventory.count(id, 21062) < cost.get(0).asLong()) {
+                return result.put("errno", 250501);
+            }
+            if (!inventory.spendMaterials(id, 21062, cost.get(0).asLong(), cost.get(1).asLong(), 0)) {
                 return result;
             }
             int limit = rule.path("limit").asInt();

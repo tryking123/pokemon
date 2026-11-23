@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-23",
+  "apk": "app包\\new\\pokemon-local-20261123-ancient-select.apk",
+  "sha256": "5a7b9a96fe94fd1abac62cc8f033b3638c1218e1eae698f3a2d808fbe8c8e72d",
+  "branch": "codex/fix-ancient-material-select",
+  "build": "App-only isolated source compilation; no server directory",
+  "apkChecks": [
+    "base SHA256",
+    "v2/v3 signature",
+    "16KB zip alignment",
+    "replacement hashes",
+    "packaged catalog and DEX",
+    "QA catalog and DEX equal final APK"
+  ],
+  "logs": {
+    "lua32": "PASS original patched module start + 6 button selection scenarios + idempotence\nPASS 32 bit final APK actual LuaJIT quality and original UI\n",
+    "lua64": "PASS original patched module start + 6 button selection scenarios + idempotence\nPASS 64 bit final APK actual LuaJIT quality and original UI\n",
+    "device": "PASS reject duplicate unlock fodder\nPASS unlock species 64189 using five same species\nPASS unlocked state persisted\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS ancient level 1 accepts item 30014\nPASS exact material deduction\nPASS upgrade state persisted\nPASS ancient level 2 accepts item 21090\nPASS exact material deduction\nPASS upgrade state persisted\nPASS ancient level 3 accepts item 21091\nPASS exact material deduction\nPASS upgrade state persisted\nPASS mixed three material kinds accepted\nPASS mixed exact deduction\nPASS reject unrelated material\nPASS rejected request preserves state and inventory\nPASS reject wrong count\nPASS wrong count preserves state\nPASS reject duplicate unlock fodder\nPASS unlock species 64190 using five same species\nPASS unlocked state persisted\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS unlock consumed selected fodder\nPASS ancient level 1 accepts item 30014\nPASS exact material deduction\nPASS upgrade state persisted\nPASS ancient level 2 accepts item 21090\nPASS exact material deduction\nPASS upgrade state persisted\nPASS ancient level 3 accepts item 21091\nPASS exact material deduction\nPASS upgrade state persisted\nPASS mixed three material kinds accepted\nPASS mixed exact deduction\nPASS reject unrelated material\nPASS rejected request preserves state and inventory\nPASS reject wrong count\nPASS wrong count preserves state\n\nEVIDENCE {\"status\":\"PASS\",\"role\":\"3d7ec753-0922-4554-bc62-719b8df6520b\",\"targets\":[{\"uid\":\"EL00c5a17ba2f19c49fe8caf6bb381f564c6\",\"training\":\"{\\\"ancient\\\":4}\"},{\"uid\":\"EL00e1bbc4c8ab424e1aa93db4371038f14e\",\"training\":\"{\\\"ancient\\\":4}\"}],\"database\":\"isolated ancient-validation.db\"}\n",
+    "cold": "PASS cold process exact ancient state preserved\nPASS cold process exact ancient state preserved\n\nEVIDENCE {\"status\":\"PASS\",\"role\":\"3d7ec753-0922-4554-bc62-719b8df6520b\",\"targets\":[{\"uid\":\"EL00c5a17ba2f19c49fe8caf6bb381f564c6\",\"training\":\"{\\\"ancient\\\":4}\"},{\"uid\":\"EL00e1bbc4c8ab424e1aa93db4371038f14e\",\"training\":\"{\\\"ancient\\\":4}\"}],\"database\":\"isolated ancient-validation.db\"}\n"
+  },
+  "pending": [
+    "Unity device visual button layout and manual click flow",
+    "physical Android device regression"
+  ]
+}

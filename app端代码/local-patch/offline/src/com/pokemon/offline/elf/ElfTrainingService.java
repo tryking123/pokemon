@@ -487,9 +487,8 @@ public class ElfTrainingService {
             case 407:
                 JsonNode unlock = row("ancient", 0).path("remove");
                 consumed = stringList(body.get("list"));
-                int assess = row("variable", 4402).path("data1").asInt();
                 if (state.has("ancient") || quality < 6 || consumed.size() != unlock.path("1").asInt()
-                        || !validFodder(roleId, elf, consumed, "", assess)) {
+                        || !validFodder(roleId, elf, consumed, "", 0, species.path("risingstar").asInt(elf.configId))) {
                     return reply("errno", INVALID);
                 }
                 cost.coins = unlock.path("2").asLong();
@@ -503,8 +502,10 @@ public class ElfTrainingService {
                 consumed = stringList(body.get("list"));
                 Map<Integer, Long> materials = itemList(body.get("items"));
                 if (ancient < 0 || ancientRule.isMissingNode() || materials == null
-                        || materials.keySet().stream().anyMatch(id -> id != 30014)
-                        || consumed.size() + materials.getOrDefault(30014, 0L) != ancientRule.path("material").asLong()
+                        || materials.keySet().stream().anyMatch(id -> id != 30014
+                                && (quality > 7 || (id != 21090 && id != 21091)))
+                        || consumed.size() + materials.values().stream().mapToLong(Long::longValue).sum()
+                                != ancientRule.path("material").asLong()
                         || !validFodder(roleId, elf, consumed, "", row("variable", 4402).path("data1").asInt())) {
                     return reply("errno", INVALID);
                 }
