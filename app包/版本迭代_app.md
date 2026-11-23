@@ -77,7 +77,8 @@
 
 - 修复默认 `admin` 账号首次建角卡住。旧包已写入角色并返回建角成功，进场时对已下线活动 10073 的零长度周期重复结算，Unity 主线程停在 `OpeningRankRewards.settle`。现在跳过没有有效窗口的榜单，保留原结算游标和角色存档。
 - 在同一台运行 armeabi-v7a 的模拟器上复现旧包故障。使用与交付包相同业务 DEX 的独立测试包，覆盖升级后原先卡住的角色进入地图。清空测试包存储后，用默认账号点击创建角色也进入地图，并显示皮卡丘初始引导。终止进程后重新登录，恢复同名角色和引导进度。
-- App 离线模块独立编译通过。正式包与上一版对比，业务条目仅 `classes9.dex` 变化。v2/v3 签名、16 KB 对齐及替换条目哈希检查通过。SHA-256 为 `bfffbcff6b5e4c4cdec61160c4ccbbe9fe846be533d5ac2158a45639520d49da`。
+- App 离线模块独立编译通过。与本地 sprite-switch-slots APK 对比，业务条目仅 `classes9.dex` 变化。v2/v3 签名、16 KB 对齐及替换条目哈希检查通过。SHA-256 为 `bfffbcff6b5e4c4cdec61160c4ccbbe9fe846be533d5ac2158a45639520d49da`。
+
 
 ## 2026-11-22 · pokemon-local-20261122-sprite-switch-slots.apk
 
