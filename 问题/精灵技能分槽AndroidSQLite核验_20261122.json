@@ -1,0 +1,73 @@
+{
+  "role": "0fa6ceb6-1c3f-4f0b-aad5-78f3f8f8e201",
+  "target": "EL000421ee103a154c4bbcc470966aa00c9a",
+  "status": "PASS",
+  "unsupportedUpgradeReferences": 137,
+  "upgrades": [
+    {
+      "skill": 10336,
+      "item": 20020,
+      "amount": 100,
+      "selectedMaterialConsumed": true,
+      "replayProtected": true
+    },
+    {
+      "skill": 30869,
+      "item": 21063,
+      "amount": 1,
+      "selectedMaterialConsumed": true,
+      "replayProtected": true
+    }
+  ],
+  "training": {
+    "awakenlv": 5,
+    "skillBar": [
+      10282,
+      30871,
+      30868,
+      30869,
+      10336,
+      10312,
+      10335
+    ],
+    "skill_cost": [
+      {
+        "itype": 1,
+        "id": 20020,
+        "num": 100
+      },
+      {
+        "itype": 2,
+        "id": 64174,
+        "num": 2
+      },
+      {
+        "itype": 1,
+        "id": 21063,
+        "num": 1
+      }
+    ],
+    "skill_lv": {
+      "10336": 2,
+      "30869": 2
+    }
+  },
+  "battleSkills": [
+    10282,
+    30871,
+    30868,
+    308691,
+    103361,
+    10312,
+    10335
+  ],
+  "coldStart": "PASS",
+  "apk": "app包/new/pokemon-local-20261122-skills-dynamax-flow.apk",
+  "apkSha256": "4eb1faf8b4024629570a205317cc448f345531c77eb8c83cae088b6c0c174a6a",
+  "device": "127.0.0.1:16416",
+  "targetPackage": "com.qk.offline.pokemon.qa",
+  "instrumentation": "com.qk.skills.instrument/com.qk.skills.instrument.SkillsInstrument",
+  "independentAccount": true,
+  "processWasAbsentBeforeCold": true,
+  "validation": "Installed Android services + actual SQLite transactions, not JVM stubs; setup then distinct instrumentation process cold validation."
+}

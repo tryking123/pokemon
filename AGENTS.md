@@ -3,7 +3,7 @@
 ## Git 协作与许可
 
 - 仓库级 [Git 协作规范](CONTRIBUTING.md) 统一说明首次上传、权限配置、PR、Issue、问题关联和发布流程；所有代码修改遵守本文件的业务与验证要求。
-- `main` 仅所有者 `tryking123` 可更新；日常开发从 `devlop` 建立工作分支，通过 PR 合入 `devlop`，至少一次 Code Owner 批准，新增提交后重新审核。不得自动批准自己提交的 PR。
+- `main` 仅所有者 `tryking123` 可更新；当前采用单人维护模式，日常开发从 `devlop` 建立工作分支，通过 PR 合入 `devlop`。批准数量为 0，不要求 Code Owner 或最后推送者以外的人批准；所有者可在检查通过、评论解决后合并自己的 PR。不得自动批准自己的 PR 或将自行检查记录为他人审核。
 - 两个长期分支均禁止强推和删除。`.github/rulesets/` 为待远端导入的配置，不得仅凭本地文件宣称已启用保护。
 - 日常 PR 以 `Refs #编号` 引用 Issue，并通过 Development 关联；发布 PR 合入默认分支 `main` 时以 `Closes #编号` 关闭已验收问题。腾讯 BUG 表行号与 GitHub Issue 编号分别记录。
 - 原始 APK、解包产物、构建输出、签名密钥和个人存档不进入 Git；不要将凭据写入任何文件、远程 URL、Issue 或 PR。
@@ -68,10 +68,10 @@ git commit -m "fix: 修复登录异常 (#123)"
 git push -u origin codex/fix-123-login
 ```
 
-进入 GitHub 的 Pull requests → New pull request，选择 `base: devlop`、`compare: codex/fix-123-login`，按 `.github/pull_request_template.md` 填写：问题与触发条件、修改前后行为、影响范围、实际验证和回退方案。尚未完成时使用 Draft，完成后转为 Ready for review，并请求 Code Owner 审核。
+进入 GitHub 的 Pull requests → New pull request，选择 `base: devlop`、`compare: codex/fix-123-login`，按 `.github/pull_request_template.md` 填写：问题与触发条件、修改前后行为、影响范围、实际验证和回退方案。尚未完成时使用 Draft，完成后转为 Ready for review；单人维护时由所有者检查后合并，有协作者时可邀请审核。
 
 - 日常 PR 描述写 `Refs #123`，通过右侧 Development 手动关联 Issue；外部贡献者无权限时由维护者关联。合入非默认分支 `devlop` 不依赖关闭关键字自动关闭 Issue。
-- 修改审核意见后，继续向同一工作分支提交和推送，更新 PR 中的验证结果，无需重新创建 PR。新提交后重新请求审核，不能保留失效批准作为通过依据。
+- 修改审核意见后，继续向同一工作分支提交和推送，更新 PR 中的验证结果，无需重新创建 PR。新提交后重新检查受影响内容；已邀请审核时可重新请求审核，单人维护时不强制他人批准。
 - 对话中仅要求本地修改时，完成本地修改和检查；提交、推送、创建 PR、合并或发布按用户已授权的范围执行，交付时说明实际完成到哪一步。文档示例不代表命令已执行。
 
 #### 5. 同步上游与处理冲突
@@ -92,7 +92,7 @@ git merge --continue
 
 #### 6. 审核、合并与清理工作分支
 
-- 合入 `devlop` 前，确认至少一位有效 Code Owner 批准、最新推送已由其他人审核、审核评论已解决，且适用检查通过。作者不得批准自己的 PR；所有者自己的 PR 也需要另一位可信 Code Owner，无审核人时不得用自动批准规避。
+- 合入 `devlop` 前，确认 PR 的最新变更已由所有者检查、审核评论已解决，且适用检查通过。单人维护不要求他人批准，所有者可合并自己的 PR；不得自动批准自己的 PR 或把自行检查记为他人审核。以后启用多人强制审核时，需同步更新远端规则和本地规范。
 - 日常 PR 优先 Squash merge；合并后在 Issue 中回填实现 PR、验证版本和结果，并按业务规范更新本地 BUG 台账。
 - 拉取最新 `devlop`，确认工作分支改动已完整合入且没有独有的待保留工作后，才清理个人工作分支。Squash 合并后，Git 可能无法通过提交祖先关系判断已合并，应以 PR 状态和实际差异核对；不自动使用 `git branch -D` 强删。
 - 不删除 `main`、`devlop`，也不删除其他人的工作分支。远端删除个人分支前，同样确认对应 PR 已合并或明确取消。
@@ -102,7 +102,7 @@ git merge --continue
 1. 在 `devlop` 完成本轮验收和版本记录，创建 `devlop → main` 的发布 PR，列出变更、实际验证、存档兼容性和回退方式。
 2. 对已经验收的问题逐项写 `Closes #123`，尚未完成的仅写 `Refs #123`；保留默认分支为 `main`，确保关闭行为与发布状态一致。
 3. 发布 PR 仅由所有者 `tryking123` 合并，使用 Merge commit 保留两条长期分支的共同历史。需要版本标签或 GitHub Release 时，在明确的发布范围内针对验收提交创建，并关联实际 APK 及版本记录；源码发布不自动代表 APK 可以公开分发。
-4. 发布后创建 `main → devlop` 的同步 PR，经过同样审核后回流，避免两条长期分支遗漏修复。
+4. 发布后创建 `main → devlop` 的同步 PR，按当前单人维护流程检查并合并回流，避免两条长期分支遗漏修复。
 5. 紧急修复从最新 `main` 建立 `codex/hotfix-123-name`（人工可用 `hotfix/123-name`），验证后 PR → `main`，由所有者合并并发布，再通过同步 PR 回流 `devlop`。
 
 #### 8. 撤销、回退与交付记录

@@ -1,0 +1,10287 @@
+{
+  "version": 1,
+  "date": "2026-11-22",
+  "originSha256": "f010a675dcb9ccacf899a2954e7e497be7f04c3ea94214140fa3434c817a7c45",
+  "sources": [
+    "固定底包",
+    "miao-import/species-patch.json"
+  ],
+  "abiEqual": {
+    "jingling": true,
+    "jinhua": true,
+    "variable": true,
+    "break": true,
+    "skill": true
+  },
+  "counts": {
+    "species": 591,
+    "growth": 923,
+    "break": 132,
+    "awakenSkills": 402
+  },
+  "sourceDifferences": [],
+  "unresolvedReferences": [],
+  "omittedEmptyAwakenSkills": [
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029,
+    10030,
+    10031,
+    10032,
+    10034,
+    10035,
+    10036,
+    10037,
+    10038,
+    10039,
+    10040,
+    10041,
+    10042,
+    10043,
+    10044,
+    10045,
+    10046,
+    10048,
+    10049,
+    10050,
+    10051,
+    10052,
+    10053,
+    10054,
+    10055,
+    10056,
+    11001,
+    11002,
+    11003,
+    11004,
+    11005,
+    11006,
+    11007,
+    11008,
+    11009,
+    21001,
+    21002,
+    21003,
+    21004,
+    21005,
+    21006,
+    21007,
+    21008,
+    21009,
+    21010,
+    21011,
+    21012,
+    21013,
+    21014,
+    21015,
+    21016,
+    21017,
+    21018,
+    21019,
+    21020,
+    21021,
+    21022,
+    21023,
+    21024,
+    21025,
+    21026,
+    21027,
+    21028,
+    21029,
+    21030,
+    21031,
+    21032,
+    21033,
+    21034,
+    22001,
+    22002,
+    22003,
+    22004,
+    22005,
+    22006,
+    22007,
+    22008,
+    22009,
+    22010,
+    22011,
+    22012,
+    22013,
+    22014,
+    22015,
+    22016,
+    22017,
+    23001,
+    23002,
+    23003,
+    23004,
+    23005,
+    23006,
+    23007,
+    23008,
+    23009,
+    23010,
+    23011,
+    23012,
+    23013,
+    23014,
+    23015,
+    23016,
+    23017,
+    31001,
+    31002,
+    31003,
+    31004,
+    31005,
+    31006,
+    31007,
+    31008,
+    31009,
+    31010,
+    31011,
+    31012,
+    31013,
+    31014,
+    31015,
+    31016,
+    31017,
+    31018,
+    31019,
+    31020,
+    31021,
+    31022,
+    31023,
+    31024,
+    31025,
+    31026,
+    31027,
+    31028,
+    31029,
+    31030,
+    31031,
+    32001,
+    32002,
+    32003,
+    32004,
+    32005,
+    32006,
+    32007,
+    32008,
+    32009,
+    32010,
+    32011,
+    32012,
+    32013,
+    32014,
+    32015,
+    32016,
+    32017,
+    32018,
+    32019,
+    33001,
+    33002,
+    33003,
+    33004,
+    33005,
+    33006,
+    33007,
+    33008,
+    33009,
+    33010,
+    33011,
+    33012,
+    33013,
+    33014,
+    33015,
+    33016,
+    41031
+  ],
+  "growthAbsentInSource": [
+    {
+      "species": "11006",
+      "field": "growth",
+      "target": "11006"
+    },
+    {
+      "species": "11007",
+      "field": "growth",
+      "target": "11007"
+    },
+    {
+      "species": "11008",
+      "field": "growth",
+      "target": "11008"
+    },
+    {
+      "species": "11009",
+      "field": "growth",
+      "target": "11009"
+    },
+    {
+      "species": "641891",
+      "field": "growth",
+      "target": "641891"
+    },
+    {
+      "species": "641892",
+      "field": "growth",
+      "target": "641892"
+    },
+    {
+      "species": "641893",
+      "field": "growth",
+      "target": "641893"
+    }
+  ],
+  "missingStageVariablesBefore": [
+    3810,
+    3811,
+    3812,
+    3813,
+    3814,
+    3815,
+    3816,
+    3817,
+    3818,
+    3819,
+    3820,
+    3821
+  ],
+  "stageVariablesMissingAfter": [],
+  "missingBreakAttributesBefore": [],
+  "restoredBreakAttributes": [],
+  "breakAttributeMissingAfter": [],
+  "species": [
+    {
+      "id": 10001,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10001,
+      "starsprint": 10001,
+      "awakenSkills": [
+        1,
+        40009,
+        1,
+        40010,
+        1,
+        40011
+      ]
+    },
+    {
+      "id": 10002,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10002,
+      "starsprint": 10002,
+      "awakenSkills": [
+        1,
+        40012,
+        1,
+        40013,
+        1,
+        40014,
+        1,
+        40067
+      ]
+    },
+    {
+      "id": 10003,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10003,
+      "starsprint": 10003,
+      "awakenSkills": [
+        1,
+        40022,
+        1,
+        40023,
+        1,
+        40024
+      ]
+    },
+    {
+      "id": 10004,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10004,
+      "starsprint": 10004,
+      "awakenSkills": [
+        1,
+        40029,
+        1,
+        40030,
+        1,
+        40031
+      ]
+    },
+    {
+      "id": 10005,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10005,
+      "starsprint": 10005,
+      "awakenSkills": [
+        1,
+        40047,
+        1,
+        40048,
+        1,
+        40063,
+        1,
+        40064
+      ]
+    },
+    {
+      "id": 10006,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10006,
+      "starsprint": 10006,
+      "awakenSkills": [
+        1,
+        40032,
+        1,
+        40033,
+        1,
+        40034
+      ]
+    },
+    {
+      "id": 10007,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10007,
+      "starsprint": 10007,
+      "awakenSkills": [
+        1,
+        40041,
+        1,
+        40042,
+        1,
+        40043,
+        1,
+        40044
+      ]
+    },
+    {
+      "id": 10008,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10008,
+      "starsprint": 10008,
+      "awakenSkills": [
+        1,
+        40049,
+        1,
+        40050,
+        1,
+        40055,
+        1,
+        40056
+      ]
+    },
+    {
+      "id": 10009,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10009,
+      "starsprint": 10009,
+      "awakenSkills": [
+        1,
+        40060,
+        1,
+        40061,
+        1,
+        40062
+      ]
+    },
+    {
+      "id": 10010,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10010,
+      "starsprint": 10010,
+      "awakenSkills": null
+    },
+    {
+      "id": 10011,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10011,
+      "starsprint": 10011,
+      "awakenSkills": null
+    },
+    {
+      "id": 10012,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10012,
+      "starsprint": 10012,
+      "awakenSkills": null
+    },
+    {
+      "id": 10013,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10013,
+      "starsprint": 10013,
+      "awakenSkills": null
+    },
+    {
+      "id": 10014,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10014,
+      "starsprint": 10014,
+      "awakenSkills": null
+    },
+    {
+      "id": 10015,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10015,
+      "starsprint": 10015,
+      "awakenSkills": null
+    },
+    {
+      "id": 10016,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10016,
+      "starsprint": 10016,
+      "awakenSkills": null
+    },
+    {
+      "id": 10017,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10017,
+      "starsprint": 10017,
+      "awakenSkills": null
+    },
+    {
+      "id": 10018,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10018,
+      "starsprint": 10018,
+      "awakenSkills": null
+    },
+    {
+      "id": 10019,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10019,
+      "starsprint": 10019,
+      "awakenSkills": null
+    },
+    {
+      "id": 10020,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10020,
+      "starsprint": 10020,
+      "awakenSkills": null
+    },
+    {
+      "id": 10021,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10021,
+      "starsprint": 10021,
+      "awakenSkills": null
+    },
+    {
+      "id": 10022,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10022,
+      "starsprint": 10022,
+      "awakenSkills": null
+    },
+    {
+      "id": 10023,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10023,
+      "starsprint": 10023,
+      "awakenSkills": null
+    },
+    {
+      "id": 10024,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10024,
+      "starsprint": 10024,
+      "awakenSkills": null
+    },
+    {
+      "id": 10025,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10025,
+      "starsprint": 10025,
+      "awakenSkills": null
+    },
+    {
+      "id": 10026,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10026,
+      "starsprint": 10026,
+      "awakenSkills": null
+    },
+    {
+      "id": 10027,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10027,
+      "starsprint": 10027,
+      "awakenSkills": null
+    },
+    {
+      "id": 10028,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10028,
+      "starsprint": 10028,
+      "awakenSkills": null
+    },
+    {
+      "id": 10029,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10029,
+      "starsprint": 10029,
+      "awakenSkills": null
+    },
+    {
+      "id": 10030,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10030,
+      "starsprint": 10030,
+      "awakenSkills": null
+    },
+    {
+      "id": 10031,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10031,
+      "starsprint": 10031,
+      "awakenSkills": null
+    },
+    {
+      "id": 10032,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10032,
+      "starsprint": 10032,
+      "awakenSkills": null
+    },
+    {
+      "id": 10033,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10033,
+      "starsprint": 10033,
+      "awakenSkills": [
+        1,
+        40009,
+        1,
+        40029,
+        1,
+        40032
+      ]
+    },
+    {
+      "id": 10034,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10034,
+      "starsprint": 10034,
+      "awakenSkills": null
+    },
+    {
+      "id": 10035,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10035,
+      "starsprint": 10035,
+      "awakenSkills": null
+    },
+    {
+      "id": 10036,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10036,
+      "starsprint": 10036,
+      "awakenSkills": null
+    },
+    {
+      "id": 10037,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10037,
+      "starsprint": 10037,
+      "awakenSkills": null
+    },
+    {
+      "id": 10038,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10038,
+      "starsprint": 10038,
+      "awakenSkills": null
+    },
+    {
+      "id": 10039,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10039,
+      "starsprint": 10039,
+      "awakenSkills": null
+    },
+    {
+      "id": 10040,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10040,
+      "starsprint": 10040,
+      "awakenSkills": null
+    },
+    {
+      "id": 10041,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10041,
+      "starsprint": 10041,
+      "awakenSkills": null
+    },
+    {
+      "id": 10042,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10042,
+      "starsprint": 10042,
+      "awakenSkills": null
+    },
+    {
+      "id": 10043,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10043,
+      "starsprint": 10043,
+      "awakenSkills": null
+    },
+    {
+      "id": 10044,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10044,
+      "starsprint": 10044,
+      "awakenSkills": null
+    },
+    {
+      "id": 10045,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10045,
+      "starsprint": 10045,
+      "awakenSkills": null
+    },
+    {
+      "id": 10046,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10046,
+      "starsprint": 10046,
+      "awakenSkills": null
+    },
+    {
+      "id": 10047,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10047,
+      "starsprint": 10047,
+      "awakenSkills": [
+        1,
+        40068,
+        1,
+        40069
+      ]
+    },
+    {
+      "id": 10048,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10048,
+      "starsprint": 10048,
+      "awakenSkills": null
+    },
+    {
+      "id": 10049,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10049,
+      "starsprint": 10049,
+      "awakenSkills": null
+    },
+    {
+      "id": 10050,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10050,
+      "starsprint": 10050,
+      "awakenSkills": null
+    },
+    {
+      "id": 10051,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10051,
+      "starsprint": 10051,
+      "awakenSkills": null
+    },
+    {
+      "id": 10052,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10052,
+      "starsprint": 10052,
+      "awakenSkills": null
+    },
+    {
+      "id": 10053,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10053,
+      "starsprint": 10053,
+      "awakenSkills": null
+    },
+    {
+      "id": 10054,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10054,
+      "starsprint": 10054,
+      "awakenSkills": null
+    },
+    {
+      "id": 10055,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10055,
+      "starsprint": 10055,
+      "awakenSkills": null
+    },
+    {
+      "id": 10056,
+      "quality": 6,
+      "assess": 5,
+      "maxstar": 0,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 10056,
+      "starsprint": 10056,
+      "awakenSkills": null
+    },
+    {
+      "id": 11001,
+      "quality": 1,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31016
+      ],
+      "risingstar": 11001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11002,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        21024
+      ],
+      "risingstar": 11002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11003,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        21030
+      ],
+      "risingstar": 11003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11004,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        21033
+      ],
+      "risingstar": 11004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11005,
+      "quality": 1,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        21034
+      ],
+      "risingstar": 11005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11006,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 0,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11007,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 0,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11008,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 0,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 11009,
+      "quality": 1,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 0,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21001,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31001
+      ],
+      "risingstar": 21001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21002,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41002
+      ],
+      "risingstar": 21002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21003,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31002
+      ],
+      "risingstar": 21003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21004,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41004
+      ],
+      "risingstar": 21004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21005,
+      "quality": 2,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31003
+      ],
+      "risingstar": 21005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21006,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31004
+      ],
+      "risingstar": 21006,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21007,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31005
+      ],
+      "risingstar": 21007,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21008,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31006
+      ],
+      "risingstar": 21008,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21009,
+      "quality": 3,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41010,
+        41011,
+        41012,
+        42021,
+        42022,
+        43028,
+        43029,
+        43030
+      ],
+      "risingstar": 21009,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21010,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41013
+      ],
+      "risingstar": 21010,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21011,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41014
+      ],
+      "risingstar": 21011,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21012,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31007
+      ],
+      "risingstar": 21012,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21013,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31008
+      ],
+      "risingstar": 21013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21014,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31009
+      ],
+      "risingstar": 21014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21015,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41019
+      ],
+      "risingstar": 21015,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21016,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31010
+      ],
+      "risingstar": 21016,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21017,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31011
+      ],
+      "risingstar": 21017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21018,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31012
+      ],
+      "risingstar": 21018,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21019,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41023
+      ],
+      "risingstar": 21019,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21020,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41025
+      ],
+      "risingstar": 21020,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21021,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31015
+      ],
+      "risingstar": 21021,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21022,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41027
+      ],
+      "risingstar": 21022,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21023,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31017
+      ],
+      "risingstar": 21023,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21024,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31018
+      ],
+      "risingstar": 11002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21025,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31019
+      ],
+      "risingstar": 21025,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21026,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31020
+      ],
+      "risingstar": 21026,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21027,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31022
+      ],
+      "risingstar": 21027,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21028,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31023
+      ],
+      "risingstar": 21028,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21029,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31024
+      ],
+      "risingstar": 21029,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21030,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31025
+      ],
+      "risingstar": 11003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21031,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31026
+      ],
+      "risingstar": 21031,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21032,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31027
+      ],
+      "risingstar": 21032,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21033,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31028
+      ],
+      "risingstar": 11004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 21034,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        31029
+      ],
+      "risingstar": 11005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22001,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32001
+      ],
+      "risingstar": 22001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22002,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32002
+      ],
+      "risingstar": 22002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22003,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32003
+      ],
+      "risingstar": 22003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22004,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32004
+      ],
+      "risingstar": 22004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22005,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32005
+      ],
+      "risingstar": 22005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22006,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42014
+      ],
+      "risingstar": 22006,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22007,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32006
+      ],
+      "risingstar": 22007,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22008,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32007
+      ],
+      "risingstar": 22008,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22009,
+      "quality": 2,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32008
+      ],
+      "risingstar": 22009,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22010,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32009
+      ],
+      "risingstar": 22010,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22011,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32010
+      ],
+      "risingstar": 22011,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22012,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42023
+      ],
+      "risingstar": 22012,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22013,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42024
+      ],
+      "risingstar": 22013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22014,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32012
+      ],
+      "risingstar": 22014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22015,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32011
+      ],
+      "risingstar": 22015,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22016,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32014
+      ],
+      "risingstar": 22016,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 22017,
+      "quality": 2,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        32015,
+        32016,
+        32019
+      ],
+      "risingstar": 22017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23001,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33001
+      ],
+      "risingstar": 23001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23002,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33002
+      ],
+      "risingstar": 23002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23003,
+      "quality": 2,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43005
+      ],
+      "risingstar": 23003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23004,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43009
+      ],
+      "risingstar": 23004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23005,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33006
+      ],
+      "risingstar": 23005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23006,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43014
+      ],
+      "risingstar": 23006,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23007,
+      "quality": 2,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33007
+      ],
+      "risingstar": 23007,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23008,
+      "quality": 2,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33008
+      ],
+      "risingstar": 23008,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23009,
+      "quality": 2,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33009
+      ],
+      "risingstar": 23009,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23010,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33010
+      ],
+      "risingstar": 23010,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23011,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33011
+      ],
+      "risingstar": 23011,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23012,
+      "quality": 2,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43023
+      ],
+      "risingstar": 23012,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23013,
+      "quality": 2,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33013
+      ],
+      "risingstar": 23013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23014,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33015
+      ],
+      "risingstar": 23014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23015,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43027
+      ],
+      "risingstar": 23015,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23016,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43032
+      ],
+      "risingstar": 23016,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 23017,
+      "quality": 2,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        33016
+      ],
+      "risingstar": 23017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31001,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41001
+      ],
+      "risingstar": 21001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31002,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41003
+      ],
+      "risingstar": 21003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31003,
+      "quality": 3,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41006
+      ],
+      "risingstar": 21005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31004,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41007
+      ],
+      "risingstar": 21006,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31005,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41008
+      ],
+      "risingstar": 21007,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31006,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41009
+      ],
+      "risingstar": 21008,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31007,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41016,
+        41015
+      ],
+      "risingstar": 21012,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31008,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41017
+      ],
+      "risingstar": 21013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31009,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41018
+      ],
+      "risingstar": 21014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31010,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41020
+      ],
+      "risingstar": 21016,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31011,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41021
+      ],
+      "risingstar": 21017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31012,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41022
+      ],
+      "risingstar": 21018,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31013,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41024
+      ],
+      "risingstar": 31013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31014,
+      "quality": 3,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42005
+      ],
+      "risingstar": 31014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31015,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41026
+      ],
+      "risingstar": 21021,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31016,
+      "quality": 3,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41028
+      ],
+      "risingstar": 11001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31017,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41029
+      ],
+      "risingstar": 21023,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31018,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 11002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31019,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 21025,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31020,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42016
+      ],
+      "risingstar": 21026,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31021,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42013
+      ],
+      "risingstar": 31021,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31022,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 21027,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31023,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 21028,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31024,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 21029,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31025,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 11003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31026,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 21031,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31027,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 21032,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31028,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 11004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31029,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        52019
+      ],
+      "risingstar": 11005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31030,
+      "quality": 3,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42004
+      ],
+      "risingstar": 31030,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 31031,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        41005
+      ],
+      "risingstar": 31031,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32001,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42001
+      ],
+      "risingstar": 22001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32002,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42002,
+        42003
+      ],
+      "risingstar": 22002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32003,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42009
+      ],
+      "risingstar": 22003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32004,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42011
+      ],
+      "risingstar": 22004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32005,
+      "quality": 3,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42012
+      ],
+      "risingstar": 22005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32006,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42015
+      ],
+      "risingstar": 22007,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32007,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42017
+      ],
+      "risingstar": 22008,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32008,
+      "quality": 3,
+      "assess": 4,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42018
+      ],
+      "risingstar": 22009,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32009,
+      "quality": 3,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42019
+      ],
+      "risingstar": 22010,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32010,
+      "quality": 3,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42020
+      ],
+      "risingstar": 22011,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32011,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42025,
+        42028
+      ],
+      "risingstar": 22015,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32012,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 22014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32013,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42026
+      ],
+      "risingstar": 32013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32014,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 22016,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32015,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 22017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32016,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 22017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32017,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        42027
+      ],
+      "risingstar": 32017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32018,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 32018,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 32019,
+      "quality": 3,
+      "assess": 1,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 22017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33001,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43001
+      ],
+      "risingstar": 23001,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33002,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43002
+      ],
+      "risingstar": 23002,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33003,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43004
+      ],
+      "risingstar": 33003,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33004,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 33004,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33005,
+      "quality": 3,
+      "assess": 7,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43008
+      ],
+      "risingstar": 33005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33006,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43012
+      ],
+      "risingstar": 23005,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33007,
+      "quality": 3,
+      "assess": 6,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43015
+      ],
+      "risingstar": 23007,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33008,
+      "quality": 3,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43016
+      ],
+      "risingstar": 23008,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33009,
+      "quality": 3,
+      "assess": 5,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43017
+      ],
+      "risingstar": 23009,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33010,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 23010,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33011,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43019
+      ],
+      "risingstar": 23011,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33012,
+      "quality": 3,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43022
+      ],
+      "risingstar": 33012,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33013,
+      "quality": 3,
+      "assess": 3,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43024
+      ],
+      "risingstar": 23013,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33014,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43035
+      ],
+      "risingstar": 33014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33015,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43026
+      ],
+      "risingstar": 23014,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 33016,
+      "quality": 3,
+      "assess": 2,
+      "maxstar": 4,
+      "maxawaken": 0,
+      "evolution": [
+        43011
+      ],
+      "risingstar": 23017,
+      "starsprint": 0,
+      "awakenSkills": null
+    },
+    {
+      "id": 41001,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 4,
+      "evolution": [
+        51001
+      ],
+      "risingstar": 41001,
+      "starsprint": 41001,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30753
+      ]
+    },
+    {
+      "id": 41002,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54045
+      ],
+      "risingstar": 41002,
+      "starsprint": 41002,
+      "awakenSkills": [
+        2,
+        30769
+      ]
+    },
+    {
+      "id": 41003,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51003
+      ],
+      "risingstar": 41003,
+      "starsprint": 41003,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 41004,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52009
+      ],
+      "risingstar": 41004,
+      "starsprint": 41004,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 41005,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51005
+      ],
+      "risingstar": 41005,
+      "starsprint": 41005,
+      "awakenSkills": [
+        2,
+        30104
+      ]
+    },
+    {
+      "id": 41006,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51006
+      ],
+      "risingstar": 41006,
+      "starsprint": 41006,
+      "awakenSkills": [
+        2,
+        30601
+      ]
+    },
+    {
+      "id": 41007,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52010,
+        52011
+      ],
+      "risingstar": 41007,
+      "starsprint": 41007,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 41008,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52012
+      ],
+      "risingstar": 41008,
+      "starsprint": 41008,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 41009,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52013
+      ],
+      "risingstar": 41009,
+      "starsprint": 41009,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 41010,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41010,
+      "starsprint": 41010,
+      "awakenSkills": [
+        2,
+        30503
+      ]
+    },
+    {
+      "id": 41011,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41011,
+      "starsprint": 41011,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 41012,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41012,
+      "starsprint": 41012,
+      "awakenSkills": [
+        2,
+        30202
+      ]
+    },
+    {
+      "id": 41013,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41013,
+      "starsprint": 41013,
+      "awakenSkills": [
+        2,
+        30404
+      ]
+    },
+    {
+      "id": 41014,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41014,
+      "starsprint": 41014,
+      "awakenSkills": [
+        2,
+        30601
+      ]
+    },
+    {
+      "id": 41015,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41015,
+      "starsprint": 41015,
+      "awakenSkills": [
+        2,
+        30503
+      ]
+    },
+    {
+      "id": 41016,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41016,
+      "starsprint": 41016,
+      "awakenSkills": [
+        2,
+        30503
+      ]
+    },
+    {
+      "id": 41017,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41017,
+      "starsprint": 41017,
+      "awakenSkills": [
+        2,
+        30702
+      ]
+    },
+    {
+      "id": 41018,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41018,
+      "starsprint": 41018,
+      "awakenSkills": [
+        2,
+        30702
+      ]
+    },
+    {
+      "id": 41019,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51002
+      ],
+      "risingstar": 41019,
+      "starsprint": 41019,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 41020,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54049
+      ],
+      "risingstar": 41020,
+      "starsprint": 41020,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 41021,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52015
+      ],
+      "risingstar": 41021,
+      "starsprint": 41021,
+      "awakenSkills": [
+        2,
+        30701
+      ]
+    },
+    {
+      "id": 41022,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52016
+      ],
+      "risingstar": 41022,
+      "starsprint": 41022,
+      "awakenSkills": [
+        2,
+        30604
+      ]
+    },
+    {
+      "id": 41023,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54050
+      ],
+      "risingstar": 41023,
+      "starsprint": 41023,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 41024,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51024
+      ],
+      "risingstar": 41024,
+      "starsprint": 41024,
+      "awakenSkills": [
+        2,
+        30769
+      ]
+    },
+    {
+      "id": 41025,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41025,
+      "starsprint": 41025,
+      "awakenSkills": [
+        2,
+        30702
+      ]
+    },
+    {
+      "id": 41026,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54051
+      ],
+      "risingstar": 41026,
+      "starsprint": 41026,
+      "awakenSkills": [
+        2,
+        30763
+      ]
+    },
+    {
+      "id": 41027,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41027,
+      "starsprint": 41027,
+      "awakenSkills": [
+        2,
+        30601
+      ]
+    },
+    {
+      "id": 41028,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54052
+      ],
+      "risingstar": 41028,
+      "starsprint": 41028,
+      "awakenSkills": [
+        2,
+        30709
+      ]
+    },
+    {
+      "id": 41029,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52018
+      ],
+      "risingstar": 41029,
+      "starsprint": 41029,
+      "awakenSkills": [
+        2,
+        30603
+      ]
+    },
+    {
+      "id": 41030,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51007
+      ],
+      "risingstar": 41030,
+      "starsprint": 41030,
+      "awakenSkills": [
+        2,
+        30709
+      ]
+    },
+    {
+      "id": 41031,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 0,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41030,
+      "starsprint": 41030,
+      "awakenSkills": null
+    },
+    {
+      "id": 42001,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52001
+      ],
+      "risingstar": 42001,
+      "starsprint": 42001,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 42002,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52002
+      ],
+      "risingstar": 42002,
+      "starsprint": 42002,
+      "awakenSkills": [
+        2,
+        30724
+      ]
+    },
+    {
+      "id": 42003,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52003
+      ],
+      "risingstar": 42003,
+      "starsprint": 42003,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 42004,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52004
+      ],
+      "risingstar": 42004,
+      "starsprint": 42004,
+      "awakenSkills": [
+        2,
+        30763
+      ]
+    },
+    {
+      "id": 42005,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52005
+      ],
+      "risingstar": 42005,
+      "starsprint": 42005,
+      "awakenSkills": [
+        2,
+        30735
+      ]
+    },
+    {
+      "id": 42006,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52006
+      ],
+      "risingstar": 42006,
+      "starsprint": 42006,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 42007,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52007
+      ],
+      "risingstar": 42007,
+      "starsprint": 42007,
+      "awakenSkills": [
+        2,
+        30740
+      ]
+    },
+    {
+      "id": 42008,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52008
+      ],
+      "risingstar": 42008,
+      "starsprint": 42008,
+      "awakenSkills": [
+        2,
+        30740
+      ]
+    },
+    {
+      "id": 42009,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52014
+      ],
+      "risingstar": 42009,
+      "starsprint": 42009,
+      "awakenSkills": [
+        2,
+        30202
+      ]
+    },
+    {
+      "id": 42010,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        52017
+      ],
+      "risingstar": 42010,
+      "starsprint": 42010,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 42011,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54046
+      ],
+      "risingstar": 42011,
+      "starsprint": 42011,
+      "awakenSkills": [
+        2,
+        30303
+      ]
+    },
+    {
+      "id": 42012,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42012,
+      "starsprint": 42012,
+      "awakenSkills": [
+        2,
+        30501
+      ]
+    },
+    {
+      "id": 42013,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54047
+      ],
+      "risingstar": 42013,
+      "starsprint": 42013,
+      "awakenSkills": [
+        2,
+        30502
+      ]
+    },
+    {
+      "id": 42014,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        54048
+      ],
+      "risingstar": 42014,
+      "starsprint": 42014,
+      "awakenSkills": [
+        2,
+        30503
+      ]
+    },
+    {
+      "id": 42015,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51008
+      ],
+      "risingstar": 42015,
+      "starsprint": 42015,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 42016,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51004
+      ],
+      "risingstar": 42016,
+      "starsprint": 42016,
+      "awakenSkills": [
+        2,
+        30603
+      ]
+    },
+    {
+      "id": 42017,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51009
+      ],
+      "risingstar": 42017,
+      "starsprint": 42017,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 42018,
+      "quality": 4,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        51010
+      ],
+      "risingstar": 42018,
+      "starsprint": 42018,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 42019,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42019,
+      "starsprint": 42019,
+      "awakenSkills": [
+        2,
+        30104
+      ]
+    },
+    {
+      "id": 42020,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42020,
+      "starsprint": 42020,
+      "awakenSkills": [
+        2,
+        30704
+      ]
+    },
+    {
+      "id": 42021,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42021,
+      "starsprint": 42021,
+      "awakenSkills": [
+        2,
+        30404
+      ]
+    },
+    {
+      "id": 42022,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42022,
+      "starsprint": 42022,
+      "awakenSkills": [
+        2,
+        30711
+      ]
+    },
+    {
+      "id": 42023,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42023,
+      "starsprint": 42023,
+      "awakenSkills": [
+        2,
+        30403
+      ]
+    },
+    {
+      "id": 42024,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42024,
+      "starsprint": 42024,
+      "awakenSkills": [
+        2,
+        30503
+      ]
+    },
+    {
+      "id": 42025,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42025,
+      "starsprint": 42025,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 42026,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42026,
+      "starsprint": 42026,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 42027,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42027,
+      "starsprint": 42027,
+      "awakenSkills": [
+        2,
+        30304
+      ]
+    },
+    {
+      "id": 42028,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42028,
+      "starsprint": 42028,
+      "awakenSkills": [
+        2,
+        30204
+      ]
+    },
+    {
+      "id": 43001,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53001
+      ],
+      "risingstar": 43001,
+      "starsprint": 43001,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 43002,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53002
+      ],
+      "risingstar": 43002,
+      "starsprint": 43002,
+      "awakenSkills": [
+        2,
+        30103
+      ]
+    },
+    {
+      "id": 43003,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53003
+      ],
+      "risingstar": 43003,
+      "starsprint": 43003,
+      "awakenSkills": [
+        2,
+        30737
+      ]
+    },
+    {
+      "id": 43004,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53011
+      ],
+      "risingstar": 43004,
+      "starsprint": 43004,
+      "awakenSkills": [
+        2,
+        30203
+      ]
+    },
+    {
+      "id": 43005,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53013
+      ],
+      "risingstar": 43005,
+      "starsprint": 43005,
+      "awakenSkills": [
+        2,
+        30774
+      ]
+    },
+    {
+      "id": 43006,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43006,
+      "starsprint": 43006,
+      "awakenSkills": [
+        2,
+        30702
+      ]
+    },
+    {
+      "id": 43007,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43007,
+      "starsprint": 43007,
+      "awakenSkills": [
+        2,
+        30732
+      ]
+    },
+    {
+      "id": 43008,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43008,
+      "starsprint": 43008,
+      "awakenSkills": [
+        2,
+        30203
+      ]
+    },
+    {
+      "id": 43009,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43009,
+      "starsprint": 43009,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 43010,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43010,
+      "starsprint": 43010,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 43011,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43011,
+      "starsprint": 43011,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 43012,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43012,
+      "starsprint": 43012,
+      "awakenSkills": [
+        2,
+        30101
+      ]
+    },
+    {
+      "id": 43013,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43013,
+      "starsprint": 43013,
+      "awakenSkills": [
+        2,
+        30709
+      ]
+    },
+    {
+      "id": 43014,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43014,
+      "starsprint": 43014,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 43015,
+      "quality": 4,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53014
+      ],
+      "risingstar": 43015,
+      "starsprint": 43015,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 43016,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53015
+      ],
+      "risingstar": 43016,
+      "starsprint": 43016,
+      "awakenSkills": [
+        2,
+        30304
+      ]
+    },
+    {
+      "id": 43017,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53016
+      ],
+      "risingstar": 43017,
+      "starsprint": 43017,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 43018,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43018,
+      "starsprint": 43018,
+      "awakenSkills": [
+        2,
+        30401
+      ]
+    },
+    {
+      "id": 43019,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43019,
+      "starsprint": 43019,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 43020,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43020,
+      "starsprint": 43020,
+      "awakenSkills": [
+        2,
+        30203
+      ]
+    },
+    {
+      "id": 43021,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53017
+      ],
+      "risingstar": 43021,
+      "starsprint": 43021,
+      "awakenSkills": [
+        2,
+        30735
+      ]
+    },
+    {
+      "id": 43022,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43022,
+      "starsprint": 43022,
+      "awakenSkills": [
+        2,
+        30722
+      ]
+    },
+    {
+      "id": 43023,
+      "quality": 4,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        53018
+      ],
+      "risingstar": 43023,
+      "starsprint": 43023,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 43024,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43024,
+      "starsprint": 43024,
+      "awakenSkills": [
+        2,
+        30401
+      ]
+    },
+    {
+      "id": 43025,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43025,
+      "starsprint": 43025,
+      "awakenSkills": [
+        2,
+        30732
+      ]
+    },
+    {
+      "id": 43026,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43026,
+      "starsprint": 43026,
+      "awakenSkills": [
+        2,
+        30202
+      ]
+    },
+    {
+      "id": 43027,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43027,
+      "starsprint": 43027,
+      "awakenSkills": [
+        2,
+        30104
+      ]
+    },
+    {
+      "id": 43028,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43028,
+      "starsprint": 43028,
+      "awakenSkills": [
+        2,
+        30303
+      ]
+    },
+    {
+      "id": 43029,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43029,
+      "starsprint": 43029,
+      "awakenSkills": [
+        2,
+        30203
+      ]
+    },
+    {
+      "id": 43030,
+      "quality": 4,
+      "assess": 3,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43030,
+      "starsprint": 43030,
+      "awakenSkills": [
+        2,
+        30704
+      ]
+    },
+    {
+      "id": 43031,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43031,
+      "starsprint": 43031,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 43032,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43032,
+      "starsprint": 43032,
+      "awakenSkills": [
+        2,
+        30303
+      ]
+    },
+    {
+      "id": 43033,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43033,
+      "starsprint": 43033,
+      "awakenSkills": [
+        2,
+        30603
+      ]
+    },
+    {
+      "id": 43034,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43034,
+      "starsprint": 43034,
+      "awakenSkills": [
+        2,
+        30703
+      ]
+    },
+    {
+      "id": 43035,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43035,
+      "starsprint": 43035,
+      "awakenSkills": [
+        2,
+        30403
+      ]
+    },
+    {
+      "id": 43036,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43036,
+      "starsprint": 43036,
+      "awakenSkills": [
+        2,
+        30202
+      ]
+    },
+    {
+      "id": 43037,
+      "quality": 4,
+      "assess": 2,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43037,
+      "starsprint": 43037,
+      "awakenSkills": [
+        2,
+        30731
+      ]
+    },
+    {
+      "id": 51001,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41001,
+      "starsprint": 41001,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30753
+      ]
+    },
+    {
+      "id": 51002,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41019,
+      "starsprint": 41019,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 51003,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41003,
+      "starsprint": 41003,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 51004,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42016,
+      "starsprint": 42016,
+      "awakenSkills": [
+        2,
+        30603
+      ]
+    },
+    {
+      "id": 51005,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41005,
+      "starsprint": 41005,
+      "awakenSkills": [
+        2,
+        30104
+      ]
+    },
+    {
+      "id": 51006,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41006,
+      "starsprint": 41006,
+      "awakenSkills": [
+        2,
+        30601
+      ]
+    },
+    {
+      "id": 51007,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41030,
+      "starsprint": 41030,
+      "awakenSkills": [
+        2,
+        30709
+      ]
+    },
+    {
+      "id": 51008,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42015,
+      "starsprint": 42015,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 51009,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42017,
+      "starsprint": 42017,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 51010,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42018,
+      "starsprint": 42018,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 51024,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41024,
+      "starsprint": 41024,
+      "awakenSkills": [
+        2,
+        30769
+      ]
+    },
+    {
+      "id": 52001,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42001,
+      "starsprint": 42001,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 52002,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42002,
+      "starsprint": 42002,
+      "awakenSkills": [
+        2,
+        30724
+      ]
+    },
+    {
+      "id": 52003,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42003,
+      "starsprint": 42003,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 52004,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42004,
+      "starsprint": 42004,
+      "awakenSkills": [
+        2,
+        30763
+      ]
+    },
+    {
+      "id": 52005,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42005,
+      "starsprint": 42005,
+      "awakenSkills": [
+        2,
+        30735
+      ]
+    },
+    {
+      "id": 52006,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42006,
+      "starsprint": 42006,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 52007,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42007,
+      "starsprint": 42007,
+      "awakenSkills": [
+        2,
+        30740
+      ]
+    },
+    {
+      "id": 52008,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42008,
+      "starsprint": 42008,
+      "awakenSkills": [
+        2,
+        30740
+      ]
+    },
+    {
+      "id": 52009,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41004,
+      "starsprint": 41004,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 52010,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41007,
+      "starsprint": 41007,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 52011,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41007,
+      "starsprint": 41007,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 52012,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41008,
+      "starsprint": 41008,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 52013,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41009,
+      "starsprint": 41009,
+      "awakenSkills": [
+        2,
+        30302
+      ]
+    },
+    {
+      "id": 52014,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42009,
+      "starsprint": 42009,
+      "awakenSkills": [
+        2,
+        30202
+      ]
+    },
+    {
+      "id": 52015,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41021,
+      "starsprint": 41021,
+      "awakenSkills": [
+        2,
+        30701
+      ]
+    },
+    {
+      "id": 52016,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41022,
+      "starsprint": 41022,
+      "awakenSkills": [
+        2,
+        30604
+      ]
+    },
+    {
+      "id": 52017,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42010,
+      "starsprint": 42010,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 52018,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41029,
+      "starsprint": 41029,
+      "awakenSkills": [
+        2,
+        30603
+      ]
+    },
+    {
+      "id": 52019,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 52019,
+      "starsprint": 52019,
+      "awakenSkills": [
+        2,
+        30740
+      ]
+    },
+    {
+      "id": 53001,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43001,
+      "starsprint": 43001,
+      "awakenSkills": [
+        2,
+        30301
+      ]
+    },
+    {
+      "id": 53002,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43002,
+      "starsprint": 43002,
+      "awakenSkills": [
+        2,
+        30103
+      ]
+    },
+    {
+      "id": 53003,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43003,
+      "starsprint": 43003,
+      "awakenSkills": [
+        2,
+        30737
+      ]
+    },
+    {
+      "id": 53004,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64009
+      ],
+      "risingstar": 53004,
+      "starsprint": 53004,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30747
+      ]
+    },
+    {
+      "id": 53005,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53005,
+      "starsprint": 53005,
+      "awakenSkills": [
+        2,
+        30730,
+        4,
+        30745,
+        5,
+        30779
+      ]
+    },
+    {
+      "id": 53006,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53006,
+      "starsprint": 53006,
+      "awakenSkills": [
+        2,
+        30711,
+        4,
+        30800,
+        5,
+        30797
+      ]
+    },
+    {
+      "id": 53007,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64010
+      ],
+      "risingstar": 53007,
+      "starsprint": 53007,
+      "awakenSkills": [
+        2,
+        30303,
+        4,
+        30749
+      ]
+    },
+    {
+      "id": 53008,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64011
+      ],
+      "risingstar": 53008,
+      "starsprint": 53008,
+      "awakenSkills": [
+        2,
+        30748,
+        4,
+        30743
+      ]
+    },
+    {
+      "id": 53009,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64012
+      ],
+      "risingstar": 53009,
+      "starsprint": 53009,
+      "awakenSkills": [
+        2,
+        30738,
+        4,
+        30775
+      ]
+    },
+    {
+      "id": 53010,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64013
+      ],
+      "risingstar": 53010,
+      "starsprint": 53010,
+      "awakenSkills": [
+        2,
+        30503,
+        4,
+        30776
+      ]
+    },
+    {
+      "id": 53011,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43004,
+      "starsprint": 43004,
+      "awakenSkills": [
+        2,
+        30203
+      ]
+    },
+    {
+      "id": 53012,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53012,
+      "starsprint": 53012,
+      "awakenSkills": [
+        2,
+        30767
+      ]
+    },
+    {
+      "id": 53013,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43005,
+      "starsprint": 43005,
+      "awakenSkills": [
+        2,
+        30774
+      ]
+    },
+    {
+      "id": 53014,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43015,
+      "starsprint": 43015,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 53015,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43016,
+      "starsprint": 43016,
+      "awakenSkills": [
+        2,
+        30304
+      ]
+    },
+    {
+      "id": 53016,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43017,
+      "starsprint": 43017,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 53017,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43021,
+      "starsprint": 43021,
+      "awakenSkills": [
+        2,
+        30735
+      ]
+    },
+    {
+      "id": 53018,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 43023,
+      "starsprint": 43023,
+      "awakenSkills": [
+        2,
+        30402
+      ]
+    },
+    {
+      "id": 54001,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        61001
+      ],
+      "risingstar": 54001,
+      "starsprint": 54001,
+      "awakenSkills": [
+        2,
+        30203,
+        4,
+        30742
+      ]
+    },
+    {
+      "id": 54002,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        61002
+      ],
+      "risingstar": 54002,
+      "starsprint": 54002,
+      "awakenSkills": [
+        2,
+        30739,
+        4,
+        30710
+      ]
+    },
+    {
+      "id": 54003,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        61003
+      ],
+      "risingstar": 54003,
+      "starsprint": 54003,
+      "awakenSkills": [
+        2,
+        30706,
+        4,
+        30705
+      ]
+    },
+    {
+      "id": 54004,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        61004
+      ],
+      "risingstar": 54004,
+      "starsprint": 54004,
+      "awakenSkills": [
+        2,
+        30710,
+        4,
+        30709
+      ]
+    },
+    {
+      "id": 54005,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        61005
+      ],
+      "risingstar": 54005,
+      "starsprint": 54005,
+      "awakenSkills": [
+        2,
+        30403,
+        4,
+        30708
+      ]
+    },
+    {
+      "id": 54006,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        61006
+      ],
+      "risingstar": 54006,
+      "starsprint": 54006,
+      "awakenSkills": [
+        2,
+        30707,
+        4,
+        30756
+      ]
+    },
+    {
+      "id": 54013,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64014
+      ],
+      "risingstar": 54013,
+      "starsprint": 54013,
+      "awakenSkills": [
+        2,
+        30729,
+        4,
+        30760
+      ]
+    },
+    {
+      "id": 54015,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54015,
+      "starsprint": 54015,
+      "awakenSkills": [
+        2,
+        30706,
+        4,
+        30767,
+        5,
+        30705
+      ]
+    },
+    {
+      "id": 54016,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54016,
+      "starsprint": 54016,
+      "awakenSkills": [
+        2,
+        30404,
+        4,
+        30704,
+        5,
+        30504
+      ]
+    },
+    {
+      "id": 54017,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54017,
+      "starsprint": 54017,
+      "awakenSkills": [
+        2,
+        30738,
+        4,
+        30724,
+        5,
+        30723
+      ]
+    },
+    {
+      "id": 54018,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54018,
+      "starsprint": 54018,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30751,
+        5,
+        30752
+      ]
+    },
+    {
+      "id": 54019,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64019
+      ],
+      "risingstar": 54019,
+      "starsprint": 54019,
+      "awakenSkills": [
+        2,
+        30761,
+        4,
+        30762
+      ]
+    },
+    {
+      "id": 54020,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64020
+      ],
+      "risingstar": 54020,
+      "starsprint": 54020,
+      "awakenSkills": [
+        2,
+        30763,
+        4,
+        30768
+      ]
+    },
+    {
+      "id": 54021,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64021
+      ],
+      "risingstar": 54021,
+      "starsprint": 54021,
+      "awakenSkills": [
+        2,
+        30738,
+        4,
+        30730
+      ]
+    },
+    {
+      "id": 54022,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64022
+      ],
+      "risingstar": 54022,
+      "starsprint": 54022,
+      "awakenSkills": [
+        2,
+        30732,
+        4,
+        30301
+      ]
+    },
+    {
+      "id": 54023,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64023
+      ],
+      "risingstar": 54023,
+      "starsprint": 54023,
+      "awakenSkills": [
+        2,
+        30502,
+        4,
+        30739
+      ]
+    },
+    {
+      "id": 54024,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64024
+      ],
+      "risingstar": 54024,
+      "starsprint": 54024,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30774
+      ]
+    },
+    {
+      "id": 54025,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64025
+      ],
+      "risingstar": 54025,
+      "starsprint": 54025,
+      "awakenSkills": [
+        2,
+        30701,
+        4,
+        30773
+      ]
+    },
+    {
+      "id": 54026,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64026
+      ],
+      "risingstar": 54026,
+      "starsprint": 54026,
+      "awakenSkills": [
+        2,
+        30743,
+        4,
+        30710
+      ]
+    },
+    {
+      "id": 54027,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64027
+      ],
+      "risingstar": 54027,
+      "starsprint": 54027,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30736
+      ]
+    },
+    {
+      "id": 54028,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64028
+      ],
+      "risingstar": 54028,
+      "starsprint": 54028,
+      "awakenSkills": [
+        2,
+        30771,
+        4,
+        30772
+      ]
+    },
+    {
+      "id": 54029,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64029
+      ],
+      "risingstar": 54029,
+      "starsprint": 54029,
+      "awakenSkills": [
+        2,
+        30764,
+        4,
+        30766
+      ]
+    },
+    {
+      "id": 54030,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64030
+      ],
+      "risingstar": 54030,
+      "starsprint": 54030,
+      "awakenSkills": [
+        2,
+        30736,
+        4,
+        30711
+      ]
+    },
+    {
+      "id": 54031,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64031
+      ],
+      "risingstar": 54031,
+      "starsprint": 54031,
+      "awakenSkills": [
+        2,
+        30770,
+        4,
+        30103
+      ]
+    },
+    {
+      "id": 54032,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64032
+      ],
+      "risingstar": 54032,
+      "starsprint": 54032,
+      "awakenSkills": [
+        2,
+        30603,
+        4,
+        30773
+      ]
+    },
+    {
+      "id": 54033,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64033
+      ],
+      "risingstar": 54033,
+      "starsprint": 54033,
+      "awakenSkills": [
+        2,
+        30761,
+        4,
+        30762
+      ]
+    },
+    {
+      "id": 54034,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64034
+      ],
+      "risingstar": 54034,
+      "starsprint": 54034,
+      "awakenSkills": [
+        2,
+        30734,
+        4,
+        30753
+      ]
+    },
+    {
+      "id": 54035,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64035
+      ],
+      "risingstar": 54035,
+      "starsprint": 54035,
+      "awakenSkills": [
+        2,
+        30769,
+        4,
+        30756
+      ]
+    },
+    {
+      "id": 54036,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64060
+      ],
+      "risingstar": 54036,
+      "starsprint": 54036,
+      "awakenSkills": [
+        2,
+        30746,
+        4,
+        30757
+      ]
+    },
+    {
+      "id": 54040,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64040
+      ],
+      "risingstar": 54040,
+      "starsprint": 54040,
+      "awakenSkills": [
+        2,
+        30730,
+        4,
+        30745
+      ]
+    },
+    {
+      "id": 54041,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64041
+      ],
+      "risingstar": 54041,
+      "starsprint": 54041,
+      "awakenSkills": [
+        2,
+        30722,
+        4,
+        30734
+      ]
+    },
+    {
+      "id": 54042,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64042
+      ],
+      "risingstar": 54042,
+      "starsprint": 54042,
+      "awakenSkills": [
+        2,
+        30765,
+        4,
+        30766
+      ]
+    },
+    {
+      "id": 54043,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64043
+      ],
+      "risingstar": 54043,
+      "starsprint": 54043,
+      "awakenSkills": [
+        2,
+        30722,
+        4,
+        30734
+      ]
+    },
+    {
+      "id": 54044,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64044
+      ],
+      "risingstar": 54044,
+      "starsprint": 54044,
+      "awakenSkills": [
+        2,
+        30302,
+        4,
+        30760
+      ]
+    },
+    {
+      "id": 54045,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41002,
+      "starsprint": 41002,
+      "awakenSkills": [
+        2,
+        30769
+      ]
+    },
+    {
+      "id": 54046,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42011,
+      "starsprint": 42011,
+      "awakenSkills": [
+        2,
+        30303
+      ]
+    },
+    {
+      "id": 54047,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42013,
+      "starsprint": 42013,
+      "awakenSkills": [
+        2,
+        30502
+      ]
+    },
+    {
+      "id": 54048,
+      "quality": 5,
+      "assess": 6,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 42014,
+      "starsprint": 42014,
+      "awakenSkills": [
+        2,
+        30503
+      ]
+    },
+    {
+      "id": 54049,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41020,
+      "starsprint": 41020,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 54050,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41023,
+      "starsprint": 41023,
+      "awakenSkills": [
+        2,
+        30708
+      ]
+    },
+    {
+      "id": 54051,
+      "quality": 5,
+      "assess": 4,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41026,
+      "starsprint": 41026,
+      "awakenSkills": [
+        2,
+        30763
+      ]
+    },
+    {
+      "id": 54052,
+      "quality": 5,
+      "assess": 5,
+      "maxstar": 7,
+      "maxawaken": 2,
+      "evolution": [
+        0
+      ],
+      "risingstar": 41028,
+      "starsprint": 41028,
+      "awakenSkills": [
+        2,
+        30709
+      ]
+    },
+    {
+      "id": 54053,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54053,
+      "starsprint": 54053,
+      "awakenSkills": [
+        2,
+        30774
+      ]
+    },
+    {
+      "id": 54054,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54054,
+      "starsprint": 54054,
+      "awakenSkills": [
+        2,
+        30602
+      ]
+    },
+    {
+      "id": 54055,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54055,
+      "starsprint": 54055,
+      "awakenSkills": [
+        2,
+        30304
+      ]
+    },
+    {
+      "id": 54056,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54056,
+      "starsprint": 54056,
+      "awakenSkills": [
+        2,
+        30777
+      ]
+    },
+    {
+      "id": 54057,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54057,
+      "starsprint": 54057,
+      "awakenSkills": [
+        2,
+        30772
+      ]
+    },
+    {
+      "id": 54058,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54058,
+      "starsprint": 54058,
+      "awakenSkills": [
+        2,
+        30744
+      ]
+    },
+    {
+      "id": 54059,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54059,
+      "starsprint": 54059,
+      "awakenSkills": [
+        2,
+        30761
+      ]
+    },
+    {
+      "id": 54060,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54060,
+      "starsprint": 54060,
+      "awakenSkills": [
+        2,
+        30740
+      ]
+    },
+    {
+      "id": 54061,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54061,
+      "starsprint": 54061,
+      "awakenSkills": [
+        2,
+        30603
+      ]
+    },
+    {
+      "id": 54062,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54062,
+      "starsprint": 54062,
+      "awakenSkills": [
+        2,
+        30737
+      ]
+    },
+    {
+      "id": 54063,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54063,
+      "starsprint": 54063,
+      "awakenSkills": [
+        2,
+        30754
+      ]
+    },
+    {
+      "id": 54064,
+      "quality": 5,
+      "assess": 7,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54064,
+      "starsprint": 54064,
+      "awakenSkills": [
+        2,
+        30710
+      ]
+    },
+    {
+      "id": 61001,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54001,
+      "starsprint": 54001,
+      "awakenSkills": [
+        2,
+        30203,
+        4,
+        30742
+      ]
+    },
+    {
+      "id": 61002,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54002,
+      "starsprint": 54002,
+      "awakenSkills": [
+        2,
+        30739,
+        4,
+        30710
+      ]
+    },
+    {
+      "id": 61003,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54003,
+      "starsprint": 54003,
+      "awakenSkills": [
+        2,
+        30706,
+        4,
+        30705
+      ]
+    },
+    {
+      "id": 61004,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54004,
+      "starsprint": 54004,
+      "awakenSkills": [
+        2,
+        30710,
+        4,
+        30709
+      ]
+    },
+    {
+      "id": 61005,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54005,
+      "starsprint": 54005,
+      "awakenSkills": [
+        2,
+        30403,
+        4,
+        30708
+      ]
+    },
+    {
+      "id": 61006,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54006,
+      "starsprint": 54006,
+      "awakenSkills": [
+        2,
+        30707,
+        4,
+        30756
+      ]
+    },
+    {
+      "id": 62001,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        64055
+      ],
+      "risingstar": 62001,
+      "starsprint": 62001,
+      "awakenSkills": [
+        2,
+        30104,
+        4,
+        30798
+      ]
+    },
+    {
+      "id": 62002,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64056
+      ],
+      "risingstar": 62002,
+      "starsprint": 62002,
+      "awakenSkills": [
+        2,
+        30707,
+        4,
+        30756
+      ]
+    },
+    {
+      "id": 62003,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64057
+      ],
+      "risingstar": 62003,
+      "starsprint": 62003,
+      "awakenSkills": [
+        2,
+        30303,
+        4,
+        30728
+      ]
+    },
+    {
+      "id": 62004,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        63002,
+        63003
+      ],
+      "risingstar": 62004,
+      "starsprint": 62004,
+      "awakenSkills": [
+        2,
+        30750,
+        4,
+        30724
+      ]
+    },
+    {
+      "id": 62005,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64059
+      ],
+      "risingstar": 62005,
+      "starsprint": 62005,
+      "awakenSkills": [
+        2,
+        30725,
+        4,
+        30751
+      ]
+    },
+    {
+      "id": 63001,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        63008
+      ],
+      "risingstar": 63001,
+      "starsprint": 63001,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30754
+      ]
+    },
+    {
+      "id": 63002,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 62004,
+      "starsprint": 62004,
+      "awakenSkills": [
+        2,
+        30750,
+        4,
+        30724,
+        5,
+        30726
+      ]
+    },
+    {
+      "id": 63003,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 62004,
+      "starsprint": 62004,
+      "awakenSkills": [
+        2,
+        30750,
+        4,
+        30724,
+        5,
+        30725
+      ]
+    },
+    {
+      "id": 63004,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        63009
+      ],
+      "risingstar": 63004,
+      "starsprint": 63004,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30708
+      ]
+    },
+    {
+      "id": 63005,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        63010
+      ],
+      "risingstar": 63005,
+      "starsprint": 63005,
+      "awakenSkills": [
+        2,
+        30758,
+        4,
+        30759
+      ]
+    },
+    {
+      "id": 63006,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64058
+      ],
+      "risingstar": 63006,
+      "starsprint": 63006,
+      "awakenSkills": [
+        2,
+        30501,
+        4,
+        30502,
+        5,
+        30504
+      ]
+    },
+    {
+      "id": 63007,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        63011
+      ],
+      "risingstar": 63007,
+      "starsprint": 63007,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    },
+    {
+      "id": 63008,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 63001,
+      "starsprint": 63001,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30754
+      ]
+    },
+    {
+      "id": 63009,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 63004,
+      "starsprint": 63004,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30708
+      ]
+    },
+    {
+      "id": 63010,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 63005,
+      "starsprint": 63005,
+      "awakenSkills": [
+        2,
+        30758,
+        4,
+        30759
+      ]
+    },
+    {
+      "id": 63011,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        63012
+      ],
+      "risingstar": 63007,
+      "starsprint": 63007,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    },
+    {
+      "id": 63012,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 63007,
+      "starsprint": 63007,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    },
+    {
+      "id": 64009,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53004,
+      "starsprint": 53004,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30747
+      ]
+    },
+    {
+      "id": 64010,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53007,
+      "starsprint": 53007,
+      "awakenSkills": [
+        2,
+        30303,
+        4,
+        30749
+      ]
+    },
+    {
+      "id": 64011,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53008,
+      "starsprint": 53008,
+      "awakenSkills": [
+        2,
+        30748,
+        4,
+        30743
+      ]
+    },
+    {
+      "id": 64012,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53009,
+      "starsprint": 53009,
+      "awakenSkills": [
+        2,
+        30738,
+        4,
+        30775
+      ]
+    },
+    {
+      "id": 64013,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 53010,
+      "starsprint": 53010,
+      "awakenSkills": [
+        2,
+        30503,
+        4,
+        30776
+      ]
+    },
+    {
+      "id": 64014,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54013,
+      "starsprint": 54013,
+      "awakenSkills": [
+        2,
+        30729,
+        4,
+        30760
+      ]
+    },
+    {
+      "id": 64019,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54019,
+      "starsprint": 54019,
+      "awakenSkills": [
+        2,
+        30761,
+        4,
+        30762
+      ]
+    },
+    {
+      "id": 64020,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54020,
+      "starsprint": 54020,
+      "awakenSkills": [
+        2,
+        30763,
+        4,
+        30768
+      ]
+    },
+    {
+      "id": 64021,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54021,
+      "starsprint": 54021,
+      "awakenSkills": [
+        2,
+        30738,
+        4,
+        30730
+      ]
+    },
+    {
+      "id": 64022,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54022,
+      "starsprint": 54022,
+      "awakenSkills": [
+        2,
+        30732,
+        4,
+        30301
+      ]
+    },
+    {
+      "id": 64023,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54023,
+      "starsprint": 54023,
+      "awakenSkills": [
+        2,
+        30502,
+        4,
+        30739
+      ]
+    },
+    {
+      "id": 64024,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54024,
+      "starsprint": 54024,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30774
+      ]
+    },
+    {
+      "id": 64025,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54025,
+      "starsprint": 54025,
+      "awakenSkills": [
+        2,
+        30701,
+        4,
+        30773
+      ]
+    },
+    {
+      "id": 64026,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54026,
+      "starsprint": 54026,
+      "awakenSkills": [
+        2,
+        30743,
+        4,
+        30710
+      ]
+    },
+    {
+      "id": 64027,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54027,
+      "starsprint": 54027,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30736
+      ]
+    },
+    {
+      "id": 64028,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54028,
+      "starsprint": 54028,
+      "awakenSkills": [
+        2,
+        30771,
+        4,
+        30772
+      ]
+    },
+    {
+      "id": 64029,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54029,
+      "starsprint": 54029,
+      "awakenSkills": [
+        2,
+        30764,
+        4,
+        30766
+      ]
+    },
+    {
+      "id": 64030,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54030,
+      "starsprint": 54030,
+      "awakenSkills": [
+        2,
+        30736,
+        4,
+        30711
+      ]
+    },
+    {
+      "id": 64031,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54031,
+      "starsprint": 54031,
+      "awakenSkills": [
+        2,
+        30770,
+        4,
+        30103
+      ]
+    },
+    {
+      "id": 64032,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54032,
+      "starsprint": 54032,
+      "awakenSkills": [
+        2,
+        30603,
+        4,
+        30773
+      ]
+    },
+    {
+      "id": 64033,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54033,
+      "starsprint": 54033,
+      "awakenSkills": [
+        2,
+        30761,
+        4,
+        30762
+      ]
+    },
+    {
+      "id": 64034,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54034,
+      "starsprint": 54034,
+      "awakenSkills": [
+        2,
+        30734,
+        4,
+        30753
+      ]
+    },
+    {
+      "id": 64035,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54035,
+      "starsprint": 54035,
+      "awakenSkills": [
+        2,
+        30769,
+        4,
+        30756
+      ]
+    },
+    {
+      "id": 64036,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64036,
+      "starsprint": 64036,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30762,
+        5,
+        30761
+      ]
+    },
+    {
+      "id": 64037,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64037,
+      "starsprint": 64037,
+      "awakenSkills": [
+        2,
+        30101,
+        4,
+        30734,
+        5,
+        30722
+      ]
+    },
+    {
+      "id": 64038,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64038,
+      "starsprint": 64038,
+      "awakenSkills": [
+        2,
+        30203,
+        4,
+        30764,
+        5,
+        30746
+      ]
+    },
+    {
+      "id": 64039,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64039,
+      "starsprint": 64039,
+      "awakenSkills": [
+        2,
+        30101,
+        4,
+        30104,
+        5,
+        30735
+      ]
+    },
+    {
+      "id": 64040,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54040,
+      "starsprint": 54040,
+      "awakenSkills": [
+        2,
+        30730,
+        4,
+        30745
+      ]
+    },
+    {
+      "id": 64041,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54041,
+      "starsprint": 54041,
+      "awakenSkills": [
+        2,
+        30722,
+        4,
+        30734
+      ]
+    },
+    {
+      "id": 64042,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54042,
+      "starsprint": 54042,
+      "awakenSkills": [
+        2,
+        30765,
+        4,
+        30766
+      ]
+    },
+    {
+      "id": 64043,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54043,
+      "starsprint": 54043,
+      "awakenSkills": [
+        2,
+        30722,
+        4,
+        30734
+      ]
+    },
+    {
+      "id": 64044,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54044,
+      "starsprint": 54044,
+      "awakenSkills": [
+        2,
+        30302,
+        4,
+        30760
+      ]
+    },
+    {
+      "id": 64055,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 62001,
+      "starsprint": 62001,
+      "awakenSkills": [
+        2,
+        30104,
+        4,
+        30798
+      ]
+    },
+    {
+      "id": 64056,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 62002,
+      "starsprint": 62002,
+      "awakenSkills": [
+        2,
+        30707,
+        4,
+        30756
+      ]
+    },
+    {
+      "id": 64057,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 62003,
+      "starsprint": 62003,
+      "awakenSkills": [
+        2,
+        30303,
+        4,
+        30728
+      ]
+    },
+    {
+      "id": 64058,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 63006,
+      "starsprint": 63006,
+      "awakenSkills": [
+        2,
+        30501,
+        4,
+        30502,
+        5,
+        30504
+      ]
+    },
+    {
+      "id": 64059,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 62005,
+      "starsprint": 62005,
+      "awakenSkills": [
+        2,
+        30725,
+        4,
+        30751
+      ]
+    },
+    {
+      "id": 64060,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 54036,
+      "starsprint": 54036,
+      "awakenSkills": [
+        2,
+        30746,
+        4,
+        30757
+      ]
+    },
+    {
+      "id": 64061,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64065
+      ],
+      "risingstar": 64061,
+      "starsprint": 64061,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30791
+      ]
+    },
+    {
+      "id": 64062,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64066
+      ],
+      "risingstar": 64062,
+      "starsprint": 64062,
+      "awakenSkills": [
+        2,
+        30795,
+        4,
+        30790
+      ]
+    },
+    {
+      "id": 64063,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64067
+      ],
+      "risingstar": 64063,
+      "starsprint": 64063,
+      "awakenSkills": [
+        2,
+        30701,
+        4,
+        30804
+      ]
+    },
+    {
+      "id": 64064,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64068
+      ],
+      "risingstar": 64064,
+      "starsprint": 64064,
+      "awakenSkills": [
+        2,
+        30773,
+        4,
+        30804
+      ]
+    },
+    {
+      "id": 64065,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64061,
+      "starsprint": 64061,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30791
+      ]
+    },
+    {
+      "id": 64066,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64062,
+      "starsprint": 64062,
+      "awakenSkills": [
+        2,
+        30795,
+        4,
+        30790
+      ]
+    },
+    {
+      "id": 64067,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64063,
+      "starsprint": 64063,
+      "awakenSkills": [
+        2,
+        30701,
+        4,
+        30804
+      ]
+    },
+    {
+      "id": 64068,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64064,
+      "starsprint": 64064,
+      "awakenSkills": [
+        2,
+        30773,
+        4,
+        30804
+      ]
+    },
+    {
+      "id": 64069,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64073
+      ],
+      "risingstar": 64069,
+      "starsprint": 64069,
+      "awakenSkills": [
+        2,
+        30733,
+        4,
+        30794
+      ]
+    },
+    {
+      "id": 64070,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64074
+      ],
+      "risingstar": 64070,
+      "starsprint": 64070,
+      "awakenSkills": [
+        2,
+        30742,
+        4,
+        30773
+      ]
+    },
+    {
+      "id": 64071,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64075
+      ],
+      "risingstar": 64071,
+      "starsprint": 64071,
+      "awakenSkills": [
+        2,
+        30752,
+        4,
+        30805
+      ]
+    },
+    {
+      "id": 64072,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64076
+      ],
+      "risingstar": 64072,
+      "starsprint": 64072,
+      "awakenSkills": [
+        2,
+        30503,
+        4,
+        30778
+      ]
+    },
+    {
+      "id": 64073,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64069,
+      "starsprint": 64069,
+      "awakenSkills": [
+        2,
+        30733,
+        4,
+        30794
+      ]
+    },
+    {
+      "id": 64074,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64070,
+      "starsprint": 64070,
+      "awakenSkills": [
+        2,
+        30742,
+        4,
+        30773
+      ]
+    },
+    {
+      "id": 64075,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64071,
+      "starsprint": 64071,
+      "awakenSkills": [
+        2,
+        30752,
+        4,
+        30805
+      ]
+    },
+    {
+      "id": 64076,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        64077
+      ],
+      "risingstar": 64072,
+      "starsprint": 64072,
+      "awakenSkills": [
+        2,
+        30503,
+        4,
+        30778
+      ]
+    },
+    {
+      "id": 64077,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64072,
+      "starsprint": 64072,
+      "awakenSkills": [
+        2,
+        30503,
+        4,
+        30778
+      ]
+    },
+    {
+      "id": 64078,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64081
+      ],
+      "risingstar": 64078,
+      "starsprint": 64078,
+      "awakenSkills": [
+        2,
+        30727,
+        4,
+        30742
+      ]
+    },
+    {
+      "id": 64079,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64082
+      ],
+      "risingstar": 64079,
+      "starsprint": 64079,
+      "awakenSkills": [
+        2,
+        30727,
+        4,
+        30710
+      ]
+    },
+    {
+      "id": 64080,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64083
+      ],
+      "risingstar": 64080,
+      "starsprint": 64080,
+      "awakenSkills": [
+        2,
+        30727,
+        4,
+        30759
+      ]
+    },
+    {
+      "id": 64081,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64078,
+      "starsprint": 64078,
+      "awakenSkills": [
+        2,
+        30727,
+        4,
+        30742
+      ]
+    },
+    {
+      "id": 64082,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64079,
+      "starsprint": 64079,
+      "awakenSkills": [
+        2,
+        30727,
+        4,
+        30710
+      ]
+    },
+    {
+      "id": 64083,
+      "quality": 6,
+      "assess": 8,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64080,
+      "starsprint": 64080,
+      "awakenSkills": [
+        2,
+        30727,
+        4,
+        30759
+      ]
+    },
+    {
+      "id": 64084,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64084,
+      "starsprint": 64084,
+      "awakenSkills": [
+        2,
+        30724,
+        4,
+        30504,
+        5,
+        30778
+      ]
+    },
+    {
+      "id": 64085,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64085,
+      "starsprint": 64085,
+      "awakenSkills": [
+        2,
+        30738,
+        4,
+        30504,
+        5,
+        30779
+      ]
+    },
+    {
+      "id": 64086,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64089
+      ],
+      "risingstar": 64086,
+      "starsprint": 64086,
+      "awakenSkills": [
+        2,
+        30705,
+        4,
+        30809
+      ]
+    },
+    {
+      "id": 64087,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64090
+      ],
+      "risingstar": 64087,
+      "starsprint": 64087,
+      "awakenSkills": [
+        2,
+        30807,
+        4,
+        30808
+      ]
+    },
+    {
+      "id": 64088,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64091
+      ],
+      "risingstar": 64088,
+      "starsprint": 64088,
+      "awakenSkills": [
+        2,
+        30782,
+        4,
+        30203,
+        5,
+        30806
+      ]
+    },
+    {
+      "id": 64089,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64086,
+      "starsprint": 64086,
+      "awakenSkills": [
+        2,
+        30705,
+        4,
+        30809
+      ]
+    },
+    {
+      "id": 64090,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64087,
+      "starsprint": 64087,
+      "awakenSkills": [
+        2,
+        30807,
+        4,
+        30808
+      ]
+    },
+    {
+      "id": 64091,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64088,
+      "starsprint": 64088,
+      "awakenSkills": [
+        2,
+        30782,
+        4,
+        30203,
+        5,
+        30806
+      ]
+    },
+    {
+      "id": 64092,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64096
+      ],
+      "risingstar": 64092,
+      "starsprint": 64092,
+      "awakenSkills": [
+        2,
+        30750,
+        4,
+        30816
+      ]
+    },
+    {
+      "id": 64093,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64097
+      ],
+      "risingstar": 64093,
+      "starsprint": 64093,
+      "awakenSkills": [
+        2,
+        30812,
+        4,
+        30813
+      ]
+    },
+    {
+      "id": 64094,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64098
+      ],
+      "risingstar": 64094,
+      "starsprint": 64094,
+      "awakenSkills": [
+        2,
+        30814,
+        4,
+        30815
+      ]
+    },
+    {
+      "id": 64095,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64099
+      ],
+      "risingstar": 64095,
+      "starsprint": 64095,
+      "awakenSkills": [
+        2,
+        30763,
+        4,
+        30788
+      ]
+    },
+    {
+      "id": 64096,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64092,
+      "starsprint": 64092,
+      "awakenSkills": [
+        2,
+        30750,
+        4,
+        30816
+      ]
+    },
+    {
+      "id": 64097,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64093,
+      "starsprint": 64093,
+      "awakenSkills": [
+        2,
+        30812,
+        4,
+        30813
+      ]
+    },
+    {
+      "id": 64098,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64094,
+      "starsprint": 64094,
+      "awakenSkills": [
+        2,
+        30814,
+        4,
+        30815
+      ]
+    },
+    {
+      "id": 64099,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64095,
+      "starsprint": 64095,
+      "awakenSkills": [
+        2,
+        30763,
+        4,
+        30788
+      ]
+    },
+    {
+      "id": 64100,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64100,
+      "starsprint": 64100,
+      "awakenSkills": [
+        2,
+        30762,
+        4,
+        30811,
+        5,
+        30810
+      ]
+    },
+    {
+      "id": 64101,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64105
+      ],
+      "risingstar": 64101,
+      "starsprint": 64101,
+      "awakenSkills": [
+        2,
+        30724,
+        4,
+        30817
+      ]
+    },
+    {
+      "id": 64102,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64106
+      ],
+      "risingstar": 64102,
+      "starsprint": 64102,
+      "awakenSkills": [
+        2,
+        30818,
+        4,
+        30817
+      ]
+    },
+    {
+      "id": 64103,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64107
+      ],
+      "risingstar": 64103,
+      "starsprint": 64103,
+      "awakenSkills": [
+        2,
+        30801,
+        4,
+        30819
+      ]
+    },
+    {
+      "id": 64104,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64108
+      ],
+      "risingstar": 64104,
+      "starsprint": 64104,
+      "awakenSkills": [
+        2,
+        30730,
+        4,
+        30820
+      ]
+    },
+    {
+      "id": 64105,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64101,
+      "starsprint": 64101,
+      "awakenSkills": [
+        2,
+        30724,
+        4,
+        30817
+      ]
+    },
+    {
+      "id": 64106,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64102,
+      "starsprint": 64102,
+      "awakenSkills": [
+        2,
+        30818,
+        4,
+        30817
+      ]
+    },
+    {
+      "id": 64107,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64103,
+      "starsprint": 64103,
+      "awakenSkills": [
+        2,
+        30801,
+        4,
+        30819
+      ]
+    },
+    {
+      "id": 64108,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64104,
+      "starsprint": 64104,
+      "awakenSkills": [
+        2,
+        30730,
+        4,
+        30820
+      ]
+    },
+    {
+      "id": 64109,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64110
+      ],
+      "risingstar": 64109,
+      "starsprint": 64109,
+      "awakenSkills": [
+        2,
+        30785,
+        4,
+        30821
+      ]
+    },
+    {
+      "id": 64110,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64109,
+      "starsprint": 64109,
+      "awakenSkills": [
+        2,
+        30785,
+        4,
+        30821
+      ]
+    },
+    {
+      "id": 64111,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        64112,
+        64113
+      ],
+      "risingstar": 64111,
+      "starsprint": 64111,
+      "awakenSkills": [
+        2,
+        30812,
+        4,
+        30706
+      ]
+    },
+    {
+      "id": 64112,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64111,
+      "starsprint": 64111,
+      "awakenSkills": [
+        2,
+        30812,
+        4,
+        30706
+      ]
+    },
+    {
+      "id": 64113,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64111,
+      "starsprint": 64111,
+      "awakenSkills": [
+        2,
+        30812,
+        4,
+        30706
+      ]
+    },
+    {
+      "id": 64114,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64114,
+      "starsprint": 64114,
+      "awakenSkills": [
+        2,
+        30824,
+        4,
+        30825,
+        5,
+        30826
+      ]
+    },
+    {
+      "id": 64115,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64115,
+      "starsprint": 64115,
+      "awakenSkills": [
+        2,
+        30735,
+        4,
+        30732,
+        5,
+        30823
+      ]
+    },
+    {
+      "id": 64116,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64116,
+      "starsprint": 64116,
+      "awakenSkills": [
+        2,
+        30303,
+        4,
+        30728
+      ]
+    },
+    {
+      "id": 64117,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64117,
+      "starsprint": 64117,
+      "awakenSkills": [
+        2,
+        30702,
+        4,
+        30772,
+        5,
+        30760
+      ]
+    },
+    {
+      "id": 64118,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64118,
+      "starsprint": 64118,
+      "awakenSkills": [
+        2,
+        30773,
+        4,
+        30803,
+        5,
+        30827
+      ]
+    },
+    {
+      "id": 64119,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64119,
+      "starsprint": 64119,
+      "awakenSkills": [
+        2,
+        30771,
+        4,
+        30796,
+        5,
+        30828
+      ]
+    },
+    {
+      "id": 64120,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64120,
+      "starsprint": 64120,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30754
+      ]
+    },
+    {
+      "id": 64121,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64121,
+      "starsprint": 64121,
+      "awakenSkills": [
+        2,
+        30829,
+        4,
+        30830,
+        5,
+        30831
+      ]
+    },
+    {
+      "id": 64122,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64122,
+      "starsprint": 64122,
+      "awakenSkills": [
+        2,
+        30832,
+        4,
+        30833,
+        5,
+        30834
+      ]
+    },
+    {
+      "id": 64123,
+      "quality": 5,
+      "assess": 8,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64123,
+      "starsprint": 64123,
+      "awakenSkills": [
+        2,
+        30728,
+        4,
+        30401
+      ]
+    },
+    {
+      "id": 64124,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64124,
+      "starsprint": 64124,
+      "awakenSkills": [
+        2,
+        30304,
+        4,
+        30729,
+        5,
+        30835
+      ]
+    },
+    {
+      "id": 64125,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64125,
+      "starsprint": 64125,
+      "awakenSkills": [
+        2,
+        30760,
+        4,
+        30803
+      ]
+    },
+    {
+      "id": 64126,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64126,
+      "starsprint": 64126,
+      "awakenSkills": [
+        2,
+        30202,
+        4,
+        30710,
+        5,
+        30743
+      ]
+    },
+    {
+      "id": 64127,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64131
+      ],
+      "risingstar": 64127,
+      "starsprint": 64127,
+      "awakenSkills": [
+        2,
+        30732,
+        4,
+        30762
+      ]
+    },
+    {
+      "id": 64128,
+      "quality": 5,
+      "assess": 9,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64132
+      ],
+      "risingstar": 64128,
+      "starsprint": 64128,
+      "awakenSkills": [
+        2,
+        30786,
+        4,
+        30822
+      ]
+    },
+    {
+      "id": 64129,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64133
+      ],
+      "risingstar": 64129,
+      "starsprint": 64129,
+      "awakenSkills": [
+        2,
+        30725,
+        4,
+        30837,
+        5,
+        30836
+      ]
+    },
+    {
+      "id": 64130,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64134
+      ],
+      "risingstar": 64130,
+      "starsprint": 64130,
+      "awakenSkills": [
+        2,
+        30800,
+        4,
+        30799,
+        5,
+        30838
+      ]
+    },
+    {
+      "id": 64131,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64127,
+      "starsprint": 64127,
+      "awakenSkills": [
+        2,
+        30732,
+        4,
+        30762
+      ]
+    },
+    {
+      "id": 64132,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64128,
+      "starsprint": 64128,
+      "awakenSkills": [
+        2,
+        30786,
+        4,
+        30822
+      ]
+    },
+    {
+      "id": 64133,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64129,
+      "starsprint": 64129,
+      "awakenSkills": [
+        2,
+        30725,
+        4,
+        30837,
+        5,
+        30836
+      ]
+    },
+    {
+      "id": 64134,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64130,
+      "starsprint": 64130,
+      "awakenSkills": [
+        2,
+        30800,
+        4,
+        30799,
+        5,
+        30838
+      ]
+    },
+    {
+      "id": 64135,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64136
+      ],
+      "risingstar": 64135,
+      "starsprint": 64135,
+      "awakenSkills": [
+        2,
+        30735,
+        4,
+        30794,
+        5,
+        30842
+      ]
+    },
+    {
+      "id": 64136,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64135,
+      "starsprint": 64135,
+      "awakenSkills": [
+        2,
+        30735,
+        4,
+        30794,
+        5,
+        30842
+      ]
+    },
+    {
+      "id": 64137,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64138
+      ],
+      "risingstar": 64137,
+      "starsprint": 64137,
+      "awakenSkills": [
+        2,
+        30770,
+        4,
+        30102,
+        5,
+        30841
+      ]
+    },
+    {
+      "id": 64138,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64137,
+      "starsprint": 64137,
+      "awakenSkills": [
+        2,
+        30770,
+        4,
+        30102,
+        5,
+        30841
+      ]
+    },
+    {
+      "id": 64139,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64139,
+      "starsprint": 64139,
+      "awakenSkills": [
+        2,
+        30301,
+        4,
+        30732,
+        5,
+        30853
+      ]
+    },
+    {
+      "id": 64140,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64140,
+      "starsprint": 64140,
+      "awakenSkills": [
+        2,
+        30853,
+        4,
+        30863,
+        5,
+        30753
+      ]
+    },
+    {
+      "id": 64141,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64141,
+      "starsprint": 64141,
+      "awakenSkills": [
+        2,
+        30844,
+        4,
+        30845,
+        5,
+        30846
+      ]
+    },
+    {
+      "id": 64142,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64142,
+      "starsprint": 64142,
+      "awakenSkills": [
+        2,
+        30775,
+        4,
+        30849,
+        4,
+        30850
+      ]
+    },
+    {
+      "id": 64143,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        64144
+      ],
+      "risingstar": 64143,
+      "starsprint": 64143,
+      "awakenSkills": [
+        2,
+        30702,
+        4,
+        30601,
+        5,
+        30803
+      ]
+    },
+    {
+      "id": 64144,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64143,
+      "starsprint": 64143,
+      "awakenSkills": [
+        2,
+        30702,
+        4,
+        30601,
+        5,
+        30803
+      ]
+    },
+    {
+      "id": 64145,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64145,
+      "starsprint": 64145,
+      "awakenSkills": [
+        2,
+        30768,
+        4,
+        30812,
+        5,
+        30847
+      ]
+    },
+    {
+      "id": 64146,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64146,
+      "starsprint": 64146,
+      "awakenSkills": [
+        2,
+        30728,
+        4,
+        30735,
+        5,
+        30783
+      ]
+    },
+    {
+      "id": 64147,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64147,
+      "starsprint": 64147,
+      "awakenSkills": [
+        2,
+        30740,
+        4,
+        30786,
+        5,
+        30848
+      ]
+    },
+    {
+      "id": 64148,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64148,
+      "starsprint": 64148,
+      "awakenSkills": [
+        2,
+        30732,
+        4,
+        30752,
+        5,
+        30818
+      ]
+    },
+    {
+      "id": 64149,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64149,
+      "starsprint": 64149,
+      "awakenSkills": [
+        2,
+        30730,
+        4,
+        30778,
+        5,
+        30775
+      ]
+    },
+    {
+      "id": 64150,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64150,
+      "starsprint": 64150,
+      "awakenSkills": [
+        2,
+        30851,
+        4,
+        30852,
+        5,
+        30854
+      ]
+    },
+    {
+      "id": 64151,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64151,
+      "starsprint": 64151,
+      "awakenSkills": [
+        2,
+        30601,
+        4,
+        30803,
+        5,
+        30817
+      ]
+    },
+    {
+      "id": 64152,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64152,
+      "starsprint": 64152,
+      "awakenSkills": [
+        2,
+        30787,
+        4,
+        30763,
+        5,
+        30789
+      ]
+    },
+    {
+      "id": 64153,
+      "quality": 6,
+      "assess": 9,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64153,
+      "starsprint": 64153,
+      "awakenSkills": [
+        2,
+        30740,
+        4,
+        30786,
+        5,
+        30818
+      ]
+    },
+    {
+      "id": 64154,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64154,
+      "starsprint": 64154,
+      "awakenSkills": [
+        2,
+        30736,
+        4,
+        30711,
+        5,
+        30801
+      ]
+    },
+    {
+      "id": 64155,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64155,
+      "starsprint": 64155,
+      "awakenSkills": [
+        2,
+        30503,
+        4,
+        30759,
+        5,
+        30401
+      ]
+    },
+    {
+      "id": 64156,
+      "quality": 5,
+      "assess": 10,
+      "maxstar": 9,
+      "maxawaken": 4,
+      "evolution": [
+        64157
+      ],
+      "risingstar": 64156,
+      "starsprint": 64156,
+      "awakenSkills": [
+        2,
+        30711,
+        4,
+        30801
+      ]
+    },
+    {
+      "id": 64157,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 12,
+      "maxawaken": 4,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64156,
+      "starsprint": 64156,
+      "awakenSkills": [
+        2,
+        30711,
+        4,
+        30801
+      ]
+    },
+    {
+      "id": 64158,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64158,
+      "starsprint": 64158,
+      "awakenSkills": [
+        2,
+        30774,
+        4,
+        30732,
+        5,
+        30848
+      ]
+    },
+    {
+      "id": 64159,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64159,
+      "starsprint": 64159,
+      "awakenSkills": [
+        2,
+        30803,
+        4,
+        30855,
+        5,
+        30856
+      ]
+    },
+    {
+      "id": 64160,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64160,
+      "starsprint": 64160,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30857,
+        5,
+        30858
+      ]
+    },
+    {
+      "id": 64161,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64161,
+      "starsprint": 64161,
+      "awakenSkills": [
+        2,
+        30780,
+        4,
+        30859,
+        5,
+        30860
+      ]
+    },
+    {
+      "id": 64162,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64162,
+      "starsprint": 64162,
+      "awakenSkills": [
+        2,
+        30304,
+        4,
+        30729,
+        5,
+        30749
+      ]
+    },
+    {
+      "id": 64163,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64163,
+      "starsprint": 64163,
+      "awakenSkills": [
+        2,
+        30742,
+        4,
+        30705,
+        5,
+        30809
+      ]
+    },
+    {
+      "id": 64164,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64164,
+      "starsprint": 64164,
+      "awakenSkills": [
+        2,
+        30741,
+        4,
+        30757,
+        5,
+        30813
+      ]
+    },
+    {
+      "id": 64165,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64165,
+      "starsprint": 64165,
+      "awakenSkills": [
+        2,
+        30758,
+        4,
+        30861,
+        5,
+        30862
+      ]
+    },
+    {
+      "id": 64166,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64166,
+      "starsprint": 64166,
+      "awakenSkills": [
+        2,
+        30784,
+        4,
+        30785,
+        5,
+        30803
+      ]
+    },
+    {
+      "id": 64167,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64167,
+      "starsprint": 64167,
+      "awakenSkills": [
+        2,
+        30202,
+        4,
+        30709,
+        5,
+        30710
+      ]
+    },
+    {
+      "id": 64168,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64168,
+      "starsprint": 64168,
+      "awakenSkills": [
+        2,
+        30761,
+        4,
+        30301,
+        5,
+        30853
+      ]
+    },
+    {
+      "id": 64169,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64169,
+      "starsprint": 64169,
+      "awakenSkills": [
+        2,
+        30749,
+        4,
+        30864,
+        5,
+        30811
+      ]
+    },
+    {
+      "id": 64170,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64170,
+      "starsprint": 64170,
+      "awakenSkills": [
+        2,
+        30818,
+        2,
+        30745,
+        4,
+        30822,
+        4,
+        30855,
+        5,
+        30862,
+        5,
+        30819
+      ]
+    },
+    {
+      "id": 64171,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64171,
+      "starsprint": 64171,
+      "awakenSkills": [
+        2,
+        30735,
+        4,
+        30799,
+        5,
+        30865
+      ]
+    },
+    {
+      "id": 64172,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64172,
+      "starsprint": 64172,
+      "awakenSkills": [
+        2,
+        30800,
+        4,
+        30818,
+        5,
+        30866
+      ]
+    },
+    {
+      "id": 64173,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64173,
+      "starsprint": 64173,
+      "awakenSkills": [
+        2,
+        30840,
+        4,
+        30867,
+        5,
+        30870
+      ]
+    },
+    {
+      "id": 64174,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64174,
+      "starsprint": 64174,
+      "awakenSkills": [
+        2,
+        30869,
+        4,
+        30871,
+        5,
+        30868
+      ]
+    },
+    {
+      "id": 64175,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64175,
+      "starsprint": 64175,
+      "awakenSkills": [
+        2,
+        30818,
+        4,
+        30872,
+        5,
+        30873
+      ]
+    },
+    {
+      "id": 64176,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64176,
+      "starsprint": 64176,
+      "awakenSkills": [
+        2,
+        30778,
+        4,
+        30776,
+        5,
+        30878
+      ]
+    },
+    {
+      "id": 64177,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64177,
+      "starsprint": 64177,
+      "awakenSkills": [
+        2,
+        30875,
+        4,
+        30876
+      ]
+    },
+    {
+      "id": 64178,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64178,
+      "starsprint": 64178,
+      "awakenSkills": [
+        2,
+        30864,
+        4,
+        30877
+      ]
+    },
+    {
+      "id": 64179,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64179,
+      "starsprint": 64179,
+      "awakenSkills": [
+        2,
+        30801,
+        4,
+        30798,
+        5,
+        30826
+      ]
+    },
+    {
+      "id": 64180,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64180,
+      "starsprint": 64180,
+      "awakenSkills": [
+        2,
+        30201,
+        4,
+        30765,
+        5,
+        30879
+      ]
+    },
+    {
+      "id": 64181,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64181,
+      "starsprint": 64181,
+      "awakenSkills": [
+        2,
+        30773,
+        4,
+        30837,
+        5,
+        30880
+      ]
+    },
+    {
+      "id": 64182,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64182,
+      "starsprint": 64182,
+      "awakenSkills": [
+        2,
+        30749,
+        4,
+        30775,
+        5,
+        30504
+      ]
+    },
+    {
+      "id": 64183,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64183,
+      "starsprint": 64183,
+      "awakenSkills": [
+        2,
+        30781,
+        4,
+        30780,
+        5,
+        30882
+      ]
+    },
+    {
+      "id": 64184,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64184,
+      "starsprint": 64184,
+      "awakenSkills": [
+        2,
+        30797,
+        4,
+        30876,
+        5,
+        30883
+      ]
+    },
+    {
+      "id": 64185,
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64185,
+      "starsprint": 64185,
+      "awakenSkills": [
+        2,
+        30742,
+        4,
+        30877,
+        5,
+        30881
+      ]
+    },
+    {
+      "id": 64186,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64186,
+      "starsprint": 64186,
+      "awakenSkills": [
+        2,
+        30709,
+        4,
+        30876,
+        5,
+        30807
+      ]
+    },
+    {
+      "id": 64187,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64187,
+      "starsprint": 64187,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        30792,
+        5,
+        30790
+      ]
+    },
+    {
+      "id": 64188,
+      "quality": 7,
+      "assess": 11,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64188,
+      "starsprint": 64188,
+      "awakenSkills": [
+        2,
+        30737,
+        4,
+        60024,
+        5,
+        60025
+      ]
+    },
+    {
+      "id": 64190,
+      "quality": 7,
+      "assess": 8,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64190,
+      "starsprint": 64190,
+      "awakenSkills": [
+        0
+      ]
+    },
+    {
+      "id": 64189,
+      "quality": 7,
+      "assess": 8,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 64189,
+      "starsprint": 64189,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    },
+    {
+      "id": 641891,
+      "quality": 7,
+      "assess": 8,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 641891,
+      "starsprint": 641891,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    },
+    {
+      "id": 641892,
+      "quality": 7,
+      "assess": 8,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 641892,
+      "starsprint": 641892,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    },
+    {
+      "id": 641893,
+      "quality": 7,
+      "assess": 8,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "evolution": [
+        0
+      ],
+      "risingstar": 641893,
+      "starsprint": 641893,
+      "awakenSkills": [
+        2,
+        30792,
+        4,
+        30793
+      ]
+    }
+  ],
+  "jirachi": {
+    "species": {
+      "quality": 6,
+      "assess": 10,
+      "maxstar": 15,
+      "maxawaken": 5,
+      "all_up": 880,
+      "attribute1": 17,
+      "attribute2": 11,
+      "stat_hp": 165,
+      "stat_physical_attack": 95,
+      "stat_special_attack": 200,
+      "stat_physical_defense": 135,
+      "stat_special_defense": 150,
+      "stat_speed": 135,
+      "risingstar": 63006,
+      "starsprint": 63006,
+      "charactername": 424091,
+      "skills": [
+        1,
+        10129,
+        11,
+        10179,
+        23,
+        10214,
+        35,
+        10093
+      ],
+      "loveitem": [
+        22017,
+        22011,
+        22019
+      ],
+      "evolution": [
+        64058
+      ]
+    },
+    "growth": {
+      "needlv": 61,
+      "needlove": 1,
+      "upgrade_limit": 0,
+      "evolution": [
+        64058
+      ],
+      "cost": [
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        },
+        {
+          "items": [
+            0
+          ],
+          "coins": 0
+        }
+      ]
+    },
+    "target": 64058,
+    "targetGrowth": {
+      "needlv": 61,
+      "needlove": 40,
+      "upgrade_limit": 9,
+      "evolution": [
+        0
+      ],
+      "cost": [
+        {
+          "items": [
+            20003,
+            40,
+            20020,
+            30,
+            20014,
+            30
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            60,
+            20020,
+            40,
+            20014,
+            40
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            80,
+            20020,
+            50,
+            20014,
+            50
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            120,
+            20020,
+            70,
+            20014,
+            70
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            150,
+            20020,
+            90,
+            20014,
+            90
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            180,
+            20020,
+            100,
+            20014,
+            100
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            200,
+            20020,
+            120,
+            20014,
+            120
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            240,
+            20020,
+            150,
+            20014,
+            150
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            300,
+            20020,
+            175,
+            20014,
+            175
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            500,
+            20020,
+            300,
+            20014,
+            300
+          ],
+          "coins": 8000000
+        }
+      ]
+    },
+    "effectiveAdvanceGrowth": {
+      "needlv": 61,
+      "needlove": 40,
+      "upgrade_limit": 9,
+      "evolution": [
+        0
+      ],
+      "cost": [
+        {
+          "items": [
+            20003,
+            40,
+            20020,
+            30,
+            20014,
+            30
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            60,
+            20020,
+            40,
+            20014,
+            40
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            80,
+            20020,
+            50,
+            20014,
+            50
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            120,
+            20020,
+            70,
+            20014,
+            70
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            150,
+            20020,
+            90,
+            20014,
+            90
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            180,
+            20020,
+            100,
+            20014,
+            100
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            200,
+            20020,
+            120,
+            20014,
+            120
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            240,
+            20020,
+            150,
+            20014,
+            150
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            300,
+            20020,
+            175,
+            20014,
+            175
+          ],
+          "coins": 2000000
+        },
+        {
+          "items": [
+            20003,
+            500,
+            20020,
+            300,
+            20014,
+            300
+          ],
+          "coins": 8000000
+        }
+      ]
+    },
+    "interpretation": "源63006行0上限/零费用仅用于索引，实际UI取目标64058：9进阶、亲密40、61级；此前免费进化解释错误并已撤回"
+  },
+  "ditto": {
+    "species": {
+      "rage": 70010,
+      "maxawaken": 5,
+      "stat_physical_attack": 300,
+      "charactername": 6000001,
+      "egg": 1,
+      "stat_speed": 300,
+      "multiple": 2,
+      "stat_hp": 300,
+      "male": 125,
+      "sprintmoney": 0,
+      "stat_special_defense": 300,
+      "stat_physical_defense": 300,
+      "redstone": 60,
+      "attribute1": 1,
+      "name": 6000000,
+      "ziyuan2": 69282,
+      "maxstar": 15,
+      "assess": 8,
+      "stat_special_attack": 300,
+      "attribute2": 0,
+      "all_up": 1800,
+      "ziyuan1": 79282,
+      "area": 4,
+      "bz": "真·百变怪",
+      "bluestone": 100,
+      "quality": 7,
+      "silverstone": 0,
+      "bigsmall": 1.4,
+      "levelget": 0,
+      "starsprint": 64190,
+      "risingstar": 64190,
+      "featureslv": 10,
+      "skills": [
+        1,
+        40003
+      ],
+      "loveitem": [
+        22001,
+        22019
+      ],
+      "evolution": [
+        0
+      ],
+      "character": [
+        104100
+      ],
+      "passive": [
+        1,
+        34400,
+        3,
+        104200,
+        5,
+        6001000
+      ]
+    },
+    "awake4": {
+      "data1": 6,
+      "data2": 4000000,
+      "data3": 4,
+      "data4": 1.4
+    },
+    "substituteCard": 21090,
+    "sourceDifference": false
+  },
+  "limits": [
+    "纯配置静态审计不等于所有Unity按钮与Android事务已回归",
+    "恢复attributes不改变Java执行路径；不得与Unity原计算重复增加"
+  ]
+}

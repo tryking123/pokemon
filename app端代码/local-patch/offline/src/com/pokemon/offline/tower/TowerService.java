@@ -1,4 +1,5 @@
 package com.pokemon.offline.tower;
+import com.pokemon.offline.activity.CarnivalProgressMapper;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -54,6 +55,7 @@ public class TowerService {
     private final EdenEncounterService eden;
     private final ZodiacService zodiac;
     private final DojoCombatService dojo;
+    private final CarnivalProgressMapper progress;
 
     /** 加载洞穴及相关事务服务。
      * @param jdbc 本地数据库
@@ -69,11 +71,13 @@ public class TowerService {
      * @param eden 神兽岛
      * @param zodiac 十二宫
      * @param dojo 道馆
+     * @param progress 已成功发起的洞穴探险日常计数
      * @throws IOException 资源不可读
      */
     public TowerService(JdbcTemplate jdbc, ObjectMapper json, RoleService roles, InventoryService inventory, GamePaymentService payments,
             FixedStageCombatService fixed, BattleMapper battles, DailyDungeonService daily, ArenaService arena,
-            GuildEncounterService guild, EdenEncounterService eden, ZodiacService zodiac, DojoCombatService dojo)
+            GuildEncounterService guild, EdenEncounterService eden, ZodiacService zodiac, DojoCombatService dojo,
+            CarnivalProgressMapper progress)
             throws IOException {
         this.jdbc = jdbc;
         this.json = json;
@@ -88,6 +92,7 @@ public class TowerService {
         this.eden = eden;
         this.zodiac = zodiac;
         this.dojo = dojo;
+        this.progress = progress;
         try (InputStream in = new ClassPathResource("tower/stages.json").getInputStream()) {
             cfg = json.readTree(in);
         }
@@ -350,6 +355,7 @@ public class TowerService {
         affect(fight.path("monster"), s.path("foe"));
         s.set("fight", fight);
         save(id, s);
+        progress.record(id,40011,1);
         return fight;
     }
 

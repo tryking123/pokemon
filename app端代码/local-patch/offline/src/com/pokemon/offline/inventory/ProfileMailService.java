@@ -54,6 +54,8 @@ public class ProfileMailService {
                     String name = row.required("name").asText();
                     if ("贴纸".equals(row.path("category").asText())) {
                         name += " · 刻印等级 " + row.path("stickerLevel").asInt();
+                    } else if (row.required("type").asInt() == SystemMailReward.ZSTONE) {
+                        name += " · 红色 " + row.required("grade").asInt() + "阶";
                     } else if (row.path("quality").asInt() > 0) {
                         name += " · " + row.path("quality").asInt() + "阶 " + row.path("gearKind").asText();
                         if (row.path("gearLevel").asInt() > 0) name += " · " + row.path("gearLevel").asInt() + "级";

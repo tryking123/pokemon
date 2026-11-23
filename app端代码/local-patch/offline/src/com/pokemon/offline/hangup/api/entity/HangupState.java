@@ -1,7 +1,10 @@
 package com.pokemon.offline.hangup.api.entity;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
+import com.pokemon.offline.activitylevel.api.entity.AdventureEquipment;
+import com.pokemon.offline.elf.api.entity.LocalElf;
 
 /**
  * 冒险挂机状态，用于持久化待领奖励、计时和已领取的精灵经验池。
@@ -24,6 +27,12 @@ public final class HangupState {
     public final long elfPool;
     /** 当前快照中待领取或本次结算已经入账的掉落。 */
     public final Map<Integer, Long> items;
+    /** 快速战斗中实际进入普通背包的训练家装备实例。 */
+    public final List<AdventureEquipment> equipment;
+    /** 快速战斗中实际进入精灵背包的精灵实例。 */
+    public final List<LocalElf> elves;
+    /** 快速战斗前置校验错误码，零表示成功。 */
+    public final int error;
 
     /**
      * 记录该角色的挂机收益。
@@ -73,6 +82,32 @@ public final class HangupState {
      */
     public HangupState(int mapId, long creditedAt, int pendingSeconds, long coins, long roleExp,
                        long elfExp, long elfPool, Map<Integer,Long> items, int dungeonGroup, int dungeonSeconds) {
+        this(mapId, creditedAt, pendingSeconds, coins, roleExp, elfExp, elfPool, items, dungeonGroup,
+                dungeonSeconds, Collections.emptyList(), Collections.emptyList(), 0);
+    }
+
+    /**
+     * 建立包含本次实际入包实例的结算记录。
+     * @param mapId 冒险地图
+     * @param creditedAt 结算时刻
+     * @param pendingSeconds 本次收益秒数
+     * @param coins 金币
+     * @param roleExp 角色经验
+     * @param elfExp 精灵经验
+     * @param elfPool 精灵经验池余额
+     * @param items 实际发放道具
+     * @param dungeonGroup 当前副本组
+     * @param dungeonSeconds 副本收益秒数
+     * @param equipment 实际入包的装备
+     * @param elves 实际入包的精灵
+     * @param error 前置校验错误码
+     */
+    public HangupState(int mapId, long creditedAt, int pendingSeconds, long coins, long roleExp,
+                       long elfExp, long elfPool, Map<Integer,Long> items, int dungeonGroup, int dungeonSeconds,
+                       List<AdventureEquipment> equipment, List<LocalElf> elves, int error) {
+        this.equipment = Collections.unmodifiableList(equipment);
+        this.elves = Collections.unmodifiableList(elves);
+        this.error = error;
         this.dungeonGroup = dungeonGroup;
         this.dungeonSeconds = dungeonSeconds;
         this.mapId = mapId;

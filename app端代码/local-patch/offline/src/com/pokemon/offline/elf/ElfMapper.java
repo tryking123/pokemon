@@ -8,6 +8,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.HashSet;
+import java.util.Set;
 import com.pokemon.offline.platform.lifecycle.PostConstruct;
 import com.pokemon.offline.platform.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 import com.pokemon.offline.platform.context.annotation.DependsOn;
@@ -27,6 +29,11 @@ import com.pokemon.offline.platform.stereotype.Repository;
 public class ElfMapper {
 
     private static final ObjectMapper JSON = new ObjectMapper();
+    private static final String FREE_MATERIAL = " WHERE role_id=? AND id=? AND slot=0"
+            + " AND NOT EXISTS (SELECT 1 FROM local_elf_gear g WHERE g.role_id=local_elf.role_id AND g.elf_id=local_elf.id AND g.kind=4 AND g.config_id BETWEEN 50001 AND 50005)"
+            + " AND NOT EXISTS (SELECT 1 FROM local_secret_stone s WHERE s.elf_id=local_elf.id)"
+            + " AND NOT EXISTS (SELECT 1 FROM local_elf_follow f WHERE f.elf_id=local_elf.id)"
+            + " AND NOT EXISTS (SELECT 1 FROM local_travel_dispatch t WHERE t.elf_id=local_elf.id)";
     private static final String WITH_STONE = "SELECT e.*,s.sid AS stone_sid,s.template_id AS stone_id,"
             + "s.stars AS stone_stars,s.locked AS stone_lock,s.lucky AS stone_lucky,s.attrs AS stone_attrs "
             + "FROM local_elf e LEFT JOIN local_secret_stone s ON s.elf_id=e.id AND s.role_id=e.role_id ";
@@ -215,11 +222,7 @@ public class ElfMapper {
      * @return 删除条数
      */
     int consumeElf(String roleId, String elfId) {
-        return jdbc.update("DELETE FROM local_elf WHERE role_id=? AND id=? AND slot=0 AND starter=FALSE"
-                + " AND NOT EXISTS (SELECT 1 FROM local_elf_gear g WHERE g.role_id=local_elf.role_id AND g.elf_id=local_elf.id AND g.kind=4 AND g.config_id BETWEEN 50001 AND 50005)"
-                + " AND NOT EXISTS (SELECT 1 FROM local_secret_stone s WHERE s.elf_id=local_elf.id)"
-                + " AND NOT EXISTS (SELECT 1 FROM local_elf_follow f WHERE f.elf_id=local_elf.id)"
-                + " AND NOT EXISTS (SELECT 1 FROM local_travel_dispatch t WHERE t.elf_id=local_elf.id)",
+        return jdbc.update("DELETE FROM local_elf" + FREE_MATERIAL + " AND starter=FALSE",
                 roleId, elfId);
     }
 
@@ -231,12 +234,61 @@ public class ElfMapper {
      * @return 是否可作为培养材料
      */
     boolean isConsumable(String roleId, String elfId) {
-        return !jdbc.query("SELECT id FROM local_elf WHERE role_id=? AND id=? AND slot=0 AND starter=FALSE"
-                + " AND NOT EXISTS (SELECT 1 FROM local_elf_gear g WHERE g.role_id=local_elf.role_id AND g.elf_id=local_elf.id AND g.kind=4 AND g.config_id BETWEEN 50001 AND 50005)"
-                + " AND NOT EXISTS (SELECT 1 FROM local_secret_stone s WHERE s.elf_id=local_elf.id)"
-                + " AND NOT EXISTS (SELECT 1 FROM local_elf_follow f WHERE f.elf_id=local_elf.id)"
-                + " AND NOT EXISTS (SELECT 1 FROM local_travel_dispatch t WHERE t.elf_id=local_elf.id)",
-                (row, index) -> row.getString("id"), roleId, elfId).isEmpty();
+        return isConsumable(roleId, elfId, false);
+    }
+
+    /**
+     * 查询材料实例是否空闲，并按培养入口核对初始身份。
+     * @param roleId 角色编号
+     * @param elfId 材料实例
+     * @param allowStarter 本次突破是否允许使用已离队的初始精灵
+     * @return 实例可用时为真
+     */
+    boolean isConsumable(String roleId, String elfId, boolean allowStarter) {
+        return jdbc.queryForObject("SELECT COUNT(*) FROM local_elf" + FREE_MATERIAL
+                + (allowStarter ? "" : " AND starter=FALSE"), Integer.class, roleId, elfId) > 0;
+    }
+
+    /**
+     * 记录并解除本次突破材料的初始身份，避免删除实例后重复领取初始精灵。
+     * @param roleId 持有事务锁的角色
+     * @param elfId 已校验且即将扣除的材料
+     */
+    void preserveStarterClaim(String roleId, String elfId) {
+        int inserted = jdbc.update("INSERT INTO local_starter_consumed(role_id,elf_id,config_id)"
+                + " SELECT role_id,id,config_id FROM local_elf WHERE role_id=? AND id=? AND starter=TRUE",
+                roleId, elfId);
+        if (inserted > 0) {
+            jdbc.update("UPDATE local_elf SET starter=FALSE WHERE role_id=? AND id=?", roleId, elfId);
+        }
+    }
+
+    /**
+     * 查询已用于突破的初始伙伴记录。
+     * @param roleId 角色编号
+     * @return 初始伙伴已经消耗时为真
+     */
+    boolean consumedStarter(String roleId) {
+        return jdbc.queryForObject("SELECT COUNT(*) FROM local_starter_consumed WHERE role_id=?",
+                Integer.class, roleId) > 0;
+    }
+
+    /**
+     * 收集队伍、助战、旅行、跟随及寄存占用的精灵实例。
+     * @param roleId 角色编号
+     * @return 正在被其他玩法使用的实例
+     */
+    Set<String> assignedElves(String roleId) {
+        Set<String> assigned = new HashSet<>(jdbc.queryForList("SELECT elf_id FROM local_dojo_team WHERE role_id=?"
+                + " UNION SELECT elf_id FROM local_elf_aid WHERE role_id=? UNION SELECT elf_id FROM local_elf_follow WHERE role_id=?"
+                + " UNION SELECT elf_id FROM local_travel_dispatch WHERE role_id=?", String.class, roleId, roleId, roleId, roleId));
+        for (String payload : jdbc.queryForList("SELECT state_data FROM local_arena_state WHERE role_id=? AND state_key LIKE 'lineup:%'", String.class, roleId)) {
+            for (com.fasterxml.jackson.databind.JsonNode elf : readTraining(payload).path("battle")) assigned.add(elf.path("id").asText());
+        }
+        for (String payload : jdbc.queryForList("SELECT state_json FROM local_home_breeding WHERE role_id=?", String.class, roleId)) {
+            for (com.fasterxml.jackson.databind.JsonNode elf : readTraining(payload).path("pair")) assigned.add(elf.asText());
+        }
+        return assigned;
     }
 
     /**

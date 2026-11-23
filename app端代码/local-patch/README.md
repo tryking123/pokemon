@@ -28,6 +28,8 @@ py ./app端代码/local-patch/patch-unity-bootstrap.py
 py ./app端代码/local-patch/prepare_cosmetic_import.py --python-libs '<Python依赖目录>'
 py ./app端代码/local-patch/patch_miao_species.py --prepare-only --python-libs '<Python依赖目录>'
 py ./app端代码/local-patch/prepare_character_catalog.py --python-libs '<Python依赖目录>'
+# 在已安装 UnityPy/pycryptodome 的 Python 环境核对原培养配置并恢复已证实漏项。
+py ./app端代码/local-patch/prepare_training_catalog.py --restore-missing
 & ./app端代码/local-patch/build.ps1 -AndroidJar '<android.jar>' -D8Jar '<d8.jar>' -JdkHome '<JDK目录>' -MavenRepository '<第三方JAR缓存目录>'
 py ./app包/build_local_apk.py --entries ./app端代码/local-patch/apk-entries --build-tools '<Build Tools目录>' --java '<java.exe>' --python-libs '<Python依赖目录>' --output ./app包/new/pokemon-offline-direct-YYYYMMDD.apk
 ```
@@ -47,3 +49,6 @@ py ./app包/build_local_apk.py --entries ./app端代码/local-patch/apk-entries 
 ## 验证范围
 
 独立构建时可只复制本目录的 `src`、`embedded`、`offline`、`stubs` 及 `build.ps1` 到临时目录，确认不存在服务端目录后构建。设备上需在无 PC 服务、无 ADB 反向转发且断外网时验证启动、登录建角、支付去重、玩法与冷启动存档。包校验或 Lua mock 不能代替 Unity 实机回归；实际结果以 App 版本记录和本轮验收记录为准。
+
+
+2026-11-22 培养核查：`prepare_training_catalog.py` 对照固定底包及已核对迁移映射扫描物种、成长、觉醒技能和突破配置；默认只读，`--restore-missing` 仅补原突破属性及阶级成长系数。运行资源保留原序与同码重复项。精灵的突破基础成长在业务层计算，六维千分值在角色、宠物及考古共用百分比池合并；成品战报的 `vein` 使用正式阶级，`damage_lv` 使用原属性106，原存档仍保留注入进度。原 Unity 直接装载成品战报，避免在该路径再次执行培养计算。

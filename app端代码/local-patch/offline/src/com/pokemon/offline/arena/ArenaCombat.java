@@ -97,6 +97,7 @@ public final class ArenaCombat {
         values.put("special_defense", 90 + starter.specialDefense);
         values.put("speed", 100 + starter.speed);
         ElfCombatGrowth.apply(elf, values);
+        bonuses=bonuses.withBreakthrough(elf);
         if(ordinaryPet)bonuses=bonuses.withPet(elf,position);
         bonuses.apply(values);
         ObjectNode actor = json.valueToTree(values);

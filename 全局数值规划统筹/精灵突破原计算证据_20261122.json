@@ -1,0 +1,1953 @@
+{
+  "source": "固定底包 lua64_module_battle.ab/core/init.lua proto16及原typedef；未改指令，替身仅为原表与映射上值",
+  "chunkSha256": "f1402e6a797898c09422798244a08b0ffcfc4b5eaa0265e560c8245e115f49d6",
+  "samples": {
+    "1": {
+      "hp_max_bonus": 20
+    },
+    "2": {
+      "physical_attack_bonus": 20,
+      "hp_max_bonus": 20
+    },
+    "3": {
+      "hp_max_bonus": 20,
+      "special_attack_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "4": {
+      "physical_defense_bonus": 20,
+      "hp_max_bonus": 20,
+      "special_attack_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "5": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "hp_max_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "6": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "hp_max_bonus": 20,
+      "speed_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "7": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "hp_max_bonus": 20,
+      "speed_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "8": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "hp_max_bonus": 40,
+      "speed_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "9": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "skill_damage_reduced": 20,
+      "reduced": 20,
+      "hp_max_bonus": 40,
+      "speed_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "10": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "skill_damage_reduced": 20,
+      "reduced": 20,
+      "hp_max_bonus": 60,
+      "speed_bonus": 20,
+      "physical_attack_bonus": 20
+    },
+    "11": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 20,
+      "hp_max_bonus": 60,
+      "speed_bonus": 20,
+      "skill_damage_reduced": 20
+    },
+    "12": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 20,
+      "hp_max_bonus": 80,
+      "speed_bonus": 20,
+      "skill_damage_reduced": 20
+    },
+    "13": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 20,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 80,
+      "speed_bonus": 20,
+      "skill_damage_reduced": 20
+    },
+    "14": {
+      "physical_defense_bonus": 20,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 80,
+      "speed_bonus": 20,
+      "skill_damage_reduced": 20
+    },
+    "15": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 20,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 80,
+      "speed_bonus": 20,
+      "skill_damage_reduced": 20
+    },
+    "16": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 80,
+      "speed_bonus": 20,
+      "skill_damage_reduced": 20
+    },
+    "17": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 20,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 80,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 20
+    },
+    "18": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 80,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 20
+    },
+    "19": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 100,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 20
+    },
+    "20": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 100,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "21": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 1,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 120,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "22": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 120,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "23": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 40,
+      "hp_max_bonus": 140,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "24": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 40,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 140,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "25": {
+      "physical_defense_bonus": 40,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 140,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "26": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 40,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 140,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "27": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 140,
+      "speed_bonus": 40,
+      "skill_damage_reduced": 40
+    },
+    "28": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 40,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 140,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 40
+    },
+    "29": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 140,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 40
+    },
+    "30": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 160,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 40
+    },
+    "31": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 160,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "32": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 2,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 180,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "33": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 180,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "34": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 60,
+      "hp_max_bonus": 200,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "35": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 60,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 200,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "36": {
+      "physical_defense_bonus": 60,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 200,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "37": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 60,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 200,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "38": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 200,
+      "speed_bonus": 60,
+      "skill_damage_reduced": 60
+    },
+    "39": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 60,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 200,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 60
+    },
+    "40": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 200,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 60
+    },
+    "41": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 220,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 60
+    },
+    "42": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 220,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "43": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 3,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 240,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "44": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 240,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "45": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 80,
+      "hp_max_bonus": 260,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "46": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 80,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 260,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "47": {
+      "physical_defense_bonus": 80,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 260,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "48": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 80,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 260,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "49": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 260,
+      "speed_bonus": 80,
+      "skill_damage_reduced": 80
+    },
+    "50": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 80,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 260,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 80
+    },
+    "51": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 260,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 80
+    },
+    "52": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 280,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 80
+    },
+    "53": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 280,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "54": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 4,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 300,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "55": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 300,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "56": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 100,
+      "hp_max_bonus": 320,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "57": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 100,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 320,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "58": {
+      "physical_defense_bonus": 100,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 320,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "59": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 100,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 320,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "60": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 320,
+      "speed_bonus": 100,
+      "skill_damage_reduced": 100
+    },
+    "61": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 100,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 320,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 100
+    },
+    "62": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 320,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 100
+    },
+    "63": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 340,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 100
+    },
+    "64": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 340,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "65": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 6,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 360,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "66": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 360,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "67": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 120,
+      "hp_max_bonus": 380,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "68": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 120,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 380,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "69": {
+      "physical_defense_bonus": 120,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 380,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "70": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 120,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 380,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "71": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 380,
+      "speed_bonus": 120,
+      "skill_damage_reduced": 120
+    },
+    "72": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 120,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 380,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 120
+    },
+    "73": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 380,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 120
+    },
+    "74": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 400,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 120
+    },
+    "75": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 400,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "76": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 8,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 420,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "77": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 420,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "78": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 140,
+      "hp_max_bonus": 440,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "79": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 140,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 440,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "80": {
+      "physical_defense_bonus": 140,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 440,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "81": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 140,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 440,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "82": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 440,
+      "speed_bonus": 140,
+      "skill_damage_reduced": 140
+    },
+    "83": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 140,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 440,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 140
+    },
+    "84": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 440,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 140
+    },
+    "85": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 460,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 140
+    },
+    "86": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 460,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "87": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 10,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 480,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "88": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 480,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "89": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 160,
+      "hp_max_bonus": 500,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "90": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 160,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 500,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "91": {
+      "physical_defense_bonus": 160,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 500,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "92": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 160,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 500,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "93": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 500,
+      "speed_bonus": 160,
+      "skill_damage_reduced": 160
+    },
+    "94": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 160,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 500,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 160
+    },
+    "95": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 500,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 160
+    },
+    "96": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 520,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 160
+    },
+    "97": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 520,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "98": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 12,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 540,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "99": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 540,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "100": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 180,
+      "hp_max_bonus": 560,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "101": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 180,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 560,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "102": {
+      "physical_defense_bonus": 180,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 560,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "103": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 180,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 560,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "104": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 560,
+      "speed_bonus": 180,
+      "skill_damage_reduced": 180
+    },
+    "105": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 180,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 560,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 180
+    },
+    "106": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 560,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 180
+    },
+    "107": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 580,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 180
+    },
+    "108": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 580,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "109": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 14,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 600,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "110": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 600,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "111": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 200,
+      "hp_max_bonus": 620,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "112": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 200,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 620,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "113": {
+      "physical_defense_bonus": 200,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 620,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "114": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 200,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 620,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "115": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 620,
+      "speed_bonus": 200,
+      "skill_damage_reduced": 200
+    },
+    "116": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 200,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 620,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 200
+    },
+    "117": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 620,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 200
+    },
+    "118": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 640,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 200
+    },
+    "119": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 640,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "120": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 16,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 660,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "121": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 660,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "122": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 220,
+      "hp_max_bonus": 680,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "123": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 220,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 680,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "124": {
+      "physical_defense_bonus": 220,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 680,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "125": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 220,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 680,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "126": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 680,
+      "speed_bonus": 220,
+      "skill_damage_reduced": 220
+    },
+    "127": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 220,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 680,
+      "speed_bonus": 240,
+      "skill_damage_reduced": 220
+    },
+    "128": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 240,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 680,
+      "speed_bonus": 240,
+      "skill_damage_reduced": 220
+    },
+    "129": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 240,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 700,
+      "speed_bonus": 240,
+      "skill_damage_reduced": 220
+    },
+    "130": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 240,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 700,
+      "speed_bonus": 240,
+      "skill_damage_reduced": 240
+    },
+    "131": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 240,
+      "damage_lv": 18,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 720,
+      "speed_bonus": 240,
+      "skill_damage_reduced": 240
+    },
+    "132": {
+      "physical_defense_bonus": 240,
+      "special_attack_bonus": 240,
+      "special_defense_bonus": 240,
+      "reduced": 240,
+      "damage_lv": 20,
+      "physical_attack_bonus": 240,
+      "hp_max_bonus": 720,
+      "speed_bonus": 240,
+      "skill_damage_reduced": 240
+    }
+  },
+  "stageSamples": {
+    "0": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "1": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "2": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "3": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "4": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "5": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "6": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "7": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "8": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "9": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "10": {
+      "baseGrowthBonus": 0,
+      "vein": 0
+    },
+    "11": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "12": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "13": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "14": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "15": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "16": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "17": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "18": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "19": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "20": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "21": {
+      "baseGrowthBonus": 0.2,
+      "vein": 1
+    },
+    "22": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "23": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "24": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "25": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "26": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "27": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "28": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "29": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "30": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "31": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "32": {
+      "baseGrowthBonus": 0.4,
+      "vein": 2
+    },
+    "33": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "34": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "35": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "36": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "37": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "38": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "39": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "40": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "41": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "42": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "43": {
+      "baseGrowthBonus": 0.6,
+      "vein": 3
+    },
+    "44": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "45": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "46": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "47": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "48": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "49": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "50": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "51": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "52": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "53": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "54": {
+      "baseGrowthBonus": 0.8,
+      "vein": 4
+    },
+    "55": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "56": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "57": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "58": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "59": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "60": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "61": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "62": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "63": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "64": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "65": {
+      "baseGrowthBonus": 1,
+      "vein": 5
+    },
+    "66": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "67": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "68": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "69": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "70": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "71": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "72": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "73": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "74": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "75": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "76": {
+      "baseGrowthBonus": 1.2,
+      "vein": 6
+    },
+    "77": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "78": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "79": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "80": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "81": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "82": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "83": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "84": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "85": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "86": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "87": {
+      "baseGrowthBonus": 1.4,
+      "vein": 7
+    },
+    "88": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "89": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "90": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "91": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "92": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "93": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "94": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "95": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "96": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "97": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "98": {
+      "baseGrowthBonus": 1.6,
+      "vein": 8
+    },
+    "99": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "100": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "101": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "102": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "103": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "104": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "105": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "106": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "107": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "108": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "109": {
+      "baseGrowthBonus": 1.8,
+      "vein": 9
+    },
+    "110": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "111": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "112": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "113": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "114": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "115": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "116": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "117": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "118": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "119": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "120": {
+      "baseGrowthBonus": 2,
+      "vein": 10
+    },
+    "121": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "122": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "123": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "124": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "125": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "126": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "127": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "128": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "129": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "130": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "131": {
+      "baseGrowthBonus": 2.2,
+      "vein": 11
+    },
+    "132": {
+      "baseGrowthBonus": 2.4,
+      "vein": 12
+    }
+  }
+}

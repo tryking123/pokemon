@@ -210,14 +210,38 @@ public class RocketTeams {
     }
 
     /**
-     * 按客户端实际发送的行动推进当前场次。
-     * @param match 当前匹配
-     * @param skill 技能编号
-     * @param targets 实例目标
-     * @param flag 原自动或手动标记
-     * @return 继续为零，胜负为一或二，非法为负一
+     * 验证 Unity 原战斗引擎返回的终局，按冻结队伍回写胜方实际余血。
+     * @param match 本场冻结的三队与当前交手阵容
+     * @param seed 当前交手的种子
+     * @param fields 对手编号、胜方编号和胜方全队实例与生命值
+     * @return 胜方为我方时返回一，敌方返回二，无效或已换场的回执返回负一
      */
-    int turn(ObjectNode match,int skill,List<?> targets,int flag) {
-        return combat.action((ObjectNode)match.get("fight"),skill,targets,flag);
+    int finishRound(ObjectNode match, int seed, List<?> fields) {
+        JsonNode fight = match.path("fight");
+        JsonNode player = fight.path("player"), enemy = fight.path("monster");
+        if (fields.size() < 4 || seed != fight.path("seed").asInt()
+                || !enemy.path("identifer").asText().equals(fields.get(0))) return -1;
+        boolean win = player.path("identifer").asText().equals(fields.get(1));
+        if (!win && !enemy.path("identifer").asText().equals(fields.get(1))) return -1;
+        JsonNode survivors = (win ? player : enemy).path("pokemon");
+        if (fields.size() != 2 + survivors.size() * 2) return -1;
+        Map<String,Integer> health = new LinkedHashMap<>();
+        for (int i = 2; i < fields.size(); i += 2) {
+            if (!(fields.get(i) instanceof String) || !(fields.get(i + 1) instanceof String)) return -1;
+            try {
+                int hp = Integer.parseInt((String) fields.get(i + 1));
+                if (hp < 0 || health.put((String) fields.get(i), hp) != null) return -1;
+            } catch (NumberFormatException invalid) {
+                return -1;
+            }
+        }
+        for (JsonNode member : survivors) {
+            Integer hp = health.get(member.path("id").asText());
+            if (hp == null || hp > member.path("hp_max").asInt()) return -1;
+        }
+        for (JsonNode member : survivors) {
+            ((ObjectNode) member).put("hp", health.get(member.path("id").asText()).intValue());
+        }
+        return win ? 1 : 2;
     }
 }

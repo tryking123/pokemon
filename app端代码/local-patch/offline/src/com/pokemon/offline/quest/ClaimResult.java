@@ -1,5 +1,11 @@
 package com.pokemon.offline.quest;
 
+import com.pokemon.offline.elf.api.entity.LocalElf;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 任务或章节领奖结果，用于网关发送真实增加的资产
  *
@@ -10,6 +16,10 @@ public final class ClaimResult {
     public final int errno;
     public final QuestReward reward;
     public final boolean changed;
+    /** 此次实际生成的精灵实例。 */
+    public final List<LocalElf> elves = new ArrayList<>();
+    /** 此次实际生成的精灵装备实例编号和模板编号。 */
+    public final Map<String,Integer> stones = new LinkedHashMap<>();
 
     /**
      * 构造奖励领取响应

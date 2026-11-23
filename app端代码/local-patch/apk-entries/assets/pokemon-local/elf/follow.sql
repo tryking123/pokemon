@@ -12,4 +12,3 @@ CREATE TABLE IF NOT EXISTS local_elf_follow_action (
     request_key VARCHAR(72) NOT NULL,
     PRIMARY KEY (role_id, request_key)
 );
-

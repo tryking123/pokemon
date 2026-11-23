@@ -299,7 +299,7 @@ public class ElfTrainingService {
                 consumed = action == 270 ? Collections.singletonList((String)body.get("fodder")) : stringList(body.get("list"));
                 if ((action == 270 && !veinRule.has("inject")) || veinCardCount < 0 || veinCardCount > materialCount
                         || consumed.size() + veinCardCount != materialCount
-                        || !validFodder(roleId,elf,consumed,"",0,expectedSpecies)) return reply("errno",INVALID);
+                        || !validFodder(roleId,elf,consumed,"",0,expectedSpecies, true)) return reply("errno",INVALID);
                 for (String uid : consumed) {
                     LocalElf material = elves.findOwned(roleId,uid).get();
                     if (veinRule.has("inject") && row("species",material.configId).path("quality").asInt()!=veinMaterialQuality)
@@ -341,7 +341,7 @@ public class ElfTrainingService {
                 }
                 if (action == 3007) {
                     if (current >= required || current >= 9) {
-                        return reply("errno", INVALID);
+                        return reply("errno", 101008);
                     }
                     JsonNode paidStep = growth.path("cost").path(current);
                     applyGrowthCost(cost, paidStep);
@@ -349,13 +349,15 @@ public class ElfTrainingService {
                     state.put("advanced", current + 1);
                 } else {
                     newConfig = (int) value(body, "sid");
-                    if (current < required || newConfig <= 0 || newConfig == elf.configId
-                            || !contains(baseGrowth.path("evolution"), newConfig)
-                            || elf.level < baseGrowth.path("needlv").asInt()
-                            || state.path("love").asInt(1) < baseGrowth.path("needlove").asInt()) {
+                    JsonNode targetGrowth = row("growth", newConfig);
+                    if (newConfig <= 0 || newConfig == elf.configId || targetGrowth.isMissingNode()
+                            || !contains(baseGrowth.path("evolution"), newConfig)) {
                         return reply("errno", INVALID);
                     }
-                    applyGrowthCost(cost, baseGrowth.path("cost").path(9));
+                    if (current < targetGrowth.path("upgrade_limit").asInt()) return reply("errno", 253120);
+                    if (elf.level < targetGrowth.path("needlv").asInt()) return reply("errno", 101009);
+                    if (state.path("love").asInt(1) < targetGrowth.path("needlove").asInt()) return reply("errno", 101010);
+                    applyGrowthCost(cost, targetGrowth.path("cost").path(9));
                     state.put("advanced", 0);
                     state.remove("advanceCosts");
                     state.withArray("old_elfsid").add(elf.configId);
@@ -518,6 +520,9 @@ public class ElfTrainingService {
             return reply("errno", NEED_MATERIAL);
         }
         for (String fodder : consumed) {
+            if (action == 270 || action == 271) {
+                elves.preserveStarterClaim(roleId, fodder);
+            }
             if (!gears.removeElfGear(roleId, fodder) || elves.consumeElf(roleId, fodder) != 1) {
                 throw new IllegalStateException("精灵培养材料在结算时已不可用");
             }
@@ -537,6 +542,8 @@ public class ElfTrainingService {
             quests.recordTraining(roleId, 25, state.path("love").asInt(1) - oldLove);
         } else if (action == 3006) {
             quests.recordTraining(roleId, 8, 1);
+        } else if (action == 3010 || action == 3011) {
+            quests.recordTraining(roleId, action == 3010 ? 18 : 12, 1);
         } else if (action == 3008) {
             quests.recordTraining(roleId, 26, effortGain);
         }
@@ -560,7 +567,8 @@ public class ElfTrainingService {
                              Map<String, Object> result, boolean auto) {
         ObjectNode state = elf.training;
         int level = state.path("love").asInt(1);
-        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100);
+        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100)
+                + row("break", state.path("veinlevel").asInt()).path("extra").asInt();
         long previous = state.path("loveexp").asLong();
         long experience = previous;
         long type = value(body, "type");
@@ -623,7 +631,8 @@ public class ElfTrainingService {
         ObjectNode state = elf.training;
         int level = state.path("love").asInt(1);
         JsonNode species = row("species", elf.configId);
-        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100);
+        int max = row("variable", 2501).path("data6").path(species.path("quality").asText()).asInt(100)
+                + row("break", state.path("veinlevel").asInt()).path("extra").asInt();
         if (level >= max) {
             return false;
         }
@@ -667,14 +676,31 @@ public class ElfTrainingService {
      */
     private boolean validFodder(String roleId, LocalElf target, List<String> ids, String matchingField,
                                 int minimumAssess, int requiredSpecies) {
+        return validFodder(roleId, target, ids, matchingField, minimumAssess, requiredSpecies, false);
+    }
+
+    /**
+     * 按培养入口校验材料实例、模板与突破专用的闲置伙伴规则。
+     * @param roleId 当前角色
+     * @param target 培养目标
+     * @param ids 选择的材料实例
+     * @param matchingField 材料与目标须匹配的模板字段
+     * @param minimumAssess 材料最低评价
+     * @param requiredSpecies 限定模板，零表示不限
+     * @param breakthrough 是否为突破注入
+     * @return 所有材料均可消耗时为真
+     */
+    private boolean validFodder(String roleId, LocalElf target, List<String> ids, String matchingField,
+                                int minimumAssess, int requiredSpecies, boolean breakthrough) {
         Set<String> distinct = new HashSet<>();
+        Set<String> assigned = breakthrough && !ids.isEmpty() ? elves.assignedElves(roleId) : Collections.emptySet();
         Map<String, LocalElf> roster = elves.list(roleId).stream().collect(Collectors.toMap(elf -> elf.id, elf -> elf));
         int matching = row("species", target.configId).path(matchingField).asInt(target.configId);
         for (String id : ids) {
             LocalElf elf = roster.get(id);
             JsonNode species = elf == null ? null : row("species", elf.configId);
             if (elf == null || id.equals(target.id) || !distinct.add(id) || elf.slot != 0
-                    || !elves.isConsumable(roleId, id) || elf.training.path("lock").asInt() != 0
+                    || assigned.contains(id) || !elves.isConsumable(roleId, id, breakthrough) || elf.training.path("lock").asInt() != 0
                     || (requiredSpecies != 0 && elf.configId != requiredSpecies)
                     || (!matchingField.isEmpty() && species.path(matchingField).asInt(elf.configId) != matching)
                     || species.path("assess").asInt() < minimumAssess) {
@@ -731,17 +757,12 @@ public class ElfTrainingService {
         return bonus+Math.max(0,(int)Math.floor(coefficient.path("data2").asDouble()-coefficient.path("data1").asDouble()*delta*delta));
     }
     /**
-     * 按原客户端规则为终形精灵选择编号乘十的追加进阶表。
+     * 按原客户端规则选择当前首个进化目标或终形编号乘十的进阶表。
      * @param speciesId 当前精灵模板编号
      * @return 进阶使用的原配置
      */
     private static JsonNode growthRule(int speciesId) {
-        JsonNode normal = row("growth", speciesId);
-        if (normal.path("evolution").path(0).asInt() == 0) {
-            JsonNode terminal = row("growth", speciesId * 10);
-            if (!terminal.isMissingNode()) return terminal;
-        }
-        return normal;
+        return ElfTrainingCatalog.advanceRule(speciesId);
     }
     /**
      * 读取进阶或进化采用的物品与金币。

@@ -1,0 +1,306 @@
+{
+  "source": "固定底包core/init.lua proto17原指令、原dynamaxlevel与typedef上值；affix后乘于完成角色百分比的属性",
+  "chunkSha256": "110e04b8e2de675a2300d3ef38966701edc17a6a77e421f09e63d84e556fc31e",
+  "samples": [
+    {
+      "path": 1,
+      "level": 1,
+      "affixes": {
+        "hp_affix": -10,
+        "speed_affix": -10,
+        "patk_affix": 20,
+        "datk_affix": 20
+      }
+    },
+    {
+      "path": 1,
+      "level": 2,
+      "affixes": {
+        "hp_affix": -20,
+        "speed_affix": -20,
+        "patk_affix": 40,
+        "datk_affix": 40
+      }
+    },
+    {
+      "path": 1,
+      "level": 3,
+      "affixes": {
+        "hp_affix": -30,
+        "speed_affix": -30,
+        "patk_affix": 60,
+        "datk_affix": 60
+      }
+    },
+    {
+      "path": 1,
+      "level": 4,
+      "affixes": {
+        "hp_affix": -40,
+        "speed_affix": -40,
+        "patk_affix": 80,
+        "datk_affix": 80
+      }
+    },
+    {
+      "path": 1,
+      "level": 5,
+      "affixes": {
+        "hp_affix": -50,
+        "speed_affix": -50,
+        "patk_affix": 100,
+        "datk_affix": 100
+      }
+    },
+    {
+      "path": 1,
+      "level": 6,
+      "affixes": {
+        "hp_affix": -60,
+        "speed_affix": -60,
+        "patk_affix": 120,
+        "datk_affix": 120
+      }
+    },
+    {
+      "path": 1,
+      "level": 7,
+      "affixes": {
+        "hp_affix": -70,
+        "speed_affix": -70,
+        "patk_affix": 140,
+        "datk_affix": 140
+      }
+    },
+    {
+      "path": 1,
+      "level": 8,
+      "affixes": {
+        "hp_affix": -80,
+        "speed_affix": -80,
+        "patk_affix": 160,
+        "datk_affix": 160
+      }
+    },
+    {
+      "path": 1,
+      "level": 9,
+      "affixes": {
+        "hp_affix": -90,
+        "speed_affix": -90,
+        "patk_affix": 180,
+        "datk_affix": 180
+      }
+    },
+    {
+      "path": 1,
+      "level": 10,
+      "affixes": {
+        "hp_affix": -100,
+        "speed_affix": -100,
+        "patk_affix": 200,
+        "datk_affix": 200
+      }
+    },
+    {
+      "path": 2,
+      "level": 1,
+      "affixes": {
+        "hp_affix": -10,
+        "speed_affix": 20,
+        "patk_affix": -10,
+        "datk_affix": -10
+      }
+    },
+    {
+      "path": 2,
+      "level": 2,
+      "affixes": {
+        "hp_affix": -20,
+        "speed_affix": 40,
+        "patk_affix": -20,
+        "datk_affix": -20
+      }
+    },
+    {
+      "path": 2,
+      "level": 3,
+      "affixes": {
+        "hp_affix": -30,
+        "speed_affix": 60,
+        "patk_affix": -30,
+        "datk_affix": -30
+      }
+    },
+    {
+      "path": 2,
+      "level": 4,
+      "affixes": {
+        "hp_affix": -40,
+        "speed_affix": 80,
+        "patk_affix": -40,
+        "datk_affix": -40
+      }
+    },
+    {
+      "path": 2,
+      "level": 5,
+      "affixes": {
+        "hp_affix": -50,
+        "speed_affix": 100,
+        "patk_affix": -50,
+        "datk_affix": -50
+      }
+    },
+    {
+      "path": 2,
+      "level": 6,
+      "affixes": {
+        "hp_affix": -60,
+        "speed_affix": 120,
+        "patk_affix": -60,
+        "datk_affix": -60
+      }
+    },
+    {
+      "path": 2,
+      "level": 7,
+      "affixes": {
+        "hp_affix": -70,
+        "speed_affix": 140,
+        "patk_affix": -70,
+        "datk_affix": -70
+      }
+    },
+    {
+      "path": 2,
+      "level": 8,
+      "affixes": {
+        "hp_affix": -80,
+        "speed_affix": 160,
+        "patk_affix": -80,
+        "datk_affix": -80
+      }
+    },
+    {
+      "path": 2,
+      "level": 9,
+      "affixes": {
+        "hp_affix": -90,
+        "speed_affix": 180,
+        "patk_affix": -90,
+        "datk_affix": -90
+      }
+    },
+    {
+      "path": 2,
+      "level": 10,
+      "affixes": {
+        "hp_affix": -100,
+        "speed_affix": 200,
+        "patk_affix": -100,
+        "datk_affix": -100
+      }
+    },
+    {
+      "path": 3,
+      "level": 1,
+      "affixes": {
+        "hp_affix": 20,
+        "speed_affix": -10,
+        "patk_affix": -10,
+        "datk_affix": -10
+      }
+    },
+    {
+      "path": 3,
+      "level": 2,
+      "affixes": {
+        "hp_affix": 40,
+        "speed_affix": -20,
+        "patk_affix": -20,
+        "datk_affix": -20
+      }
+    },
+    {
+      "path": 3,
+      "level": 3,
+      "affixes": {
+        "hp_affix": 60,
+        "speed_affix": -30,
+        "patk_affix": -30,
+        "datk_affix": -30
+      }
+    },
+    {
+      "path": 3,
+      "level": 4,
+      "affixes": {
+        "hp_affix": 80,
+        "speed_affix": -40,
+        "patk_affix": -40,
+        "datk_affix": -40
+      }
+    },
+    {
+      "path": 3,
+      "level": 5,
+      "affixes": {
+        "hp_affix": 100,
+        "speed_affix": -50,
+        "patk_affix": -50,
+        "datk_affix": -50
+      }
+    },
+    {
+      "path": 3,
+      "level": 6,
+      "affixes": {
+        "hp_affix": 120,
+        "speed_affix": -60,
+        "patk_affix": -60,
+        "datk_affix": -60
+      }
+    },
+    {
+      "path": 3,
+      "level": 7,
+      "affixes": {
+        "hp_affix": 140,
+        "speed_affix": -70,
+        "patk_affix": -70,
+        "datk_affix": -70
+      }
+    },
+    {
+      "path": 3,
+      "level": 8,
+      "affixes": {
+        "hp_affix": 160,
+        "speed_affix": -80,
+        "patk_affix": -80,
+        "datk_affix": -80
+      }
+    },
+    {
+      "path": 3,
+      "level": 9,
+      "affixes": {
+        "hp_affix": 180,
+        "speed_affix": -90,
+        "patk_affix": -90,
+        "datk_affix": -90
+      }
+    },
+    {
+      "path": 3,
+      "level": 10,
+      "affixes": {
+        "hp_affix": 200,
+        "speed_affix": -100,
+        "patk_affix": -100,
+        "datk_affix": -100
+      }
+    }
+  ]
+}

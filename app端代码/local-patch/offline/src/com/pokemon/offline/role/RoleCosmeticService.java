@@ -301,6 +301,10 @@ public class RoleCosmeticService {
         private final Map<Integer, Map<Integer, Integer>> research;
         /** 当前普通队伍宠物六维百分比，仅作用于本次精灵快照。 */
         private Map<Integer,Integer> petPercent=Collections.emptyMap();
+        /** 当前精灵突破的六维千分值，与角色和宠物同码相加。 */
+        private Map<Integer,Integer> breakPercent=Collections.emptyMap();
+        /** 本次精灵的极巨化数据，在角色属性合并后计算最终倍率。 */
+        private com.pokemon.offline.elf.api.entity.LocalElf dynamaxElf;
         /** 宠物次级属性保留原协议数值。 */
         private Map<String,Integer> petDirect=Collections.emptyMap();
         /** 命中当前实际阵位的宠物天赋触发。 */
@@ -325,6 +329,24 @@ public class RoleCosmeticService {
         }
 
         /**
+         * 为单只精灵绑定原突破百分比，保留角色共用快照及当前宠物状态。
+         * @param elf 当前精灵及其持久化突破进度
+         * @return 不改变其他精灵的独立属性快照
+         */
+        public BattleBonuses withBreakthrough(com.pokemon.offline.elf.api.entity.LocalElf elf) {
+            BattleBonuses result=new BattleBonuses(attributes,statues,stationDamagePercent,research);
+            Map<Integer,Integer> percent=new HashMap<>();
+            for(int code:RELATIVE) {
+                int value=com.pokemon.offline.elf.ElfCombatGrowth.breakthroughValue(elf,code);
+                if(value!=0)percent.put(code,value);
+            }
+            result.breakPercent=percent;
+            result.dynamaxElf=elf;
+            result.petPercent=petPercent;result.petDirect=petDirect;result.petTriggers=petTriggers;
+            return result;
+        }
+
+        /**
          * 根据精灵所属普通队伍及实际阵位派生宠物加成，不修改共用角色快照。
          * @param elf 当前精灵
          * @return 绑定普通队伍宠物后的加成
@@ -340,7 +362,7 @@ public class RoleCosmeticService {
          * @return 独立的单精灵加成快照
          */
         public BattleBonuses withPet(com.pokemon.offline.elf.api.entity.LocalElf elf,int position) {
-            BattleBonuses result=new BattleBonuses(attributes,statues,stationDamagePercent,research);
+            BattleBonuses result=withBreakthrough(elf);
             Map<Integer,Integer> percent=new HashMap<>();
             Map<String,Integer> direct=new HashMap<>();
             com.pokemon.offline.home.PetCombatRules.attributes(elf.battlePet).forEach((code,value)->{
@@ -374,11 +396,21 @@ public class RoleCosmeticService {
             for (int i = 0; i < BASE.length; i++) {
                 if (BASE[i].equals(field)) {
                     Map<Integer, Integer> row = research.getOrDefault(position, Collections.emptyMap());
-                    return Math.toIntExact(Math.round((base + (long) raw(FLAT[i]) + row.getOrDefault(FLAT[i], 0))
+                    int value=Math.toIntExact(Math.round((base + (long) raw(FLAT[i]) + row.getOrDefault(FLAT[i], 0))
                             * (1000L + raw(RELATIVE[i]) + row.getOrDefault(RELATIVE[i], 0)) / 1000.0));
+                    return dynamaxElf==null ? value : com.pokemon.offline.elf.DynamaxRules.attribute(dynamaxElf,field,value);
                 }
             }
             return base;
+        }
+
+        /**
+         * 按底包 variable[1076] 折算公会考古在当前阵位提供的普通伤害加成战力。
+         * @param position 精灵的实际阵位
+         * @return 伤害加成原值每点对应五点战力
+         */
+        public long archaeologyDamagePower(int position) {
+            return 5L * research.getOrDefault(position, Collections.emptyMap()).getOrDefault(23, 0);
         }
 
         /** 获取当前在建雕像对指定原属性的加成。
@@ -401,7 +433,10 @@ public class RoleCosmeticService {
             Map<Integer, Integer> combined = new HashMap<>(attributes);
             research.getOrDefault(position, Collections.emptyMap()).forEach((code, value) -> combined.merge(code, value, Math::addExact));
             petPercent.forEach((code,value)->combined.merge(code,value,Math::addExact));
-            new BattleBonuses(combined, statues, stationDamagePercent, Collections.emptyMap()).applyCombined(fighter);
+            breakPercent.forEach((code,value)->combined.merge(code,value,Math::addExact));
+            BattleBonuses total=new BattleBonuses(combined, statues, stationDamagePercent, Collections.emptyMap());
+            total.dynamaxElf=dynamaxElf;
+            total.applyCombined(fighter);
             petDirect.forEach((field,value)->increment(fighter,field,value));
             if(!petTriggers.isEmpty()) {
                 java.util.Set<Integer> triggers=new java.util.LinkedHashSet<>();
@@ -465,7 +500,8 @@ public class RoleCosmeticService {
          * @return 该属性的累计值
          */
         private int raw(int code) {
-            return Math.addExact(attributes.getOrDefault(code, 0),petPercent.getOrDefault(code,0));
+            return Math.addExact(Math.addExact(attributes.getOrDefault(code, 0),petPercent.getOrDefault(code,0)),
+                    breakPercent.getOrDefault(code,0));
         }
 
         /**

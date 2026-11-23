@@ -71,6 +71,19 @@ class InventoryMapper {
     }
 
     /**
+     * 按秘境掉落的存档格式创建一件未穿戴、零星的精灵装备。
+     *
+     * @param roleId 收件角色编号
+     * @param instanceId 新装备的唯一编号
+     * @param templateId 精灵装备模板编号
+     * @return 写入的实例数
+     */
+    int insertZstone(String roleId, String instanceId, int templateId) {
+        return jdbc.update("INSERT INTO local_secret_stone(sid,role_id,template_id) VALUES(?,?,?)",
+                instanceId, roleId, templateId);
+    }
+
+    /**
      * 设置事务内已校验的钱包余额
      *
      * @param roleId 角色编号

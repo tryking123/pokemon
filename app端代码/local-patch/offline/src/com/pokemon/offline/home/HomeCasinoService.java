@@ -374,88 +374,57 @@ public class HomeCasinoService {
     }
 
     /**
-     * 记录三条每日目标链的实际达成次数，并按原阈值自动返还家园币。
+     * 发布当日三条任务链并结算原有自动奖励。旧版按实战计数达标即发奖，
+     * 同一天升级时据此跳过已经付过的档位。
      *
      * @param id 角色编号
-     * @param s 当日进度
-     * @param round 当前牌局
-     * @param result 胜负编号
-     * @param out 附带目标快照与实际返还
+     * @return 当日已完成的任务和本次实际增加的家园币
      */
-    private void objectives(String id, ObjectNode s, ObjectNode round, int result, ObjectNode out) {
-        ObjectNode progress = s.with("progress");
-        boolean[] met = {
-            true,
-            result == 2 || result == 4 || result == 5 || result == 6,
-            round.path("player").size() == 2 && points(round.path("player")) == 21
-        };
-        int earned = 0;
-        ArrayNode changes = out.putArray("tasks");
-        for (int group = 0; group < 3; group++) {
-            if (!met[group]) continue;
-            String key = Integer.toString(group);
-            int count = progress.path(key).asInt() + 1;
-            progress.put(key, count);
-            for (int offset = 0; offset < 3; offset++) {
-                JsonNode target = config.path("targets").path(group * 3 + offset);
-                int need = target.path("target").asInt();
-                if (count > need) continue;
-                changes.addObject()
-                        .put("id", target.path("id").asInt())
-                        .put("progress", count)
-                        .put("state", count == need ? 2 : 1);
-                if (count == need) {
-                    earned +=
-                            (int)
-                                    Math.ceil(
-                                            target.path("coins").asInt()
-                                                    * (100L + round.path("auras").asInt())
-                                                    / 100.0);
-                    if (offset < 2)
-                        changes.addObject()
-                                .put(
-                                        "id",
-                                        config.path("targets")
-                                                .path(group * 3 + offset + 1)
-                                                .path("id")
-                                                .asInt())
-                                .put("progress", count)
-                                .put("state", 1);
-                }
-                break;
+    @Transactional
+    public ObjectNode publishTasks(String id) {
+        ObjectNode result = json.createObjectNode();
+        ArrayNode tasks = result.putArray("tasks");
+        if (home.level(id) < 5) return result;
+        roles.lockRole(id);
+        ObjectNode state = state(id);
+        long day = state.path("day").asLong();
+        boolean published = state.path("taskAwardDay").asLong(-1) == day;
+        int bonus = published ? 0 : state.has("round")
+                ? state.path("round").path("auras").asInt() : petBonus(id, state);
+        long coins = 0;
+        JsonNode targets = config.path("targets");
+        for (int index = 0; index < targets.size(); index++) {
+            JsonNode row = targets.get(index);
+            int target = row.path("target").asInt();
+            tasks.addObject().put("id", row.path("id").asInt()).put("progress", target).put("state", 2);
+            int previouslyPaid = state.path("progress").path(Integer.toString(index / 3)).asInt();
+            if (!published && previouslyPaid < target) {
+                coins += (row.path("coins").asLong() * (100L + bonus) + 99) / 100;
             }
         }
-        if (earned > 0) {
-            adjust(id, 118, earned);
-            out.put("taskCoins", earned);
+        if (!published) {
+            if (coins > 0) adjust(id, 118, coins);
+            state.put("taskAwardDay", day);
+            save(id, state);
         }
+        return result.put("taskCoins", coins);
     }
 
     /**
-     * 读取三条当前每日任务，在重登录后恢复进度。
-     *
+     * 读取当前游戏厅出战成宠的家园币奖励加成。
      * @param id 角色编号
-     * @return 原任务数据
+     * @param state 游戏厅存档
+     * @return 出战光环的百分比加成之和
      */
-    @Transactional
-    public ArrayNode tasks(String id) {
-        ArrayNode out = json.createArrayNode();
-        if (home.level(id) < 5) return out;
-        roles.lockRole(id);
-        JsonNode progress = state(id).path("progress");
-        for (int group = 0; group < 3; group++) {
-            int count = progress.path(Integer.toString(group)).asInt();
-            for (int offset = 0; offset < 3; offset++) {
-                JsonNode target = config.path("targets").path(group * 3 + offset);
-                if (count >= target.path("target").asInt()) continue;
-                out.addObject()
-                        .put("id", target.path("id").asInt())
-                        .put("progress", count)
-                        .put("state", 1);
-                break;
+    private int petBonus(String id, ObjectNode state) {
+        if (!state.has("pet")) return 0;
+        int bonus = 0;
+        for (JsonNode pet : breeding.pets(id)) {
+            if (state.path("pet").asText().equals(pet.path("uid").asText())) {
+                for (JsonNode aura : pet.path("aureole_id")) bonus += aura.asInt() % 100;
             }
         }
-        return out;
+        return bonus;
     }
 
     /**
@@ -482,7 +451,6 @@ public class HomeCasinoService {
                 adjust(id, type, amount);
                 out.putObject("adds").put(type == 118 ? "homecoin" : "jetton", amount);
             }
-            objectives(id, s, r, result, out);
             if (result == 4
                     && r.path("player").size() == 5
                     && s.path("surpriseDay").asLong(-1) != s.path("day").asLong()) {
@@ -608,12 +576,7 @@ public class HomeCasinoService {
                 boolean fresh = !s.has("round");
                 ok = enter(id, s, idx, out);
                 if (ok && fresh && s.has("pet")) {
-                    int sum = 0;
-                    for (JsonNode p : breeding.pets(id))
-                        if (s.path("pet").asText().equals(p.path("uid").asText())) {
-                            for (JsonNode a : p.path("aureole_id")) sum += a.asInt() % 100;
-                        }
-                    s.with("round").put("auras", sum);
+                    s.with("round").put("auras", petBonus(id, s));
                 }
                 break;
             case 394:

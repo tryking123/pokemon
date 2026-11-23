@@ -3,7 +3,6 @@ package com.pokemon.offline.activitydaily;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pokemon.offline.inventory.InventoryService;
-import com.pokemon.offline.inventory.DiamondSpendMapper;
 import com.pokemon.offline.role.RoleService;
 import java.io.IOException;
 import java.time.*;
@@ -24,7 +23,6 @@ public class DailyMissionService {
     private final RoleService roles;
     private final InventoryService inventory;
     private final DailyVitalityEvents events;
-    private final DiamondSpendMapper spending;
     private final JsonNode rules;
     private static final ZoneId ZONE=ZoneId.of("Asia/Shanghai");
 
@@ -34,13 +32,12 @@ public class DailyMissionService {
      * @param roles 角色事务锁
      * @param inventory 实物发放
      * @param events 活跃积分账本
-     * @param spending 钻石扣费流水
      * @param json 原配置解析
      * @throws IOException 无法读取配置
      */
     public DailyMissionService(JdbcTemplate jdbc, RoleService roles, InventoryService inventory,
-            DailyVitalityEvents events, DiamondSpendMapper spending, ObjectMapper json) throws IOException {
-        this.jdbc=jdbc;this.roles=roles;this.inventory=inventory;this.events=events;this.spending=spending;
+            DailyVitalityEvents events, ObjectMapper json) throws IOException {
+        this.jdbc=jdbc;this.roles=roles;this.inventory=inventory;this.events=events;
         try(java.io.InputStream in=new ClassPathResource("activity/daily-missions.json").getInputStream()) {rules=json.readTree(in);}
         jdbc.execute("CREATE TABLE IF NOT EXISTS local_daily_mission_claim(role_id VARCHAR(36) NOT NULL,day_start BIGINT NOT NULL,task_id INTEGER NOT NULL,PRIMARY KEY(role_id,day_start,task_id))");
     }
@@ -53,20 +50,23 @@ public class DailyMissionService {
     public List<Map<String,Object>> snapshot(String roleId) {
         long start=LocalDate.now(ZONE).atStartOfDay(ZONE).toEpochSecond(),end=start+86400;
         Map<Integer,Long> counts=new HashMap<>();
-        counts.put(40001,spending.totalBetween(roleId,start*1000,end*1000));
+        // 40001 无引导，40003 的赠送目标在离线版不可用。
         counts.put(40002,jdbc.queryForObject("SELECT COUNT(*) FROM local_adventure_quicken WHERE role_id=? AND reward_day=?",Long.class,roleId,LocalDate.now(ZONE).toString()));
-        counts.put(40003,jdbc.queryForObject("SELECT COUNT(*) FROM local_gacha_draw WHERE role_id=? AND draw_type=1 AND committed_at>=? AND committed_at<?",Long.class,roleId,start,end));
-        counts.put(40004,jdbc.queryForObject("SELECT COALESCE(SUM(CASE WHEN draw_type=3 THEN 10 ELSE 1 END),0) FROM local_gacha_draw WHERE role_id=? AND draw_type IN (2,3) AND committed_at>=? AND committed_at<?",Long.class,roleId,start,end));
-        counts.put(40009,jdbc.queryForObject("SELECT COUNT(*) FROM local_personal_guild_donation WHERE role_id=? AND created_at>=? AND created_at<?",Long.class,roleId,start,end));
+        counts.put(40006,jdbc.queryForObject("SELECT COALESCE(SUM(CASE WHEN draw_type=3 THEN 10 ELSE 1 END),0) FROM local_gacha_draw WHERE role_id=? AND committed_at>=? AND committed_at<?",Long.class,roleId,start,end));
+        counts.put(40004,jdbc.queryForObject("SELECT COUNT(*) FROM local_personal_guild_donation WHERE role_id=? AND created_at>=? AND created_at<?",Long.class,roleId,start,end));
+        for (int[] pair : new int[][]{{40007,112},{40008,50015},{40010,40010},{40011,40011}}) {
+            counts.put(pair[0], jdbc.queryForObject("SELECT COALESCE(SUM(quantity),0) FROM local_carnival_progress "
+                    + "WHERE role_id=? AND task_type=? AND event_day=?", Long.class,roleId,pair[1],start));
+        }
         for(long[] row:events.counts(roleId,start,end)) {
-            if(row[0]==15)counts.merge(40007,row[1],Long::sum);
+            if(row[0]==15)counts.merge(40009,row[1],Long::sum);
             if(row[0]==17)counts.merge(40012,row[1],Long::sum);
         }
         Set<Integer> claimed=new HashSet<>(jdbc.queryForList("SELECT task_id FROM local_daily_mission_claim WHERE role_id=? AND day_start=?",Integer.class,roleId,start));
         List<Map<String,Object>> list=new ArrayList<>();
         for(JsonNode cfg:rules) {
             int id=cfg.path("id").asInt(),goal=cfg.path("goal").asInt();
-            long progress=Math.min(goal,counts.getOrDefault(id,0L));
+            long progress=(id==40001 || id==40003) ? goal : Math.min(goal,counts.getOrDefault(id,0L));
             Map<String,Object> task=new LinkedHashMap<>();
             task.put("id",id);task.put("progress",(int) progress);task.put("state",claimed.contains(id)?0:progress>=goal?2:1);
             list.add(task);

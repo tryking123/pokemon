@@ -153,9 +153,10 @@ public class SceneService {
             JsonNode stage = dojoConfig.stage(dojoId);
             List<SceneActor> monsters = new ArrayList<>();
             if (stage != null) {
-                for (JsonNode group : stage.get(3)) {
-                    int groupId = group.get(0).asInt();
-                    monsters.add(new SceneActor(groupId, dojoConfig.groupId(dojoId, groupId),
+                JsonNode groups = stage.get(3);
+                for (int i = 0; i < groups.size(); i++) {
+                    JsonNode group = groups.get(i);
+                    monsters.add(new SceneActor(group.get(0).asInt(), dojoConfig.groupInstanceId(dojoId, i),
                             group.get(1).asInt(), group.get(2).asInt(), 0));
                 }
             }
@@ -331,7 +332,8 @@ public class SceneService {
                     null, null, null));
         }
         HangupMap target = HangupMap.byDoor(portalId);
-        if (target != null && (role.sceneId == CITY || onHangupMap)) {
+        if (target != null && (role.sceneId == CITY || onHangupMap
+                || role.sceneId == GUILD_HALL || role.sceneId == GUILD_DUNGEON)) {
             if (adventure.nextMission(role.id) < target.requiredMission || role.stage < target.requiredWorld) {
                 return new TravelResult(CLOSED_PORTAL, role);
             }

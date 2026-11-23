@@ -62,7 +62,29 @@ public final class DynamaxRules {
         return TABLES.path("bookLevels").path(Integer.toString(book / 10000 * 1000 + book / 100 % 100));
     }
 
-    /** 把原极巨修正并入四项当前实战属性。
+    /**
+     * 在同码百分比及固定加成计算完成后应用原极巨化最终倍率。
+     * 原30至33码属于patk_affix、datk_affix、hp_affix、speed_affix，不能提前缩放未合并的基础值。
+     * @param elf 当前精灵及极巨化存档
+     * @param field 原战斗属性名
+     * @param base 已合并角色、突破及阵位来源的当前属性
+     * @return 极巨化最终倍率计算后的属性
+     */
+    public static int attribute(LocalElf elf, String field, int base) {
+        int path=elf.training.path("dynapath").asInt();
+        int level=elf.training.path("dynalevel").asInt();
+        if(path<1 || path>3 || level<1) return base;
+        String[] fields={"physical_attack","special_attack","hp_max","speed"};
+        JsonNode values=route(level,path,"_nature");
+        int bonus=0;
+        for(int i=0;i+1<values.size();i+=2) {
+            int index=values.get(i).asInt()-30;
+            if(index>=0 && index<fields.length && fields[index].equals(field)) bonus+=values.get(i+1).asInt();
+        }
+        return bonus==0?base:Math.max(1,Math.toIntExact((long)base*(1000+bonus)/1000));
+    }
+
+    /** 同步原极巨路线、攻击类别及被动；四项最终倍率由统一属性出口处理。
      * @param elf 精灵实例
      * @param stats 当前战斗数据
      */
@@ -70,13 +92,6 @@ public final class DynamaxRules {
         int path = elf.training.path("dynapath").asInt();
         if (path < 1 || path > 3) { return; }
         int level = elf.training.path("dynalevel").asInt();
-        JsonNode values = route(level,path,"_nature");
-        String[] fields = {"physical_attack", "special_attack", "hp_max", "speed"};
-        for (int i=0; i+1<values.size(); i+=2) {
-            String key = fields[values.get(i).asInt()-30];
-            int amount = ((Number)stats.get(key)).intValue();
-            stats.put(key, Math.max(1, (int)((long)amount*(1000 + values.get(i+1).asInt()) / 1000)));
-        }
         stats.put("dynapath",path);
         if (elf.training.has("dynatype")) { stats.put("dynatype",elf.training.path("dynatype").asInt()); }
         JsonNode passive = route(level,path,"_skill");

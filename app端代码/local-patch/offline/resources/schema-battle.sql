@@ -11,6 +11,12 @@ CREATE TABLE IF NOT EXISTS local_elf (
 ALTER TABLE local_elf ADD COLUMN IF NOT EXISTS starter BOOLEAN NOT NULL DEFAULT TRUE;
 ALTER TABLE local_elf ADD COLUMN IF NOT EXISTS training_data VARCHAR(8192) NOT NULL DEFAULT '{}';
 
+CREATE TABLE IF NOT EXISTS local_starter_consumed (
+    role_id VARCHAR(36) PRIMARY KEY REFERENCES local_game_role(id),
+    elf_id VARCHAR(40) NOT NULL,
+    config_id INTEGER NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS local_elf_gear (
     id VARCHAR(64) PRIMARY KEY,
     role_id VARCHAR(64) NOT NULL REFERENCES local_game_role(id),

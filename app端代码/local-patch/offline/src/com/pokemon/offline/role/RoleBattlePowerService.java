@@ -89,6 +89,6 @@ public final class RoleBattlePowerService {
                 + bonuses.attribute("physical_defense", ElfCombatGrowth.powerAttribute(elf, "physical_defense", stats.physicalDefense), elf.position())
                 + bonuses.attribute("special_defense", ElfCombatGrowth.powerAttribute(elf, "special_defense", stats.specialDefense), elf.position())
                 + bonuses.attribute("speed", ElfCombatGrowth.powerAttribute(elf, "speed", stats.speed), elf.position());
-        return base * elf.level + ElfCombatGrowth.researchValue(elf, 0);
+        return base * elf.level + ElfCombatGrowth.researchValue(elf, 0) + bonuses.archaeologyDamagePower(elf.position());
     }
 }

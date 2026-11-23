@@ -23,6 +23,18 @@ local function exchange(request)
     return result
 end
 
+-- 单次页面或存档操作失败只提示本地错误，不触发旧网络断线流程，也不自动重放领奖。
+local lastFailure
+local function report(failure)
+    log("本地操作失败：" .. tostring(failure))
+    -- 发布包可能关闭Unity日志，仍把不含请求正文的异常栈写到Android本地日志。
+    pcall(function() exchange({op = "clientError", message = tostring(failure)}) end)
+    if lastFailure == tostring(failure) then return end
+    lastFailure = tostring(failure)
+    pcall(function() load_popup.hide() end)
+    pcall(function() label_popup.show("本地操作未完成，请重新打开页面后重试。") end)
+end
+
 function link:IsConnected() return self.connected end
 function link:Connect(host, port)
     self.connected = false
@@ -36,20 +48,15 @@ function link:Connect(host, port)
         if not self.connected or self.generation ~= generation then return end
         Network.OnConnected()
         while self.connected and self.generation == generation do
-            local ok, failure = pcall(function()
-                exchange({op = "poll"})
-                local frames = self.pending
-                self.pending = {}
-                for _, frame in ipairs(frames) do
-                    if not self.connected or self.generation ~= generation then break end
-                    Network.OnMessage(frame)
-                end
-            end)
-            if not ok then
-                self.connected = false
-                log("离线 App 协议失败：" .. tostring(failure))
-                Network.OnException()
-                return
+            local ok, failure = pcall(function() exchange({op = "poll"}) end)
+            if not ok then report(failure) end
+            local frames = self.pending
+            self.pending = {}
+            for _, frame in ipairs(frames) do
+                if not self.connected or self.generation ~= generation then break end
+                -- 已提交消息逐条派发；单页回调失败不能丢掉随后到账的背包、邮件等消息。
+                local delivered, problem = xpcall(function() Network.OnMessage(frame) end, debug.traceback)
+                if not delivered then report(problem) end
             end
             coroutine.wait(0.25)
         end
@@ -67,7 +74,8 @@ function link:Disconnect()
 end
 function link:SendRaw(payload)
     assert(self.connected, "离线角色尚未连接")
-    exchange({op = "request", payload = hex(payload)})
+    local ok, failure = pcall(function() exchange({op = "request", payload = hex(payload)}) end)
+    if not ok then report(failure) end
 end
 
 -- 启动后的选服历史、订单等非游戏帧也直接调用 App。

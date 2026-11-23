@@ -1,7 +1,10 @@
 package com.pokemon.offline.quest;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pokemon.offline.activitylevel.AdventureProgressService;
 import com.pokemon.offline.battle.AdventureStage;
+import com.pokemon.offline.elf.ElfService;
 import com.pokemon.offline.inventory.InventoryService;
 import com.pokemon.offline.quest.api.entity.QuestTask;
 import com.pokemon.offline.role.RoleService;
@@ -41,10 +44,12 @@ public class QuestService {
     private static final int ROLE_LEVEL = 19;
     private static final int ELF_LEVEL_COUNT = 24;
 
+    private final ObjectMapper json;
     private final JdbcTemplate jdbc;
     private final RoleService roles;
     private final InventoryService inventory;
     private final AdventureProgressService adventure;
+    private final ElfService elves;
     private final Map<Integer, Mission> missions = new HashMap<>();
     private final Map<Integer, Chapter> chapters = new HashMap<>();
 
@@ -55,14 +60,18 @@ public class QuestService {
      * @param roles 角色锁与货币服务
      * @param inventory 普通背包服务
      * @param adventure 训练家装备实例与冒险通关进度
+     * @param elves 任务奖励精灵入库
+     * @param json 竞技场及矿洞存档解析器
      * @throws IOException 配置资源读取失败
      */
     public QuestService(JdbcTemplate jdbc, RoleService roles, InventoryService inventory,
-                        AdventureProgressService adventure) throws IOException {
+                        AdventureProgressService adventure, ObjectMapper json, ElfService elves) throws IOException {
+        this.json = json;
         this.jdbc = jdbc;
         this.roles = roles;
         this.inventory = inventory;
         this.adventure = adventure;
+        this.elves = elves;
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
                 new ClassPathResource("quest/story.txt").getInputStream(), StandardCharsets.UTF_8))) {
             String line;
@@ -218,18 +227,22 @@ public class QuestService {
         if (!mission.reward.supported || mission.elfExp != 0) {
             return ClaimResult.result(UNAVAILABLE_REWARD);
         }
-        if (!mission.reward.equipment.isEmpty() &&
-                mission.reward.equipment.values().stream().mapToLong(Long::longValue).sum()
-                        > inventory.ordinaryCapacity(roleId) - inventory.ordinaryUsed(roleId)) {
+        long gearSlots = mission.reward.equipment.values().stream().mapToLong(Long::longValue).sum()
+                + mission.reward.stones.values().stream().mapToLong(Long::longValue).sum();
+        if (gearSlots > 0 && gearSlots > inventory.ordinaryCapacity(roleId) - inventory.ordinaryUsed(roleId)) {
             return ClaimResult.result(100015);
         }
-        grant(roleId, mission.reward, "quest:mission:" + mission.id);
+        long elfSlots = mission.reward.elves.values().stream().mapToLong(Long::longValue).sum();
+        if (elfSlots > 0 && elfSlots > inventory.elfCapacity(roleId) - elves.list(roleId).size()) {
+            return ClaimResult.result(100015);
+        }
+        ClaimResult result = grant(roleId, mission.reward, "quest:mission:" + mission.id);
         jdbc.update("UPDATE local_role_task SET claimed=TRUE WHERE role_id=? AND task_id=?", roleId, mission.id);
         if (mission.next > 0 && missions.containsKey(mission.next)) {
             insertTask(roleId, mission.next);
         }
         refresh(roles.lockRole(roleId));
-        return new ClaimResult(0, mission.reward, true);
+        return result;
     }
 
     /**
@@ -261,11 +274,11 @@ public class QuestService {
         if (!chapter.reward.supported) {
             return ClaimResult.result(UNAVAILABLE_REWARD);
         }
-        grant(roleId, chapter.reward, "quest:chapter:" + chapterId);
+        ClaimResult result = grant(roleId, chapter.reward, "quest:chapter:" + chapterId);
         jdbc.update("UPDATE local_role_story SET chapter=? WHERE role_id=?", current + 1, roleId);
         seedChapter(roleId, current + 2);
         refresh(roles.lockRole(roleId));
-        return new ClaimResult(0, chapter.reward, true);
+        return result;
     }
 
     /**
@@ -282,11 +295,17 @@ public class QuestService {
             insertTask(roleId, FIRST_TASK);
             seedChapter(roleId, 1);
         }
-        // 旧版在最后一个已配置任务领奖后没有生成后续任务。
-        if (jdbc.queryForObject("SELECT COUNT(*) FROM local_role_task WHERE role_id=? AND task_id=10019 AND claimed=TRUE",
-                Integer.class, roleId) > 0 && jdbc.queryForObject(
-                "SELECT COUNT(*) FROM local_role_task WHERE role_id=? AND task_id=10020", Integer.class, roleId) == 0) {
-            insertTask(roleId, 10020);
+        // 主线按编号递增。仅从最后一条已领奖记录恢复后继，已有待办时保留原进度。
+        List<Integer> lastClaimed = jdbc.query("SELECT task_id FROM local_role_task WHERE role_id=? "
+                        + "AND task_id BETWEEN 10001 AND 19999 AND claimed=TRUE AND NOT EXISTS "
+                        + "(SELECT 1 FROM local_role_task WHERE role_id=? AND task_id BETWEEN 10001 AND 19999 "
+                        + "AND claimed=FALSE) ORDER BY task_id DESC LIMIT 1",
+                (row, index) -> row.getInt(1), roleId, roleId);
+        if (!lastClaimed.isEmpty()) {
+            Mission previous = missions.get(lastClaimed.get(0));
+            if (previous != null && missions.containsKey(previous.next)) {
+                insertTask(roleId, previous.next);
+            }
         }
         return role;
     }
@@ -351,11 +370,8 @@ public class QuestService {
             if (mission == null || task.state == 2) {
                 continue;
             }
-            int current = mission.finish == COPY_CLEAR ? (cleared(role.id, mission.goal) ? mission.goal : 0)
-                    : mission.finish == 6 ? jdbc.queryForObject("SELECT COUNT(*) FROM local_trainer_equipped WHERE role_id=?", Integer.class, role.id)
-                    : mission.finish == 34 ? jdbc.queryForObject("SELECT COALESCE(SUM(enhance_level),0) FROM local_trainer_equipped WHERE role_id=?", Integer.class, role.id)
-                    : mission.finish == ROLE_LEVEL ? role.level : metric(role.id, mission.finish);
-            int progress = Math.min(mission.goal, Math.max(task.progress, current));
+            long current = mission.type == 3 ? mission.goal : currentProgress(role, mission);
+            int progress = (int) Math.min(mission.goal, Math.max(task.progress, current));
             if (progress > task.progress) {
                 boolean complete = progress >= mission.goal;
                 jdbc.update("UPDATE local_role_task SET progress=?,complete=? WHERE role_id=? AND task_id=?",
@@ -364,6 +380,72 @@ public class QuestService {
             }
         }
         return changed;
+    }
+
+    /**
+     * 按底包条件读取已经提交的业务流水、装备状态及关卡进度。
+     * @param role 当前角色
+     * @param mission 当前主线任务
+     * @return 实际完成数量或关卡编号
+     */
+    private long currentProgress(LocalRole role, Mission mission) {
+        String query;
+        switch (mission.finish) {
+            case COPY_CLEAR: return cleared(role.id, mission.goal) ? mission.goal : 0;
+            case ROLE_LEVEL: return role.level;
+            case 28: return mission.id == 10129 || mission.id == 10153 ? mission.goal : metric(role.id, 28);
+            case 6: query = "SELECT COUNT(*) FROM local_trainer_equipped WHERE role_id=?"; break;
+            case 11: case 17:
+                return jdbc.queryForObject("SELECT COALESCE(SUM(quantity),0) FROM local_vitality_event WHERE role_id=? AND task_id=?",
+                        Long.class, role.id, mission.finish == 11 ? 15 : 17);
+            case 13: return arenaState(role.id, "stats:arena_training").path("wins").asLong();
+            case 14: query = "SELECT COUNT(*) FROM local_elf_individual_receipt WHERE role_id=?"; break;
+            case 15: case 16: case 23:
+                int event = mission.finish == 15 ? 112 : mission.finish == 16 ? 50015 : 101;
+                return jdbc.queryForObject("SELECT COALESCE(SUM(quantity),0) FROM local_carnival_progress WHERE role_id=? AND task_type=?",
+                        Long.class, role.id, event);
+            case 20: query = "SELECT COALESCE(MAX(layer),0) FROM local_tower_clear WHERE role_id=?"; break;
+            case 21: query = "SELECT COUNT(*) FROM local_adventure_quicken WHERE role_id=?"; break;
+            case 27: query = "SELECT COALESCE(SUM(amount),0) FROM local_diamond_spend WHERE role_id=?"; break;
+            case 29: query = "SELECT COUNT(*) FROM local_personal_guild_donation WHERE role_id=?"; break;
+            case 31: query = "SELECT COALESCE(SUM(normal_total+advanced_total+friend_total),0) FROM local_gacha_state WHERE role_id=?"; break;
+            case 32:
+                JsonNode mine = arenaState(role.id, "mine-account");
+                return Math.max(mine.path("occupations").asLong(), mine.has("lease") ? 1 : 0);
+            case 34: query = "SELECT COALESCE(SUM(enhance_level),0) FROM local_trainer_equipped WHERE role_id=?"; break;
+            case 35: query = "SELECT COUNT(*) FROM local_elf_handbook WHERE role_id=?"; break;
+            case 36: query = "SELECT COUNT(*) FROM local_elf_gear g JOIN local_elf e ON g.elf_id=e.id "
+                    + "WHERE g.role_id=? AND g.kind=4 AND e.slot>0 AND e.team=COALESCE((SELECT team_value FROM local_team_choice WHERE role_id=g.role_id AND purpose='default'),1)"; break;
+            case 37: query = "SELECT MAX(0,COALESCE(MAX(history),0)-1000) FROM local_dojo_progress WHERE role_id=?"; break;
+            default: return metric(role.id, mission.finish);
+        }
+        return jdbc.queryForObject(query, Long.class, role.id);
+    }
+
+    /**
+     * 读取当前角色已保存的竞技或矿洞统计。
+     * @param roleId 角色编号
+     * @param key 模式存档键
+     * @return 对应统计，首次参与前为空对象
+     */
+    private JsonNode arenaState(String roleId, String key) {
+        List<String> rows = jdbc.queryForList("SELECT state_data FROM local_arena_state WHERE role_id=? AND state_key=?",
+                String.class, roleId, key);
+        try {
+            return rows.isEmpty() ? json.createObjectNode() : json.readTree(rows.get(0));
+        } catch (IOException invalid) {
+            throw new IllegalStateException("无法读取主线任务所需的模式存档", invalid);
+        }
+    }
+
+    /**
+     * 玩法结算后读取应推送给界面的任务进度变化。
+     * @param roleId 角色编号
+     * @return 本次刷新后有变化的任务
+     */
+    @Transactional
+    public List<QuestTask> refreshProgress(String roleId) {
+        return refresh(prepare(roleId));
     }
 
     /**
@@ -416,7 +498,7 @@ public class QuestService {
     }
 
     /**
-     * 按已成功结算的培养操作累计原任务条件。
+     * 按已成功结算的玩法操作累计原任务条件。
      * @param roleId 角色编号
      * @param type 原任务条件编号
      * @param amount 实际提升等级、次数或努力点数
@@ -435,8 +517,10 @@ public class QuestService {
      * @param roleId 角色主键
      * @param reward 原始奖励项
      * @param receipt 本档奖励的唯一回执
+     * @return 已落库的奖励及新增实例
      */
-    private void grant(String roleId, QuestReward reward, String receipt) {
+    private ClaimResult grant(String roleId, QuestReward reward, String receipt) {
+        ClaimResult result = new ClaimResult(0, reward, true);
         roles.addCurrency(roleId, reward.coins, reward.diamonds, reward.exp);
         inventory.grantItemsOrMail(roleId, receipt, reward.items);
         reward.equipment.forEach((id, quantity) -> {
@@ -444,6 +528,22 @@ public class QuestService {
                 adventure.grantEquipment(roleId, id, AdventureStage.equipmentPosition(id));
             }
         });
+        reward.elves.forEach((id, quantity) -> {
+            for (long count = 0; count < quantity; count++) result.elves.add(elves.grant(roleId, id));
+        });
+        reward.stones.forEach((id, quantity) -> {
+            for (long count = 0; count < quantity; count++) {
+                String sid = java.util.UUID.randomUUID().toString();
+                jdbc.update("INSERT INTO local_secret_stone(sid,role_id,template_id) VALUES(?,?,?)", sid, roleId, id);
+                result.stones.put(sid, id);
+            }
+        });
+        if (reward.currency121 > 0 && jdbc.update("UPDATE local_inventory_currency SET balance=balance+? "
+                + "WHERE role_id=? AND currency=121", reward.currency121, roleId) == 0) {
+            jdbc.update("INSERT INTO local_inventory_currency(role_id,currency,balance) VALUES(?,121,?)",
+                    roleId, reward.currency121);
+        }
+        return result;
     }
 
     /**
@@ -464,6 +564,8 @@ public class QuestService {
      */
     private static final class Mission {
         private final int id;
+        /** 原表任务类别，3 为无操作引导的章节目标。 */
+        private final int type;
         private final int finish;
         private final int goal;
         private final int next;
@@ -477,6 +579,7 @@ public class QuestService {
          */
         private Mission(String[] fields) {
             id = Integer.parseInt(fields[1]);
+            type = Integer.parseInt(fields[2]);
             finish = Integer.parseInt(fields[3]);
             goal = Integer.parseInt(fields[4]);
             next = Integer.parseInt(fields[5]);

@@ -500,6 +500,7 @@ final class InventoryGameFeature implements GameFeature {
         List<Map<String, Object>> elfChips = new ArrayList<>();
         List<Map<String, Object>> dressChips = new ArrayList<>();
         List<Map<String, Object>> carried = new ArrayList<>();
+        List<Map<String, Object>> zstones = new ArrayList<>();
         List<Map<String, Object>> powerstones = new ArrayList<>();
         List<Map<String, Object>> stickers = new ArrayList<>();
         List<Map<String, Object>> antiquities = new ArrayList<>();
@@ -521,6 +522,8 @@ final class InventoryGameFeature implements GameFeature {
                 elfChips.add(data("id", reward.configId, "n", reward.quantity));
             } else if (reward.type == SystemMailReward.CARRY) {
                 carried.add(data("id", reward.configId, "n", reward.quantity));
+            } else if (reward.type == SystemMailReward.ZSTONE) {
+                zstones.add(data("id", reward.configId, "n", reward.quantity));
             } else if (reward.type == SystemMailReward.POWERSTONE) {
                 powerstones.add(data("id", reward.configId, "n", reward.quantity));
             } else if (reward.type == SystemMailReward.DRESS_CHIP) {
@@ -538,6 +541,7 @@ final class InventoryGameFeature implements GameFeature {
         if (!elfChips.isEmpty()) result.put("elschips", elfChips);
         if (!dressChips.isEmpty()) result.put("fasheschips", dressChips);
         if (!carried.isEmpty()) result.put("carrys", carried);
+        if (!zstones.isEmpty()) result.put("zstone", zstones);
         if (!powerstones.isEmpty()) result.put("pstone", powerstones);
         if (!stickers.isEmpty()) result.put("suit_bag", stickers);
         if (!antiquities.isEmpty()) result.put("antiquity", antiquities);

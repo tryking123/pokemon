@@ -77,9 +77,12 @@ final class HomeCasinoGameFeature implements GameFeature {
         long day = (Instant.now().getEpochSecond() + 28800) / 86400;
         days.put(output, home.level(role.id) >= 5 ? day : -1L);
         if (home.level(role.id) < 5) return;
+        ObjectNode published = casino.publishTasks(role.id);
+        long coins = published.path("taskCoins").asLong();
+        if (coins > 0) output.push(14, data("flags", "task.task_submit", "adds", data("homecoin", coins)));
         wallet(role.id, output);
         output.push(462, json.convertValue(casino.panel(role.id), BODY));
-        for (JsonNode task : casino.tasks(role.id)) output.push(101, json.convertValue(task, BODY));
+        for (JsonNode task : published.path("tasks")) output.push(101, json.convertValue(task, BODY));
     }
 
     /**
@@ -151,9 +154,7 @@ final class HomeCasinoGameFeature implements GameFeature {
         if (bound != null) rounds.put(output, bound.asText());
         JsonNode adds = out.remove("adds"),
                 loses = out.remove("loses"),
-                box = out.remove("box"),
-                tasks = out.remove("tasks"),
-                taskCoins = out.remove("taskCoins");
+                box = out.remove("box");
         String flags =
                 type == 396
                         ? "casino.settle"
@@ -164,17 +165,7 @@ final class HomeCasinoGameFeature implements GameFeature {
             output.push(14, data("flags", flags, "loses", json.convertValue(loses, BODY)));
         if (adds != null)
             output.push(14, data("flags", flags, "adds", json.convertValue(adds, BODY)));
-        if (tasks != null)
-            for (JsonNode task : tasks) output.push(101, json.convertValue(task, BODY));
-        if (taskCoins != null)
-            output.push(
-                    14,
-                    data(
-                            "flags",
-                            "task.task_submit",
-                            "adds",
-                            data("homecoin", taskCoins.asLong())));
-        if (loses != null || adds != null || taskCoins != null) wallet(role.id, output);
+        if (loses != null || adds != null) wallet(role.id, output);
         if ((pet && out.path("errno").asInt() == 0) || adds != null && adds.has("pet"))
             HomeGameFeature.pushPets(breeding, json, role.id, output);
         output.send(request, json.convertValue(out, BODY));

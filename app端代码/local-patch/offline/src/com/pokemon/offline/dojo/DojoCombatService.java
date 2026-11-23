@@ -19,8 +19,6 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Set;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -108,7 +106,7 @@ public class DojoCombatService {
         }
         JsonNode groups = stage.get(3);
         int index = 0;
-        while (index < groups.size() && !config.groupId((int) dojo, groups.get(index).get(0).asInt()).equals(monster)) {
+        while (index < groups.size() && !config.groupInstanceId((int) dojo, index).equals(monster)) {
             index++;
         }
         if (index == groups.size() || (!practice && (progress.defeated & (1 << index)) != 0)) {
@@ -150,62 +148,43 @@ public class DojoCombatService {
     }
 
     /**
-     * 校验技能和目标，完成整组战斗后原子地保存击杀及助阵解锁进度。
+     * 按原战斗引擎的终局结算当前对手，核对本场双方和种子以过滤过期或重复回执。
      *
-     * @param roleId 角色标识
-     * @param skill 原技能编号
-     * @param targets 客户端攻击的目标编号
-     * @param flag 原协议攻击模式
-     * @return 新击败的场景怪物组编号，热身或尚未完成时为空
+     * @param roleId 角色编号
+     * @param seed 客户端本场战斗种子
+     * @param sides 依次为敌方阵容编号和胜方阵容编号
+     * @return 正式胜利返回场景怪物编号，其余有效终局返回空串，无效回执返回空值
      */
     @Transactional
-    public String synchronize(String roleId, long skill, List<?> targets, long flag) {
-        if (targets.isEmpty() || skill <= 0 || flag < -1 || flag > 1) {
-            return null;
-        }
+    public String finish(String roleId, long seed, List<?> sides) {
         LocalRole role = roles.lockRole(roleId);
         DojoMapper.Attempt attempt = mapper.attempt(roleId);
-        if (!current(attempt, role)) {
+        if (!current(attempt, role) || attempt.seed != seed || sides.size() != 2) {
+            return null;
+        }
+        String enemy = "dojo-" + attempt.id;
+        if (!enemy.equals(sides.get(0)) || !(roleId.equals(sides.get(1)) || enemy.equals(sides.get(1)))) {
             return null;
         }
         DojoMapper.Progress progress = day(mapper.progress(roleId));
         if (progress.dojo != attempt.dojo) {
             return null;
         }
-        JsonNode stage = config.stage(attempt.dojo);
-        JsonNode group = stage.get(3).get(attempt.group);
-        JsonNode opponents = group.get(4);
-        int targetLimit = skillLimit(roleId, skill);
-        if (targets.size() > targetLimit) {
-            return null;
-        }
-        int hit = 0;
-        for (Object target : targets) {
-            int index = 0;
-            while (index < opponents.size() && !foeId(attempt, index).equals(target)) {
-                index++;
-            }
-            if (index >= opponents.size() || ((hit | attempt.defeated) & (1 << index)) != 0) {
-                return null;
-            }
-            hit |= 1 << index;
-        }
-        int defeated = attempt.defeated | hit;
-        if (defeated != (1 << opponents.size()) - 1) {
-            mapper.saveAttempt(roleId, new DojoMapper.Attempt(attempt.id, attempt.dojo, attempt.group,
-                    attempt.seed, attempt.practice, defeated, attempt.started));
-            return null;
+        if (!roleId.equals(sides.get(1))) {
+            flee(roleId);
+            return "";
         }
         mapper.deleteAttempt(roleId);
         if (attempt.practice) {
-            return null;
+            return "";
         }
+        JsonNode stage = config.stage(attempt.dojo);
         int groups = progress.defeated | (1 << attempt.group);
         boolean cleared = groups == (1 << stage.get(3).size()) - 1;
         mapper.saveProgress(roleId, new DojoMapper.Progress(cleared ? Math.max(progress.history, attempt.dojo)
                 : progress.history, cleared ? stage.get(2).asInt() : attempt.dojo, progress.tactics, cleared ? 0 : groups,
                 progress.day, progress.failures, progress.practices));
-        return config.groupId(attempt.dojo, group.get(0).asInt());
+        return config.groupInstanceId(attempt.dojo, attempt.group);
     }
 
     /**
@@ -280,10 +259,10 @@ public class DojoCombatService {
      *
      * @param roleId 角色标识
      * @param sceneId 道馆场景编号
-     * @param monsterId 道馆场景怪物组编号
+     * @param monsterId 道馆场景怪物组实例编号
      * @return 是否应从场景快照中移除
      */
-    public boolean cleared(String roleId, int sceneId, int monsterId) {
+    public boolean cleared(String roleId, int sceneId, String monsterId) {
         int dojo = sceneId - 71100;
         JsonNode stage = config.stage(dojo);
         if (stage == null) {
@@ -294,7 +273,7 @@ public class DojoCombatService {
             return true;
         }
         for (int i = 0; dojo == progress.dojo && i < stage.get(3).size(); i++) {
-            if (stage.get(3).get(i).get(0).asInt() == monsterId) {
+            if (config.groupInstanceId(dojo, i).equals(monsterId)) {
                 return (progress.defeated & (1 << i)) != 0;
             }
         }
@@ -325,7 +304,7 @@ public class DojoCombatService {
                         elf.level, base.type, base.secondType, base.quality, base.skill, true);
                 trained.put("skill_bar", ElfSkillBar.battleSkills(elf, base.skill));
                 ElfCombatGrowth.apply(elf, trained);
-                bonuses.apply(trained);
+                bonuses.withBreakthrough(elf).apply(trained);
                 players.add(trained);
             }
         }
@@ -344,7 +323,7 @@ public class DojoCombatService {
             }
         }
         return fields("errno", 0, "dojoId", attempt.dojo,
-                "monId", config.groupId(attempt.dojo, group.get(0).asInt()), "istry", attempt.practice,
+                "monId", config.groupInstanceId(attempt.dojo, attempt.group), "istry", attempt.practice,
                 "seed", attempt.seed, "weather", 0,
                 "player", fields("identifer", role.id, "sid", formations.formationId(role.id, tactics), "pokemon", players,
                         "power", 300 * players.size(), "pvp", false, "isnpc", false, "preference", 1),
@@ -382,26 +361,19 @@ public class DojoCombatService {
     }
 
     /**
-     * 获取己方上阵精灵装备的同名技能最大攻击目标数。
+     * 登录时清理中断挑战。旧版逐目标记录无法证明胜负，允许重试并保留已通关的组。
      *
-     * @param roleId 角色标识
-     * @param skill 请求的攻击技能
-     * @return 允许目标数，无装备该技能的精灵时为零
+     * @param roleId 角色编号
      */
-    private int skillLimit(String roleId, long skill) {
-        int maximum = 0;
-        if (skill <= 0 || skill > Integer.MAX_VALUE) {
-            return 0;
+    @Transactional
+    public void reconnect(String roleId) {
+        roles.lockRole(roleId);
+        DojoMapper.Attempt attempt = mapper.attempt(roleId);
+        if (attempt != null && attempt.defeated != 0) {
+            mapper.deleteAttempt(roleId);
+        } else {
+            flee(roleId);
         }
-        Set<String> team = new HashSet<>();
-        mapper.team(roleId).forEach(member -> team.add(member.elfId));
-        for (LocalElf elf : elves.list(roleId)) {
-            FirstBattleData.Starter base = FirstBattleData.starter(elf.configId);
-            if (base != null && team.contains(elf.id)) {
-                maximum = Math.max(maximum, ElfSkillBar.targetLimit(elf, base.skill, base.targetLimit, (int) skill));
-            }
-        }
-        return maximum;
     }
 
     /**

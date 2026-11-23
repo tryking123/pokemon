@@ -1,0 +1,190 @@
+{
+  "result": "reproduced",
+  "apk": "E:\\myProjects\\game\\git_pokemon\\app包\\new\\pokemon-local-20261122-training-local-fix.apk",
+  "sha256": "b9f56db65b86121821fe532a43e5d804bc7035b67d3d8ca632577ce3d33fc319",
+  "source": "Physical-phone SQLite readonly; original APK data_mgr, sprite_utils, elf_model.get_info, elf_handle.proto2, evolve_panel confirmation, sprite_model send callback.",
+  "snapshot": {
+    "species": 63006,
+    "level": 62,
+    "love": 34,
+    "advanced": 0,
+    "star": 8,
+    "awakenlv": 3
+  },
+  "generated": {
+    "sid": 63006,
+    "advanced": 0,
+    "max_limit": 9,
+    "max_shape": 1,
+    "next": true,
+    "is": true
+  },
+  "originalRules": {
+    "source": {
+      "needmoney7": 0,
+      "needmoney6": 0,
+      "needmoney9": 0,
+      "needmoney3": 0,
+      "needmoney10": 0,
+      "needlv": 61,
+      "needmoney8": 0,
+      "needlove": 1,
+      "needmoney2": 0,
+      "needmoney4": 0,
+      "upgrade_limit": 0,
+      "needitem7": {
+        "1": 0
+      },
+      "needitem10": {
+        "1": 0
+      },
+      "needitem9": {
+        "1": 0
+      },
+      "needitem8": {
+        "1": 0
+      },
+      "name": "基拉祈",
+      "needitem6": {
+        "1": 0
+      },
+      "needitem5": {
+        "1": 0
+      },
+      "needitem4": {
+        "1": 0
+      },
+      "needitem3": {
+        "1": 0
+      },
+      "needitem2": {
+        "1": 0
+      },
+      "needitem1": {
+        "1": 0
+      },
+      "needmoney1": 0,
+      "quality": 6,
+      "needmoney5": 0,
+      "changeid": {
+        "1": 64058
+      }
+    },
+    "target": {
+      "needmoney7": 2000000,
+      "needmoney6": 2000000,
+      "needmoney9": 2000000,
+      "needmoney3": 2000000,
+      "needmoney10": 8000000,
+      "needlv": 61,
+      "needmoney8": 2000000,
+      "needlove": 40,
+      "needmoney2": 2000000,
+      "needmoney4": 2000000,
+      "upgrade_limit": 9,
+      "sid": 64058,
+      "needitem7": {
+        "1": 20003,
+        "2": 200,
+        "3": 20020,
+        "4": 120,
+        "5": 20014,
+        "6": 120
+      },
+      "needitem10": {
+        "1": 20003,
+        "2": 500,
+        "3": 20020,
+        "4": 300,
+        "5": 20014,
+        "6": 300
+      },
+      "needitem9": {
+        "1": 20003,
+        "2": 300,
+        "3": 20020,
+        "4": 175,
+        "5": 20014,
+        "6": 175
+      },
+      "needitem8": {
+        "1": 20003,
+        "2": 240,
+        "3": 20020,
+        "4": 150,
+        "5": 20014,
+        "6": 150
+      },
+      "name": "神·基拉祈",
+      "needitem6": {
+        "1": 20003,
+        "2": 180,
+        "3": 20020,
+        "4": 100,
+        "5": 20014,
+        "6": 100
+      },
+      "needitem5": {
+        "1": 20003,
+        "2": 150,
+        "3": 20020,
+        "4": 90,
+        "5": 20014,
+        "6": 90
+      },
+      "needitem4": {
+        "1": 20003,
+        "2": 120,
+        "3": 20020,
+        "4": 70,
+        "5": 20014,
+        "6": 70
+      },
+      "needitem3": {
+        "1": 20003,
+        "2": 80,
+        "3": 20020,
+        "4": 50,
+        "5": 20014,
+        "6": 50
+      },
+      "needitem2": {
+        "1": 20003,
+        "2": 60,
+        "3": 20020,
+        "4": 40,
+        "5": 20014,
+        "6": 40
+      },
+      "needitem1": {
+        "1": 20003,
+        "2": 40,
+        "3": 20020,
+        "4": 30,
+        "5": 20014,
+        "6": 30
+      },
+      "needmoney1": 2000000,
+      "quality": 6,
+      "needmoney5": 2000000,
+      "changeid": {
+        "1": 0
+      }
+    }
+  },
+  "panelRequest": {
+    "kind": "advance",
+    "request": {
+      "id": "EL006a8624b7d08b4f68a4c595ef9bab4955",
+      "auto": false
+    }
+  },
+  "networkRequest": {
+    "kind": "advance",
+    "request": {
+      "id": "EL006a8624b7d08b4f68a4c595ef9bab4955",
+      "auto": false
+    }
+  },
+  "substituted": "Pure battle statistics createteam passthrough; native rendering omitted; no evolution config, max_limit, order_proto or condition overridden."
+}

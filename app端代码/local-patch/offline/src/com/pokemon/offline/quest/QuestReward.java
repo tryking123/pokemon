@@ -17,6 +17,12 @@ public final class QuestReward {
     public final Map<Integer, Long> items;
     /** 作为独立实例入库的训练家装备模板及数量。 */
     public final Map<Integer, Long> equipment;
+    /** 入包精灵模板及数量。 */
+    public final Map<Integer, Long> elves;
+    /** 秘境精灵装备模板及数量。 */
+    public final Map<Integer, Long> stones;
+    /** 底包任务使用的原编号 121 货币。 */
+    public final long currency121;
     final boolean supported;
 
     /**
@@ -30,9 +36,12 @@ public final class QuestReward {
     QuestReward(long baseCoins, long baseDiamonds, long exp, String encoded) {
         long coinTotal = baseCoins;
         long diamondTotal = baseDiamonds;
+        long otherCurrency = 0;
         boolean valid = true;
         Map<Integer, Long> grouped = new LinkedHashMap<>();
         Map<Integer, Long> gear = new LinkedHashMap<>();
+        Map<Integer, Long> pets = new LinkedHashMap<>();
+        Map<Integer, Long> zstones = new LinkedHashMap<>();
         if (!"-".equals(encoded)) {
             for (String entry : encoded.split(",")) {
                 String[] tuple = entry.split(":");
@@ -45,6 +54,12 @@ public final class QuestReward {
                     diamondTotal = Math.addExact(diamondTotal, amount);
                 } else if (type == 10 && itemId >= 10011 && itemId <= 10016 && amount > 0) {
                     gear.merge(itemId, amount, Math::addExact);
+                } else if (type == 121 && itemId == 0 && amount > 0) {
+                    otherCurrency = Math.addExact(otherCurrency, amount);
+                } else if (type == 2 && itemId > 0 && amount > 0) {
+                    pets.merge(itemId, amount, Math::addExact);
+                } else if (type == 11 && itemId > 0 && amount > 0) {
+                    zstones.merge(itemId, amount, Math::addExact);
                 } else if (type == 1 && itemId > 0 && amount > 0) {
                     grouped.merge(itemId, amount, Math::addExact);
                 } else {
@@ -57,6 +72,9 @@ public final class QuestReward {
         this.exp = exp;
         this.items = Collections.unmodifiableMap(grouped);
         this.equipment = Collections.unmodifiableMap(gear);
+        this.elves = Collections.unmodifiableMap(pets);
+        this.stones = Collections.unmodifiableMap(zstones);
+        this.currency121 = otherCurrency;
         this.supported = valid;
     }
 }

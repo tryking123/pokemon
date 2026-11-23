@@ -205,6 +205,12 @@ final class AssistGameFeature implements GameFeature {
                 swapAid(role.id, request, output);
                 return true;
             case 3001:
+                Object resultSides = request.body.get("objs");
+                if (number(request.body, "flag", -1) == 4 && resultSides instanceof List
+                        && !((List<?>) resultSides).isEmpty() && String.valueOf(((List<?>) resultSides).get(0)).startsWith("dojo-")) {
+                    finishDojo(role, request, (List<?>) resultSides, output);
+                    return true;
+                }
                 if (station.active(role.id)) {
                     stationAction(role,request,output,false);
                     return true;
@@ -212,7 +218,7 @@ final class AssistGameFeature implements GameFeature {
                 if (!combat.active(role.id)) {
                     return false;
                 }
-                fight(role.id, request, output);
+                // 原技能同步描述选中的目标，实际击败由终局回执确认。
                 return true;
             case 3002:
                 if (station.active(role.id)) {
@@ -292,22 +298,21 @@ final class AssistGameFeature implements GameFeature {
     }
 
     /**
-     * 校验道馆中的战斗动作，清理场景中的已击败怪物。
-     *
-     * @param roleId 已认证角色
-     * @param request 战斗动作
-     * @param output 原游戏消息出口
-     * @throws IOException 写入协议失败
+     * 结算道馆胜负并同步实际发生变化的场景和道馆进度。
+     * @param role 当前角色和场景
+     * @param request 引擎终局回执
+     * @param sides 引擎返回的对手和胜方阵容编号
+     * @param output 原协议推送出口
+     * @throws IOException 推送失败
      */
-    private void fight(String roleId, SprotoProtocol.Request request, GameReply output) throws IOException {
-        Object targets = request.body.get("objs");
-        List<?> enemies = targets instanceof List ? (List<?>) targets : Collections.emptyList();
-        int scene = dojo.snapshot(roleId).dojo + 71100;
-        String cleared = combat.synchronize(roleId, number(request.body, "sid", 0), enemies,
-                number(request.body, "flag", -1));
+    private void finishDojo(LocalRole role, SprotoProtocol.Request request, List<?> sides, GameReply output) throws IOException {
+        int scene = dojo.snapshot(role.id).dojo + 71100;
+        String cleared = combat.finish(role.id, number(request.body, "sid", 0), sides);
         if (cleared != null) {
-            output.push(12, data("sid", scene, "uids", Collections.singletonList(cleared)));
-            pushDojo(roleId, output);
+            if (!cleared.isEmpty()) {
+                output.push(12, data("sid", scene, "uids", Collections.singletonList(cleared)));
+            }
+            pushDojo(role.id, output);
         }
     }
 

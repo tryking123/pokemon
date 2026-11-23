@@ -9,7 +9,6 @@ import com.pokemon.offline.elf.api.entity.LocalElf;
 import com.pokemon.offline.hangup.HangupService;
 import com.pokemon.offline.inventory.InventoryService;
 import com.pokemon.offline.role.RoleService;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -228,31 +227,9 @@ public class ElfReleaseService {
      * @return 仍须保留的精灵实例
      */
     private Set<String> unavailable(String role) {
-        Set<String> result = new HashSet<>(jdbc.queryForList("SELECT id FROM local_elf WHERE role_id=? AND starter=TRUE "
-                + "UNION SELECT elf_id FROM local_dojo_team WHERE role_id=? UNION SELECT elf_id FROM local_elf_aid WHERE role_id=? "
-                + "UNION SELECT elf_id FROM local_elf_follow WHERE role_id=? UNION SELECT elf_id FROM local_travel_dispatch WHERE role_id=?",
-                String.class, role, role, role, role, role));
-        List<String> lineups = jdbc.queryForList("SELECT state_data FROM local_arena_state WHERE role_id=? AND state_key LIKE 'lineup:%'",
-                String.class, role);
-        for (String payload : lineups) {
-            for (JsonNode elf : object(payload).path("battle")) result.add(elf.path("id").asText());
-        }
-        for (String payload : jdbc.queryForList("SELECT state_json FROM local_home_breeding WHERE role_id=?", String.class, role)) {
-            for (JsonNode elf : object(payload).path("pair")) result.add(elf.asText());
-        }
+        Set<String> result = elves.assignedElves(role);
+        result.addAll(jdbc.queryForList("SELECT id FROM local_elf WHERE role_id=? AND starter=TRUE", String.class, role));
         return result;
     }
 
-    /**
-     * 解析已经提交的玩法引用。
-     * @param payload 存档内容
-     * @return 玩法状态
-     */
-    private JsonNode object(String payload) {
-        try {
-            return json.readTree(payload);
-        } catch (IOException e) {
-            throw new IllegalStateException("精灵占用记录无法解析", e);
-        }
-    }
 }

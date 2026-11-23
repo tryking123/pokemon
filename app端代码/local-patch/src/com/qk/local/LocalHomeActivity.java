@@ -1,6 +1,15 @@
 package com.qk.local;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.net.Uri;
+import android.provider.DocumentsContract;
+import com.pokemon.offline.embedded.EmbeddedRuntime;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -48,6 +57,12 @@ public final class LocalHomeActivity extends Activity {
     private Button refresh;
     private Button logout;
     private Button game;
+    private Button exportSave;
+    private Button importSave;
+    private static final int EXPORT_FOLDER = 70;
+    private static final int IMPORT_FILE = 71;
+    private Uri importFile;
+    private boolean regenerateId;
     private boolean busy;
 
     /** 构建本地入口页面。 */
@@ -100,6 +115,10 @@ public final class LocalHomeActivity extends Activity {
         game = button("启动 Unity 游戏", this::launchGame);
         add(wallet, game, 18);
         add(wallet, text("Unity 启动后会准备游戏资源。游戏进服仍取决于原游戏协议。", 14, MUTED), 4);
+        exportSave = button("导出存档", () -> chooseDocument(EXPORT_FOLDER));
+        add(wallet, exportSave, 12);
+        importSave = button("导入存档", () -> chooseDocument(IMPORT_FILE));
+        add(wallet, importSave, 4);
         logout = button("退出本地账号", this::logout);
         add(wallet, logout, 12);
 
@@ -107,6 +126,111 @@ public final class LocalHomeActivity extends Activity {
         status.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
         add(content, status, 16);
         renderControls();
+        if (state != null && state.getString("importFile") != null && LocalApi.currentSession() != null) {
+            importFile = Uri.parse(state.getString("importFile"));
+            regenerateId = state.getBoolean("regenerateId");
+            confirmImport();
+        }
+    }
+
+    /** 保留系统文件选择后的待确认导入项。 */
+    @Override protected void onSaveInstanceState(Bundle state) {
+        super.onSaveInstanceState(state);
+        if (importFile != null) {
+            state.putString("importFile", importFile.toString());
+            state.putBoolean("regenerateId", regenerateId);
+        }
+    }
+
+    /**
+     * 打开系统目录选择器或存档文件选择器。
+     * @param request 导出目录或导入文件请求编号
+     */
+    private void chooseDocument(int request) {
+        Intent picker = request == EXPORT_FOLDER ? new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
+                : new Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("*/*");
+        try {
+            startActivityForResult(picker, request);
+        } catch (android.content.ActivityNotFoundException unavailable) {
+            status.setText("本机没有可用的系统文件选择器");
+        }
+    }
+
+    /** 接收用户选择的目录或文件。 */
+    @Override protected void onActivityResult(int request, int result, Intent data) {
+        super.onActivityResult(request, result, data);
+        if (result != RESULT_OK || data == null || data.getData() == null || LocalApi.currentSession() == null) return;
+        if (request == EXPORT_FOLDER) {
+            exportToFolder(data.getData());
+        } else if (request == IMPORT_FILE) {
+            importFile = data.getData();
+            regenerateId = false;
+            confirmImport();
+        }
+    }
+
+    /**
+     * 在指定目录新建文件，并在写入失败时清理本次未完成的文件。
+     * @param tree 系统选择器授予写入权限的目录
+     */
+    private void exportToFolder(Uri tree) {
+        String auth = "Bearer " + LocalApi.currentSession().token;
+        setBusy("正在导出存档…");
+        LocalApi.run(this, () -> {
+            Uri folder = DocumentsContract.buildDocumentUriUsingTree(tree, DocumentsContract.getTreeDocumentId(tree));
+            String name = "守护小精灵-" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS")) + ".pksave";
+            Uri file = DocumentsContract.createDocument(getContentResolver(), folder, "application/octet-stream", name);
+            if (file == null) throw new IOException("无法在所选目录中新建存档");
+            try (OutputStream output = getContentResolver().openOutputStream(file, "w")) {
+                if (output == null) throw new IOException("无法写入所选目录");
+                EmbeddedRuntime.get(this).exportSave(this, auth, output);
+            } catch (Exception failed) {
+                try { DocumentsContract.deleteDocument(getContentResolver(), file); }
+                catch (Exception cleanup) { failed.addSuppressed(cleanup); }
+                throw failed;
+            }
+            return name;
+        }, (name, failure) -> complete(failure, "已导出到所选目录：" + name));
+    }
+
+    /** 导入前说明替换范围，并让玩家选择身份编号处理方式。 */
+    private void confirmImport() {
+        new AlertDialog.Builder(this)
+                .setTitle("替换 admin 的存档？")
+                .setSingleChoiceItems(new String[]{"保留存档中的账号和角色 ID", "重新生成账号和角色 ID，并迁移关联数据"},
+                        regenerateId ? 1 : 0, (dialog, index) -> regenerateId = index == 1)
+                .setNegativeButton("取消", (dialog, which) -> importFile = null)
+                .setOnCancelListener(dialog -> importFile = null)
+                .setPositiveButton("替换并导入", (dialog, which) -> {
+                    Uri file = importFile;
+                    importFile = null;
+                    restoreFile(file, regenerateId);
+                }).show();
+    }
+
+    /**
+     * 恢复用户选定的存档并返回登录界面。
+     * @param file 系统选择器返回的文件
+     * @param regenerate 是否重新生成账号和角色编号
+     */
+    private void restoreFile(Uri file, boolean regenerate) {
+        LocalApi.Session session = LocalApi.currentSession();
+        if (session == null) return;
+        setBusy("正在校验并导入存档…");
+        LocalApi.run(this, () -> {
+            try (InputStream input = getContentResolver().openInputStream(file)) {
+                if (input == null) throw new IOException("无法读取所选存档");
+                EmbeddedRuntime.importSave(this, "Bearer " + session.token, input, regenerate);
+            } catch (android.database.sqlite.SQLiteConstraintException conflict) {
+                throw new IOException("存档与现有数据冲突，已保留导入前的存档。", conflict);
+            } catch (java.util.zip.ZipException | java.io.EOFException invalid) {
+                throw new IOException("存档文件损坏或不完整，已保留导入前的存档。", invalid);
+            }
+            LocalApi.forgetSession();
+            getSharedPreferences("local_admin_save_settings", MODE_PRIVATE).edit()
+                    .putString("pendingNamespace", UUID.randomUUID().toString()).commit();
+            return null;
+        }, (result, failure) -> complete(failure, "admin 存档已导入，请用存档中的密码重新登录"));
     }
 
     /** 返回工作台时刷新App余额。 */
@@ -238,7 +362,8 @@ public final class LocalHomeActivity extends Activity {
     private SharedPreferences pendingOrders(LocalApi.Session session) {
         String key = Base64.encodeToString(session.accountId.getBytes(StandardCharsets.UTF_8),
                 Base64.URL_SAFE | Base64.NO_WRAP | Base64.NO_PADDING);
-        return getSharedPreferences("local_pending_" + key, MODE_PRIVATE);
+        String namespace = !"admin".equals(session.username) ? "" : getSharedPreferences("local_admin_save_settings", MODE_PRIVATE).getString("pendingNamespace", "");
+        return getSharedPreferences("local_pending_" + namespace + key, MODE_PRIVATE);
     }
 
     private void setBusy(String message) {
@@ -264,6 +389,11 @@ public final class LocalHomeActivity extends Activity {
         purchase.setEnabled(!busy && (pending || !catalog.isEmpty()));
         purchase.setText(pending ? "重试同一模拟订单" : "模拟充值");
         refresh.setEnabled(!busy);
+        boolean admin = loggedIn && "admin".equals(session.username);
+        exportSave.setVisibility(admin ? View.VISIBLE : View.GONE);
+        importSave.setVisibility(admin ? View.VISIBLE : View.GONE);
+        exportSave.setEnabled(!busy);
+        importSave.setEnabled(!busy);
         game.setEnabled(!busy);
         logout.setEnabled(!busy);
     }

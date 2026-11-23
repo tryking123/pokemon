@@ -157,6 +157,7 @@ final class GameGatewayService {
                 if (connection.role != null) {
                     for (GameFeature feature : features) {
                         if (feature.handle(connection.role, request, output)) {
+                            if (request.session > 0 && request.type > 8) world.pushQuestChanges(connection.role, output);
                             return true;
                         }
                     }
@@ -249,12 +250,15 @@ final class GameGatewayService {
             output.send(request, data("errno", 4));
             return;
         }
-        if (connection.role == null) {
+        boolean entering = connection.role == null;
+        if (entering) {
             pushStarterGuide(role.get(), output);
+            prepareRole(connection, role.get(), output);
         }
+        // 原创角成功回调会立即打开地图、导航与引导，必须先有角色和挂机快照。
         output.send(request, data("errno", 0));
-        if (connection.role == null) {
-            enterScene(connection, role.get(), output);
+        if (entering) {
+            world.synchronizeScene(connection.role, output);
         }
     }
 
@@ -279,6 +283,18 @@ final class GameGatewayService {
      * @throws IOException 输出失败
      */
     private void enterScene(Connection connection, LocalRole role, GameReply output) throws IOException {
+        prepareRole(connection, role, output);
+        world.synchronizeScene(connection.role, output);
+    }
+
+    /**
+     * 在创角成功回调之前准备角色和挂机快照，不提前触发场景切换。
+     * @param connection 当前本地会话
+     * @param role 已持久化角色
+     * @param output 提交后派发的协议出口
+     * @throws IOException 快照编码失败
+     */
+    private void prepareRole(Connection connection, LocalRole role, GameReply output) throws IOException {
         role = disconnectedBattles.restoreScene(role.id);
         connection.role = role;
         connection.ready = false;
@@ -300,8 +316,6 @@ final class GameGatewayService {
         // 地图界面启动时会读挂机快照，须在首张 scene 触发地图加载前同步。
         int mission = adventure.nextMission(role.id);
         HangupGameFeature.pushSnapshot(output, mission, hangup, role.id, Collections.emptyList());
-
-        world.synchronizeScene(role, output);
     }
 
     /**

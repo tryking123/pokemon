@@ -125,7 +125,7 @@ public class ElfRebirthService {
                         add(items, row.path(String.valueOf(pos + 1)).asInt(), row.path(String.valueOf(pos + 2)).asLong());
                 }
             }
-            JsonNode growth = ElfTrainingCatalog.row("growth", elf.configId).path("cost");
+            JsonNode growth = ElfTrainingCatalog.advanceRule(elf.configId).path("cost");
             for (int step = 0; step < state.path("advanced").asInt(); step++) {
                 JsonNode paid = state.path("advanceCosts").path(Integer.toString(step));
                 JsonNode pairs = (paid.isMissingNode() ? growth.path(step) : paid).path("items");

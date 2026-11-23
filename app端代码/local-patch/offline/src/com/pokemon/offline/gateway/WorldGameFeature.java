@@ -177,6 +177,18 @@ final class WorldGameFeature implements GameFeature {
     }
 
     /**
+     * 玩法应答后推送由实际结算触发的任务状态变化。
+     * @param role 当前角色
+     * @param output 原协议推送通道
+     * @throws IOException 无法写入推送
+     */
+    void pushQuestChanges(LocalRole role, GameReply output) throws IOException {
+        for (QuestTask task : quests.refreshProgress(role.id)) {
+            output.push(101, data("id", task.id, "state", task.state, "progress", task.progress));
+        }
+    }
+
+    /**
      * 推送真实首章和主线任务快照
      *
      * @param role 当前连接认证的角色
@@ -218,7 +230,7 @@ final class WorldGameFeature implements GameFeature {
             Set<Integer> clearedIds = scene.id == SceneService.FIRST_DUNGEON && cleared != null
                     ? cleared.clearedEncounters(saved.id) : Collections.emptySet();
             for (SceneActor monster : scene.monsters) {
-                if (!clearedIds.contains(monster.sid) && !dojoCombat.cleared(saved.id, scene.id, monster.sid)) {
+                if (!clearedIds.contains(monster.sid) && !dojoCombat.cleared(saved.id, scene.id, monster.uid)) {
                     monsters.add(actor(monster));
                 }
             }
@@ -328,9 +340,21 @@ final class WorldGameFeature implements GameFeature {
         List<Map<String, Object>> items = new ArrayList<>();
         reward.items.forEach((itemId, quantity) -> items.add(data(
                 "id", itemId, "n", quantity, "sid", Integer.toString(itemId))));
-        output.push(14, data("flags", flags, "adds", data("coins", reward.coins, "diamonds", reward.diamonds,
-                "exp", reward.exp, "items", items)));
-        if (!reward.items.isEmpty() || !reward.equipment.isEmpty()) {
+        Map<String,Object> adds = data("coins", reward.coins, "diamonds", reward.diamonds,
+                "exp", reward.exp, "items", items);
+        if (!result.elves.isEmpty()) {
+            List<Map<String,Object>> elves = new ArrayList<>();
+            result.elves.forEach(elf -> elves.add(BattleGameFeature.elfInfo(elf)));
+            adds.put("elf", elves);
+        }
+        if (!result.stones.isEmpty()) {
+            List<Map<String,Object>> stones = new ArrayList<>();
+            result.stones.forEach((sid, template) -> stones.add(data("id", template, "sid", sid, "n", 1, "level", 0)));
+            adds.put("zstone", stones);
+        }
+        output.push(14, data("flags", flags, "adds", adds));
+        if (!result.elves.isEmpty()) battle.pushElfs(role.id, output);
+        if (!reward.items.isEmpty() || !reward.equipment.isEmpty() || !result.stones.isEmpty()) {
             bags.push(role.id, output);
         }
         synchronize(role, output);

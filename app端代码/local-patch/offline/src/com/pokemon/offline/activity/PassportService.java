@@ -12,7 +12,6 @@ import java.time.ZoneId;
 import java.time.DayOfWeek;
 import java.time.temporal.TemporalAdjusters;
 import java.time.format.DateTimeFormatter;
-import com.pokemon.offline.activitydaily.DailyVitalityService;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -39,7 +38,6 @@ public class PassportService {
     private final ActivityMapper payments;
     private final JsonNode seasons;
     private final JsonNode missions;
-    private final DailyVitalityService vitality;
 
     /**
      * 绑定通行证使用的原始底表与本地角色账本。
@@ -48,13 +46,12 @@ public class PassportService {
      * @param inventory 材料背包
      * @param dresses 外观授予记录
      * @param payments 纳入活动的已确认模拟订单
-     * @param vitality 北京时间自然周的活跃任务
      * @param json 配置读取器
      * @throws IOException 读取随包配置失败
      */
     public PassportService(JdbcTemplate jdbc, RoleService roles, InventoryService inventory,
-                           LoginActivityService dresses, ActivityMapper payments, DailyVitalityService vitality, ObjectMapper json) throws IOException {
-        this.jdbc=jdbc; this.roles=roles; this.inventory=inventory; this.dresses=dresses; this.payments=payments; this.vitality=vitality;
+                           LoginActivityService dresses, ActivityMapper payments, ObjectMapper json) throws IOException {
+        this.jdbc=jdbc; this.roles=roles; this.inventory=inventory; this.dresses=dresses; this.payments=payments;
         try (InputStream input=new ClassPathResource("activity/passport.json").getInputStream()) {
             JsonNode config=json.readTree(input);
             seasons=config.required("seasons"); missions=config.required("tasks");
@@ -263,24 +260,6 @@ public class PassportService {
     }
 
     /**
-     * 按任务动作已提交的原始交易计数。
-     * @param id 角色
-     * @param kind 原任务条件
-     * @param from 时间窗口起始秒
-     * @return 本窗口有效进度
-     */
-    private long metric(String id,int kind,long from) {
-        if(kind==47)return vitality.weeklyPoints(id,java.time.Instant.ofEpochSecond(from).atZone(ZONE).toLocalDate());
-        if(kind==1)return jdbc.queryForObject("SELECT COALESCE(SUM(CASE WHEN draw_type=3 THEN 10 ELSE 1 END),0) FROM local_gacha_draw WHERE role_id=? AND draw_type IN(2,3) AND committed_at>=?",Long.class,id,from);
-        if(kind==27)return jdbc.queryForObject("SELECT COALESCE(SUM(amount),0) FROM local_diamond_spend WHERE role_id=? AND spent_at>=?",Long.class,id,from*1000);
-        if(kind==14||kind==23||kind==16) {
-            int counter=kind==14?109:kind==23?101:50015;
-            return jdbc.queryForObject("SELECT COALESCE(SUM(quantity),0) FROM local_carnival_progress WHERE role_id=? AND task_type=? AND event_day>=?",Long.class,id,counter,from);
-        }
-        return jdbc.queryForObject("SELECT COALESCE(SUM(quantity),0) FROM local_passport_metric WHERE role_id=? AND kind=? AND event_day>=?",Long.class,id,kind,from);
-    }
-
-    /**
      * 查询原客户端本赛季十六项任务状态。
      * @param id 角色
      * @param start 赛季起始
@@ -293,8 +272,8 @@ public class PassportService {
             long from=taskStart(start,group);
             for(JsonNode row:cfg.path(group==0?"task":"task"+group)) {
                 int task=row.asInt();JsonNode rule=missions.required(String.valueOf(task));
-                long value=Math.min(rule.get(1).asLong(),metric(id,rule.get(0).asInt(),from));
-                int state=history.containsKey("task:"+task+":"+from)?3:value==rule.get(1).asLong()?2:1;
+                long value=rule.get(1).asLong();
+                int state=history.containsKey("task:"+task+":"+from)?3:2;
                 Map<String,Object> item=new LinkedHashMap<>();item.put("id",task);item.put("progress",value);item.put("state",state);list.add(item);
             }
         }
@@ -316,7 +295,7 @@ public class PassportService {
             if(row.asInt()!=task)continue;
             long from=taskStart(displayed,group);String key="task:"+task+":"+from;
             Map<String,Integer> history=actions(id,displayed);JsonNode rule=missions.required(String.valueOf(task));
-            if(history.containsKey(key)||metric(id,rule.get(0).asInt(),from)<rule.get(1).asInt())return -1;
+            if(history.containsKey(key))return -1;
             int total=history.values().stream().mapToInt(Integer::intValue).sum();
             int exp=Math.max(0,Math.min(rule.get(2).asInt(),cfg.path("grade").get(cfg.path("grade").size()-1).asInt()-total));
             record(id,displayed,key,exp);return exp;

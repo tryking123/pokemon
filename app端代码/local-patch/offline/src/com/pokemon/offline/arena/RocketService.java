@@ -107,6 +107,28 @@ public class RocketService {
     }
 
     /**
+     * 登录时恢复旧引擎卡住的已扣次比赛，使开放期内的角色可从原预览重打当前小局。
+     * @param roleId 角色编号
+     */
+    @Transactional
+    public void reconnect(String roleId) {
+        roles.lockRole(roleId);
+        ObjectNode match = store.load(roleId, MATCH);
+        if (!match.has("fight")) return;
+        if (match.path("roundEngine").asInt() == 0) {
+            if (match.path("week").asLong() == week() && season.phase(week()) == 2) {
+                match.remove("fight");
+                match.put("roundEngine", 1).put("expiry", Instant.now().getEpochSecond() + 1200);
+                store.save(roleId, MATCH, match);
+            } else {
+                store.remove(roleId, MATCH);
+            }
+        } else if (active(roleId)) {
+            turn(roleId, 0, Collections.emptyList(), -1, true);
+        }
+    }
+
+    /**
      * 检查角色是否正在其他占用 C3001/C3002 的玩法中。
      * @param role 角色编号
      * @return 是否正在其他战斗
@@ -160,7 +182,7 @@ public class RocketService {
             if(used>=season.rules.path("free").asInt()+day.path("buy").asInt())return out;
             match=teams.match(role,season.stats(id,week).path("rate").asInt(1),season.rules.path("pool"));
             if(match==null)return out;
-            match.put("week",week).put("expiry",now+1200);
+            match.put("roundEngine",1).put("week",week).put("expiry",now+1200);
             day.put("used",used+1);day.with("matched").put(receipt,match.path("id").asText());store.save(id,season.day(),day);store.save(id,MATCH,match);
             return match.path("preview").deepCopy();
         }
@@ -184,17 +206,21 @@ public class RocketService {
     public ObjectNode turn(String id,int skill,List<?> targets,int flag,boolean quit) {
         LocalRole role=roles.lockRole(id);
         ObjectNode event=json.createObjectNode(),match=store.load(id,MATCH);
-        if(!active(id))return event;
-        if(season.phase(week())!=2) {
-            long week=match.path("week").asLong();
-            ObjectNode stats=season.stats(id,week);
+        boolean terminal = !quit && flag == 3;
+        if (!match.has("fight") || !terminal && !active(id)) return event;
+        // 全场身份、种子及成员必须先通过检查；迟到的上一场不能清掉当前场。
+        int result = quit ? 2 : terminal ? teams.finishRound(match, skill, targets) : 0;
+        if (result < 0 || !quit && (flag < -1 || flag > 1 && !terminal)) return event;
+        if (match.path("week").asLong() != week() || season.phase(week()) != 2
+                || match.path("expiry").asLong() <= Instant.now().getEpochSecond()) {
+            long savedWeek = match.path("week").asLong();
+            ObjectNode stats = season.stats(id, savedWeek);
             event.putObject("result").put("result",0).put("score",stats.path("score").asLong())
-                    .put("rate",stats.path("rate").asInt(1)).put("rank",season.rank(id,week));
+                    .put("rate",stats.path("rate").asInt(1)).put("rank",season.rank(id,savedWeek));
             store.remove(id,MATCH);
             return event;
         }
-        int result=quit?2:teams.turn(match,skill,targets,flag);
-        if(result<0)return event;
+        // 原舞台负责技能、天赋、伤害与胜负。普通回合仅续期。
         match.put("expiry",Instant.now().getEpochSecond()+1200);
         if(result==0){store.save(id,MATCH,match);return event;}
         teams.carry(match,result);

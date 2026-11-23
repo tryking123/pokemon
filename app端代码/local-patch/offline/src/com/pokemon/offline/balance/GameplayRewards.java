@@ -28,6 +28,7 @@ public class GameplayRewards {
     private final int dailyLimitPerDojo;
     private final int intervalSeconds;
     private final int totalWeight;
+    private final JsonNode quickenDrop;
 
     /**
      * 载入奖励档位和概率池，并核对道具模板。
@@ -63,6 +64,7 @@ public class GameplayRewards {
             }
         }
         JsonNode hangup = root.path("hangupDrop");
+        quickenDrop = root.path("quickenDrop");
         intervalSeconds = positive(hangup, "intervalSeconds");
         int weight = 0;
         for (JsonNode item : hangup.path("pool")) {
@@ -126,6 +128,67 @@ public class GameplayRewards {
             }
         }
         return Collections.unmodifiableMap(items);
+    }
+
+    /**
+     * 按已激活的挂机地图为一笔快速战斗抽取装备、精灵与培养材料。
+     * @param roleId 本地角色
+     * @param day 结算日
+     * @param used 当日已结算次数
+     * @param mapId 当前挂机地图索引
+     * @param seconds 本次快速战斗时长
+     * @return 本笔实例模板和道具数量
+     */
+    public QuickenDrop quickenDrop(String roleId, String day, int used, int mapId, int seconds) {
+        JsonNode map = quickenDrop.path("maps").path(Integer.toString(mapId));
+        if (seconds != positive(quickenDrop, "seconds") || map.isMissingNode()) {
+            throw new IllegalStateException("缺少快速战斗地图或时长配置 " + mapId);
+        }
+        long seed = ((long) roleId.hashCode() << 32) ^ (day.hashCode() * 31L + used) * 53L + mapId;
+        SplittableRandom equipmentRandom = new SplittableRandom(seed).split();
+        SplittableRandom elfRandom = new SplittableRandom(~seed).split();
+        QuickenDrop drop = new QuickenDrop();
+        drawTemplates(drop.equipment, map.path("equipment"), quickenDrop.path("equipmentCount"), equipmentRandom);
+        drawTemplates(drop.elves, map.path("elves"), quickenDrop.path("elfCount"), elfRandom);
+        JsonNode stones = quickenDrop.path("stones");
+        int total = positive(quickenDrop, "stoneCount");
+        int count = stones.size();
+        int remainder = total % count;
+        int first = (int) ((long) used * remainder % count);
+        for (int i = 0; i < count; i++) {
+            int id = stones.get((first + i) % count).asInt();
+            drop.items.put(id, (long) (total / count + (i < remainder ? 1 : 0)));
+        }
+        drop.items.put(positive(quickenDrop, "fruitId"), (long) positive(quickenDrop, "fruitCount"));
+        return drop;
+    }
+
+    /**
+     * 在含上下端点的数量区间内均匀取样，再逐件有放回地抽取本地图模板。
+     * @param result 接收模板的列表
+     * @param templates 当前地图可掉落的模板数组
+     * @param range 本次发放数量的上下限
+     * @param random 当前结算键对应的随机序列
+     */
+    private static void drawTemplates(List<Integer> result, JsonNode templates, JsonNode range, SplittableRandom random) {
+        int count = random.nextInt(positive(range, "min"), Math.addExact(positive(range, "max"), 1));
+        for (int i = 0; i < count; i++) {
+            result.add(templates.get(random.nextInt(templates.size())).asInt());
+        }
+    }
+
+    /**
+     * 一次快速战斗按地图抽到的模板与材料，供同一事务创建真实资产。
+     * @author tongruiyuan
+     * @since 2026-11-22 21:52
+     */
+    public static final class QuickenDrop {
+        /** 训练家装备模板。 */
+        public final List<Integer> equipment = new ArrayList<>();
+        /** 精灵模板。 */
+        public final List<Integer> elves = new ArrayList<>();
+        /** 培养材料模板和数量。 */
+        public final Map<Integer,Long> items = new LinkedHashMap<>();
     }
 
     /**
