@@ -1,0 +1,33 @@
+{
+  "result": "pass",
+  "apk": "E:\\myProjects\\game\\git_pokemon\\app包\\new\\pokemon-local-20261122-training-local-fix.apk",
+  "sha256": "b9f56db65b86121821fe532a43e5d804bc7035b67d3d8ca632577ce3d33fc319",
+  "abi": 64,
+  "executedFinalApkWithoutApplyingPatches": true,
+  "speciesCount": 591,
+  "passiveAbilityCount": 43,
+  "passiveLookupAndRenderCount": 43,
+  "fallbackAbilities": [
+    104200,
+    104300,
+    104400,
+    1000000
+  ],
+  "fallbackSpecies": [
+    64188,
+    64189,
+    64190,
+    641891,
+    641892,
+    641893
+  ],
+  "awakeningStageCases": 2264,
+  "sparseAwakeningSpecies": 81,
+  "jirachiOriginalConfirmationAndResponseCallback": {
+    "result": "pass",
+    "source": 63006,
+    "target": 64058
+  },
+  "substituted": "Native UI components, sprite loading, localization, role snapshots and external event consumers.",
+  "notVerified": "Android JNI, actual button input, animations and player database changes; 32-bit bytecode not executable in this 64-bit LuaJIT runtime."
+}

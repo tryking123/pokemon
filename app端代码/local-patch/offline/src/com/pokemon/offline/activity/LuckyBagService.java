@@ -81,6 +81,11 @@ public class LuckyBagService {
         state.put("tasks", tasks);
         state.put("felicity", active ? balance(role.id,p.start) : 0);
         if (!active) return state;
+        roles.lockRole(role.id);
+        for (int task=61000;task<=61003;task++) {
+            jdbc.update("INSERT OR IGNORE INTO local_lucky_task(role_id,period_start,day_no,task_id,claimed) "
+                    + "VALUES(?,?,?,?,0)", role.id,p.start,p.day,task);
+        }
         Map<Integer,Integer> states = new LinkedHashMap<>();
         for (int[] row : jdbc.query("SELECT task_id,claimed FROM local_lucky_task WHERE role_id=? AND period_start=? AND day_no=?",
                 (rs,n) -> new int[]{rs.getInt(1), 2+rs.getInt(2)}, role.id,p.start,p.day)) {

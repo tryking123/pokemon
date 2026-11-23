@@ -207,10 +207,9 @@ public class RocketSeason {
         ObjectNode stats=stats(role,week);ArrayNode tasks=json.createArrayNode();
         for(int id=60001;id<=60020;id++) {
             JsonNode cfg=rules.path("tasks").path(String.valueOf(id));
-            int kind=cfg.get(0).asInt(), target=cfg.get(1).asInt();
-            int progress=stats.path(kind==55?"played":kind==56?"wins":"best").asInt();
-            tasks.addObject().put("id",id).put("progress",Math.min(progress,target))
-                    .put("state",stats.path("claimed").has(String.valueOf(id))?3:progress>=target?2:1);
+            int target=cfg.get(1).asInt();
+            tasks.addObject().put("id",id).put("progress",target)
+                    .put("state",stats.path("claimed").has(String.valueOf(id))?3:2);
         }
         return tasks;
     }

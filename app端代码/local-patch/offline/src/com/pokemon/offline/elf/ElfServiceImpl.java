@@ -60,6 +60,9 @@ public class ElfServiceImpl implements ElfService {
         if (existing.isPresent()) {
             return existing;
         }
+        if (mapper.consumedStarter(roleId)) {
+            return Optional.empty();
+        }
         boolean hasItem = inventory.count(roleId, STARTER_ITEM) > 0;
         if (hasItem) {
             if (configId != PIKACHU || !inventory.takeOne(roleId, STARTER_ITEM)) {

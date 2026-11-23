@@ -299,7 +299,7 @@ public class ElfTrainingService {
                 consumed = action == 270 ? Collections.singletonList((String)body.get("fodder")) : stringList(body.get("list"));
                 if ((action == 270 && !veinRule.has("inject")) || veinCardCount < 0 || veinCardCount > materialCount
                         || consumed.size() + veinCardCount != materialCount
-                        || !validFodder(roleId,elf,consumed,"",0,expectedSpecies)) return reply("errno",INVALID);
+                        || !validFodder(roleId,elf,consumed,"",0,expectedSpecies, true)) return reply("errno",INVALID);
                 for (String uid : consumed) {
                     LocalElf material = elves.findOwned(roleId,uid).get();
                     if (veinRule.has("inject") && row("species",material.configId).path("quality").asInt()!=veinMaterialQuality)
@@ -520,6 +520,9 @@ public class ElfTrainingService {
             return reply("errno", NEED_MATERIAL);
         }
         for (String fodder : consumed) {
+            if (action == 270 || action == 271) {
+                elves.preserveStarterClaim(roleId, fodder);
+            }
             if (!gears.removeElfGear(roleId, fodder) || elves.consumeElf(roleId, fodder) != 1) {
                 throw new IllegalStateException("精灵培养材料在结算时已不可用");
             }
@@ -539,6 +542,8 @@ public class ElfTrainingService {
             quests.recordTraining(roleId, 25, state.path("love").asInt(1) - oldLove);
         } else if (action == 3006) {
             quests.recordTraining(roleId, 8, 1);
+        } else if (action == 3010 || action == 3011) {
+            quests.recordTraining(roleId, action == 3010 ? 18 : 12, 1);
         } else if (action == 3008) {
             quests.recordTraining(roleId, 26, effortGain);
         }
@@ -671,14 +676,31 @@ public class ElfTrainingService {
      */
     private boolean validFodder(String roleId, LocalElf target, List<String> ids, String matchingField,
                                 int minimumAssess, int requiredSpecies) {
+        return validFodder(roleId, target, ids, matchingField, minimumAssess, requiredSpecies, false);
+    }
+
+    /**
+     * 按培养入口校验材料实例、模板与突破专用的闲置伙伴规则。
+     * @param roleId 当前角色
+     * @param target 培养目标
+     * @param ids 选择的材料实例
+     * @param matchingField 材料与目标须匹配的模板字段
+     * @param minimumAssess 材料最低评价
+     * @param requiredSpecies 限定模板，零表示不限
+     * @param breakthrough 是否为突破注入
+     * @return 所有材料均可消耗时为真
+     */
+    private boolean validFodder(String roleId, LocalElf target, List<String> ids, String matchingField,
+                                int minimumAssess, int requiredSpecies, boolean breakthrough) {
         Set<String> distinct = new HashSet<>();
+        Set<String> assigned = breakthrough && !ids.isEmpty() ? elves.assignedElves(roleId) : Collections.emptySet();
         Map<String, LocalElf> roster = elves.list(roleId).stream().collect(Collectors.toMap(elf -> elf.id, elf -> elf));
         int matching = row("species", target.configId).path(matchingField).asInt(target.configId);
         for (String id : ids) {
             LocalElf elf = roster.get(id);
             JsonNode species = elf == null ? null : row("species", elf.configId);
             if (elf == null || id.equals(target.id) || !distinct.add(id) || elf.slot != 0
-                    || !elves.isConsumable(roleId, id) || elf.training.path("lock").asInt() != 0
+                    || assigned.contains(id) || !elves.isConsumable(roleId, id, breakthrough) || elf.training.path("lock").asInt() != 0
                     || (requiredSpecies != 0 && elf.configId != requiredSpecies)
                     || (!matchingField.isEmpty() && species.path(matchingField).asInt(elf.configId) != matching)
                     || species.path("assess").asInt() < minimumAssess) {

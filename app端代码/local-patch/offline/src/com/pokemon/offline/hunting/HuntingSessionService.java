@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.pokemon.offline.elf.ElfService;
 import com.pokemon.offline.inventory.InventoryService;
 import com.pokemon.offline.payment.GamePaymentService;
+import com.pokemon.offline.quest.QuestService;
 import com.pokemon.offline.role.RoleService;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,6 +38,7 @@ public class HuntingSessionService {
     private final InventoryService inventory;
     private final ElfService elves;
     private final GamePaymentService payments;
+    private final QuestService quests;
     private final ObjectMapper json;
     private final JsonNode assess;
 
@@ -48,17 +50,19 @@ public class HuntingSessionService {
      * @param inventory 道具及满包邮件
      * @param elves 精灵实例
      * @param payments VIP 资格
+     * @param quests 狩猎券消耗的任务进度
      * @param json 配置及存档编码器
      * @throws IOException 评价配置读取失败
      */
     HuntingSessionService(HuntingService pools, RoleService roles, JdbcTemplate jdbc, InventoryService inventory,
-                          ElfService elves, GamePaymentService payments, ObjectMapper json) throws IOException {
+                          ElfService elves, GamePaymentService payments, QuestService quests, ObjectMapper json) throws IOException {
         this.pools = pools;
         this.roles = roles;
         this.jdbc = jdbc;
         this.inventory = inventory;
         this.elves = elves;
         this.payments = payments;
+        this.quests = quests;
         this.json = json;
         try (InputStream in = new ClassPathResource("hunting/assess.json").getInputStream()) {
             assess = json.readTree(in);
@@ -111,7 +115,7 @@ public class HuntingSessionService {
             error = 0;
         } else if (type == 3104) {
             error = throwBall(id, arg, state, reply);
-        } else if (type == 3102 && (guide != 0 || arg < 1 || arg > 3)) {
+        } else if (type == 3102 && (arg < 1 || arg > 3 || (guide != 0 && (guide != 1 || arg != 1)))) {
             error = 3;
         } else if (type == 3102 && arg == 3) {
             error = 250211;
@@ -142,10 +146,14 @@ public class HuntingSessionService {
      */
     private int target(String id, int type, int field, ObjectNode state, long day) {
         int ticket = 21035 + field;
-        boolean paid = inventory.count(id, ticket) > 0 ? inventory.takeOne(id, ticket)
+        boolean useTicket = inventory.count(id, ticket) > 0;
+        boolean paid = useTicket ? inventory.takeOne(id, ticket)
                 : type == 3105 && inventory.spendMaterials(id, Collections.emptyMap(), 0, 300);
         if (!paid) {
             return type == 3102 ? 250212 : 100006;
+        }
+        if (useTicket) {
+            quests.recordTraining(id, 10, 1);
         }
         String countKey = "count" + field;
         long count = state.path(countKey).asLong();

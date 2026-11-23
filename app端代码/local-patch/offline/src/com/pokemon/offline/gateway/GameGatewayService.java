@@ -157,6 +157,7 @@ final class GameGatewayService {
                 if (connection.role != null) {
                     for (GameFeature feature : features) {
                         if (feature.handle(connection.role, request, output)) {
+                            if (request.session > 0 && request.type > 8) world.pushQuestChanges(connection.role, output);
                             return true;
                         }
                     }

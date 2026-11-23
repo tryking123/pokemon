@@ -7,21 +7,23 @@
 | 分支 | 用途 | 提交与审核 | 合并权限 |
 | --- | --- | --- | --- |
 | `main` | 稳定发布，保留为默认分支 | 通常由 `devlop` 提发布 PR；所有者可直接更新 | 仅仓库所有者 `tryking123` |
-| `devlop` | 日常集成 | 必须 PR，至少 1 个 Code Owner 批准；新推送使旧批准失效，最后推送需由其他人批准，评论须解决 | 有写权限的成员可在审核通过后合并 |
+| `devlop` | 日常集成 | 必须 PR，批准数量为 0，不强制 Code Owner 或最后推送审批，评论须解决 | 单人维护时由所有者检查并合并自己的 PR |
 | `feature/<issue>-<name>` | 功能开发 | 从 `devlop` 创建，PR → `devlop` | 分支开发者 |
 | `fix/<issue>-<name>` | BUG 修复 | 从 `devlop` 创建，PR → `devlop` | 分支开发者 |
 | `docs/<name>`、`chore/<name>` | 文档与工程维护 | 从 `devlop` 创建，PR → `devlop` | 分支开发者 |
-| `hotfix/<issue>-<name>` | 已发布版本紧急修复 | 从 `main` 创建；PR → `main` 由所有者合并，再回流 `devlop` 审核 | 所有者负责发布 |
+| `hotfix/<issue>-<name>` | 已发布版本紧急修复 | 从 `main` 创建；PR → `main` 由所有者合并，再通过 PR 回流 `devlop` | 所有者负责发布 |
 
 `main`、`devlop` 均禁止强推和删除。其他成员在仓库中最多授予 Write；外部贡献者通过 Fork 提交 PR，不授予 Admin。Git 提交邮箱只是作者信息，不能决定账号权限。
 
 当前使用个人仓库，`main-owner-only` 规则通过“仓库 Admin 角色可绕过更新限制”实现所有者更新。**前提是只有你拥有 Admin 权限**；如果迁入组织或增加管理员，应改为专属所有者团队，而不能继续把全部管理员当成你本人。独立的安全规则没有绕过名单，即便所有者也不能强推或删除受保护分支。
 
-`.github/CODEOWNERS` 指定 `@tryking123` 审核全部文件。Code Owners 文件本身不会授予权限，也不会自动启用强制审核，必须配合远端规则。
+`.github/CODEOWNERS` 指定 `@tryking123` 为全部文件的责任人。Code Owners 文件本身不会授予权限；当前单人维护模式不启用强制 Code Owner 批准。
 
 ### 所有者自己的 PR
 
-GitHub 不允许作者批准自己的 PR。`devlop-review` **没有所有者免审例外，也没有自动批准工作流**。若你也要向 `devlop` 提 PR，应在开启规则前邀请至少一位可信成员，赋予 Write，并把同一行改为 `* @tryking123 @可信审核人`。必须由非作者、非最后推送者完成有效审核。只有你一个人时，这种严格审核模式会阻止你的 PR 合并，这是规则的实际限制；不要把未审核描述为已审核。
+GitHub 不允许作者批准自己的 PR。当前采用**单人维护模式**：`devlop-review` 保留必须经过 PR、评论解决以及允许的合并方式，批准数量设为 0，关闭 Code Owner 批准、最后推送审批、新提交使批准失效和无法归属变更的额外批准要求。所有者检查最新差异、验证结果和回退方案后可合并自己的 PR，无需他人批准，也不使用自动批准工作流。自行检查不得记为他人审核。
+
+以后增加可信协作者并启用多人强制审核时，应先赋予审核人 Write 权限，在 CODEOWNERS 中登记，再同步调整远端规则、规则 JSON 和 AGENTS.md；不要仅修改本地文件就声称远端规则已生效。
 
 ## 首次上传与本地准备
 
@@ -53,23 +55,25 @@ GitHub 的 HTTPS Git 操作使用 Git Credential Manager 浏览器登录或 PAT�
 
 1. 检查 `git status --short`、暂存差异和大文件，核对第三方来源及许可。
 2. 在 `devlop` 提交准备好的源代码、规范、模板及许可文件。
-3. `git push -u origin devlop`，完成首次集成分支初始化。此时还未开启强制审核；以后不再直接推送该分支。
-4. 创建 `devlop → main` 的首次发布 PR，由你审核并合并；确保两个分支均包含 CODEOWNERS 和模板。
+3. `git push -u origin devlop`，完成首次集成分支初始化。此步骤仅适用于尚未启用必须经过 PR 规则的首次初始化；已有受保护的 `devlop` 时，直接使用工作分支和 PR，不再直推该分支。
+4. 创建 `devlop → main` 的首次发布 PR，由你检查并合并；确保两个分支均包含 CODEOWNERS 和模板。
 5. 在远端启用下节三份规则。保留默认分支 `main`，不要把历史 `develop` 作为第二个长期集成入口。
 
 如将来在其他克隆中仍使用 `develop`，先确认是否有未推送提交，再执行 `git branch -m develop devlop` 并设置 `origin/devlop` 为上游；不要覆盖分叉提交。
 
 ## 在 GitHub 启用权限规则
 
-**仓库内 JSON 只是可导入的配置，不会因提交代码而自动生效。本次仅准备配置，未修改远端规则。**
+**仓库内 JSON 是可导入的配置，不会因提交代码而自动生效。远端是否启用及其参数，应以 GitHub 上实际读取的规则为准。**
 
 由你打开 [Settings → Rules → Rulesets](https://github.com/tryking123/pokemon/settings/rules)，使用 New ruleset → Import a ruleset，依次导入：
 
 1. [main-owner-only.json](.github/rulesets/main-owner-only.json)：仅 Admin 可创建/更新 `main`，仅你保留 Admin。
-2. [devlop-review.json](.github/rulesets/devlop-review.json)：至少一次 Code Owner 批准，无绕过；禁止直推，开启新提交重审、最后推送审批及评论解决要求。
+2. [devlop-review.json](.github/rulesets/devlop-review.json)：单人维护，批准数量为 0，无绕过；必须经过 PR、解决评论，关闭 Code Owner 批准、最后推送审批、新提交使批准失效和无法归属变更的额外批准要求。
 3. [protected-branch-safety.json](.github/rulesets/protected-branch-safety.json)：两个受保护分支禁止删除和强推，无绕过。
 
-确认状态为 Active，并核对实际匹配 `main` 和 `devlop`。配置属于可执行规则的建议版本，尚未在此远端导入验证。
+确认状态为 Active，并核对实际匹配 `main` 和 `devlop`。已有同名规则时编辑原规则，不要重复导入；若多个规则或旧式分支保护同时匹配 `devlop`，还需检查是否仍有强制他人批准的要求。
+
+已有 `devlop-review` 时，可在 Settings → Rules → Rulesets 中编辑：保留 **Require a pull request before merging** 和评论解决要求，批准数量设为 **0**，关闭 **Require review from Code Owners**、**Require approval of the most recent reviewable push**、新提交使批准失效及无法归属变更的额外批准选项（如显示）。保存后重新读取匹配 `devlop` 的规则核对。禁止强推和删除的独立安全规则继续保留。
 
 使用已登录且具有仓库 Administration 写权限的 GitHub CLI 也可以导入（首次执行一次；重复执行会创建重复规则）：
 
@@ -82,11 +86,18 @@ gh api repos/tryking123/pokemon/rules/branches/main
 gh api repos/tryking123/pokemon/rules/branches/devlop
 ```
 
+已有规则需通过 API 更新时，先运行 `gh api repos/tryking123/pokemon/rulesets` 查出 `devlop-review` 的真实 ID，再将下方占位符替换为该 ID。更新会替换该规则的配置，应先核对现有规则没有需要保留的额外限制：
+
+```powershell
+gh api --method PUT repos/tryking123/pokemon/rulesets/<实际规则ID> --input .github/rulesets/devlop-review.json
+gh api repos/tryking123/pokemon/rules/branches/devlop
+```
+
 仓库设置允许 Squash merge 和 Merge commit。日常 PR 优先 Squash，发布 PR `devlop → main` 使用 Merge commit 保留两条长期分支的共同历史；发布后通过 `main → devlop` 同步 PR 回流，避免在两条分支上分别重复修复。当前未配置 CI，不把不存在的检查设为必需；启用 CI 后，先实际运行成功，再将真实检查名称加入保护规则。
 
 公有仓库可使用 GitHub Free 的分支 Rulesets。若改为私有仓库，需要核对套餐支持。规则限制的是成员操作；仓库所有者仍可以修改设置，不能据此宣称任何人都无法修改权限。
 
-启用后由协作者验证：无法直接更新 `main`，无法直接推送 `devlop`；`devlop` PR 无批准不可合并，新增提交后旧批准失效；你能更新 `main`；两个分支均不可强推或删除。验证使用正常协作提交，不为测试权限推送无关业务改动。
+启用后核对：`main` 仅所有者可更新，`devlop` 必须经过 PR，批准数量为 0，Code Owner 和最后推送审批关闭；所有者可在检查通过、评论解决后合并自己的 PR；两个分支均禁止强推和删除。核对实际匹配的规则，并在正常任务 PR 中验证合并行为；只读取配置时，不声称已完成实际合并验证，不为测试权限推送无关业务改动。
 
 ## 如何提 Issue
 
@@ -114,7 +125,7 @@ git push -u origin fix/123-login
 
 外部贡献者先 Fork，克隆自己的 Fork，把原仓库添加为 `upstream`，从 `upstream/devlop` 建分支并推到自己 Fork；PR 的 base repository 选择 `tryking123/pokemon`。
 
-在 GitHub Pull requests → New pull request，确认 **base: devlop / compare: 你的工作分支**；按模板填写问题、实际改动、验证、风险和回退。尚未完成时创建 Draft，准备好后点击 Ready for review 并请求 Code Owner 审核。修改审核意见后继续推到同一工作分支，不需要重开 PR。所有检查通过、审核有效、评论解决后再合并；合并后可删除个人工作分支。
+在 GitHub Pull requests → New pull request，确认 **base: devlop / compare: 你的工作分支**；按模板填写问题、实际改动、验证、风险和回退。尚未完成时创建 Draft，准备好后点击 Ready for review。单人维护时由所有者检查最新变更，有协作者时可邀请审核。修改意见后继续推到同一工作分支，不需要重开 PR，并更新验证结果。适用检查通过、评论解决后，由所有者合并自己的 PR；合并后确认改动完整纳入，再删除个人工作分支。
 
 仅对文档/工程配置的改动检查配置语法、链接和忽略规则即可，不声称完成设备验证。Java 业务修改按实际范围编译并运行已有检查；APK 修改按 AGENTS.md 完成包校验，有设备时验证离线运行和重启存档。不要为遵循模板而新增测试类，也不要勾选未执行的验证。
 

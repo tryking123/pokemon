@@ -1,0 +1,3787 @@
+{
+  "source": "已安装QA实际精灵成品快照为属性基底，切换每个原技能，在原Formation/Stage执行perform，不替换技能/伤害/特性事件代码；隔离技能时移除宠物与角色trigger",
+  "apk": "app包/new/pokemon-local-20261122-skills-dynamax-flow.apk",
+  "scriptSha256": {
+    "module/battle/core/formation": "b9b69334f195cc900868431f849efe31cf2a5878f54f35576aa972d20feae7ae",
+    "module/battle/core/stage": "e5ec168daa8f7997aab99ca089417ebd0ecaed96bfc19ff13dec21f454e990a7"
+  },
+  "uniqueSkills": 129,
+  "cases": 252,
+  "failures": [],
+  "rows": [
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50001,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50001,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 283230,
+      "events": 58,
+      "skill": 50002,
+      "targetCount": 6,
+      "changes": [
+        47205,
+        47205,
+        47205,
+        47205,
+        47205,
+        47205
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 265896,
+      "events": 58,
+      "skill": 50002,
+      "targetCount": 6,
+      "changes": [
+        44316,
+        44316,
+        44316,
+        44316,
+        44316,
+        44316
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 220698,
+      "events": 58,
+      "skill": 50003,
+      "targetCount": 6,
+      "changes": [
+        36783,
+        36783,
+        36783,
+        36783,
+        36783,
+        36783
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 207198,
+      "events": 58,
+      "skill": 50003,
+      "targetCount": 6,
+      "changes": [
+        34533,
+        34533,
+        34533,
+        34533,
+        34533,
+        34533
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50004,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50004,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 209376,
+      "events": 58,
+      "skill": 50005,
+      "targetCount": 6,
+      "changes": [
+        34896,
+        34896,
+        34896,
+        34896,
+        34896,
+        34896
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 196560,
+      "events": 58,
+      "skill": 50005,
+      "targetCount": 6,
+      "changes": [
+        32760,
+        32760,
+        32760,
+        32760,
+        32760,
+        32760
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 148554,
+      "events": 58,
+      "skill": 50006,
+      "targetCount": 6,
+      "changes": [
+        24759,
+        24759,
+        24759,
+        24759,
+        24759,
+        24759
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 139446,
+      "events": 58,
+      "skill": 50006,
+      "targetCount": 6,
+      "changes": [
+        23241,
+        23241,
+        23241,
+        23241,
+        23241,
+        23241
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 203418,
+      "events": 58,
+      "skill": 50007,
+      "targetCount": 6,
+      "changes": [
+        33903,
+        33903,
+        33903,
+        33903,
+        33903,
+        33903
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 190962,
+      "events": 58,
+      "skill": 50007,
+      "targetCount": 6,
+      "changes": [
+        31827,
+        31827,
+        31827,
+        31827,
+        31827,
+        31827
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 107514,
+      "events": 58,
+      "skill": 50008,
+      "targetCount": 6,
+      "changes": [
+        17919,
+        17919,
+        17919,
+        17919,
+        17919,
+        17919
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 100926,
+      "events": 58,
+      "skill": 50008,
+      "targetCount": 6,
+      "changes": [
+        16821,
+        16821,
+        16821,
+        16821,
+        16821,
+        16821
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 279558,
+      "events": 58,
+      "skill": 50009,
+      "targetCount": 6,
+      "changes": [
+        46593,
+        46593,
+        46593,
+        46593,
+        46593,
+        46593
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 262440,
+      "events": 58,
+      "skill": 50009,
+      "targetCount": 6,
+      "changes": [
+        43740,
+        43740,
+        43740,
+        43740,
+        43740,
+        43740
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50010,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50010,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 97038,
+      "events": 58,
+      "skill": 50011,
+      "targetCount": 6,
+      "changes": [
+        16173,
+        16173,
+        16173,
+        16173,
+        16173,
+        16173
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 91098,
+      "events": 58,
+      "skill": 50011,
+      "targetCount": 6,
+      "changes": [
+        15183,
+        15183,
+        15183,
+        15183,
+        15183,
+        15183
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 195696,
+      "events": 58,
+      "skill": 50012,
+      "targetCount": 6,
+      "changes": [
+        32616,
+        32616,
+        32616,
+        32616,
+        32616,
+        32616
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 183708,
+      "events": 58,
+      "skill": 50012,
+      "targetCount": 6,
+      "changes": [
+        30618,
+        30618,
+        30618,
+        30618,
+        30618,
+        30618
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50013,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50013,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 268524,
+      "events": 58,
+      "skill": 50014,
+      "targetCount": 6,
+      "changes": [
+        44754,
+        44754,
+        44754,
+        44754,
+        44754,
+        44754
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 252090,
+      "events": 58,
+      "skill": 50014,
+      "targetCount": 6,
+      "changes": [
+        42015,
+        42015,
+        42015,
+        42015,
+        42015,
+        42015
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50015,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50015,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 279558,
+      "events": 58,
+      "skill": 50016,
+      "targetCount": 6,
+      "changes": [
+        46593,
+        46593,
+        46593,
+        46593,
+        46593,
+        46593
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 262440,
+      "events": 58,
+      "skill": 50016,
+      "targetCount": 6,
+      "changes": [
+        43740,
+        43740,
+        43740,
+        43740,
+        43740,
+        43740
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50017,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50017,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 50018,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 50018,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60001,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60001,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60002,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60002,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60003,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60003,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 442476,
+      "events": 58,
+      "skill": 60004,
+      "targetCount": 6,
+      "changes": [
+        73746,
+        73746,
+        73746,
+        73746,
+        73746,
+        73746
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 414738,
+      "events": 58,
+      "skill": 60004,
+      "targetCount": 6,
+      "changes": [
+        69123,
+        69123,
+        69123,
+        69123,
+        69123,
+        69123
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 442476,
+      "events": 58,
+      "skill": 60005,
+      "targetCount": 6,
+      "changes": [
+        73746,
+        73746,
+        73746,
+        73746,
+        73746,
+        73746
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 414738,
+      "events": 58,
+      "skill": 60005,
+      "targetCount": 6,
+      "changes": [
+        69123,
+        69123,
+        69123,
+        69123,
+        69123,
+        69123
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 344790,
+      "events": 58,
+      "skill": 60006,
+      "targetCount": 6,
+      "changes": [
+        57465,
+        57465,
+        57465,
+        57465,
+        57465,
+        57465
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 323172,
+      "events": 58,
+      "skill": 60006,
+      "targetCount": 6,
+      "changes": [
+        53862,
+        53862,
+        53862,
+        53862,
+        53862,
+        53862
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 344790,
+      "events": 58,
+      "skill": 60007,
+      "targetCount": 6,
+      "changes": [
+        57465,
+        57465,
+        57465,
+        57465,
+        57465,
+        57465
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 323172,
+      "events": 58,
+      "skill": 60007,
+      "targetCount": 6,
+      "changes": [
+        53862,
+        53862,
+        53862,
+        53862,
+        53862,
+        53862
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60008,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60008,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60009,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60009,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 327114,
+      "events": 58,
+      "skill": 60010,
+      "targetCount": 6,
+      "changes": [
+        54519,
+        54519,
+        54519,
+        54519,
+        54519,
+        54519
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 306594,
+      "events": 58,
+      "skill": 60010,
+      "targetCount": 6,
+      "changes": [
+        51099,
+        51099,
+        51099,
+        51099,
+        51099,
+        51099
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 327114,
+      "events": 58,
+      "skill": 60011,
+      "targetCount": 6,
+      "changes": [
+        54519,
+        54519,
+        54519,
+        54519,
+        54519,
+        54519
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 306594,
+      "events": 58,
+      "skill": 60011,
+      "targetCount": 6,
+      "changes": [
+        51099,
+        51099,
+        51099,
+        51099,
+        51099,
+        51099
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 232074,
+      "events": 58,
+      "skill": 60012,
+      "targetCount": 6,
+      "changes": [
+        38679,
+        38679,
+        38679,
+        38679,
+        38679,
+        38679
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 217512,
+      "events": 58,
+      "skill": 60012,
+      "targetCount": 6,
+      "changes": [
+        36252,
+        36252,
+        36252,
+        36252,
+        36252,
+        36252
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 317790,
+      "events": 58,
+      "skill": 60013,
+      "targetCount": 6,
+      "changes": [
+        52965,
+        52965,
+        52965,
+        52965,
+        52965,
+        52965
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 297864,
+      "events": 58,
+      "skill": 60013,
+      "targetCount": 6,
+      "changes": [
+        49644,
+        49644,
+        49644,
+        49644,
+        49644,
+        49644
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 167976,
+      "events": 58,
+      "skill": 60014,
+      "targetCount": 6,
+      "changes": [
+        27996,
+        27996,
+        27996,
+        27996,
+        27996,
+        27996
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 157446,
+      "events": 58,
+      "skill": 60014,
+      "targetCount": 6,
+      "changes": [
+        26241,
+        26241,
+        26241,
+        26241,
+        26241,
+        26241
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 436734,
+      "events": 58,
+      "skill": 60015,
+      "targetCount": 6,
+      "changes": [
+        72789,
+        72789,
+        72789,
+        72789,
+        72789,
+        72789
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 409356,
+      "events": 58,
+      "skill": 60015,
+      "targetCount": 6,
+      "changes": [
+        68226,
+        68226,
+        68226,
+        68226,
+        68226,
+        68226
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60016,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60016,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 151614,
+      "events": 58,
+      "skill": 60017,
+      "targetCount": 6,
+      "changes": [
+        25269,
+        25269,
+        25269,
+        25269,
+        25269,
+        25269
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 142110,
+      "events": 58,
+      "skill": 60017,
+      "targetCount": 6,
+      "changes": [
+        23685,
+        23685,
+        23685,
+        23685,
+        23685,
+        23685
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 305712,
+      "events": 58,
+      "skill": 60018,
+      "targetCount": 6,
+      "changes": [
+        50952,
+        50952,
+        50952,
+        50952,
+        50952,
+        50952
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 286542,
+      "events": 58,
+      "skill": 60018,
+      "targetCount": 6,
+      "changes": [
+        47757,
+        47757,
+        47757,
+        47757,
+        47757,
+        47757
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60019,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60019,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 419490,
+      "events": 58,
+      "skill": 60020,
+      "targetCount": 6,
+      "changes": [
+        69915,
+        69915,
+        69915,
+        69915,
+        69915,
+        69915
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 393192,
+      "events": 58,
+      "skill": 60020,
+      "targetCount": 6,
+      "changes": [
+        65532,
+        65532,
+        65532,
+        65532,
+        65532,
+        65532
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60021,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60021,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 436734,
+      "events": 58,
+      "skill": 60022,
+      "targetCount": 6,
+      "changes": [
+        72789,
+        72789,
+        72789,
+        72789,
+        72789,
+        72789
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 409356,
+      "events": 58,
+      "skill": 60022,
+      "targetCount": 6,
+      "changes": [
+        68226,
+        68226,
+        68226,
+        68226,
+        68226,
+        68226
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 60023,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 60023,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 151104,
+      "events": 27,
+      "skill": 60024,
+      "targetCount": 6,
+      "changes": [
+        25184,
+        25184,
+        25184,
+        25184,
+        25184,
+        25184
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 229660,
+      "events": 20,
+      "skill": 60025,
+      "targetCount": 4,
+      "changes": [
+        57415,
+        57415,
+        57415,
+        57415
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500011,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500011,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500012,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500012,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 283230,
+      "events": 58,
+      "skill": 500021,
+      "targetCount": 6,
+      "changes": [
+        47205,
+        47205,
+        47205,
+        47205,
+        47205,
+        47205
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 265896,
+      "events": 58,
+      "skill": 500021,
+      "targetCount": 6,
+      "changes": [
+        44316,
+        44316,
+        44316,
+        44316,
+        44316,
+        44316
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 283230,
+      "events": 58,
+      "skill": 500022,
+      "targetCount": 6,
+      "changes": [
+        47205,
+        47205,
+        47205,
+        47205,
+        47205,
+        47205
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 265896,
+      "events": 58,
+      "skill": 500022,
+      "targetCount": 6,
+      "changes": [
+        44316,
+        44316,
+        44316,
+        44316,
+        44316,
+        44316
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 220698,
+      "events": 58,
+      "skill": 500031,
+      "targetCount": 6,
+      "changes": [
+        36783,
+        36783,
+        36783,
+        36783,
+        36783,
+        36783
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 207198,
+      "events": 58,
+      "skill": 500031,
+      "targetCount": 6,
+      "changes": [
+        34533,
+        34533,
+        34533,
+        34533,
+        34533,
+        34533
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 220698,
+      "events": 58,
+      "skill": 500032,
+      "targetCount": 6,
+      "changes": [
+        36783,
+        36783,
+        36783,
+        36783,
+        36783,
+        36783
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 207198,
+      "events": 58,
+      "skill": 500032,
+      "targetCount": 6,
+      "changes": [
+        34533,
+        34533,
+        34533,
+        34533,
+        34533,
+        34533
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500041,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500041,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500042,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500042,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 209376,
+      "events": 58,
+      "skill": 500051,
+      "targetCount": 6,
+      "changes": [
+        34896,
+        34896,
+        34896,
+        34896,
+        34896,
+        34896
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 196560,
+      "events": 58,
+      "skill": 500051,
+      "targetCount": 6,
+      "changes": [
+        32760,
+        32760,
+        32760,
+        32760,
+        32760,
+        32760
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 209376,
+      "events": 58,
+      "skill": 500052,
+      "targetCount": 6,
+      "changes": [
+        34896,
+        34896,
+        34896,
+        34896,
+        34896,
+        34896
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 196560,
+      "events": 58,
+      "skill": 500052,
+      "targetCount": 6,
+      "changes": [
+        32760,
+        32760,
+        32760,
+        32760,
+        32760,
+        32760
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 148554,
+      "events": 58,
+      "skill": 500061,
+      "targetCount": 6,
+      "changes": [
+        24759,
+        24759,
+        24759,
+        24759,
+        24759,
+        24759
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 139446,
+      "events": 58,
+      "skill": 500061,
+      "targetCount": 6,
+      "changes": [
+        23241,
+        23241,
+        23241,
+        23241,
+        23241,
+        23241
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 148554,
+      "events": 58,
+      "skill": 500062,
+      "targetCount": 6,
+      "changes": [
+        24759,
+        24759,
+        24759,
+        24759,
+        24759,
+        24759
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 139446,
+      "events": 58,
+      "skill": 500062,
+      "targetCount": 6,
+      "changes": [
+        23241,
+        23241,
+        23241,
+        23241,
+        23241,
+        23241
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 203418,
+      "events": 58,
+      "skill": 500071,
+      "targetCount": 6,
+      "changes": [
+        33903,
+        33903,
+        33903,
+        33903,
+        33903,
+        33903
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 190962,
+      "events": 58,
+      "skill": 500071,
+      "targetCount": 6,
+      "changes": [
+        31827,
+        31827,
+        31827,
+        31827,
+        31827,
+        31827
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 203418,
+      "events": 58,
+      "skill": 500072,
+      "targetCount": 6,
+      "changes": [
+        33903,
+        33903,
+        33903,
+        33903,
+        33903,
+        33903
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 190962,
+      "events": 58,
+      "skill": 500072,
+      "targetCount": 6,
+      "changes": [
+        31827,
+        31827,
+        31827,
+        31827,
+        31827,
+        31827
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 107514,
+      "events": 58,
+      "skill": 500081,
+      "targetCount": 6,
+      "changes": [
+        17919,
+        17919,
+        17919,
+        17919,
+        17919,
+        17919
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 100926,
+      "events": 58,
+      "skill": 500081,
+      "targetCount": 6,
+      "changes": [
+        16821,
+        16821,
+        16821,
+        16821,
+        16821,
+        16821
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 107514,
+      "events": 58,
+      "skill": 500082,
+      "targetCount": 6,
+      "changes": [
+        17919,
+        17919,
+        17919,
+        17919,
+        17919,
+        17919
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 100926,
+      "events": 58,
+      "skill": 500082,
+      "targetCount": 6,
+      "changes": [
+        16821,
+        16821,
+        16821,
+        16821,
+        16821,
+        16821
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 279558,
+      "events": 58,
+      "skill": 500091,
+      "targetCount": 6,
+      "changes": [
+        46593,
+        46593,
+        46593,
+        46593,
+        46593,
+        46593
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 262440,
+      "events": 58,
+      "skill": 500091,
+      "targetCount": 6,
+      "changes": [
+        43740,
+        43740,
+        43740,
+        43740,
+        43740,
+        43740
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 279558,
+      "events": 58,
+      "skill": 500092,
+      "targetCount": 6,
+      "changes": [
+        46593,
+        46593,
+        46593,
+        46593,
+        46593,
+        46593
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 262440,
+      "events": 58,
+      "skill": 500092,
+      "targetCount": 6,
+      "changes": [
+        43740,
+        43740,
+        43740,
+        43740,
+        43740,
+        43740
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500101,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500101,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500102,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500102,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 97038,
+      "events": 58,
+      "skill": 500111,
+      "targetCount": 6,
+      "changes": [
+        16173,
+        16173,
+        16173,
+        16173,
+        16173,
+        16173
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 91098,
+      "events": 58,
+      "skill": 500111,
+      "targetCount": 6,
+      "changes": [
+        15183,
+        15183,
+        15183,
+        15183,
+        15183,
+        15183
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 97038,
+      "events": 58,
+      "skill": 500112,
+      "targetCount": 6,
+      "changes": [
+        16173,
+        16173,
+        16173,
+        16173,
+        16173,
+        16173
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 91098,
+      "events": 58,
+      "skill": 500112,
+      "targetCount": 6,
+      "changes": [
+        15183,
+        15183,
+        15183,
+        15183,
+        15183,
+        15183
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 195696,
+      "events": 58,
+      "skill": 500121,
+      "targetCount": 6,
+      "changes": [
+        32616,
+        32616,
+        32616,
+        32616,
+        32616,
+        32616
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 183708,
+      "events": 58,
+      "skill": 500121,
+      "targetCount": 6,
+      "changes": [
+        30618,
+        30618,
+        30618,
+        30618,
+        30618,
+        30618
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 195696,
+      "events": 58,
+      "skill": 500122,
+      "targetCount": 6,
+      "changes": [
+        32616,
+        32616,
+        32616,
+        32616,
+        32616,
+        32616
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 183708,
+      "events": 58,
+      "skill": 500122,
+      "targetCount": 6,
+      "changes": [
+        30618,
+        30618,
+        30618,
+        30618,
+        30618,
+        30618
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500131,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500131,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500132,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500132,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 268524,
+      "events": 58,
+      "skill": 500141,
+      "targetCount": 6,
+      "changes": [
+        44754,
+        44754,
+        44754,
+        44754,
+        44754,
+        44754
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 252090,
+      "events": 58,
+      "skill": 500141,
+      "targetCount": 6,
+      "changes": [
+        42015,
+        42015,
+        42015,
+        42015,
+        42015,
+        42015
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 268524,
+      "events": 58,
+      "skill": 500142,
+      "targetCount": 6,
+      "changes": [
+        44754,
+        44754,
+        44754,
+        44754,
+        44754,
+        44754
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 252090,
+      "events": 58,
+      "skill": 500142,
+      "targetCount": 6,
+      "changes": [
+        42015,
+        42015,
+        42015,
+        42015,
+        42015,
+        42015
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500151,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500151,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500152,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500152,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 279558,
+      "events": 58,
+      "skill": 500161,
+      "targetCount": 6,
+      "changes": [
+        46593,
+        46593,
+        46593,
+        46593,
+        46593,
+        46593
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 262440,
+      "events": 58,
+      "skill": 500161,
+      "targetCount": 6,
+      "changes": [
+        43740,
+        43740,
+        43740,
+        43740,
+        43740,
+        43740
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 279558,
+      "events": 58,
+      "skill": 500162,
+      "targetCount": 6,
+      "changes": [
+        46593,
+        46593,
+        46593,
+        46593,
+        46593,
+        46593
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 262440,
+      "events": 58,
+      "skill": 500162,
+      "targetCount": 6,
+      "changes": [
+        43740,
+        43740,
+        43740,
+        43740,
+        43740,
+        43740
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500171,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500171,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500172,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500172,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500181,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500181,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 150534,
+      "events": 58,
+      "skill": 500182,
+      "targetCount": 6,
+      "changes": [
+        25089,
+        25089,
+        25089,
+        25089,
+        25089,
+        25089
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 141318,
+      "events": 58,
+      "skill": 500182,
+      "targetCount": 6,
+      "changes": [
+        23553,
+        23553,
+        23553,
+        23553,
+        23553,
+        23553
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600011,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600011,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600012,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600012,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600021,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600021,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600022,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600022,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600031,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600031,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600032,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600032,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 442476,
+      "events": 58,
+      "skill": 600041,
+      "targetCount": 6,
+      "changes": [
+        73746,
+        73746,
+        73746,
+        73746,
+        73746,
+        73746
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 414738,
+      "events": 58,
+      "skill": 600041,
+      "targetCount": 6,
+      "changes": [
+        69123,
+        69123,
+        69123,
+        69123,
+        69123,
+        69123
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 442476,
+      "events": 58,
+      "skill": 600042,
+      "targetCount": 6,
+      "changes": [
+        73746,
+        73746,
+        73746,
+        73746,
+        73746,
+        73746
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 414738,
+      "events": 58,
+      "skill": 600042,
+      "targetCount": 6,
+      "changes": [
+        69123,
+        69123,
+        69123,
+        69123,
+        69123,
+        69123
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 442476,
+      "events": 58,
+      "skill": 600051,
+      "targetCount": 6,
+      "changes": [
+        73746,
+        73746,
+        73746,
+        73746,
+        73746,
+        73746
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 414738,
+      "events": 58,
+      "skill": 600051,
+      "targetCount": 6,
+      "changes": [
+        69123,
+        69123,
+        69123,
+        69123,
+        69123,
+        69123
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 442476,
+      "events": 58,
+      "skill": 600052,
+      "targetCount": 6,
+      "changes": [
+        73746,
+        73746,
+        73746,
+        73746,
+        73746,
+        73746
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 414738,
+      "events": 58,
+      "skill": 600052,
+      "targetCount": 6,
+      "changes": [
+        69123,
+        69123,
+        69123,
+        69123,
+        69123,
+        69123
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 344790,
+      "events": 58,
+      "skill": 600061,
+      "targetCount": 6,
+      "changes": [
+        57465,
+        57465,
+        57465,
+        57465,
+        57465,
+        57465
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 323172,
+      "events": 58,
+      "skill": 600061,
+      "targetCount": 6,
+      "changes": [
+        53862,
+        53862,
+        53862,
+        53862,
+        53862,
+        53862
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 344790,
+      "events": 58,
+      "skill": 600062,
+      "targetCount": 6,
+      "changes": [
+        57465,
+        57465,
+        57465,
+        57465,
+        57465,
+        57465
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 323172,
+      "events": 58,
+      "skill": 600062,
+      "targetCount": 6,
+      "changes": [
+        53862,
+        53862,
+        53862,
+        53862,
+        53862,
+        53862
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 344790,
+      "events": 58,
+      "skill": 600071,
+      "targetCount": 6,
+      "changes": [
+        57465,
+        57465,
+        57465,
+        57465,
+        57465,
+        57465
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 323172,
+      "events": 58,
+      "skill": 600071,
+      "targetCount": 6,
+      "changes": [
+        53862,
+        53862,
+        53862,
+        53862,
+        53862,
+        53862
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 344790,
+      "events": 58,
+      "skill": 600072,
+      "targetCount": 6,
+      "changes": [
+        57465,
+        57465,
+        57465,
+        57465,
+        57465,
+        57465
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 323172,
+      "events": 58,
+      "skill": 600072,
+      "targetCount": 6,
+      "changes": [
+        53862,
+        53862,
+        53862,
+        53862,
+        53862,
+        53862
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600081,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600081,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600082,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600082,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600091,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600091,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600092,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600092,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 327114,
+      "events": 58,
+      "skill": 600101,
+      "targetCount": 6,
+      "changes": [
+        54519,
+        54519,
+        54519,
+        54519,
+        54519,
+        54519
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 306594,
+      "events": 58,
+      "skill": 600101,
+      "targetCount": 6,
+      "changes": [
+        51099,
+        51099,
+        51099,
+        51099,
+        51099,
+        51099
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 327114,
+      "events": 58,
+      "skill": 600102,
+      "targetCount": 6,
+      "changes": [
+        54519,
+        54519,
+        54519,
+        54519,
+        54519,
+        54519
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 306594,
+      "events": 58,
+      "skill": 600102,
+      "targetCount": 6,
+      "changes": [
+        51099,
+        51099,
+        51099,
+        51099,
+        51099,
+        51099
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 327114,
+      "events": 58,
+      "skill": 600111,
+      "targetCount": 6,
+      "changes": [
+        54519,
+        54519,
+        54519,
+        54519,
+        54519,
+        54519
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 306594,
+      "events": 58,
+      "skill": 600111,
+      "targetCount": 6,
+      "changes": [
+        51099,
+        51099,
+        51099,
+        51099,
+        51099,
+        51099
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 327114,
+      "events": 58,
+      "skill": 600112,
+      "targetCount": 6,
+      "changes": [
+        54519,
+        54519,
+        54519,
+        54519,
+        54519,
+        54519
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 306594,
+      "events": 58,
+      "skill": 600112,
+      "targetCount": 6,
+      "changes": [
+        51099,
+        51099,
+        51099,
+        51099,
+        51099,
+        51099
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 232074,
+      "events": 58,
+      "skill": 600121,
+      "targetCount": 6,
+      "changes": [
+        38679,
+        38679,
+        38679,
+        38679,
+        38679,
+        38679
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 217512,
+      "events": 58,
+      "skill": 600121,
+      "targetCount": 6,
+      "changes": [
+        36252,
+        36252,
+        36252,
+        36252,
+        36252,
+        36252
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 232074,
+      "events": 58,
+      "skill": 600122,
+      "targetCount": 6,
+      "changes": [
+        38679,
+        38679,
+        38679,
+        38679,
+        38679,
+        38679
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 217512,
+      "events": 58,
+      "skill": 600122,
+      "targetCount": 6,
+      "changes": [
+        36252,
+        36252,
+        36252,
+        36252,
+        36252,
+        36252
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 317790,
+      "events": 58,
+      "skill": 600131,
+      "targetCount": 6,
+      "changes": [
+        52965,
+        52965,
+        52965,
+        52965,
+        52965,
+        52965
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 297864,
+      "events": 58,
+      "skill": 600131,
+      "targetCount": 6,
+      "changes": [
+        49644,
+        49644,
+        49644,
+        49644,
+        49644,
+        49644
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 317790,
+      "events": 58,
+      "skill": 600132,
+      "targetCount": 6,
+      "changes": [
+        52965,
+        52965,
+        52965,
+        52965,
+        52965,
+        52965
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 297864,
+      "events": 58,
+      "skill": 600132,
+      "targetCount": 6,
+      "changes": [
+        49644,
+        49644,
+        49644,
+        49644,
+        49644,
+        49644
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 167976,
+      "events": 58,
+      "skill": 600141,
+      "targetCount": 6,
+      "changes": [
+        27996,
+        27996,
+        27996,
+        27996,
+        27996,
+        27996
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 157446,
+      "events": 58,
+      "skill": 600141,
+      "targetCount": 6,
+      "changes": [
+        26241,
+        26241,
+        26241,
+        26241,
+        26241,
+        26241
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 167976,
+      "events": 58,
+      "skill": 600142,
+      "targetCount": 6,
+      "changes": [
+        27996,
+        27996,
+        27996,
+        27996,
+        27996,
+        27996
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 157446,
+      "events": 58,
+      "skill": 600142,
+      "targetCount": 6,
+      "changes": [
+        26241,
+        26241,
+        26241,
+        26241,
+        26241,
+        26241
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 436734,
+      "events": 58,
+      "skill": 600151,
+      "targetCount": 6,
+      "changes": [
+        72789,
+        72789,
+        72789,
+        72789,
+        72789,
+        72789
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 409356,
+      "events": 58,
+      "skill": 600151,
+      "targetCount": 6,
+      "changes": [
+        68226,
+        68226,
+        68226,
+        68226,
+        68226,
+        68226
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 436734,
+      "events": 58,
+      "skill": 600152,
+      "targetCount": 6,
+      "changes": [
+        72789,
+        72789,
+        72789,
+        72789,
+        72789,
+        72789
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 409356,
+      "events": 58,
+      "skill": 600152,
+      "targetCount": 6,
+      "changes": [
+        68226,
+        68226,
+        68226,
+        68226,
+        68226,
+        68226
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600161,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600161,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600162,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600162,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 151614,
+      "events": 58,
+      "skill": 600171,
+      "targetCount": 6,
+      "changes": [
+        25269,
+        25269,
+        25269,
+        25269,
+        25269,
+        25269
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 142110,
+      "events": 58,
+      "skill": 600171,
+      "targetCount": 6,
+      "changes": [
+        23685,
+        23685,
+        23685,
+        23685,
+        23685,
+        23685
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 151614,
+      "events": 58,
+      "skill": 600172,
+      "targetCount": 6,
+      "changes": [
+        25269,
+        25269,
+        25269,
+        25269,
+        25269,
+        25269
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 142110,
+      "events": 58,
+      "skill": 600172,
+      "targetCount": 6,
+      "changes": [
+        23685,
+        23685,
+        23685,
+        23685,
+        23685,
+        23685
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 305712,
+      "events": 58,
+      "skill": 600181,
+      "targetCount": 6,
+      "changes": [
+        50952,
+        50952,
+        50952,
+        50952,
+        50952,
+        50952
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 286542,
+      "events": 58,
+      "skill": 600181,
+      "targetCount": 6,
+      "changes": [
+        47757,
+        47757,
+        47757,
+        47757,
+        47757,
+        47757
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 305712,
+      "events": 58,
+      "skill": 600182,
+      "targetCount": 6,
+      "changes": [
+        50952,
+        50952,
+        50952,
+        50952,
+        50952,
+        50952
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 286542,
+      "events": 58,
+      "skill": 600182,
+      "targetCount": 6,
+      "changes": [
+        47757,
+        47757,
+        47757,
+        47757,
+        47757,
+        47757
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600191,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600191,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600192,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600192,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 419490,
+      "events": 58,
+      "skill": 600201,
+      "targetCount": 6,
+      "changes": [
+        69915,
+        69915,
+        69915,
+        69915,
+        69915,
+        69915
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 393192,
+      "events": 58,
+      "skill": 600201,
+      "targetCount": 6,
+      "changes": [
+        65532,
+        65532,
+        65532,
+        65532,
+        65532,
+        65532
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 419490,
+      "events": 58,
+      "skill": 600202,
+      "targetCount": 6,
+      "changes": [
+        69915,
+        69915,
+        69915,
+        69915,
+        69915,
+        69915
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 393192,
+      "events": 58,
+      "skill": 600202,
+      "targetCount": 6,
+      "changes": [
+        65532,
+        65532,
+        65532,
+        65532,
+        65532,
+        65532
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600211,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600211,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600212,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600212,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 436734,
+      "events": 58,
+      "skill": 600221,
+      "targetCount": 6,
+      "changes": [
+        72789,
+        72789,
+        72789,
+        72789,
+        72789,
+        72789
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 409356,
+      "events": 58,
+      "skill": 600221,
+      "targetCount": 6,
+      "changes": [
+        68226,
+        68226,
+        68226,
+        68226,
+        68226,
+        68226
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 436734,
+      "events": 58,
+      "skill": 600222,
+      "targetCount": 6,
+      "changes": [
+        72789,
+        72789,
+        72789,
+        72789,
+        72789,
+        72789
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 409356,
+      "events": 58,
+      "skill": 600222,
+      "targetCount": 6,
+      "changes": [
+        68226,
+        68226,
+        68226,
+        68226,
+        68226,
+        68226
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600231,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600231,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 235170,
+      "events": 58,
+      "skill": 600232,
+      "targetCount": 6,
+      "changes": [
+        39195,
+        39195,
+        39195,
+        39195,
+        39195,
+        39195
+      ]
+    },
+    {
+      "attacktype": 2,
+      "damage": 220428,
+      "events": 58,
+      "skill": 600232,
+      "targetCount": 6,
+      "changes": [
+        36738,
+        36738,
+        36738,
+        36738,
+        36738,
+        36738
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 180450,
+      "events": 27,
+      "skill": 600241,
+      "targetCount": 6,
+      "changes": [
+        30075,
+        30075,
+        30075,
+        30075,
+        30075,
+        30075
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 224466,
+      "events": 27,
+      "skill": 600242,
+      "targetCount": 6,
+      "changes": [
+        37411,
+        37411,
+        37411,
+        37411,
+        37411,
+        37411
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 273264,
+      "events": 20,
+      "skill": 600251,
+      "targetCount": 4,
+      "changes": [
+        68316,
+        68316,
+        68316,
+        68316
+      ]
+    },
+    {
+      "attacktype": 1,
+      "damage": 351748,
+      "events": 20,
+      "skill": 600252,
+      "targetCount": 4,
+      "changes": [
+        87937,
+        87937,
+        87937,
+        87937
+      ]
+    }
+  ]
+}

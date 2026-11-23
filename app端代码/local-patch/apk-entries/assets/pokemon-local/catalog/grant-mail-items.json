@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "source": {
     "workbook": "数据相关/基础数据.xlsx",
     "sha256": "45a5e01e6bc2681ee3959e8bd39ab37c155926012b48d753a5456be25b19173c",
@@ -55,6 +55,16 @@
       "count": 64,
       "assetType": 20,
       "validation": "64 kinds / 768 upgrade rows match guild/archaeology.json"
+    },
+    "zstone": {
+      "table": "zstone_proto / word1_proto",
+      "quality": 5,
+      "grade": [
+        25,
+        40
+      ],
+      "assetType": 11,
+      "count": 70
     }
   },
   "items": [
@@ -23704,6 +23714,636 @@
       "type": 20,
       "name": "徽章 · 勇气徽章",
       "category": "公会",
+      "grantable": true
+    },
+    {
+      "id": 100255,
+      "type": 11,
+      "name": "暴鲤龙の鳞片",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 25,
+      "grantable": true
+    },
+    {
+      "id": 200255,
+      "type": 11,
+      "name": "叉字蝠の獠牙",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 25,
+      "grantable": true
+    },
+    {
+      "id": 300255,
+      "type": 11,
+      "name": "喷火龙の翅膀",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 25,
+      "grantable": true
+    },
+    {
+      "id": 400255,
+      "type": 11,
+      "name": "伪螳草の飞刀",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 25,
+      "grantable": true
+    },
+    {
+      "id": 500255,
+      "type": 11,
+      "name": "妙蛙花の花瓣",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 25,
+      "grantable": true
+    },
+    {
+      "id": 100265,
+      "type": 11,
+      "name": "宝石海星の宝石",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 26,
+      "grantable": true
+    },
+    {
+      "id": 200265,
+      "type": 11,
+      "name": "毒刺水母の毒刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 26,
+      "grantable": true
+    },
+    {
+      "id": 300265,
+      "type": 11,
+      "name": "蚊香蛙皇の触须",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 26,
+      "grantable": true
+    },
+    {
+      "id": 400265,
+      "type": 11,
+      "name": "尼多后の毛皮",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 26,
+      "grantable": true
+    },
+    {
+      "id": 500265,
+      "type": 11,
+      "name": "尼多王の头刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 26,
+      "grantable": true
+    },
+    {
+      "id": 100275,
+      "type": 11,
+      "name": "九尾の尾巴",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 27,
+      "grantable": true
+    },
+    {
+      "id": 200275,
+      "type": 11,
+      "name": "怪力の腰带",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 27,
+      "grantable": true
+    },
+    {
+      "id": 300275,
+      "type": 11,
+      "name": "胡地の胡须",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 27,
+      "grantable": true
+    },
+    {
+      "id": 400275,
+      "type": 11,
+      "name": "哥达鸭の嘴壳",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 27,
+      "grantable": true
+    },
+    {
+      "id": 500275,
+      "type": 11,
+      "name": "烈焰马の火焰",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 27,
+      "grantable": true
+    },
+    {
+      "id": 100285,
+      "type": 11,
+      "name": "臭臭泥の粘液",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 28,
+      "grantable": true
+    },
+    {
+      "id": 200285,
+      "type": 11,
+      "name": "隆隆岩の碎石",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 28,
+      "grantable": true
+    },
+    {
+      "id": 300285,
+      "type": 11,
+      "name": "双弹瓦斯の臭气",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 28,
+      "grantable": true
+    },
+    {
+      "id": 400285,
+      "type": 11,
+      "name": "雷丘の尾巴",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 28,
+      "grantable": true
+    },
+    {
+      "id": 500285,
+      "type": 11,
+      "name": "大比鸟の羽刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 28,
+      "grantable": true
+    },
+    {
+      "id": 100295,
+      "type": 11,
+      "name": "班基拉斯の盔甲",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 29,
+      "grantable": true
+    },
+    {
+      "id": 200295,
+      "type": 11,
+      "name": "沙奈朵の裙摆",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 29,
+      "grantable": true
+    },
+    {
+      "id": 300295,
+      "type": 11,
+      "name": "艾路雷朵の利刃",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 29,
+      "grantable": true
+    },
+    {
+      "id": 400295,
+      "type": 11,
+      "name": "小锯鳄の尖牙",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 29,
+      "grantable": true
+    },
+    {
+      "id": 500295,
+      "type": 11,
+      "name": "海刺龙の飞刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 29,
+      "grantable": true
+    },
+    {
+      "id": 100305,
+      "type": 11,
+      "name": "小火马の毛发",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 30,
+      "grantable": true
+    },
+    {
+      "id": 200305,
+      "type": 11,
+      "name": "火恐龙の利爪",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 30,
+      "grantable": true
+    },
+    {
+      "id": 300305,
+      "type": 11,
+      "name": "大嘴蝠の尖牙",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 30,
+      "grantable": true
+    },
+    {
+      "id": 400305,
+      "type": 11,
+      "name": "飞天螳螂の利爪",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 30,
+      "grantable": true
+    },
+    {
+      "id": 500305,
+      "type": 11,
+      "name": "尼多娜の背刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 30,
+      "grantable": true
+    },
+    {
+      "id": 100315,
+      "type": 11,
+      "name": "霸王花の肉瓣",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 31,
+      "grantable": true
+    },
+    {
+      "id": 200315,
+      "type": 11,
+      "name": "超铁暴龙の铠甲",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 31,
+      "grantable": true
+    },
+    {
+      "id": 300315,
+      "type": 11,
+      "name": "大力鳄の獠牙",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 31,
+      "grantable": true
+    },
+    {
+      "id": 400315,
+      "type": 11,
+      "name": "大竺葵の花领",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 31,
+      "grantable": true
+    },
+    {
+      "id": 100325,
+      "type": 11,
+      "name": "电击魔兽の触角",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 32,
+      "grantable": true
+    },
+    {
+      "id": 200325,
+      "type": 11,
+      "name": "多刺菊石兽の壳",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 32,
+      "grantable": true
+    },
+    {
+      "id": 300325,
+      "type": 11,
+      "name": "火暴兽の火刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 32,
+      "grantable": true
+    },
+    {
+      "id": 400325,
+      "type": 11,
+      "name": "镰刀盔の镰刀",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 32,
+      "grantable": true
+    },
+    {
+      "id": 100335,
+      "type": 11,
+      "name": "美纳斯の触须",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 33,
+      "grantable": true
+    },
+    {
+      "id": 200335,
+      "type": 11,
+      "name": "尼多后の利爪",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 33,
+      "grantable": true
+    },
+    {
+      "id": 300335,
+      "type": 11,
+      "name": "太阳伊布の宝石",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 33,
+      "grantable": true
+    },
+    {
+      "id": 400335,
+      "type": 11,
+      "name": "幸福蛋の蛋壳",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 33,
+      "grantable": true
+    },
+    {
+      "id": 100345,
+      "type": 11,
+      "name": "自爆磁怪の磁铁",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 34,
+      "grantable": true
+    },
+    {
+      "id": 200345,
+      "type": 11,
+      "name": "坚盾剑怪の盾牌",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 34,
+      "grantable": true
+    },
+    {
+      "id": 300345,
+      "type": 11,
+      "name": "盖欧卡の皮肤",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 34,
+      "grantable": true
+    },
+    {
+      "id": 400345,
+      "type": 11,
+      "name": "裂空座の尖爪",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 34,
+      "grantable": true
+    },
+    {
+      "id": 100355,
+      "type": 11,
+      "name": "炎帝の王冠",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 35,
+      "grantable": true
+    },
+    {
+      "id": 200355,
+      "type": 11,
+      "name": "勾帕路翁の毛发",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 35,
+      "grantable": true
+    },
+    {
+      "id": 300355,
+      "type": 11,
+      "name": "代拉基翁の护具",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 35,
+      "grantable": true
+    },
+    {
+      "id": 400355,
+      "type": 11,
+      "name": "时拉比の能量",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 35,
+      "grantable": true
+    },
+    {
+      "id": 100365,
+      "type": 11,
+      "name": "班吉拉斯の尖刺",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 36,
+      "grantable": true
+    },
+    {
+      "id": 200365,
+      "type": 11,
+      "name": "超铁暴龙の角",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 36,
+      "grantable": true
+    },
+    {
+      "id": 300365,
+      "type": 11,
+      "name": "凤王の羽毛",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 36,
+      "grantable": true
+    },
+    {
+      "id": 400365,
+      "type": 11,
+      "name": "洛奇亚の能量",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 36,
+      "grantable": true
+    },
+    {
+      "id": 100375,
+      "type": 11,
+      "name": "喷火驼の驼峰",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 37,
+      "grantable": true
+    },
+    {
+      "id": 200375,
+      "type": 11,
+      "name": "路卡利欧の尾巴",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 37,
+      "grantable": true
+    },
+    {
+      "id": 300375,
+      "type": 11,
+      "name": "火焰鸡の利爪",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 37,
+      "grantable": true
+    },
+    {
+      "id": 400375,
+      "type": 11,
+      "name": "喷火龙の火焰",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 37,
+      "grantable": true
+    },
+    {
+      "id": 100385,
+      "type": 11,
+      "name": "基格尔德の牙齿",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 38,
+      "grantable": true
+    },
+    {
+      "id": 200385,
+      "type": 11,
+      "name": "暴雪王の皮毛",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 38,
+      "grantable": true
+    },
+    {
+      "id": 300385,
+      "type": 11,
+      "name": "赫拉克洛斯の角",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 38,
+      "grantable": true
+    },
+    {
+      "id": 400385,
+      "type": 11,
+      "name": "幸福蛋の光环",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 38,
+      "grantable": true
+    },
+    {
+      "id": 100395,
+      "type": 11,
+      "name": "超梦の能力",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 39,
+      "grantable": true
+    },
+    {
+      "id": 200395,
+      "type": 11,
+      "name": "自爆磁怪の磁场",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 39,
+      "grantable": true
+    },
+    {
+      "id": 300395,
+      "type": 11,
+      "name": "袋兽の口袋",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 39,
+      "grantable": true
+    },
+    {
+      "id": 400395,
+      "type": 11,
+      "name": "暴飞龙の皮",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 39,
+      "grantable": true
+    },
+    {
+      "id": 100405,
+      "type": 11,
+      "name": "九尾の尾巴",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 40,
+      "grantable": true
+    },
+    {
+      "id": 200405,
+      "type": 11,
+      "name": "巨金怪の爪子",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 40,
+      "grantable": true
+    },
+    {
+      "id": 300405,
+      "type": 11,
+      "name": "卡比兽の利爪",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 40,
+      "grantable": true
+    },
+    {
+      "id": 400405,
+      "type": 11,
+      "name": "暴鲤龙の尾巴",
+      "category": "精灵装备二",
+      "quality": 5,
+      "grade": 40,
       "grantable": true
     }
   ]

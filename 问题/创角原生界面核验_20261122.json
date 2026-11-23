@@ -1,0 +1,8 @@
+{
+  "result": "pass",
+  "targetPackage": "com.qk.offline.pokemon.flowqa",
+  "freshRoleCount": 1,
+  "level": 1,
+  "observed": "点击实际创建角色按钮后进入地图和皮卡丘初始引导，无加载遮罩",
+  "screenshot": "E:\\myProjects\\game\\git_pokemon\\.tools\\skill-dyna-round\\qa\\after-create.png"
+}

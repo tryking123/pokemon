@@ -3,6 +3,9 @@ package com.pokemon.offline.embedded;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
+import com.pokemon.offline.save.SaveArchive;
+import java.io.InputStream;
+import java.io.OutputStream;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pokemon.offline.account.AccountService;
 import com.pokemon.offline.bootstrap.BootstrapServiceImpl;
@@ -26,17 +29,27 @@ import javax.sql.DataSource;
  */
 public final class EmbeddedRuntime {
     private static EmbeddedRuntime instance;
+    private final EmbeddedStore store;
+    private final SQLiteDatabase database;
+    private final AccountService accounts;
     private final OfflineAppApi api;
     private final OfflineGameSession game;
     private final BootstrapServiceImpl bootstrap;
 
     /**
      * 保存同一次装配得到的离线组件。
+     * @param store 事务入口
+     * @param database 当前存档库
+     * @param accounts 本地账号会话服务
      * @param api App 内操作分派器
      * @param game Unity 内存会话
      * @param bootstrap 本地文件资源准备器
      */
-    private EmbeddedRuntime(OfflineAppApi api, OfflineGameSession game, BootstrapServiceImpl bootstrap) {
+    private EmbeddedRuntime(OfflineAppApi api, OfflineGameSession game, BootstrapServiceImpl bootstrap,
+                            EmbeddedStore store, SQLiteDatabase database, AccountService accounts) {
+        this.store = store;
+        this.database = database;
+        this.accounts = accounts;
         this.api = api;
         this.game = game;
         this.bootstrap = bootstrap;
@@ -76,13 +89,56 @@ public final class EmbeddedRuntime {
                     graph.get(PaymentService.class), graph.get(GamePaymentService.class),
                     graph.get(ProfileMailService.class), graph.get(GameTicketService.class),
                     graph.get(com.pokemon.offline.home.PetCustomizationService.class), json, store);
-            instance = new EmbeddedRuntime(api, game, bootstrap);
+            instance = new EmbeddedRuntime(api, game, bootstrap, store, db, graph.get(AccountService.class));
             return instance;
         } catch (Exception | LinkageError failure) {
             if (game != null) game.stop();
             db.close();
             throw new IOException("无法初始化 App 离线存档", failure);
         }
+    }
+
+    /**
+     * 通过与游戏写入相同的事务入口导出一致的快照。
+     * @param context 应用上下文
+     * @param auth 当前账号令牌
+     * @param destination 用户选择的输出文件流
+     * @throws Exception 登录失效或写入失败
+     */
+    public void exportSave(Context context, String auth, OutputStream destination) throws Exception {
+        store.write(() -> {
+            requireAdmin(auth);
+            SaveArchive.exportAdmin(database, context.getCacheDir(), destination);
+            return null;
+        });
+    }
+
+    /**
+     * 导入成功后释放旧数据库和会话缓存，下一次登录重新装配组件。
+     * @param context 应用上下文
+     * @param auth 当前账号令牌
+     * @param source 用户选择的存档文件流
+     * @param regenerate 是否生成新的身份编号
+     * @throws Exception 导入或完整性检查失败
+     */
+    public static synchronized void importSave(Context context, String auth, InputStream source, boolean regenerate)
+            throws Exception {
+        EmbeddedRuntime runtime = get(context);
+        synchronized (runtime.game) {
+            runtime.store.write(() -> {
+                runtime.requireAdmin(auth);
+                SaveArchive.importAdmin(runtime.database, context.getCacheDir(), source, regenerate);
+                return null;
+            });
+            runtime.game.stop();
+            runtime.database.close();
+            instance = null;
+        }
+    }
+
+    /** 核对本地管理员会话。 */
+    private void requireAdmin(String auth) throws IOException {
+        if (!"admin".equals(accounts.requireAccount(auth).username)) throw new IOException("仅 admin 账号可操作存档");
     }
 
     /**

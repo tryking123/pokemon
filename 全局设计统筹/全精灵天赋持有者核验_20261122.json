@@ -1,0 +1,4742 @@
+{
+  "apk": "pokemon-local-20261122-talent-scope-final.apk",
+  "sha256": "c46b9d145d4e63d4822110a3a281a4bba1e49742dc10e85e00f808d3919cf72a",
+  "inMemoryPatch": false,
+  "overlay": false,
+  "scope": "每个物种在初始档和最高养成档各测单、双持有者，实际执行开场及双方攻击。另在全档注册与分派检查中用观察函数核对持有者和独立次数。",
+  "species": [
+    {
+      "sid": 10001,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10002,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10003,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10004,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10005,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10006,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10007,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10008,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10009,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10010,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10011,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10012,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10013,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10014,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10015,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10016,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10017,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10018,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10019,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10020,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10021,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10022,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10023,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10024,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10025,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10026,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10027,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10028,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10029,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10030,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10031,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10032,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10033,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 48
+    },
+    {
+      "sid": 10034,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10035,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10036,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10037,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10038,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10039,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 24
+    },
+    {
+      "sid": 10040,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 48
+    },
+    {
+      "sid": 10041,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10042,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10043,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 36
+    },
+    {
+      "sid": 10044,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10045,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10046,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10047,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10048,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10049,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10050,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10051,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10052,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10053,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10054,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10055,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 10056,
+      "cases": 6,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 12
+    },
+    {
+      "sid": 11001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 11009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21010,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21011,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21012,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21013,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21014,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21015,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21016,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21017,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21018,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21019,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21020,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21021,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21022,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21023,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21024,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21025,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21026,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21027,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21028,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21029,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21030,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21031,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 21032,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21033,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 21034,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 30
+    },
+    {
+      "sid": 22009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22010,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22011,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22012,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 30
+    },
+    {
+      "sid": 22013,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 30
+    },
+    {
+      "sid": 22014,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22015,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 22016,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 22017,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23010,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23011,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23012,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23013,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23014,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23015,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 23016,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 23017,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 31005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 31006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 31007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31010,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 31011,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31012,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 31013,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31014,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31015,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31016,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31017,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31018,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31019,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31020,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31021,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31022,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31023,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31024,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31025,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31026,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 31027,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31028,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31029,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31030,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 31031,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 30
+    },
+    {
+      "sid": 32008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32010,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32011,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32012,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32013,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32014,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32015,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 30
+    },
+    {
+      "sid": 32016,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32017,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 32018,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 32019,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 33001,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 33002,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 33003,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33004,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33005,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33006,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33007,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33008,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33009,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33010,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 33011,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33012,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 33013,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33014,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33015,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 20
+    },
+    {
+      "sid": 33016,
+      "cases": 5,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 10
+    },
+    {
+      "sid": 41001,
+      "cases": 40,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 176
+    },
+    {
+      "sid": 41002,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41003,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41004,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41005,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41006,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41007,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 41008,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41009,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41010,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41011,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41012,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 41013,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41014,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41015,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41016,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41017,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41018,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41019,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41020,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 41021,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41022,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 41023,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41024,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41025,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41026,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41027,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41028,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41029,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41030,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 41031,
+      "cases": 8,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 32
+    },
+    {
+      "sid": 42001,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42002,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42003,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42004,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42005,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42006,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42007,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42008,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42009,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42010,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42011,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42012,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42013,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42014,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42015,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42016,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42017,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 176
+    },
+    {
+      "sid": 42018,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42019,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42020,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42021,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42022,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42023,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 176
+    },
+    {
+      "sid": 42024,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 176
+    },
+    {
+      "sid": 42025,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42026,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 42027,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 42028,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43001,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43002,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43003,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43004,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43005,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43006,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 43007,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 43008,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 43009,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43010,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 200,
+      "dispatches": 280
+    },
+    {
+      "sid": 43011,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 43012,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 480
+    },
+    {
+      "sid": 43013,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 43014,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43015,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43016,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43017,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43018,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 43019,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 43020,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 380
+    },
+    {
+      "sid": 43021,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43022,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43023,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43024,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43025,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43026,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43027,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43028,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43029,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43030,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43031,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43032,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43033,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43034,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43035,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 43036,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 43037,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51001,
+      "cases": 40,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 176
+    },
+    {
+      "sid": 51002,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51003,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51004,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51005,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51006,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51007,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 51008,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 51009,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 176
+    },
+    {
+      "sid": 51010,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 51024,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52001,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 52002,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52003,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52004,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52005,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52006,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52007,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 52008,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 52009,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52010,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52011,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52012,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52013,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52014,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52015,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52016,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 52017,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52018,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 52019,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 53001,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 53002,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 53003,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 53004,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 53005,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 53006,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 53007,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 53008,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 53009,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 100,
+      "dispatches": 320
+    },
+    {
+      "sid": 53010,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 100,
+      "dispatches": 320
+    },
+    {
+      "sid": 53011,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 53012,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 53013,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 53014,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 53015,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 53016,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 53017,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 53018,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54001,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54002,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54003,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 200,
+      "dispatches": 320
+    },
+    {
+      "sid": 54004,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54005,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54006,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54013,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54015,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 54016,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 54017,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 54018,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 54019,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54020,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54021,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54022,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54023,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54024,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54025,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54026,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54027,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54028,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54029,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54030,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54031,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54032,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54033,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54034,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54035,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54036,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 54040,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54041,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54042,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54043,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 54044,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 200,
+      "dispatches": 320
+    },
+    {
+      "sid": 54045,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54046,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 54047,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54048,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54049,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 128
+    },
+    {
+      "sid": 54050,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54051,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54052,
+      "cases": 24,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 80
+    },
+    {
+      "sid": 54053,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 54054,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 54055,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 54056,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 54057,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 54058,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 54059,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 54060,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 380
+    },
+    {
+      "sid": 54061,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 54062,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 280
+    },
+    {
+      "sid": 54063,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 380
+    },
+    {
+      "sid": 54064,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 180
+    },
+    {
+      "sid": 61001,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 61002,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 61003,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 260,
+      "dispatches": 416
+    },
+    {
+      "sid": 61004,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 61005,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 61006,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 62001,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 62002,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 62003,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 62004,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 62005,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 63001,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 200,
+      "dispatches": 320
+    },
+    {
+      "sid": 63002,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 63003,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 63004,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 63005,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 63006,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 63007,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 63008,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 260,
+      "dispatches": 416
+    },
+    {
+      "sid": 63009,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 63010,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 63011,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 63012,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64009,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64010,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64011,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64012,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 130,
+      "dispatches": 416
+    },
+    {
+      "sid": 64013,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 130,
+      "dispatches": 416
+    },
+    {
+      "sid": 64014,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64019,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64020,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64021,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64022,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64023,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64024,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64025,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64026,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64027,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64028,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64029,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64030,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64031,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64032,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64033,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64034,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64035,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64036,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64037,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64038,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64039,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 64040,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64041,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64042,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64043,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64044,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 260,
+      "dispatches": 416
+    },
+    {
+      "sid": 64055,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 672
+    },
+    {
+      "sid": 64056,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64057,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64058,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 64059,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64060,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64061,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64062,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64063,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 620
+    },
+    {
+      "sid": 64064,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 620
+    },
+    {
+      "sid": 64065,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64066,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64067,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64068,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64069,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64070,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 820
+    },
+    {
+      "sid": 64071,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 64072,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 620
+    },
+    {
+      "sid": 64073,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64074,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1066
+    },
+    {
+      "sid": 64075,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64076,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64077,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64078,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 64079,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 64080,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 320
+    },
+    {
+      "sid": 64081,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64082,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64083,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 416
+    },
+    {
+      "sid": 64084,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64085,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64086,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64087,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64088,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64089,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64090,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64091,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64092,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64093,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 620
+    },
+    {
+      "sid": 64094,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 100,
+      "dispatches": 520
+    },
+    {
+      "sid": 64095,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 920
+    },
+    {
+      "sid": 64096,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64097,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64098,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 130,
+      "dispatches": 676
+    },
+    {
+      "sid": 64099,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1196
+    },
+    {
+      "sid": 64100,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 4480
+    },
+    {
+      "sid": 64101,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 520
+    },
+    {
+      "sid": 64102,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 100,
+      "dispatches": 620
+    },
+    {
+      "sid": 64103,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 620
+    },
+    {
+      "sid": 64104,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 100,
+      "dispatches": 720
+    },
+    {
+      "sid": 64105,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 676
+    },
+    {
+      "sid": 64106,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 130,
+      "dispatches": 806
+    },
+    {
+      "sid": 64107,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64108,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 130,
+      "dispatches": 936
+    },
+    {
+      "sid": 64109,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 620
+    },
+    {
+      "sid": 64110,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64111,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 286
+    },
+    {
+      "sid": 64112,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 806
+    },
+    {
+      "sid": 64113,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64114,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64115,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64116,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 64117,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 448
+    },
+    {
+      "sid": 64118,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1792
+    },
+    {
+      "sid": 64119,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64120,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 672
+    },
+    {
+      "sid": 64121,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 2368
+    },
+    {
+      "sid": 64122,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1984
+    },
+    {
+      "sid": 64123,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 220
+    },
+    {
+      "sid": 64124,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1216
+    },
+    {
+      "sid": 64125,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 200,
+      "dispatches": 320
+    },
+    {
+      "sid": 64126,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 832
+    },
+    {
+      "sid": 64127,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64128,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 100,
+      "dispatches": 2120
+    },
+    {
+      "sid": 64129,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64130,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64131,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64132,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 130,
+      "dispatches": 2756
+    },
+    {
+      "sid": 64133,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64134,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64135,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1600
+    },
+    {
+      "sid": 64136,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1600
+    },
+    {
+      "sid": 64137,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64138,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64139,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64140,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 384,
+      "dispatches": 640
+    },
+    {
+      "sid": 64141,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 3328
+    },
+    {
+      "sid": 64142,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1216
+    },
+    {
+      "sid": 64143,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64144,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64145,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64146,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64147,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64148,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 384,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64149,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 384,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64150,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64151,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64152,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64153,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64154,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1216
+    },
+    {
+      "sid": 64155,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64156,
+      "cases": 50,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 420
+    },
+    {
+      "sid": 64157,
+      "cases": 65,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 546
+    },
+    {
+      "sid": 64158,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1408
+    },
+    {
+      "sid": 64159,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64160,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 2368
+    },
+    {
+      "sid": 64161,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1792
+    },
+    {
+      "sid": 64162,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64163,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64164,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1216
+    },
+    {
+      "sid": 64165,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1600
+    },
+    {
+      "sid": 64166,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64167,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64168,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64169,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 640
+    },
+    {
+      "sid": 64170,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64171,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64172,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64173,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64174,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1792
+    },
+    {
+      "sid": 64175,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64176,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 192,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64177,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1440
+    },
+    {
+      "sid": 64178,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1440
+    },
+    {
+      "sid": 64179,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64180,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1984
+    },
+    {
+      "sid": 64181,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1600
+    },
+    {
+      "sid": 64182,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 832
+    },
+    {
+      "sid": 64183,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1600
+    },
+    {
+      "sid": 64184,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1792
+    },
+    {
+      "sid": 64185,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1600
+    },
+    {
+      "sid": 64186,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1216
+    },
+    {
+      "sid": 64187,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64188,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 1024
+    },
+    {
+      "sid": 64189,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 2016
+    },
+    {
+      "sid": 64190,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 480
+    },
+    {
+      "sid": 641891,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 288
+    },
+    {
+      "sid": 641892,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 288
+    },
+    {
+      "sid": 641893,
+      "cases": 96,
+      "battles": 4,
+      "attacks": 16,
+      "pairedAuraSlots": 0,
+      "dispatches": 288
+    }
+  ],
+  "catalog": {
+    "cases": 8735,
+    "pairedAuraSlots": 0,
+    "dispatches": 17470
+  }
+}

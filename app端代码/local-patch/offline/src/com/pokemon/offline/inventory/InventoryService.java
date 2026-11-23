@@ -945,6 +945,13 @@ public class InventoryService {
                 long accepted;
                 if (reward.type == SystemMailReward.ITEM) {
                     accepted = receiveItemQuantity(roleId, reward.configId, reward.quantity);
+                } else if (reward.type == SystemMailReward.ZSTONE) {
+                    accepted = Math.min(reward.quantity, Math.max(0, ordinaryCapacity(roleId) - ordinaryUsed(roleId)));
+                    for (int index = 0; index < accepted; index++) {
+                        if (mapper.insertZstone(roleId, UUID.randomUUID().toString(), reward.configId) != 1) {
+                            throw new IllegalStateException("邮件精灵装备未写入存档");
+                        }
+                    }
                 } else if (reward.type == SystemMailReward.STICKER) {
                     accepted = runeInventory.getIfAvailable().receiveMailStickers(roleId, reward.configId, reward.quantity);
                 } else if (reward.type == SystemMailReward.CARRY || reward.type == SystemMailReward.POWERSTONE) {

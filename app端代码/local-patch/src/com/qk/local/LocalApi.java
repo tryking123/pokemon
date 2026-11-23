@@ -163,6 +163,11 @@ public final class LocalApi {
         return session;
     }
 
+    /** 导入成功后清除旧存档签发的内存令牌。 */
+    static synchronized void forgetSession() {
+        session = null;
+    }
+
     /** 校验账号密码并更新本地会话。 */
     static synchronized JSONObject login(String username, String password) throws Exception {
         JSONObject body = new JSONObject().put("username", username).put("password", password);

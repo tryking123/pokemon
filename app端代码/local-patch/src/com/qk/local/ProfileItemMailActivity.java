@@ -37,12 +37,14 @@ import org.json.JSONObject;
 public final class ProfileItemMailActivity extends Activity {
     private static final String ALL = "全部分类";
     private static final String ELF_GEAR = "精灵装备";
+    private static final String ELF_GEAR_TWO = "精灵装备二";
     private final List<Item> items = new ArrayList<>();
     private final List<Item> filtered = new ArrayList<>();
     private AlertDialog dialog;
     private ArrayAdapter<Item> results;
     private Spinner categories;
     private Spinner qualities;
+    private String gradeCategory;
     private ListView list;
     private EditText search;
     private EditText quantity;
@@ -57,7 +59,7 @@ public final class ProfileItemMailActivity extends Activity {
     /** 一条可发放的随包目录项。 */
     private static final class Item {
         final String name, category, label;
-        final int id, type, quality;
+        final int id, type, grade;
 
         /** 按资源目录读取物品的原编号、类别和显示名称。 */
         Item(JSONObject row) throws Exception {
@@ -65,9 +67,10 @@ public final class ProfileItemMailActivity extends Activity {
             type = row.getInt("type");
             name = row.getString("name");
             category = row.getString("category");
-            quality = row.optInt("quality");
-            String details = ELF_GEAR.equals(category) ? row.optString("gearKind") + "  ·  " + quality + "阶"
+            grade = ELF_GEAR_TWO.equals(category) ? row.getInt("grade") : row.optInt("quality");
+            String details = ELF_GEAR.equals(category) ? row.optString("gearKind") + "  ·  " + grade + "阶"
                     + (row.optInt("gearLevel") > 0 ? "  ·  " + row.optInt("gearLevel") + "级" : "")
+                    : ELF_GEAR_TWO.equals(category) ? "精灵装备二  ·  红色  ·  " + grade + "阶"
                     : "贴纸".equals(category) ? "贴纸  ·  刻印等级 " + row.optInt("stickerLevel") : category;
             label = name + "  ·  " + id + "  ·  " + details;
         }
@@ -137,14 +140,8 @@ public final class ProfileItemMailActivity extends Activity {
         ArrayAdapter<String> groupAdapter = new ArrayAdapter<>(theme, android.R.layout.simple_spinner_dropdown_item, labels);
         categories.setAdapter(groupAdapter);
         form.addView(categories);
-        List<String> qualityLabels = new ArrayList<>();
-        qualityLabels.add("全部等阶");
-        java.util.SortedSet<Integer> availableQualities = new java.util.TreeSet<>();
-        for (Item item : items) if (ELF_GEAR.equals(item.category)) availableQualities.add(item.quality);
-        for (Integer value : availableQualities) qualityLabels.add(value + "阶");
         qualities = new Spinner(theme);
         qualities.setContentDescription("精灵装备等阶");
-        qualities.setAdapter(new ArrayAdapter<>(theme, android.R.layout.simple_spinner_dropdown_item, qualityLabels));
         form.addView(qualities);
         list = new ListView(theme);
         results = new ArrayAdapter<>(theme, android.R.layout.simple_list_item_single_choice, filtered);
@@ -172,7 +169,7 @@ public final class ProfileItemMailActivity extends Activity {
             receipt = state.getString("receipt");
             search.setText(state.getString("search", ""));
             categories.setSelection(Math.max(0, labels.indexOf(state.getString("category", ALL))));
-            qualities.setSelection(Math.max(0, qualityLabels.indexOf(state.getString("quality", "全部等阶"))));
+            setGrades(state.getString("category", ALL), state.getString("quality", "全部等阶"));
             for (Item item : items) {
                 if (item.id == state.getInt("id", -1) && item.type == state.getInt("type", -1)) selected = item;
             }
@@ -205,18 +202,36 @@ public final class ProfileItemMailActivity extends Activity {
         refresh();
     }
 
+    /**
+     * 根据当前装备分类列出实际可选等阶。
+     *
+     * @param group 当前分类
+     * @param selectedGrade 需要恢复的等阶标签
+     */
+    private void setGrades(String group, String selectedGrade) {
+        gradeCategory = group;
+        java.util.SortedSet<Integer> grades = new java.util.TreeSet<>();
+        for (Item item : items) if (group.equals(item.category)) grades.add(item.grade);
+        List<String> labels = new ArrayList<>();
+        labels.add("全部等阶");
+        for (Integer grade : grades) labels.add(grade + "阶");
+        qualities.setAdapter(new ArrayAdapter<>(qualities.getContext(), android.R.layout.simple_spinner_dropdown_item, labels));
+        qualities.setSelection(Math.max(0, labels.indexOf(selectedGrade)));
+    }
+
     /** 仅显示符合分类及名称、编号搜索的物品。 */
     private void refresh() {
         if (results == null) return;
         String query = search.getText().toString().trim().toLowerCase(Locale.ROOT);
         String group = String.valueOf(categories.getSelectedItem());
-        boolean equipment = ELF_GEAR.equals(group);
+        boolean equipment = ELF_GEAR.equals(group) || ELF_GEAR_TWO.equals(group);
+        if (equipment && !group.equals(gradeCategory)) setGrades(group, "全部等阶");
         qualities.setVisibility(equipment ? View.VISIBLE : View.GONE);
         String quality = String.valueOf(qualities.getSelectedItem());
         filtered.clear();
         for (Item item : items) {
             if ((ALL.equals(group) || item.category.equals(group))
-                    && (!equipment || qualities.getSelectedItemPosition() == 0 || quality.equals(item.quality + "阶"))
+                    && (!equipment || qualities.getSelectedItemPosition() == 0 || quality.equals(item.grade + "阶"))
                     && (item.label.toLowerCase(Locale.ROOT).contains(query))) filtered.add(item);
         }
         if (!filtered.contains(selected)) selected = null;

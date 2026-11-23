@@ -1,0 +1,45 @@
+{
+  "growthRows": 584,
+  "qaOnlyMissingMaterials": {
+    "20003": 619,
+    "20020": 860,
+    "20014": 1005
+  },
+  "role": "2beeec4d-f849-494f-aae8-1e141a6f1453",
+  "elf": "EL006a8624b7d08b4f68a4c595ef9bab4955",
+  "evolvedSpecies": 64058,
+  "coinCost": 26000000,
+  "qaOnlyLove": 40,
+  "newRole": "d410195a-941f-4b41-afed-929e590244b8",
+  "registerFrames": [
+    "S2020",
+    "S3",
+    "S1007",
+    "S372",
+    "C3",
+    "S4"
+  ],
+  "result": "pass",
+  "apkSha256": "4eb1faf8b4024629570a205317cc448f345531c77eb8c83cae088b6c0c174a6a",
+  "source": "小米admin实际存档的只读副本",
+  "physicalSaveModified": false,
+  "copiedSaveIntegrity": "ok",
+  "checks": 612,
+  "coldChecks": 2,
+  "initialLove": 34,
+  "requiredAdvance": 9,
+  "requiredLove": 40,
+  "materials": {
+    "20003": 1870,
+    "20020": 1125,
+    "20014": 1125
+  },
+  "uiCreation": {
+    "result": "pass",
+    "targetPackage": "com.qk.offline.pokemon.flowqa",
+    "freshRoleCount": 1,
+    "level": 1,
+    "observed": "点击实际创建角色按钮后进入地图和皮卡丘初始引导，无加载遮罩",
+    "screenshot": "E:\\myProjects\\game\\git_pokemon\\.tools\\skill-dyna-round\\qa\\after-create.png"
+  }
+}

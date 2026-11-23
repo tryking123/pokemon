@@ -154,6 +154,8 @@ public class MineService {
                 else {
                     if (lease!=null) pay(role,state,result);
                     state.with("captures").remove(scene+":"+pos);
+                    carnival.record(id,40010,1);
+                    state.put("occupations", Math.max(state.path("occupations").asInt(), lease == null ? 0 : 1) + 1);
                     ObjectNode holder=state.putObject("lease");
                     holder.put("scene",scene).put("pos",pos).put("team",team).put("started",now)
                             .put("power",combat.power(players)).put("rate",new int[]{1000,1500,2500}[region.get(1).asInt()])

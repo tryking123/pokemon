@@ -1,0 +1,106 @@
+{
+  "apk": "E:\\myProjects\\game\\git_pokemon\\app包\\new\\pokemon-local-20261122-training-local-fix.apk",
+  "size": 603743216,
+  "sha256": "b9f56db65b86121821fe532a43e5d804bc7035b67d3d8ca632577ce3d33fc319",
+  "branch": "codex/docs-single-maintainer",
+  "javaDex": "d5a997ddae2d4615fbe5c184cdc1228f4332c00fe4ea47a69bdb2d8ff6167c02",
+  "runtime": "isolated QA Android SQLite; final APK Java/resources; WiFi/mobile disabled; no ADB reverse",
+  "passedChecks": {
+    "setup": 2189,
+    "boundaries": 10,
+    "cold": 25
+  },
+  "sevenClaims": [
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "originalBreakthroughStages": 133,
+  "breakthroughSample": {
+    "baseHp": 10000,
+    "injection10Hp": 10600,
+    "stage11Hp": 12720
+  },
+  "starBoundaries": true,
+  "softFullBarReplacement": true,
+  "limits": [
+    "全部原生按钮/动画待逐项回归",
+    "32位已解析及幂等，未设备运行",
+    "未覆盖用户正式App及玩家存档，未提交推送"
+  ],
+  "taskStartBranch": "codex/fix-v4-local-integration",
+  "workspaceNote": "执行期间其他并行工作切换了当前分支；本轮没有提交、推送、清理或切换分支。"
+}

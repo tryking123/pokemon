@@ -1,9 +1,9 @@
-"""把火箭队原战斗终局送回进程内业务。"""
+"""把火箭队和道馆的原战斗终局送回进程内业务。"""
 from pathlib import Path
 
 
 def patch_rocket_result(source, h):
-    """仅替换 battle_ctrl 的 PEAKED 终局返回，保留其余跳转与寄存器。"""
+    """分别在 PEAKED 返回和普通胜负页分支接入对应的终局回执。"""
     reader = h.Reader(source)
     assert reader.raw(4) == b'\x1bLJ\x02'
     arg = 2 if reader.num() & 8 else 1
@@ -37,6 +37,24 @@ def patch_rocket_result(source, h):
                          + h.ins("CALL", 0, 514) + h.ins("UGET", arg, 0)
                          + h.ins("UGET", arg + 1, 2) + h.ins("CALL", 0, 259)
                          + h.ins("RET0", 0, 1))
+            dojo = Path(__file__).with_name("local-dojo-result.lua").read_bytes()
+            slots = [i for i, entry in enumerate(pool) if isinstance(entry, bytes) and b"local_dojo_result" in entry]
+            if slots:
+                assert len(slots) == 1
+                pool[slots[0]] = h.pack(dojo)
+            else:
+                # 普通胜负分支入口。调用后恢复原 UGET，再接回胜负页判断。
+                at = 23
+                original = h.ins("UGET", 1, 0)
+                assert code[at*4:at*4+4] == original and head[2] >= 3 + arg
+                start = len(code) // 4
+                key = len(pool)
+                pool = [h.pack(dojo), h.pack(b"loadstring")] + pool
+                code[at*4:at*4+4] = h.ins("JMP", 0, 32768 + start - at - 1)
+                code += (h.ins("GGET", 1, key) + h.ins("KSTR", 1 + arg, key + 1)
+                         + h.ins("CALL", 1, 514) + h.ins("UGET", 1 + arg, 0)
+                         + h.ins("UGET", 2 + arg, 2) + h.ins("CALL", 1, 259) + original)
+                code += h.ins("JMP", 0, 32768 + at - len(code)//4)
             raw = (head + h.encode(len(pool)) + h.encode(nn) + h.encode(len(code)//4) + code + up
                    + b''.join(map(h.serial_constant, pool)) + numbers)
             changes += 1

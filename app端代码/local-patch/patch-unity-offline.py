@@ -8,6 +8,7 @@ import sys
 import zipfile
 from patch_awake_ui import patch_awake_ui, patch_character_catalog_ui, patch_skill_slots
 from patch_battle_reentry import patch_battle_reentry
+from patch_quest_ui import patch_task_guides, patch_task_lock, patch_task_navigation
 from patch_rocket_result import patch_rocket_result
 from patch_team_talents import patch_team_talents
 
@@ -168,6 +169,53 @@ def patch_calls(source, mode):
     return bytes(result)
 
 
+def patch_gacha_preview(source):
+    """三个世界阶段的高级预览共用离线抽取名单。"""
+    from apk_table_tools import decode_table, patch_table
+    catalog = HERE / "offline/resources/gacha/catalog.properties"
+    properties = dict(line.split("=", 1) for line in catalog.read_text(encoding="utf8").splitlines()
+                      if line and not line.startswith("#"))
+    species = [int(value) for value in properties["advanced.elves"].split(",")]
+    rewards = [value for species_id in species for value in (2, species_id)]
+    stages = decode_table(source)
+    for stage in stages.values():
+        stage["reward2"] = rewards
+    return patch_table(source, stages, helpers)
+
+
+def show_dynamax_entry(payload, unity):
+    """默认展示进化页的极巨化标签，保留 Lock2 的原点击区域及资格提示。"""
+    bundle = unity.load(payload)
+    entry_id = 1344037337806686134
+    entry = next(obj.read() for obj in bundle.objects if obj.path_id == entry_id)
+    transform = entry.m_Component[0].component.read()
+    path = []
+    while transform:
+        path.append(transform.m_GameObject.read().m_Name)
+        transform = transform.m_Father.read() if transform.m_Father.path_id else None
+    assert path == ["2", "ToggleGroup", "Evolve", "Content", "SpriteHandle"]
+    entry.m_IsActive = True
+    entry.save()
+
+    children = entry.m_Component[0].component.read().m_Children
+    lock = next(child.read() for child in children if child.read().m_GameObject.read().m_Name == "Lock2")
+    background = next(component.component for component in lock.m_GameObject.read().m_Component
+                      if component.component.type.name == "MonoBehaviour"
+                      and "m_RaycastTarget" in component.component.read_typetree())
+    image = background.read_typetree()
+    assert image["m_RaycastTarget"]
+    image["m_Color"]["a"] = 0.0
+    background.deref().save_typetree(image)
+
+    icon, = lock.m_Children
+    icon_rect = icon.read()
+    assert icon_rect.m_GameObject.read().m_Name == "Image"
+    # 将锁标放在原标签左侧图标位置，给名称留出完整宽度。
+    icon_rect.m_AnchoredPosition.x = -72.7
+    icon_rect.save()
+    return bundle.file.save(packer="lz4")
+
+
 def apply(origin, output):
     """在已有 APK 增量条目上叠加补丁，并同步两级资源清单。"""
     from Crypto.Cipher import AES
@@ -196,7 +244,10 @@ def apply(origin, output):
             row[2:] = [str(len(container)), str(len(encrypted))]
             container.extend(encrypted)
             return updated
+        changed["modules_sprite.ab"] = replace("modules_sprite.ab", lambda value: show_dynamax_entry(value, UnityPy))
         for abi in (32, 64):
+          preview = f"lua{abi}_database_preview_proto.lua.bytes"
+          changed[preview] = replace(preview, patch_gacha_preview)
           for bundle_name, filename, patch in (("network", "network.lua", patch_network),
                   ("module_login", "login_model.lua", lambda value: patch_calls(value, "login")),
                   ("manager", "sdk_mgr.lua", lambda value: patch_calls(value, "order")),
@@ -207,6 +258,8 @@ def apply(origin, output):
                   ("module_sprite", "skill_panel.lua", lambda value: patch_skill_slots(value, helpers)),
                   ("manager", "data_mgr.lua", lambda value: patch_character_catalog_ui(value, helpers)),
                   ("module_battle", "battle_module.lua", lambda value: patch_battle_reentry(value, helpers)),
+                  ("gmodel", "gtask_model.lua", lambda value: patch_task_guides(patch_task_lock(value))),
+                  ("module_navi", "navi_view.lua", patch_task_navigation),
                   ("module_battle", "battle_ctrl.lua", lambda value: patch_rocket_result(value, helpers)),
                   ("module_battle", "formation.lua", lambda value: patch_team_talents(value, helpers))):
             name = f"lua{abi}_{bundle_name}.ab"

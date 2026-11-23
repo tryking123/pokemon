@@ -55,10 +55,9 @@ public class GachaService {
     private final InventoryService inventory;
     private final QuestService quests;
     private final int firstNormalElf;
-    private final int firstAdvancedElf;
     private final int[] normalItems;
     private final int[] normalElves;
-    private final int[] advancedItems;
+    private final int[] advancedElves;
     private final int[] friendItems;
     private final long openingFriendPoints;
     private final boolean dailyAdvancedFree;
@@ -87,7 +86,6 @@ public class GachaService {
             configuration.load(input);
         }
         this.firstNormalElf = Integer.parseInt(configuration.getProperty("normal.firstElf"));
-        this.firstAdvancedElf = Integer.parseInt(configuration.getProperty("advanced.firstElf"));
         this.normalItems = configuredItems(configuration.getProperty("normal.repeatItems"));
         this.normalElves = Arrays.stream(configuration.getProperty("normal.repeatElves").split(","))
                 .mapToInt(Integer::parseInt).toArray();
@@ -96,7 +94,8 @@ public class GachaService {
                 throw new IllegalArgumentException("普通扭蛋精灵模板缺失：" + id);
             }
         }
-        this.advancedItems = configuredItems(configuration.getProperty("advanced.repeatItems"));
+        this.advancedElves = Arrays.stream(configuration.getProperty("advanced.elves").split(","))
+                .mapToInt(Integer::parseInt).toArray();
         this.friendItems = configuredItems(configuration.getProperty("friend.repeatItems"));
         this.openingFriendPoints = Long.parseLong(configuration.getProperty("friend.openingPoints"));
         this.dailyAdvancedFree = "1".equals(configuration.getProperty("advanced.dailyFree"));
@@ -209,7 +208,7 @@ public class GachaService {
     }
 
     /**
-     * 确定本次扭蛋奖励，普通首抽后的奖励按预览池条目等概率抽取。
+     * 确定基础奖励。高级单抽和十连的每个普通奖位均从高级预览名单等概率抽取。
      *
      * @param type 原协议抽取类型
      * @param drawn 历史同类型抽取数字
@@ -219,16 +218,16 @@ public class GachaService {
         if (type == FRIEND) {
             return new GachaDraw.Reward(1, friendItems[drawn % friendItems.length]);
         }
-        boolean normal = type == NORMAL;
+        if (type != NORMAL) {
+            int index = ThreadLocalRandom.current().nextInt(advancedElves.length);
+            return new GachaDraw.Reward(ELF_REWARD, advancedElves[index]);
+        }
         if (drawn == 0) {
-            return new GachaDraw.Reward(ELF_REWARD, normal ? firstNormalElf : firstAdvancedElf);
+            return new GachaDraw.Reward(ELF_REWARD, firstNormalElf);
         }
-        if (normal) {
-            int index = ThreadLocalRandom.current().nextInt(normalItems.length + normalElves.length);
-            return index < normalItems.length ? new GachaDraw.Reward(1, normalItems[index])
-                    : new GachaDraw.Reward(ELF_REWARD, normalElves[index - normalItems.length]);
-        }
-        return new GachaDraw.Reward(1, advancedItems[(drawn - 1) % advancedItems.length]);
+        int index = ThreadLocalRandom.current().nextInt(normalItems.length + normalElves.length);
+        return index < normalItems.length ? new GachaDraw.Reward(1, normalItems[index])
+                : new GachaDraw.Reward(ELF_REWARD, normalElves[index - normalItems.length]);
     }
 
     /**

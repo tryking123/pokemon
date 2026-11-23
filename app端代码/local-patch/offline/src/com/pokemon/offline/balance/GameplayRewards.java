@@ -148,22 +148,33 @@ public class GameplayRewards {
         SplittableRandom equipmentRandom = new SplittableRandom(seed).split();
         SplittableRandom elfRandom = new SplittableRandom(~seed).split();
         QuickenDrop drop = new QuickenDrop();
-        for (int n = 0; n < positive(quickenDrop, "equipmentCount"); n++) {
-            JsonNode pool = map.path("equipment");
-            drop.equipment.add(pool.get(equipmentRandom.nextInt(pool.size())).asInt());
-        }
-        for (int n = 0; n < positive(quickenDrop, "elfCount"); n++) {
-            JsonNode pool = map.path("elves");
-            drop.elves.add(pool.get(elfRandom.nextInt(pool.size())).asInt());
-        }
+        drawTemplates(drop.equipment, map.path("equipment"), quickenDrop.path("equipmentCount"), equipmentRandom);
+        drawTemplates(drop.elves, map.path("elves"), quickenDrop.path("elfCount"), elfRandom);
         JsonNode stones = quickenDrop.path("stones");
-        int portions = seconds / positive(quickenDrop, "stoneIntervalSeconds");
-        for (int i = 0; i < portions; i++) {
-            drop.items.merge(stones.get(i % stones.size()).asInt(), 1L, Long::sum);
+        int total = positive(quickenDrop, "stoneCount");
+        int count = stones.size();
+        int remainder = total % count;
+        int first = (int) ((long) used * remainder % count);
+        for (int i = 0; i < count; i++) {
+            int id = stones.get((first + i) % count).asInt();
+            drop.items.put(id, (long) (total / count + (i < remainder ? 1 : 0)));
         }
-        drop.items.merge(positive(quickenDrop, "fruitId"),
-                (long) portions * positive(quickenDrop, "fruitPerStone"), Long::sum);
+        drop.items.put(positive(quickenDrop, "fruitId"), (long) positive(quickenDrop, "fruitCount"));
         return drop;
+    }
+
+    /**
+     * 在含上下端点的数量区间内均匀取样，再逐件有放回地抽取本地图模板。
+     * @param result 接收模板的列表
+     * @param templates 当前地图可掉落的模板数组
+     * @param range 本次发放数量的上下限
+     * @param random 当前结算键对应的随机序列
+     */
+    private static void drawTemplates(List<Integer> result, JsonNode templates, JsonNode range, SplittableRandom random) {
+        int count = random.nextInt(positive(range, "min"), Math.addExact(positive(range, "max"), 1));
+        for (int i = 0; i < count; i++) {
+            result.add(templates.get(random.nextInt(templates.size())).asInt());
+        }
     }
 
     /**

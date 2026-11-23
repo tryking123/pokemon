@@ -13,6 +13,8 @@ public final class SystemMailReward {
     /** 精灵携带品独立实例。 */
     public static final int CARRY = 4;
     public static final int DRESS_CHIP = 7;
+    /** 秘境产出的精灵装备独立实例。 */
+    public static final int ZSTONE = 11;
     /** 训练家装备刻印使用的套装贴纸。 */
     public static final int STICKER = 12;
     /** 精灵 P 力石独立实例。 */

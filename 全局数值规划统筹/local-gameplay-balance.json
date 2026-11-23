@@ -60,12 +60,12 @@
   },
   "quickenDrop": {
     "seconds": 7200,
-    "stoneIntervalSeconds": 1200,
+    "stoneCount": 500,
     "stones": [21017, 21018, 21019, 21020, 21021, 21022],
     "fruitId": 22019,
-    "fruitPerStone": 3,
-    "equipmentCount": 1,
-    "elfCount": 1,
+    "fruitCount": 18,
+    "equipmentCount": {"min": 20, "max": 40},
+    "elfCount": {"min": 10, "max": 15},
     "maps": {
       "1": {"equipment": [10011, 10012, 10013, 10014, 10015, 10016, 10021, 10022, 10023, 10024, 10025, 10026], "elves": [11004, 21032]},
       "2": {"equipment": [10111, 10112, 10113, 10114, 10115, 10116, 10121, 10122, 10123, 10124, 10125, 10126], "elves": [11003, 21033]},
