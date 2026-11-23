@@ -66,7 +66,8 @@ public enum HangupMap {
 
     public final int id;
     public final int door;
-    public final int requiredMission;
+    /** 允许传送时，存档中下一待挑战关的最小编号。 */
+    public final int minimumNextMission;
     /** 原 map_proto 所需训练师阶段。 */
     public final int requiredWorld;
     public final int x;
@@ -97,7 +98,8 @@ public enum HangupMap {
               int rewardMission, int diamonds, int coins, int stones) {
         this.id = id;
         this.door = door;
-        this.requiredMission = requiredMission;
+        // 原进入门槛晚于本图奖励时，完成奖励关的下一关起允许传送。
+        this.minimumNextMission = requiredMission > rewardMission ? rewardMission + 1 : requiredMission;
         this.requiredWorld = id < 22 ? 0 : id < 38 ? 1 : 2;
         this.x = x;
         this.y = y;

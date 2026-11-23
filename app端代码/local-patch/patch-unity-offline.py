@@ -11,6 +11,7 @@ from patch_battle_reentry import patch_battle_reentry
 from patch_quest_ui import patch_task_guides, patch_task_lock, patch_task_navigation
 from patch_rocket_result import patch_rocket_result
 from patch_team_talents import patch_team_talents
+from patch_ancient_ui import patch_ancient_select
 
 HERE = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location("offline_arena_helpers", HERE / "patch-unity-arena.py")
@@ -256,6 +257,7 @@ def apply(origin, output):
                   ("module_fesrevel", "fesrevel_ctrl.lua", lambda value: patch_calls(value, "carnival")),
                   ("module_sprite", "elf_handle.lua", lambda value: patch_awake_ui(value, helpers)),
                   ("module_sprite", "skill_panel.lua", lambda value: patch_skill_slots(value, helpers)),
+                  ("module_sprite", "spancient_consume.lua", lambda value: patch_ancient_select(value, helpers)),
                   ("manager", "data_mgr.lua", lambda value: patch_character_catalog_ui(value, helpers)),
                   ("module_battle", "battle_module.lua", lambda value: patch_battle_reentry(value, helpers)),
                   ("gmodel", "gtask_model.lua", lambda value: patch_task_guides(patch_task_lock(value))),

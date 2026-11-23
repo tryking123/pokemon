@@ -149,7 +149,7 @@ public class StoneFusionService {
         ArrayNode attrs = json.createArrayNode();
         Random random = new Random(((long) sid.hashCode() << 32) ^ template);
         for (int i = 0; i < rule.path("initial").asInt(); i++) {
-            attrs.add(draw(rule, attrs, random));
+            attrs.add(draw(rule, attrs, random, false));
         }
         return attrs;
     }
@@ -159,9 +159,10 @@ public class StoneFusionService {
      * @param rule 石头模板
      * @param taken 已保留的词条
      * @param random 抽取随机源
+     * @param maximum 洗练时取所选词条上限，生成与融合时按原区间抽取
      * @return 词条原编号及区间内数值
      */
-    private ObjectNode draw(JsonNode rule, ArrayNode taken, Random random) {
+    private ObjectNode draw(JsonNode rule, ArrayNode taken, Random random, boolean maximum) {
         List<Integer> pool = new ArrayList<>();
         Set<Integer> occupied = new HashSet<>();
         for (JsonNode attr : taken) {
@@ -175,7 +176,8 @@ public class StoneFusionService {
         int key = pool.get(random.nextInt(pool.size()));
         JsonNode range = rules.path("ranges").path(Integer.toString(key));
         int low = range.get(0).asInt();
-        int value = low + random.nextInt(range.get(1).asInt() - low + 1);
+        int high = range.get(1).asInt();
+        int value = maximum ? high : low + random.nextInt(high - low + 1);
         return json.createObjectNode().put("attrid", key).put("attrnum", value);
     }
 
@@ -281,7 +283,7 @@ public class StoneFusionService {
         }
         boolean success = ThreadLocalRandom.current().nextInt(100) < rate + boosters * 10;
         if (success) {
-            attrs.add(draw(template, attrs, ThreadLocalRandom.current()));
+            attrs.add(draw(template, attrs, ThreadLocalRandom.current(), false));
             jdbc.update("UPDATE local_secret_stone SET attrs=?,candidate=NULL WHERE role_id=? AND sid=?", attrs.toString(), role, sid);
         }
         stone.remove("candidate");
@@ -318,7 +320,7 @@ public class StoneFusionService {
         ArrayNode candidate = attrs.deepCopy();
         for (int i = 0; i < attrs.size(); i++) {
             if (!locked.contains(i + 1)) {
-                ObjectNode attr = draw(template, occupied, ThreadLocalRandom.current());
+                ObjectNode attr = draw(template, occupied, ThreadLocalRandom.current(), true);
                 occupied.add(attr);
                 candidate.set(i, attr);
             }

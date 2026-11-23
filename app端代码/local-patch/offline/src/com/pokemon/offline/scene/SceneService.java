@@ -334,7 +334,7 @@ public class SceneService {
         HangupMap target = HangupMap.byDoor(portalId);
         if (target != null && (role.sceneId == CITY || onHangupMap
                 || role.sceneId == GUILD_HALL || role.sceneId == GUILD_DUNGEON)) {
-            if (adventure.nextMission(role.id) < target.requiredMission || role.stage < target.requiredWorld) {
+            if (adventure.nextMission(role.id) < target.minimumNextMission || role.stage < target.requiredWorld) {
                 return new TravelResult(CLOSED_PORTAL, role);
             }
             hangup.activate(role.id, target);

@@ -52,6 +52,8 @@ def create_plan(origin,donor):
     for sid,target in SPECIES.items():
         assert str(target) not in old['jingling']
         row=copy.deepcopy(source['jingling'][str(sid)])
+        # 供体的评价编号 8 在固定底包表示 S+；这些粉色精灵统一适配为底包 SSS。
+        row['assess']=11
         row['name']=word(row.get('name'),NAMES[sid]);textfields(row,['charactername'])
         if 'word' in row:row['word']={k:word(v) for k,v in row['word'].items()}
         for key in ['jinhua2','changeid']:

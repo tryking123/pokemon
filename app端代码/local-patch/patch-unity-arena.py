@@ -211,6 +211,14 @@ def update_lua(source, mode):
         variables = proto.raw(head[3] * 2)
         pool = constants(proto, nconstants)
         numbers = proto.data[proto.pos:]
+        if mode == "map_unlock":
+            # 地图页按已通关关号判断。已达到本图通关奖励门槛时也应能进入。
+            for row in pool:
+                if isinstance(row, Template) and b"rewardlevel" in row.fields:
+                    fields = row.fields
+                    if fields[b"needlevel"] > fields[b"rewardlevel"]:
+                        fields[b"needlevel"] = fields[b"rewardlevel"]
+                        counts[fields[b"door"]] += 1
         if mode == "pcl_unlock":
             # 原 PCL 入口仍标记未开放；只打开 1195 对应行，保留训练家 80 级门槛。
             for row in pool:
@@ -1345,6 +1353,8 @@ local_coupon_wallet 10991 {
     patched.append(0)
     if mode == "variable":
         assert len(counts) == 9 and counts["家园遗迹购次"] == 2 and counts["百关钻石闯关"] == 1 and sum(counts.values()) == 10, counts
+    elif mode == "map_unlock":
+        assert counts == {70043: 1, 70044: 1, 70045: 1, 70046: 1}, counts
     elif mode in ("speed_state", "pcl_unlock"):
         assert counts == {mode:1}, counts
     elif mode in ("skill_upgrade_panel","skill_upgrade_rows","skill_upgrade_submit","skill_upgrade_sync"):
@@ -1782,7 +1792,7 @@ def asset_overlay(origin, dest, aes, pad, unpad, unity):
                                 ("feschristmas", "christmas_confirm"), ("homegameble","casino_resume"), ("tehuilibaopoint", "daily_voucher_labels"), ("fesadvertise", "monthly_carnival"), ("everydaypoint", "daily_free")):
                 name = f"lua{abi}_module_{asset}.ab"
                 changed[name] = replace(name, lambda source: replace_lua(name, mode, source))
-            for filename, mode in (("sign","vip_sign"), ("one","blind_sales"), ("chongzhi","blind_payment"), ("league","league_prizes"), ("promatch","elite_prizes"), ("word1","league_rules"), ("copy2","adventure_end"), ("passcard","passport_config"), ("operate", "offline_operate"), ("leading", "pcl_unlock")):
+            for filename, mode in (("map","map_unlock"), ("sign","vip_sign"), ("one","blind_sales"), ("chongzhi","blind_payment"), ("league","league_prizes"), ("promatch","elite_prizes"), ("word1","league_rules"), ("copy2","adventure_end"), ("passcard","passport_config"), ("operate", "offline_operate"), ("leading", "pcl_unlock")):
                 name = f"lua{abi}_database_{filename}_proto.lua.bytes"
                 changed[name] = replace(name, lambda source: replace_lua(name, mode, source))
             name = f"lua{abi}_module_league.ab"
