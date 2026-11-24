@@ -34,9 +34,10 @@ public class ElfMapper {
             + " AND NOT EXISTS (SELECT 1 FROM local_secret_stone s WHERE s.elf_id=local_elf.id)"
             + " AND NOT EXISTS (SELECT 1 FROM local_elf_follow f WHERE f.elf_id=local_elf.id)"
             + " AND NOT EXISTS (SELECT 1 FROM local_travel_dispatch t WHERE t.elf_id=local_elf.id)";
-    private static final String WITH_STONE = "SELECT e.*,s.sid AS stone_sid,s.template_id AS stone_id,"
+    private static final String ELF_COLUMNS = "e.*,s.sid AS stone_sid,s.template_id AS stone_id,"
             + "s.stars AS stone_stars,s.locked AS stone_lock,s.lucky AS stone_lucky,s.attrs AS stone_attrs "
             + "FROM local_elf e LEFT JOIN local_secret_stone s ON s.elf_id=e.id AND s.role_id=e.role_id ";
+    private static final String WITH_STONE = "SELECT " + ELF_COLUMNS;
     private static final RowMapper<LocalElf> ELF = (row, index) -> {
         LocalElf elf = new LocalElf(row.getString("id"), row.getInt("config_id"), row.getInt("level"),
                 row.getInt("team"), row.getInt("slot"), readTraining(row.getString("training_data")));
@@ -168,6 +169,27 @@ public class ElfMapper {
      */
     public List<LocalElf> list(String roleId) {
         return attachGold(roleId, jdbc.query(WITH_STONE + "WHERE e.role_id=? ORDER BY e.starter DESC,e.slot,e.id", ELF, roleId));
+    }
+
+    /**
+     * 读取已解锁助战槽内仍由本角色持有的精灵及其装备快照。
+     *
+     * @param roleId 阵容所属角色
+     * @return 按助战槽位排列的精灵
+     */
+    public Map<Integer, LocalElf> battleAssists(String roleId) {
+        Map<Integer, LocalElf> slots = new LinkedHashMap<>();
+        List<LocalElf> members = jdbc.query("SELECT a.slot AS assist_slot," + ELF_COLUMNS
+                + "JOIN local_elf_aid a ON a.role_id=e.role_id AND a.elf_id=e.id "
+                + "JOIN local_dojo_progress d ON d.role_id=a.role_id "
+                + "WHERE e.role_id=? AND a.slot BETWEEN 1 AND 24 AND d.history>=1000+a.slot ORDER BY a.slot",
+                (row, index) -> {
+                    LocalElf elf = ELF.mapRow(row, index);
+                    slots.put(row.getInt("assist_slot"), elf);
+                    return elf;
+                }, roleId);
+        attachGold(roleId, members);
+        return slots;
     }
 
     /**

@@ -1,5 +1,51 @@
 """保留原引擎天赋动作，仅替换团队属性取值和加成来源登记。"""
 from pathlib import Path
+import re
+
+
+def patch_assist_schema(source, helpers):
+    """在客户端原 Sproto 类型串添加独立助战快照，不占用可见阵位。"""
+    reader = helpers.Reader(source)
+    assert reader.raw(4) == b'\x1bLJ\x02'
+    reader.num()
+    output = bytearray(source[:reader.pos])
+    changes = 0
+    while size := reader.num():
+        raw = reader.raw(size)
+        if b'.formation_t' in raw:
+            proto = helpers.Reader(raw)
+            header = proto.raw(4)
+            nk, nn, count = proto.num(), proto.num(), proto.num()
+            code = proto.raw(count * 4 + header[3] * 2)
+            pool = helpers.constants(proto, nk)
+            for i, item in enumerate(pool):
+                if not isinstance(item, bytes) or b'.formation_t' not in item:
+                    continue
+                chunk = helpers.Reader(item)
+                schema = chunk.raw(chunk.num() - 5)
+                match = re.search(rb'\.formation_t\s*\{([^{}]*)\}', schema)
+                if not match:
+                    continue
+                fields = match.group(1)
+                assert re.search(rb'pet\s+7\s*:\s*petbtl\b', fields)
+                if not re.search(rb'assists\s+8\s*:\s*\*pokemon_t\b', fields):
+                    assert not re.search(rb'\b\w+\s+8\s*:', fields)
+                    pos = match.end(1)
+                    schema = schema[:pos] + b'\n\tassists 8 : *pokemon_t\n' + schema[pos:]
+                member = re.search(rb'\.pokemon_t\s*\{([^{}]*)\}', schema)
+                assert member
+                if not re.search(rb'assist_slot_type\s+112\s*:', member.group(1)):
+                    assert not re.search(rb'\b\w+\s+11[234]\s*:', member.group(1))
+                    pos = member.end(1)
+                    schema = schema[:pos] + (b'\n\tassist_slot_type 112 : integer\n'
+                        b'\tassist_slot_percent 113 : integer\n\tassist_slot_value 114 : integer\n') + schema[pos:]
+                pool[i] = helpers.pack(schema)
+                changes += 1
+            raw = (header + helpers.encode(nk) + helpers.encode(nn) + helpers.encode(count)
+                   + code + b''.join(map(helpers.serial_constant, pool)) + proto.data[proto.pos:])
+        output += helpers.encode(len(raw)) + raw
+    assert changes == 1 and reader.pos == len(source)
+    return bytes(output) + b'\0'
 
 
 def patch_team_talents(source, helpers):
@@ -9,7 +55,9 @@ def patch_team_talents(source, helpers):
     assert flags & 2 and not flags & 1
     spacing = 2 if flags & 8 else 1
     output = bytearray(source[:reader.pos])
-    script = Path(__file__).with_name("local-team-talents.lua").read_bytes()
+    script = (Path(__file__).with_name("local-team-talents.lua").read_bytes() + b"\n"
+              + Path(__file__).with_name("local-assist-talents.lua").read_bytes() + b"\n"
+              + Path(__file__).with_name("local-assist-inspect.lua").read_bytes())
     pack, ins = helpers.pack, helpers.ins
     index, matched = -1, set()
     while size := reader.num():

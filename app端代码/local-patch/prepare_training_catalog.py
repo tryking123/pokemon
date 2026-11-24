@@ -45,6 +45,7 @@ def audit(origin, restore, report):
     mismatches, references, repaired, missing_attributes = [], [], [], []
     empty_awaken, source_exclusions = [], []
     missing_passives = []
+    missing_rage = []
 
     def same(section, key, field, actual, expected):
         if actual != expected:
@@ -61,6 +62,14 @@ def audit(origin, restore, report):
             continue
         for field in scalar_fields:
             same('species', sid, field, species.get(field), source.get(field))
+        rage = source.get('rage', 0)
+        if rage and str(rage) not in tables['skill']:
+            raise ValueError(f'物种 {sid} 的超古代技能 {rage} 不存在')
+        if rage and 'rage' not in species:
+            missing_rage.append(int(sid))
+            if restore:
+                species['rage'] = rage
+        same('species', sid, 'rage', species.get('rage', 0), rage)
         for dest, src in [('skills', 'skill1'), ('loveitem', 'loveitem'), ('evolution', 'changeid')]:
             same('species', sid, dest, species.get(dest), sequence(source.get(src, {'1': 0})))
         awake_expected = sequence(source.get('skill2', {}))
@@ -136,7 +145,7 @@ def audit(origin, restore, report):
             if restore:
                 row['attributes'] = sequence(source['attributes'])
                 repaired.append(int(key))
-    if restore and (repaired or missing_stage_variables or missing_passives):
+    if restore and (repaired or missing_stage_variables or missing_passives or missing_rage):
         write(RESOURCE, local)
     result = {'version': 1, 'date': '2026-11-22', 'originSha256': BASE_SHA,
               'sources': ['固定底包', 'miao-import/species-patch.json'], 'abiEqual': abi_equal,
@@ -146,6 +155,7 @@ def audit(origin, restore, report):
               'omittedEmptyAwakenSkills': empty_awaken, 'growthAbsentInSource': source_exclusions,
               'missingStageVariablesBefore': missing_stage_variables,
               'missingAwakenPassivesBefore': missing_passives,
+              'missingAncientSkillsBefore': missing_rage,
               'stageVariablesMissingAfter': [k for k in range(3810,3822) if str(k) not in local['variable']],
               'missingBreakAttributesBefore': missing_attributes, 'restoredBreakAttributes': repaired,
               'breakAttributeMissingAfter': [int(k) for k, r in local['break'].items() if 'attributes' not in r],

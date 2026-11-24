@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.pokemon.offline.battle.FirstBattleData;
+import com.pokemon.offline.battle.AssistBattleService;
 import com.pokemon.offline.elf.ElfCombatGrowth;
 import com.pokemon.offline.elf.ElfSkillBar;
 import com.pokemon.offline.elf.api.entity.LocalElf;
@@ -33,6 +34,7 @@ public final class ArenaCombat {
             "physical_defense", "special_defense", "speed"};
     private static final int MAX_TURNS = 72;
     private final ObjectMapper json;
+    private final AssistBattleService assists;
     private final com.pokemon.offline.home.PetCombatService pets;
     final JsonNode config;
     private final JsonNode damageRules;
@@ -46,10 +48,12 @@ public final class ArenaCombat {
      *
      * @param json 配置编码器
      * @param pets 普通队伍宠物快照
+     * @param assists 玩家助战精灵快照
      * @throws IOException 配置无法读取
      */
-    ArenaCombat(ObjectMapper json,com.pokemon.offline.home.PetCombatService pets) throws IOException {
+    ArenaCombat(ObjectMapper json,com.pokemon.offline.home.PetCombatService pets, AssistBattleService assists) throws IOException {
         this.json = json;
+        this.assists = assists;
         this.pets = pets;
         try (InputStream input = new ClassPathResource("arena/training.json").getInputStream()) {
             config = json.readTree(input);
@@ -248,6 +252,13 @@ public final class ArenaCombat {
         result.put("preference", 1);
         result.put("pvp", false);
         result.put("isnpc", npc);
+        if (!npc && !members.isEmpty()) {
+            List<String> deployed = new ArrayList<>();
+            for (JsonNode member : members) {
+                deployed.add(member.path("id").asText());
+            }
+            result.set("assists", json.valueToTree(assists.snapshot(id, deployed)));
+        }
         if(!npc && ordinaryPet && !members.isEmpty()) {
             java.util.Map<String,Object> pet=pets.battlePetForMember(id,members.get(0).path("id").asText());
             if(!pet.isEmpty())result.set("pet",json.valueToTree(pet));
