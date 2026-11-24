@@ -4,3 +4,4 @@ local-awake-character.lua text eol=lf
 local-awake-stages.lua text eol=lf
 local-team-talents.lua text eol=lf
 local-rocket-result.lua -text whitespace=trailing-space,space-before-tab,cr-at-eol
+local-dynamax-panel.lua -text whitespace=trailing-space,space-before-tab,cr-at-eol
