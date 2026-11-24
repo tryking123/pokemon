@@ -116,7 +116,7 @@ public class TrainerRefinementService {
                 throw new IllegalStateException("已保存的装备属性无法解析", ex);
             }
         }
-        ArrayNode rolls = roll(rule, json.createArrayNode(), Collections.emptySet(), new Random(gear.id.hashCode()));
+        ArrayNode rolls = roll(rule, json.createArrayNode(), Collections.emptySet(), new Random(gear.id.hashCode()), false);
         // 首次生成的词条立即落库：重登/重进游戏后同一件装备词条与库内一致，不再每次临时重 roll。
         // 库内只存原值（不含进阶倍率、不含强化等级），两类加成在读取时分别结算。
         if (rolls.size() > 0) {
@@ -216,7 +216,7 @@ public class TrainerRefinementService {
         if (cost <= 0 || !inventory.spendMaterials(roleId, 21001, mode == 1 ? cost : 0, mode == 0 ? cost : 0, 0)) {
             return null;
         }
-        ArrayNode candidate = roll(rule, current, locked, ThreadLocalRandom.current());
+        ArrayNode candidate = roll(rule, current, locked, ThreadLocalRandom.current(), true);
         mapper.preview(roleId, gear.id, receipt, candidate.toString());
         return displayed(gear,candidate);
     }
@@ -256,9 +256,10 @@ public class TrainerRefinementService {
      * @param previous 已有属性
      * @param locked 要保留的属性下标
      * @param random 初始或洗炼随机源
+     * @param maximum 洗炼时取抽中词条的上限，初始生成时在词条区间内取值
      * @return 按装备槽顺序排列的属性
      */
-    private ArrayNode roll(JsonNode rule, ArrayNode previous, Set<Integer> locked, Random random) {
+    private ArrayNode roll(JsonNode rule, ArrayNode previous, Set<Integer> locked, Random random, boolean maximum) {
         Set<Integer> reservedTypes = new HashSet<>();
         for (int index : locked) {
             reservedTypes.add(previous.get(index).path("type").asInt());
@@ -277,8 +278,10 @@ public class TrainerRefinementService {
             } else {
                 JsonNode row = available.remove(available.size() - 1);
                 int low = row.get(2).asInt();
+                int high = row.get(3).asInt();
+                int value = maximum ? high : low + random.nextInt(high - low + 1);
                 result.addObject().put("id", row.get(0).asInt()).put("type", row.get(1).asInt())
-                        .put("value", low + random.nextInt(row.get(3).asInt() - low + 1));
+                        .put("value", value);
             }
         }
         return result;

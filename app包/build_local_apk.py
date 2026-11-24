@@ -256,7 +256,9 @@ def patch_entries(directory):
     with entries[LOCAL_DEX].open("rb") as dex:
         if not re.fullmatch(rb"dex\n[0-9]{3}\0", dex.read(8)):
             raise ValueError(f"DEX 文件头无效：{entries[LOCAL_DEX]}")
-    if UNITY_METADATA in entries and hash_file(entries[UNITY_METADATA]) != UNITY_LOCAL_METADATA_DIGEST:
+    if UNITY_METADATA not in entries:
+        raise ValueError("缺少 Unity 离线入口，请先运行 patch-unity-bootstrap.py 生成补丁")
+    if hash_file(entries[UNITY_METADATA]) != UNITY_LOCAL_METADATA_DIGEST:
         raise ValueError("Unity metadata 补丁哈希不符")
     native = entries.keys() & UNITY_LOCAL_NATIVE_DIGESTS.keys()
     if native and native != UNITY_LOCAL_NATIVE_DIGESTS.keys():
