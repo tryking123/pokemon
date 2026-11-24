@@ -1,0 +1,4629 @@
+{
+  "version": "assist-slot-base-20261124",
+  "sourceApkSha256": "8d5cb78f80c54956b314f65a33b324f73bd12c2b44fa0aff6d1e1e0203f3c65e",
+  "caseCount": 768,
+  "originalStageManagerAndComputeAdd": true,
+  "bothAbiCheerEqual": true,
+  "rows": [
+    {
+      "slot": 1001,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1001,
+      "mask": 1,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1001,
+      "mask": 2,
+      "percent": 6,
+      "value": 600
+    },
+    {
+      "slot": 1001,
+      "mask": 3,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1001,
+      "mask": 4,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1001,
+      "mask": 5,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1001,
+      "mask": 6,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1001,
+      "mask": 7,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1001,
+      "mask": 8,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1001,
+      "mask": 9,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1001,
+      "mask": 10,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1001,
+      "mask": 11,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1001,
+      "mask": 12,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1001,
+      "mask": 13,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1001,
+      "mask": 14,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1001,
+      "mask": 15,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1001,
+      "mask": 16,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1001,
+      "mask": 17,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1001,
+      "mask": 18,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1001,
+      "mask": 19,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1001,
+      "mask": 20,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1001,
+      "mask": 21,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1001,
+      "mask": 22,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1001,
+      "mask": 23,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1001,
+      "mask": 24,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1001,
+      "mask": 25,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1001,
+      "mask": 26,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1001,
+      "mask": 27,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1001,
+      "mask": 28,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1001,
+      "mask": 29,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1001,
+      "mask": 30,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1001,
+      "mask": 31,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1002,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1002,
+      "mask": 1,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1002,
+      "mask": 2,
+      "percent": 6,
+      "value": 600
+    },
+    {
+      "slot": 1002,
+      "mask": 3,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1002,
+      "mask": 4,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1002,
+      "mask": 5,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1002,
+      "mask": 6,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1002,
+      "mask": 7,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1002,
+      "mask": 8,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1002,
+      "mask": 9,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1002,
+      "mask": 10,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1002,
+      "mask": 11,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1002,
+      "mask": 12,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1002,
+      "mask": 13,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1002,
+      "mask": 14,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1002,
+      "mask": 15,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1002,
+      "mask": 16,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1002,
+      "mask": 17,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1002,
+      "mask": 18,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1002,
+      "mask": 19,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1002,
+      "mask": 20,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1002,
+      "mask": 21,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1002,
+      "mask": 22,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1002,
+      "mask": 23,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1002,
+      "mask": 24,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1002,
+      "mask": 25,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1002,
+      "mask": 26,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1002,
+      "mask": 27,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1002,
+      "mask": 28,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1002,
+      "mask": 29,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1002,
+      "mask": 30,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1002,
+      "mask": 31,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1003,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1003,
+      "mask": 1,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1003,
+      "mask": 2,
+      "percent": 6,
+      "value": 600
+    },
+    {
+      "slot": 1003,
+      "mask": 3,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1003,
+      "mask": 4,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1003,
+      "mask": 5,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1003,
+      "mask": 6,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1003,
+      "mask": 7,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1003,
+      "mask": 8,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1003,
+      "mask": 9,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1003,
+      "mask": 10,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1003,
+      "mask": 11,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1003,
+      "mask": 12,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1003,
+      "mask": 13,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1003,
+      "mask": 14,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1003,
+      "mask": 15,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1003,
+      "mask": 16,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1003,
+      "mask": 17,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1003,
+      "mask": 18,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1003,
+      "mask": 19,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1003,
+      "mask": 20,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1003,
+      "mask": 21,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1003,
+      "mask": 22,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1003,
+      "mask": 23,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1003,
+      "mask": 24,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1003,
+      "mask": 25,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1003,
+      "mask": 26,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1003,
+      "mask": 27,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1003,
+      "mask": 28,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1003,
+      "mask": 29,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1003,
+      "mask": 30,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1003,
+      "mask": 31,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1004,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1004,
+      "mask": 1,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1004,
+      "mask": 2,
+      "percent": 6,
+      "value": 600
+    },
+    {
+      "slot": 1004,
+      "mask": 3,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1004,
+      "mask": 4,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1004,
+      "mask": 5,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1004,
+      "mask": 6,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1004,
+      "mask": 7,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1004,
+      "mask": 8,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1004,
+      "mask": 9,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1004,
+      "mask": 10,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1004,
+      "mask": 11,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1004,
+      "mask": 12,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1004,
+      "mask": 13,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1004,
+      "mask": 14,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1004,
+      "mask": 15,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1004,
+      "mask": 16,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1004,
+      "mask": 17,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1004,
+      "mask": 18,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1004,
+      "mask": 19,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1004,
+      "mask": 20,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1004,
+      "mask": 21,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1004,
+      "mask": 22,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1004,
+      "mask": 23,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1004,
+      "mask": 24,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1004,
+      "mask": 25,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1004,
+      "mask": 26,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1004,
+      "mask": 27,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1004,
+      "mask": 28,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1004,
+      "mask": 29,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1004,
+      "mask": 30,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1004,
+      "mask": 31,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1005,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1005,
+      "mask": 1,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1005,
+      "mask": 2,
+      "percent": 6,
+      "value": 600
+    },
+    {
+      "slot": 1005,
+      "mask": 3,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1005,
+      "mask": 4,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1005,
+      "mask": 5,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1005,
+      "mask": 6,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1005,
+      "mask": 7,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1005,
+      "mask": 8,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1005,
+      "mask": 9,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1005,
+      "mask": 10,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1005,
+      "mask": 11,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1005,
+      "mask": 12,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1005,
+      "mask": 13,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1005,
+      "mask": 14,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1005,
+      "mask": 15,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1005,
+      "mask": 16,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1005,
+      "mask": 17,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1005,
+      "mask": 18,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1005,
+      "mask": 19,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1005,
+      "mask": 20,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1005,
+      "mask": 21,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1005,
+      "mask": 22,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1005,
+      "mask": 23,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1005,
+      "mask": 24,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1005,
+      "mask": 25,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1005,
+      "mask": 26,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1005,
+      "mask": 27,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1005,
+      "mask": 28,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1005,
+      "mask": 29,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1005,
+      "mask": 30,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1005,
+      "mask": 31,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1006,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1006,
+      "mask": 1,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1006,
+      "mask": 2,
+      "percent": 6,
+      "value": 600
+    },
+    {
+      "slot": 1006,
+      "mask": 3,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1006,
+      "mask": 4,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1006,
+      "mask": 5,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1006,
+      "mask": 6,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1006,
+      "mask": 7,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1006,
+      "mask": 8,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1006,
+      "mask": 9,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1006,
+      "mask": 10,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1006,
+      "mask": 11,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1006,
+      "mask": 12,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1006,
+      "mask": 13,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1006,
+      "mask": 14,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1006,
+      "mask": 15,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1006,
+      "mask": 16,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1006,
+      "mask": 17,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1006,
+      "mask": 18,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1006,
+      "mask": 19,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1006,
+      "mask": 20,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1006,
+      "mask": 21,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1006,
+      "mask": 22,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1006,
+      "mask": 23,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1006,
+      "mask": 24,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1006,
+      "mask": 25,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1006,
+      "mask": 26,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1006,
+      "mask": 27,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1006,
+      "mask": 28,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1006,
+      "mask": 29,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1006,
+      "mask": 30,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1006,
+      "mask": 31,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1007,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1007,
+      "mask": 1,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1007,
+      "mask": 2,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1007,
+      "mask": 3,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1007,
+      "mask": 4,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1007,
+      "mask": 5,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1007,
+      "mask": 6,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1007,
+      "mask": 7,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1007,
+      "mask": 8,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1007,
+      "mask": 9,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1007,
+      "mask": 10,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1007,
+      "mask": 11,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1007,
+      "mask": 12,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1007,
+      "mask": 13,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1007,
+      "mask": 14,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1007,
+      "mask": 15,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1007,
+      "mask": 16,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1007,
+      "mask": 17,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1007,
+      "mask": 18,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1007,
+      "mask": 19,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1007,
+      "mask": 20,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1007,
+      "mask": 21,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1007,
+      "mask": 22,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1007,
+      "mask": 23,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1007,
+      "mask": 24,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1007,
+      "mask": 25,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1007,
+      "mask": 26,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1007,
+      "mask": 27,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1007,
+      "mask": 28,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1007,
+      "mask": 29,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1007,
+      "mask": 30,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1007,
+      "mask": 31,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1008,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1008,
+      "mask": 1,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1008,
+      "mask": 2,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1008,
+      "mask": 3,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1008,
+      "mask": 4,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1008,
+      "mask": 5,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1008,
+      "mask": 6,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1008,
+      "mask": 7,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1008,
+      "mask": 8,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1008,
+      "mask": 9,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1008,
+      "mask": 10,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1008,
+      "mask": 11,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1008,
+      "mask": 12,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1008,
+      "mask": 13,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1008,
+      "mask": 14,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1008,
+      "mask": 15,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1008,
+      "mask": 16,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1008,
+      "mask": 17,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1008,
+      "mask": 18,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1008,
+      "mask": 19,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1008,
+      "mask": 20,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1008,
+      "mask": 21,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1008,
+      "mask": 22,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1008,
+      "mask": 23,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1008,
+      "mask": 24,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1008,
+      "mask": 25,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1008,
+      "mask": 26,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1008,
+      "mask": 27,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1008,
+      "mask": 28,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1008,
+      "mask": 29,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1008,
+      "mask": 30,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1008,
+      "mask": 31,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1009,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1009,
+      "mask": 1,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1009,
+      "mask": 2,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1009,
+      "mask": 3,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1009,
+      "mask": 4,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1009,
+      "mask": 5,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1009,
+      "mask": 6,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1009,
+      "mask": 7,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1009,
+      "mask": 8,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1009,
+      "mask": 9,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1009,
+      "mask": 10,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1009,
+      "mask": 11,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1009,
+      "mask": 12,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1009,
+      "mask": 13,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1009,
+      "mask": 14,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1009,
+      "mask": 15,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1009,
+      "mask": 16,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1009,
+      "mask": 17,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1009,
+      "mask": 18,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1009,
+      "mask": 19,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1009,
+      "mask": 20,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1009,
+      "mask": 21,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1009,
+      "mask": 22,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1009,
+      "mask": 23,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1009,
+      "mask": 24,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1009,
+      "mask": 25,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1009,
+      "mask": 26,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1009,
+      "mask": 27,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1009,
+      "mask": 28,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1009,
+      "mask": 29,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1009,
+      "mask": 30,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1009,
+      "mask": 31,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1010,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1010,
+      "mask": 1,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1010,
+      "mask": 2,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1010,
+      "mask": 3,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1010,
+      "mask": 4,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1010,
+      "mask": 5,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1010,
+      "mask": 6,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1010,
+      "mask": 7,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1010,
+      "mask": 8,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1010,
+      "mask": 9,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1010,
+      "mask": 10,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1010,
+      "mask": 11,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1010,
+      "mask": 12,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1010,
+      "mask": 13,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1010,
+      "mask": 14,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1010,
+      "mask": 15,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1010,
+      "mask": 16,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1010,
+      "mask": 17,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1010,
+      "mask": 18,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1010,
+      "mask": 19,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1010,
+      "mask": 20,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1010,
+      "mask": 21,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1010,
+      "mask": 22,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1010,
+      "mask": 23,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1010,
+      "mask": 24,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1010,
+      "mask": 25,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1010,
+      "mask": 26,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1010,
+      "mask": 27,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1010,
+      "mask": 28,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1010,
+      "mask": 29,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1010,
+      "mask": 30,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1010,
+      "mask": 31,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1011,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1011,
+      "mask": 1,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1011,
+      "mask": 2,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1011,
+      "mask": 3,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1011,
+      "mask": 4,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1011,
+      "mask": 5,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1011,
+      "mask": 6,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1011,
+      "mask": 7,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1011,
+      "mask": 8,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1011,
+      "mask": 9,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1011,
+      "mask": 10,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1011,
+      "mask": 11,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1011,
+      "mask": 12,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1011,
+      "mask": 13,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1011,
+      "mask": 14,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1011,
+      "mask": 15,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1011,
+      "mask": 16,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1011,
+      "mask": 17,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1011,
+      "mask": 18,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1011,
+      "mask": 19,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1011,
+      "mask": 20,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1011,
+      "mask": 21,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1011,
+      "mask": 22,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1011,
+      "mask": 23,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1011,
+      "mask": 24,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1011,
+      "mask": 25,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1011,
+      "mask": 26,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1011,
+      "mask": 27,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1011,
+      "mask": 28,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1011,
+      "mask": 29,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1011,
+      "mask": 30,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1011,
+      "mask": 31,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1012,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1012,
+      "mask": 1,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1012,
+      "mask": 2,
+      "percent": 7,
+      "value": 700
+    },
+    {
+      "slot": 1012,
+      "mask": 3,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1012,
+      "mask": 4,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1012,
+      "mask": 5,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1012,
+      "mask": 6,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1012,
+      "mask": 7,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1012,
+      "mask": 8,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1012,
+      "mask": 9,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1012,
+      "mask": 10,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1012,
+      "mask": 11,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1012,
+      "mask": 12,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1012,
+      "mask": 13,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1012,
+      "mask": 14,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1012,
+      "mask": 15,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1012,
+      "mask": 16,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1012,
+      "mask": 17,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1012,
+      "mask": 18,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1012,
+      "mask": 19,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1012,
+      "mask": 20,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1012,
+      "mask": 21,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1012,
+      "mask": 22,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1012,
+      "mask": 23,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1012,
+      "mask": 24,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1012,
+      "mask": 25,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1012,
+      "mask": 26,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1012,
+      "mask": 27,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1012,
+      "mask": 28,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1012,
+      "mask": 29,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1012,
+      "mask": 30,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1012,
+      "mask": 31,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1013,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1013,
+      "mask": 1,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1013,
+      "mask": 2,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1013,
+      "mask": 3,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1013,
+      "mask": 4,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1013,
+      "mask": 5,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1013,
+      "mask": 6,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1013,
+      "mask": 7,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1013,
+      "mask": 8,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1013,
+      "mask": 9,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1013,
+      "mask": 10,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1013,
+      "mask": 11,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1013,
+      "mask": 12,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1013,
+      "mask": 13,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1013,
+      "mask": 14,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1013,
+      "mask": 15,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1013,
+      "mask": 16,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1013,
+      "mask": 17,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1013,
+      "mask": 18,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1013,
+      "mask": 19,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1013,
+      "mask": 20,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1013,
+      "mask": 21,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1013,
+      "mask": 22,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1013,
+      "mask": 23,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1013,
+      "mask": 24,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1013,
+      "mask": 25,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1013,
+      "mask": 26,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1013,
+      "mask": 27,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1013,
+      "mask": 28,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1013,
+      "mask": 29,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1013,
+      "mask": 30,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1013,
+      "mask": 31,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1014,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1014,
+      "mask": 1,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1014,
+      "mask": 2,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1014,
+      "mask": 3,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1014,
+      "mask": 4,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1014,
+      "mask": 5,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1014,
+      "mask": 6,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1014,
+      "mask": 7,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1014,
+      "mask": 8,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1014,
+      "mask": 9,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1014,
+      "mask": 10,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1014,
+      "mask": 11,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1014,
+      "mask": 12,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1014,
+      "mask": 13,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1014,
+      "mask": 14,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1014,
+      "mask": 15,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1014,
+      "mask": 16,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1014,
+      "mask": 17,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1014,
+      "mask": 18,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1014,
+      "mask": 19,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1014,
+      "mask": 20,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1014,
+      "mask": 21,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1014,
+      "mask": 22,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1014,
+      "mask": 23,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1014,
+      "mask": 24,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1014,
+      "mask": 25,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1014,
+      "mask": 26,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1014,
+      "mask": 27,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1014,
+      "mask": 28,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1014,
+      "mask": 29,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1014,
+      "mask": 30,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1014,
+      "mask": 31,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1015,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1015,
+      "mask": 1,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1015,
+      "mask": 2,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1015,
+      "mask": 3,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1015,
+      "mask": 4,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1015,
+      "mask": 5,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1015,
+      "mask": 6,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1015,
+      "mask": 7,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1015,
+      "mask": 8,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1015,
+      "mask": 9,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1015,
+      "mask": 10,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1015,
+      "mask": 11,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1015,
+      "mask": 12,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1015,
+      "mask": 13,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1015,
+      "mask": 14,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1015,
+      "mask": 15,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1015,
+      "mask": 16,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1015,
+      "mask": 17,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1015,
+      "mask": 18,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1015,
+      "mask": 19,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1015,
+      "mask": 20,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1015,
+      "mask": 21,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1015,
+      "mask": 22,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1015,
+      "mask": 23,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1015,
+      "mask": 24,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1015,
+      "mask": 25,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1015,
+      "mask": 26,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1015,
+      "mask": 27,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1015,
+      "mask": 28,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1015,
+      "mask": 29,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1015,
+      "mask": 30,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1015,
+      "mask": 31,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1016,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1016,
+      "mask": 1,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1016,
+      "mask": 2,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1016,
+      "mask": 3,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1016,
+      "mask": 4,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1016,
+      "mask": 5,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1016,
+      "mask": 6,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1016,
+      "mask": 7,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1016,
+      "mask": 8,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1016,
+      "mask": 9,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1016,
+      "mask": 10,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1016,
+      "mask": 11,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1016,
+      "mask": 12,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1016,
+      "mask": 13,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1016,
+      "mask": 14,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1016,
+      "mask": 15,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1016,
+      "mask": 16,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1016,
+      "mask": 17,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1016,
+      "mask": 18,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1016,
+      "mask": 19,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1016,
+      "mask": 20,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1016,
+      "mask": 21,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1016,
+      "mask": 22,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1016,
+      "mask": 23,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1016,
+      "mask": 24,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1016,
+      "mask": 25,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1016,
+      "mask": 26,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1016,
+      "mask": 27,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1016,
+      "mask": 28,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1016,
+      "mask": 29,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1016,
+      "mask": 30,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1016,
+      "mask": 31,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1017,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1017,
+      "mask": 1,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1017,
+      "mask": 2,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1017,
+      "mask": 3,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1017,
+      "mask": 4,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1017,
+      "mask": 5,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1017,
+      "mask": 6,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1017,
+      "mask": 7,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1017,
+      "mask": 8,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1017,
+      "mask": 9,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1017,
+      "mask": 10,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1017,
+      "mask": 11,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1017,
+      "mask": 12,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1017,
+      "mask": 13,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1017,
+      "mask": 14,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1017,
+      "mask": 15,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1017,
+      "mask": 16,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1017,
+      "mask": 17,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1017,
+      "mask": 18,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1017,
+      "mask": 19,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1017,
+      "mask": 20,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1017,
+      "mask": 21,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1017,
+      "mask": 22,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1017,
+      "mask": 23,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1017,
+      "mask": 24,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1017,
+      "mask": 25,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1017,
+      "mask": 26,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1017,
+      "mask": 27,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1017,
+      "mask": 28,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1017,
+      "mask": 29,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1017,
+      "mask": 30,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1017,
+      "mask": 31,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1018,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1018,
+      "mask": 1,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1018,
+      "mask": 2,
+      "percent": 8,
+      "value": 800
+    },
+    {
+      "slot": 1018,
+      "mask": 3,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1018,
+      "mask": 4,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1018,
+      "mask": 5,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1018,
+      "mask": 6,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1018,
+      "mask": 7,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1018,
+      "mask": 8,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1018,
+      "mask": 9,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1018,
+      "mask": 10,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1018,
+      "mask": 11,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1018,
+      "mask": 12,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1018,
+      "mask": 13,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1018,
+      "mask": 14,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1018,
+      "mask": 15,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1018,
+      "mask": 16,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1018,
+      "mask": 17,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1018,
+      "mask": 18,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1018,
+      "mask": 19,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1018,
+      "mask": 20,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1018,
+      "mask": 21,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1018,
+      "mask": 22,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1018,
+      "mask": 23,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1018,
+      "mask": 24,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1018,
+      "mask": 25,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1018,
+      "mask": 26,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1018,
+      "mask": 27,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1018,
+      "mask": 28,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1018,
+      "mask": 29,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1018,
+      "mask": 30,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1018,
+      "mask": 31,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1019,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1019,
+      "mask": 1,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1019,
+      "mask": 2,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1019,
+      "mask": 3,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1019,
+      "mask": 4,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1019,
+      "mask": 5,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1019,
+      "mask": 6,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1019,
+      "mask": 7,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1019,
+      "mask": 8,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1019,
+      "mask": 9,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1019,
+      "mask": 10,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1019,
+      "mask": 11,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1019,
+      "mask": 12,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1019,
+      "mask": 13,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1019,
+      "mask": 14,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1019,
+      "mask": 15,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1019,
+      "mask": 16,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1019,
+      "mask": 17,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1019,
+      "mask": 18,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1019,
+      "mask": 19,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1019,
+      "mask": 20,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1019,
+      "mask": 21,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1019,
+      "mask": 22,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1019,
+      "mask": 23,
+      "percent": 28,
+      "value": 2800
+    },
+    {
+      "slot": 1019,
+      "mask": 24,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1019,
+      "mask": 25,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1019,
+      "mask": 26,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1019,
+      "mask": 27,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1019,
+      "mask": 28,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1019,
+      "mask": 29,
+      "percent": 31,
+      "value": 3100
+    },
+    {
+      "slot": 1019,
+      "mask": 30,
+      "percent": 29,
+      "value": 2900
+    },
+    {
+      "slot": 1019,
+      "mask": 31,
+      "percent": 35,
+      "value": 3501
+    },
+    {
+      "slot": 1020,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1020,
+      "mask": 1,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1020,
+      "mask": 2,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1020,
+      "mask": 3,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1020,
+      "mask": 4,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1020,
+      "mask": 5,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1020,
+      "mask": 6,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1020,
+      "mask": 7,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1020,
+      "mask": 8,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1020,
+      "mask": 9,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1020,
+      "mask": 10,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1020,
+      "mask": 11,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1020,
+      "mask": 12,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1020,
+      "mask": 13,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1020,
+      "mask": 14,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1020,
+      "mask": 15,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1020,
+      "mask": 16,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1020,
+      "mask": 17,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1020,
+      "mask": 18,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1020,
+      "mask": 19,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1020,
+      "mask": 20,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1020,
+      "mask": 21,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1020,
+      "mask": 22,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1020,
+      "mask": 23,
+      "percent": 28,
+      "value": 2800
+    },
+    {
+      "slot": 1020,
+      "mask": 24,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1020,
+      "mask": 25,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1020,
+      "mask": 26,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1020,
+      "mask": 27,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1020,
+      "mask": 28,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1020,
+      "mask": 29,
+      "percent": 31,
+      "value": 3100
+    },
+    {
+      "slot": 1020,
+      "mask": 30,
+      "percent": 29,
+      "value": 2900
+    },
+    {
+      "slot": 1020,
+      "mask": 31,
+      "percent": 35,
+      "value": 3501
+    },
+    {
+      "slot": 1021,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1021,
+      "mask": 1,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1021,
+      "mask": 2,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1021,
+      "mask": 3,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1021,
+      "mask": 4,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1021,
+      "mask": 5,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1021,
+      "mask": 6,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1021,
+      "mask": 7,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1021,
+      "mask": 8,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1021,
+      "mask": 9,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1021,
+      "mask": 10,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1021,
+      "mask": 11,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1021,
+      "mask": 12,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1021,
+      "mask": 13,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1021,
+      "mask": 14,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1021,
+      "mask": 15,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1021,
+      "mask": 16,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1021,
+      "mask": 17,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1021,
+      "mask": 18,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1021,
+      "mask": 19,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1021,
+      "mask": 20,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1021,
+      "mask": 21,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1021,
+      "mask": 22,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1021,
+      "mask": 23,
+      "percent": 28,
+      "value": 2800
+    },
+    {
+      "slot": 1021,
+      "mask": 24,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1021,
+      "mask": 25,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1021,
+      "mask": 26,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1021,
+      "mask": 27,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1021,
+      "mask": 28,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1021,
+      "mask": 29,
+      "percent": 31,
+      "value": 3100
+    },
+    {
+      "slot": 1021,
+      "mask": 30,
+      "percent": 29,
+      "value": 2900
+    },
+    {
+      "slot": 1021,
+      "mask": 31,
+      "percent": 35,
+      "value": 3501
+    },
+    {
+      "slot": 1022,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1022,
+      "mask": 1,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1022,
+      "mask": 2,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1022,
+      "mask": 3,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1022,
+      "mask": 4,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1022,
+      "mask": 5,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1022,
+      "mask": 6,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1022,
+      "mask": 7,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1022,
+      "mask": 8,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1022,
+      "mask": 9,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1022,
+      "mask": 10,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1022,
+      "mask": 11,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1022,
+      "mask": 12,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1022,
+      "mask": 13,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1022,
+      "mask": 14,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1022,
+      "mask": 15,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1022,
+      "mask": 16,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1022,
+      "mask": 17,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1022,
+      "mask": 18,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1022,
+      "mask": 19,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1022,
+      "mask": 20,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1022,
+      "mask": 21,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1022,
+      "mask": 22,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1022,
+      "mask": 23,
+      "percent": 28,
+      "value": 2800
+    },
+    {
+      "slot": 1022,
+      "mask": 24,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1022,
+      "mask": 25,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1022,
+      "mask": 26,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1022,
+      "mask": 27,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1022,
+      "mask": 28,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1022,
+      "mask": 29,
+      "percent": 31,
+      "value": 3100
+    },
+    {
+      "slot": 1022,
+      "mask": 30,
+      "percent": 29,
+      "value": 2900
+    },
+    {
+      "slot": 1022,
+      "mask": 31,
+      "percent": 35,
+      "value": 3501
+    },
+    {
+      "slot": 1023,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1023,
+      "mask": 1,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1023,
+      "mask": 2,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1023,
+      "mask": 3,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1023,
+      "mask": 4,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1023,
+      "mask": 5,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1023,
+      "mask": 6,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1023,
+      "mask": 7,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1023,
+      "mask": 8,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1023,
+      "mask": 9,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1023,
+      "mask": 10,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1023,
+      "mask": 11,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1023,
+      "mask": 12,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1023,
+      "mask": 13,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1023,
+      "mask": 14,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1023,
+      "mask": 15,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1023,
+      "mask": 16,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1023,
+      "mask": 17,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1023,
+      "mask": 18,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1023,
+      "mask": 19,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1023,
+      "mask": 20,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1023,
+      "mask": 21,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1023,
+      "mask": 22,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1023,
+      "mask": 23,
+      "percent": 28,
+      "value": 2800
+    },
+    {
+      "slot": 1023,
+      "mask": 24,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1023,
+      "mask": 25,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1023,
+      "mask": 26,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1023,
+      "mask": 27,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1023,
+      "mask": 28,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1023,
+      "mask": 29,
+      "percent": 31,
+      "value": 3100
+    },
+    {
+      "slot": 1023,
+      "mask": 30,
+      "percent": 29,
+      "value": 2900
+    },
+    {
+      "slot": 1023,
+      "mask": 31,
+      "percent": 35,
+      "value": 3501
+    },
+    {
+      "slot": 1024,
+      "mask": 0,
+      "percent": 5,
+      "value": 500
+    },
+    {
+      "slot": 1024,
+      "mask": 1,
+      "percent": 11,
+      "value": 1100
+    },
+    {
+      "slot": 1024,
+      "mask": 2,
+      "percent": 9,
+      "value": 900
+    },
+    {
+      "slot": 1024,
+      "mask": 3,
+      "percent": 15,
+      "value": 1500
+    },
+    {
+      "slot": 1024,
+      "mask": 4,
+      "percent": 10,
+      "value": 1000
+    },
+    {
+      "slot": 1024,
+      "mask": 5,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1024,
+      "mask": 6,
+      "percent": 14,
+      "value": 1400
+    },
+    {
+      "slot": 1024,
+      "mask": 7,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1024,
+      "mask": 8,
+      "percent": 12,
+      "value": 1200
+    },
+    {
+      "slot": 1024,
+      "mask": 9,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1024,
+      "mask": 10,
+      "percent": 16,
+      "value": 1600
+    },
+    {
+      "slot": 1024,
+      "mask": 11,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1024,
+      "mask": 12,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1024,
+      "mask": 13,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1024,
+      "mask": 14,
+      "percent": 21,
+      "value": 2100
+    },
+    {
+      "slot": 1024,
+      "mask": 15,
+      "percent": 27,
+      "value": 2700
+    },
+    {
+      "slot": 1024,
+      "mask": 16,
+      "percent": 13,
+      "value": 1300
+    },
+    {
+      "slot": 1024,
+      "mask": 17,
+      "percent": 19,
+      "value": 1900
+    },
+    {
+      "slot": 1024,
+      "mask": 18,
+      "percent": 17,
+      "value": 1700
+    },
+    {
+      "slot": 1024,
+      "mask": 19,
+      "percent": 23,
+      "value": 2300
+    },
+    {
+      "slot": 1024,
+      "mask": 20,
+      "percent": 18,
+      "value": 1800
+    },
+    {
+      "slot": 1024,
+      "mask": 21,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1024,
+      "mask": 22,
+      "percent": 22,
+      "value": 2200
+    },
+    {
+      "slot": 1024,
+      "mask": 23,
+      "percent": 28,
+      "value": 2800
+    },
+    {
+      "slot": 1024,
+      "mask": 24,
+      "percent": 20,
+      "value": 2000
+    },
+    {
+      "slot": 1024,
+      "mask": 25,
+      "percent": 26,
+      "value": 2600
+    },
+    {
+      "slot": 1024,
+      "mask": 26,
+      "percent": 24,
+      "value": 2400
+    },
+    {
+      "slot": 1024,
+      "mask": 27,
+      "percent": 30,
+      "value": 3000
+    },
+    {
+      "slot": 1024,
+      "mask": 28,
+      "percent": 25,
+      "value": 2500
+    },
+    {
+      "slot": 1024,
+      "mask": 29,
+      "percent": 31,
+      "value": 3100
+    },
+    {
+      "slot": 1024,
+      "mask": 30,
+      "percent": 29,
+      "value": 2900
+    },
+    {
+      "slot": 1024,
+      "mask": 31,
+      "percent": 35,
+      "value": 3501
+    }
+  ],
+  "scriptAndTableHashes": {
+    "002": {
+      "gaid_model.lua.bytes": "8e7973888424efa2eac0ae7ed6e2558de57e8c9b58263fe063ceeb55714e98e0",
+      "stage_manager.lua.bytes": "8a3ff4cc651ad63949cc53ce258459c5fd328ec9a08ee733a99fa5f5c6011113",
+      "cheer_proto": "05490432ebaa4f605dd9f598901aeddd1268296cf7360c289c9deddcf265a1bc"
+    },
+    "004": {
+      "gaid_model.lua.bytes": "8e7973888424efa2eac0ae7ed6e2558de57e8c9b58263fe063ceeb55714e98e0",
+      "stage_manager.lua.bytes": "8a3ff4cc651ad63949cc53ce258459c5fd328ec9a08ee733a99fa5f5c6011113",
+      "cheer_proto": "05490432ebaa4f605dd9f598901aeddd1268296cf7360c289c9deddcf265a1bc"
+    }
+  }
+}

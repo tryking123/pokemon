@@ -48,6 +48,14 @@ py ./app包/build_local_apk.py --entries ./app端代码/local-patch/apk-entries 
 
 ## 验证范围
 
+战斗页“战斗属性”由 `patch_battle_attributes.py` / `local-battle-attributes.lua` 接入双 ABI 控制器。新 Stage 开场准备及页面绑定完成后采集一次，只缓存显示字符串；打开、切换与分页不读取战斗对象，刷新按钮才重新采集双方。使用原 `stats.get` 显示当前生效值，兼容团队光环；基础值单列，退出清理内存缓存，不写 SQLite。方案和设备验收边界见[战斗属性快照查看](../../全局设计统筹/战斗属性快照查看_20261124.md)。
+
+本包原生点击使用 `utils.add_click_event` 设置 `LuaListener.onClick`，不要调用未导出的 `UnityEvent.RemoveAllListeners`。UI 布局明确获取 `RectTransform`，正文从 `Bottom/Skill/Desc/Text` 克隆以保留左上对齐；不要依赖未核验的枚举 Lua 绑定。控件先隐藏，完成绑定后再显示入口。
+
+后排助战沿用 002 的 `AssistBattleService` / `local-assist-talents.lua`；`battle/assist-slots.json` 保存原二十四槽配置。App 冻结来源自身属性和逐槽转换值，Unity 仅复制并增加六个前排的基础属性，再执行开场特性。`local-assist-inspect.lua` 只为真实效果登记来源，不模拟 Buff；拒绝属性/Buff 写回后排来源。“助战属性”分列槽位基础转换、特性固定量/比例、Buff 来源与独立来源六维，所有展示仍只在入场或手动刷新时采集。
+
+重包脚本交付前调用 `verify_required_features.py`，核对助战业务注册、运行配置和双 ABI 协议/引擎/面板，防止旧源码重建再次遗漏已交付功能。既有完整引擎回归可运行 `py 全局设计统筹/verify_assist_talents.py <APK> --python32 <带32位lupa的python.exe>`。
+
 独立构建时可只复制本目录的 `src`、`embedded`、`offline`、`stubs` 及 `build.ps1` 到临时目录，确认不存在服务端目录后构建。设备上需在无 PC 服务、无 ADB 反向转发且断外网时验证启动、登录建角、支付去重、玩法与冷启动存档。包校验或 Lua mock 不能代替 Unity 实机回归；实际结果以 App 版本记录和本轮验收记录为准。
 
 

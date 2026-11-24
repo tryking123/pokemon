@@ -195,6 +195,12 @@ public final class ElfCombatGrowth {
         GoldCarryRules.apply(elf, fighter);
         StoneWearRules.applySecondary(elf, fighter);
         DynamaxRules.applyStats(elf, fighter);
+        // C407 解封后即保存零级，旧存档缺少 ancient 表示尚未解封。
+        int ancientLevel = elf.training.path("ancient").asInt(-1);
+        int trick = ElfTrainingCatalog.row("species", elf.configId).path("rage").asInt();
+        if (trick > 0 && ancientLevel >= 0 && !ElfTrainingCatalog.row("ancient", ancientLevel).isMissingNode()) {
+            fighter.put("trick", trick);
+        }
         int[] breakCodes = {20, 42, 106};
         String[] breakFields = {"reduced", "skill_damage_reduced", "damage_lv"};
         for (int i = 0; i < breakCodes.length; i++) {

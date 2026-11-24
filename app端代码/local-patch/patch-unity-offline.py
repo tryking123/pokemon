@@ -8,9 +8,10 @@ import sys
 import zipfile
 from patch_awake_ui import patch_awake_ui, patch_character_catalog_ui, patch_skill_slots
 from patch_battle_reentry import patch_battle_reentry
+from patch_battle_attributes import patch_battle_attributes
 from patch_quest_ui import patch_task_guides, patch_task_lock, patch_task_navigation
 from patch_rocket_result import patch_rocket_result
-from patch_team_talents import patch_team_talents
+from patch_team_talents import patch_team_talents, patch_assist_schema
 from patch_dynamax_panel import patch_dynamax_panel
 from patch_ancient_ui import patch_ancient_select
 
@@ -251,6 +252,7 @@ def apply(origin, output):
           preview = f"lua{abi}_database_preview_proto.lua.bytes"
           changed[preview] = replace(preview, patch_gacha_preview)
           for bundle_name, filename, patch in (("network", "network.lua", patch_network),
+                  ("network", "typedef.lua", lambda value: patch_assist_schema(value, helpers)),
                   ("module_login", "login_model.lua", lambda value: patch_calls(value, "login")),
                   ("manager", "sdk_mgr.lua", lambda value: patch_calls(value, "order")),
                   ("module_newlogin", "newlogin_model.lua", lambda value: patch_calls(value, "login")),
@@ -264,7 +266,7 @@ def apply(origin, output):
                   ("module_battle", "battle_module.lua", lambda value: patch_battle_reentry(value, helpers)),
                   ("gmodel", "gtask_model.lua", lambda value: patch_task_guides(patch_task_lock(value))),
                   ("module_navi", "navi_view.lua", patch_task_navigation),
-                  ("module_battle", "battle_ctrl.lua", lambda value: patch_rocket_result(value, helpers)),
+                  ("module_battle", "battle_ctrl.lua", lambda value: patch_battle_attributes(patch_rocket_result(value, helpers), helpers)),
                   ("module_battle", "formation.lua", lambda value: patch_team_talents(value, helpers))):
             name = f"lua{abi}_{bundle_name}.ab"
             def transform(value):

@@ -379,6 +379,10 @@ def build(args):
         subprocess.run(apksigner + ["verify", "--verbose", "--print-certs", str(signed)], check=True)
         subprocess.run([zipalign, "-c", "-P", "16", "4", signed], check=True)
         verify_entries(signed, expected_hashes, entries)
+        feature_check = [sys.executable, str(patcher.with_name("verify_required_features.py")), str(signed)]
+        if args.python_libs is not None:
+            feature_check.extend(["--python-libs", str(args.python_libs.resolve())])
+        subprocess.run(feature_check, check=True)
         with args.output.open("xb") as target, signed.open("rb") as source:
             shutil.copyfileobj(source, target)
     print(f"{args.output.resolve()} SHA-256 {hash_file(args.output)}")

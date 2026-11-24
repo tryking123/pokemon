@@ -65,6 +65,7 @@ public class BattleService implements SceneEncounterState {
     private final HangupService hangup;
     private final RoleCosmeticService cosmetics;
     private final RoleBattlePowerService power;
+    private final AssistBattleService assists;
 
     /**
      * 初始化单人副本服务。
@@ -80,10 +81,13 @@ public class BattleService implements SceneEncounterState {
      * @param cards 超速闯关双卡权益
      * @param payments 角色 VIP 查询
      * @param power 当前主队战力
+     * @param assists 已解锁的助战精灵快照
      */
     public BattleService(BattleMapper mapper, ElfService elfs, RoleService roles, QuestService quests,
                          InventoryService inventory, AdventureProgressService adventure, HangupService hangup,
-                         RoleCosmeticService cosmetics, RoleBattlePowerService power, GamePaymentService payments, CardFundService cards) {
+                         RoleCosmeticService cosmetics, RoleBattlePowerService power, GamePaymentService payments, CardFundService cards,
+                         AssistBattleService assists) {
+        this.assists = assists;
         this.cards = cards;
         this.payments = payments;
         this.mapper = mapper;
@@ -985,6 +989,8 @@ public class BattleService implements SceneEncounterState {
                 "sid", mapper.formationId(role.id, mapper.teamFormation(role.id,party.get(0).team)), "preference", 1, "pvp", false, "isnpc", false);
         Map<String,Object> pet=com.pokemon.offline.home.PetCombatRules.battlePet(party.get(0).battlePet);
         if(!pet.isEmpty())playerTeam.put("pet",pet);
+        playerTeam.put("assists", assists.snapshot(role.id, party.stream().map(elf -> elf.id)
+                .collect(java.util.stream.Collectors.toList())));
         return fields("errno", 0, "seed", attempt.seed, "weather", 0,
                 "player", playerTeam,
                 "monster", fields("identifer", opposition, "power", opponents.size() * 20, "pokemon", opponents,

@@ -59,6 +59,7 @@ com.pokemon.offline.arena.WorldBossService
 com.pokemon.offline.arena.ZodiacService
 com.pokemon.offline.arena.ZodiacShopService
 com.pokemon.offline.balance.GameplayRewards
+com.pokemon.offline.battle.AssistBattleService
 com.pokemon.offline.battle.BattleMapper
 com.pokemon.offline.battle.BattleService
 com.pokemon.offline.battle.FixedStageCombatService

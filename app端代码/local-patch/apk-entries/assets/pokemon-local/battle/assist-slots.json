@@ -1,0 +1,1114 @@
+{
+  "version": "assist-slot-base-20261124",
+  "sourceApk": "2026_11_24_002.apk",
+  "sourceSha256": "8d5cb78f80c54956b314f65a33b324f73bd12c2b44fa0aff6d1e1e0203f3c65e",
+  "sourceAsset": "lua64_database_cheer_proto.lua.bytes",
+  "percentDivisor": 100,
+  "rounding": "floor_each_slot_before_sum",
+  "slots": {
+    "1001": {
+      "condition3": [
+        2,
+        60
+      ],
+      "condition2": [
+        1,
+        3
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 2,
+      "num2": 3,
+      "name": 403001,
+      "num3": 1,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 5,
+      "num5": 4,
+      "describe5": 406036,
+      "num6": 5,
+      "describe2": 406025,
+      "describe1": 406043,
+      "description": 406001,
+      "describe4": 406032,
+      "describe3": 406028,
+      "num": 20,
+      "id": 1001,
+      "open": 403101,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        5
+      ],
+      "condition4": [
+        3,
+        500
+      ],
+      "attribute": "hp_max",
+      "position": 1
+    },
+    "1002": {
+      "condition3": [
+        2,
+        60
+      ],
+      "condition2": [
+        1,
+        3
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 2,
+      "num2": 3,
+      "name": 403002,
+      "num3": 1,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 6,
+      "num5": 4,
+      "describe5": 406036,
+      "num6": 5,
+      "describe2": 406025,
+      "describe1": 406043,
+      "description": 406002,
+      "describe4": 406032,
+      "describe3": 406028,
+      "num": 20,
+      "id": 1002,
+      "open": 403102,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        5
+      ],
+      "condition4": [
+        3,
+        500
+      ],
+      "attribute": "physical_attack",
+      "position": 2
+    },
+    "1003": {
+      "condition3": [
+        2,
+        60
+      ],
+      "condition2": [
+        1,
+        3
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 2,
+      "num2": 3,
+      "name": 403003,
+      "num3": 1,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 7,
+      "num5": 4,
+      "describe5": 406036,
+      "num6": 5,
+      "describe2": 406025,
+      "describe1": 406043,
+      "description": 406003,
+      "describe4": 406032,
+      "describe3": 406028,
+      "num": 20,
+      "id": 1003,
+      "open": 403103,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        5
+      ],
+      "condition4": [
+        3,
+        500
+      ],
+      "attribute": "special_attack",
+      "position": 3
+    },
+    "1004": {
+      "condition3": [
+        2,
+        60
+      ],
+      "condition2": [
+        1,
+        3
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 2,
+      "num2": 3,
+      "name": 403004,
+      "num3": 1,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 8,
+      "num5": 4,
+      "describe5": 406036,
+      "num6": 5,
+      "describe2": 406025,
+      "describe1": 406043,
+      "description": 406004,
+      "describe4": 406032,
+      "describe3": 406028,
+      "num": 20,
+      "id": 1004,
+      "open": 403104,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        5
+      ],
+      "condition4": [
+        3,
+        500
+      ],
+      "attribute": "physical_defense",
+      "position": 4
+    },
+    "1005": {
+      "condition3": [
+        2,
+        60
+      ],
+      "condition2": [
+        1,
+        3
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 2,
+      "num2": 3,
+      "name": 403005,
+      "num3": 1,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 9,
+      "num5": 4,
+      "describe5": 406036,
+      "num6": 5,
+      "describe2": 406025,
+      "describe1": 406043,
+      "description": 406005,
+      "describe4": 406032,
+      "describe3": 406028,
+      "num": 20,
+      "id": 1005,
+      "open": 403105,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        5
+      ],
+      "condition4": [
+        3,
+        500
+      ],
+      "attribute": "special_defense",
+      "position": 5
+    },
+    "1006": {
+      "condition3": [
+        2,
+        60
+      ],
+      "condition2": [
+        1,
+        3
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 2,
+      "num2": 3,
+      "name": 403006,
+      "num3": 1,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 14,
+      "num5": 4,
+      "describe5": 406036,
+      "num6": 5,
+      "describe2": 406025,
+      "describe1": 406043,
+      "description": 406006,
+      "describe4": 406032,
+      "describe3": 406028,
+      "num": 20,
+      "id": 1006,
+      "open": 403106,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        5
+      ],
+      "condition4": [
+        3,
+        500
+      ],
+      "attribute": "speed",
+      "position": 6
+    },
+    "1007": {
+      "condition3": [
+        2,
+        70
+      ],
+      "condition2": [
+        1,
+        4
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 3,
+      "num2": 4,
+      "name": 403007,
+      "num3": 2,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 5,
+      "num5": 5,
+      "describe5": 406037,
+      "num6": 6,
+      "describe2": 406026,
+      "describe1": 406043,
+      "description": 406007,
+      "describe4": 406033,
+      "describe3": 406029,
+      "num": 25,
+      "id": 1007,
+      "open": 403107,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        6
+      ],
+      "condition4": [
+        3,
+        750
+      ],
+      "attribute": "hp_max",
+      "position": 7
+    },
+    "1008": {
+      "condition3": [
+        2,
+        70
+      ],
+      "condition2": [
+        1,
+        4
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 3,
+      "num2": 4,
+      "name": 403008,
+      "num3": 2,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 6,
+      "num5": 5,
+      "describe5": 406037,
+      "num6": 6,
+      "describe2": 406026,
+      "describe1": 406043,
+      "description": 406008,
+      "describe4": 406033,
+      "describe3": 406029,
+      "num": 25,
+      "id": 1008,
+      "open": 403108,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        6
+      ],
+      "condition4": [
+        3,
+        750
+      ],
+      "attribute": "physical_attack",
+      "position": 8
+    },
+    "1009": {
+      "condition3": [
+        2,
+        70
+      ],
+      "condition2": [
+        1,
+        4
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 3,
+      "num2": 4,
+      "name": 403009,
+      "num3": 2,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 7,
+      "num5": 5,
+      "describe5": 406037,
+      "num6": 6,
+      "describe2": 406026,
+      "describe1": 406043,
+      "description": 406009,
+      "describe4": 406033,
+      "describe3": 406029,
+      "num": 25,
+      "id": 1009,
+      "open": 403109,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        6
+      ],
+      "condition4": [
+        3,
+        750
+      ],
+      "attribute": "special_attack",
+      "position": 9
+    },
+    "1010": {
+      "condition3": [
+        2,
+        70
+      ],
+      "condition2": [
+        1,
+        4
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 3,
+      "num2": 4,
+      "name": 403010,
+      "num3": 2,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 8,
+      "num5": 5,
+      "describe5": 406037,
+      "num6": 6,
+      "describe2": 406026,
+      "describe1": 406043,
+      "description": 406010,
+      "describe4": 406033,
+      "describe3": 406029,
+      "num": 25,
+      "id": 1010,
+      "open": 403110,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        6
+      ],
+      "condition4": [
+        3,
+        750
+      ],
+      "attribute": "physical_defense",
+      "position": 10
+    },
+    "1011": {
+      "condition3": [
+        2,
+        70
+      ],
+      "condition2": [
+        1,
+        4
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 3,
+      "num2": 4,
+      "name": 403011,
+      "num3": 2,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 9,
+      "num5": 5,
+      "describe5": 406037,
+      "num6": 6,
+      "describe2": 406026,
+      "describe1": 406043,
+      "description": 406011,
+      "describe4": 406033,
+      "describe3": 406029,
+      "num": 25,
+      "id": 1011,
+      "open": 403111,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        6
+      ],
+      "condition4": [
+        3,
+        750
+      ],
+      "attribute": "special_defense",
+      "position": 11
+    },
+    "1012": {
+      "condition3": [
+        2,
+        70
+      ],
+      "condition2": [
+        1,
+        4
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 3,
+      "num2": 4,
+      "name": 403012,
+      "num3": 2,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406040,
+      "type": 14,
+      "num5": 5,
+      "describe5": 406037,
+      "num6": 6,
+      "describe2": 406026,
+      "describe1": 406043,
+      "description": 406012,
+      "describe4": 406033,
+      "describe3": 406029,
+      "num": 25,
+      "id": 1012,
+      "open": 403112,
+      "condition6": [
+        5,
+        1
+      ],
+      "condition5": [
+        4,
+        6
+      ],
+      "condition4": [
+        3,
+        750
+      ],
+      "attribute": "speed",
+      "position": 12
+    },
+    "1013": {
+      "condition3": [
+        2,
+        80
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 4,
+      "num2": 5,
+      "name": 403013,
+      "num3": 3,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406041,
+      "type": 5,
+      "num5": 6,
+      "describe5": 406038,
+      "num6": 7,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406013,
+      "describe4": 406034,
+      "describe3": 406030,
+      "num": 30,
+      "id": 1013,
+      "open": 403113,
+      "condition6": [
+        5,
+        2
+      ],
+      "condition5": [
+        4,
+        7
+      ],
+      "condition4": [
+        3,
+        900
+      ],
+      "attribute": "hp_max",
+      "position": 13
+    },
+    "1014": {
+      "condition3": [
+        2,
+        80
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 4,
+      "num2": 5,
+      "name": 403014,
+      "num3": 3,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406041,
+      "type": 6,
+      "num5": 6,
+      "describe5": 406038,
+      "num6": 7,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406014,
+      "describe4": 406034,
+      "describe3": 406030,
+      "num": 30,
+      "id": 1014,
+      "open": 403114,
+      "condition6": [
+        5,
+        2
+      ],
+      "condition5": [
+        4,
+        7
+      ],
+      "condition4": [
+        3,
+        900
+      ],
+      "attribute": "physical_attack",
+      "position": 14
+    },
+    "1015": {
+      "condition3": [
+        2,
+        80
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 4,
+      "num2": 5,
+      "name": 403015,
+      "num3": 3,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406041,
+      "type": 7,
+      "num5": 6,
+      "describe5": 406038,
+      "num6": 7,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406015,
+      "describe4": 406034,
+      "describe3": 406030,
+      "num": 30,
+      "id": 1015,
+      "open": 403115,
+      "condition6": [
+        5,
+        2
+      ],
+      "condition5": [
+        4,
+        7
+      ],
+      "condition4": [
+        3,
+        900
+      ],
+      "attribute": "special_attack",
+      "position": 15
+    },
+    "1016": {
+      "condition3": [
+        2,
+        80
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 4,
+      "num2": 5,
+      "name": 403016,
+      "num3": 3,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406041,
+      "type": 8,
+      "num5": 6,
+      "describe5": 406038,
+      "num6": 7,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406016,
+      "describe4": 406034,
+      "describe3": 406030,
+      "num": 30,
+      "id": 1016,
+      "open": 403116,
+      "condition6": [
+        5,
+        2
+      ],
+      "condition5": [
+        4,
+        7
+      ],
+      "condition4": [
+        3,
+        900
+      ],
+      "attribute": "physical_defense",
+      "position": 16
+    },
+    "1017": {
+      "condition3": [
+        2,
+        80
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 4,
+      "num2": 5,
+      "name": 403017,
+      "num3": 3,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406041,
+      "type": 9,
+      "num5": 6,
+      "describe5": 406038,
+      "num6": 7,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406017,
+      "describe4": 406034,
+      "describe3": 406030,
+      "num": 30,
+      "id": 1017,
+      "open": 403117,
+      "condition6": [
+        5,
+        2
+      ],
+      "condition5": [
+        4,
+        7
+      ],
+      "condition4": [
+        3,
+        900
+      ],
+      "attribute": "special_defense",
+      "position": 17
+    },
+    "1018": {
+      "condition3": [
+        2,
+        80
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 4,
+      "num2": 5,
+      "name": 403018,
+      "num3": 3,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406041,
+      "type": 14,
+      "num5": 6,
+      "describe5": 406038,
+      "num6": 7,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406018,
+      "describe4": 406034,
+      "describe3": 406030,
+      "num": 30,
+      "id": 1018,
+      "open": 403118,
+      "condition6": [
+        5,
+        2
+      ],
+      "condition5": [
+        4,
+        7
+      ],
+      "condition4": [
+        3,
+        900
+      ],
+      "attribute": "speed",
+      "position": 18
+    },
+    "1019": {
+      "condition3": [
+        2,
+        90
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 5,
+      "num2": 6,
+      "name": 403019,
+      "num3": 4,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406042,
+      "type": 5,
+      "num5": 7,
+      "describe5": 406039,
+      "num6": 8,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406019,
+      "describe4": 406035,
+      "describe3": 406031,
+      "num": 35,
+      "id": 1019,
+      "open": 403119,
+      "condition6": [
+        5,
+        3
+      ],
+      "condition5": [
+        4,
+        8
+      ],
+      "condition4": [
+        3,
+        1200
+      ],
+      "attribute": "hp_max",
+      "position": 19
+    },
+    "1020": {
+      "condition3": [
+        2,
+        90
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 5,
+      "num2": 6,
+      "name": 403020,
+      "num3": 4,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406042,
+      "type": 6,
+      "num5": 7,
+      "describe5": 406039,
+      "num6": 8,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406020,
+      "describe4": 406035,
+      "describe3": 406031,
+      "num": 35,
+      "id": 1020,
+      "open": 403120,
+      "condition6": [
+        5,
+        3
+      ],
+      "condition5": [
+        4,
+        8
+      ],
+      "condition4": [
+        3,
+        1200
+      ],
+      "attribute": "physical_attack",
+      "position": 20
+    },
+    "1021": {
+      "condition3": [
+        2,
+        90
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 5,
+      "num2": 6,
+      "name": 403021,
+      "num3": 4,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406042,
+      "type": 7,
+      "num5": 7,
+      "describe5": 406039,
+      "num6": 8,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406021,
+      "describe4": 406035,
+      "describe3": 406031,
+      "num": 35,
+      "id": 1021,
+      "open": 403121,
+      "condition6": [
+        5,
+        3
+      ],
+      "condition5": [
+        4,
+        8
+      ],
+      "condition4": [
+        3,
+        1200
+      ],
+      "attribute": "special_attack",
+      "position": 21
+    },
+    "1022": {
+      "condition3": [
+        2,
+        90
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 5,
+      "num2": 6,
+      "name": 403022,
+      "num3": 4,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406042,
+      "type": 8,
+      "num5": 7,
+      "describe5": 406039,
+      "num6": 8,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406022,
+      "describe4": 406035,
+      "describe3": 406031,
+      "num": 35,
+      "id": 1022,
+      "open": 403122,
+      "condition6": [
+        5,
+        3
+      ],
+      "condition5": [
+        4,
+        8
+      ],
+      "condition4": [
+        3,
+        1200
+      ],
+      "attribute": "physical_defense",
+      "position": 22
+    },
+    "1023": {
+      "condition3": [
+        2,
+        90
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 5,
+      "num2": 6,
+      "name": 403023,
+      "num3": 4,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406042,
+      "type": 9,
+      "num5": 7,
+      "describe5": 406039,
+      "num6": 8,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406023,
+      "describe4": 406035,
+      "describe3": 406031,
+      "num": 35,
+      "id": 1023,
+      "open": 403123,
+      "condition6": [
+        5,
+        3
+      ],
+      "condition5": [
+        4,
+        8
+      ],
+      "condition4": [
+        3,
+        1200
+      ],
+      "attribute": "special_defense",
+      "position": 23
+    },
+    "1024": {
+      "condition3": [
+        2,
+        90
+      ],
+      "condition2": [
+        1,
+        5
+      ],
+      "condition1": [
+        0
+      ],
+      "num4": 5,
+      "num2": 6,
+      "name": 403024,
+      "num3": 4,
+      "ziyuan": "0",
+      "num1": 5,
+      "describe6": 406042,
+      "type": 14,
+      "num5": 7,
+      "describe5": 406039,
+      "num6": 8,
+      "describe2": 406027,
+      "describe1": 406043,
+      "description": 406024,
+      "describe4": 406035,
+      "describe3": 406031,
+      "num": 35,
+      "id": 1024,
+      "open": 403124,
+      "condition6": [
+        5,
+        3
+      ],
+      "condition5": [
+        4,
+        8
+      ],
+      "condition4": [
+        3,
+        1200
+      ],
+      "attribute": "speed",
+      "position": 24
+    }
+  }
+}

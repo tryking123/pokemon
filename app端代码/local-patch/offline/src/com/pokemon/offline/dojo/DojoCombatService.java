@@ -47,6 +47,7 @@ public class DojoCombatService {
     private final DojoMapper mapper;
     private final DojoStationService station;
     private final BattleMapper formations;
+    private final com.pokemon.offline.battle.AssistBattleService assists;
     private final RoleService roles;
     private final ElfMapper elves;
     private final DojoConfig config;
@@ -59,6 +60,7 @@ public class DojoCombatService {
      *
      * @param station 道馆驻防争夺业务
      * @param formations 角色通用阵法培养存档
+     * @param assists 玩家助战精灵快照
      * @param mapper 道馆阵容、尝试和进度存档
      * @param roles 认证角色和存档事务锁
      * @param elves 精灵存档
@@ -68,7 +70,9 @@ public class DojoCombatService {
      * @param cosmetics 本地外观持有及穿戴属性服务
      */
     DojoCombatService(DojoMapper mapper, RoleService roles, ElfMapper elves, DojoConfig config,
-                      GameplayRewards rewards, InventoryService inventory, RoleCosmeticService cosmetics, BattleMapper formations, DojoStationService station) {
+                      GameplayRewards rewards, InventoryService inventory, RoleCosmeticService cosmetics, BattleMapper formations, DojoStationService station,
+                      com.pokemon.offline.battle.AssistBattleService assists) {
+        this.assists = assists;
         this.station = station;
         this.formations = formations;
         this.mapper = mapper;
@@ -326,6 +330,8 @@ public class DojoCombatService {
                 "monId", config.groupInstanceId(attempt.dojo, attempt.group), "istry", attempt.practice,
                 "seed", attempt.seed, "weather", 0,
                 "player", fields("identifer", role.id, "sid", formations.formationId(role.id, tactics), "pokemon", players,
+                        "assists", assists.snapshot(role.id, team.stream().map(member -> member.elfId)
+                                .collect(java.util.stream.Collectors.toList())),
                         "power", 300 * players.size(), "pvp", false, "isnpc", false, "preference", 1),
                 "monster", fields("identifer", enemy, "sid", group.get(3).asInt(), "pokemon", opponents,
                         "power", 20 * opponents.size(), "pvp", false, "isnpc", true, "preference", 1));
